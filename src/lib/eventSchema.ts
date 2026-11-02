@@ -23,7 +23,7 @@ export const eventSchema = z
     address: textOrObject.nullish(),
     city: z.string().nullish(),
     state: z.string().nullish(),
-    organizer: z.object({ name: z.string().optional(), website: z.string().nullish() }).passthrough().nullish(),
+    organizer: z.object({ name: z.string().nullish(), website: z.string().nullish() }).passthrough().nullish(),
     categories: z.array(z.string()).default([]),
     price: z.union([z.string(), z.number(), z.object({}).passthrough()]).nullish(),
     free: z.boolean().nullish(),
