@@ -1,0 +1,34 @@
+{
+ "retired_to": {
+  "down-south-fried-fish-co": "/best-food-trucks-in-springfield-mo/",
+  "stephen-driscoll-the-uniform-broker": "/small-business-success/",
+  "somo-polar-plunge": "/events/",
+  "mom-prom-in-buffalo-mo": "/blog/",
+  "001-hannah-vale": "/small-business-success/",
+  "review-management": "/get-more-small-business-reviews/",
+  "hannah": "/small-business-success/",
+  "stephen-driscoll-launches-from-sgf": "/small-business-success/",
+  "free-book": "/small-business-success/",
+  "free-traffic-hack": "/small-business-success/",
+  "seo-checklist": "/small-business-success/",
+  "event-dashboard": "/",
+  "test": "/",
+  "thank-you-shakespeare": "/",
+  "event": "/events/",
+  "locations": "/events/",
+  "categories": "/events/",
+  "tags": "/events/",
+  "my-bookings": "/events/",
+  "author/sigafus": "/blog/",
+  "author/team": "/blog/"
+ },
+ "patterns": {
+  "/event/*": "/events/",
+  "/venue/*": "/events/",
+  "/organizer/*": "/events/",
+  "/events_/*": "/events/",
+  "/events/categories/*": "/events/",
+  "/events/locations/*": "/events/",
+  "/events/tags/*": "/events/"
+ }
+}
