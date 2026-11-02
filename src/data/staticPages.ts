@@ -1,0 +1,119 @@
+/**
+ * Every non-article route and its SEO text. The route registry, sitemap, llms.txt and the page
+ * templates all read from here, so they cannot disagree.
+ */
+export interface StaticPageMeta {
+  path: string;
+  /** Full <title> text. */
+  title: string;
+  description: string;
+  /** Short label used in llms.txt. */
+  label: string;
+  /** false = noindex and left out of the sitemap. */
+  indexable?: boolean;
+}
+
+export const HOME: StaticPageMeta = {
+  path: "/",
+  title: "Featuring Local Businesses, Nonprofits, Creators & Events in 417",
+  description:
+    "Discover things to do, places to eat and small businesses worth knowing in Springfield, MO and the 417 area, plus local events.",
+  label: "Home",
+};
+
+export const BLOG: StaticPageMeta = {
+  path: "/blog/",
+  title: "Springfield, MO Local Guides and Articles | 417 Local",
+  description: "Every 417 Local guide in one place: things to do, food and drink, local businesses and more in Springfield, MO.",
+  label: "All articles",
+};
+
+export const EVENTS_HUB: StaticPageMeta = {
+  path: "/events/",
+  title: "Springfield, MO Events | 417 Local",
+  description: "Find upcoming events in Springfield, MO and the 417 area, from business meetups to community happenings.",
+  label: "Events",
+};
+
+export const BUSINESS_EVENTS: StaticPageMeta[] = [
+  {
+    path: "/events/springfield-business-events/",
+    title: "Springfield, MO Business Events | 417 Local",
+    description: "Upcoming business events in Springfield, MO: networking, entrepreneurship and professional development.",
+    label: "Business events",
+  },
+  {
+    path: "/events/springfield-business-events/networking/",
+    title: "Springfield, MO Networking Events | 417 Local",
+    description: "Upcoming networking events in Springfield, MO for professionals, owners and job seekers.",
+    label: "Networking events",
+  },
+  {
+    path: "/events/springfield-business-events/entrepreneurship/",
+    title: "Springfield, MO Entrepreneurship Events | 417 Local",
+    description: "Upcoming entrepreneurship events in Springfield, MO for founders, startups and side hustles.",
+    label: "Entrepreneurship events",
+  },
+  {
+    path: "/events/springfield-business-events/professional-development/",
+    title: "Springfield, MO Professional Development Events | 417 Local",
+    description: "Upcoming workshops, classes and training events in Springfield, MO to build your career and skills.",
+    label: "Professional development events",
+  },
+];
+
+export const CONTACT: StaticPageMeta = {
+  path: "/contact-us/",
+  title: "Contact Us | 417 Local",
+  description: "Have an idea, suggestion or a burning desire to collab? Send 417 Local a message and we'll respond within 2 business days.",
+  label: "Contact us",
+};
+
+export const PRIVACY: StaticPageMeta = {
+  path: "/privacy-policy/",
+  title: "Privacy Policy | 417 Local",
+  description: "How 417 Local collects, uses and protects visitor information, including log files, cookies and advertising partners.",
+  label: "Privacy policy",
+};
+
+export const TERMS: StaticPageMeta = {
+  path: "/terms-and-conditions/",
+  title: "Terms and Conditions | 417 Local",
+  description: "The rules for using 417local.com, including cookies, licensing, comments and linking to 417 Local.",
+  label: "Terms and conditions",
+};
+
+export const SUBMIT_EVENT: StaticPageMeta = {
+  path: "/submit-your-event/",
+  title: "Submit Your Event | 417 Local",
+  description: "Tell us about your Springfield, MO area event and we'll consider it for the 417 Local events page.",
+  label: "Submit your event",
+};
+
+export const THANK_YOU: StaticPageMeta = {
+  path: "/thank-you/",
+  title: "Thank You | 417 Local",
+  description: "Thanks for contacting 417 Local.",
+  label: "Thank you",
+  indexable: false,
+};
+
+export const GET_STARTED: StaticPageMeta = {
+  path: "/get-started/",
+  title: "Get Started With a Reviews Consultation | 417 Local",
+  description: "Book a 30 minute call to see the roadmap for better reviews and more sales for your small business.",
+  label: "Get started",
+};
+
+export const STATIC_PAGES: StaticPageMeta[] = [
+  HOME,
+  BLOG,
+  EVENTS_HUB,
+  ...BUSINESS_EVENTS,
+  CONTACT,
+  PRIVACY,
+  TERMS,
+  SUBMIT_EVENT,
+  THANK_YOU,
+  GET_STARTED,
+];

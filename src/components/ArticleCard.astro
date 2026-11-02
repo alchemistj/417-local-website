@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import { categoryName } from "../data/categories";
+
+interface Props {
+  post: CollectionEntry<"posts">;
+  /** First cards on a page can opt out of lazy loading; below the fold they stay lazy. */
+  eager?: boolean;
+}
+const { post, eager = false } = Astro.props;
+const { title, description, heroImage, heroAlt, category } = post.data;
+---
+
+<li class="card">
+  {heroImage && (
+    <Image
+      class="card-img"
+      src={heroImage}
+      alt={heroAlt ?? ""}
+      width={480}
+      height={360}
+      widths={[480, 720]}
+      sizes="(min-width: 860px) 280px, (min-width: 640px) 420px, 100vw"
+      loading={eager ? "eager" : "lazy"}
+      decoding="async"
+    />
+  )}
+  <div class="card-body">
+    <span class="card-cat">{categoryName(category)}</span>
+    <h3 class="card-title"><a href={`/${post.id}/`}>{title}</a></h3>
+    <p class="card-desc">{description}</p>
+  </div>
+</li>

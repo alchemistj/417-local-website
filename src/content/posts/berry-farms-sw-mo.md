@@ -1,6 +1,6 @@
 ---
 title: "11 Strawberry, Blueberry & Blackberry Picking Farms in 417"
-seoTitle: "Best Strawberry Picking, Blueberries & More Near Springfield MO"
+seoTitle: "Strawberry and Blueberry Picking Near Springfield MO"
 description: "Where to pick strawberries, blueberries, blackberries and more at U-Pick farms in and around Springfield MO, with addresses and where to check hours."
 published: 2022-05-05
 updated: 2026-11-02

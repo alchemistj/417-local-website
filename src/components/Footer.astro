@@ -1,0 +1,38 @@
+---
+import { CATEGORIES } from "../data/categories";
+import { FOOTER_LINKS } from "../data/nav";
+import { ORGANIZATION, SITE_NAME } from "../lib/site";
+
+const year = new Date().getFullYear();
+const a = ORGANIZATION.address;
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h2>Useful Links</h2>
+        <ul>
+          {FOOTER_LINKS.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+        </ul>
+      </div>
+      <div>
+        <h2>Categories</h2>
+        <ul>
+          {CATEGORIES.map((c) => <li><a href={`/category/${c.slug}/`}>{c.name}</a></li>)}
+        </ul>
+      </div>
+      <div>
+        <h2>Find Us</h2>
+        <address>
+          {a.streetAddress}<br />{a.addressLocality}, {a.addressRegion} {a.postalCode}
+        </address>
+        <ul>
+          <li><a href={ORGANIZATION.sameAs[0]} rel="noopener">Facebook</a></li>
+          <li><a href={ORGANIZATION.sameAs[1]} rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-legal">&copy; {year} {SITE_NAME}. All rights reserved.</p>
+  </div>
+</footer>

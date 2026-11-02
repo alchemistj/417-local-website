@@ -1,0 +1,106 @@
+---
+import { Image, getImage } from "astro:assets";
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import { categoryName } from "../data/categories";
+import { SITE_NAME, absoluteUrl } from "../lib/site";
+import { sortByUpdated } from "../lib/routes";
+
+interface Props {
+  post: CollectionEntry<"posts">;
+}
+const { post } = Astro.props;
+const { title, seoTitle, description, published, updated, category, heroImage, heroAlt } = post.data;
+const { Content } = await render(post);
+
+const path = `/${post.id}/`;
+const heroForLd = heroImage ? await getImage({ src: heroImage, width: 1200 }) : undefined;
+const updatedLabel = updated.toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
+
+// Three related articles from the same category (never the article itself).
+const same = (await getCollection("posts")).filter((p) => p.data.category === category && p.id !== post.id);
+const related = sortByUpdated(same.map((p) => ({ ...p, title: p.data.title, updated: p.data.updated }))).slice(0, 3);
+
+const crumbs = [
+  { name: "Home", path: "/" },
+  { name: categoryName(category), path: `/category/${category}/` },
+  { name: title, path },
+];
+
+const articleLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description,
+  mainEntityOfPage: absoluteUrl(path),
+  datePublished: published.toISOString().slice(0, 10),
+  dateModified: updated.toISOString().slice(0, 10),
+  author: { "@type": "Organization", name: SITE_NAME, url: absoluteUrl("/") },
+  publisher: { "@id": `${absoluteUrl("/")}#organization` },
+  ...(heroForLd ? { image: absoluteUrl(heroForLd.src) } : {}),
+};
+const crumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: crumbs.map((c, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: c.name,
+    item: absoluteUrl(c.path),
+  })),
+};
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={description}
+  path={path}
+  ogType="article"
+  ogImage={heroImage}
+  jsonLd={[articleLd, crumbLd]}
+>
+  <article>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href={`/category/${category}/`}>{categoryName(category)}</a></li>
+          <li aria-current="page">{title}</li>
+        </ol>
+      </nav>
+      <header class="article-head">
+        <h1>{title}</h1>
+        <p class="updated">Updated {updatedLabel}</p>
+      </header>
+      {heroImage && (
+        <figure class="article-hero">
+          <Image
+            src={heroImage}
+            alt={heroAlt ?? ""}
+            width={900}
+            widths={[480, 720, 900, 1350]}
+            sizes="(min-width: 900px) 852px, calc(100vw - 48px)"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </figure>
+      )}
+      <div class="prose">
+        <Content />
+      </div>
+    </div>
+  </article>
+
+  {related.length > 0 && (
+    <section class="band band-tint" aria-labelledby="related-heading">
+      <div class="container">
+        <div class="section-head"><h2 id="related-heading">More in {categoryName(category)}</h2></div>
+        <ul class="card-grid cols-3">
+          {related.map((p) => <ArticleCard post={p} />)}
+        </ul>
+      </div>
+    </section>
+  )}
+</BaseLayout>

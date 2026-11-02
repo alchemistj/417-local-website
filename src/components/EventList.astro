@@ -1,0 +1,36 @@
+---
+import type { EventData } from "../lib/eventSchema";
+import { formatEventDate, formatPrice, placeName } from "../lib/events";
+
+interface Props {
+  events: EventData[];
+}
+const { events } = Astro.props;
+---
+
+{events.length === 0 ? (
+  <div class="empty-state">
+    <p>
+      New Springfield business events are added every week. Check back soon or
+      <a href="/submit-your-event/">submit yours</a>.
+    </p>
+  </div>
+) : (
+  <ul class="event-list">
+    {events.map((e) => {
+      const place = [placeName(e.venue), e.city].filter(Boolean).join(", ");
+      const price = formatPrice(e);
+      return (
+        <li>
+          <h3>
+            {e.registration_url
+              ? <a href={e.registration_url} rel="noopener">{e.title}</a>
+              : e.title}
+          </h3>
+          <p class="event-meta">{formatEventDate(e)}{place && ` · ${place}`}{price && ` · ${price}`}</p>
+          {e.description && <p>{e.description}</p>}
+        </li>
+      );
+    })}
+  </ul>
+)}

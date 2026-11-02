@@ -1,0 +1,72 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { HOME } from "../data/staticPages";
+import { HOME_COPY, HOME_EVENTS_TILE, HOME_SECTIONS } from "../data/homepage";
+
+const posts = new Map((await getCollection("posts")).map((p) => [p.id, p]));
+// Curated tiles: skip any slug that is not in the collection yet.
+const sections = HOME_SECTIONS.map((s) => ({
+  ...s,
+  posts: s.slugs.flatMap((slug) => {
+    const post = posts.get(slug);
+    return post ? [post] : [];
+  }),
+})).filter((s) => s.posts.length > 0);
+// Alternate plain and tinted bands down the page.
+const eventsTint = sections.length % 2 === 1;
+---
+
+<BaseLayout title={HOME.title} description={HOME.description} path={HOME.path}>
+  <!-- Text hero: no photo, so the first frame is plain HTML with nothing to arrive late. -->
+  <section class="band band-dark hero">
+    <div class="container">
+      <h1>{HOME_COPY.h1}</h1>
+      {HOME_COPY.intro.map((t) => <p class="lead">{t}</p>)}
+      <div class="btn-row">
+        <a class="btn btn-light" href={HOME_COPY.primaryCta.href}>{HOME_COPY.primaryCta.label}</a>
+        <a class="btn btn-outline" href={HOME_COPY.secondaryCta.href}>{HOME_COPY.secondaryCta.label}</a>
+      </div>
+    </div>
+  </section>
+
+  {sections.map((s, i) => (
+    <section class={`band ${i % 2 === 0 ? "" : "band-tint"}`} aria-labelledby={`${s.id}-heading`}>
+      <div class="container">
+        <div class="section-head">
+          <h2 id={`${s.id}-heading`}>{s.heading}</h2>
+          <a class="see-all" href={s.seeAll.href}>{s.seeAll.label}</a>
+        </div>
+        <ul class={`card-grid ${s.posts.length >= 3 ? "cols-3" : ""}`}>
+          {s.posts.map((p) => <ArticleCard post={p} />)}
+        </ul>
+      </div>
+    </section>
+  ))}
+
+  <section class={`band ${eventsTint ? "band-tint" : ""}`} aria-labelledby="events-heading">
+    <div class="container stack">
+      <h2 id="events-heading">{HOME_EVENTS_TILE.heading}</h2>
+      <p>{HOME_EVENTS_TILE.body}</p>
+      <ul class="subnav">
+        {HOME_EVENTS_TILE.links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class={`band ${eventsTint ? "" : "band-tint"}`} aria-labelledby="mission-heading">
+    <div class="container stack">
+      <h2 id="mission-heading">Our Mission</h2>
+      {HOME_COPY.mission.map((t) => <p>{t}</p>)}
+    </div>
+  </section>
+
+  <CtaBand
+    heading={HOME_COPY.finalCta.heading}
+    body={HOME_COPY.finalCta.body}
+    primary={HOME_COPY.finalCta.primary}
+    secondary={HOME_COPY.finalCta.secondary}
+  />
+</BaseLayout>

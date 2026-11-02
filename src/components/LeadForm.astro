@@ -1,0 +1,145 @@
+---
+/**
+ * Form that posts straight from the browser to Fluid Frame Forms (SOP central-forms-contact-form.md).
+ * Rendered in the server HTML. Submit starts disabled until the script binds.
+ */
+export interface Field {
+  name: string;
+  label: string;
+  type?: "text" | "email" | "url" | "textarea";
+  required?: boolean;
+  hint?: string;
+  /** Label shown in the email under "Additional details". Omit for name / email / message. */
+  customLabel?: string;
+  autocomplete?: string;
+  maxlength?: number;
+}
+
+interface Props {
+  id: string;
+  formKey: string;
+  fields: Field[];
+  submitLabel: string;
+}
+const { id, formKey, fields, submitLabel } = Astro.props;
+---
+
+<form class="lead-form" id={id} data-lead-form data-form-key={formKey} method="post" action="#" novalidate>
+  {fields.map((f) => (
+    <div>
+      <label for={`${id}-${f.name}`}>
+        {f.label}{!f.required && f.hint === undefined ? " (optional)" : ""}
+        {f.hint && <span class="hint"> {f.hint}</span>}
+      </label>
+      {f.type === "textarea" ? (
+        <textarea
+          id={`${id}-${f.name}`}
+          name={f.name}
+          required={f.required}
+          maxlength={f.maxlength ?? 2000}
+          data-custom-label={f.customLabel}
+        ></textarea>
+      ) : (
+        <input
+          id={`${id}-${f.name}`}
+          type={f.type ?? "text"}
+          name={f.name}
+          required={f.required}
+          autocomplete={f.autocomplete}
+          maxlength={f.maxlength ?? 300}
+          data-custom-label={f.customLabel}
+        />
+      )}
+    </div>
+  ))}
+  <!-- Honeypot: hidden from people and assistive tech, bots fill it. -->
+  <div class="hp-field" aria-hidden="true">
+    <label for={`${id}-website_url`}>Leave this field empty</label>
+    <input id={`${id}-website_url`} type="text" name="website_url" tabindex="-1" autocomplete="off" />
+  </div>
+  <p class="form-loading" data-form-loading>Form loading...</p>
+  <noscript><p class="form-status" data-state="error">This form needs JavaScript to send. Please turn it on and reload the page.</p></noscript>
+  <div>
+    <button class="btn" type="submit" disabled data-submit>{submitLabel}</button>
+  </div>
+  <p class="form-status" role="status" aria-live="polite" data-status></p>
+</form>
+
+<script>
+  import { FORM_KEYS, MESSAGES, customField, submitLead, type AttemptState, type CustomField } from "../lib/formsLead";
+
+  const state: AttemptState = { attemptId: null };
+  const fired = new Set<string>();
+
+  document.querySelectorAll<HTMLFormElement>("[data-lead-form]").forEach((form) => {
+    const startedAt = Date.now();
+    const status = form.querySelector<HTMLElement>("[data-status]")!;
+    const submit = form.querySelector<HTMLButtonElement>("[data-submit]")!;
+    const loading = form.querySelector<HTMLElement>("[data-form-loading]");
+    const formKey = form.dataset.formKey ?? FORM_KEYS.contact;
+    const value = (name: string) =>
+      (form.elements.namedItem(name) as HTMLInputElement | HTMLTextAreaElement | null)?.value ?? "";
+
+    const setStatus = (text: string, kind: "success" | "error" | "") => {
+      status.textContent = text;
+      status.dataset.state = kind;
+    };
+
+    submit.disabled = false;
+    loading?.remove();
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      submit.disabled = true;
+      setStatus("Sending...", "");
+
+      const customFields: Record<string, CustomField> = {};
+      form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>("[data-custom-label]").forEach((el) => {
+        const label = el.dataset.customLabel;
+        if (label && el.value.trim()) customFields[el.name] = customField(label, el.value);
+      });
+
+      const result = await submitLead(
+        {
+          formKey,
+          name: value("name"),
+          email: value("email"),
+          message: value("message"),
+          honeypot: value("website_url"),
+          customFields,
+        },
+        startedAt,
+        {
+          fetchImpl: fetch.bind(window),
+          newId: () => crypto.randomUUID(),
+          now: () => Date.now(),
+          env: {
+            hostname: location.hostname,
+            href: location.href,
+            search: location.search,
+            referrer: document.referrer,
+          },
+          state,
+        },
+      );
+
+      if (result.kind === "success") {
+        form.reset();
+        setStatus(MESSAGES.success, "success");
+        // No conversion tag is wired yet. When Josh adds one, listen for this event; it fires once per id.
+        if (result.conversion && !fired.has(result.id)) {
+          fired.add(result.id);
+          window.dispatchEvent(new CustomEvent("ff:lead-conversion", { detail: { id: result.id, formKey } }));
+        }
+      } else if (result.kind === "invalid") {
+        setStatus(MESSAGES.invalid, "error");
+      } else if (result.kind === "not_production") {
+        setStatus(MESSAGES.notProduction, "error");
+      } else {
+        setStatus(MESSAGES.unconfirmed, "error");
+      }
+      submit.disabled = false;
+    });
+  });
+</script>

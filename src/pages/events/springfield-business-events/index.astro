@@ -1,0 +1,23 @@
+---
+import EventsLayout from "../../../layouts/EventsLayout.astro";
+import { BUSINESS_EVENTS } from "../../../data/staticPages";
+import { getUpcomingEvents } from "../../../lib/loadEvents";
+import { isBusinessEvent } from "../../../lib/events";
+
+const [parent] = BUSINESS_EVENTS;
+const events = (await getUpcomingEvents()).filter(isBusinessEvent);
+const subnav = BUSINESS_EVENTS.map((p) => ({ label: p.label, href: p.path }));
+---
+
+<EventsLayout
+  meta={parent}
+  h1="Springfield, MO Business Events"
+  intro="Networking, entrepreneurship and professional development events for Springfield area business owners and professionals."
+  events={events}
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Events", path: "/events/" },
+    { name: "Business Events", path: parent.path },
+  ]}
+  subnav={subnav}
+/>

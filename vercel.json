@@ -1,0 +1,732 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.417local.com"
+        }
+      ],
+      "destination": "https://417local.com/$1",
+      "statusCode": 301
+    },
+    {
+      "source": "/down-south-fried-fish-co",
+      "destination": "/best-food-trucks-in-springfield-mo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/down-south-fried-fish-co/",
+      "destination": "/best-food-trucks-in-springfield-mo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/stephen-driscoll-the-uniform-broker",
+      "destination": "/small-business-success/",
+      "statusCode": 301
+    },
+    {
+      "source": "/stephen-driscoll-the-uniform-broker/",
+      "destination": "/small-business-success/",
+      "statusCode": 301
+    },
+    {
+      "source": "/somo-polar-plunge",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/somo-polar-plunge/",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mom-prom-in-buffalo-mo",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mom-prom-in-buffalo-mo/",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/001-hannah-vale",
+      "destination": "/small-business-success/",
+      "statusCode": 301
+    },
+    {
+      "source": "/001-hannah-vale/",
+      "destination": "/small-business-success/",
+      "statusCode": 301
+    },
+    {
+      "source": "/review-management",
+      "destination": "/get-more-small-business-reviews/",
+      "statusCode": 301
+    },
+    {
+      "source": "/review-management/",
+      "destination": "/get-more-small-business-reviews/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hannah",
+      "destination": "/small-business-success/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hannah/",
+      "destination": "/small-business-success/",
+      "statusCode": 301
+    },
+    {
+      "source": "/stephen-driscoll-launches-from-sgf",
+      "destination": "/small-business-success/",
+      "statusCode": 301
+    },
+    {
+      "source": "/stephen-driscoll-launches-from-sgf/",
+      "destination": "/small-business-success/",
+      "statusCode": 301
+    },
+    {
+      "source": "/free-book",
+      "destination": "/small-business-success/",
+      "statusCode": 301
+    },
+    {
+      "source": "/free-book/",
+      "destination": "/small-business-success/",
+      "statusCode": 301
+    },
+    {
+      "source": "/free-traffic-hack",
+      "destination": "/small-business-success/",
+      "statusCode": 301
+    },
+    {
+      "source": "/free-traffic-hack/",
+      "destination": "/small-business-success/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo-checklist",
+      "destination": "/small-business-success/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo-checklist/",
+      "destination": "/small-business-success/",
+      "statusCode": 301
+    },
+    {
+      "source": "/event-dashboard",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/event-dashboard/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/test",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/test/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/thank-you-shakespeare",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/thank-you-shakespeare/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/event",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/event/",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/locations",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/locations/",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/categories",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/categories/",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tags",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tags/",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/my-bookings",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/my-bookings/",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/author/sigafus",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/author/sigafus/",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/author/team",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/author/team/",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/my-bookings",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/my-bookings/",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/event/:path*",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/venue/:path*",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/organizer/:path*",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events_/:path*",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/categories/:path*",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/locations/:path*",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/tags/:path*",
+      "destination": "/events/",
+      "statusCode": 301
+    },
+    {
+      "source": "/wp-content/uploads/2021/07/bass-pro-shops-in-springfield-mo.jpg",
+      "destination": "/best-things-to-do-in-springfield-mo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/wp-content/uploads/2021/07/playground-at-McBride-Park.jpg",
+      "destination": "/best-parks-in-springfield-mo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/wp-content/uploads/2021/04/largest-fork-springfield-mo.jpg",
+      "destination": "/largest-fork-springfield-mo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/wp-content/uploads/2021/07/playground-and-stream-at-sequiota.jpeg",
+      "destination": "/sequiota-park-springfield/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo",
+      "destination": "/small-business-success/",
+      "statusCode": 307
+    },
+    {
+      "source": "/seo/",
+      "destination": "/small-business-success/",
+      "statusCode": 307
+    },
+    {
+      "source": "/hashtags",
+      "destination": "https://flick.tech?fpr=preferable",
+      "statusCode": 307
+    },
+    {
+      "source": "/hashtags/",
+      "destination": "https://flick.tech?fpr=preferable",
+      "statusCode": 307
+    },
+    {
+      "source": "/417marketing-seo",
+      "destination": "https://www.417marketing.com/services/seo/?utm_source=417&utm_medium=seo",
+      "statusCode": 307
+    },
+    {
+      "source": "/417marketing-seo/",
+      "destination": "https://www.417marketing.com/services/seo/?utm_source=417&utm_medium=seo",
+      "statusCode": 307
+    },
+    {
+      "source": "/campaignium-home",
+      "destination": "https://www.campaignium.com/?utm_source=417local&utm_medium=blog",
+      "statusCode": 307
+    },
+    {
+      "source": "/campaignium-home/",
+      "destination": "https://www.campaignium.com/?utm_source=417local&utm_medium=blog",
+      "statusCode": 307
+    },
+    {
+      "source": "/campaignium-seo",
+      "destination": "https://www.campaignium.com/search-engine-optimization/?utm_source=417local&utm_medium=blog",
+      "statusCode": 307
+    },
+    {
+      "source": "/campaignium-seo/",
+      "destination": "https://www.campaignium.com/search-engine-optimization/?utm_source=417local&utm_medium=blog",
+      "statusCode": 307
+    },
+    {
+      "source": "/417marketing-home",
+      "destination": "https://www.417marketing.com/?utm_source=417&utm_medium=blog",
+      "statusCode": 307
+    },
+    {
+      "source": "/417marketing-home/",
+      "destination": "https://www.417marketing.com/?utm_source=417&utm_medium=blog",
+      "statusCode": 307
+    },
+    {
+      "source": "/incend-media-home",
+      "destination": "https://incendmedia.com/?utm_source=417local&utm_medium=blog",
+      "statusCode": 307
+    },
+    {
+      "source": "/incend-media-home/",
+      "destination": "https://incendmedia.com/?utm_source=417local&utm_medium=blog",
+      "statusCode": 307
+    },
+    {
+      "source": "/incend-media-seo",
+      "destination": "https://incendmedia.com/seo-services/?utm_source=417local&utm_medium=blog",
+      "statusCode": 307
+    },
+    {
+      "source": "/incend-media-seo/",
+      "destination": "https://incendmedia.com/seo-services/?utm_source=417local&utm_medium=blog",
+      "statusCode": 307
+    },
+    {
+      "source": "/siteground",
+      "destination": "https://www.siteground.com/index.htm?afcode=4d70c56835585b52cefa9aa89f45e480",
+      "statusCode": 307
+    },
+    {
+      "source": "/siteground/",
+      "destination": "https://www.siteground.com/index.htm?afcode=4d70c56835585b52cefa9aa89f45e480",
+      "statusCode": 307
+    },
+    {
+      "source": "/a2",
+      "destination": "https://www.a2hosting.com/?aid=fluidframelegacy",
+      "statusCode": 307
+    },
+    {
+      "source": "/a2/",
+      "destination": "https://www.a2hosting.com/?aid=fluidframelegacy",
+      "statusCode": 307
+    },
+    {
+      "source": "/namecheap",
+      "destination": "http://www.tkqlhce.com/click-8741243-13269556",
+      "statusCode": 307
+    },
+    {
+      "source": "/namecheap/",
+      "destination": "http://www.tkqlhce.com/click-8741243-13269556",
+      "statusCode": 307
+    },
+    {
+      "source": "/thrive",
+      "destination": "https://thrivethemes.com/affiliates/ref.php?id=7739",
+      "statusCode": 307
+    },
+    {
+      "source": "/thrive/",
+      "destination": "https://thrivethemes.com/affiliates/ref.php?id=7739",
+      "statusCode": 307
+    },
+    {
+      "source": "/astra",
+      "destination": "https://wpastra.com/",
+      "statusCode": 307
+    },
+    {
+      "source": "/astra/",
+      "destination": "https://wpastra.com/",
+      "statusCode": 307
+    },
+    {
+      "source": "/book",
+      "destination": "/small-business-success/",
+      "statusCode": 307
+    },
+    {
+      "source": "/book/",
+      "destination": "/small-business-success/",
+      "statusCode": 307
+    },
+    {
+      "source": "/aweber",
+      "destination": "http://aweber.com/?486910",
+      "statusCode": 307
+    },
+    {
+      "source": "/aweber/",
+      "destination": "http://aweber.com/?486910",
+      "statusCode": 307
+    },
+    {
+      "source": "/elementor",
+      "destination": "https://elementor.com/",
+      "statusCode": 307
+    },
+    {
+      "source": "/elementor/",
+      "destination": "https://elementor.com/",
+      "statusCode": 307
+    },
+    {
+      "source": "/clickfunnels-plat",
+      "destination": "https://affiliates.clickfunnels.com/optin32420079",
+      "statusCode": 307
+    },
+    {
+      "source": "/clickfunnels-plat/",
+      "destination": "https://affiliates.clickfunnels.com/optin32420079",
+      "statusCode": 307
+    },
+    {
+      "source": "/leadpages",
+      "destination": "https://www.leadpages.com/",
+      "statusCode": 307
+    },
+    {
+      "source": "/leadpages/",
+      "destination": "https://www.leadpages.com/",
+      "statusCode": 307
+    },
+    {
+      "source": "/review-call",
+      "destination": "https://calendly.com/417-josh/30min",
+      "statusCode": 307
+    },
+    {
+      "source": "/review-call/",
+      "destination": "https://calendly.com/417-josh/30min",
+      "statusCode": 307
+    },
+    {
+      "source": "/convertkit",
+      "destination": "https://convertkit.com?lmref=Nw85Yg",
+      "statusCode": 307
+    },
+    {
+      "source": "/convertkit/",
+      "destination": "https://convertkit.com?lmref=Nw85Yg",
+      "statusCode": 307
+    },
+    {
+      "source": "/review-growth-expert",
+      "destination": "https://calendly.com/417-josh/30min",
+      "statusCode": 307
+    },
+    {
+      "source": "/review-growth-expert/",
+      "destination": "https://calendly.com/417-josh/30min",
+      "statusCode": 307
+    },
+    {
+      "source": "/zoom",
+      "destination": "https://zoom.us/j/8866989715",
+      "statusCode": 307
+    },
+    {
+      "source": "/zoom/",
+      "destination": "https://zoom.us/j/8866989715",
+      "statusCode": 307
+    },
+    {
+      "source": "/grow",
+      "destination": "/small-business-success/",
+      "statusCode": 307
+    },
+    {
+      "source": "/grow/",
+      "destination": "/small-business-success/",
+      "statusCode": 307
+    },
+    {
+      "source": "/blogging-success-in-2-steps",
+      "destination": "https://swmissouri.score.org/event/learn-how-blog-fun-and-profit",
+      "statusCode": 307
+    },
+    {
+      "source": "/blogging-success-in-2-steps/",
+      "destination": "https://swmissouri.score.org/event/learn-how-blog-fun-and-profit",
+      "statusCode": 307
+    },
+    {
+      "source": "/prowritingaid",
+      "destination": "https://prowritingaid.com/",
+      "statusCode": 307
+    },
+    {
+      "source": "/prowritingaid/",
+      "destination": "https://prowritingaid.com/",
+      "statusCode": 307
+    },
+    {
+      "source": "/grammarly",
+      "destination": "http://www.jdoqocy.com/click-8741243-11001874",
+      "statusCode": 307
+    },
+    {
+      "source": "/grammarly/",
+      "destination": "http://www.jdoqocy.com/click-8741243-11001874",
+      "statusCode": 307
+    },
+    {
+      "source": "/free-blogging-workshop",
+      "destination": "https://swmissouri.score.org/event/learn-how-blog-fun-and-profit",
+      "statusCode": 307
+    },
+    {
+      "source": "/free-blogging-workshop/",
+      "destination": "https://swmissouri.score.org/event/learn-how-blog-fun-and-profit",
+      "statusCode": 307
+    },
+    {
+      "source": "/solo",
+      "destination": "https://www.sitesell.com/",
+      "statusCode": 307
+    },
+    {
+      "source": "/solo/",
+      "destination": "https://www.sitesell.com/",
+      "statusCode": 307
+    },
+    {
+      "source": "/reviews-scan",
+      "destination": "/get-started/?utm_source=josh&utm_medium=url",
+      "statusCode": 307
+    },
+    {
+      "source": "/reviews-scan/",
+      "destination": "/get-started/?utm_source=josh&utm_medium=url",
+      "statusCode": 307
+    },
+    {
+      "source": "/josh",
+      "destination": "https://tidycal.com/joshlenz",
+      "statusCode": 307
+    },
+    {
+      "source": "/josh/",
+      "destination": "https://tidycal.com/joshlenz",
+      "statusCode": 307
+    },
+    {
+      "source": "/surfer-local",
+      "destination": "https://surferlocal.com/?fp_ref=preferable",
+      "statusCode": 307
+    },
+    {
+      "source": "/surfer-local/",
+      "destination": "https://surferlocal.com/?fp_ref=preferable",
+      "statusCode": 307
+    },
+    {
+      "source": "/cloudways",
+      "destination": "https://www.cloudways.com/en/?id=883357",
+      "statusCode": 307
+    },
+    {
+      "source": "/cloudways/",
+      "destination": "https://www.cloudways.com/en/?id=883357",
+      "statusCode": 307
+    },
+    {
+      "source": "/gmb",
+      "destination": "/create-google-my-business-listing/",
+      "statusCode": 307
+    },
+    {
+      "source": "/gmb/",
+      "destination": "/create-google-my-business-listing/",
+      "statusCode": 307
+    },
+    {
+      "source": "/email-workshop",
+      "destination": "https://www.meetup.com/417-academy/events/290677570/",
+      "statusCode": 307
+    },
+    {
+      "source": "/email-workshop/",
+      "destination": "https://www.meetup.com/417-academy/events/290677570/",
+      "statusCode": 307
+    },
+    {
+      "source": "/joshl",
+      "destination": "https://tidycal.com/joshlenz/important-life-connections",
+      "statusCode": 307
+    },
+    {
+      "source": "/joshl/",
+      "destination": "https://tidycal.com/joshlenz/important-life-connections",
+      "statusCode": 307
+    },
+    {
+      "source": "/active",
+      "destination": "https://www.activecampaign.com/",
+      "statusCode": 307
+    },
+    {
+      "source": "/active/",
+      "destination": "https://www.activecampaign.com/",
+      "statusCode": 307
+    },
+    {
+      "source": "/health-kickoff-giveaway-2023",
+      "destination": "https://giveaway.417local.com/lp/141814/lp141814",
+      "statusCode": 307
+    },
+    {
+      "source": "/health-kickoff-giveaway-2023/",
+      "destination": "https://giveaway.417local.com/lp/141814/lp141814",
+      "statusCode": 307
+    },
+    {
+      "source": "/dww-giveaway",
+      "destination": "https://giveaway.417local.com/ref/63cafc29136ecM",
+      "statusCode": 307
+    },
+    {
+      "source": "/dww-giveaway/",
+      "destination": "https://giveaway.417local.com/ref/63cafc29136ecM",
+      "statusCode": 307
+    },
+    {
+      "source": "/417-aerial-giveaway",
+      "destination": "https://giveaway.417local.com/ref/63cb091981615M",
+      "statusCode": 307
+    },
+    {
+      "source": "/417-aerial-giveaway/",
+      "destination": "https://giveaway.417local.com/ref/63cb091981615M",
+      "statusCode": 307
+    },
+    {
+      "source": "/health-kickoff-giveaway",
+      "destination": "https://giveaway.417local.com/ref/63cec305de5edM/",
+      "statusCode": 307
+    },
+    {
+      "source": "/health-kickoff-giveaway/",
+      "destination": "https://giveaway.417local.com/ref/63cec305de5edM/",
+      "statusCode": 307
+    },
+    {
+      "source": "/january",
+      "destination": "https://giveaway.417local.com/ref/63d1a28dbc32eM",
+      "statusCode": 307
+    },
+    {
+      "source": "/january/",
+      "destination": "https://giveaway.417local.com/ref/63d1a28dbc32eM",
+      "statusCode": 307
+    },
+    {
+      "source": "/january-contest",
+      "destination": "https://giveaway.417local.com/ref/63d1713f6ccedM",
+      "statusCode": 307
+    },
+    {
+      "source": "/january-contest/",
+      "destination": "https://giveaway.417local.com/ref/63d1713f6ccedM",
+      "statusCode": 307
+    },
+    {
+      "source": "/fitness-giveaway-2023",
+      "destination": "https://giveaway.417local.com/ref/63db0f59650e7M/",
+      "statusCode": 307
+    },
+    {
+      "source": "/fitness-giveaway-2023/",
+      "destination": "https://giveaway.417local.com/ref/63db0f59650e7M/",
+      "statusCode": 307
+    }
+  ],
+  "headers": [
+    {
+      "source": "/_astro/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

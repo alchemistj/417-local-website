@@ -1,0 +1,38 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleCard from "../../components/ArticleCard.astro";
+import { CATEGORIES } from "../../data/categories";
+import { sortByUpdated } from "../../lib/routes";
+
+export const getStaticPaths = (() =>
+  CATEGORIES.map((category) => ({ params: { slug: category.slug }, props: { category } }))) satisfies GetStaticPaths;
+
+const { category } = Astro.props;
+const posts = sortByUpdated(
+  (await getCollection("posts", (p) => p.data.category === category.slug)).map((p) => ({
+    ...p,
+    title: p.data.title,
+    updated: p.data.updated,
+  })),
+);
+---
+
+<BaseLayout title={category.title} description={category.description} path={`/category/${category.slug}/`}>
+  <section class="band">
+    <div class="container stack">
+      <h1>{category.name}</h1>
+      <p class="lead">{category.description}</p>
+    </div>
+  </section>
+  <section class="band band-tint">
+    <div class="container">
+      {posts.length === 0 ? (
+        <p class="empty-state">New {category.name.toLowerCase()} guides are on the way. Check back soon.</p>
+      ) : (
+        <ul class="card-grid">{posts.map((p, i) => <ArticleCard post={p} eager={i < 2} />)}</ul>
+      )}
+    </div>
+  </section>
+</BaseLayout>
