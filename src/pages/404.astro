@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Page Not Found | 417 Local"
+  description="That page moved or no longer exists. Find things to do, places to eat and events in Springfield, MO."
+  path="/404/"
+  noindex={true}
+>
+  <div class="band">
+    <div class="container stack-lg">
+    <h1>We Couldn't Find That Page</h1>
+    <p>It may have moved, or it covered something that's no longer around.</p>
+    <p>Try one of these instead:</p>
+    <ul>
+      <li><a href="/best-things-to-do-in-springfield-mo/">Things to do in Springfield</a></li>
+      <li><a href="/best-kids-activities-in-springfield-mo/">Things to do with kids</a></li>
+      <li><a href="/category/food-and-drink/">Food and drink</a></li>
+      <li><a href="/events/">Events</a></li>
+      <li><a href="/blog/">All articles</a></li>
+    </ul>
+    </div>
+  </div>
+</BaseLayout>

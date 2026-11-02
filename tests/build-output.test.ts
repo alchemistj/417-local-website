@@ -21,9 +21,12 @@ interface Page {
   html: string;
 }
 
-const pages: Page[] = built
+const allPages: Page[] = built
   ? htmlFiles(DIST_DIR).map((file) => ({ route: routeOf(DIST_DIR, file), html: readFileSync(file, "utf8") }))
   : [];
+// The 404 page is served by Vercel for unknown paths; it is not a route, so it is checked on its own below.
+const notFound = allPages.find((p) => p.route === "/404.html");
+const pages: Page[] = allPages.filter((p) => p.route !== "/404.html");
 const registry = built ? buildRoutes(postSummaries()) : [];
 const routeSet = new Set(registry.map((r) => r.path));
 
@@ -38,6 +41,12 @@ describe.skipIf(!built)("built site", () => {
   it("builds exactly the pages in the route registry", () => {
     const built = pages.map((p) => p.route).sort();
     expect(built).toEqual([...routeSet].sort());
+  });
+
+  it("builds a noindex 404 page with one <h1>", () => {
+    expect(notFound, "dist/404.html").toBeTruthy();
+    expect((notFound!.html.match(/<h1[\s>]/g) ?? []).length).toBe(1);
+    expect(notFound!.html).toMatch(/<meta name="robots" content="noindex/);
   });
 
   it("has exactly one <h1> on every page", () => {
