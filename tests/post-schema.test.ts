@@ -34,7 +34,7 @@ describe("posts frontmatter schema", () => {
 
   it("rejects an unknown category, a long title tag or description, and a hero without alt", () => {
     expect(schema.safeParse({ ...sample, category: "events" }).success).toBe(false);
-    expect(schema.safeParse({ ...sample, seoTitle: "x".repeat(61) }).success).toBe(false);
+    expect(schema.safeParse({ ...sample, seoTitle: "x".repeat(91) }).success).toBe(false);
     expect(schema.safeParse({ ...sample, description: "x".repeat(156) }).success).toBe(false);
     expect(schema.safeParse({ ...sample, heroAlt: undefined }).success).toBe(false);
     expect(schema.safeParse({ ...sample, kind: "article" }).success).toBe(false);

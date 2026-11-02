@@ -5,10 +5,29 @@ import { ORGANIZATION, SITE_NAME } from "../lib/site";
 
 const year = new Date().getFullYear();
 const a = ORGANIZATION.address;
+const [facebook, instagram] = ORGANIZATION.sameAs;
 ---
 
+<div class="follow-band">
+  <div class="container container-wide follow-inner">
+    <p>Follow Us Here</p>
+    <ul class="social">
+      <li>
+        <a href={facebook} rel="noopener" aria-label="417 Local on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.9.4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href={instagram} rel="noopener" aria-label="417 Local on Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" style="fill:none;stroke:currentColor;stroke-width:2" /><circle cx="12" cy="12" r="4" style="fill:none;stroke:currentColor;stroke-width:2" /><circle cx="17.2" cy="6.8" r="1.2" /></svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
 <footer class="site-footer">
-  <div class="container">
+  <div class="container container-wide">
     <div class="footer-grid">
       <div>
         <h2>Useful Links</h2>
@@ -23,13 +42,19 @@ const a = ORGANIZATION.address;
         </ul>
       </div>
       <div>
-        <h2>Find Us</h2>
+        <h2>Contact Us</h2>
         <address>
           {a.streetAddress}<br />{a.addressLocality}, {a.addressRegion} {a.postalCode}
         </address>
         <ul>
-          <li><a href={ORGANIZATION.sameAs[0]} rel="noopener">Facebook</a></li>
-          <li><a href={ORGANIZATION.sameAs[1]} rel="noopener">Instagram</a></li>
+          <li><a href="/contact-us/">Send us a message</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Social</h2>
+        <ul>
+          <li><a href={facebook} rel="noopener">Facebook</a></li>
+          <li><a href={instagram} rel="noopener">Instagram</a></li>
         </ul>
       </div>
     </div>

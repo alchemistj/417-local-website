@@ -148,6 +148,33 @@ describe.skipIf(!built)("built site", () => {
     for (const r of registry.filter((r) => r.type === "post")) expect(llms).toContain(`${SITE}${r.path}`);
   });
 
+  it("has no visible breadcrumb on any page but keeps BreadcrumbList JSON-LD on articles", () => {
+    for (const p of pages) expect(p.html, p.route).not.toMatch(/aria-label="Breadcrumb"|class="breadcrumbs"/);
+    const kids = pages.find((p) => p.route === "/best-kids-activities-in-springfield-mo/")?.html ?? "";
+    expect(kids).toContain('"@type":"BreadcrumbList"');
+  });
+
+  it("builds the homepage hero as a real inline <img> first in <body>, with the parse marker and no preload", () => {
+    const home = pages.find((p) => p.route === "/")?.html ?? "";
+    const body = home.slice(home.indexOf("<body"));
+    const firstImg = body.search(/<img[\s>]/);
+    expect(firstImg).toBeGreaterThan(-1);
+    expect(body.slice(0, firstImg)).not.toMatch(/<header|<h1|<nav/);
+    expect(body).toMatch(/<img[^>]*class="atf-photo"[^>]*src="data:image\/avif;base64,[^"]+"[^>]*fetchpriority="high"/);
+    expect(body.indexOf('class="atf-ready"')).toBeGreaterThan(body.indexOf("<h1"));
+    expect(home).not.toMatch(/rel="preload"/);
+  });
+
+  it("renders landing pages without an Updated line or a top photo, and articles with both", () => {
+    for (const slug of ["best-things-to-do-in-springfield-mo", "small-business-success"]) {
+      const html = pages.find((p) => p.route === `/${slug}/`)?.html ?? "";
+      expect(html, slug).not.toMatch(/class="byline"|class="article-top"/);
+    }
+    const post = pages.find((p) => p.route === "/best-breweries-in-springfield-mo/")?.html ?? "";
+    expect(post).toMatch(/class="byline">Updated /);
+    expect(post).toContain("Read Next");
+  });
+
   it("shows the events empty state when there are no events", () => {
     const hub = pages.find((p) => p.route === "/events/")?.html ?? "";
     if (hub.includes('class="event-list"')) return; // events exist, nothing to check

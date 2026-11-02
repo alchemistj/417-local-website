@@ -6,6 +6,8 @@ published: 2021-07-05
 updated: 2026-11-02
 category: food-and-drink
 kind: post
+heroImage: ./images/best-food-trucks-in-springfield-mo/kids-enjoying-pineapple-whip.jpg
+heroAlt: "Kids enjoying Pineapple Whip treats"
 ---
 
 If you're down to try some food truck goodness in the #SGF area but aren't sure which direction to head, start here. These are some of our favorite food trucks in Springfield, including pizza, Hawaiian food, street tacos, British pasties and free ice cream.

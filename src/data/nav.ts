@@ -6,6 +6,8 @@ export interface NavItem {
   label: string;
   href: string;
   requiresPost?: string;
+  /** Rendered as the filled olive button. */
+  cta?: boolean;
 }
 
 export const NAV_ITEMS: NavItem[] = [
@@ -14,7 +16,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "Food & Drink", href: "/category/food-and-drink/" },
   { label: "Events", href: "/events/" },
   { label: "Blog", href: "/blog/" },
-  { label: "Grow Your Business", href: "/small-business-success/", requiresPost: "small-business-success" },
+  { label: "Grow Your Business", href: "/small-business-success/", requiresPost: "small-business-success", cta: true },
 ];
 
 export const FOOTER_LINKS: { label: string; href: string }[] = [

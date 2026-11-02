@@ -71,10 +71,21 @@ const graphs = [{ "@context": "https://schema.org", "@graph": [organization, web
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <Header currentPath={path} />
-    <main id="main">
-      <slot />
-    </main>
-    <Footer />
+    {Astro.slots.has("hero-photo") ? (
+      // Photo-hero pages (SOP first-frame §2): the inline photo is the first paintable element, and the
+      // whole page waits on one parse marker (.atf-ready, inside the hero) so the first screen paints complete.
+      <div class="atf">
+        <slot name="hero-photo" />
+        <Header currentPath={path} />
+        <main id="main"><slot /></main>
+        <Footer />
+      </div>
+    ) : (
+      <>
+        <Header currentPath={path} />
+        <main id="main"><slot /></main>
+        <Footer />
+      </>
+    )}
   </body>
 </html>

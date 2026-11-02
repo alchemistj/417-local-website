@@ -20,13 +20,13 @@ const posts = sortByUpdated(
 ---
 
 <BaseLayout title={category.title} description={category.description} path={`/category/${category.slug}/`}>
-  <section class="band">
-    <div class="container stack">
+  <section class="band band-blue page-band">
+    <div class="container">
       <h1>{category.name}</h1>
       <p class="lead">{category.description}</p>
     </div>
   </section>
-  <section class="band band-tint">
+  <section class="band">
     <div class="container">
       {posts.length === 0 ? (
         <p class="empty-state">New {category.name.toLowerCase()} guides are on the way. Check back soon.</p>

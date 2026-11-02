@@ -8,8 +8,6 @@ export const HOME_COPY = {
     "The 417 community has so many beautiful people that work hard every day in their nonprofit services, businesses, various groups, events and more.",
     "With so much national and global competition and deep pockets, it's not easy to be a small fish in a big pond. 417 Local is the place to come together and show love for the 417 area.",
   ],
-  primaryCta: { label: "Find Things to Do", href: "/best-things-to-do-in-springfield-mo/" },
-  secondaryCta: { label: "See Events", href: "/events/" },
   mission: [
     "We support the 417 area by highlighting businesses and events, and by offering training, help and services for local growth.",
     "As a community, when one of us does better, we all do better!",
@@ -33,7 +31,7 @@ export interface HomeSection {
 export const HOME_SECTIONS: HomeSection[] = [
   {
     id: "things-to-do",
-    heading: "Things to Do",
+    heading: "Discover Something New",
     slugs: [
       "best-things-to-do-in-springfield-mo",
       "best-kids-activities-in-springfield-mo",
@@ -43,7 +41,7 @@ export const HOME_SECTIONS: HomeSection[] = [
   },
   {
     id: "food-and-drink",
-    heading: "Food & Drink",
+    heading: "Experience Made in 417 Food and Drink",
     slugs: ["best-breweries-in-springfield-mo", "best-food-trucks-in-springfield-mo"],
     seeAll: { label: "More food and drink", href: "/category/food-and-drink/" },
   },

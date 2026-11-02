@@ -6,6 +6,8 @@ published: 2021-03-22
 updated: 2026-11-02
 category: do-something
 kind: post
+heroImage: ./images/james-river-float-series-springfield-mo/canoe-on-a-calm-lake.jpg
+heroAlt: "Looking out from the bow of a wooden canoe on a calm lake"
 ---
 
 One of the best ways to explore 417 is floating the James River.

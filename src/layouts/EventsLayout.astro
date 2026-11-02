@@ -30,14 +30,10 @@ const crumbLd = {
 ---
 
 <BaseLayout title={meta.title} description={meta.description} path={meta.path} jsonLd={[crumbLd]}>
-  <section class="band band-dark">
-    <div class="container stack">
+  <section class="band band-blue page-band">
+    <div class="container">
       <h1>{h1}</h1>
       <p class="lead">{intro}</p>
-    </div>
-  </section>
-  <section class="band">
-    <div class="container">
       {subnav && (
         <nav aria-label="Event types">
           <ul class="subnav">
@@ -47,6 +43,10 @@ const crumbLd = {
           </ul>
         </nav>
       )}
+    </div>
+  </section>
+  <section class="band">
+    <div class="container">
       <EventList events={events} />
     </div>
   </section>

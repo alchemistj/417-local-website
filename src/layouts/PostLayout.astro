@@ -5,14 +5,25 @@ import BaseLayout from "./BaseLayout.astro";
 import ArticleCard from "../components/ArticleCard.astro";
 import { categoryName } from "../data/categories";
 import { SITE_NAME, absoluteUrl } from "../lib/site";
+import HexPattern from "../components/HexPattern.astro";
+import skyline from "../assets/decor/springfield-skyline.png";
+import { LANDING_EYEBROW } from "../data/landingPages";
 import { sortByUpdated } from "../lib/routes";
 
 interface Props {
   post: CollectionEntry<"posts">;
 }
 const { post } = Astro.props;
-const { title, seoTitle, description, published, updated, category, heroImage, heroAlt } = post.data;
+const { title, seoTitle, description, published, updated, category, heroImage, heroAlt, kind } = post.data;
+const isLanding = kind === "page";
+const eyebrow = LANDING_EYEBROW[post.id];
 const { Content } = await render(post);
+
+// small-business-success: the first paragraph (the lead) moves into the white card under the H1.
+// Other landing pages and articles render the Markdown as is.
+const leadSplit = isLanding && !eyebrow ? (post.rendered?.html ?? "").match(/^\s*(<p[\s>][\s\S]*?<\/p>)([\s\S]*)$/) : null;
+const leadHtml = leadSplit?.[1];
+const restHtml = leadSplit?.[2];
 
 const path = `/${post.id}/`;
 const heroForLd = heroImage ? await getImage({ src: heroImage, width: 1200 }) : undefined;
@@ -60,35 +71,56 @@ const crumbLd = {
   ogImage={heroImage}
   jsonLd={[articleLd, crumbLd]}
 >
-  <article>
-    <div class="container">
-      <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <ol>
-          <li><a href="/">Home</a></li>
-          <li><a href={`/category/${category}/`}>{categoryName(category)}</a></li>
-          <li aria-current="page">{title}</li>
-        </ol>
-      </nav>
-      <header class="article-head">
-        <h1>{title}</h1>
-        <p class="updated">Updated {updatedLabel}</p>
+  <article class={isLanding ? "landing" : undefined}>
+    {isLanding ? (
+      eyebrow ? (
+        <header class="landing-band skyline-band">
+          <div class="container">
+            <p class="eyebrow">{eyebrow}</p>
+            <h1>{title}</h1>
+          </div>
+          <Image class="skyline" src={skyline} alt="" widths={[800, 1600, 2001]} sizes="100vw" format="webp" loading="eager" decoding="async" />
+        </header>
+      ) : (
+        <header class="landing-band card-band">
+          <div class="container">
+            <div class="landing-card">
+              <h1>{title}</h1>
+              {leadHtml && <div class="lead-text" set:html={leadHtml} />}
+            </div>
+          </div>
+        </header>
+      )
+    ) : (
+      <header class="article-top">
+        <div class={`article-top-inner container container-wide ${heroImage ? "" : "no-photo"}`}>
+          <div class="article-title">
+            <h1>{title}</h1>
+            <p class="byline">Updated {updatedLabel}</p>
+            <p class="byline">By {SITE_NAME} Editorial Team</p>
+          </div>
+          {heroImage && (
+            <figure class="article-photo">
+              <Image
+                src={heroImage}
+                alt={heroAlt ?? ""}
+                width={1080}
+                height={900}
+                widths={[480, 720, 1080]}
+                sizes="(min-width: 1080px) 540px, (min-width: 860px) 50vw, 100vw"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </figure>
+          )}
+        </div>
+        <HexPattern />
       </header>
-      {heroImage && (
-        <figure class="article-hero">
-          <Image
-            src={heroImage}
-            alt={heroAlt ?? ""}
-            width={900}
-            widths={[480, 720, 900, 1350]}
-            sizes="(min-width: 900px) 852px, calc(100vw - 48px)"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-          />
-        </figure>
-      )}
+    )}
+    <div class="container">
       <div class="prose">
-        <Content />
+        {restHtml !== undefined ? <Fragment set:html={restHtml} /> : <Content />}
       </div>
     </div>
   </article>
@@ -96,7 +128,7 @@ const crumbLd = {
   {related.length > 0 && (
     <section class="band band-tint" aria-labelledby="related-heading">
       <div class="container">
-        <div class="section-head"><h2 id="related-heading">More in {categoryName(category)}</h2></div>
+        <div class="section-head"><h2 id="related-heading">Read Next</h2></div>
         <ul class="card-grid cols-3">
           {related.map((p) => <ArticleCard post={p} />)}
         </ul>

@@ -14,15 +14,15 @@ const isCurrent = (href: string) => href === currentPath;
 ---
 
 <header class="site-header" data-site-header>
-  <div class="container header-inner">
+  <div class="container container-wide header-inner">
     <a class="logo" href="/" aria-label="417 Local home">
       <!-- Inline (under 4 KB) so the logo is in the first frame with no extra request. -->
-      <img src={logo} alt="417 Local" width="160" height="34" decoding="sync" />
+      <img src={logo} alt="417 Local" width="190" height="40" decoding="sync" />
     </a>
     <nav class="nav-desktop" aria-label="Main">
       <ul class="nav-list">
         {items.map((i) => (
-          <li><a href={i.href} aria-current={isCurrent(i.href) ? "page" : undefined}>{i.label}</a></li>
+          <li><a class:list={[i.cta && "nav-cta"]} href={i.href} aria-current={isCurrent(i.href) ? "page" : undefined}>{i.label}</a></li>
         ))}
       </ul>
     </nav>
@@ -31,7 +31,7 @@ const isCurrent = (href: string) => href === currentPath;
       <nav class="nav-panel" aria-label="Main (mobile)">
         <ul class="nav-list">
           {items.map((i) => (
-            <li><a href={i.href} aria-current={isCurrent(i.href) ? "page" : undefined}>{i.label}</a></li>
+            <li><a class:list={[i.cta && "nav-cta"]} href={i.href} aria-current={isCurrent(i.href) ? "page" : undefined}>{i.label}</a></li>
           ))}
         </ul>
       </nav>

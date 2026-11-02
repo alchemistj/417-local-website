@@ -13,13 +13,13 @@ const pagePosts = posts.slice(0, POSTS_PER_PAGE);
 ---
 
 <BaseLayout title={BLOG.title} description={BLOG.description} path={BLOG.path}>
-  <section class="band">
+  <section class="band band-blue page-band">
     <div class="container">
       <h1>Springfield, MO Local Guides and Articles</h1>
       <p class="lead">Every 417 Local guide in one place, from things to do to local businesses worth knowing.</p>
     </div>
   </section>
-  <section class="band band-tint">
+  <section class="band">
     <div class="container">
       {pagePosts.length === 0 ? (
         <p class="empty-state">New guides are on the way. Check back soon.</p>

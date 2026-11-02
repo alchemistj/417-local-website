@@ -6,6 +6,8 @@ published: 2021-04-20
 updated: 2026-11-02
 category: do-something
 kind: post
+heroImage: ./images/largest-fork-springfield-mo/largest-fork-springfield-mo.jpg
+heroAlt: "The giant fork sculpture in Springfield, MO"
 ---
 
 It might sound a bit odd, but when I first came to Springfield many years ago, one of my first adventures led me to the World's Largest Fork.
