@@ -1,6 +1,6 @@
 ---
 title: "The World's Largest Fork? Springfield MO vs. Creede CO Giant Fork"
-seoTitle: "World's Largest Fork: Springfield MO vs. Creede CO"
+seoTitle: "The World's Largest Fork? Springfield MO vs. Creede CO Giant Fork"
 description: "The giant fork in Springfield is 35 ft and Creede, Colorado's is 40, but length is not the whole story. Here is how to find it and settle the debate."
 published: 2021-04-20
 updated: 2026-11-02

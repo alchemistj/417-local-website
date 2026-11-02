@@ -1,6 +1,6 @@
 ---
-title: "How to Create, Verify, & Optimize a Google Business Profile"
-seoTitle: "Verify Google Business Profile & Optimize Your Listing"
+title: "How to Create, Verify, & Optimize a Google My Business Account"
+seoTitle: "Verify Google My Business & Optimize Your Listing | Here's How"
 description: "Set up, verify and optimize your Google Business Profile step by step: NAP, categories, photos, attributes and services to help local customers find you."
 published: 2021-04-20
 updated: 2026-11-02

@@ -1,6 +1,6 @@
 ---
-title: "The Chicago Cheesesteak Company: Is It Any Good?"
-seoTitle: "Chicago Cheesesteak Company in Springfield: Review"
+title: "The Chicago Cheesesteak Company – Is It Any Good?"
+seoTitle: "The Chicago Cheesesteak Company in Springfield - Is It Any Good?"
 description: "Is there great Philly-style cheesesteak outside Philly? A look at The Chicago Cheesesteak Company in Springfield, MO and its Springfield sandwich."
 published: 2021-07-13
 updated: 2026-11-02

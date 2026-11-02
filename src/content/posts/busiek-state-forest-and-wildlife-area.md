@@ -1,6 +1,6 @@
 ---
-title: "Busiek State Forest and Wildlife Area: Our Favorite 417 Destination"
-seoTitle: "Busiek State Forest and Wildlife Area: A 417 Favorite"
+title: "Busiek State Forest and Wildlife Area – Our Favorite 417 Destination"
+seoTitle: "Busiek State Forest and Wildlife Area - Our Favorite 417 Destination"
 description: "Trails, creek crossings, camping and swimming holes at Busiek State Forest and Wildlife Area, a quick drive south of Springfield on Highway 65."
 published: 2021-03-29
 updated: 2026-11-02

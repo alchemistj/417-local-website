@@ -1,6 +1,6 @@
 ---
-title: "How to Set Up and Connect Analytics and Search Console to Your Site"
-seoTitle: "How to Set Up Analytics & Search Console on Your Site"
+title: "How to Set Up & Connect Analytics & Search Console to Your Site"
+seoTitle: "How to Set Up & Connect Analytics & Search Console to Your Site"
 description: "Step by step: create a Google Analytics account, add Google Search Console, connect both to your website and submit your sitemap."
 published: 2021-07-19
 updated: 2026-11-02

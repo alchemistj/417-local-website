@@ -1,6 +1,6 @@
 ---
-title: "Jordan Valley Park in Springfield: Reasons to Go Any Time of Year"
-seoTitle: "Jordan Valley Park Springfield MO: Fountains, Trails & More"
+title: "Jordan Valley Park (Springfield.) 7 Reasons to Go Any Time of Year!"
+seoTitle: "Jordan Valley Park (Springfield.) 7 Reasons to Go Any Time of Year! - 417 Local"
 description: "Jordan Valley Park in downtown Springfield offers fountains in summer, fall color, holiday lights and spring picnics. Here is what to do each season."
 published: 2021-07-12
 updated: 2026-11-02

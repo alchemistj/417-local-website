@@ -1,6 +1,6 @@
 ---
-title: "21 Best Things to Do With Kids in Springfield: Top Family Activities"
-seoTitle: "21 Best (and Free) Things to Do With Kids in Springfield MO"
+title: "21 Best Things to Do with Kids in Springfield – Top Family Activities"
+seoTitle: "21 Best (and free) Things to do with Kids in Springfield MO"
 description: "Free, cheap and splurge-worthy things to do with kids in Springfield, MO, from parks and fountains to caves, zoos and ninja gyms."
 published: 2022-12-12
 updated: 2026-11-02

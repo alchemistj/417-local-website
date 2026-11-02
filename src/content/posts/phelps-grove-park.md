@@ -1,6 +1,6 @@
 ---
 title: "Phelps Grove Park"
-seoTitle: "Phelps Grove Park in Springfield, MO: History and Features"
+seoTitle: "Phelps Grove Park - 417 Local"
 description: "Phelps Grove Park, established in 1914, is one of Springfield's first parks, with shady trees, a stone pavilion, tennis court, playground and paved trail."
 published: 2018-05-16
 updated: 2026-11-02

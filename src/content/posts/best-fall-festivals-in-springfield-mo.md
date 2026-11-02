@@ -1,6 +1,6 @@
 ---
 title: "Top 24 Fall Festivals & Activities in Springfield MO and 417 Land"
-seoTitle: "Top Fall Festivals & Activities in Springfield MO"
+seoTitle: "Top Fall Festivals & Activities in the Springfield MO Area"
 description: "Pumpkins, apple picking, crisp air and fall festivals: a guide to fall activities in Springfield MO and 417 land, with usual timing for each."
 published: 2024-09-12
 updated: 2026-11-02

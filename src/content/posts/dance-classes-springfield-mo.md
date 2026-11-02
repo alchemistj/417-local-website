@@ -1,6 +1,6 @@
 ---
-title: "Have Fun Dancing: Top Single & Couple Dance Classes in Springfield"
-seoTitle: "Dance Classes in Springfield MO: Single & Couple"
+title: "Have Fun Dancing: Top Single & Couple Dance Events in Springfield"
+seoTitle: "Have Fun Dancing: Top Single & Couple Dance Events in Springfield"
 description: "Looking for something fun to do in 417? These Springfield, MO dance studios offer ballroom, swing, salsa and more for singles and couples."
 published: 2021-03-11
 updated: 2026-11-02

@@ -1,6 +1,6 @@
 ---
-title: "Pizza House: Springfield MO's Best Thin Crust Pizza for Decades"
-seoTitle: "Pizza House | Springfield MO's Best Thin Crust Pizza"
+title: "Pizza House | Springfield MO's Best Thin Crust Pizza for Decades"
+seoTitle: "Pizza House | Springfield MO's Best Thin Crust Pizza for Decades"
 description: "Pizza House on Commercial Street has served hand-rolled thin crust pizza in Springfield, MO since 1958. Here's what to expect when you stop in."
 published: 2021-03-23
 updated: 2026-11-02

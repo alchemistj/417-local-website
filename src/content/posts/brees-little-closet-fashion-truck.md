@@ -1,6 +1,6 @@
 ---
-title: "From a Springfield Impound to a Fashion Truck: Bree's Little Closet"
-seoTitle: "Bree's Little Closet: Springfield MO Fashion Truck Story"
+title: "From An Impound In Springfield To A Fun Fashion Truck | Bree's Closet"
+seoTitle: "From An Impound In Springfield To A Fun Fashion Truck | Bree's Closet"
 description: "How Brianna and Tina Barnett turned an impounded truck into Bree's Little Closet, a mobile boutique and fashion truck in Springfield, MO."
 published: 2020-06-20
 updated: 2026-11-02

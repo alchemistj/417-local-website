@@ -1,6 +1,6 @@
 ---
-title: "Some of Our Favorite Food Trucks in Springfield"
-seoTitle: "Favorite Food Trucks in Springfield, MO"
+title: "Some of Our Favorite Food Trucks & Food Truck Parks in Springfield"
+seoTitle: "Some of Our Favorite Food Trucks & Food Truck Parks in Springfield"
 description: "The best food trucks in Springfield, MO, from Pineapple Whip to street tacos, Hawaiian plates and British pasties, plus how to find them."
 published: 2021-07-05
 updated: 2026-11-02

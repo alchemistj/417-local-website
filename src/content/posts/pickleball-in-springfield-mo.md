@@ -1,6 +1,6 @@
 ---
-title: "How to Start Playing Pickleball in Springfield, MO (Top Free and Indoor Courts)"
-seoTitle: "How to Start Playing Pickleball in Springfield MO"
+title: "How to Start Playing Pickleball in Springfield MO (Top Free & Indoor Courts)"
+seoTitle: "How to Start Playing Pickleball in Springfield MO (Top Free & Indoor Courts)"
 description: "What pickleball is, how to play and where to find free outdoor courts and indoor courts in Springfield, MO, including Meador Park and Nichols Park."
 published: 2021-07-13
 updated: 2026-11-02

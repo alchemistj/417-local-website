@@ -1,6 +1,6 @@
 ---
-title: "A Dish to Devour at Café Cusco: Best Chicken in Springfield, MO?"
-seoTitle: "A Dish to Devour at Café Cusco | Best Chicken in Springfield"
+title: "A Dish to Devour at Café' Cusco | Best Chicken in Springfield MO?"
+seoTitle: "A Dish to Devour at Café' Cusco | Best Chicken in Springfield MO?"
 description: "Café Cusco's Chicken Aji Verde is a Peruvian-inspired dish worth the trip. Here is what is in it and where to find the restaurant in downtown Springfield."
 published: 2021-03-09
 updated: 2026-11-02

@@ -1,6 +1,6 @@
 ---
 title: "Unique Painting, Pottery, & More Art Classes in Springfield"
-seoTitle: "Painting, Pottery & Art Classes in Springfield, MO"
+seoTitle: "Unique Painting, Pottery, & More Art Classes in Springfield - 417 Local"
 description: "Painting, pottery, woodworking, glass and knitting classes in Springfield, MO, for adults and kids, from one-time workshops to multi-week courses."
 published: 2021-03-15
 updated: 2026-11-02

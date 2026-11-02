@@ -1,6 +1,6 @@
 ---
 title: "The Flea in Springfield, MO: Best Dive Bar in 417?"
-seoTitle: "The Flea: A Dive Bar in Springfield MO for the Rest of Us"
+seoTitle: "The Flea: A \"Dive\" Bar in Springfield MO for the Rest of Us"
 description: "The Flea in downtown Springfield, MO, is a bar built to feel like a classic dive without the grime. Here is why it keeps people coming back."
 published: 2018-09-12
 updated: 2026-11-02

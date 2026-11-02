@@ -1,6 +1,6 @@
 ---
 title: "48 Romantic and Unique Date Night Ideas in Springfield, MO"
-seoTitle: "48 Romantic Date Night Ideas in Springfield, MO"
+seoTitle: "48 Romantic and Unique Date Night Ideas in Springfield, MO"
 description: "Looking for a new place to take your person out? Here are 48 date night ideas in Springfield, MO, from cooking classes to river floats."
 published: 2021-07-15
 updated: 2026-11-02

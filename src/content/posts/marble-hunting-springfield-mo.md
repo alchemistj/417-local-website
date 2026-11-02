@@ -1,6 +1,6 @@
 ---
-title: "Outdoor Fun in 417 Land: Marble Hunting"
-seoTitle: "Marble Hunting in Springfield, MO: Outdoor Fun in 417"
+title: "Outdoor Fun in 417 Land | Marble Hunting – An Unexpected Discovery"
+seoTitle: "Outdoor Fun in 417 land | Marble Hunting - An Unexpected Discovery"
 description: "Marble hunting is outdoor fun for the whole family in Springfield, MO. Join a local Facebook group, follow clues and find hand-made glass marbles."
 published: 2021-04-11
 updated: 2026-11-02

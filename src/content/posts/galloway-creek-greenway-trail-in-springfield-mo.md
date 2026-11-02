@@ -1,6 +1,6 @@
 ---
-title: "5 Reasons Galloway Creek Greenway Is a Top Trail in Springfield, MO"
-seoTitle: "Galloway Creek Greenway Trail in Springfield, MO"
+title: "5 Reasons Galloway Creek Greenway is THE BEST Trail in Springfield, Mo"
+seoTitle: "5 Reasons Galloway Creek Greenway is THE BEST Trail in Springfield, Mo"
 description: "Five reasons to walk or bike Galloway Creek Greenway in Springfield, MO, from Sequiota Park and Galloway Village to the James River bridge."
 published: 2021-03-31
 updated: 2026-11-02

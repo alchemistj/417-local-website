@@ -1,6 +1,6 @@
 ---
-title: "Sequiota Park in Springfield: An Explorer's Paradise"
-seoTitle: "Sequiota Park in Springfield MO: Playground, Trail & Cave"
+title: "The Amazing Sequiota Park in Springfield: An Explorers and Site Seeing Paradise"
+seoTitle: "Sequiota Park in Springfield: An Explorers and Site Seeing Paradise"
 description: "Sequiota Park in southeast Springfield has a playground, pond, picnic pavilion and Greenway trail access. Here is what to do and a bit of its history."
 published: 2021-07-14
 updated: 2026-11-02

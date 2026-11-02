@@ -1,6 +1,6 @@
 ---
 title: "7 Steps to Increase (and Automate) Small Business Reviews Online"
-seoTitle: "Increase (and Automate) Small Business Reviews: 7 Steps"
+seoTitle: "Increase (and Automate) Small Business Reviews Online in 7 Steps"
 description: "Seven steps to earn more and better online reviews for your small business: direct review links, a landing page, an email campaign and more."
 published: 2021-05-12
 updated: 2026-11-02

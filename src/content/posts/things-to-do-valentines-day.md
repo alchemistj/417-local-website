@@ -1,6 +1,6 @@
 ---
-title: "6 Things to Do for Valentine's Day in 417 Land"
-seoTitle: "6 Things to Do for Valentine's Day in 417 Land"
+title: "6 Things To Do for Valentine's Day in 417 Land"
+seoTitle: "6 Things To Do for Valentine's Day in 417 Land"
 description: "Valentine's Day ideas around Springfield, MO: pottery dates, chocolate walks, line dancing, cocktail classes and a beer, wine and cheese festival."
 published: 2023-02-06
 updated: 2026-11-02

@@ -1,6 +1,6 @@
 ---
-title: "Some of Our Favorite Springfield Area Fitness Classes and Wellness Pros"
-seoTitle: "Springfield MO Fitness Classes and Wellness Pros"
+title: "Some of Our Favorite Springfield Area Fitness Classes and Wellness Pros Deals"
+seoTitle: "Some of Our Favorite Springfield Area Fitness Classes and Wellness Pros Deals - 417 Local"
 description: "Looking to boost your fitness routine? Our guide to Springfield, MO area gyms, workout classes and wellness professionals, from CrossFit to aerial arts."
 published: 2023-02-09
 updated: 2026-11-02

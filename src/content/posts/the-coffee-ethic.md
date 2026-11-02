@@ -1,6 +1,6 @@
 ---
 title: "The Coffee Ethic"
-seoTitle: "The Coffee Ethic: Springfield MO Coffee Shop on the Square"
+seoTitle: "The Coffee Ethic - 417 Local"
 description: "A local's look at The Coffee Ethic on Park Central Square in Springfield MO: the roaster, the cozy interior, house-baked pastries and friendly baristas."
 published: 2018-06-18
 updated: 2026-11-02

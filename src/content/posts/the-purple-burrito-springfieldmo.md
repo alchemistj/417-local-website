@@ -1,6 +1,6 @@
 ---
-title: "The Purple Burrito, Springfield, MO"
-seoTitle: "The Purple Burrito in Springfield, MO: California Style"
+title: "The Purple Burrito, Springfield,MO"
+seoTitle: "The Purple Burrito, Springfield,MO - 417 Local"
 description: "The Purple Burrito serves California-style Mexican food in Springfield, MO: crispy tacos, carne asada burritos, chile relleno and a family-run feel."
 published: 2018-09-13
 updated: 2026-11-02

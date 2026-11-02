@@ -1,6 +1,6 @@
 ---
 title: "City Butcher, Springfield, MO"
-seoTitle: "City Butcher Texas Barbecue in Springfield, MO"
+seoTitle: "City Butcher, Springfield, MO - 417 Local"
 description: "City Butcher brings Texas-style, slow wood-smoked barbecue to Springfield, MO. Here's what to expect at the Kickapoo Corners shop and what to order."
 published: 2018-09-18
 updated: 2026-11-02

@@ -1,6 +1,6 @@
 ---
-title: "Top Things to Do in Springfield, MO: A Local's Bucket List"
-seoTitle: "Top Things to Do in Springfield MO: Local Bucket List"
+title: "Top Things to Do in Springfield: The Ultimate Bucket List"
+seoTitle: "21 Top Things to Do in Springfield: The Ultimate Bucket List - 417 Local"
 description: "The top attractions in Springfield MO, plus local favorites and food spots most visitor lists miss, picked by people who live here."
 published: 2021-07-09
 updated: 2026-11-02

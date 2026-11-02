@@ -1,6 +1,6 @@
 ---
 title: "Free Blog Posts, Guides, & More Small Business Success Tools"
-seoTitle: "Free Small Business Success Guides and Tools"
+seoTitle: "Free Blog Posts, Guides, & More Small Business Success Tools"
 description: "Free guides and tools to build your small business online, from reviews and Google Business Profile to citations, SEO and your website."
 published: 2021-05-31
 updated: 2026-11-02

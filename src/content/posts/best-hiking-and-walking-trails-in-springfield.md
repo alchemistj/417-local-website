@@ -1,6 +1,6 @@
 ---
-title: "Top Hiking and Walking Trails in Springfield, MO"
-seoTitle: "Walking (Paved) and Hiking Trails In & Near Springfield MO"
+title: "Top Hiking and Walking Trails in Springfield, Mo"
+seoTitle: "Top 9 Walking (paved) and Hiking Trails In & Near Springfield MO"
 description: "The best hiking trails and walking paths in and near Springfield, MO, from Galloway Creek Greenway to Busiek and the Frisco Highline Trail."
 published: 2021-07-16
 updated: 2026-11-02

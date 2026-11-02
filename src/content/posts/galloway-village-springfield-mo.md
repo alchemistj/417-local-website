@@ -1,6 +1,6 @@
 ---
 title: "Uniquely Springfield Experiences Only in Galloway Village"
-seoTitle: "Galloway Village Springfield MO: Things to Do & Eat"
+seoTitle: "Uniquely Springfield Experiences Only in Galloway Village"
 description: "Coffee, brews, pottery, trails, art and aerial fitness: the local businesses and spots that make Galloway Village a great Springfield day trip."
 published: 2021-03-30
 updated: 2026-11-02

@@ -1,6 +1,6 @@
 ---
-title: "8 St. Patrick's Day Celebrations That Make You Feel Lucky to Live in 417 Land (and One Extra)"
-seoTitle: "St. Patrick's Day Events in Springfield, MO (417 Land)"
+title: "8 St. Patrick's Day Celebrations That Make You Feel Lucky to Live in 417 Land (and one extra)"
+seoTitle: "8 Top St. Patrick's Day Celebrations in Springfield MO- 417 Local"
 description: "St. Patrick's Day in Springfield, MO: art classes, a recital, races, pub crawls and Irish pubs, plus a parade in Eureka Springs, Arkansas."
 published: 2022-03-08
 updated: 2026-11-02

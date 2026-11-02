@@ -9,7 +9,7 @@ export function makePostSchema(image: () => z.ZodTypeAny) {
   return z
     .object({
       title: z.string().min(1),
-      seoTitle: z.string().min(1).max(60),
+      seoTitle: z.string().min(1).max(90), // Kept long: live WordPress titles carried over as-is to protect rankings.
       description: z.string().min(1).max(155),
       published: z.coerce.date(),
       updated: z.coerce.date(),

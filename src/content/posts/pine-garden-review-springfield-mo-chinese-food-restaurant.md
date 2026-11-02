@@ -1,6 +1,6 @@
 ---
-title: "Pine Garden Review: A Springfield, MO Chinese Food Restaurant"
-seoTitle: "Pine Garden Review: Springfield MO Chinese Food"
+title: "Pine Garden Review – A Springfield Mo Chinese Food Restaurant"
+seoTitle: "Pine Garden Review - A Springfield Mo Chinese Food Restaurant - 417 Local"
 description: "A first-hand review of Pine Garden, a Chinese restaurant on W. Sunshine St. in Springfield, MO, covering the General Chicken special, portions and service."
 published: 2021-03-14
 updated: 2026-11-02

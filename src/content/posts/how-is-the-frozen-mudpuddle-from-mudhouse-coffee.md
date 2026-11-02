@@ -1,6 +1,6 @@
 ---
-title: "I Ordered a Frozen Mudpuddle From the Mudhouse in Springfield, MO"
-seoTitle: "Frozen Mudpuddle at Mudhouse Coffee, Springfield MO"
+title: "I Ordered A Frozen Mudpuddle From The Mudhouse In Springfield Mo."
+seoTitle: "I Ordered A Frozen Mudpuddle From The Mudhouse In Springfield Mo."
 description: "Is the Frozen Mudpuddle at Mudhouse Coffee in Springfield, MO any good? A first-hand review of the drink, the atmosphere and the downtown crowd."
 published: 2020-03-05
 updated: 2026-11-02

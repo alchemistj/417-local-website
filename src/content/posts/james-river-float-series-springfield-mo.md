@@ -1,6 +1,6 @@
 ---
-title: "Float Trips on the James River with 37 North Expeditions and JRBP"
-seoTitle: "James River Float Trips: 37 North Expeditions and JRBP"
+title: "Float Trips on James River with 37 North Expedition and JRBP in Springfield, MO"
+seoTitle: "Float Trips on James River with 37 North Expedition and JRBP in Springfield, MO"
 description: "The James River Float Series from 37 North Expeditions and the James River Basin Partnership, plus where to find current float trips near Springfield, MO."
 published: 2021-03-22
 updated: 2026-11-02
