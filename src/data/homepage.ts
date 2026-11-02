@@ -8,7 +8,7 @@ export const HOME_COPY = {
     "The 417 community has so many beautiful people that work hard every day in their nonprofit services, businesses, various groups, events and more.",
     "With so much national and global competition and deep pockets, it's not easy to be a small fish in a big pond. 417 Local is the place to come together and show love for the 417 area.",
   ],
-  primaryCta: { label: "Find Things to Do", href: "/category/do-something/" },
+  primaryCta: { label: "Find Things to Do", href: "/best-things-to-do-in-springfield-mo/" },
   secondaryCta: { label: "See Events", href: "/events/" },
   mission: [
     "We support the 417 area by highlighting businesses and events, and by offering training, help and services for local growth.",
@@ -39,7 +39,7 @@ export const HOME_SECTIONS: HomeSection[] = [
       "best-kids-activities-in-springfield-mo",
       "best-date-night-ideas-in-springfield-mo",
     ],
-    seeAll: { label: "More things to do", href: "/category/do-something/" },
+    seeAll: { label: "More things to do", href: "/best-things-to-do-in-springfield-mo/" },
   },
   {
     id: "food-and-drink",
@@ -51,13 +51,13 @@ export const HOME_SECTIONS: HomeSection[] = [
     id: "outdoors",
     heading: "Outdoors and Parks",
     slugs: ["busiek-state-forest-and-wildlife-area", "berry-farms-sw-mo", "best-parks-in-springfield-mo"],
-    seeAll: { label: "More things to do outside", href: "/category/do-something/" },
+    seeAll: { label: "More parks and trails", href: "/best-parks-in-springfield-mo/" },
   },
   {
     id: "small-business",
     heading: "Small Business",
     slugs: ["small-business-success", "best-seo-in-springfield-mo"],
-    seeAll: { label: "More for small business", href: "/category/small-business/" },
+    seeAll: { label: "More for small business", href: "/small-business-success/" },
   },
 ];
 

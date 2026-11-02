@@ -9,12 +9,12 @@ export interface NavItem {
 }
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Things to Do", href: "/category/do-something/" },
+  // Same menu targets as the old WordPress site: menu links go to the pages that rank, not to archives.
+  { label: "Discover Things to Do", href: "/best-things-to-do-in-springfield-mo/", requiresPost: "best-things-to-do-in-springfield-mo" },
   { label: "Food & Drink", href: "/category/food-and-drink/" },
-  { label: "Outdoors", href: "/best-parks-in-springfield-mo/", requiresPost: "best-parks-in-springfield-mo" },
-  { label: "Small Business", href: "/category/small-business/" },
   { label: "Events", href: "/events/" },
   { label: "Blog", href: "/blog/" },
+  { label: "Grow Your Business", href: "/small-business-success/", requiresPost: "small-business-success" },
 ];
 
 export const FOOTER_LINKS: { label: string; href: string }[] = [
