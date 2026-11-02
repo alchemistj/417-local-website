@@ -58,7 +58,7 @@ const hero = await inlineHeroAvif({
       <div class="container">
         <div class="section-head">
           <h2 id={`${s.id}-heading`}>{s.heading}</h2>
-          <a class="see-all" href={s.seeAll.href}>{s.seeAll.label}</a>
+          {s.seeAll && <a class="see-all" href={s.seeAll.href}>{s.seeAll.label}</a>}
         </div>
         <ul class="card-grid">
           {s.posts.map((p, j) => <ArticleCard post={p} eager={i === 0 && j < 2} />)}

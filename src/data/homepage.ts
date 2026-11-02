@@ -25,7 +25,7 @@ export interface HomeSection {
   heading: string;
   /** Post slugs, in display order. */
   slugs: string[];
-  seeAll: { label: string; href: string };
+  seeAll?: { label: string; href: string };
 }
 
 export const HOME_SECTIONS: HomeSection[] = [
@@ -43,7 +43,6 @@ export const HOME_SECTIONS: HomeSection[] = [
     id: "food-and-drink",
     heading: "Experience Made in 417 Food and Drink",
     slugs: ["best-breweries-in-springfield-mo", "best-food-trucks-in-springfield-mo"],
-    seeAll: { label: "More food and drink", href: "/category/food-and-drink/" },
   },
   {
     id: "outdoors",
