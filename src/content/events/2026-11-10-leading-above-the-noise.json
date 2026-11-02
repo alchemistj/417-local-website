@@ -1,0 +1,31 @@
+{
+  "id": "af553a25-a93b-4279-b85e-d43b9816e1e8",
+  "slug": "leading-above-the-noise",
+  "title": "Leading Above the Noise",
+  "seo_title": "Leading Above the Noise – Nov 10, 2026 | Springfield, MO",
+  "description": "Leading Above the Noise is a professional development event for business and entrepreneurship audiences, held on November 10, 2026 at efactory, 405 N Jefferson Avenue in Springfield, MO. It is organized by Missouri SBDC at MSU and offers networking opportunities. Admission is listed at 289.",
+  "start": "2026-11-10T06:00:00+00:00",
+  "end": "2026-11-10T06:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "efactory",
+  "address": "405 N Jefferson Avenue, Springfield, MO 65806",
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": "Missouri SBDC at MSU",
+    "website": "https://sbdc.missouristate.edu"
+  },
+  "categories": [
+    "networking",
+    "entrepreneurship",
+    "professional-development"
+  ],
+  "price": "289",
+  "is_free": false,
+  "registration_url": "https://efactory.missouristate.edu/?post_type=mec-events",
+  "image_url": "https://efactory.missouristate.edu/wp-content/uploads/2024/06/Leading-Above-the-Noise_3-scaled-e1785779185704.png",
+  "source_urls": [
+    "https://efactory.missouristate.edu/?post_type=mec-events"
+  ],
+  "updated_at": "2026-11-02T23:22:49.479Z"
+}

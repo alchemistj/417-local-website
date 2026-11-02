@@ -1,0 +1,29 @@
+{
+  "id": "f41d62b3-b1ea-452c-865b-9dc0942424d0",
+  "slug": "high-performance-supervision",
+  "title": "High-Performance Supervision",
+  "seo_title": "High-Performance Supervision Workshop – Springfield, MO",
+  "description": "High-Performance Supervision is a professional development event organized by the Missouri SBDC at MSU. It takes place on November 5, 2026, at efactory, 405 N Jefferson Avenue in Springfield, MO 65806. The price is listed as 289.",
+  "start": "2026-11-05T06:00:00+00:00",
+  "end": "2026-11-05T06:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "efactory",
+  "address": "405 N Jefferson Avenue, Springfield, MO 65806",
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": "Missouri SBDC at MSU",
+    "website": "https://sbdc.missouristate.edu"
+  },
+  "categories": [
+    "professional-development"
+  ],
+  "price": "289",
+  "is_free": false,
+  "registration_url": "https://efactory.missouristate.edu/events/high-performance-supervision",
+  "image_url": "https://efactory.missouristate.edu/wp-content/uploads/2023/02/High-Performance-Supervision-3-e1785778976803.avif",
+  "source_urls": [
+    "https://efactory.missouristate.edu/events/high-performance-supervision"
+  ],
+  "updated_at": "2026-11-02T23:22:49.479Z"
+}

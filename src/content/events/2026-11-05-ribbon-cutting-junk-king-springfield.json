@@ -1,0 +1,29 @@
+{
+  "id": "3b48f07f-27a9-4c4b-bde0-f102b28876dd",
+  "slug": "ribbon-cutting-junk-king-springfield",
+  "title": "Ribbon Cutting: Junk King Springfield",
+  "seo_title": "Ribbon Cutting: Junk King Springfield on Nov 5, 2026",
+  "description": "The Republic Area Chamber of Commerce is hosting a ribbon cutting for Junk King Springfield on November 5, 2026, from 11:30 a.m. to 12:30 p.m. Central Time. The event takes place at 1530 E St Louis St. in Springfield, Missouri, and is listed under business networking and community categories.",
+  "start": "2026-11-05T17:30:00+00:00",
+  "end": "2026-11-05T18:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Junk King Springfield",
+  "address": "1530 E St Louis St.",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Republic Area Chamber of Commerce",
+    "website": "https://republicchamber.com"
+  },
+  "categories": [
+    "networking"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://republicchamber.com/events/details/ribbon-cutting-junk-king-springfield-13851",
+  "image_url": null,
+  "source_urls": [
+    "https://republicchamber.com/events/details/ribbon-cutting-junk-king-springfield-13851"
+  ],
+  "updated_at": "2026-11-02T23:22:49.479Z"
+}
