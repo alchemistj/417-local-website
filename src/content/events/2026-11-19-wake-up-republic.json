@@ -2,18 +2,18 @@
   "id": "719eb829-4423-4ca6-b40a-9d3650ff1d5c",
   "slug": "wake-up-republic",
   "title": "Wake Up Republic",
-  "seo_title": "Wake Up Republic – Nov 19, 2026 in Republic, MO",
-  "description": "Wake Up Republic is a business networking event hosted by the Republic Area Chamber of Commerce. It takes place on November 19, 2026, from 8:30 a.m. to 9:30 a.m. at The Library, 921 N Lindsey Ave in Republic, Missouri. Pricing information has not been provided.",
+  "seo_title": "Wake Up Republic at The Library in Republic, MO",
+  "description": "Wake Up Republic takes place on Thursday, November 19, 2026, from 8:30 AM to 9:30 AM at The Library, 921 N Lindsey Ave in Republic, MO. The event is organized by the Republic Area Chamber of Commerce and is geared toward business and social networking.",
   "start": "2026-11-19T14:30:00+00:00",
   "end": "2026-11-19T15:30:00+00:00",
   "timezone": "America/Chicago",
   "venue": "The Library",
-  "address": "921 N Lindsey Ave, Republic, MO 65738",
+  "address": "921 N Lindsey Ave",
   "city": "Republic",
   "state": "MO",
   "organizer": {
     "name": "Republic Area Chamber of Commerce",
-    "website": "https://republicchamber.com"
+    "website": "https://republicchamber.com/"
   },
   "categories": [
     "networking"
@@ -25,5 +25,5 @@
   "source_urls": [
     "https://republicchamber.com/events/details/wake-up-republic-13809"
   ],
-  "updated_at": "2026-11-02T23:22:49.479Z"
+  "updated_at": "2026-11-04T10:19:19.572Z"
 }

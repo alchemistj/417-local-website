@@ -1,0 +1,29 @@
+{
+  "id": "7c3b3fa9-00c6-4549-90f5-8be57e217c8d",
+  "slug": "good-morning-springfield-holiday-edition",
+  "title": "Good Morning, Springfield!: Holiday Edition",
+  "seo_title": "Good Morning, Springfield!: Holiday Edition | Dec 3, 2026",
+  "description": "Good Morning, Springfield!: Holiday Edition takes place on Thursday, December 3, 2026, from 7:30 AM to 8:30 AM. It is held at the Springfield Area Chamber of Commerce, 202 S. John Q Hammons Parkway, in Springfield, MO.",
+  "start": "2026-12-03T13:30:00+00:00",
+  "end": "2026-12-03T14:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Springfield Area Chamber of Commerce",
+  "address": "202 S. John Q Hammons Parkway, Springfield, MO 65806",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Springfield Area Chamber of Commerce",
+    "website": null
+  },
+  "categories": [
+    "networking"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.springfieldchamber.com/events-for-2026?date=2026-12-03&event=good-morning-springfield-holiday-edition",
+  "image_url": null,
+  "source_urls": [
+    "https://www.springfieldchamber.com/events-for-2026?date=2026-12-03&event=good-morning-springfield-holiday-edition"
+  ],
+  "updated_at": "2026-11-04T10:19:19.572Z"
+}
