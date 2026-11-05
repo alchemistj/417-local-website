@@ -2,8 +2,8 @@
   "id": "b02f8f2e-5998-458a-ac1b-b69a05a451a1",
   "slug": "young-pros-roundtable-45-and-younger",
   "title": "Young Pros Roundtable (45 and younger)",
-  "seo_title": "Young Pros Roundtable (45 & Under) in Republic, MO",
-  "description": "The Young Pros Roundtable for professionals 45 and younger takes place on Monday, November 9, 2026, from 6:00 PM to 8:00 PM. It is held at Black Lab Coffee Company, 545 E Elm St in Republic, MO. The event is hosted by the Republic Area Chamber of Commerce and focuses on professional development and social networking.",
+  "seo_title": "Young Pros Roundtable (45 & Younger) in Republic, MO",
+  "description": "Young Pros Roundtable (45 and younger) takes place on Monday, November 9, 2026, from 6:00 PM to 8:00 PM at Black Lab Coffee Company, 545 E Elm St in Republic, Missouri. The Republic Area Chamber of Commerce hosts this business networking and professional development event.",
   "start": "2026-11-10T00:00:00+00:00",
   "end": "2026-11-10T02:00:00+00:00",
   "timezone": "America/Chicago",
@@ -16,6 +16,7 @@
     "website": "https://republicchamber.com/"
   },
   "categories": [
+    "networking",
     "professional-development"
   ],
   "price": null,
@@ -25,5 +26,5 @@
   "source_urls": [
     "https://republicchamber.com/events/details/young-pros-roundtable-45-and-younger-13806"
   ],
-  "updated_at": "2026-11-04T10:19:19.572Z"
+  "updated_at": "2026-11-05T10:18:12.314Z"
 }
