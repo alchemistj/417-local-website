@@ -1,0 +1,17 @@
+---
+import EventsLayout from "../../layouts/EventsLayout.astro";
+import { BUSINESS_EVENTS, EVENTS_HUB } from "../../data/staticPages";
+import { getUpcomingEvents } from "../../lib/loadEvents";
+
+const events = await getUpcomingEvents();
+const subnav = BUSINESS_EVENTS.map((p) => ({ label: p.label, href: p.path }));
+---
+
+<EventsLayout
+  meta={EVENTS_HUB}
+  h1="Springfield, MO Events"
+  intro="Upcoming events in Springfield and the 417 area. Start with business events, or browse everything below."
+  events={events}
+  crumbs={[{ name: "Home", path: "/" }, { name: "Events", path: "/events/" }]}
+  subnav={subnav}
+/>

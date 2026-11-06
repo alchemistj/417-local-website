@@ -1,0 +1,77 @@
+---
+import { getCollection } from "astro:content";
+import logo from "../assets/brand/417-local-logo-header.png?inline";
+import { NAV_ITEMS } from "../data/nav";
+
+interface Props {
+  currentPath: string;
+}
+const { currentPath } = Astro.props;
+
+const postIds = new Set((await getCollection("posts")).map((p) => p.id));
+const items = NAV_ITEMS.filter((i) => !i.requiresPost || postIds.has(i.requiresPost));
+// Phones show the CTA as a full-width bar under the logo row, not a second copy in the menu.
+const menuItems = items.filter((i) => !i.cta);
+const cta = items.find((i) => i.cta);
+const isCurrent = (href: string) => href === currentPath;
+---
+
+<header class="site-header" data-site-header>
+  <div class="container container-wide header-inner">
+    <a class="logo" href="/" aria-label="417 Local home">
+      <!-- Inline (under 4 KB) so the logo is in the first frame with no extra request. -->
+      <img src={logo} alt="417 Local" width="190" height="40" decoding="sync" />
+    </a>
+    <nav class="nav-desktop" aria-label="Main">
+      <ul class="nav-list">
+        {items.map((i) => (
+          <li><a class:list={[i.cta && "nav-cta"]} href={i.href} aria-current={isCurrent(i.href) ? "page" : undefined}>{i.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <details class="menu-mobile">
+      <summary><span class="sr-only">Menu</span><span class="menu-icon" aria-hidden="true"></span></summary>
+      <nav class="nav-panel" aria-label="Main (mobile)">
+        <ul class="nav-list">
+          {menuItems.map((i) => (
+            <li><a href={i.href} aria-current={isCurrent(i.href) ? "page" : undefined}>{i.label}</a></li>
+          ))}
+        </ul>
+      </nav>
+    </details>
+  </div>
+  {cta && (
+    <a class="nav-cta-bar" href={cta.href} aria-current={isCurrent(cta.href) ? "page" : undefined}>{cta.label}</a>
+  )}
+</header>
+
+<script is:inline>
+  // Hide on scroll down past the header, show again after ~10px of upward scroll.
+  // transform only; never hidden while focus is inside the header or the menu is open.
+  (function () {
+    const h = document.querySelector("[data-site-header]");
+    if (!h) return;
+    const menu = h.querySelector("details");
+    let last = window.scrollY;
+    let up = 0;
+    let ticking = false;
+    function show() { h.classList.remove("is-hidden"); }
+    function update() {
+      ticking = false;
+      const y = Math.max(0, window.scrollY);
+      const d = y - last;
+      last = y;
+      if (h.contains(document.activeElement) || (menu && menu.open) || y <= h.offsetHeight) {
+        up = 0;
+        show();
+        return;
+      }
+      if (d > 0) { up = 0; h.classList.add("is-hidden"); }
+      else if (d < 0) { up += -d; if (up >= 10) show(); }
+    }
+    window.addEventListener("scroll", function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    h.addEventListener("focusin", show);
+  })();
+</script>

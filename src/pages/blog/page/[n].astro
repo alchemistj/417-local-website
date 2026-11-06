@@ -1,0 +1,44 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import ArticleCard from "../../../components/ArticleCard.astro";
+import Pagination from "../../../components/Pagination.astro";
+import { blogPageCount, blogPagePath, sortByUpdated } from "../../../lib/routes";
+import { POSTS_PER_PAGE } from "../../../lib/site";
+
+export const getStaticPaths = (async () => {
+  const posts = sortByUpdated(
+    (await getCollection("posts")).map((p) => ({ ...p, title: p.data.title, updated: p.data.updated })),
+  );
+  const totalPages = blogPageCount(posts.length);
+  const paths = [];
+  for (let n = 2; n <= totalPages; n += 1) {
+    paths.push({
+      params: { n: String(n) },
+      props: { page: n, totalPages, posts: posts.slice((n - 1) * POSTS_PER_PAGE, n * POSTS_PER_PAGE) },
+    });
+  }
+  return paths;
+}) satisfies GetStaticPaths;
+
+const { page, totalPages, posts } = Astro.props;
+---
+
+<BaseLayout
+  title={`Articles, Page ${page} | 417 Local`}
+  description={`More 417 Local guides and articles, page ${page}.`}
+  path={blogPagePath(page)}
+>
+  <section class="band band-blue page-band">
+    <div class="container">
+      <h1>Local Guides and Articles, Page {page}</h1>
+    </div>
+  </section>
+  <section class="band">
+    <div class="container">
+      <ul class="card-grid">{posts.map((p) => <ArticleCard post={p} />)}</ul>
+      <Pagination page={page} totalPages={totalPages} />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,28 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import LeadForm, { type Field } from "../components/LeadForm.astro";
+import { SUBMIT_EVENT } from "../data/staticPages";
+import { FORM_KEYS } from "../lib/formsLead";
+
+// Maps onto the intake body: organizer -> name, organizer email -> email, event details -> message.
+// Everything else goes in customFields with the labels the client should read in the email.
+// TODO(Josh): the live form accepted an uploaded event image. The intake takes no files, so this asks for a link instead.
+const fields: Field[] = [
+  { name: "event_title", label: "Event title", required: true, customLabel: "Event title" },
+  { name: "name", label: "Who is organizing the event?", required: true, autocomplete: "organization" },
+  { name: "email", label: "What is the organizer's email address?", type: "email", required: true, autocomplete: "email" },
+  { name: "event_when", label: "What date(s) and when does it start and stop?", required: true, customLabel: "Date and time" },
+  { name: "event_cost", label: "How much does the event cost?", required: true, customLabel: "Cost" },
+  { name: "event_where", label: "Where is the event occurring?", required: true, customLabel: "Location" },
+  { name: "message", label: "What are the event details?", type: "textarea", required: true },
+  { name: "event_link", label: "Where can people learn more?", type: "url", hint: "(If applicable)", customLabel: "Where to learn more" },
+  { name: "event_image", label: "Link to a compelling event image", type: "url", customLabel: "Event image link" },
+];
+---
+
+<PageLayout meta={SUBMIT_EVENT} h1="Submit Your Event">
+  <p class="lead">
+    Tell us about your event in Springfield or the 417 area. Fill out the form and we'll take a look.
+  </p>
+  <LeadForm id="submit-event-form" formKey={FORM_KEYS.submitEvent} fields={fields} submitLabel="Submit Event" />
+</PageLayout>

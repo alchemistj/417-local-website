@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleCard from "../../components/ArticleCard.astro";
+import Pagination from "../../components/Pagination.astro";
+import { BLOG } from "../../data/staticPages";
+import { blogPageCount, sortByUpdated } from "../../lib/routes";
+import { POSTS_PER_PAGE } from "../../lib/site";
+
+const posts = sortByUpdated((await getCollection("posts")).map((p) => ({ ...p, title: p.data.title, updated: p.data.updated })));
+const totalPages = blogPageCount(posts.length);
+const pagePosts = posts.slice(0, POSTS_PER_PAGE);
+---
+
+<BaseLayout title={BLOG.title} description={BLOG.description} path={BLOG.path}>
+  <section class="band band-blue page-band">
+    <div class="container">
+      <h1>Springfield, MO Local Guides and Articles</h1>
+      <p class="lead">Every 417 Local guide in one place, from things to do to local businesses worth knowing.</p>
+    </div>
+  </section>
+  <section class="band">
+    <div class="container">
+      {pagePosts.length === 0 ? (
+        <p class="empty-state">New guides are on the way. Check back soon.</p>
+      ) : (
+        <ul class="card-grid">{pagePosts.map((p, i) => <ArticleCard post={p} eager={i < 2} />)}</ul>
+      )}
+      <Pagination page={1} totalPages={totalPages} />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,47 @@
+---
+import type { GetStaticPaths } from "astro";
+import EventsLayout from "../../../layouts/EventsLayout.astro";
+import { BUSINESS_EVENTS } from "../../../data/staticPages";
+import { getUpcomingEvents } from "../../../lib/loadEvents";
+import { inCategory } from "../../../lib/events";
+import { BUSINESS_EVENT_CATEGORIES } from "../../../lib/eventSchema";
+
+const H1: Record<string, { h1: string; intro: string }> = {
+  networking: {
+    h1: "Springfield, MO Networking Events",
+    intro: "Meet other professionals and business owners at networking events around Springfield.",
+  },
+  entrepreneurship: {
+    h1: "Springfield, MO Entrepreneurship Events",
+    intro: "Events for founders, startups and side hustles in Springfield and the 417.",
+  },
+  "professional-development": {
+    h1: "Springfield, MO Professional Development Events",
+    intro: "Workshops, classes and training events to build your career and skills in Springfield.",
+  },
+};
+
+export const getStaticPaths = (() =>
+  BUSINESS_EVENT_CATEGORIES.map((category) => ({ params: { category } }))) satisfies GetStaticPaths;
+
+const { category } = Astro.params;
+const meta = BUSINESS_EVENTS.find((p) => p.path.endsWith(`/${category}/`));
+if (!meta || !category) throw new Error(`No page metadata for business events category: ${category}`);
+const copy = H1[category];
+const events = inCategory(await getUpcomingEvents(), category);
+const subnav = BUSINESS_EVENTS.map((p) => ({ label: p.label, href: p.path }));
+---
+
+<EventsLayout
+  meta={meta}
+  h1={copy.h1}
+  intro={copy.intro}
+  events={events}
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Events", path: "/events/" },
+    { name: "Business Events", path: BUSINESS_EVENTS[0].path },
+    { name: copy.h1, path: meta.path },
+  ]}
+  subnav={subnav}
+/>

@@ -1,0 +1,25 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import LeadForm, { type Field } from "../components/LeadForm.astro";
+import { CONTACT } from "../data/staticPages";
+import { FORM_KEYS } from "../lib/formsLead";
+import { ORGANIZATION } from "../lib/site";
+
+const fields: Field[] = [
+  { name: "name", label: "Name", required: true, autocomplete: "name" },
+  { name: "email", label: "Email", type: "email", required: true, autocomplete: "email" },
+  { name: "message", label: "Message", type: "textarea", required: true },
+];
+const a = ORGANIZATION.address;
+---
+
+<PageLayout meta={CONTACT} h1="Need to Get in Touch?">
+  <p class="lead">
+    Whether you have an idea, suggestion or a burning desire to collab, you can reach out to us using the form below,
+    and we'll respond within 2 business days. (Often a lot sooner!)
+  </p>
+  <LeadForm id="contact-form" formKey={FORM_KEYS.contact} fields={fields} submitLabel="Send Message" />
+  <p>
+    {a.streetAddress}, {a.addressLocality}, {a.addressRegion} {a.postalCode}
+  </p>
+</PageLayout>

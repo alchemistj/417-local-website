@@ -1,0 +1,66 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { GET_STARTED } from "../data/staticPages";
+
+const expect = [
+  { title: "Overall Reviews Health", text: "An overall assessment of your reviews on over 100 websites." },
+  { title: "Areas of Improvement", text: "What to change to correct any roadblocks standing in your path." },
+  { title: "Growth Opportunities", text: "\"Low hanging fruit\" that you can attack right away for results." },
+  { title: "Reviews Campaign Scope", text: "The exact tactics you need to focus on to improve reviews." },
+  { title: "Deliverables Needed", text: "Mapping out the processes to the needs of your business." },
+  { title: "Expected Results", text: "A realistic scope of how long it will take to meet your goals." },
+];
+// TidyCal booking page from the live site. Loaded on first interaction, never in the server HTML (SOP Rule 10).
+const bookingPath = "joshlenz/reviews-analysis";
+---
+
+<PageLayout meta={GET_STARTED} h1="Let's Talk About Your Reviews">
+  <p class="lead">We'll show you the roadmap for better reviews and more sales.</p>
+
+  <section id="schedule" class="stack" aria-labelledby="schedule-heading" style="scroll-margin-top: 80px">
+    <h2 id="schedule-heading">Book Your Consultation</h2>
+    <div class="embed-slot" data-booking-path={bookingPath}>
+      <p data-booking-facade>
+        <a class="btn" href={`https://tidycal.com/${bookingPath}`} rel="noopener">Book your consultation</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="stack" aria-labelledby="expect-heading">
+    <h2 id="expect-heading">What to Expect From Our Call</h2>
+    <p>Here's what we'll cover during the 30 minute consultation.</p>
+    <ul>
+      {expect.map((e) => <li><strong>{e.title}.</strong> {e.text}</li>)}
+    </ul>
+  </section>
+</PageLayout>
+
+<script is:inline>
+  // Load the scheduler on the first scroll, wheel, touch, pointer or key press. Until then the
+  // link above works on its own, and the box keeps its height so nothing shifts when it loads.
+  (function () {
+    const slot = document.querySelector("[data-booking-path]");
+    if (!slot) return;
+    let loaded = false;
+    function load() {
+      if (loaded) return;
+      loaded = true;
+      ["scroll", "wheel", "touchstart", "pointerdown", "keydown"].forEach(function (t) {
+        window.removeEventListener(t, load);
+      });
+      const facade = slot.querySelector("[data-booking-facade]");
+      if (facade) facade.remove();
+      const div = document.createElement("div");
+      div.className = "tidycal-embed";
+      div.setAttribute("data-path", slot.getAttribute("data-booking-path"));
+      slot.appendChild(div);
+      const s = document.createElement("script");
+      s.src = "https://tidycal.com/js/embed.js";
+      s.async = true;
+      document.body.appendChild(s);
+    }
+    ["scroll", "wheel", "touchstart", "pointerdown", "keydown"].forEach(function (t) {
+      window.addEventListener(t, load, { once: true, passive: true });
+    });
+  })();
+</script>

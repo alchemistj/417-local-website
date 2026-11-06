@@ -1,0 +1,17 @@
+---
+import { blogPagePath } from "../lib/routes";
+
+interface Props {
+  page: number;
+  totalPages: number;
+}
+const { page, totalPages } = Astro.props;
+---
+
+{totalPages > 1 && (
+  <nav class="pagination" aria-label="Pagination">
+    {page > 1 ? <a href={blogPagePath(page - 1)} rel="prev">Newer articles</a> : <span></span>}
+    <span>Page {page} of {totalPages}</span>
+    {page < totalPages ? <a href={blogPagePath(page + 1)} rel="next">Older articles</a> : <span></span>}
+  </nav>
+)}

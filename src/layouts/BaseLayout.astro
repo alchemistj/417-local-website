@@ -1,0 +1,94 @@
+---
+import "../styles/global.css";
+import { getImage } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import favicon from "../assets/brand/417-local-favicon.png";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { ORGANIZATION, SITE_NAME, SITE_URL, absoluteUrl } from "../lib/site";
+
+interface Props {
+  /** Full <title> text. */
+  title: string;
+  description: string;
+  /** Site path of this page, with trailing slash. */
+  path: string;
+  ogType?: "website" | "article";
+  /** Social image. Falls back to the brand mark. */
+  ogImage?: ImageMetadata;
+  noindex?: boolean;
+  /** Full robots content. When set, replaces the noindex flag. Draft lists pass "noindex, nofollow". */
+  robots?: string;
+  jsonLd?: Record<string, unknown>[];
+}
+
+const { title, description, path, ogType = "website", ogImage, noindex = false, robots, jsonLd = [] } = Astro.props;
+
+const canonical = absoluteUrl(path);
+const icon32 = await getImage({ src: favicon, width: 48, height: 48, format: "png" });
+const icon180 = await getImage({ src: favicon, width: 180, height: 180, format: "png" });
+const social = ogImage
+  ? await getImage({ src: ogImage, width: 1200, height: 630, format: "jpg", fit: "cover" })
+  : icon180;
+
+const organization = {
+  "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
+  name: ORGANIZATION.name,
+  url: SITE_URL,
+  logo: absoluteUrl(icon180.src),
+  sameAs: ORGANIZATION.sameAs,
+  address: { "@type": "PostalAddress", ...ORGANIZATION.address },
+};
+const website = {
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  name: SITE_NAME,
+  url: `${SITE_URL}/`,
+  publisher: { "@id": `${SITE_URL}/#organization` },
+};
+const graphs = [{ "@context": "https://schema.org", "@graph": [organization, website] }, ...jsonLd];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {robots ? <meta name="robots" content={robots} /> : noindex && <meta name="robots" content="noindex,follow" />}
+    <link rel="icon" type="image/png" sizes="48x48" href={icon32.src} />
+    <link rel="apple-touch-icon" href={icon180.src} />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={absoluteUrl(social.src)} />
+    <meta name="twitter:card" content={ogImage ? "summary_large_image" : "summary"} />
+    {/* No analytics yet: GA4 / GTM are added later and must fire after load + 3 s (SOP Rule 16). */}
+    {graphs.map((g) => <script type="application/ld+json" set:html={JSON.stringify(g)} />)}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <slot name="banner" />
+    {Astro.slots.has("hero-photo") ? (
+      // Photo-hero pages (SOP first-frame §2): the inline photo is the first paintable element, and the
+      // whole page waits on one parse marker (.atf-ready, inside the hero) so the first screen paints complete.
+      <div class="atf">
+        <slot name="hero-photo" />
+        <Header currentPath={path} />
+        <main id="main"><slot /></main>
+        <Footer />
+      </div>
+    ) : (
+      <>
+        <Header currentPath={path} />
+        <main id="main"><slot /></main>
+        <Footer />
+      </>
+    )}
+  </body>
+</html>

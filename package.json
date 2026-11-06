@@ -1,0 +1,39 @@
+{
+  "name": "417-local-website",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && tsx scripts/add-vercel-redirects.ts",
+    "preview": "astro preview",
+    "check": "astro check",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "redirects": "tsx scripts/write-vercel-json.ts",
+    "verify": "npm run check && npm run lint && npm run build && npm test"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.6",
+    "eslint": "^10.14.0",
+    "eslint-plugin-astro": "^1.7.0",
+    "globals": "^17.14.0",
+    "tsx": "^4.23.15",
+    "typescript-eslint": "^8.72.1",
+    "vitest": "^5.0.5"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@astrojs/vercel": "^8.2.11",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^5.18.2",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3",
+    "yaml": "^2.9.1"
+  }
+}

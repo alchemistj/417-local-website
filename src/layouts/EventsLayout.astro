@@ -1,0 +1,58 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import EventList from "../components/EventList.astro";
+import CtaBand from "../components/CtaBand.astro";
+import type { StaticPageMeta } from "../data/staticPages";
+import type { EventData } from "../lib/eventSchema";
+import { absoluteUrl } from "../lib/site";
+
+interface Props {
+  meta: StaticPageMeta;
+  h1: string;
+  intro: string;
+  events: EventData[];
+  crumbs: { name: string; path: string }[];
+  /** Show the business-events sub navigation. */
+  subnav?: { label: string; href: string }[];
+}
+const { meta, h1, intro, events, crumbs, subnav } = Astro.props;
+
+const crumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: crumbs.map((c, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: c.name,
+    item: absoluteUrl(c.path),
+  })),
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description} path={meta.path} jsonLd={[crumbLd]}>
+  <section class="band band-blue page-band">
+    <div class="container">
+      <h1>{h1}</h1>
+      <p class="lead">{intro}</p>
+      {subnav && (
+        <nav aria-label="Event types">
+          <ul class="subnav">
+            {subnav.map((l) => (
+              <li><a href={l.href} aria-current={l.href === meta.path ? "page" : undefined}>{l.label}</a></li>
+            ))}
+          </ul>
+        </nav>
+      )}
+    </div>
+  </section>
+  <section class="band">
+    <div class="container">
+      <EventList events={events} />
+    </div>
+  </section>
+  <CtaBand
+    heading="Hosting an Event?"
+    body="Tell us about it and we'll consider it for the events page."
+    primary={{ label: "Submit Your Event", href: "/submit-your-event/" }}
+  />
+</BaseLayout>

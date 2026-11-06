@@ -1,0 +1,21 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import type { StaticPageMeta } from "../data/staticPages";
+
+interface Props {
+  meta: StaticPageMeta;
+  h1: string;
+  /** Narrow prose styling for legal copy. */
+  legal?: boolean;
+}
+const { meta, h1, legal = false } = Astro.props;
+---
+
+<BaseLayout title={meta.title} description={meta.description} path={meta.path} noindex={meta.indexable === false}>
+  <div class="band">
+    <div class={`container ${legal ? "legal" : "stack-lg"}`}>
+      <h1>{h1}</h1>
+      <slot />
+    </div>
+  </div>
+</BaseLayout>

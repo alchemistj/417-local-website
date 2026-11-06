@@ -1,0 +1,29 @@
+{
+  "id": "e90f082c-ecc8-4ec6-a441-63b94962e5d9",
+  "slug": "ribbon-cutting-arvest-bank",
+  "title": "Ribbon Cutting: Arvest Bank",
+  "seo_title": "Arvest Bank Ribbon Cutting in Republic, MO on Dec 3",
+  "description": "A ribbon cutting for Arvest Bank takes place on Thursday, December 3, 2026, from 11:30 AM to 12:30 PM. It is held at U.S. Highway 60 and South Farm Road 103, near the Stone Creek Falls development, in Republic, Missouri. The Republic Area Chamber of Commerce is the organizer.",
+  "start": "2026-12-03T17:30:00+00:00",
+  "end": "2026-12-03T18:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": null,
+  "address": "U.S. Highway 60 and South Farm Road 103 (near the Stone Creek Falls development)",
+  "city": "Republic",
+  "state": "MO",
+  "organizer": {
+    "name": "Republic Area Chamber of Commerce",
+    "website": "https://republicchamber.com/"
+  },
+  "categories": [
+    "networking"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://republicchamber.com/events/details/ribbon-cutting-arvest-bank-13848",
+  "image_url": null,
+  "source_urls": [
+    "https://republicchamber.com/events/details/ribbon-cutting-arvest-bank-13848"
+  ],
+  "updated_at": "2026-11-06T10:18:04.618Z"
+}

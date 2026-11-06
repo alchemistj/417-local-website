@@ -1,0 +1,27 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import ListLayout from "../layouts/ListLayout.astro";
+import PostLayout from "../layouts/PostLayout.astro";
+import { assertListFileSlug, assertNoSlugCollision, listIsBuilt } from "../lib/lists";
+
+export const getStaticPaths = (async () => {
+  const posts = await getCollection("posts");
+  const lists = await getCollection("lists");
+  for (const list of lists) assertListFileSlug(list.id, list.data.slug);
+  assertNoSlugCollision(
+    posts.map((post) => post.id),
+    lists.map((list) => list.id),
+  );
+  const visible = lists.filter((list) => listIsBuilt(list.data.status));
+  return [
+    ...posts.map((post) => ({ params: { slug: post.id }, props: { post, list: null } })),
+    ...visible.map((list) => ({ params: { slug: list.id }, props: { post: null, list } })),
+  ];
+}) satisfies GetStaticPaths;
+
+const { post, list } = Astro.props;
+if (!post && !list) throw new Error("Missing post or list for this slug");
+---
+
+{post ? <PostLayout post={post} /> : list && <ListLayout list={list} />}

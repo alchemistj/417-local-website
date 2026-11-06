@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+import ArticleCard from "../components/ArticleCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import copy from "../../docs/best-of-hub-copy.json";
+import { LOCAL_BUSINESS_GUIDE } from "../data/staticPages";
+import { publishedOnly } from "../lib/lists";
+import { sortByUpdated } from "../lib/routes";
+
+const lists = sortByUpdated(
+  publishedOnly(
+    (await getCollection("lists")).map((list) => ({
+      id: list.id,
+      status: list.data.status,
+      title: list.data.title,
+      updated: list.data.updated,
+      data: { title: list.data.title },
+    })),
+  ),
+);
+---
+
+<BaseLayout title={LOCAL_BUSINESS_GUIDE.title} description={LOCAL_BUSINESS_GUIDE.description} path={LOCAL_BUSINESS_GUIDE.path}>
+  <article class="landing">
+    <header class="landing-band card-band">
+      <div class="container">
+        <div class="landing-card">
+          <h1>{copy.hub.h1}</h1>
+          <div class="lead-text">
+            {copy.hub.intro.map((paragraph) => <p>{paragraph}</p>)}
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="home-section" aria-label={copy.hub.sectionLead}>
+      <div class="container stack">
+        <p class="lead">{copy.hub.sectionLead}</p>
+        {lists.length === 0 ? (
+          <p class="empty-state">{copy.hub.emptyState}</p>
+        ) : (
+          <ul class="card-grid">
+            {lists.map((list, index) => <ArticleCard post={list} eager={index < 2} />)}
+          </ul>
+        )}
+      </div>
+    </section>
+  </article>
+</BaseLayout>

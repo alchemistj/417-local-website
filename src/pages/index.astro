@@ -1,0 +1,93 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { HOME } from "../data/staticPages";
+import { HOME_COPY, HOME_EVENTS_TILE, HOME_SECTIONS } from "../data/homepage";
+import { inlineHeroAvif } from "../lib/heroPhoto";
+
+const posts = new Map((await getCollection("posts")).map((p) => [p.id, p]));
+// Curated tiles: skip any slug that is not in the collection yet.
+const sections = HOME_SECTIONS.map((s) => ({
+  ...s,
+  posts: s.slugs.flatMap((slug) => {
+    const post = posts.get(slug);
+    return post ? [post] : [];
+  }),
+})).filter((s) => s.posts.length > 0);
+// Alternate plain and tinted bands down the page.
+const eventsTint = sections.length % 2 === 1;
+
+// One grayscale AVIF, baked in at build time and inlined once (no second mobile image, no preload).
+const hero = await inlineHeroAvif({
+  file: "src/assets/home/fountain-square.jpg",
+  crop: { left: 0, top: 150, width: 1440, height: 330 },
+  width: 1280,
+  quality: 60,
+});
+---
+
+<BaseLayout title={HOME.title} description={HOME.description} path={HOME.path}>
+  <img
+    slot="hero-photo"
+    class="atf-photo"
+    src={hero.src}
+    alt=""
+    width={hero.width}
+    height={hero.height}
+    loading="eager"
+    decoding="sync"
+    fetchpriority="high"
+    data-ff-lcp-hero
+  />
+
+  <section class="home-hero">
+    <h1>{HOME_COPY.h1}</h1>
+  </section>
+  <span class="atf-ready" hidden></span>
+
+  <section class="intro">
+    <div class="container">
+      {HOME_COPY.intro.map((t) => <p>{t}</p>)}
+    </div>
+  </section>
+
+  {sections.map((s, i) => (
+    <section class={`home-section ${i % 2 === 0 ? "" : "band-tint"}`} aria-labelledby={`${s.id}-heading`}>
+      <div class="container">
+        <div class="section-head">
+          <h2 id={`${s.id}-heading`}>{s.heading}</h2>
+          {s.seeAll && <a class="see-all" href={s.seeAll.href}>{s.seeAll.label}</a>}
+        </div>
+        <ul class="card-grid">
+          {s.posts.map((p, j) => <ArticleCard post={p} eager={i === 0 && j < 2} />)}
+        </ul>
+      </div>
+    </section>
+  ))}
+
+  <section class={`home-section ${eventsTint ? "band-tint" : ""}`} aria-labelledby="events-heading">
+    <div class="container stack">
+      <h2 id="events-heading">{HOME_EVENTS_TILE.heading}</h2>
+      <p>{HOME_EVENTS_TILE.body}</p>
+      <ul class="subnav">
+        {HOME_EVENTS_TILE.links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class={`home-section ${eventsTint ? "" : "band-tint"}`} aria-labelledby="mission-heading">
+    <div class="container stack">
+      <h2 id="mission-heading">Our Mission</h2>
+      {HOME_COPY.mission.map((t) => <p>{t}</p>)}
+    </div>
+  </section>
+
+  <CtaBand
+    heading={HOME_COPY.finalCta.heading}
+    body={HOME_COPY.finalCta.body}
+    primary={HOME_COPY.finalCta.primary}
+    secondary={HOME_COPY.finalCta.secondary}
+  />
+</BaseLayout>

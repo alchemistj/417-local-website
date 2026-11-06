@@ -1,0 +1,27 @@
+---
+/**
+ * Light-blue isometric cube pattern along the bottom of the article top (recreated from the live site).
+ * Decorative: hidden from assistive tech. One tile is 62.35 x 108; the svg shows two rows.
+ */
+---
+
+<div class="hex" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <defs>
+      <pattern id="hex-small" width="62.35" height="108" patternUnits="userSpaceOnUse" patternTransform="scale(0.75)">
+        <path d="M0 18L31.18 0L62.35 18V54L31.18 72L0 54ZM31.18 36L0 18M31.18 36L62.35 18M31.18 36V108M0 90L31.18 72M62.35 90L31.18 72M0 90V108M0 0V18M62.35 90V108M62.35 0V18" fill="none" stroke="#6ec6ff" stroke-width="2" stroke-linejoin="round"></path>
+      </pattern>
+      <pattern id="hex-large" width="62.35" height="108" patternUnits="userSpaceOnUse" patternTransform="scale(1.5)">
+        <path d="M0 18L31.18 0L62.35 18V54L31.18 72L0 54ZM31.18 36L0 18M31.18 36L62.35 18M31.18 36V108M0 90L31.18 72M62.35 90L31.18 72M0 90V108M0 0V18M62.35 90V108M62.35 0V18" fill="none" stroke="#6ec6ff" stroke-width="1.2" stroke-linejoin="round"></path>
+      </pattern>
+    </defs>
+    <g class="hex-sm">
+      <rect width="100%" height="162" fill="url(#hex-small)"></rect>
+      <rect y="160.5" width="100%" height="1.5" fill="#6ec6ff"></rect>
+    </g>
+    <g class="hex-lg">
+      <rect width="100%" height="324" fill="url(#hex-large)"></rect>
+      <rect y="322.5" width="100%" height="1.5" fill="#6ec6ff"></rect>
+    </g>
+  </svg>
+</div>
