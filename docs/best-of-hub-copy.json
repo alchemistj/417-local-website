@@ -1,0 +1,44 @@
+{
+  "_status": "Draft copy for Josh's review (Nov 6, 2026). Place verbatim; Josh may edit before production.",
+  "disclosure": "417local is owned by Fluid Frame Marketing, and some businesses on our lists are Fluid Frame clients. Rankings are never for sale. How we pick",
+  "hub": {
+    "path": "/springfield-mo-local-business-guide/",
+    "seoTitle": "Springfield, MO Local Business Guide: Trusted Local Pros | 417 Local",
+    "description": "Our lists of the best local roofers, HVAC companies and other home service pros in Springfield, MO, picked from real customer feedback.",
+    "h1": "Springfield, MO Local Business Guide",
+    "intro": [
+      "Finding a good local pro shouldn't take a weekend of guesswork. We look at what Springfield customers say about local businesses, check the details, and put the ones that stand out on short lists by trade.",
+      "Every list shows when we last checked it and links to each business's Google reviews, so you can read them yourself."
+    ],
+    "sectionLead": "Pick a trade to see our current list.",
+    "emptyState": "Our first lists are on the way. Check back soon."
+  },
+  "howWePick": {
+    "path": "/how-we-pick/",
+    "seoTitle": "How We Pick the Businesses on Our Lists | 417 Local",
+    "description": "How 417local chooses the local businesses on its lists, how often we update them, and how we handle businesses we work with.",
+    "h1": "How We Pick",
+    "sections": [
+      {
+        "heading": "What we look at",
+        "body": "We start with Springfield-area businesses that have a strong Google rating and enough reviews to mean something. Then we read the reviews for patterns: what customers praise again and again, what they complain about, and how the owner responds. We also check that the business is active, serves the Springfield area and has clear contact information."
+      },
+      {
+        "heading": "What we write",
+        "body": "Each summary is written in our own words from what customers consistently say. We don't copy or quote individual reviews. Each listing shows the rating and review count on the date we checked, with a link to the business's Google listing so you can read the reviews yourself."
+      },
+      {
+        "heading": "How often we update",
+        "body": "We recheck every list at least every few months and show the date on each page. Businesses can drop off a list if their reviews change."
+      },
+      {
+        "heading": "Businesses we work with",
+        "body": "417local is owned by Fluid Frame Marketing, a Springfield web design and marketing company. Some businesses on our lists are Fluid Frame clients. They are held to the same standards as everyone else, and no business can pay to be on a list or to move up one. If we ever offer a paid spot, it will be clearly labeled and kept separate from the list."
+      },
+      {
+        "heading": "Corrections",
+        "body": "If something on a list is wrong or out of date, let us know through our contact page and we'll check it."
+      }
+    ]
+  }
+}
