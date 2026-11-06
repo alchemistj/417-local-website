@@ -1,17 +1,43 @@
 ---
+import EventList from "../../components/EventList.astro";
+import copy from "../../../docs/events-pages-copy.json";
+import { BUSINESS_EVENTS, EVENTS_HUB, generalCategoryPage } from "../../data/staticPages";
 import EventsLayout from "../../layouts/EventsLayout.astro";
-import { BUSINESS_EVENTS, EVENTS_HUB } from "../../data/staticPages";
+import { GENERAL_EVENT_CATEGORY_LABELS } from "../../lib/eventSchema";
+import { generalCategoriesWithUpcoming, hubWeekendPreview } from "../../lib/events";
 import { getUpcomingEvents } from "../../lib/loadEvents";
 
-const events = await getUpcomingEvents();
-const subnav = BUSINESS_EVENTS.map((p) => ({ label: p.label, href: p.path }));
+const now = new Date();
+const events = await getUpcomingEvents(now);
+const weekend = hubWeekendPreview(events, now);
+const business = BUSINESS_EVENTS[0];
+const categoryLinks = generalCategoriesWithUpcoming(events, now).map((slug) => ({
+  label: GENERAL_EVENT_CATEGORY_LABELS[slug],
+  href: generalCategoryPage(slug).path,
+}));
 ---
 
 <EventsLayout
   meta={EVENTS_HUB}
-  h1="Springfield, MO Events"
-  intro="Upcoming events in Springfield and the 417 area. Start with business events, or browse everything below."
-  events={events}
+  h1={copy.hub.h1}
+  intro={copy.hub.intro}
   crumbs={[{ name: "Home", path: "/" }, { name: "Events", path: "/events/" }]}
-  subnav={subnav}
-/>
+>
+  {weekend.length > 0 && (
+    <section class="weekend-block" aria-labelledby="weekend-heading">
+      <h2 id="weekend-heading">{copy.hub.weekendHeading}</h2>
+      <EventList events={weekend} />
+      <p><a class="more-link" href="/events/this-weekend/">See everything this weekend</a></p>
+    </section>
+  )}
+  <nav aria-label="Event categories">
+    <ul class="subnav">
+      {categoryLinks.map((link) => (
+        <li><a href={link.href}>{link.label}</a></li>
+      ))}
+      <li><a href={business.path}>{business.label}</a></li>
+    </ul>
+  </nav>
+  <p>{copy.hub.businessLink}</p>
+  <EventList events={events} emptyMessage={copy.hub.emptyState} />
+</EventsLayout>

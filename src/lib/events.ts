@@ -1,4 +1,9 @@
-import { BUSINESS_EVENT_CATEGORIES, type EventData } from "./eventSchema";
+import {
+  BUSINESS_EVENT_CATEGORIES,
+  GENERAL_EVENT_CATEGORIES,
+  type EventData,
+  type GeneralEventCategory,
+} from "./eventSchema";
 
 export const DEFAULT_TIMEZONE = "America/Chicago";
 
@@ -51,4 +56,139 @@ export function formatPrice(event: EventData): string {
   if (typeof p === "number") return p === 0 ? "Free" : `$${p}`;
   if (typeof p === "string") return p;
   return "";
+}
+
+const WEEKDAYS: Record<string, number> = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+
+/** Collection ids come from the file name. `_export-meta` is the engine's manifest, not an event. */
+export function isEventContentId(id: string): boolean {
+  const base = id.split(/[/\\]/).pop() ?? id;
+  return base.length > 0 && !base.startsWith("_");
+}
+
+export function upcomingFromEntries(entries: { id: string; data: EventData }[], now: Date): EventData[] {
+  const all = entries.filter((entry) => isEventContentId(entry.id)).map((entry) => entry.data);
+  return sortByStart(all.filter((event) => isUpcoming(event, now)));
+}
+
+interface CalendarDate {
+  year: number;
+  month: number;
+  day: number;
+  weekday: number;
+}
+
+export function chicagoDateParts(date: Date): CalendarDate {
+  const fmt = new Intl.DateTimeFormat("en-US", {
+    timeZone: DEFAULT_TIMEZONE,
+    weekday: "short",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+  const parts = Object.fromEntries(fmt.formatToParts(date).map((part) => [part.type, part.value]));
+  const weekday = WEEKDAYS[parts.weekday ?? ""];
+  if (weekday === undefined || !parts.year || !parts.month || !parts.day) {
+    throw new Error(`Could not read an America/Chicago date from ${date.toISOString()}`);
+  }
+  return { year: Number(parts.year), month: Number(parts.month), day: Number(parts.day), weekday };
+}
+
+function ymd(date: { year: number; month: number; day: number }): string {
+  const month = String(date.month).padStart(2, "0");
+  const day = String(date.day).padStart(2, "0");
+  return `${date.year}-${month}-${day}`;
+}
+
+function addCalendarDays(date: CalendarDate, days: number): CalendarDate {
+  const shifted = new Date(Date.UTC(date.year, date.month - 1, date.day + days));
+  return {
+    year: shifted.getUTCFullYear(),
+    month: shifted.getUTCMonth() + 1,
+    day: shifted.getUTCDate(),
+    weekday: shifted.getUTCDay(),
+  };
+}
+
+/**
+ * Friday through Sunday in America/Chicago.
+ * Monday–Thursday use the coming weekend. Friday–Sunday use the weekend already underway.
+ */
+export function weekendDateStrings(now: Date): [string, string, string] {
+  const today = chicagoDateParts(now);
+  const fridayOffset = today.weekday === 0 ? -2 : 5 - today.weekday;
+  const friday = addCalendarDays(today, fridayOffset);
+  return [ymd(friday), ymd(addCalendarDays(friday, 1)), ymd(addCalendarDays(friday, 2))];
+}
+
+/** Calendar date of the event start. Date-only values stay as written; instants use America/Chicago. */
+export function eventChicagoDate(event: EventData): string {
+  if (DATE_ONLY.test(event.start)) return event.start;
+  const time = Date.parse(event.start);
+  if (Number.isNaN(time)) return "";
+  return ymd(chicagoDateParts(new Date(time)));
+}
+
+export function formatDayHeading(ymdDate: string): string {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(ymdDate);
+  if (!match) return ymdDate;
+  const date = new Date(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3])));
+  return new Intl.DateTimeFormat("en-US", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  }).format(date);
+}
+
+export interface WeekendDayGroup {
+  date: string;
+  heading: string;
+  events: EventData[];
+}
+
+/** Groups events whose Chicago start date falls on that weekend. Omits days with none. */
+export function groupWeekendEvents(events: EventData[], now: Date): WeekendDayGroup[] {
+  const dates = weekendDateStrings(now);
+  return dates
+    .map((date) => ({
+      date,
+      heading: formatDayHeading(date),
+      events: sortByStart(events.filter((event) => eventChicagoDate(event) === date)),
+    }))
+    .filter((group) => group.events.length > 0);
+}
+
+/** Seven Chicago calendar days starting today, by the event's Chicago start date. */
+export function nextSevenDayEvents(events: EventData[], now: Date): EventData[] {
+  const today = chicagoDateParts(now);
+  const start = ymd(today);
+  const end = ymd(addCalendarDays(today, 6));
+  return sortByStart(events.filter((event) => {
+    const date = eventChicagoDate(event);
+    return date >= start && date <= end;
+  }));
+}
+
+export interface ThisWeekendView {
+  mode: "weekend" | "fallback";
+  groups: WeekendDayGroup[];
+  fallback: EventData[];
+}
+
+export function thisWeekendView(events: EventData[], now: Date): ThisWeekendView {
+  const upcoming = events.filter((event) => isUpcoming(event, now));
+  const groups = groupWeekendEvents(upcoming, now);
+  if (groups.length > 0) return { mode: "weekend", groups, fallback: [] };
+  return { mode: "fallback", groups: [], fallback: nextSevenDayEvents(upcoming, now) };
+}
+
+export function hubWeekendPreview(events: EventData[], now: Date, limit = 6): EventData[] {
+  const upcoming = events.filter((event) => isUpcoming(event, now));
+  return groupWeekendEvents(upcoming, now).flatMap((group) => group.events).slice(0, limit);
+}
+
+export function generalCategoriesWithUpcoming(events: EventData[], now: Date): GeneralEventCategory[] {
+  const upcoming = events.filter((event) => isUpcoming(event, now));
+  return GENERAL_EVENT_CATEGORIES.filter((slug) => upcoming.some((event) => event.categories.includes(slug)));
 }

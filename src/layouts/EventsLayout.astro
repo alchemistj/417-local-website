@@ -9,13 +9,17 @@ import { absoluteUrl } from "../lib/site";
 interface Props {
   meta: StaticPageMeta;
   h1: string;
-  intro: string;
-  events: EventData[];
+  intro: string | readonly string[];
+  events?: EventData[];
   crumbs: { name: string; path: string }[];
   /** Show the business-events sub navigation. */
   subnav?: { label: string; href: string }[];
+  /** Replaces the business-events empty sentence. Business pages omit this. */
+  emptyMessage?: string;
 }
-const { meta, h1, intro, events, crumbs, subnav } = Astro.props;
+const { meta, h1, intro, events = [], crumbs, subnav, emptyMessage } = Astro.props;
+const paragraphs = typeof intro === "string" ? [intro] : intro;
+const customBody = Astro.slots.has("default");
 
 const crumbLd = {
   "@context": "https://schema.org",
@@ -33,7 +37,7 @@ const crumbLd = {
   <section class="band band-blue page-band">
     <div class="container">
       <h1>{h1}</h1>
-      <p class="lead">{intro}</p>
+      {paragraphs.map((paragraph) => <p class="lead">{paragraph}</p>)}
       {subnav && (
         <nav aria-label="Event types">
           <ul class="subnav">
@@ -46,8 +50,8 @@ const crumbLd = {
     </div>
   </section>
   <section class="band">
-    <div class="container">
-      <EventList events={events} />
+    <div class:list={["container", customBody && "stack"]}>
+      {customBody ? <slot /> : <EventList events={events} emptyMessage={emptyMessage} />}
     </div>
   </section>
   <CtaBand

@@ -1,5 +1,7 @@
 import { categoryName, type CategorySlug } from "../data/categories";
-import { STATIC_PAGES } from "../data/staticPages";
+import { generalCategoryPage, STATIC_PAGES } from "../data/staticPages";
+import { generalCategoriesWithUpcoming } from "./events";
+import type { EventData } from "./eventSchema";
 import type { ListSummary } from "./lists";
 import { POSTS_PER_PAGE } from "./site";
 
@@ -56,8 +58,22 @@ export function postCrumbs(post: { slug: string; title: string; category: Catego
   ];
 }
 
+/** Category pages that have at least one upcoming event. Empty categories are omitted. */
+export function generalCategoryRoutes(events: EventData[], now: Date = new Date()): RouteEntry[] {
+  return generalCategoriesWithUpcoming(events, now).map((slug) => {
+    const meta = generalCategoryPage(slug);
+    return {
+      path: meta.path,
+      type: "static",
+      title: meta.title,
+      description: meta.description,
+      indexable: true,
+    };
+  });
+}
+
 /** Single source of truth for every published URL. Draft lists are omitted by the caller on production. */
-export function buildRoutes(posts: PostSummary[], lists: ListSummary[] = []): RouteEntry[] {
+export function buildRoutes(posts: PostSummary[], lists: ListSummary[] = [], eventRoutes: RouteEntry[] = []): RouteEntry[] {
   const routes: RouteEntry[] = STATIC_PAGES.map((p) => ({
     path: p.path,
     type: p.path === "/blog/" ? "blog" : "static",
@@ -65,6 +81,7 @@ export function buildRoutes(posts: PostSummary[], lists: ListSummary[] = []): Ro
     description: p.description,
     indexable: p.indexable !== false,
   }));
+  routes.push(...eventRoutes);
 
   for (let n = 2; n <= blogPageCount(posts.length); n += 1) {
     routes.push({

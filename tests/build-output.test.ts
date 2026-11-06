@@ -2,11 +2,14 @@
  * Checks the built site in dist/. Run `npm run build` first; without a build these tests are skipped.
  * `npm run verify` builds and then runs the whole suite.
  */
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { describe, expect, it } from "vitest";
+import eventsCopy from "../docs/events-pages-copy.json";
 import { REDIRECTS, RETIRED_SLUGS, sourceMatches } from "../src/data/redirects";
+import { GENERAL_EVENT_CATEGORIES, eventSchema, type EventData } from "../src/lib/eventSchema";
+import { generalCategoriesWithUpcoming, hubWeekendPreview, isUpcoming, sortByStart, thisWeekendView } from "../src/lib/events";
 import { listsIncludedInBuild } from "../src/lib/lists";
-import { buildRoutes } from "../src/lib/routes";
+import { buildRoutes, generalCategoryRoutes } from "../src/lib/routes";
 import batch1 from "../docs/build/batch-1.json";
 import batch2 from "../docs/build/batch-2.json";
 import batch3 from "../docs/build/batch-3.json";
@@ -14,12 +17,26 @@ import batch4 from "../docs/build/batch-4.json";
 import copy from "../docs/food-and-drink-guide-copy.json";
 import { EXPLORE_LINKS } from "../src/data/nav";
 import { groupFoodPosts } from "../src/lib/foodGuide";
-import { DIST_DIR, postSummaries } from "./helpers/posts";
+import { DIST_DIR, postSummaries, ROOT } from "./helpers/posts";
 import { readListSummaries } from "./helpers/lists";
 import { decode, htmlFiles, routeOf } from "./helpers/html";
 
 const built = existsSync(`${DIST_DIR}/index.html`);
 const SITE = "https://417local.com";
+const builtAt = new Date();
+
+function contentEvents(): EventData[] {
+  const dir = `${ROOT}src/content/events`;
+  if (!existsSync(dir)) return [];
+  return sortByStart(
+    readdirSync(dir)
+      .filter((name) => name.endsWith(".json") && !name.startsWith("_"))
+      .map((name) => eventSchema.parse(JSON.parse(readFileSync(`${dir}/${name}`, "utf8")) as unknown))
+      .filter((event) => isUpcoming(event, builtAt)),
+  );
+}
+
+const upcomingEvents = built ? contentEvents() : [];
 
 interface Page {
   route: string;
@@ -32,7 +49,9 @@ const allPages: Page[] = built
 // The 404 page is served by Vercel for unknown paths; it is not a route, so it is checked on its own below.
 const notFound = allPages.find((p) => p.route === "/404.html");
 const pages: Page[] = allPages.filter((p) => p.route !== "/404.html");
-const registry = built ? buildRoutes(postSummaries(), listsIncludedInBuild(readListSummaries())) : [];
+const registry = built
+  ? buildRoutes(postSummaries(), listsIncludedInBuild(readListSummaries()), generalCategoryRoutes(upcomingEvents, builtAt))
+  : [];
 const routeSet = new Set(registry.map((r) => r.path));
 
 function internalTarget(href: string): string | null {
@@ -268,7 +287,94 @@ describe.skipIf(!built)("built site", () => {
   it("shows the events empty state when there are no events", () => {
     const hub = pages.find((p) => p.route === "/events/")?.html ?? "";
     if (hub.includes('class="event-list"')) return; // events exist, nothing to check
-    expect(hub).toContain("New Springfield business events are added every week. Check back soon or");
-    expect(hub).toContain('<a href="/submit-your-event/">submit yours</a>');
+    expect(decode(hub)).toContain(eventsCopy.hub.emptyState);
+  });
+
+  it("builds the events hub, this weekend, and general category pages from the copy file", () => {
+    const expectCopy = (html: string, route: string, seoTitle: string, description: string, h1: string, intro: readonly string[]) => {
+      expect((html.match(/<h1[\s>]/g) ?? []).length, route).toBe(1);
+      expect(decode(html.match(/<title>([^<]*)<\/title>/)?.[1] ?? ""), route).toBe(seoTitle);
+      expect(html.match(/<meta name="description" content="([^"]*)"/)?.[1], route).toBe(description);
+      const text = decode(html);
+      expect(text, route).toContain(`>${h1}<`);
+      for (const paragraph of intro) expect(text, route).toContain(paragraph);
+    };
+
+    const hub = pages.find((p) => p.route === "/events/")?.html ?? "";
+    expectCopy(hub, "/events/", eventsCopy.hub.seoTitle, eventsCopy.hub.description, eventsCopy.hub.h1, eventsCopy.hub.intro);
+    expect(decode(hub)).toContain(eventsCopy.hub.businessLink);
+    expect(hub).toContain('href="/events/springfield-business-events/"');
+    expect(hub).toContain(">Business events<");
+
+    const preview = hubWeekendPreview(upcomingEvents, builtAt);
+    if (preview.length === 0) {
+      expect(hub).not.toContain(eventsCopy.hub.weekendHeading);
+      expect(hub).not.toContain('href="/events/this-weekend/"');
+    } else {
+      expect(hub).toContain(eventsCopy.hub.weekendHeading);
+      expect(hub).toContain(">See everything this weekend<");
+      expect(hub).toContain('href="/events/this-weekend/"');
+      for (const event of preview) expect(decode(hub)).toContain(event.title);
+    }
+
+    const builtCategories = generalCategoriesWithUpcoming(upcomingEvents, builtAt);
+    for (const slug of GENERAL_EVENT_CATEGORIES) {
+      const href = `href="/events/${slug}/"`;
+      if (builtCategories.includes(slug)) expect(hub).toContain(href);
+      else expect(hub).not.toContain(href);
+    }
+
+    const weekendPage = pages.find((p) => p.route === "/events/this-weekend/");
+    expect(weekendPage, "/events/this-weekend/").toBeTruthy();
+    const weekendHtml = weekendPage!.html;
+    expectCopy(
+      weekendHtml,
+      "/events/this-weekend/",
+      eventsCopy.thisWeekend.seoTitle,
+      eventsCopy.thisWeekend.description,
+      eventsCopy.thisWeekend.h1,
+      eventsCopy.thisWeekend.intro,
+    );
+    const crumbs = [...weekendHtml.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+      .map((match) => JSON.parse(match[1]) as { "@type"?: string; itemListElement?: { name: string; item: string }[] })
+      .find((data) => data["@type"] === "BreadcrumbList");
+    expect(crumbs?.itemListElement?.map((item) => item.name)).toEqual(["Home", "Events", eventsCopy.thisWeekend.h1]);
+    expect(crumbs?.itemListElement?.map((item) => item.item)).toEqual([
+      `${SITE}/`,
+      `${SITE}/events/`,
+      `${SITE}/events/this-weekend/`,
+    ]);
+
+    const view = thisWeekendView(upcomingEvents, builtAt);
+    const weekendText = decode(weekendHtml);
+    if (view.mode === "weekend") {
+      expect(weekendText).not.toContain(eventsCopy.thisWeekend.emptyState);
+      for (const group of view.groups) {
+        expect(weekendText).toContain(group.heading);
+        for (const event of group.events) expect(weekendText).toContain(event.title);
+      }
+    } else {
+      expect(weekendText).toContain(eventsCopy.thisWeekend.emptyState);
+      for (const event of view.fallback) expect(weekendText).toContain(event.title);
+      const shown = new Set(view.fallback.map((event) => event.title));
+      for (const event of upcomingEvents) {
+        if (!shown.has(event.title)) expect(weekendText).not.toContain(event.title);
+      }
+    }
+
+    for (const slug of GENERAL_EVENT_CATEGORIES) {
+      const route = `/events/${slug}/`;
+      const page = pages.find((item) => item.route === route);
+      const wanted = builtCategories.includes(slug);
+      expect(Boolean(page), route).toBe(wanted);
+      expect(routeSet.has(route), route).toBe(wanted);
+      if (!page) continue;
+      const pageCopy = eventsCopy.categories[slug];
+      expectCopy(page.html, route, pageCopy.seoTitle, pageCopy.description, pageCopy.h1, pageCopy.intro);
+      const categoryCrumbs = [...page.html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+        .map((match) => JSON.parse(match[1]) as { "@type"?: string; itemListElement?: { name: string }[] })
+        .find((data) => data["@type"] === "BreadcrumbList");
+      expect(categoryCrumbs?.itemListElement?.map((item) => item.name)).toEqual(["Home", "Events", pageCopy.h1]);
+    }
   });
 });

@@ -1,0 +1,37 @@
+---
+import EventList from "../../components/EventList.astro";
+import copy from "../../../docs/events-pages-copy.json";
+import { THIS_WEEKEND } from "../../data/staticPages";
+import EventsLayout from "../../layouts/EventsLayout.astro";
+import { thisWeekendView } from "../../lib/events";
+import { getUpcomingEvents } from "../../lib/loadEvents";
+
+const now = new Date();
+const view = thisWeekendView(await getUpcomingEvents(now), now);
+const page = copy.thisWeekend;
+---
+
+<EventsLayout
+  meta={THIS_WEEKEND}
+  h1={page.h1}
+  intro={page.intro}
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Events", path: "/events/" },
+    { name: page.h1, path: THIS_WEEKEND.path },
+  ]}
+>
+  {view.mode === "weekend" ? (
+    view.groups.map((group) => (
+      <section class="event-day" aria-labelledby={`day-${group.date}`}>
+        <h2 id={`day-${group.date}`}>{group.heading}</h2>
+        <EventList events={group.events} />
+      </section>
+    ))
+  ) : (
+    <>
+      <p class="empty-state">{page.emptyState}</p>
+      {view.fallback.length > 0 && <EventList events={view.fallback} />}
+    </>
+  )}
+</EventsLayout>
