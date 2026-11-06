@@ -1,0 +1,29 @@
+{
+  "id": "13402ec2-d59e-4a72-a390-fd64426bbfe4",
+  "slug": "dec-2026-general-membership-luncheon",
+  "title": "Dec 2026 General Membership Luncheon",
+  "seo_title": "Dec 2026 General Membership Luncheon in Republic, MO",
+  "description": "The Republic Area Chamber of Commerce hosts the December 2026 General Membership Luncheon on Tuesday, December 1, from 11:00 AM to 1:00 PM at Republic Library, 921 N Lindsey Ave in Republic, MO. Attendees who miss online registration can pay $15 at the door. The event is aimed at business networking and the local community.",
+  "start": "2026-12-01T17:00:00+00:00",
+  "end": "2026-12-01T19:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Republic Library",
+  "address": "921 N Lindsey Ave",
+  "city": "Republic",
+  "state": "MO",
+  "organizer": {
+    "name": "Republic Area Chamber of Commerce",
+    "website": "https://republicchamber.com/"
+  },
+  "categories": [
+    "networking"
+  ],
+  "price": "$15 at the door for those who miss online registration",
+  "is_free": false,
+  "registration_url": "https://republicchamber.com/events/details/dec-2026-general-membership-luncheon-13783",
+  "image_url": null,
+  "source_urls": [
+    "https://republicchamber.com/events/details/dec-2026-general-membership-luncheon-13783"
+  ],
+  "updated_at": "2026-11-06T10:18:04.618Z"
+}
