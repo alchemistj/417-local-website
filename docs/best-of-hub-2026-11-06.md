@@ -6,7 +6,7 @@ Copy for the hub, the method page and the disclosure line is in `docs/best-of-hu
 
 ## Rules the template must enforce
 
-- **No review text.** We never quote or paraphrase-in-quotes a Google review. Each business gets a summary written in our own words, plus the rating and review count with the date we checked them and a link to the business's Google listing.
+- **No review text, no ratings.** We never quote or paraphrase-in-quotes a Google review. Each business gets a summary written in our own words and a link to its Google listing. No star ratings, review counts or "checked on" dates anywhere on the page (Josh, Nov 6: they change too often to show).
 - **No rating markup.** JSON-LD for list pages is an `ItemList` of `LocalBusiness` items with `name` and `url` only. No `aggregateRating`, no `review` (Google's review-snippet rules do not allow ratings taken from another site).
 - **Disclosure on every list page**, from the copy file, linked to the method page.
 - **Order is editorial.** Businesses render in the order of the data file. `ffClient` and `featured` never change the order.
@@ -26,7 +26,6 @@ Copy for the hub, the method page and the disclosure line is in `docs/best-of-hu
 - `businesses`: 3–15 items, each:
   - `name` (required)
   - `googleMapsUrl` (required, must start with `https://www.google.com/maps` or `https://maps.google.com`)
-  - `rating` (1–5, one decimal), `reviewCount` (integer ≥ 1), `ratingCheckedOn` (date)
   - `summary` (required, 160–420 characters, our words). It must not contain `"`, `“` or `”`.
   - `bestFor` (optional, max 60 characters), e.g. "Storm damage and insurance claims"
   - `highlights` (optional, up to 4 short strings, max 80 characters each)
@@ -51,7 +50,7 @@ Use the landing-page look (`kind: page` style). Order:
 2. H1, then the intro paragraphs.
 3. Disclosure line (copy file `disclosure`), with "How we pick" linking to `/how-we-pick/`. Shown on every list page.
 4. "Last updated <Month D, YYYY>" from `updated`.
-5. Numbered business cards, in file order. Each card: number and name (H2), `bestFor` if set, the rating line `4.8 ★ · 312 Google reviews (checked Nov 2026)` linking to `googleMapsUrl` as "See reviews on Google" (opens in a new tab, `rel="noopener"`), `summary`, `highlights` as a short list, and buttons for website and phone when present. Plain links: no tracking query strings.
+5. Numbered business cards, in file order. Each card: number and name (H2), `bestFor` if set, a "See reviews on Google" link to `googleMapsUrl` (opens in a new tab, `rel="noopener"`), `summary`, `highlights` as a short list, and buttons for website and phone when present. No star rating, review count or date on the card. Plain links: no tracking query strings.
 6. "How we picked these" box: the list's `criteria`, plus a link to `/how-we-pick/`.
 7. FAQ section when `faq` is present (FAQPage JSON-LD is fine).
 8. The existing `CtaBand`.
@@ -82,9 +81,13 @@ Add tests (same runner as the repo) that cover:
 - `ffClient`/`featured` do not change the order and render nothing extra
 - no list slug equals a post slug
 - the hub lists only published lists and builds with zero published lists
-- published lists: every `ratingCheckedOn` is within the last 180 days (so stale ratings fail CI and force a refresh)
+- the list schema has no rating, review-count or checked-on fields, and a rendered list page contains no `★` and no "Google reviews (" text
 
 Existing tests keep passing.
+
+## Update (Nov 6, evening)
+
+Josh decided against showing star ratings and review counts. Remove `rating`, `reviewCount` and `ratingCheckedOn` from the schema, the sample data, the card and the tests, and replace the 180-day freshness test as listed above. The list-level "Last updated" date stays.
 
 ## Not in scope
 

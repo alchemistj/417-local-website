@@ -8,7 +8,7 @@
     "h1": "Springfield, MO Local Business Guide",
     "intro": [
       "Finding a good local pro shouldn't take a weekend of guesswork. We look at what Springfield customers say about local businesses, check the details, and put the ones that stand out on short lists by trade.",
-      "Every list shows when we last checked it and links to each business's Google reviews, so you can read them yourself."
+      "Every list shows when we last updated it and links to each business's Google reviews, so you can read them yourself."
     ],
     "sectionLead": "Pick a trade to see our current list.",
     "emptyState": "Our first lists are on the way. Check back soon."
@@ -21,11 +21,11 @@
     "sections": [
       {
         "heading": "What we look at",
-        "body": "We start with Springfield-area businesses that have a strong Google rating and enough reviews to mean something. Then we read the reviews for patterns: what customers praise again and again, what they complain about, and how the owner responds. We also check that the business is active, serves the Springfield area and has clear contact information."
+        "body": "We start with Springfield-area businesses with a strong record of customer reviews. Then we read the reviews for patterns: what customers praise again and again, what they complain about, and how the owner responds. We also check that the business is active, serves the Springfield area and has clear contact information."
       },
       {
         "heading": "What we write",
-        "body": "Each summary is written in our own words from what customers consistently say. We don't copy or quote individual reviews. Each listing shows the rating and review count on the date we checked, with a link to the business's Google listing so you can read the reviews yourself."
+        "body": "Each summary is written in our own words from what customers consistently say. We don't copy or quote individual reviews, and we don't post star ratings because they change every week. Every listing links to the business's Google reviews so you can read them yourself."
       },
       {
         "heading": "How often we update",
