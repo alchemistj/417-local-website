@@ -3,18 +3,17 @@ import { Image, getImage } from "astro:assets";
 import { getCollection, render, type CollectionEntry } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
 import ArticleCard from "../components/ArticleCard.astro";
-import { categoryName } from "../data/categories";
 import { SITE_NAME, absoluteUrl } from "../lib/site";
 import HexPattern from "../components/HexPattern.astro";
 import skyline from "../assets/decor/springfield-skyline.png";
 import { LANDING_EYEBROW } from "../data/landingPages";
-import { sortByUpdated } from "../lib/routes";
+import { postCrumbs, sortByUpdated } from "../lib/routes";
 
 interface Props {
   post: CollectionEntry<"posts">;
 }
 const { post } = Astro.props;
-const { title, seoTitle, description, published, updated, category, heroImage, heroAlt, kind } = post.data;
+const { title, seoTitle, description, published, updated, category, heroImage, heroAlt, heroPosition, kind } = post.data;
 const isLanding = kind === "page";
 const eyebrow = LANDING_EYEBROW[post.id];
 const { Content } = await render(post);
@@ -33,11 +32,7 @@ const updatedLabel = updated.toLocaleDateString("en-US", { month: "long", year: 
 const same = (await getCollection("posts")).filter((p) => p.data.category === category && p.id !== post.id);
 const related = sortByUpdated(same.map((p) => ({ ...p, title: p.data.title, updated: p.data.updated }))).slice(0, 3);
 
-const crumbs = [
-  { name: "Home", path: "/" },
-  { name: categoryName(category), path: `/category/${category}/` },
-  { name: title, path },
-];
+const crumbs = postCrumbs({ slug: post.id, title, category });
 
 const articleLd = {
   "@context": "https://schema.org",
@@ -100,7 +95,7 @@ const crumbLd = {
             <p class="byline">By {SITE_NAME} Editorial Team</p>
           </div>
           {heroImage && (
-            <figure class="article-photo">
+            <figure class="article-photo" style={heroPosition ? `--hero-pos: ${heroPosition}` : undefined}>
               <Image
                 src={heroImage}
                 alt={heroAlt ?? ""}

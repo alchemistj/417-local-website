@@ -58,6 +58,10 @@ export function buildRedirects(): Redirect[] {
   for (const [slug, dest] of Object.entries(shortlinks as Record<string, string>)) {
     for (const source of bothSlashForms(slug)) add(source, dest, 307);
   }
+  // Retired category archives. The food rule is first so /category/:path* does not swallow
+  // the guide, including old /category/food-and-drink/page/n/ URLs. Both slash forms match.
+  add("/category/food-and-drink/:path*", "/food-and-drink-springfield-mo/");
+  add("/category/:path*", "/blog/");
   return out;
 }
 

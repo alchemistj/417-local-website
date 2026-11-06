@@ -22,8 +22,20 @@ describe("Vercel redirect routes", () => {
     expect(a2?.headers.Location).toMatch(/^https:\/\//);
   });
 
+  it("redirects category archives, food first, with and without a slash", () => {
+    for (const path of ["/category/food-and-drink", "/category/food-and-drink/", "/category/food-and-drink/page/2/"]) {
+      const hit = match(path);
+      expect(hit?.status, path).toBe(301);
+      expect(hit?.headers.Location, path).toBe("/food-and-drink-springfield-mo/");
+    }
+    for (const path of ["/category/do-something/", "/category/xyz", "/category/springfield/page/4/"]) {
+      expect(match(path)?.headers.Location, path).toBe("/blog/");
+      expect(match(path)?.status, path).toBe(301);
+    }
+  });
+
   it("never captures live pages", () => {
-    for (const path of ["/", "/events/", "/events/springfield-business-events/", "/blog/", "/best-parks-in-springfield-mo/"]) {
+    for (const path of ["/", "/events/", "/events/springfield-business-events/", "/blog/", "/best-parks-in-springfield-mo/", "/food-and-drink-springfield-mo/"]) {
       expect(match(path), path).toBeUndefined();
     }
   });

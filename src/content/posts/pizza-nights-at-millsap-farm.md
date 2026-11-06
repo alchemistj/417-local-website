@@ -54,4 +54,4 @@ You can get tickets and reserve through the farm's [Pizza Club page](https://www
 
 I'll see you at the farm.
 
-Looking for more local food ideas? Browse our [Food & Drink guides](/category/food-and-drink/).
+Looking for more local food ideas? Browse our [Food & Drink guides](/food-and-drink-springfield-mo/).

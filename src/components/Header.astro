@@ -10,6 +10,9 @@ const { currentPath } = Astro.props;
 
 const postIds = new Set((await getCollection("posts")).map((p) => p.id));
 const items = NAV_ITEMS.filter((i) => !i.requiresPost || postIds.has(i.requiresPost));
+// Phones show the CTA as a full-width bar under the logo row, not a second copy in the menu.
+const menuItems = items.filter((i) => !i.cta);
+const cta = items.find((i) => i.cta);
 const isCurrent = (href: string) => href === currentPath;
 ---
 
@@ -30,13 +33,16 @@ const isCurrent = (href: string) => href === currentPath;
       <summary><span class="sr-only">Menu</span><span class="menu-icon" aria-hidden="true"></span></summary>
       <nav class="nav-panel" aria-label="Main (mobile)">
         <ul class="nav-list">
-          {items.map((i) => (
-            <li><a class:list={[i.cta && "nav-cta"]} href={i.href} aria-current={isCurrent(i.href) ? "page" : undefined}>{i.label}</a></li>
+          {menuItems.map((i) => (
+            <li><a href={i.href} aria-current={isCurrent(i.href) ? "page" : undefined}>{i.label}</a></li>
           ))}
         </ul>
       </nav>
     </details>
   </div>
+  {cta && (
+    <a class="nav-cta-bar" href={cta.href} aria-current={isCurrent(cta.href) ? "page" : undefined}>{cta.label}</a>
+  )}
 </header>
 
 <script is:inline>

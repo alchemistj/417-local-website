@@ -1,3 +1,6 @@
+import bestOfCopy from "../../docs/best-of-hub-copy.json";
+import foodGuideCopy from "../../docs/food-and-drink-guide-copy.json";
+
 /**
  * Every non-article route and its SEO text. The route registry, sitemap, llms.txt and the page
  * templates all read from here, so they cannot disagree.
@@ -26,6 +29,27 @@ export const BLOG: StaticPageMeta = {
   title: "Springfield, MO Local Guides and Articles | 417 Local",
   description: "Every 417 Local guide in one place: things to do, food and drink, local businesses and more in Springfield, MO.",
   label: "All articles",
+};
+
+export const FOOD_GUIDE: StaticPageMeta = {
+  path: foodGuideCopy.path,
+  title: foodGuideCopy.seoTitle,
+  description: foodGuideCopy.description,
+  label: "Food & Drink",
+};
+
+export const LOCAL_BUSINESS_GUIDE: StaticPageMeta = {
+  path: bestOfCopy.hub.path,
+  title: bestOfCopy.hub.seoTitle,
+  description: bestOfCopy.hub.description,
+  label: "Local Business Guide",
+};
+
+export const HOW_WE_PICK: StaticPageMeta = {
+  path: bestOfCopy.howWePick.path,
+  title: bestOfCopy.howWePick.seoTitle,
+  description: bestOfCopy.howWePick.description,
+  label: "How We Pick",
 };
 
 export const EVENTS_HUB: StaticPageMeta = {
@@ -108,6 +132,9 @@ export const GET_STARTED: StaticPageMeta = {
 export const STATIC_PAGES: StaticPageMeta[] = [
   HOME,
   BLOG,
+  FOOD_GUIDE,
+  LOCAL_BUSINESS_GUIDE,
+  HOW_WE_PICK,
   EVENTS_HUB,
   ...BUSINESS_EVENTS,
   CONTACT,

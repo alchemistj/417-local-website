@@ -1,6 +1,5 @@
 ---
-import { CATEGORIES } from "../data/categories";
-import { FOOTER_LINKS } from "../data/nav";
+import { EXPLORE_LINKS, FOOTER_LINKS } from "../data/nav";
 import { ORGANIZATION, SITE_NAME } from "../lib/site";
 
 const year = new Date().getFullYear();
@@ -36,9 +35,9 @@ const [facebook, instagram] = ORGANIZATION.sameAs;
         </ul>
       </div>
       <div>
-        <h2>Categories</h2>
+        <h2>Explore Springfield</h2>
         <ul>
-          {CATEGORIES.map((c) => <li><a href={`/category/${c.slug}/`}>{c.name}</a></li>)}
+          {EXPLORE_LINKS.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
         </ul>
       </div>
       <div>

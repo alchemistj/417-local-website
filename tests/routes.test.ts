@@ -29,10 +29,12 @@ describe("route registry", () => {
     });
   }
 
-  it("includes every static page, the five category archives and one route per post", () => {
+  it("includes every static page and one route per post, and no category archives", () => {
     const paths = new Set(buildRoutes(fake(3)).map((r) => r.path));
     for (const p of STATIC_PAGES) expect(paths.has(p.path)).toBe(true);
-    for (const c of CATEGORY_SLUGS) expect(paths.has(`/category/${c}/`)).toBe(true);
+    for (const c of CATEGORY_SLUGS) expect(paths.has(`/category/${c}/`)).toBe(false);
+    expect(paths.has("/food-and-drink-springfield-mo/")).toBe(true);
+    expect([...paths].some((p) => p.includes("/category/"))).toBe(false);
     for (let i = 0; i < 3; i += 1) expect(paths.has(`/post-${i}/`)).toBe(true);
   });
 

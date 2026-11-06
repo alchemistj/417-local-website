@@ -1,19 +1,29 @@
 ---
 import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 import skyline from "../assets/decor/springfield-skyline.png";
-import type { CollectionEntry } from "astro:content";
+
+/** A post, or a list card with no photo. Lists use the skyline fallback. */
+interface CardPost {
+  id: string;
+  data: {
+    title: string;
+    heroImage?: ImageMetadata;
+    heroPosition?: string;
+  };
+}
 
 interface Props {
-  post: CollectionEntry<"posts">;
+  post: CardPost;
   /** First cards on a page can opt out of lazy loading; below the fold they stay lazy. */
   eager?: boolean;
 }
 const { post, eager = false } = Astro.props;
-const { title, heroImage } = post.data;
+const { title, heroImage, heroPosition } = post.data;
 ---
 
 <!-- Photo with the title over a dark gradient at the bottom (the live homepage card style). -->
-<li class={heroImage ? "card" : "card card-noimg"}>
+<li class={heroImage ? "card" : "card card-noimg"} style={heroPosition ? `--hero-pos: ${heroPosition}` : undefined}>
   {heroImage ? (
     <Image
       class="card-img"

@@ -83,6 +83,22 @@ describe("redirect data", () => {
     }
   });
 
+  it("sends category archives to the guide or the blog", () => {
+    const first = (path: string) => REDIRECTS.find((r) => sourceMatches(r.source, path));
+    const food = sources.indexOf("/category/food-and-drink/:path*");
+    const rest = sources.indexOf("/category/:path*");
+    expect(food).toBeGreaterThanOrEqual(0);
+    expect(rest).toBeGreaterThan(food);
+    for (const path of ["/category/food-and-drink/", "/category/food-and-drink", "/category/food-and-drink/page/2/"]) {
+      expect(first(path)?.destination, path).toBe("/food-and-drink-springfield-mo/");
+      expect(first(path)?.statusCode, path).toBe(301);
+    }
+    for (const path of ["/category/do-something/", "/category/do-something", "/category/xyz/", "/category/small-business/page/3/"]) {
+      expect(first(path)?.destination, path).toBe("/blog/");
+      expect(first(path)?.statusCode, path).toBe(301);
+    }
+  });
+
   it("keeps old short links as temporary redirects", () => {
     const offSite = REDIRECTS.filter((r) => /^https?:\/\//.test(r.destination));
     expect(offSite.length).toBeGreaterThan(0);

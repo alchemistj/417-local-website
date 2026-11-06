@@ -42,4 +42,4 @@ There are several Purple Burrito locations around Springfield, so call ahead to 
 
 The next time you crave a fresh, crisp taco or the crunchy perfection of a chicken chimichanga, the Purple Burrito is the place to go.
 
-Looking for more places to eat? Browse our [Food & Drink guides](/category/food-and-drink/).
+Looking for more places to eat? Browse our [Food & Drink guides](/food-and-drink-springfield-mo/).

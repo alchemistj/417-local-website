@@ -16,6 +16,14 @@ export function makePostSchema(image: () => z.ZodTypeAny) {
       category: z.enum(CATEGORY_SLUGS),
       heroImage: image().optional(),
       heroAlt: z.string().min(1).optional(),
+      /** CSS object-position for the hero, e.g. "center 20%". Omitted keeps the default crop. */
+      heroPosition: z
+        .string()
+        .regex(
+          /^(?:center|left|right|top|bottom|\d{1,3}%)(?:\s+(?:center|left|right|top|bottom|\d{1,3}%))?$/,
+          'heroPosition must be a CSS object-position value such as "center 20%"',
+        )
+        .optional(),
       kind: z.enum(["post", "page"]).default("post"),
     })
     .superRefine((data, ctx) => {

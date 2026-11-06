@@ -5,12 +5,17 @@
 import { existsSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { REDIRECTS, RETIRED_SLUGS, sourceMatches } from "../src/data/redirects";
+import { listsIncludedInBuild } from "../src/lib/lists";
 import { buildRoutes } from "../src/lib/routes";
 import batch1 from "../docs/build/batch-1.json";
 import batch2 from "../docs/build/batch-2.json";
 import batch3 from "../docs/build/batch-3.json";
 import batch4 from "../docs/build/batch-4.json";
+import copy from "../docs/food-and-drink-guide-copy.json";
+import { EXPLORE_LINKS } from "../src/data/nav";
+import { groupFoodPosts } from "../src/lib/foodGuide";
 import { DIST_DIR, postSummaries } from "./helpers/posts";
+import { readListSummaries } from "./helpers/lists";
 import { decode, htmlFiles, routeOf } from "./helpers/html";
 
 const built = existsSync(`${DIST_DIR}/index.html`);
@@ -27,7 +32,7 @@ const allPages: Page[] = built
 // The 404 page is served by Vercel for unknown paths; it is not a route, so it is checked on its own below.
 const notFound = allPages.find((p) => p.route === "/404.html");
 const pages: Page[] = allPages.filter((p) => p.route !== "/404.html");
-const registry = built ? buildRoutes(postSummaries()) : [];
+const registry = built ? buildRoutes(postSummaries(), listsIncludedInBuild(readListSummaries())) : [];
 const routeSet = new Set(registry.map((r) => r.path));
 
 function internalTarget(href: string): string | null {
@@ -77,7 +82,8 @@ describe.skipIf(!built)("built site", () => {
         expect(() => JSON.parse(m[1]), `${p.route} JSON-LD`).not.toThrow();
       }
       const noindex = /<meta name="robots" content="noindex/.test(p.html);
-      expect(noindex, `${p.route} noindex`).toBe(p.route === "/thank-you/");
+      const expectNoindex = registry.find((r) => r.path === p.route)?.indexable === false;
+      expect(noindex, `${p.route} noindex`).toBe(expectNoindex);
     }
   });
 
@@ -142,14 +148,98 @@ describe.skipIf(!built)("built site", () => {
     const locs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
     expect(locs.sort()).toEqual(registry.filter((r) => r.indexable).map((r) => `${SITE}${r.path}`).sort());
     expect(locs).not.toContain(`${SITE}/thank-you/`);
+    expect(locs.some((loc) => loc.includes("/category/"))).toBe(false);
+    expect(locs).toContain(`${SITE}/food-and-drink-springfield-mo/`);
     expect(readFileSync(`${DIST_DIR}/robots.txt`, "utf8")).toContain(`Sitemap: ${SITE}/sitemap.xml`);
     const llms = readFileSync(`${DIST_DIR}/llms.txt`, "utf8");
     expect(llms.startsWith("# 417 Local")).toBe(true);
+    expect(llms).not.toContain("/category/");
+    expect(llms).toContain(`${SITE}/food-and-drink-springfield-mo/`);
     for (const r of registry.filter((r) => r.type === "post")) expect(llms).toContain(`${SITE}${r.path}`);
   });
 
+  it("links no page to a /category/ URL", () => {
+    for (const p of allPages) expect(p.html, p.route).not.toMatch(/\/category\//);
+  });
+
+  it("builds the Food & Drink guide from the copy file", () => {
+    const page = pages.find((p) => p.route === "/food-and-drink-springfield-mo/");
+    expect(page, "guide page").toBeTruthy();
+    const html = page!.html;
+    expect((html.match(/<h1[\s>]/g) ?? []).length).toBe(1);
+    const text = decode(html);
+    expect(decode(html.match(/<title>([^<]*)<\/title>/)?.[1] ?? "")).toBe(copy.seoTitle);
+    expect(html.match(/<meta name="description" content="([^"]*)"/)?.[1]).toBe(copy.description);
+    expect(html).toContain(`<link rel="canonical" href="${SITE}${copy.path}">`);
+    expect(text).toContain(`>${copy.h1}<`);
+    for (const paragraph of copy.intro) expect(text).toContain(paragraph);
+    for (const section of copy.sections) {
+      expect(text).toContain(section.heading);
+      expect(text).toContain(section.lead);
+    }
+    const hrefs = [...html.matchAll(/class="card-title"[\s\S]*?<a href="([^"]+)"/g)].map((m) => m[1]);
+    const grouped = groupFoodPosts(postSummaries().filter((p) => p.category === "food-and-drink"));
+    expect(hrefs).toEqual([...grouped.featured, ...grouped.rest].map((p) => `/${p.slug}/`));
+  });
+
+  it("points the nav and the Explore Springfield footer at the ranking pages", () => {
+    const home = pages.find((p) => p.route === "/")?.html ?? "";
+    const header = home.slice(home.indexOf("<header"), home.indexOf("</header>") + "</header>".length);
+    const desktop = header.match(/<nav class="nav-desktop"[\s\S]*?<\/nav>/)?.[0] ?? "";
+    const menu = header.match(/<details class="menu-mobile"[\s\S]*?<\/details>/)?.[0] ?? "";
+    expect(desktop).toContain('href="/food-and-drink-springfield-mo/"');
+    expect(desktop).toContain("Food &amp; Drink");
+    expect(desktop).toContain("Grow Your Business");
+    expect(menu).not.toContain("Grow Your Business");
+    expect(header).toMatch(/class="nav-cta-bar"[^>]*>[\s\S]*Grow Your Business/);
+    const footer = home.slice(home.indexOf("<footer"));
+    const column = footer.split("Explore Springfield")[1]?.split("<h2>")[0] ?? "";
+    const links = [...column.matchAll(/<a href="([^"]+)">([^<]+)<\/a>/g)].map((m) => ({
+      href: m[1],
+      label: decode(m[2]),
+    }));
+    expect(links).toEqual(EXPLORE_LINKS);
+  });
+
+  it("breadcrumbs point food posts at the guide and other posts at the blog", () => {
+    const items = (route: string) => {
+      const html = pages.find((p) => p.route === route)?.html ?? "";
+      for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+        const data = JSON.parse(m[1]) as { "@type"?: string; itemListElement?: { name: string; item: string }[] };
+        if (data["@type"] === "BreadcrumbList") return data.itemListElement ?? [];
+      }
+      return [];
+    };
+    const food = items("/best-breweries-in-springfield-mo/");
+    expect(food.map((c) => c.name)).toEqual(["Home", "Food & Drink", "Best Breweries in Springfield MO: Top Locally Crafted Beer"]);
+    expect(food.map((c) => c.item)).toEqual([
+      `${SITE}/`,
+      `${SITE}/food-and-drink-springfield-mo/`,
+      `${SITE}/best-breweries-in-springfield-mo/`,
+    ]);
+    const other = items("/best-parks-in-springfield-mo/");
+    expect(other.map((c) => c.name)).toEqual(["Home", "Blog", "Top Parks in Springfield MO: Find Nature Attractions and Fun, Fast!"]);
+    expect(other[1]?.item).toBe(`${SITE}/blog/`);
+    expect(other.some((c) => c.item.includes("/category/"))).toBe(false);
+  });
+
+  it("drops the retired free-book paragraph and keeps the food-truck crop", () => {
+    const success = pages.find((p) => p.route === "/small-business-success/")?.html ?? "";
+    expect(success.toLowerCase()).not.toContain("free book");
+    for (const route of ["/", "/food-and-drink-springfield-mo/", "/best-food-trucks-in-springfield-mo/"]) {
+      expect(pages.find((p) => p.route === route)?.html ?? "", route).toContain("--hero-pos: center 20%");
+    }
+    const blogCard = pages.find((p) => p.route.startsWith("/blog/") && p.html.includes('href="/best-food-trucks-in-springfield-mo/"'));
+    expect(blogCard, "food truck card on a blog page").toBeTruthy();
+    expect(blogCard!.html).toContain("--hero-pos: center 20%");
+  });
+
   it("has no visible breadcrumb on any page but keeps BreadcrumbList JSON-LD on articles", () => {
-    for (const p of pages) expect(p.html, p.route).not.toMatch(/aria-label="Breadcrumb"|class="breadcrumbs"/);
+    const listPaths = new Set(registry.filter((r) => r.type === "list").map((r) => r.path));
+    for (const p of pages) {
+      if (listPaths.has(p.route)) continue;
+      expect(p.html, p.route).not.toMatch(/aria-label="Breadcrumb"|class="breadcrumbs"/);
+    }
     const kids = pages.find((p) => p.route === "/best-kids-activities-in-springfield-mo/")?.html ?? "";
     expect(kids).toContain('"@type":"BreadcrumbList"');
   });
