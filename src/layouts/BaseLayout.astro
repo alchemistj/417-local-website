@@ -17,10 +17,12 @@ interface Props {
   /** Social image. Falls back to the brand mark. */
   ogImage?: ImageMetadata;
   noindex?: boolean;
+  /** Full robots content. When set, replaces the noindex flag. Draft lists pass "noindex, nofollow". */
+  robots?: string;
   jsonLd?: Record<string, unknown>[];
 }
 
-const { title, description, path, ogType = "website", ogImage, noindex = false, jsonLd = [] } = Astro.props;
+const { title, description, path, ogType = "website", ogImage, noindex = false, robots, jsonLd = [] } = Astro.props;
 
 const canonical = absoluteUrl(path);
 const icon32 = await getImage({ src: favicon, width: 48, height: 48, format: "png" });
@@ -56,7 +58,7 @@ const graphs = [{ "@context": "https://schema.org", "@graph": [organization, web
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    {noindex && <meta name="robots" content="noindex,follow" />}
+    {robots ? <meta name="robots" content={robots} /> : noindex && <meta name="robots" content="noindex,follow" />}
     <link rel="icon" type="image/png" sizes="48x48" href={icon32.src} />
     <link rel="apple-touch-icon" href={icon180.src} />
     <meta property="og:site_name" content={SITE_NAME} />
@@ -71,6 +73,7 @@ const graphs = [{ "@context": "https://schema.org", "@graph": [organization, web
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    <slot name="banner" />
     {Astro.slots.has("hero-photo") ? (
       // Photo-hero pages (SOP first-frame §2): the inline photo is the first paintable element, and the
       // whole page waits on one parse marker (.atf-ready, inside the hero) so the first screen paints complete.

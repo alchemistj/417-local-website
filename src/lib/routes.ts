@@ -1,5 +1,6 @@
 import { categoryName, type CategorySlug } from "../data/categories";
 import { STATIC_PAGES } from "../data/staticPages";
+import type { ListSummary } from "./lists";
 import { POSTS_PER_PAGE } from "./site";
 
 /** The fields of a post the registry needs. Kept plain so tests can run without Astro. */
@@ -15,7 +16,7 @@ export interface PostSummary {
 
 export interface RouteEntry {
   path: string;
-  type: "static" | "blog" | "post";
+  type: "static" | "blog" | "post" | "list";
   title: string;
   description: string;
   lastmod?: string;
@@ -55,8 +56,8 @@ export function postCrumbs(post: { slug: string; title: string; category: Catego
   ];
 }
 
-/** Single source of truth for every published URL. */
-export function buildRoutes(posts: PostSummary[]): RouteEntry[] {
+/** Single source of truth for every published URL. Draft lists are omitted by the caller on production. */
+export function buildRoutes(posts: PostSummary[], lists: ListSummary[] = []): RouteEntry[] {
   const routes: RouteEntry[] = STATIC_PAGES.map((p) => ({
     path: p.path,
     type: p.path === "/blog/" ? "blog" : "static",
@@ -84,6 +85,17 @@ export function buildRoutes(posts: PostSummary[]): RouteEntry[] {
       lastmod: p.updated.toISOString().slice(0, 10),
       indexable: true,
       category: p.category,
+    });
+  }
+
+  for (const list of sortByUpdated(lists)) {
+    routes.push({
+      path: postPath(list.slug),
+      type: "list",
+      title: list.seoTitle,
+      description: list.description,
+      lastmod: list.updated.toISOString().slice(0, 10),
+      indexable: list.status === "published",
     });
   }
   return routes;

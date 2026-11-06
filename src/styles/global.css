@@ -351,6 +351,41 @@ h3 { font-size: 1.25rem; }
 
 @media print { .site-header, .site-footer, .follow-band { display: none; } }
 
+/* Best-of lists. Cards stack, and buttons stay at least 44px tall (the shared .btn is 48px). */
+.draft-bar {
+  margin: 0; padding: 0.7rem var(--content-pad);
+  background: #f4e3a1; color: var(--ink); text-align: center; font-weight: 700;
+}
+.crumbs ol {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 0.4rem;
+  list-style: none; margin: 0 0 1rem; padding: 0; font-size: 0.95rem;
+}
+.crumbs li { display: inline-flex; align-items: center; gap: 0.4rem; }
+.crumbs li + li::before { content: "→"; color: var(--muted); }
+.list-body { padding-block: 1.75rem 2.75rem; }
+.list-body > * + * { margin-top: 1rem; }
+.updated-line { margin: 0; color: var(--muted); }
+.biz-cards { list-style: none; margin: 0.5rem 0 0; padding: 0; }
+.biz-card { padding-block: 1.35rem; border-top: 1px solid var(--line); min-width: 0; }
+.biz-card:last-child { border-bottom: 1px solid var(--line); }
+.biz-card h2 { display: flex; flex-wrap: wrap; gap: 0.35rem 0.5rem; align-items: baseline; }
+.biz-num { color: var(--blue); font-weight: 700; }
+.best-for { margin: 0.35rem 0 0; color: var(--muted); font-weight: 700; }
+.rating-line { margin: 0.6rem 0 0; }
+.rating-line a {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 0.15rem;
+  min-height: 44px; overflow-wrap: anywhere;
+}
+.see-reviews { font-weight: 700; }
+.biz-card ul, .criteria-box ul { margin: 0.6rem 0 0; padding-left: 1.2rem; }
+.biz-card .btn-row { margin-top: 0.9rem; }
+.criteria-box { margin-top: 2rem; padding: 1.25rem; background: var(--tint); }
+.list-faq { margin-top: 2rem; }
+.list-faq details { border-top: 1px solid var(--line); }
+.list-faq details:last-of-type { border-bottom: 1px solid var(--line); }
+.list-faq summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font-weight: 700; }
+.list-faq details p { margin: 0 0 1rem; }
+
 /* Landing pages (kind: page) use semibold headings, as the live pages do. */
 .landing h1, .landing h2, .landing h3 { font-weight: 600; }
 .skyline-band h1 { font-size: clamp(1.9rem, 5.5vw, 3.125rem); }

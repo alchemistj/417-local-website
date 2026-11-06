@@ -5,6 +5,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { REDIRECTS, RETIRED_SLUGS, sourceMatches } from "../src/data/redirects";
+import { listsIncludedInBuild } from "../src/lib/lists";
 import { buildRoutes } from "../src/lib/routes";
 import batch1 from "../docs/build/batch-1.json";
 import batch2 from "../docs/build/batch-2.json";
@@ -14,6 +15,7 @@ import copy from "../docs/food-and-drink-guide-copy.json";
 import { EXPLORE_LINKS } from "../src/data/nav";
 import { groupFoodPosts } from "../src/lib/foodGuide";
 import { DIST_DIR, postSummaries } from "./helpers/posts";
+import { readListSummaries } from "./helpers/lists";
 import { decode, htmlFiles, routeOf } from "./helpers/html";
 
 const built = existsSync(`${DIST_DIR}/index.html`);
@@ -30,7 +32,7 @@ const allPages: Page[] = built
 // The 404 page is served by Vercel for unknown paths; it is not a route, so it is checked on its own below.
 const notFound = allPages.find((p) => p.route === "/404.html");
 const pages: Page[] = allPages.filter((p) => p.route !== "/404.html");
-const registry = built ? buildRoutes(postSummaries()) : [];
+const registry = built ? buildRoutes(postSummaries(), listsIncludedInBuild(readListSummaries())) : [];
 const routeSet = new Set(registry.map((r) => r.path));
 
 function internalTarget(href: string): string | null {
@@ -80,7 +82,8 @@ describe.skipIf(!built)("built site", () => {
         expect(() => JSON.parse(m[1]), `${p.route} JSON-LD`).not.toThrow();
       }
       const noindex = /<meta name="robots" content="noindex/.test(p.html);
-      expect(noindex, `${p.route} noindex`).toBe(p.route === "/thank-you/");
+      const expectNoindex = registry.find((r) => r.path === p.route)?.indexable === false;
+      expect(noindex, `${p.route} noindex`).toBe(expectNoindex);
     }
   });
 
@@ -232,7 +235,11 @@ describe.skipIf(!built)("built site", () => {
   });
 
   it("has no visible breadcrumb on any page but keeps BreadcrumbList JSON-LD on articles", () => {
-    for (const p of pages) expect(p.html, p.route).not.toMatch(/aria-label="Breadcrumb"|class="breadcrumbs"/);
+    const listPaths = new Set(registry.filter((r) => r.type === "list").map((r) => r.path));
+    for (const p of pages) {
+      if (listPaths.has(p.route)) continue;
+      expect(p.html, p.route).not.toMatch(/aria-label="Breadcrumb"|class="breadcrumbs"/);
+    }
     const kids = pages.find((p) => p.route === "/best-kids-activities-in-springfield-mo/")?.html ?? "";
     expect(kids).toContain('"@type":"BreadcrumbList"');
   });

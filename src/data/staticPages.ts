@@ -1,3 +1,4 @@
+import bestOfCopy from "../../docs/best-of-hub-copy.json";
 import foodGuideCopy from "../../docs/food-and-drink-guide-copy.json";
 
 /**
@@ -35,6 +36,20 @@ export const FOOD_GUIDE: StaticPageMeta = {
   title: foodGuideCopy.seoTitle,
   description: foodGuideCopy.description,
   label: "Food & Drink",
+};
+
+export const LOCAL_BUSINESS_GUIDE: StaticPageMeta = {
+  path: bestOfCopy.hub.path,
+  title: bestOfCopy.hub.seoTitle,
+  description: bestOfCopy.hub.description,
+  label: "Local Business Guide",
+};
+
+export const HOW_WE_PICK: StaticPageMeta = {
+  path: bestOfCopy.howWePick.path,
+  title: bestOfCopy.howWePick.seoTitle,
+  description: bestOfCopy.howWePick.description,
+  label: "How We Pick",
 };
 
 export const EVENTS_HUB: StaticPageMeta = {
@@ -118,6 +133,8 @@ export const STATIC_PAGES: StaticPageMeta[] = [
   HOME,
   BLOG,
   FOOD_GUIDE,
+  LOCAL_BUSINESS_GUIDE,
+  HOW_WE_PICK,
   EVENTS_HUB,
   ...BUSINESS_EVENTS,
   CONTACT,

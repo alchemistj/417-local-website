@@ -1,4 +1,5 @@
 import { getCollection } from "astro:content";
+import { assertListFileSlug, assertNoSlugCollision, listsIncludedInBuild, type ListSummary } from "./lists";
 import { buildRoutes, type PostSummary, type RouteEntry } from "./routes";
 
 export async function getPostSummaries(): Promise<PostSummary[]> {
@@ -14,6 +15,27 @@ export async function getPostSummaries(): Promise<PostSummary[]> {
   }));
 }
 
+export async function getListSummaries(): Promise<ListSummary[]> {
+  const lists = await getCollection("lists");
+  return lists.map((list) => {
+    assertListFileSlug(list.id, list.data.slug);
+    return {
+      slug: list.id,
+      title: list.data.title,
+      seoTitle: list.data.seoTitle,
+      description: list.data.description,
+      updated: list.data.updated,
+      status: list.data.status,
+    };
+  });
+}
+
 export async function getRouteRegistry(): Promise<RouteEntry[]> {
-  return buildRoutes(await getPostSummaries());
+  const posts = await getPostSummaries();
+  const lists = await getListSummaries();
+  assertNoSlugCollision(
+    posts.map((post) => post.slug),
+    lists.map((list) => list.slug),
+  );
+  return buildRoutes(posts, listsIncludedInBuild(lists));
 }

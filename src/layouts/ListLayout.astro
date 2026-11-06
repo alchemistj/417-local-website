@@ -1,0 +1,128 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
+import CtaBand from "../components/CtaBand.astro";
+import copy from "../../docs/best-of-hub-copy.json";
+import { HOME_COPY } from "../data/homepage";
+import {
+  DRAFT_BANNER,
+  DRAFT_ROBOTS,
+  HOW_WE_PICK_PATH,
+  breadcrumbLd,
+  faqLd,
+  formatLongDate,
+  listCrumbs,
+  listItemListLd,
+  splitDisclosure,
+  visibleBusinesses,
+} from "../lib/lists";
+
+interface Props {
+  list: CollectionEntry<"lists">;
+}
+const { list } = Astro.props;
+const data = list.data;
+const draft = data.status === "draft";
+const path = `/${list.id}/`;
+const crumbs = listCrumbs({ slug: list.id, title: data.title });
+const cards = visibleBusinesses(data.businesses);
+const disclosure = splitDisclosure(copy.disclosure);
+const jsonLd = [
+  listItemListLd(data.businesses),
+  breadcrumbLd(crumbs),
+  ...(data.faq?.length ? [faqLd(data.faq)] : []),
+];
+---
+
+<BaseLayout
+  title={data.seoTitle}
+  description={data.description}
+  path={path}
+  robots={draft ? DRAFT_ROBOTS : undefined}
+  jsonLd={jsonLd}
+>
+  {draft && <p slot="banner" class="draft-bar">{DRAFT_BANNER}</p>}
+  <article class="landing">
+    <header class="landing-band card-band">
+      <div class="container">
+        <div class="landing-card">
+          <nav class="crumbs" aria-label="Breadcrumb">
+            <ol>
+              {crumbs.map((crumb, index) => (
+                <li>
+                  {index < crumbs.length - 1 ? <a href={crumb.path}>{crumb.name}</a> : <span aria-current="page">{crumb.name}</span>}
+                </li>
+              ))}
+            </ol>
+          </nav>
+          <h1>{data.h1}</h1>
+          <div class="lead-text">
+            {data.intro.map((paragraph) => <p>{paragraph}</p>)}
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container list-body">
+      <p class="disclosure">
+        {disclosure.before}{" "}
+        <a href={HOW_WE_PICK_PATH}>{disclosure.link}</a>
+      </p>
+      <p class="updated-line">Last updated {formatLongDate(data.updated)}</p>
+
+      <ol class="biz-cards">
+        {cards.map((card, index) => (
+          <li class="biz-card">
+            <h2><span class="biz-num">{index + 1}.</span> {card.name}</h2>
+            {card.bestFor && <p class="best-for">{card.bestFor}</p>}
+            <p class="rating-line">
+              <a href={card.mapsUrl} target="_blank" rel="noopener">
+                {card.ratingText}
+                <span class="see-reviews">See reviews on Google</span>
+              </a>
+            </p>
+            <p>{card.summary}</p>
+            {card.highlights.length > 0 && (
+              <ul>
+                {card.highlights.map((item) => <li>{item}</li>)}
+              </ul>
+            )}
+            {(card.website || card.phone) && (
+              <div class="btn-row">
+                {card.website && <a class="btn" href={card.website}>Website</a>}
+                {card.phone && card.tel && <a class="btn" href={card.tel}>{card.phone}</a>}
+              </div>
+            )}
+          </li>
+        ))}
+      </ol>
+
+      <section class="criteria-box" aria-labelledby="how-we-picked">
+        <h2 id="how-we-picked">How we picked these</h2>
+        <ul>
+          {data.criteria.map((item) => <li>{item}</li>)}
+        </ul>
+        <p><a href={HOW_WE_PICK_PATH}>How we pick</a></p>
+      </section>
+
+      {data.faq && data.faq.length > 0 && (
+        <section class="list-faq" aria-labelledby="faq-heading">
+          <h2 id="faq-heading">FAQ</h2>
+          {data.faq.map((item) => (
+            <details>
+              <summary>{item.q}</summary>
+              <p>{item.a}</p>
+            </details>
+          ))}
+        </section>
+      )}
+    </div>
+  </article>
+
+  <CtaBand
+    heading={HOME_COPY.finalCta.heading}
+    body={HOME_COPY.finalCta.body}
+    primary={HOME_COPY.finalCta.primary}
+    secondary={HOME_COPY.finalCta.secondary}
+  />
+</BaseLayout>

@@ -1,0 +1,14 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import copy from "../../docs/best-of-hub-copy.json";
+import { HOW_WE_PICK } from "../data/staticPages";
+---
+
+<PageLayout meta={HOW_WE_PICK} h1={copy.howWePick.h1}>
+  {copy.howWePick.sections.map((section) => (
+    <section class="stack">
+      <h2>{section.heading}</h2>
+      <p>{section.body}</p>
+    </section>
+  ))}
+</PageLayout>
