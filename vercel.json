@@ -716,6 +716,16 @@
       "source": "/fitness-giveaway-2023/",
       "destination": "https://giveaway.417local.com/ref/63db0f59650e7M/",
       "statusCode": 307
+    },
+    {
+      "source": "/category/food-and-drink/:path*",
+      "destination": "/food-and-drink-springfield-mo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "/blog/",
+      "statusCode": 301
     }
   ],
   "headers": [

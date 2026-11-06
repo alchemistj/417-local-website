@@ -9,11 +9,11 @@ interface Props {
   eager?: boolean;
 }
 const { post, eager = false } = Astro.props;
-const { title, heroImage } = post.data;
+const { title, heroImage, heroPosition } = post.data;
 ---
 
 <!-- Photo with the title over a dark gradient at the bottom (the live homepage card style). -->
-<li class={heroImage ? "card" : "card card-noimg"}>
+<li class={heroImage ? "card" : "card card-noimg"} style={heroPosition ? `--hero-pos: ${heroPosition}` : undefined}>
   {heroImage ? (
     <Image
       class="card-img"

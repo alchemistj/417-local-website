@@ -1,0 +1,52 @@
+---
+import { getCollection } from "astro:content";
+import ArticleCard from "../components/ArticleCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import copy from "../../docs/food-and-drink-guide-copy.json";
+import { groupFoodPosts } from "../lib/foodGuide";
+
+const food = (await getCollection("posts", (post) => post.data.category === "food-and-drink")).map((post) => ({
+  ...post,
+  slug: post.id,
+  title: post.data.title,
+  updated: post.data.updated,
+}));
+const { featured, rest } = groupFoodPosts(food);
+const [guides, spots] = copy.sections;
+if (!guides || !spots) throw new Error("Food & Drink guide copy needs two sections");
+---
+
+<BaseLayout title={copy.seoTitle} description={copy.description} path={copy.path}>
+  <article class="landing">
+    <header class="landing-band card-band">
+      <div class="container">
+        <div class="landing-card">
+          <h1>{copy.h1}</h1>
+          <div class="lead-text">
+            {copy.intro.map((paragraph) => <p>{paragraph}</p>)}
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="home-section" aria-labelledby="food-guides">
+      <div class="container stack">
+        <h2 id="food-guides">{guides.heading}</h2>
+        <p class="lead">{guides.lead}</p>
+        <ul class="card-grid cols-3">
+          {featured.map((post, i) => <ArticleCard post={post} eager={i < 2} />)}
+        </ul>
+      </div>
+    </section>
+
+    <section class="home-section band-tint" aria-labelledby="local-spots">
+      <div class="container stack">
+        <h2 id="local-spots">{spots.heading}</h2>
+        <p class="lead">{spots.lead}</p>
+        <ul class="card-grid">
+          {rest.map((post) => <ArticleCard post={post} />)}
+        </ul>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

@@ -1,3 +1,5 @@
+import foodGuideCopy from "../../docs/food-and-drink-guide-copy.json";
+
 /**
  * Every non-article route and its SEO text. The route registry, sitemap, llms.txt and the page
  * templates all read from here, so they cannot disagree.
@@ -26,6 +28,13 @@ export const BLOG: StaticPageMeta = {
   title: "Springfield, MO Local Guides and Articles | 417 Local",
   description: "Every 417 Local guide in one place: things to do, food and drink, local businesses and more in Springfield, MO.",
   label: "All articles",
+};
+
+export const FOOD_GUIDE: StaticPageMeta = {
+  path: foodGuideCopy.path,
+  title: foodGuideCopy.seoTitle,
+  description: foodGuideCopy.description,
+  label: "Food & Drink",
 };
 
 export const EVENTS_HUB: StaticPageMeta = {
@@ -108,6 +117,7 @@ export const GET_STARTED: StaticPageMeta = {
 export const STATIC_PAGES: StaticPageMeta[] = [
   HOME,
   BLOG,
+  FOOD_GUIDE,
   EVENTS_HUB,
   ...BUSINESS_EVENTS,
   CONTACT,

@@ -1,4 +1,4 @@
-import { CATEGORIES, type CategorySlug } from "../data/categories";
+import { categoryName, type CategorySlug } from "../data/categories";
 import { STATIC_PAGES } from "../data/staticPages";
 import { POSTS_PER_PAGE } from "./site";
 
@@ -15,7 +15,7 @@ export interface PostSummary {
 
 export interface RouteEntry {
   path: string;
-  type: "static" | "blog" | "category" | "post";
+  type: "static" | "blog" | "post";
   title: string;
   description: string;
   lastmod?: string;
@@ -35,12 +35,24 @@ export function blogPagePath(page: number): string {
   return page <= 1 ? "/blog/" : `/blog/page/${page}/`;
 }
 
-export function categoryPath(slug: string): string {
-  return `/category/${slug}/`;
-}
-
 export function postPath(slug: string): string {
   return `/${slug}/`;
+}
+
+/**
+ * Article breadcrumbs. Food posts point at the Food & Drink guide; every other
+ * post points at the blog. Category archive URLs are not linked.
+ */
+export function postCrumbs(post: { slug: string; title: string; category: CategorySlug }): { name: string; path: string }[] {
+  const middle =
+    post.category === "food-and-drink"
+      ? { name: categoryName("food-and-drink"), path: "/food-and-drink-springfield-mo/" }
+      : { name: "Blog", path: "/blog/" };
+  return [
+    { name: "Home", path: "/" },
+    middle,
+    { name: post.title, path: postPath(post.slug) },
+  ];
 }
 
 /** Single source of truth for every published URL. */
@@ -60,17 +72,6 @@ export function buildRoutes(posts: PostSummary[]): RouteEntry[] {
       title: `Articles, Page ${n} | 417 Local`,
       description: `More 417 Local guides and articles, page ${n}.`,
       indexable: true,
-    });
-  }
-
-  for (const c of CATEGORIES) {
-    routes.push({
-      path: categoryPath(c.slug),
-      type: "category",
-      title: c.title,
-      description: c.description,
-      indexable: true,
-      category: c.slug,
     });
   }
 

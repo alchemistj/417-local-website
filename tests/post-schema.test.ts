@@ -30,6 +30,14 @@ describe("posts frontmatter schema", () => {
     const data = schema.parse(rest);
     expect(data.kind).toBe("post");
     expect(data.heroImage).toBeUndefined();
+    expect(data.heroPosition).toBeUndefined();
+  });
+
+  it("accepts an object-position hero crop and rejects anything else", () => {
+    expect(schema.parse({ ...sample, heroPosition: "center 20%" }).heroPosition).toBe("center 20%");
+    expect(schema.safeParse({ ...sample, heroPosition: "center top" }).success).toBe(true);
+    expect(schema.safeParse({ ...sample, heroPosition: "center; color: red" }).success).toBe(false);
+    expect(schema.safeParse({ ...sample, heroPosition: "" }).success).toBe(false);
   });
 
   it("rejects an unknown category, a long title tag or description, and a hero without alt", () => {

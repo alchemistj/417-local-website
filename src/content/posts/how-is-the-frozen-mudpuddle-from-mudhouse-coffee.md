@@ -90,4 +90,4 @@ It's also a place where I can take my kids and feel confident that nothing crazy
 
 And the coffee is really good. Let's not forget that part.
 
-Looking for more local spots? Browse our [Food & Drink guides](/category/food-and-drink/).
+Looking for more local spots? Browse our [Food & Drink guides](/food-and-drink-springfield-mo/).

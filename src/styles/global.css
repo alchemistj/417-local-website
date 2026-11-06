@@ -25,13 +25,19 @@
   --content-max: 900px;
   --wide-max: 1080px;
   --content-pad: 24px;
-  --header-h: 72px;
+  --logo-row-h: 72px;
+  --cta-bar-h: 48px;
+  /* Logo row plus the phone CTA bar. Desktop drops the bar at 960px. */
+  --header-h: calc(var(--logo-row-h) + var(--cta-bar-h));
   --hero-h: 210px;
   --font: "Open Sans", system-ui, -apple-system, "Segoe UI", "Noto Sans", Roboto, sans-serif;
   color-scheme: light;
 }
 @media (min-width: 860px) {
-  :root { --header-h: 80px; --hero-h: 224px; }
+  :root { --logo-row-h: 80px; --hero-h: 224px; }
+}
+@media (min-width: 960px) {
+  :root { --header-h: var(--logo-row-h); }
 }
 
 html {
@@ -122,7 +128,7 @@ h3 { font-size: 1.25rem; }
 .site-header.is-hidden { transform: translateY(-100%); }
 .header-inner {
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-  min-height: var(--header-h);
+  min-height: var(--logo-row-h);
 }
 .logo { display: inline-flex; align-items: center; min-height: 48px; }
 .logo img { display: block; width: 160px; height: auto; aspect-ratio: 320 / 67; }
@@ -140,6 +146,15 @@ h3 { font-size: 1.25rem; }
 }
 .nav-list a.nav-cta:hover { background: #b6c63a; color: var(--dark); text-decoration: none; }
 .nav-list a.nav-cta[aria-current="page"] { box-shadow: none; }
+/* Full-width olive bar under the logo row on phones. Hidden once the desktop nav shows. */
+.nav-cta-bar {
+  display: flex; align-items: center; justify-content: center; box-sizing: border-box;
+  width: 100%; min-height: var(--cta-bar-h); padding: 0 1rem;
+  background: var(--olive); color: var(--dark);
+  font-weight: 700; font-size: 0.875rem; line-height: 1.3; text-align: center; text-decoration: none;
+  transition: background-color 0.15s;
+}
+.nav-cta-bar:hover { background: #b6c63a; color: var(--dark); text-decoration: none; }
 
 .menu-mobile summary {
   list-style: none; cursor: pointer;
@@ -168,6 +183,7 @@ h3 { font-size: 1.25rem; }
 @media (min-width: 960px) {
   .nav-desktop { display: block; }
   .menu-mobile { display: none; }
+  .nav-cta-bar { display: none; }
   .logo img { width: 190px; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -203,7 +219,7 @@ h3 { font-size: 1.25rem; }
 .cols-3 .card { aspect-ratio: 4 / 3; }
 .card-noimg { background: var(--blue); }
 .card-skyline { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: auto; display: block; }
-.card-img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; }
+.card-img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: var(--hero-pos, center); }
 .card-body { position: absolute; left: 0; right: 0; bottom: 0; padding: 3.5rem 1.1rem 1rem;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 55%, rgba(0, 0, 0, 0) 100%); }
 .card-title { font-size: 1.25rem; line-height: 1.35; margin: 0; color: var(--white); }
@@ -225,7 +241,7 @@ h3 { font-size: 1.25rem; }
 .byline { margin: 0.4rem 0 0; color: #595959; font-size: 0.95rem; line-height: 1.6; }
 .byline:first-of-type { margin-top: 1.1rem; }
 .article-photo { margin: 0; }
-.article-photo img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+.article-photo img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: var(--hero-pos, center); }
 .hex { position: relative; height: 56px; overflow: hidden; }
 .hex svg { position: absolute; left: 0; bottom: 0; width: 100%; height: 162px; display: block; }
 .hex-lg { display: none; }

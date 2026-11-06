@@ -10,8 +10,6 @@ kind: page
 
 Here are free blog posts, guides and tools for building a successful online presence, with the key elements you need to grow your reach and bring in consistent new customers.
 
-If you're new here, start with the free book on how to maximize marketing in your small business. It covers affordable, actionable strategies for increasing your local presence and traffic online, how to avoid the top online mistakes small businesses make, and a simple five-step blueprint for branding your business online.
-
 Already read it? Let's dive in, beginning with the most important strategy for a local business: reviews.
 
 ## Start With Reviews

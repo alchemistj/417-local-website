@@ -70,4 +70,4 @@ Be careful with the General Chicken if you're not into spicy food, because it pa
 
 I'm not complaining. I'll be going back, probably more than I should.
 
-Looking for more places to eat? Browse our [Food & Drink guides](/category/food-and-drink/).
+Looking for more places to eat? Browse our [Food & Drink guides](/food-and-drink-springfield-mo/).

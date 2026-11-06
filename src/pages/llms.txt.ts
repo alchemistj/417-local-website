@@ -15,7 +15,6 @@ export const GET: APIRoute = async () => {
     "",
     "## Sections",
     ...routes.filter((r) => r.type === "static" || r.path === "/blog/").map((r) => line(r.title, r.path, r.description)),
-    ...routes.filter((r) => r.type === "category").map((r) => line(r.title, r.path, r.description)),
   ];
   for (const c of CATEGORIES) {
     const posts = routes.filter((r) => r.type === "post" && r.category === c.slug);
