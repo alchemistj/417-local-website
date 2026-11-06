@@ -1,0 +1,72 @@
+{
+  "slug": "best-sample-roofers-in-springfield-mo",
+  "status": "draft",
+  "trade": "Roofers",
+  "title": "Best Sample Roofers in Springfield, MO",
+  "seoTitle": "Sample: Best Roofers in Springfield, MO | 417 Local",
+  "description": "Draft sample of fake Springfield roofers so the list template can be reviewed. Not a real ranking.",
+  "h1": "Best Sample Roofers in Springfield, MO",
+  "intro": [
+    "This is a sample list of fake roofers, here so the template can be reviewed. None of these businesses are real.",
+    "The cards below show how a published list will look, including the link out to Google."
+  ],
+  "criteria": [
+    "A strong record of customer reviews",
+    "Patterns in what customers praise",
+    "How the owner responds to complaints",
+    "Active service in the Springfield area"
+  ],
+  "published": "2026-11-06",
+  "updated": "2026-11-06",
+  "faq": [
+    {
+      "q": "Are these real roofers?",
+      "a": "No. This draft uses made-up businesses so the list template can be checked before any real list is published."
+    },
+    {
+      "q": "Can a business pay for a higher spot?",
+      "a": "No. Rankings are never for sale, and this sample is not a ranking."
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Sample Roofing Co. 1",
+      "googleMapsUrl": "https://www.google.com/maps",
+      "summary": "Sample Roofing Co. 1 is a made-up business for this preview page. The summary is written in our own words and describes a pattern of clear estimates, tidy job sites and roofs that stay dry after heavy rain. This is not a real Springfield company.",
+      "bestFor": "Storm damage and insurance claims",
+      "highlights": ["Clear written estimates", "Crews that clean up the site", "Roofs checked after storms"],
+      "website": "https://example.com/sample-roofing-1",
+      "phone": "417-555-0101",
+      "area": "Springfield, Nixa, Ozark",
+      "ffClient": false,
+      "featured": false
+    },
+    {
+      "name": "Sample Roofing Co. 2",
+      "googleMapsUrl": "https://www.google.com/maps",
+      "summary": "Sample Roofing Co. 2 is a fake company placed second on purpose. People in this sample mention on-time arrivals, plain-language explanations and repairs that hold up through the next storm. Nothing here is a real customer quote or a real roofer.",
+      "ffClient": true,
+      "featured": false
+    },
+    {
+      "name": "Sample Roofing Co. 3",
+      "googleMapsUrl": "https://www.google.com/maps",
+      "summary": "Sample Roofing Co. 3 sits in the middle of the file so a label cannot jump it to the top. The made-up notes mention honest pricing, careful flashing work and crews who leave the yard clean when they go.",
+      "ffClient": false,
+      "featured": true
+    },
+    {
+      "name": "Sample Roofing Co. 4",
+      "googleMapsUrl": "https://www.google.com/maps",
+      "summary": "Sample Roofing Co. 4 is the plain card: a name, a link to Google and this summary, with no extra fields. It exists so the template still reads clearly when a business has only the required details."
+    },
+    {
+      "name": "Sample Roofing Co. 5",
+      "googleMapsUrl": "https://www.google.com/maps",
+      "summary": "Sample Roofing Co. 5 is last in the file even though both sample flags are turned on. The notes mention straightforward scheduling, photos of finished work and owners who answer questions without rushing.",
+      "highlights": ["Straightforward scheduling"],
+      "ffClient": true,
+      "featured": true
+    }
+  ]
+}

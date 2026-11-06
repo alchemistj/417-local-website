@@ -1,0 +1,4 @@
+{
+  "slug": "not-a-list",
+  "note": "Files starting with _ are ignored by the lists collection. This file is invalid on purpose."
+}
