@@ -315,6 +315,9 @@ h3 { font-size: 1.25rem; }
 .pagination a, .pagination span { display: inline-flex; align-items: center; min-height: 48px; padding: 0 0.5rem; }
 
 .empty-state { padding: 1.5rem 0; }
+.weekend-block h2, .event-day h2 { margin-bottom: 0.75rem; }
+.event-day + .event-day { margin-top: 2rem; }
+.more-link { display: inline-flex; align-items: center; min-height: 48px; font-weight: 700; }
 
 /* Events */
 .event-list { list-style: none; margin: 0; padding: 0; }

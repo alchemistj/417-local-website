@@ -35,7 +35,7 @@ describe("Vercel redirect routes", () => {
   });
 
   it("never captures live pages", () => {
-    for (const path of ["/", "/events/", "/events/springfield-business-events/", "/blog/", "/best-parks-in-springfield-mo/", "/food-and-drink-springfield-mo/"]) {
+    for (const path of ["/", "/events/", "/events/this-weekend/", "/events/live-music/", "/events/springfield-business-events/", "/blog/", "/best-parks-in-springfield-mo/", "/food-and-drink-springfield-mo/"]) {
       expect(match(path), path).toBeUndefined();
     }
   });

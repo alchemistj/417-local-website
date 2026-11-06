@@ -1,5 +1,7 @@
 import bestOfCopy from "../../docs/best-of-hub-copy.json";
+import eventsCopy from "../../docs/events-pages-copy.json";
 import foodGuideCopy from "../../docs/food-and-drink-guide-copy.json";
+import { GENERAL_EVENT_CATEGORY_LABELS, type GeneralEventCategory } from "../lib/eventSchema";
 
 /**
  * Every non-article route and its SEO text. The route registry, sitemap, llms.txt and the page
@@ -54,10 +56,27 @@ export const HOW_WE_PICK: StaticPageMeta = {
 
 export const EVENTS_HUB: StaticPageMeta = {
   path: "/events/",
-  title: "Springfield, MO Events | 417 Local",
-  description: "Find upcoming events in Springfield, MO and the 417 area, from business meetups to community happenings.",
+  title: eventsCopy.hub.seoTitle,
+  description: eventsCopy.hub.description,
   label: "Events",
 };
+
+export const THIS_WEEKEND: StaticPageMeta = {
+  path: "/events/this-weekend/",
+  title: eventsCopy.thisWeekend.seoTitle,
+  description: eventsCopy.thisWeekend.description,
+  label: "This weekend",
+};
+
+export function generalCategoryPage(slug: GeneralEventCategory): StaticPageMeta {
+  const page = eventsCopy.categories[slug];
+  return {
+    path: `/events/${slug}/`,
+    title: page.seoTitle,
+    description: page.description,
+    label: GENERAL_EVENT_CATEGORY_LABELS[slug],
+  };
+}
 
 export const BUSINESS_EVENTS: StaticPageMeta[] = [
   {
@@ -136,6 +155,7 @@ export const STATIC_PAGES: StaticPageMeta[] = [
   LOCAL_BUSINESS_GUIDE,
   HOW_WE_PICK,
   EVENTS_HUB,
+  THIS_WEEKEND,
   ...BUSINESS_EVENTS,
   CONTACT,
   PRIVACY,

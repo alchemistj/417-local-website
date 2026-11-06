@@ -11,6 +11,7 @@ const posts = defineCollection({
 });
 
 const events = defineCollection({
+  // Files starting with "_" (including the engine's _export-meta.json) are not events.
   loader: glob({ pattern: ["*.json", "!_*"], base: "./src/content/events" }),
   schema: eventSchema,
 });

@@ -1,0 +1,116 @@
+{
+  "hub": {
+    "seoTitle": "Springfield, MO Events: Music, Family, Business | 417 Local",
+    "description": "Find events in Springfield, MO and the Ozarks: music, family outings, festivals, business meetups and more. The list is updated daily.",
+    "h1": "Events in Springfield, MO",
+    "intro": [
+      "Here is what is happening around Springfield and the Ozarks. You will find business meetups, live music, family outings, festivals and more.",
+      "We update the list daily. Details can change, so confirm times and tickets with the organizer before you go."
+    ],
+    "emptyState": "We have no events listed right now. Check back soon, since the list is updated daily.",
+    "weekendHeading": "This Weekend in Springfield",
+    "businessLink": "Looking for networking, workshops and chamber-style meetups? See our business events page."
+  },
+  "thisWeekend": {
+    "seoTitle": "Things to Do in Springfield, MO This Weekend | 417 Local",
+    "description": "Looking for things to do in Springfield, MO this weekend? See music, family events, festivals and more. Updated daily. Confirm details with organizers.",
+    "h1": "Things to Do in Springfield, MO This Weekend",
+    "intro": [
+      "Planning your weekend in Springfield? Here are events happening from Friday through Sunday, from Downtown shows to family outings around the Ozarks.",
+      "We update the list daily. Hours and tickets can change, so check with the organizer before you head out."
+    ],
+    "emptyState": "No weekend events are listed yet. Check back soon, since the list is updated daily."
+  },
+  "categories": {
+    "live-music": {
+      "seoTitle": "Live Music in Springfield, MO: Concerts and Shows | 417 Local",
+      "description": "Find live music in Springfield, MO: concerts, local bands and shows around Downtown and the Ozarks. Updated daily. Confirm details with the venue.",
+      "h1": "Live Music in Springfield, MO",
+      "intro": [
+        "Springfield has a steady music scene, from Downtown clubs and Commercial Street spots to larger stages like the Gillioz.",
+        "We update this list daily. Doors, set times and tickets can change, so confirm with the venue or organizer."
+      ],
+      "emptyState": "No live music events are listed right now. Check back soon, since the list is updated daily."
+    },
+    "arts-and-theater": {
+      "seoTitle": "Arts and Theater in Springfield, MO: Shows | 417 Local",
+      "description": "Find arts and theater in Springfield, MO: stage shows, gallery nights, exhibits and more around Downtown. Updated daily. Confirm with the organizer.",
+      "h1": "Arts and Theater in Springfield, MO",
+      "intro": [
+        "Springfield offers stage productions, gallery walks and exhibits, many of them Downtown and near Commercial Street.",
+        "We update this list daily. Show times and ticket details can change, so confirm with the organizer."
+      ],
+      "emptyState": "No arts or theater events are listed right now. Check back soon, since the list is updated daily."
+    },
+    "festivals": {
+      "seoTitle": "Festivals in Springfield, MO: Fairs and Fun | 417 Local",
+      "description": "Find festivals in Springfield, MO and the Ozarks: fairs, street events and seasonal celebrations. Updated daily. Confirm dates with the organizer.",
+      "h1": "Festivals in Springfield, MO",
+      "intro": [
+        "Springfield hosts festivals in parks, on Downtown streets and at venues like the Ozark Empire Fairgrounds.",
+        "We update this list daily. Dates, hours and admission can change, so confirm with the organizer before you go."
+      ],
+      "emptyState": "No festivals are listed right now. Check back soon, since the list is updated daily."
+    },
+    "family": {
+      "seoTitle": "Family Events in Springfield, MO: Kids and Parents | 417 Local",
+      "description": "Find family events in Springfield, MO: kid-friendly outings, classes and activities for all ages. Updated daily. Confirm details with the organizer.",
+      "h1": "Family Events in Springfield, MO",
+      "intro": [
+        "Looking for something to do with the kids? Here are family-friendly events around Springfield and the Ozarks.",
+        "We update this list daily. Age guidance, times and costs can change, so confirm with the organizer."
+      ],
+      "emptyState": "No family events are listed right now. Check back soon, since the list is updated daily."
+    },
+    "food-and-drink": {
+      "seoTitle": "Food and Drink Events in Springfield, MO | 417 Local",
+      "description": "Find food and drink events in Springfield, MO: tastings, markets, pop-ups and dinners. Updated daily. Confirm details with the organizer.",
+      "h1": "Food and Drink in Springfield, MO",
+      "intro": [
+        "Springfield has tastings, markets, pop-ups and special dinners from local restaurants, breweries and food makers.",
+        "We update this list daily. Menus, tickets and times can change, so confirm with the organizer."
+      ],
+      "emptyState": "No food and drink events are listed right now. Check back soon, since the list is updated daily."
+    },
+    "sports": {
+      "seoTitle": "Sports in Springfield, MO: Games and Local Events | 417 Local",
+      "description": "Find sports in Springfield, MO: games, races and local events from Hammons Field to Missouri State. Updated daily. Confirm with the organizer.",
+      "h1": "Sports in Springfield, MO",
+      "intro": [
+        "Springfield has games, runs and tournaments, from baseball at Hammons Field to Missouri State athletics and community events.",
+        "We update this list daily. Schedules and tickets can change, so confirm with the team or organizer."
+      ],
+      "emptyState": "No sports events are listed right now. Check back soon, since the list is updated daily."
+    },
+    "outdoors": {
+      "seoTitle": "Outdoor Events in Springfield, MO: Parks and Trails | 417 Local",
+      "description": "Find outdoor events in Springfield, MO: park gatherings, hikes, runs and nature outings in the Ozarks. Updated daily. Confirm with the organizer.",
+      "h1": "Outdoor Events in Springfield, MO",
+      "intro": [
+        "Springfield has parks and green space for walks, runs and gatherings, including Nathanael Greene Park and Jordan Valley Park.",
+        "We update this list daily. Weather can change plans, so confirm with the organizer before you head out."
+      ],
+      "emptyState": "No outdoor events are listed right now. Check back soon, since the list is updated daily."
+    },
+    "community": {
+      "seoTitle": "Community Events in Springfield, MO: Meetups | 417 Local",
+      "description": "Find community events in Springfield, MO: meetups, fundraisers, volunteer days and neighborhood gatherings. Updated daily. Confirm with the organizer.",
+      "h1": "Community Events in Springfield, MO",
+      "intro": [
+        "Neighbors in Springfield and the Ozarks gather for meetups, fundraisers, volunteer days and local causes.",
+        "We update this list daily. Times and locations can change, so confirm with the organizer."
+      ],
+      "emptyState": "No community events are listed right now. Check back soon, since the list is updated daily."
+    },
+    "holiday": {
+      "seoTitle": "Holiday Events in Springfield, MO: Seasonal Fun | 417 Local",
+      "description": "Find holiday events in Springfield, MO: seasonal markets, lights, parades and gatherings. Updated daily. Confirm dates with the organizer.",
+      "h1": "Holiday Events in Springfield, MO",
+      "intro": [
+        "Springfield and the Ozarks mark the seasons with markets, lights, parades and gatherings for the whole family.",
+        "We update this list daily. Dates and hours can change, so confirm with the organizer."
+      ],
+      "emptyState": "No holiday events are listed right now. Check back soon, since the list is updated daily."
+    }
+  }
+}

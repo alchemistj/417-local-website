@@ -4,16 +4,22 @@ import { formatEventDate, formatPrice, placeName } from "../lib/events";
 
 interface Props {
   events: EventData[];
+  /** When set, replaces the business-events empty sentence. */
+  emptyMessage?: string;
 }
-const { events } = Astro.props;
+const { events, emptyMessage } = Astro.props;
 ---
 
 {events.length === 0 ? (
   <div class="empty-state">
-    <p>
-      New Springfield business events are added every week. Check back soon or
-      <a href="/submit-your-event/">submit yours</a>.
-    </p>
+    {emptyMessage ? (
+      <p>{emptyMessage}</p>
+    ) : (
+      <p>
+        New Springfield business events are added every week. Check back soon or
+        <a href="/submit-your-event/">submit yours</a>.
+      </p>
+    )}
   </div>
 ) : (
   <ul class="event-list">
