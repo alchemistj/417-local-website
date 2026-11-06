@@ -13,7 +13,7 @@ export interface RawList {
     seoTitle: string;
     description: string;
     updated: string;
-    businesses: { name: string; ratingCheckedOn: string; ffClient?: boolean; featured?: boolean }[];
+    businesses: { name: string; ffClient?: boolean; featured?: boolean }[];
     [key: string]: unknown;
   };
 }

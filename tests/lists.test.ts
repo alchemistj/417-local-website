@@ -2,9 +2,8 @@ import { existsSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import copy from "../docs/best-of-hub-copy.json";
 import { HOW_WE_PICK, LOCAL_BUSINESS_GUIDE } from "../src/data/staticPages";
-import { listSchema, type ListBusiness } from "../src/lib/listSchema";
+import { listBusinessSchema, listSchema, type ListBusiness } from "../src/lib/listSchema";
 import {
-  RATING_MAX_AGE_DAYS,
   assertNoSlugCollision,
   breadcrumbLd,
   faqLd,
@@ -13,7 +12,6 @@ import {
   listItemListLd,
   listsIncludedInBuild,
   publishedOnly,
-  ratingIsFresh,
   splitDisclosure,
   visibleBusinesses,
 } from "../src/lib/lists";
@@ -29,9 +27,6 @@ function business(overrides: Partial<ListBusiness> = {}): ListBusiness {
   return {
     name: "Sample Roofing Co.",
     googleMapsUrl: "https://www.google.com/maps",
-    rating: 4.8,
-    reviewCount: 12,
-    ratingCheckedOn: new Date("2026-11-01T00:00:00Z"),
     summary: SUMMARY,
     ffClient: false,
     featured: false,
@@ -156,20 +151,24 @@ describe("draft and published lists", () => {
     expect(publishedOnly(readListSummaries()).every((list) => list.status === "published")).toBe(true);
   });
 
-  it("requires every published ratingCheckedOn to be within the last 180 days", () => {
-    const now = new Date("2026-11-06T00:00:00Z");
-    const fresh = new Date(now.getTime() - RATING_MAX_AGE_DAYS * 24 * 60 * 60 * 1000);
-    expect(ratingIsFresh(fresh, now)).toBe(true);
-    expect(ratingIsFresh(new Date(fresh.getTime() - 1), now)).toBe(false);
-    expect(ratingIsFresh(new Date(now.getTime() + 1), now)).toBe(false);
-
-    const today = new Date();
-    for (const list of readLists()) {
-      if (list.data.status !== "published") continue;
-      const parsed = listSchema.parse(list.data);
-      for (const item of parsed.businesses) {
-        expect(ratingIsFresh(item.ratingCheckedOn, today), `${list.slug} ${item.name}`).toBe(true);
-      }
+  it("stores no rating, review count, or checked-on date", () => {
+    const keys = Object.keys(listBusinessSchema.shape);
+    expect(keys).not.toContain("rating");
+    expect(keys).not.toContain("reviewCount");
+    expect(keys).not.toContain("ratingCheckedOn");
+    const parsed = listSchema.parse({
+      ...listData(),
+      businesses: [business({ name: "One" }), business({ name: "Two" }), business({ name: "Three" })].map((item) => ({
+        ...item,
+        rating: 4.8,
+        reviewCount: 12,
+        ratingCheckedOn: "2026-11-01",
+      })),
+    });
+    for (const item of parsed.businesses) {
+      expect(item).not.toHaveProperty("rating");
+      expect(item).not.toHaveProperty("reviewCount");
+      expect(item).not.toHaveProperty("ratingCheckedOn");
     }
   });
 });
@@ -189,6 +188,8 @@ describe("list pages", () => {
     expect(rendered).not.toContain("ffClient");
     expect(rendered).not.toContain("featured");
     expect(rendered).not.toContain("Featured Partner");
+    expect(rendered).not.toContain("★");
+    expect(rendered).not.toContain("Google reviews (");
     expect(cards[0]?.bestFor).toBe("Storm damage and insurance claims");
     expect(cards[4]?.website).toBe("https://example.com/five");
     expect(cards[1]).not.toHaveProperty("bestFor");
@@ -302,6 +303,8 @@ describe.skipIf(!built)("built list pages", () => {
     expect(text).toContain("How we pick");
     expect(text).toContain("Last updated ");
     expect(text).toContain("See reviews on Google");
+    expect(text).not.toContain("★");
+    expect(text).not.toContain("Google reviews (");
     expect(text).toContain("How we picked these");
 
     const sample = readLists().find((list) => list.slug === "best-sample-roofers-in-springfield-mo");

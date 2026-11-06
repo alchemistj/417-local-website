@@ -6,9 +6,6 @@ export const HOW_WE_PICK_PATH = "/how-we-pick/";
 export const GUIDE_CRUMB = "Local Business Guide";
 export const DRAFT_BANNER = "Draft (preview only)";
 export const DRAFT_ROBOTS = "noindex, nofollow";
-export const RATING_MAX_AGE_DAYS = 180;
-
-const DAY_MS = 24 * 60 * 60 * 1000;
 
 export interface ListSummary {
   slug: string;
@@ -24,7 +21,6 @@ export interface VisibleBusiness {
   name: string;
   bestFor?: string;
   mapsUrl: string;
-  ratingText: string;
   summary: string;
   highlights: string[];
   website?: string;
@@ -65,22 +61,8 @@ export function assertNoSlugCollision(postSlugs: readonly string[], listSlugs: r
   if (hits.length > 0) throw new Error(`List slug collides with a post: ${hits.join(", ")}`);
 }
 
-export function ratingIsFresh(checkedOn: Date, now: Date = new Date()): boolean {
-  const age = now.getTime() - checkedOn.getTime();
-  return age >= 0 && age <= RATING_MAX_AGE_DAYS * DAY_MS;
-}
-
 export function formatLongDate(date: Date): string {
   return date.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
-}
-
-export function formatCheckedMonth(date: Date): string {
-  return date.toLocaleDateString("en-US", { month: "short", year: "numeric", timeZone: "UTC" });
-}
-
-export function ratingLine(business: Pick<ListBusiness, "rating" | "reviewCount" | "ratingCheckedOn">): string {
-  const label = business.reviewCount === 1 ? "Google review" : "Google reviews";
-  return `${business.rating.toFixed(1)} ★ · ${business.reviewCount} ${label} (checked ${formatCheckedMonth(business.ratingCheckedOn)})`;
 }
 
 /** E.164 tel link. Ten-digit numbers are treated as US. */
@@ -107,7 +89,6 @@ export function visibleBusinesses(businesses: readonly ListBusiness[]): VisibleB
     const card: VisibleBusiness = {
       name: business.name,
       mapsUrl: business.googleMapsUrl,
-      ratingText: ratingLine(business),
       summary: business.summary,
       highlights: business.highlights ?? [],
     };

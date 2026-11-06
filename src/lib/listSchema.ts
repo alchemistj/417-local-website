@@ -3,7 +3,7 @@ import { z } from "astro/zod";
 /**
  * One best-of list: `src/content/lists/<slug>.json`.
  * Summaries are our own words. Quotation marks are rejected so a Google review
- * cannot be pasted in. Ratings stay in the page text; they never go in JSON-LD.
+ * cannot be pasted in. Star ratings and review counts are not stored or shown.
  */
 export const LIST_SLUG_PATTERN = /^best-[a-z0-9-]+-in-springfield-mo$/;
 
@@ -18,20 +18,9 @@ const summary = z
   .max(420)
   .refine((text) => !/["“”]/.test(text), { message: "summary must not contain quotation marks" });
 
-const rating = z
-  .number()
-  .min(1)
-  .max(5)
-  .refine((value) => Number.isFinite(value) && Math.abs(value * 10 - Math.round(value * 10)) < 1e-6, {
-    message: "rating must be from 1 to 5 with at most one decimal place",
-  });
-
 export const listBusinessSchema = z.object({
   name: z.string().min(1),
   googleMapsUrl,
-  rating,
-  reviewCount: z.number().int().min(1),
-  ratingCheckedOn: z.coerce.date(),
   summary,
   bestFor: z.string().min(1).max(60).optional(),
   highlights: z.array(z.string().min(1).max(80)).max(4).optional(),

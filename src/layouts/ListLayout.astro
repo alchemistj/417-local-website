@@ -76,10 +76,7 @@ const jsonLd = [
             <h2><span class="biz-num">{index + 1}.</span> {card.name}</h2>
             {card.bestFor && <p class="best-for">{card.bestFor}</p>}
             <p class="rating-line">
-              <a href={card.mapsUrl} target="_blank" rel="noopener">
-                {card.ratingText}
-                <span class="see-reviews">See reviews on Google</span>
-              </a>
+              <a class="see-reviews" href={card.mapsUrl} target="_blank" rel="noopener">See reviews on Google</a>
             </p>
             <p>{card.summary}</p>
             {card.highlights.length > 0 && (
