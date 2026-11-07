@@ -1,0 +1,29 @@
+{
+  "id": "a55f15a4-980d-417d-bdc5-b0bea50f33bb",
+  "slug": "fall-commencement",
+  "title": "Fall Commencement",
+  "seo_title": "Fall Commencement",
+  "description": "Fall Commencement is scheduled for Friday, December 11, 2026 at 10:00 AM CST at Great Southern Bank Arena, Springfield. Missouri State University is the organizer. Admission is free.",
+  "start": "2026-12-11T16:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Great Southern Bank Arena",
+  "address": null,
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Missouri State University",
+    "website": null
+  },
+  "categories": [
+    "community"
+  ],
+  "price": "No ticket required",
+  "is_free": true,
+  "registration_url": "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4093",
+  "image_url": null,
+  "source_urls": [
+    "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4093"
+  ],
+  "updated_at": "2026-11-07T10:25:49.635Z"
+}

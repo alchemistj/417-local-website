@@ -1,0 +1,30 @@
+{
+  "id": "581c8495-0080-48d4-b113-a2523d2577f7",
+  "slug": "springfield-symphony-route-66-an-american-roadtrip",
+  "title": "SPRINGFIELD SYMPHONY: Route 66 – An American Roadtrip",
+  "seo_title": "SPRINGFIELD SYMPHONY: Route 66 – An American Roadtrip",
+  "description": "SPRINGFIELD SYMPHONY: Route 66 – An American Roadtrip is scheduled for Saturday, November 14, 2026 at 7:30 PM CST at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield. Springfield Symphony Orchestra is the organizer.",
+  "start": "2026-11-15T01:30:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Juanita K. Hammons Hall for the Performing Arts",
+  "address": "901 S. National Ave.",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Springfield Symphony Orchestra",
+    "website": "https://www.hammonshall.com/viewshow.aspx?ID=4074"
+  },
+  "categories": [
+    "live-music",
+    "arts-and-theater"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.hammonshall.com/viewshow.aspx?ID=4074",
+  "image_url": null,
+  "source_urls": [
+    "https://www.hammonshall.com/viewshow.aspx?ID=4074"
+  ],
+  "updated_at": "2026-11-07T10:25:49.635Z"
+}

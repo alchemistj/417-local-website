@@ -16,7 +16,8 @@
     "website": "https://republicchamber.com/"
   },
   "categories": [
-    "networking"
+    "networking",
+    "community"
   ],
   "price": null,
   "is_free": null,
@@ -25,5 +26,5 @@
   "source_urls": [
     "https://republicchamber.com/events/details/ribbon-cutting-arvest-bank-13848"
   ],
-  "updated_at": "2026-11-06T10:18:04.618Z"
+  "updated_at": "2026-11-07T10:25:49.635Z"
 }

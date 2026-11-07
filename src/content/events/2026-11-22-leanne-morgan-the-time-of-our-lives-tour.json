@@ -1,0 +1,29 @@
+{
+  "id": "81733c66-7ba1-438d-a550-ffdfa3cd42ee",
+  "slug": "leanne-morgan-the-time-of-our-lives-tour",
+  "title": "Leanne Morgan - The Time Of Our Lives Tour",
+  "seo_title": "Leanne Morgan - The Time Of Our Lives Tour",
+  "description": "Leanne Morgan - The Time Of Our Lives Tour is scheduled for Sunday, November 22, 2026 at 7:00 PM CST at Great Southern Bank Arena, Springfield.",
+  "start": "2026-11-23T01:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Great Southern Bank Arena",
+  "address": null,
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "arts-and-theater"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4064",
+  "image_url": null,
+  "source_urls": [
+    "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4064"
+  ],
+  "updated_at": "2026-11-07T10:25:49.635Z"
+}

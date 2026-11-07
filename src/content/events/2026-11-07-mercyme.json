@@ -1,0 +1,29 @@
+{
+  "id": "d9f23cb8-a178-4074-bce9-bf74323ae633",
+  "slug": "mercyme",
+  "title": "MercyMe",
+  "seo_title": "MercyMe",
+  "description": "MercyMe is scheduled for Saturday, November 7, 2026 at 7:00 PM CST at Great Southern Bank Arena, Springfield. Missouri State University is the organizer.",
+  "start": "2026-11-08T01:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Great Southern Bank Arena",
+  "address": null,
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Missouri State University",
+    "website": "https://greatsouthernbankarena.com/"
+  },
+  "categories": [
+    "live-music"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4066",
+  "image_url": null,
+  "source_urls": [
+    "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4066"
+  ],
+  "updated_at": "2026-11-07T10:25:49.635Z"
+}

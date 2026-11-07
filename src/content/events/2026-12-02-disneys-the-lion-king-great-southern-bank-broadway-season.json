@@ -1,0 +1,30 @@
+{
+  "id": "d89609c0-4f80-4d86-b6de-3c063aedb651",
+  "slug": "disneys-the-lion-king-great-southern-bank-broadway-season",
+  "title": "Disney's THE LION KING – Great Southern Bank Broadway Season",
+  "seo_title": "Disney's THE LION KING – Great Southern Bank Broadway Season",
+  "description": "Disney's THE LION KING – Great Southern Bank Broadway Season is scheduled for Wednesday, December 2, 2026 at 7:30 PM CST at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield. Missouri State University is the organizer.",
+  "start": "2026-12-03T01:30:00+00:00",
+  "end": "2026-12-14T00:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Juanita K. Hammons Hall for the Performing Arts",
+  "address": "901 S. National Ave.",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Missouri State University",
+    "website": "https://www.hammonshall.com/"
+  },
+  "categories": [
+    "arts-and-theater",
+    "family"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.hammonshall.com/viewshow.aspx?ID=4081",
+  "image_url": null,
+  "source_urls": [
+    "https://www.hammonshall.com/viewshow.aspx?ID=4081"
+  ],
+  "updated_at": "2026-11-07T10:25:49.635Z"
+}

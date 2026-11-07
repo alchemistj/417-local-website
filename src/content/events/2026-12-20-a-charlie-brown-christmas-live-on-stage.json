@@ -1,0 +1,31 @@
+{
+  "id": "d3db38b1-5d0f-4870-8d4f-ed0ddb4bc0dc",
+  "slug": "a-charlie-brown-christmas-live-on-stage",
+  "title": "A CHARLIE BROWN CHRISTMAS LIVE ON STAGE",
+  "seo_title": "A CHARLIE BROWN CHRISTMAS LIVE ON STAGE",
+  "description": "A CHARLIE BROWN CHRISTMAS LIVE ON STAGE is scheduled for Sunday, December 20, 2026 at 7:00 PM CST at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield. Juanita K. Hammons Hall for the Performing Arts is the organizer.",
+  "start": "2026-12-21T01:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Juanita K. Hammons Hall for the Performing Arts",
+  "address": "901 S. National Ave.",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Juanita K. Hammons Hall for the Performing Arts",
+    "website": "https://www.hammonshall.com/"
+  },
+  "categories": [
+    "arts-and-theater",
+    "family",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.hammonshall.com/viewshow.aspx?ID=3691",
+  "image_url": null,
+  "source_urls": [
+    "https://www.hammonshall.com/viewshow.aspx?ID=3691"
+  ],
+  "updated_at": "2026-11-07T10:25:49.635Z"
+}

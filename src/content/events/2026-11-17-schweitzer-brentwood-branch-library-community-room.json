@@ -1,0 +1,29 @@
+{
+  "id": "63544141-fc15-49df-8b46-5e708b2d8a3b",
+  "slug": "schweitzer-brentwood-branch-library-community-room",
+  "title": "Schweitzer Brentwood Branch Library Community Room",
+  "seo_title": "Event at Schweitzer Brentwood Library, Springfield MO",
+  "description": "This arts and theater event takes place on Tuesday, November 17, 2026 at 3:00 PM in the Community Room at the Schweitzer Brentwood Branch Library. The library is located at 2214 S Brentwood Blvd in Springfield, Missouri. It is open to a general audience.",
+  "start": "2026-11-17T21:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Schweitzer Brentwood Branch Library Community Room",
+  "address": "2214 S Brentwood Blvd, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "arts-and-theater"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://sgfmuseum.org/Calendar.aspx?calType=0&day=7&EID=10961&month=11&year=2026",
+  "image_url": null,
+  "source_urls": [
+    "https://sgfmuseum.org/Calendar.aspx?calType=0&day=7&EID=10961&month=11&year=2026"
+  ],
+  "updated_at": "2026-11-07T10:25:49.635Z"
+}
