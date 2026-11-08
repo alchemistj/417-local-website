@@ -34,8 +34,22 @@ describe("Vercel redirect routes", () => {
     }
   });
 
-  it("never captures live pages", () => {
-    for (const path of ["/", "/events/", "/events/this-weekend/", "/events/live-music/", "/events/springfield-business-events/", "/blog/", "/best-parks-in-springfield-mo/", "/food-and-drink-springfield-mo/"]) {
+  it("moves the flat event pages under Springfield and leaves the new pages alone", () => {
+    expect(match("/events/this-weekend/")?.headers.Location).toBe("/events/springfield/this-weekend/");
+    expect(match("/events/this-weekend")?.status).toBe(301);
+    expect(match("/events/live-music/")?.headers.Location).toBe("/events/springfield/live-music/");
+    expect(match("/events/live-music")?.status).toBe(301);
+    for (const path of [
+      "/",
+      "/events/",
+      "/events/springfield/",
+      "/events/springfield/this-weekend/",
+      "/events/springfield/live-music/",
+      "/events/springfield-business-events/",
+      "/blog/",
+      "/best-parks-in-springfield-mo/",
+      "/food-and-drink-springfield-mo/",
+    ]) {
       expect(match(path), path).toBeUndefined();
     }
   });

@@ -1,0 +1,232 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import EventList from "../../../components/EventList.astro";
+import CtaBand from "../../../components/CtaBand.astro";
+import { cityHubPage, generalCategoryCopy, generalCategoryPage } from "../../../data/staticPages";
+import EventsLayout from "../../../layouts/EventsLayout.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { eventAction } from "../../../lib/eventAction";
+import { googleCalendarUrl } from "../../../lib/eventCalendar";
+import { isGeneralEventCategory, type EventData, type GeneralEventCategory } from "../../../lib/eventSchema";
+import { citiesWithEvents, listedCategories } from "../../../lib/eventRoutes";
+import {
+  assertNoReservedEventSlug,
+  assertUniqueEventPaths,
+  cityDisplayName,
+  eventCitySlug,
+  eventPath,
+  eventPublicSlug,
+  eventRouteParams,
+  mapsSearchUrl,
+  venueGuidePath,
+} from "../../../lib/eventPaths";
+import {
+  categoryLabel,
+  eventBreadcrumbLd,
+  eventJsonLd,
+  eventMetaDescription,
+  eventPageTitle,
+  eventPriceText,
+  formatEventWhen,
+  isBusinessCategory,
+  moreInCategory,
+  nearbyEvents,
+  relatedUpcoming,
+  sourceCredit,
+} from "../../../lib/eventPage";
+import { isIndexableEvent, isListedEvent, isUpcoming, placeName, primaryCategory } from "../../../lib/events";
+import { getSiteEvents } from "../../../lib/loadEvents";
+import { absoluteUrl } from "../../../lib/site";
+
+interface EventProps {
+  kind: "event";
+  event: EventData;
+}
+
+interface CategoryProps {
+  kind: "category";
+  category: GeneralEventCategory;
+}
+
+export const getStaticPaths = (async () => {
+  const now = new Date();
+  const events = await getSiteEvents();
+  assertNoReservedEventSlug(events);
+  assertUniqueEventPaths(events);
+  const eventPaths = events.map((event) => ({
+    params: eventRouteParams(event),
+    props: { kind: "event" as const, event },
+  }));
+  const categoryPaths = citiesWithEvents(events).flatMap((citySlug) =>
+    listedCategories(
+      events.filter((event) => eventCitySlug(event) === citySlug),
+      now,
+    ).map((category) => ({
+      params: { city: citySlug, event: category },
+      props: { kind: "category" as const, category },
+    })),
+  );
+  return [...categoryPaths, ...eventPaths];
+}) satisfies GetStaticPaths;
+
+const props = Astro.props as EventProps | CategoryProps;
+const city = Astro.params.city;
+if (!city) throw new Error("Missing city");
+const now = new Date();
+const allEvents = await getSiteEvents();
+
+const category = props.kind === "category" ? props.category : null;
+const categoryEvents = category
+  ? allEvents.filter((event) => eventCitySlug(event) === city && event.categories.includes(category) && isListedEvent(event, now))
+  : [];
+const categoryCopy = category && isGeneralEventCategory(category) ? generalCategoryCopy(category, city) : null;
+const categoryMeta = category && isGeneralEventCategory(category) ? generalCategoryPage(category, city) : null;
+const hub = cityHubPage(city);
+
+const event = props.kind === "event" ? props.event : null;
+const passed = event ? !isUpcoming(event, now) : false;
+const when = event ? formatEventWhen(event) : "";
+const price = event ? eventPriceText(event) : "";
+const action = event && !passed ? eventAction(event) : null;
+const maps = event ? mapsSearchUrl(event) : "";
+const pagePath = event ? eventPath(event) : "";
+const pageUrl = pagePath ? absoluteUrl(pagePath) : "";
+const icsPath = pagePath ? `${pagePath}event.ics` : "";
+const googleUrl = event ? googleCalendarUrl(event, { pageUrl }) : "";
+const venue = event ? placeName(event.venue) : "";
+const address = event ? placeName(event.address) : "";
+const posts = event
+  ? (await getCollection("posts")).map((post) => ({ slug: post.id, title: post.data.title as string }))
+  : [];
+const venuePost = venue ? venueGuidePath(venue, posts) : null;
+const venueHref = venuePost || maps;
+const venueExternal = !venuePost;
+const cityName = cityDisplayName(city);
+const state = event && typeof event.state === "string" && event.state.trim() ? event.state.trim() : "MO";
+const addressLine = [address, cityName, state].filter(Boolean).join(", ");
+const nearby = event && !passed ? nearbyEvents(event, allEvents, now) : [];
+const more = event && !passed ? moreInCategory(event, allEvents, now, nearby) : [];
+const related = event && passed ? relatedUpcoming(event, allEvents, now) : [];
+const categorySlug = event ? primaryCategory(event) : null;
+const categoryCrumb = (() => {
+  if (!categorySlug) return null;
+  if (isGeneralEventCategory(categorySlug)) {
+    const listed = allEvents.some(
+      (item) => eventCitySlug(item) === city && item.categories.includes(categorySlug) && isListedEvent(item, now),
+    );
+    if (!listed) return null;
+    return { name: categoryLabel(categorySlug), path: `/events/${city}/${categorySlug}/` };
+  }
+  if (isBusinessCategory(categorySlug)) {
+    return { name: categoryLabel(categorySlug), path: `/events/springfield-business-events/${categorySlug}/` };
+  }
+  return null;
+})();
+const crumbs = event
+  ? [
+      { name: "Home", path: "/" },
+      { name: "Events", path: "/events/" },
+      { name: cityName, path: hub.path },
+      ...(categoryCrumb ? [categoryCrumb] : []),
+      { name: event.title, path: pagePath },
+    ]
+  : [];
+const outbound = (href: string) => href.startsWith("http");
+---
+
+{category && categoryCopy && categoryMeta ? (
+  <EventsLayout
+    meta={categoryMeta}
+    h1={categoryCopy.h1}
+    intro={categoryCopy.intro}
+    events={categoryEvents}
+    emptyMessage={categoryCopy.emptyState}
+    crumbs={[
+      { name: "Home", path: "/" },
+      { name: "Events", path: "/events/" },
+      { name: hub.label, path: hub.path },
+      { name: categoryCopy.h1, path: categoryMeta.path },
+    ]}
+  />
+) : event ? (
+  <BaseLayout
+    title={eventPageTitle(event)}
+    description={eventMetaDescription(event)}
+    path={pagePath}
+    noindex={!isIndexableEvent(event, now)}
+    jsonLd={[eventJsonLd(event), eventBreadcrumbLd(crumbs)]}
+  >
+    <section class="band band-blue page-band">
+      <div class="container">
+        <h1>{event.title}</h1>
+        <p class="lead">{when}</p>
+        {venue && (
+          <p class="lead">
+            <a href={venueHref} rel={venueExternal ? "noopener" : undefined}>{venue}</a>{cityName && `, ${cityName}`}
+          </p>
+        )}
+        {!venue && cityName && <p class="lead">{cityName}</p>}
+        {price && <p class="lead">{price}</p>}
+        {passed ? (
+          <p class="passed-note">This event has passed.</p>
+        ) : (
+          <div class="event-actions">
+            {action?.href && (
+              <a class="btn btn-light" href={action.href} rel={outbound(action.href) ? "noopener" : undefined}>{action.label}</a>
+            )}
+            {action?.priceText && <span class="event-extra">{action.priceText}</span>}
+            {action?.secondary?.href && (
+              <a class="text-link" href={action.secondary.href} rel={outbound(action.secondary.href) ? "noopener" : undefined}>{action.secondary.label}</a>
+            )}
+            <details class="cal-menu">
+              <summary class="btn btn-light">Add to calendar</summary>
+              <div class="cal-links">
+                <a href={googleUrl} rel="noopener">Google Calendar</a>
+                <a href={icsPath}>Apple Calendar</a>
+                <a href={icsPath} download={`${eventPublicSlug(event)}.ics`}>Download (.ics)</a>
+              </div>
+            </details>
+          </div>
+        )}
+      </div>
+    </section>
+    <section class="band">
+      <div class="container stack">
+        {passed && related.length > 0 && (
+          <section class="related-block" aria-labelledby="related-heading">
+            <h2 id="related-heading">Coming up in {cityName}</h2>
+            <EventList events={related} />
+          </section>
+        )}
+        {event.description && <p>{event.description}</p>}
+        {(venue || address) && (
+          <p>
+            {[venue, addressLine].filter(Boolean).join(", ")}{" "}
+            <a href={maps} rel="noopener">Get directions</a>
+          </p>
+        )}
+        {nearby.length > 0 && (
+          <section class="related-block" aria-labelledby="nearby-heading">
+            <h2 id="nearby-heading">More this weekend in {cityName}</h2>
+            <EventList events={nearby} />
+          </section>
+        )}
+        {more.length > 0 && categorySlug && (
+          <section class="related-block" aria-labelledby="more-heading">
+            <h2 id="more-heading">More {categoryLabel(categorySlug)} in {cityName}</h2>
+            <EventList events={more} />
+          </section>
+        )}
+        <p class="source-note">{sourceCredit(event)}</p>
+      </div>
+    </section>
+    <CtaBand
+      heading="Hosting an Event?"
+      body="Tell us about it and we'll consider it for the events page."
+      primary={{ label: "Submit Your Event", href: "/submit-your-event/" }}
+    />
+  </BaseLayout>
+) : (
+  <p>Missing event.</p>
+)}

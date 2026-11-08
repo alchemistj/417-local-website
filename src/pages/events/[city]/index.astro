@@ -1,0 +1,59 @@
+---
+import type { GetStaticPaths } from "astro";
+import EventList from "../../../components/EventList.astro";
+import { BUSINESS_EVENTS, cityHubCopy, cityHubPage, generalCategoryPage } from "../../../data/staticPages";
+import EventsLayout from "../../../layouts/EventsLayout.astro";
+import { GENERAL_EVENT_CATEGORY_LABELS } from "../../../lib/eventSchema";
+import { citiesWithEvents, listedCategories } from "../../../lib/eventRoutes";
+import { eventCitySlug } from "../../../lib/eventPaths";
+import { hubWeekendPreview, isListedEvent } from "../../../lib/events";
+import { getSiteEvents } from "../../../lib/loadEvents";
+
+export const getStaticPaths = (async () => {
+  const events = await getSiteEvents();
+  return citiesWithEvents(events).map((city) => ({ params: { city } }));
+}) satisfies GetStaticPaths;
+
+const city = Astro.params.city;
+if (!city) throw new Error("Missing city");
+const now = new Date();
+const events = (await getSiteEvents()).filter((event) => eventCitySlug(event) === city);
+const listed = events.filter((event) => isListedEvent(event, now));
+const weekend = hubWeekendPreview(events, now);
+const page = cityHubCopy(city);
+const meta = cityHubPage(city);
+const business = BUSINESS_EVENTS[0];
+const categoryLinks = listedCategories(events, now).map((slug) => ({
+  label: GENERAL_EVENT_CATEGORY_LABELS[slug],
+  href: generalCategoryPage(slug, city).path,
+}));
+---
+
+<EventsLayout
+  meta={meta}
+  h1={page.h1}
+  intro={page.intro}
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Events", path: "/events/" },
+    { name: meta.label, path: meta.path },
+  ]}
+>
+  {weekend.length > 0 && (
+    <section class="weekend-block" aria-labelledby="weekend-heading">
+      <h2 id="weekend-heading">{page.weekendHeading}</h2>
+      <EventList events={weekend} />
+      <p><a class="more-link" href={`/events/${city}/this-weekend/`}>See everything this weekend</a></p>
+    </section>
+  )}
+  <nav aria-label="Event categories">
+    <ul class="subnav">
+      {categoryLinks.map((link) => (
+        <li><a href={link.href}>{link.label}</a></li>
+      ))}
+      <li><a href={business.path}>{business.label}</a></li>
+    </ul>
+  </nav>
+  <p>{page.businessLink}</p>
+  <EventList events={listed} emptyMessage={page.emptyState} />
+</EventsLayout>

@@ -54,6 +54,17 @@ export function buildRedirects(): Redirect[] {
   }
   for (const [pattern, dest] of Object.entries(patterns)) add(toVercelPattern(pattern), dest);
   for (const [source, dest] of Object.entries(imageRedirects)) add(source, dest);
+  // City-first event URLs. Flat category pages and This Weekend moved under Springfield.
+  // food-and-drink has no page in this export, so it is not redirected at a missing address.
+  const movedEventPages: Record<string, string> = {
+    "events/this-weekend": "/events/springfield/this-weekend/",
+  };
+  for (const slug of ["live-music", "arts-and-theater", "festivals", "family", "sports", "outdoors", "community", "holiday"]) {
+    movedEventPages[`events/${slug}`] = `/events/springfield/${slug}/`;
+  }
+  for (const [slug, dest] of Object.entries(movedEventPages)) {
+    for (const source of bothSlashForms(slug)) add(source, dest);
+  }
   // Old Pretty Links short links (affiliate, booking and giveaway links). They were 307s on WordPress; keep them temporary.
   for (const [slug, dest] of Object.entries(shortlinks as Record<string, string>)) {
     for (const source of bothSlashForms(slug)) add(source, dest, 307);

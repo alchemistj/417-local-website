@@ -1,6 +1,7 @@
 ---
 import type { EventData } from "../lib/eventSchema";
 import { formatEventDate, formatPrice, placeName } from "../lib/events";
+import { eventPath } from "../lib/eventPaths";
 
 interface Props {
   events: EventData[];
@@ -28,11 +29,7 @@ const { events, emptyMessage } = Astro.props;
       const price = formatPrice(e);
       return (
         <li>
-          <h3>
-            {e.registration_url
-              ? <a href={e.registration_url} rel="noopener">{e.title}</a>
-              : e.title}
-          </h3>
+          <h3><a href={eventPath(e)}>{e.title}</a></h3>
           <p class="event-meta">{formatEventDate(e)}{place && ` · ${place}`}{price && ` · ${price}`}</p>
           {e.description && <p>{e.description}</p>}
         </li>

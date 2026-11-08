@@ -26,5 +26,9 @@ export const GET: APIRoute = async () => {
   if (lists.length > 0) {
     sections.push("", `## ${copy.hub.h1}`, ...lists.map((r) => line(r.title, r.path, r.description)));
   }
+  const events = routes.filter((r) => r.type === "event" && r.llms !== false);
+  if (events.length > 0) {
+    sections.push("", "## Events", ...events.map((r) => line(r.title, r.path, r.description)));
+  }
   return new Response(`${sections.join("\n")}\n`, { headers: { "Content-Type": "text/plain; charset=utf-8" } });
 };

@@ -1,0 +1,29 @@
+{
+  "id": "dcdb0ce0-8586-4baf-a664-066be5c776ce",
+  "slug": "core-recovery",
+  "title": "Core Recovery",
+  "seo_title": "Core Recovery in Springfield, MO – Nov 10, 2026",
+  "description": "Core Recovery takes place on Tuesday, November 10, 2026 at 9:30 AM in the Aerobics Room at 301 E Talmage in Springfield, Missouri. It is open to a general audience.",
+  "start": "2026-11-10T15:30:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Aerobics Room",
+  "address": "301 E Talmage, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.parkboard.org/Calendar.aspx?EID=8208",
+  "image_url": null,
+  "source_urls": [
+    "https://www.parkboard.org/Calendar.aspx?EID=8208"
+  ],
+  "updated_at": "2026-11-08T10:25:08.767Z"
+}

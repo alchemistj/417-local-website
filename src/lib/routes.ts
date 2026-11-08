@@ -1,7 +1,5 @@
 import { categoryName, type CategorySlug } from "../data/categories";
-import { generalCategoryPage, STATIC_PAGES } from "../data/staticPages";
-import { generalCategoriesWithUpcoming } from "./events";
-import type { EventData } from "./eventSchema";
+import { STATIC_PAGES } from "../data/staticPages";
 import type { ListSummary } from "./lists";
 import { POSTS_PER_PAGE } from "./site";
 
@@ -18,11 +16,15 @@ export interface PostSummary {
 
 export interface RouteEntry {
   path: string;
-  type: "static" | "blog" | "post" | "list";
+  type: "static" | "blog" | "post" | "list" | "event";
   title: string;
   description: string;
   lastmod?: string;
   indexable: boolean;
+  /** When false, the URL stays out of the sitemap even if it can be indexed. */
+  sitemap?: boolean;
+  /** When false, leave the URL out of llms.txt. */
+  llms?: boolean;
   category?: CategorySlug;
 }
 
@@ -56,20 +58,6 @@ export function postCrumbs(post: { slug: string; title: string; category: Catego
     middle,
     { name: post.title, path: postPath(post.slug) },
   ];
-}
-
-/** Category pages that have at least one upcoming event. Empty categories are omitted. */
-export function generalCategoryRoutes(events: EventData[], now: Date = new Date()): RouteEntry[] {
-  return generalCategoriesWithUpcoming(events, now).map((slug) => {
-    const meta = generalCategoryPage(slug);
-    return {
-      path: meta.path,
-      type: "static",
-      title: meta.title,
-      description: meta.description,
-      indexable: true,
-    };
-  });
 }
 
 /** Single source of truth for every published URL. Draft lists are omitted by the caller on production. */

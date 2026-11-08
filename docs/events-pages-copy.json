@@ -1,4 +1,14 @@
 {
+  "region": {
+    "seoTitle": "Events in the 417: Springfield and Nearby Cities | 417 Local",
+    "description": "Find events in the 417 area. Open a city page for Springfield, Republic or Joplin to see music, family outings, festivals and more, updated daily.",
+    "h1": "Events in the 417",
+    "intro": [
+      "Each city in the 417 has its own events page. Springfield, Republic and Joplin are the cities we list today. Open a city to see what is coming up.",
+      "We update the lists daily. Details can change, so confirm times and tickets with the organizer before you go."
+    ],
+    "emptyState": "We have no city event lists right now. Check back soon, since the lists are updated daily."
+  },
   "hub": {
     "seoTitle": "Springfield, MO Events: Music, Family, Business | 417 Local",
     "description": "Find events in Springfield, MO and the Ozarks: music, family outings, festivals, business meetups and more. The list is updated daily.",
@@ -111,6 +121,46 @@
         "We update this list daily. Dates and hours can change, so confirm with the organizer."
       ],
       "emptyState": "No holiday events are listed right now. Check back soon, since the list is updated daily."
+    },
+    "comedy": {
+      "seoTitle": "Comedy in Springfield, MO: Stand-up and Shows | 417 Local",
+      "description": "Find comedy in Springfield, MO: stand-up, improv and comedy shows around town. Updated daily. Confirm times and tickets with the organizer.",
+      "h1": "Comedy in Springfield, MO",
+      "intro": [
+        "Springfield's comedy lineup includes club sets, improv nights and touring stand-up at Downtown rooms and bigger stages.",
+        "We update this list daily. Show times and tickets can change, so confirm with the venue or organizer."
+      ],
+      "emptyState": "No comedy events are listed right now. Check back soon, since the list is updated daily."
+    },
+    "film": {
+      "seoTitle": "Movies and Film in Springfield, MO: Screenings | 417 Local",
+      "description": "Find movies and film in Springfield, MO: screenings, classics and special showings. Updated daily. Confirm times with the theater.",
+      "h1": "Movies and Film in Springfield, MO",
+      "intro": [
+        "Springfield screens new releases, classics and special showings at local theaters, including the Gillioz.",
+        "We update this list daily. Showtimes can change, so confirm with the theater before you go."
+      ],
+      "emptyState": "No movie or film events are listed right now. Check back soon, since the list is updated daily."
+    },
+    "kids": {
+      "seoTitle": "Kids' Events in Springfield, MO: Family Fun | 417 Local",
+      "description": "Find kids' events in Springfield, MO: story times, classes and outings for children. Updated daily. Confirm ages and times with the organizer.",
+      "h1": "Kids' Events in Springfield, MO",
+      "intro": [
+        "Looking for something built for kids? Here are story times, classes and outings around Springfield and the Ozarks.",
+        "We update this list daily. Ages, times and costs can change, so confirm with the organizer."
+      ],
+      "emptyState": "No kids' events are listed right now. Check back soon, since the list is updated daily."
+    },
+    "classes-and-workshops": {
+      "seoTitle": "Classes and Workshops in Springfield, MO | 417 Local",
+      "description": "Find classes and workshops in Springfield, MO: lessons, make-and-take sessions and skill-building events. Updated daily. Confirm details with the organizer.",
+      "h1": "Classes and Workshops in Springfield, MO",
+      "intro": [
+        "Springfield has classes and workshops for making, moving and learning something new, from one-day sessions to short series.",
+        "We update this list daily. Seats, times and costs can change, so confirm with the organizer."
+      ],
+      "emptyState": "No classes or workshops are listed right now. Check back soon, since the list is updated daily."
     }
   }
 }

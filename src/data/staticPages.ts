@@ -2,6 +2,7 @@ import bestOfCopy from "../../docs/best-of-hub-copy.json";
 import eventsCopy from "../../docs/events-pages-copy.json";
 import foodGuideCopy from "../../docs/food-and-drink-guide-copy.json";
 import { GENERAL_EVENT_CATEGORY_LABELS, type GeneralEventCategory } from "../lib/eventSchema";
+import { cityDisplayName } from "../lib/eventPaths";
 
 /**
  * Every non-article route and its SEO text. The route registry, sitemap, llms.txt and the page
@@ -56,25 +57,75 @@ export const HOW_WE_PICK: StaticPageMeta = {
 
 export const EVENTS_HUB: StaticPageMeta = {
   path: "/events/",
-  title: eventsCopy.hub.seoTitle,
-  description: eventsCopy.hub.description,
+  title: eventsCopy.region.seoTitle,
+  description: eventsCopy.region.description,
   label: "Events",
 };
 
-export const THIS_WEEKEND: StaticPageMeta = {
-  path: "/events/this-weekend/",
-  title: eventsCopy.thisWeekend.seoTitle,
-  description: eventsCopy.thisWeekend.description,
-  label: "This weekend",
-};
+function cityCopy(text: string, citySlug: string): string {
+  if (citySlug === "springfield") return text;
+  return text.replaceAll("Springfield", cityDisplayName(citySlug));
+}
 
-export function generalCategoryPage(slug: GeneralEventCategory): StaticPageMeta {
+export function cityHubPage(citySlug: string): StaticPageMeta {
+  const name = cityDisplayName(citySlug);
+  return {
+    path: `/events/${citySlug}/`,
+    title: cityCopy(eventsCopy.hub.seoTitle, citySlug),
+    description: cityCopy(eventsCopy.hub.description, citySlug),
+    label: name,
+  };
+}
+
+export function cityWeekendPage(citySlug: string): StaticPageMeta {
+  return {
+    path: `/events/${citySlug}/this-weekend/`,
+    title: cityCopy(eventsCopy.thisWeekend.seoTitle, citySlug),
+    description: cityCopy(eventsCopy.thisWeekend.description, citySlug),
+    label: citySlug === "springfield" ? "This weekend" : `This weekend in ${cityDisplayName(citySlug)}`,
+  };
+}
+
+export interface CityPageCopy {
+  h1: string;
+  intro: readonly string[];
+  emptyState: string;
+}
+
+export function cityHubCopy(citySlug: string): CityPageCopy & { weekendHeading: string; businessLink: string } {
+  return {
+    h1: cityCopy(eventsCopy.hub.h1, citySlug),
+    intro: eventsCopy.hub.intro.map((paragraph) => cityCopy(paragraph, citySlug)),
+    emptyState: cityCopy(eventsCopy.hub.emptyState, citySlug),
+    weekendHeading: cityCopy(eventsCopy.hub.weekendHeading, citySlug),
+    businessLink: eventsCopy.hub.businessLink,
+  };
+}
+
+export function cityWeekendCopy(citySlug: string): CityPageCopy {
+  return {
+    h1: cityCopy(eventsCopy.thisWeekend.h1, citySlug),
+    intro: eventsCopy.thisWeekend.intro.map((paragraph) => cityCopy(paragraph, citySlug)),
+    emptyState: cityCopy(eventsCopy.thisWeekend.emptyState, citySlug),
+  };
+}
+
+export function generalCategoryPage(slug: GeneralEventCategory, citySlug = "springfield"): StaticPageMeta {
   const page = eventsCopy.categories[slug];
   return {
-    path: `/events/${slug}/`,
-    title: page.seoTitle,
-    description: page.description,
+    path: `/events/${citySlug}/${slug}/`,
+    title: cityCopy(page.seoTitle, citySlug),
+    description: cityCopy(page.description, citySlug),
     label: GENERAL_EVENT_CATEGORY_LABELS[slug],
+  };
+}
+
+export function generalCategoryCopy(slug: GeneralEventCategory, citySlug = "springfield"): CityPageCopy {
+  const page = eventsCopy.categories[slug];
+  return {
+    h1: cityCopy(page.h1, citySlug),
+    intro: page.intro.map((paragraph) => cityCopy(paragraph, citySlug)),
+    emptyState: cityCopy(page.emptyState, citySlug),
   };
 }
 
@@ -155,7 +206,6 @@ export const STATIC_PAGES: StaticPageMeta[] = [
   LOCAL_BUSINESS_GUIDE,
   HOW_WE_PICK,
   EVENTS_HUB,
-  THIS_WEEKEND,
   ...BUSINESS_EVENTS,
   CONTACT,
   PRIVACY,

@@ -1,43 +1,31 @@
 ---
-import EventList from "../../components/EventList.astro";
 import copy from "../../../docs/events-pages-copy.json";
-import { BUSINESS_EVENTS, EVENTS_HUB, generalCategoryPage } from "../../data/staticPages";
+import { BUSINESS_EVENTS, EVENTS_HUB, cityHubPage } from "../../data/staticPages";
 import EventsLayout from "../../layouts/EventsLayout.astro";
-import { GENERAL_EVENT_CATEGORY_LABELS } from "../../lib/eventSchema";
-import { generalCategoriesWithUpcoming, hubWeekendPreview } from "../../lib/events";
-import { getUpcomingEvents } from "../../lib/loadEvents";
+import { citiesWithEvents } from "../../lib/eventRoutes";
+import { cityDisplayName } from "../../lib/eventPaths";
+import { getSiteEvents } from "../../lib/loadEvents";
 
-const now = new Date();
-const events = await getUpcomingEvents(now);
-const weekend = hubWeekendPreview(events, now);
+const cities = citiesWithEvents(await getSiteEvents());
 const business = BUSINESS_EVENTS[0];
-const categoryLinks = generalCategoriesWithUpcoming(events, now).map((slug) => ({
-  label: GENERAL_EVENT_CATEGORY_LABELS[slug],
-  href: generalCategoryPage(slug).path,
-}));
 ---
 
 <EventsLayout
   meta={EVENTS_HUB}
-  h1={copy.hub.h1}
-  intro={copy.hub.intro}
+  h1={copy.region.h1}
+  intro={copy.region.intro}
   crumbs={[{ name: "Home", path: "/" }, { name: "Events", path: "/events/" }]}
 >
-  {weekend.length > 0 && (
-    <section class="weekend-block" aria-labelledby="weekend-heading">
-      <h2 id="weekend-heading">{copy.hub.weekendHeading}</h2>
-      <EventList events={weekend} />
-      <p><a class="more-link" href="/events/this-weekend/">See everything this weekend</a></p>
-    </section>
+  {cities.length === 0 ? (
+    <p>{copy.region.emptyState}</p>
+  ) : (
+    <nav aria-label="Cities">
+      <ul class="subnav">
+        {cities.map((city) => (
+          <li><a href={cityHubPage(city).path}>{cityDisplayName(city)}</a></li>
+        ))}
+        <li><a href={business.path}>{business.label}</a></li>
+      </ul>
+    </nav>
   )}
-  <nav aria-label="Event categories">
-    <ul class="subnav">
-      {categoryLinks.map((link) => (
-        <li><a href={link.href}>{link.label}</a></li>
-      ))}
-      <li><a href={business.path}>{business.label}</a></li>
-    </ul>
-  </nav>
-  <p>{copy.hub.businessLink}</p>
-  <EventList events={events} emptyMessage={copy.hub.emptyState} />
 </EventsLayout>
