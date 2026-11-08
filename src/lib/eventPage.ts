@@ -65,17 +65,38 @@ function clampText(text: string, max: number): string {
   return `${clean.slice(0, max - 1).trimEnd()}…`;
 }
 
-/** `{Title} in Springfield, MO · Dec 19, 2026 | 417 Local`, shortened to 60 characters. */
+/** "SPRINGFIELD SYMPHONY: A Holiday Christmas" -> "Springfield Symphony: A Holiday Christmas". Short all-caps words (MSU, SBC) stay. */
+const KEEP_CAPS = new Set(["MSU", "SBC", "YMCA", "OTC", "USA", "NBA", "NFL", "BBQ", "DJ", "MO", "ICON", "JQH", "OC", "SGF"]);
+
+export function tameShoutyTitle(title: string): string {
+  const clean = title.replace(/\s+/g, " ").trim();
+  const shouty = clean.match(/\b[A-Z][A-Z'’]{2,}\b/g)?.filter((word) => !KEEP_CAPS.has(word)) ?? [];
+  // One capitalized acronym is normal; two or more all-caps words means the source is shouting.
+  if (shouty.length < 2 && !shouty.some((word) => word.length >= 5)) return clean;
+  return clean.replace(/\b[A-Z][A-Z'’]{2,}\b/g, (word) =>
+    KEEP_CAPS.has(word) ? word : word.charAt(0) + word.slice(1).toLowerCase(),
+  );
+}
+
+/** Cut at a word boundary, never mid-word. */
+function clampWords(text: string, max: number): string {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max - 1);
+  const space = cut.lastIndexOf(" ");
+  return `${(space > max / 2 ? cut.slice(0, space) : cut).replace(/[\s:–—,-]+$/, "")}…`;
+}
+
+/**
+ * `{Title} in Springfield, MO · Dec 19, 2026 | 417 Local`, kept to 60 characters by dropping the city first, then
+ * shortening the event name at a word boundary. The date and the brand always stay.
+ */
 export function eventPageTitle(event: EventData): string {
-  const tail = ` in ${eventCityName(event)}, MO · ${formatShortDate(event)}${BRAND}`;
-  const budget = 60 - tail.length;
-  let name = event.title.replace(/\s+/g, " ").trim();
-  if (budget < 1) return clampText(`${formatShortDate(event)}${BRAND}`, 60);
-  if (name.length > budget) {
-    name = `${name.slice(0, Math.max(1, budget - 1)).trimEnd()}…`;
-    if (name.length > budget) name = `${name.slice(0, Math.max(1, budget - 1)).trimEnd()}…`;
-  }
-  return `${name}${tail}`;
+  const name = tameShoutyTitle(event.title);
+  const tail = ` · ${formatShortDate(event)}${BRAND}`;
+  const withCity = ` in ${eventCityName(event)}, MO${tail}`;
+  if (name.length + withCity.length <= 60) return `${name}${withCity}`;
+  if (name.length + tail.length <= 60) return `${name}${tail}`;
+  return `${clampWords(name, 60 - tail.length)}${tail}`;
 }
 
 /** Meta description from the write-up, 155 characters or fewer. */
