@@ -1,0 +1,30 @@
+{
+  "id": "0611e286-9aa9-4348-aca1-762e8051820d",
+  "slug": "mahj-mondays-at-the-gillioz",
+  "title": "Mahj Mondays at the Gillioz",
+  "seo_title": "Mahj Mondays at the Gillioz",
+  "description": "Mahj Mondays at the Gillioz is scheduled for Monday, December 7, 2026 at 5:30 PM CST at The Gallery at the Gillioz Theatre, 325 Park Central E., Springfield. The Gallery at the Gillioz in collaboration with Blooming Bams is the organizer. Admission is free.",
+  "start": "2026-12-07T23:30:00+00:00",
+  "end": "2026-12-08T02:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "The Gallery at the Gillioz Theatre",
+  "address": "325 Park Central E.",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "The Gallery at the Gillioz in collaboration with Blooming Bams",
+    "website": "https://gillioztheatre.com/"
+  },
+  "categories": [
+    "arts-and-theater",
+    "community"
+  ],
+  "price": "FREE",
+  "is_free": true,
+  "registration_url": "https://gillioztheatre.com/event/mahj-mondays-at-the-gillioz-5",
+  "image_url": null,
+  "source_urls": [
+    "https://gillioztheatre.com/event/mahj-mondays-at-the-gillioz-5"
+  ],
+  "updated_at": "2026-11-08T10:25:08.767Z"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "711d3010-489c-41f3-bec9-369ef2d30bb0",
+  "slug": "total-workout",
+  "title": "Total Workout",
+  "seo_title": "Total Workout in Springfield, MO – Nov 23, 2026",
+  "description": "Total Workout takes place on Monday, November 23, 2026 at 9:30 AM. It is held in the Aerobics Room at 301 E Talmage in Springfield, Missouri. This event is open to a general audience.",
+  "start": "2026-11-23T15:30:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Aerobics Room",
+  "address": "301 E Talmage, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.parkboard.org/Calendar.aspx?EID=8609",
+  "image_url": null,
+  "source_urls": [
+    "https://www.parkboard.org/Calendar.aspx?EID=8609"
+  ],
+  "updated_at": "2026-11-08T10:25:08.767Z"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "7514a10e-17e0-4553-8b89-648db18a0a04",
+  "slug": "acc-rec-chair-chi",
+  "title": "Acc Rec Chair Chi",
+  "seo_title": "Acc Rec Chair Chi in Springfield, MO – Nov 17, 2026",
+  "description": "Acc Rec Chair Chi is an outdoors event taking place on Tuesday, November 17, 2026 at 1:00 PM. It will be held at Northview Center, 305 E Talmage, in Springfield, Missouri. The event is open to a general audience.",
+  "start": "2026-11-17T19:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Northview Center",
+  "address": "305 E Talmage, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.parkboard.org/Calendar.aspx?EID=9614",
+  "image_url": null,
+  "source_urls": [
+    "https://www.parkboard.org/Calendar.aspx?EID=9614"
+  ],
+  "updated_at": "2026-11-08T10:25:08.767Z"
+}

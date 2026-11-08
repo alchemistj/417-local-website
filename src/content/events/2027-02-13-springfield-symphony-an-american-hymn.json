@@ -1,9 +1,9 @@
 {
   "id": "b0c9fdee-7b76-4aff-a100-1c98152bd974",
   "slug": "springfield-symphony-an-american-hymn",
-  "title": "Springfield Symphony: An American Hymn",
-  "seo_title": "Springfield Symphony: An American Hymn",
-  "description": "Springfield Symphony: An American Hymn is scheduled for Saturday, February 13, 2027 at 7:30 PM CST at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield. Springfield Symphony Orchestra is the organizer.",
+  "title": "SPRINGFIELD SYMPHONY: An American Hymn",
+  "seo_title": "SPRINGFIELD SYMPHONY: An American Hymn",
+  "description": "SPRINGFIELD SYMPHONY: An American Hymn is scheduled for Saturday, February 13, 2027 at 7:30 PM CST at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield. Springfield Symphony Orchestra is the organizer.",
   "start": "2027-02-14T01:30:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -13,7 +13,7 @@
   "state": "MO",
   "organizer": {
     "name": "Springfield Symphony Orchestra",
-    "website": "https://www.hammonshall.com/viewshow.aspx?ID=4077"
+    "website": null
   },
   "categories": [
     "live-music"
@@ -25,5 +25,5 @@
   "source_urls": [
     "https://www.hammonshall.com/viewshow.aspx?ID=4077"
   ],
-  "updated_at": "2026-11-07T10:25:49.635Z"
+  "updated_at": "2026-11-08T10:25:08.767Z"
 }

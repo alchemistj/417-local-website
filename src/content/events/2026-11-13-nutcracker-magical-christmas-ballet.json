@@ -1,0 +1,30 @@
+{
+  "id": "e24a4a29-19e0-44bc-bfab-9cc7dbcd9b10",
+  "slug": "nutcracker-magical-christmas-ballet",
+  "title": "NUTCRACKER! Magical Christmas Ballet",
+  "seo_title": "NUTCRACKER! Magical Christmas Ballet in Springfield, MO",
+  "description": "NUTCRACKER! Magical Christmas Ballet is a holiday ballet performance on Friday, November 13, 2026 at 7:00 PM. It takes place at the Gillioz Theatre, 325 Park Central, E Springfield, Missouri. Admission is free, and the event is open to a general audience.",
+  "start": "2026-11-14T01:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Gillioz Theatre",
+  "address": "325 Park Central, E Springfield, Missouri",
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "arts-and-theater",
+    "holiday"
+  ],
+  "price": "0",
+  "is_free": true,
+  "registration_url": "https://gillioztheatre.com/event/nutcracker-magical-christmas-ballet/gillioz-theatre/e-springfield-missouri",
+  "image_url": "https://gillioztheatre.com/wp-content/uploads/2026/08/nutcracker-magical-christmas-ballet.jpeg",
+  "source_urls": [
+    "https://gillioztheatre.com/event/nutcracker-magical-christmas-ballet/gillioz-theatre/e-springfield-missouri"
+  ],
+  "updated_at": "2026-11-08T10:25:08.767Z"
+}

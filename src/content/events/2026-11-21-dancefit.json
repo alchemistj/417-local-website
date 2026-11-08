@@ -1,0 +1,29 @@
+{
+  "id": "d935c407-65b8-434a-81dc-42254ae6f461",
+  "slug": "dancefit",
+  "title": "DanceFit",
+  "seo_title": "DanceFit in Springfield, MO – Nov 21, 2026",
+  "description": "DanceFit takes place on Saturday, November 21, 2026 at 10:00 AM in the Community Room at 301 E Talmage in Springfield, Missouri. It is open to a general audience.",
+  "start": "2026-11-21T16:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Community Room",
+  "address": "301 E Talmage, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.parkboard.org/Calendar.aspx?EID=9864",
+  "image_url": null,
+  "source_urls": [
+    "https://www.parkboard.org/Calendar.aspx?EID=9864"
+  ],
+  "updated_at": "2026-11-08T10:25:08.767Z"
+}

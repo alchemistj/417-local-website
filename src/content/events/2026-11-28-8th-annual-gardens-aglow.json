@@ -1,0 +1,29 @@
+{
+  "id": "075ef571-9f22-4624-ac8f-0491b872e230",
+  "slug": "8th-annual-gardens-aglow",
+  "title": "8th Annual Gardens Aglow",
+  "seo_title": "8th Annual Gardens Aglow in Springfield, MO – Nov 28",
+  "description": "The 8th Annual Gardens Aglow takes place on Saturday, November 28, 2026 at 5:00 PM. It is held outdoors at Mizumoto Japanese Stroll Garden, 2400 S Scenic in Springfield, MO. This event is open to a general audience.",
+  "start": "2026-11-28T23:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Mizumoto Japanese Stroll Garden",
+  "address": "2400 S Scenic, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.parkboard.org/Calendar.aspx?EID=9944",
+  "image_url": null,
+  "source_urls": [
+    "https://www.parkboard.org/Calendar.aspx?EID=9944"
+  ],
+  "updated_at": "2026-11-08T10:25:08.767Z"
+}

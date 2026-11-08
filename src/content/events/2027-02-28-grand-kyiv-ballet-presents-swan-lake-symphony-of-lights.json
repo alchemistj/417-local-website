@@ -1,0 +1,30 @@
+{
+  "id": "6c31a652-e511-45bc-bf2f-00d45aeefafc",
+  "slug": "grand-kyiv-ballet-presents-swan-lake-symphony-of-lights",
+  "title": "Grand Kyiv Ballet Presents: Swan Lake: Symphony of Lights",
+  "seo_title": "Grand Kyiv Ballet: Swan Lake at Gillioz Theatre",
+  "description": "Grand Kyiv Ballet presents Swan Lake: Symphony of Lights on Sunday, February 28, 2027 at 4:00 PM. The performance takes place at the Gillioz Theatre, 325 Park Central in E Springfield, Missouri. Admission is free, and the event is open to a general audience.",
+  "start": "2027-02-28T22:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Gillioz Theatre",
+  "address": "325 Park Central, E Springfield, Missouri",
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "live-music",
+    "arts-and-theater"
+  ],
+  "price": "0",
+  "is_free": true,
+  "registration_url": "https://gillioztheatre.com/event/grand-kyiv-ballet-presents-swan-lake-symphony-of-lights/gillioz-theatre/e-springfield-missouri",
+  "image_url": "https://gillioztheatre.com/wp-content/uploads/2026/08/grand-kyiv-ballet-presents-swan-lake-symphony-of-lights.jpeg",
+  "source_urls": [
+    "https://gillioztheatre.com/event/grand-kyiv-ballet-presents-swan-lake-symphony-of-lights/gillioz-theatre/e-springfield-missouri"
+  ],
+  "updated_at": "2026-11-08T10:25:08.767Z"
+}

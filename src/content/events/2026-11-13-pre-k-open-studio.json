@@ -1,0 +1,31 @@
+{
+  "id": "1d1351fc-54d7-417d-8fc9-5af9df241108",
+  "slug": "pre-k-open-studio",
+  "title": "Pre-K Open Studio",
+  "seo_title": "Pre-K Open Studio in Springfield, MO – Nov 13",
+  "description": "Pre-K Open Studio is a free arts event on Friday, November 13, 2026, from 10:00 AM to 12:00 PM at Fairbanks Community Hub, 1126 North Broadway in Springfield, MO. It is a family-friendly option for anyone looking for a creative morning out.",
+  "start": "2026-11-13T16:00:00+00:00",
+  "end": "2026-11-13T18:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Fairbanks Community Hub",
+  "address": "1126 North Broadway, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "arts-and-theater",
+    "family"
+  ],
+  "price": "Free",
+  "is_free": true,
+  "registration_url": "https://sgfmuseum.org/Calendar.aspx?EID=10946",
+  "image_url": null,
+  "source_urls": [
+    "https://sgfmuseum.org/Calendar.aspx?EID=10946",
+    "https://sgfmuseum.org/calendar.aspx?amp%3BCID=0&view=week"
+  ],
+  "updated_at": "2026-11-08T10:25:08.767Z"
+}

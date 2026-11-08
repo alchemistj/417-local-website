@@ -1,0 +1,29 @@
+{
+  "id": "67223dbc-400e-4a9f-92ab-06fd129004b6",
+  "slug": "art-c-painting-at-gray-good-ol-stitch",
+  "title": "ART-C Painting at Gray \"Good Ol' Stitch\"",
+  "seo_title": "ART-C Painting at Gray \"Good Ol' Stitch\" – Springfield, MO",
+  "description": "ART-C Painting at Gray \"Good Ol' Stitch\" takes place on Monday, November 16, 2026 at 2:30 PM in Springfield, MO. This outdoors event is open to a general audience.",
+  "start": "2026-11-16T20:30:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Event Location",
+  "address": "Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.parkboard.org/Calendar.aspx?EID=9929",
+  "image_url": null,
+  "source_urls": [
+    "https://www.parkboard.org/Calendar.aspx?EID=9929"
+  ],
+  "updated_at": "2026-11-08T10:25:08.767Z"
+}

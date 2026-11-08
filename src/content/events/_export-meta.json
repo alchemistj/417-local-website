@@ -1,16 +1,17 @@
 {
-  "exportedAt": "2026-11-07T10:25:49.635Z",
+  "exportedAt": "2026-11-08T10:25:08.767Z",
   "market": "springfield-mo",
   "counts": {
-    "events": 29,
+    "events": 116,
     "networking": 11,
     "professional-development": 2,
-    "live-music": 8,
-    "arts-and-theater": 9,
-    "family": 2,
+    "live-music": 12,
+    "arts-and-theater": 27,
+    "festivals": 2,
+    "family": 5,
     "sports": 1,
-    "outdoors": 3,
-    "community": 6,
-    "holiday": 4
+    "outdoors": 69,
+    "community": 8,
+    "holiday": 10
   }
 }

@@ -2,8 +2,8 @@
   "id": "5aa718ec-cf94-4fcd-8b9c-216b38704961",
   "slug": "creative-connection-workshop-thank-you-cards",
   "title": "Creative Connection Workshop: Thank You Cards",
-  "seo_title": "Thank You Cards Workshop in Springfield, MO – Nov 17",
-  "description": "Creative Connection Workshop: Thank You Cards takes place on Tuesday, November 17, 2026 at 3:00 PM. It is held in the Community Room at the Schweitzer Brentwood Branch Library, 2214 S Brentwood Blvd, Springfield, MO. The workshop is a professional development event aimed at a business audience.",
+  "seo_title": "Creative Connection Workshop: Thank You Cards",
+  "description": "Creative Connection Workshop: Thank You Cards takes place on Tuesday, November 17, 2026 at 3:00 PM. It will be held in the Community Room at the Schweitzer Brentwood Branch Library, 2214 S Brentwood Blvd, Springfield, MO. The workshop is listed for a business audience and falls under professional development and arts.",
   "start": "2026-11-17T21:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -16,20 +16,22 @@
     "website": null
   },
   "categories": [
-    "professional-development"
+    "professional-development",
+    "arts-and-theater"
   ],
   "price": null,
   "is_free": null,
-  "registration_url": "https://sgfmuseum.org/calendar.aspx",
+  "registration_url": "https://sgfmuseum.org/Calendar.aspx?EID=10961",
   "image_url": null,
   "source_urls": [
     "https://sgfmuseum.org/calendar.aspx",
-    "https://sgfmuseum.org/calendar.aspx?amp%3BCID=0&view=list",
     "https://sgfmuseum.org/calendar.aspx?amp%3Bday=6&amp%3Bmonth=11&amp%3Byear=2026&view=list",
-    "https://sgfmuseum.org/calendar.aspx?amp%3Bday=13&amp%3Bmonth=11&amp%3Byear=2026&view=list",
+    "https://sgfmuseum.org/calendar.aspx?amp%3BCID=0&view=list",
     "https://sgfmuseum.org/calendar.aspx?amp%3Bday=14&amp%3Bmonth=11&amp%3Byear=2026&view=list",
     "https://sgfmuseum.org/calendar.aspx?amp%3Bday=17&amp%3Bmonth=11&amp%3Byear=2026&view=list",
-    "https://sgfmuseum.org/calendar.aspx?CID=14"
+    "https://sgfmuseum.org/calendar.aspx?CID=14",
+    "https://sgfmuseum.org/calendar.aspx?amp%3Bday=13&amp%3Bmonth=11&amp%3Byear=2026&view=list",
+    "https://sgfmuseum.org/Calendar.aspx?EID=10961"
   ],
-  "updated_at": "2026-11-07T10:25:49.635Z"
+  "updated_at": "2026-11-08T10:25:08.767Z"
 }

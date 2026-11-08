@@ -1,0 +1,29 @@
+{
+  "id": "974e4876-ee19-43df-b0f4-3c2908c27c37",
+  "slug": "boom-mind",
+  "title": "Boom Mind",
+  "seo_title": "Boom Mind in Springfield, MO on Nov 24, 2026",
+  "description": "Boom Mind is an outdoors event taking place on Tuesday, November 24, 2026 at 8:45 AM. It will be held in the Aerobics Room at 301 E Talmage in Springfield, MO. The event is open to a general audience.",
+  "start": "2026-11-24T14:45:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Aerobics Room",
+  "address": "301 E Talmage, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.parkboard.org/Calendar.aspx?EID=8140",
+  "image_url": null,
+  "source_urls": [
+    "https://www.parkboard.org/Calendar.aspx?EID=8140"
+  ],
+  "updated_at": "2026-11-08T10:25:08.767Z"
+}

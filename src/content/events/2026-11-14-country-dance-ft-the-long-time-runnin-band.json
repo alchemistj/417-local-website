@@ -1,0 +1,30 @@
+{
+  "id": "a531deba-305f-4a80-be7d-3c5439a69c9d",
+  "slug": "country-dance-ft-the-long-time-runnin-band",
+  "title": "Country Dance ft. The Long Time Runnin Band",
+  "seo_title": "Country Dance with The Long Time Runnin Band",
+  "description": "Country Dance featuring The Long Time Runnin Band is a live music event on Saturday, November 14, 2026, at 7:00 PM. It takes place at Northview Center, 305 E Talmage in Springfield, MO, and is open to a general audience.",
+  "start": "2026-11-15T01:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Northview Center",
+  "address": "305 E Talmage, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "live-music",
+    "arts-and-theater"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.parkboard.org/Calendar.aspx?EID=9782",
+  "image_url": null,
+  "source_urls": [
+    "https://www.parkboard.org/Calendar.aspx?EID=9782"
+  ],
+  "updated_at": "2026-11-08T10:25:08.767Z"
+}

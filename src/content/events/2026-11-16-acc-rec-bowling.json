@@ -1,0 +1,30 @@
+{
+  "id": "fa10477c-47cd-4384-8f02-a91e8d3ecc4d",
+  "slug": "acc-rec-bowling",
+  "title": "Acc Rec Bowling",
+  "seo_title": "Acc Rec Bowling at Enterprise Park Lanes in Springfield",
+  "description": "Acc Rec Bowling takes place on Monday, November 16, 2026 at 3:30 PM at Enterprise Park Lanes, 1625 S Enterprise Ave in Springfield, MO. It is open to a general audience, so anyone interested can plan to stop by for an afternoon of bowling.",
+  "start": "2026-11-16T21:30:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Enterprise Park Lanes",
+  "address": "1625 S Enterprise Ave, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.parkboard.org/Calendar.aspx?EID=9406",
+  "image_url": null,
+  "source_urls": [
+    "https://www.parkboard.org/Calendar.aspx?EID=9406",
+    "https://www.parkboard.org/Calendar.aspx?EID=9925"
+  ],
+  "updated_at": "2026-11-08T10:25:08.767Z"
+}

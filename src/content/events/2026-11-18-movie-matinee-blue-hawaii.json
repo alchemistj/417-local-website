@@ -1,0 +1,29 @@
+{
+  "id": "ee4490af-6f56-4fa1-9e83-7e468214dd2b",
+  "slug": "movie-matinee-blue-hawaii",
+  "title": "Movie Matinee: Blue Hawaii",
+  "seo_title": "Free Movie Matinee: Blue Hawaii at Gillioz Theatre",
+  "description": "Catch a free screening of Blue Hawaii at the Gillioz Theatre on Wednesday, November 18, 2026 at 2:00 PM. The theater is located at 325 Park Central in Springfield, Missouri, and the matinee is open to a general audience.",
+  "start": "2026-11-18T20:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Gillioz Theatre",
+  "address": "325 Park Central, E Springfield, Missouri",
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "arts-and-theater"
+  ],
+  "price": "0",
+  "is_free": true,
+  "registration_url": "https://gillioztheatre.com/event/movie-matinee-blue-hawaii/gillioz-theatre/e-springfield-missouri",
+  "image_url": "https://gillioztheatre.com/wp-content/uploads/2026/08/movie-matinee-blue-hawaii.jpeg",
+  "source_urls": [
+    "https://gillioztheatre.com/event/movie-matinee-blue-hawaii/gillioz-theatre/e-springfield-missouri"
+  ],
+  "updated_at": "2026-11-08T10:25:08.767Z"
+}

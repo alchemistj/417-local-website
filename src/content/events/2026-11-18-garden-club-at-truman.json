@@ -1,0 +1,29 @@
+{
+  "id": "6ed738af-1a04-4c71-877a-73215cf11ca7",
+  "slug": "garden-club-at-truman",
+  "title": "Garden Club at Truman",
+  "seo_title": "Garden Club at Truman in Springfield, MO – Nov 18",
+  "description": "Garden Club at Truman is an outdoors event taking place on Wednesday, November 18, 2026 at 2:15 PM in Springfield, Missouri. It is open to a general audience, making it a good fit for anyone interested in gardening and spending time outside.",
+  "start": "2026-11-18T20:15:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Event Location",
+  "address": "Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.parkboard.org/Calendar.aspx?EID=9837",
+  "image_url": null,
+  "source_urls": [
+    "https://www.parkboard.org/Calendar.aspx?EID=9837"
+  ],
+  "updated_at": "2026-11-08T10:25:08.767Z"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "7a986d36-90a5-4967-bc36-c84ac5a6471a",
+  "slug": "midwest-battle-of-the-rims-thanksgiving-throwdown",
+  "title": "Midwest Battle of the Rims: Thanksgiving Throwdown",
+  "seo_title": "Midwest Battle of the Rims: Thanksgiving Throwdown",
+  "description": "Midwest Battle of the Rims: Thanksgiving Throwdown is a holiday event taking place on November 14, 2026, with the time to be determined. It will be held at Fieldhouse Sportscenter, 2235 W. Kingsley St., in Springfield, MO. The event is open to a general audience.",
+  "start": "2026-11-14",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Fieldhouse Sportscenter",
+  "address": "2235 W. Kingsley St., Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.parkboard.org/Calendar.aspx?EID=7747",
+  "image_url": null,
+  "source_urls": [
+    "https://www.parkboard.org/Calendar.aspx?EID=7747"
+  ],
+  "updated_at": "2026-11-08T10:25:08.767Z"
+}

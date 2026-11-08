@@ -1,0 +1,29 @@
+{
+  "id": "42bbc01b-4681-4c62-b271-42e4e06657eb",
+  "slug": "boom-muscle",
+  "title": "Boom Muscle",
+  "seo_title": "Boom Muscle at Aerobics Room in Springfield, MO",
+  "description": "Boom Muscle takes place on Thursday, November 19, 2026 at 8:00 AM at the Aerobics Room, 301 E Talmage in Springfield, MO. It is listed as an outdoors event and is open to a general audience.",
+  "start": "2026-11-19T14:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Aerobics Room",
+  "address": "301 E Talmage, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.parkboard.org/Calendar.aspx?EID=8033",
+  "image_url": null,
+  "source_urls": [
+    "https://www.parkboard.org/Calendar.aspx?EID=8033"
+  ],
+  "updated_at": "2026-11-08T10:25:08.767Z"
+}
