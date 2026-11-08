@@ -18,7 +18,7 @@ import {
   upcomingFromEntries,
   weekendDateStrings,
 } from "../src/lib/events";
-import { generalCategoryRoutes } from "../src/lib/routes";
+import { generalCategoryRoutes } from "../src/lib/eventRoutes";
 
 function ev(partial: Partial<EventData> & Pick<EventData, "id" | "title" | "start">): EventData {
   return eventSchema.parse({ slug: partial.slug ?? partial.id, categories: [], ...partial });
@@ -45,7 +45,7 @@ describe("general event categories", () => {
     ];
     expect(generalCategoriesWithUpcoming(events, now)).toEqual(["live-music", "family"]);
     const routes = generalCategoryRoutes(events, now);
-    expect(routes.map((route) => route.path)).toEqual(["/events/live-music/", "/events/family/"]);
+    expect(routes.map((route) => route.path)).toEqual(["/events/springfield/live-music/", "/events/springfield/family/"]);
     expect(routes.map((route) => route.title)).toEqual([
       copy.categories["live-music"].seoTitle,
       copy.categories.family.seoTitle,

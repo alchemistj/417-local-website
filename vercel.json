@@ -288,6 +288,96 @@
       "statusCode": 301
     },
     {
+      "source": "/events/this-weekend",
+      "destination": "/events/springfield/this-weekend/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/this-weekend/",
+      "destination": "/events/springfield/this-weekend/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/live-music",
+      "destination": "/events/springfield/live-music/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/live-music/",
+      "destination": "/events/springfield/live-music/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/arts-and-theater",
+      "destination": "/events/springfield/arts-and-theater/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/arts-and-theater/",
+      "destination": "/events/springfield/arts-and-theater/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/festivals",
+      "destination": "/events/springfield/festivals/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/festivals/",
+      "destination": "/events/springfield/festivals/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/family",
+      "destination": "/events/springfield/family/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/family/",
+      "destination": "/events/springfield/family/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/sports",
+      "destination": "/events/springfield/sports/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/sports/",
+      "destination": "/events/springfield/sports/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/outdoors",
+      "destination": "/events/springfield/outdoors/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/outdoors/",
+      "destination": "/events/springfield/outdoors/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/community",
+      "destination": "/events/springfield/community/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/community/",
+      "destination": "/events/springfield/community/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/holiday",
+      "destination": "/events/springfield/holiday/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/holiday/",
+      "destination": "/events/springfield/holiday/",
+      "statusCode": 301
+    },
+    {
       "source": "/seo",
       "destination": "/small-business-success/",
       "statusCode": 307

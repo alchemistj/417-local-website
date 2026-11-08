@@ -3,7 +3,7 @@ import { getRouteRegistry } from "../lib/loadRoutes";
 import { absoluteUrl } from "../lib/site";
 
 export const GET: APIRoute = async () => {
-  const routes = (await getRouteRegistry()).filter((r) => r.indexable);
+  const routes = (await getRouteRegistry()).filter((r) => r.indexable && r.sitemap !== false);
   const urls = routes
     .map((r) => `  <url><loc>${absoluteUrl(r.path)}</loc>${r.lastmod ? `<lastmod>${r.lastmod}</lastmod>` : ""}</url>`)
     .join("\n");

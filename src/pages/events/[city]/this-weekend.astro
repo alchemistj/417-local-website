@@ -1,0 +1,50 @@
+---
+import type { GetStaticPaths } from "astro";
+import EventList from "../../../components/EventList.astro";
+import { cityHubPage, cityWeekendCopy, cityWeekendPage } from "../../../data/staticPages";
+import EventsLayout from "../../../layouts/EventsLayout.astro";
+import { citiesWithEvents } from "../../../lib/eventRoutes";
+import { eventCitySlug } from "../../../lib/eventPaths";
+import { thisWeekendView } from "../../../lib/events";
+import { getSiteEvents } from "../../../lib/loadEvents";
+
+export const getStaticPaths = (async () => {
+  const events = await getSiteEvents();
+  return citiesWithEvents(events).map((city) => ({ params: { city } }));
+}) satisfies GetStaticPaths;
+
+const city = Astro.params.city;
+if (!city) throw new Error("Missing city");
+const now = new Date();
+const events = (await getSiteEvents()).filter((event) => eventCitySlug(event) === city);
+const view = thisWeekendView(events, now);
+const page = cityWeekendCopy(city);
+const meta = cityWeekendPage(city);
+const hub = cityHubPage(city);
+---
+
+<EventsLayout
+  meta={meta}
+  h1={page.h1}
+  intro={page.intro}
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Events", path: "/events/" },
+    { name: hub.label, path: hub.path },
+    { name: page.h1, path: meta.path },
+  ]}
+>
+  {view.mode === "weekend" ? (
+    view.groups.map((group) => (
+      <section class="event-day" aria-labelledby={`day-${group.date}`}>
+        <h2 id={`day-${group.date}`}>{group.heading}</h2>
+        <EventList events={group.events} />
+      </section>
+    ))
+  ) : (
+    <>
+      <p class="empty-state">{page.emptyState}</p>
+      {view.fallback.length > 0 && <EventList events={view.fallback} />}
+    </>
+  )}
+</EventsLayout>

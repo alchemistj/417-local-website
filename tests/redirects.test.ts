@@ -2,11 +2,13 @@ import { existsSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { REDIRECTS, RETIRED_SLUGS, sourceMatches } from "../src/data/redirects";
 import { buildVercelConfig } from "../src/data/vercelConfig";
+import { eventSectionRoutes } from "../src/lib/eventRoutes";
 import { buildRoutes } from "../src/lib/routes";
 import seed from "../docs/build/redirects-seed.json";
+import { readSiteEvents } from "./helpers/events";
 import { ROOT, postSummaries } from "./helpers/posts";
 
-const livePaths = buildRoutes(postSummaries()).map((r) => r.path);
+const livePaths = buildRoutes(postSummaries(), [], eventSectionRoutes(readSiteEvents(), new Date())).map((r) => r.path);
 
 describe("vercel.json", () => {
   it("exists and matches the redirect data exactly (run `npm run redirects` to refresh)", () => {

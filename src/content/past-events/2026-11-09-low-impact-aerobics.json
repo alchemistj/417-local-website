@@ -1,0 +1,29 @@
+{
+  "id": "12064f67-87d1-47a5-8ba2-2945456fbdfb",
+  "slug": "low-impact-aerobics",
+  "title": "Low Impact Aerobics",
+  "seo_title": "Low Impact Aerobics in Springfield, MO – Nov 9, 2026",
+  "description": "Low Impact Aerobics takes place on Monday, November 9, 2026 at 10:30 AM in the Community Room at 301 E Talmage in Springfield, Missouri. This session is open to a general audience.",
+  "start": "2026-11-09T16:30:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Community Room",
+  "address": "301 E Talmage, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.parkboard.org/Calendar.aspx?EID=8889",
+  "image_url": null,
+  "source_urls": [
+    "https://www.parkboard.org/Calendar.aspx?EID=8889"
+  ],
+  "updated_at": "2026-11-08T10:25:08.767Z"
+}

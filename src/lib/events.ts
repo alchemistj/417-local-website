@@ -9,6 +9,15 @@ export const DEFAULT_TIMEZONE = "America/Chicago";
 
 const DATE_ONLY = /^\d{4}-\d{2}-\d{2}$/;
 
+export function isDateOnly(value: string): boolean {
+  return DATE_ONLY.test(value);
+}
+
+/** True when the start value includes a clock time, not just a calendar date. */
+export function eventHasClockTime(event: EventData): boolean {
+  return !isDateOnly(event.start);
+}
+
 function endMs(event: EventData): number {
   const ref = event.end || event.start;
   const t = Date.parse(ref);
@@ -49,12 +58,19 @@ export function placeName(value: EventData["venue"]): string {
   return typeof value === "string" ? value : (value.name ?? "");
 }
 
+/**
+ * A price line only when the export has a real price or `is_free` / `free` is true.
+ * A missing price is left blank. It is never guessed as "Free".
+ */
 export function formatPrice(event: EventData): string {
   if (event.free) return "Free";
   const p = event.price;
-  if (p === null || p === undefined || p === "") return "";
-  if (typeof p === "number") return p === 0 ? "Free" : `$${p}`;
-  if (typeof p === "string") return p;
+  if (typeof p === "number") return p > 0 ? `$${p}` : "";
+  if (typeof p === "string") {
+    const text = p.trim();
+    if (text && !/^0+(?:\.0+)?$/.test(text)) return text;
+  }
+  if (event.is_free === true) return "Free";
   return "";
 }
 
@@ -127,6 +143,41 @@ export function eventChicagoDate(event: EventData): string {
   const time = Date.parse(event.start);
   if (Number.isNaN(time)) return "";
   return ymd(chicagoDateParts(new Date(time)));
+}
+
+function calendarDayNumber(ymdDate: string): number | null {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(ymdDate);
+  if (!match) return null;
+  return Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3])) / 86_400_000;
+}
+
+/** Chicago calendar days from the event date to `now`. Negative when the event is still ahead. */
+export function calendarDaysAfter(event: EventData, now: Date): number {
+  const eventDay = calendarDayNumber(eventChicagoDate(event));
+  const today = calendarDayNumber(ymd(chicagoDateParts(now)));
+  if (eventDay === null || today === null) return Number.POSITIVE_INFINITY;
+  return today - eventDay;
+}
+
+/** Hubs, category pages and the sitemap keep an event until 30 days after its date. */
+export function isListedEvent(event: EventData, now: Date): boolean {
+  return calendarDaysAfter(event, now) < 30;
+}
+
+/** The event page stays indexable until 90 days after its date. */
+export function isIndexableEvent(event: EventData, now: Date): boolean {
+  return calendarDaysAfter(event, now) < 90;
+}
+
+/** Copy the event into the past-events archive when its date is within 2 days of today. */
+export function shouldArchiveEvent(event: EventData, now: Date): boolean {
+  const days = calendarDaysAfter(event, now);
+  return Number.isFinite(days) && Math.abs(days) <= 2;
+}
+
+/** The first category is the one used in breadcrumbs and the "more in this category" block. */
+export function primaryCategory(event: EventData): string | null {
+  return event.categories[0] ?? null;
 }
 
 export function formatDayHeading(ymdDate: string): string {

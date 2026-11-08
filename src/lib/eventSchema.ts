@@ -21,6 +21,10 @@ export const GENERAL_EVENT_CATEGORIES = [
   "outdoors",
   "community",
   "holiday",
+  "comedy",
+  "film",
+  "kids",
+  "classes-and-workshops",
 ] as const;
 
 export type GeneralEventCategory = (typeof GENERAL_EVENT_CATEGORIES)[number];
@@ -35,6 +39,10 @@ export const GENERAL_EVENT_CATEGORY_LABELS: Record<GeneralEventCategory, string>
   outdoors: "Outdoor Events",
   community: "Community Events",
   holiday: "Holiday Events",
+  comedy: "Comedy",
+  film: "Movies and Film",
+  kids: "Kids' Events",
+  "classes-and-workshops": "Classes and Workshops",
 };
 
 export function isGeneralEventCategory(slug: string): slug is GeneralEventCategory {
@@ -47,12 +55,17 @@ export const eventSchema = z
   .object({
     id: z.string().min(1),
     slug: z.string().min(1),
+    public_slug: z.string().min(1).optional(),
+    city_slug: z.string().min(1).optional(),
+    path: z.string().min(1).optional(),
+    action_type: z.string().optional(),
     title: z.string().min(1),
     seo_title: z.string().optional(),
     description: z.string().optional(),
     start: z.string().min(1),
     end: z.string().nullish(),
     timezone: z.string().optional(),
+    time_tbd: z.boolean().nullish(),
     venue: textOrObject.nullish(),
     address: textOrObject.nullish(),
     city: z.string().nullish(),
@@ -61,6 +74,7 @@ export const eventSchema = z
     categories: z.array(z.string()).default([]),
     price: z.union([z.string(), z.number(), z.object({}).passthrough()]).nullish(),
     free: z.boolean().nullish(),
+    is_free: z.boolean().nullish(),
     registration_url: z.string().nullish(),
     image_url: z.string().nullish(),
     source_urls: z.array(z.string()).default([]),
