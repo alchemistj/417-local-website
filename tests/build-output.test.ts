@@ -10,7 +10,8 @@ import { GENERAL_EVENT_CATEGORIES } from "../src/lib/eventSchema";
 import { builtMonths, monthLabel, monthPageTitle } from "../src/lib/calendarView";
 import { eventSectionRoutes, listedCategories } from "../src/lib/eventRoutes";
 import { eventCitySlug, eventPath } from "../src/lib/eventPaths";
-import { hubWeekendPreview, thisWeekendView } from "../src/lib/events";
+import { thisWeekendView } from "../src/lib/events";
+import { uniqueUpcomingEvents } from "../src/lib/calendarView";
 import { readRecurringDir } from "../src/lib/recurring";
 import { listsIncludedInBuild } from "../src/lib/lists";
 import { buildRoutes } from "../src/lib/routes";
@@ -65,6 +66,12 @@ describe.skipIf(!built)("built site", () => {
     expect(notFound, "dist/404.html").toBeTruthy();
     expect((notFound!.html.match(/<h1[\s>]/g) ?? []).length).toBe(1);
     expect(notFound!.html).toMatch(/<meta name="robots" content="noindex/);
+  });
+
+  it("never hides a page behind .atf without the .atf-ready marker", () => {
+    for (const page of pages) {
+      if (/class="atf"/.test(page.html)) expect(page.html, page.route).toMatch(/class="atf-ready"/);
+    }
   });
 
   it("has exactly one <h1> on every page", () => {
@@ -307,16 +314,12 @@ describe.skipIf(!built)("built site", () => {
     expectCopy(cityHub, "/events/springfield/", eventsCopy.hub.seoTitle, eventsCopy.hub.description, eventsCopy.hub.h1, eventsCopy.hub.intro);
     expect(decode(cityHub)).toContain(eventsCopy.hub.businessLink);
 
-    const preview = hubWeekendPreview(springfield, builtAt);
-    if (preview.length === 0) {
-      expect(cityHub).not.toContain(eventsCopy.hub.weekendHeading);
-      expect(cityHub).not.toContain(">See all of this weekend<");
-    } else {
-      expect(cityHub).toContain(eventsCopy.hub.weekendHeading);
-      expect(cityHub).toContain(">See all of this weekend<");
-      expect(cityHub).toContain('href="/things-to-do-in-springfield-mo-this-weekend/"');
-      for (const event of preview) expect(decode(cityHub)).toContain(event.title);
-    }
+    const headings = [...cityHub.matchAll(/<h[1-6][^>]*>([\s\S]*?)<\/h[1-6]>/g)].map((m) => decode(m[1].replace(/<[^>]+>/g, "")));
+    expect(headings.some((text) => /this weekend/i.test(text))).toBe(false);
+    expect(cityHub).toContain('href="/things-to-do-in-springfield-mo-this-weekend/"');
+    const unique = uniqueUpcomingEvents(springfield, [], "springfield", builtAt);
+    if (unique.length > 0) expect(headings).toContain(eventsCopy.hub.upcomingHeading);
+    for (const event of unique) expect(decode(cityHub)).toContain(event.title);
 
     const builtCategories = listedCategories(springfield, builtAt);
     for (const slug of GENERAL_EVENT_CATEGORIES) {

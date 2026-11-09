@@ -53,6 +53,33 @@ export function dontMissEvents(events: EventData[], now: Date, limit = 6): Event
   })).slice(0, limit);
 }
 
+/**
+ * Unique (one-off) upcoming events from today through today + 27 days (28 days, US Central dates).
+ * An event is treated as recurring, and left out, when its title matches an active recurring series
+ * or the same title is on more than one date among the city's upcoming events.
+ */
+export function uniqueUpcomingEvents(events: EventData[], recurring: RecurringItem[], city: string, now: Date, days = 28): EventData[] {
+  const seriesTitles = new Set(
+    recurring.filter((item) => item.active !== false && recurringCitySlug(item) === city).map((item) => norm(item.title)),
+  );
+  const cityUpcoming = events.filter((event) => eventCitySlug(event) === city && isUpcoming(event, now));
+  const datesByTitle = new Map<string, Set<string>>();
+  for (const event of cityUpcoming) {
+    const key = norm(event.title);
+    const dates = datesByTitle.get(key) ?? new Set<string>();
+    dates.add(eventChicagoDate(event));
+    datesByTitle.set(key, dates);
+  }
+  const start = chicagoYmd(now);
+  const end = addDaysToYmd(start, days - 1);
+  return sortByStart(cityUpcoming.filter((event) => {
+    const date = eventChicagoDate(event);
+    if (date < start || date > end) return false;
+    const key = norm(event.title);
+    return !seriesTitles.has(key) && (datesByTitle.get(key)?.size ?? 0) <= 1;
+  }));
+}
+
 export function eventsOnDate(events: EventData[], city: string, date: string, now: Date): EventData[] {
   return sortByStart(events.filter((event) => eventCitySlug(event) === city && isUpcoming(event, now) && eventChicagoDate(event) === date));
 }

@@ -2,7 +2,7 @@ import { mkdtempSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { buildMonthGrid, dateStrip, dontMissEvents, eventListTime, groupEventsByDay, monthNav } from "../src/lib/calendarView";
+import { buildMonthGrid, dateStrip, dontMissEvents, eventListTime, uniqueUpcomingEvents, groupEventsByDay, monthNav } from "../src/lib/calendarView";
 import { eventSchema, type EventData } from "../src/lib/eventSchema";
 import { eventChips, eventSectionRoutes } from "../src/lib/eventRoutes";
 import { assertNoReservedEventSlug, eventPath, isReservedEventSlug } from "../src/lib/eventPaths";
@@ -247,5 +247,39 @@ describe("recurring folder", () => {
     expect(strip.ranges.map((item) => item.title)).toEqual(["Today", "Tomorrow", "This weekend", "Next 7 days", "Pick a date"]);
     expect(strip.ranges[0]?.detail).toContain("1 event");
     expect(strip.ranges[4]?.href).toBe("/events/springfield/calendar/");
+  });
+});
+
+describe("uniqueUpcomingEvents", () => {
+  const e = (id: string, title: string, start: string, extra: Partial<EventData> = {}) => ev({ id, title, start, ...extra });
+  const list = (events: EventData[], recurring: RecurringItem[] = []) =>
+    uniqueUpcomingEvents(events, recurring, "springfield", sunday).map((event) => event.id);
+
+  it("covers today through day 27 and drops past events", () => {
+    const events = [
+      e("past", "Past Show", "2026-11-01T19:00:00-06:00"),
+      e("today", "Today Show", "2026-11-08T19:00:00-06:00"),
+      e("day27", "Last Day Show", "2026-12-05T19:00:00-06:00"),
+      e("day28", "Too Far Show", "2026-12-06T19:00:00-06:00"),
+    ];
+    expect(list(events)).toEqual(["today", "day27"]);
+  });
+
+  it("leaves out titles that repeat on several dates", () => {
+    const events = [
+      e("w1", "Total Workout", "2026-11-09T09:00:00-06:00"),
+      e("w2", "Total Workout", "2026-11-16T09:00:00-06:00"),
+      e("one", "Craft Fair", "2026-11-14T10:00:00-06:00"),
+    ];
+    expect(list(events)).toEqual(["one"]);
+  });
+
+  it("leaves out events that match an active recurring series and other cities", () => {
+    const events = [
+      e("s1", "SilverSneakers Classic", "2026-11-10T09:00:00-06:00"),
+      e("one", "Craft Fair", "2026-11-14T10:00:00-06:00"),
+      e("rep", "Republic Parade", "2026-11-14T10:00:00-06:00", { city: "Republic" }),
+    ];
+    expect(list(events, [series({ id: "ss", title: "SilverSneakers classic" })])).toEqual(["one"]);
   });
 });

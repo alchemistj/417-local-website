@@ -38,7 +38,7 @@ From top to bottom:
    "Sat 14 · 9 events".
    - "Pick a date" opens the month grid.
    - On phones it's a swipeable row of the next 14 days (weekday, date and count), each linking to its day page.
-3. **This weekend:** up to 6 one-off events from Friday through Sunday, then a "See all of this weekend" link.
+3. **Coming up:** unique one-off events for the next 28 days (today through today + 27), grouped by day. Titles that repeat on several dates, or match a recurring series, are left out. The weekend list lives on its own page, reached from the hero button.
 4. **Don't miss this month:** up to 6 standout one-off events in the next 30 days. A standout event meets at least one of these:
    - it's in `festivals` or `holiday`;
    - its venue is one of the big venues (Great Southern Bank Arena, Juanita K. Hammons Hall, Gillioz Theatre, Hammons Field);

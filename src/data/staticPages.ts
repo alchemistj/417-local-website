@@ -92,14 +92,13 @@ export interface CityPageCopy {
   emptyState: string;
 }
 
-export function cityHubCopy(citySlug: string): CityPageCopy & { weekendHeading: string; businessLink: string; weekendLink: string } {
+export function cityHubCopy(citySlug: string): CityPageCopy & { upcomingHeading: string; businessLink: string } {
   return {
     h1: cityCopy(eventsCopy.hub.h1, citySlug),
     intro: eventsCopy.hub.intro.map((paragraph) => cityCopy(paragraph, citySlug)),
     emptyState: cityCopy(eventsCopy.hub.emptyState, citySlug),
-    weekendHeading: cityCopy(eventsCopy.hub.weekendHeading, citySlug),
+    upcomingHeading: cityCopy(eventsCopy.hub.upcomingHeading, citySlug),
     businessLink: eventsCopy.hub.businessLink,
-    weekendLink: cityCopy(eventsCopy.hub.weekendLink, citySlug),
   };
 }
 

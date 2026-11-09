@@ -18,9 +18,8 @@
       "We update the list daily. Details can change, so confirm times and tickets with the organizer before you go."
     ],
     "emptyState": "We have no events listed right now. Check back soon, since the list is updated daily.",
-    "weekendHeading": "This Weekend in Springfield",
-    "businessLink": "Looking for networking, workshops and chamber-style meetups? See our business events page.",
-    "weekendLink": "Making weekend plans? See our guide to things to do in Springfield, MO this weekend."
+    "upcomingHeading": "Coming up in Springfield",
+    "businessLink": "Looking for networking, workshops and chamber-style meetups? See our business events page."
   },
   "thisWeekend": {
     "seoTitle": "Things to Do in Springfield, MO This Weekend | 417 Local",
