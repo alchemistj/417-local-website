@@ -126,6 +126,23 @@ function addCalendarDays(date: CalendarDate, days: number): CalendarDate {
   };
 }
 
+/** America/Chicago calendar date for an instant, as `YYYY-MM-DD`. */
+export function chicagoYmd(now: Date): string {
+  return ymd(chicagoDateParts(now));
+}
+
+/** Shift a `YYYY-MM-DD` calendar date by a number of days. */
+export function addDaysToYmd(ymdDate: string, days: number): string {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(ymdDate);
+  if (!match) return ymdDate;
+  return ymd(addCalendarDays({
+    year: Number(match[1]),
+    month: Number(match[2]),
+    day: Number(match[3]),
+    weekday: 0,
+  }, days));
+}
+
 /**
  * Friday through Sunday in America/Chicago.
  * Monday–Thursday use the coming weekend. Friday–Sunday use the weekend already underway.
@@ -159,7 +176,7 @@ export function calendarDaysAfter(event: EventData, now: Date): number {
   return today - eventDay;
 }
 
-/** Hubs, category pages and the sitemap keep an event until 30 days after its date. */
+/** The sitemap keeps an event until 30 days after its date. Lists use `isUpcoming`. */
 export function isListedEvent(event: EventData, now: Date): boolean {
   return calendarDaysAfter(event, now) < 30;
 }
@@ -167,12 +184,6 @@ export function isListedEvent(event: EventData, now: Date): boolean {
 /** The event page stays indexable until 90 days after its date. */
 export function isIndexableEvent(event: EventData, now: Date): boolean {
   return calendarDaysAfter(event, now) < 90;
-}
-
-/** Copy the event into the past-events archive when its date is within 2 days of today. */
-export function shouldArchiveEvent(event: EventData, now: Date): boolean {
-  const days = calendarDaysAfter(event, now);
-  return Number.isFinite(days) && Math.abs(days) <= 2;
 }
 
 /** The first category is the one used in breadcrumbs and the "more in this category" block. */

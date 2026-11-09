@@ -1,7 +1,7 @@
 import { getCollection } from "astro:content";
 import { assertListFileSlug, assertNoSlugCollision, listsIncludedInBuild, type ListSummary } from "./lists";
 import { eventSectionRoutes } from "./eventRoutes";
-import { getSiteEvents } from "./loadEvents";
+import { getRecurring, getSiteEvents } from "./loadEvents";
 import { buildRoutes, type PostSummary, type RouteEntry } from "./routes";
 
 export async function getPostSummaries(): Promise<PostSummary[]> {
@@ -36,9 +36,10 @@ export async function getRouteRegistry(now: Date = new Date()): Promise<RouteEnt
   const posts = await getPostSummaries();
   const lists = await getListSummaries();
   const events = await getSiteEvents();
+  const recurring = await getRecurring();
   assertNoSlugCollision(
     posts.map((post) => post.slug),
     lists.map((list) => list.slug),
   );
-  return buildRoutes(posts, listsIncludedInBuild(lists), eventSectionRoutes(events, now));
+  return buildRoutes(posts, listsIncludedInBuild(lists), eventSectionRoutes(events, now, recurring));
 }

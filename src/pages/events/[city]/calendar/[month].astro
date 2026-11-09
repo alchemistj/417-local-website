@@ -1,0 +1,50 @@
+---
+import type { GetStaticPaths } from "astro";
+import MonthBoard from "../../../../components/MonthBoard.astro";
+import { cityHubPage } from "../../../../data/staticPages";
+import EventsLayout from "../../../../layouts/EventsLayout.astro";
+import { builtMonths, monthPageModel } from "../../../../lib/calendarView";
+import { eventChips, citiesWithEvents } from "../../../../lib/eventRoutes";
+import { cityDisplayName } from "../../../../lib/eventPaths";
+import { getRecurring, getSiteEvents } from "../../../../lib/loadEvents";
+
+export const getStaticPaths = (async () => {
+  const now = new Date();
+  const events = await getSiteEvents();
+  return citiesWithEvents(events).flatMap((city) =>
+    builtMonths(now).slice(1).map((month) => ({
+      params: { city, month: `${month.year}-${String(month.month).padStart(2, "0")}` },
+    })),
+  );
+}) satisfies GetStaticPaths;
+
+const city = Astro.params.city;
+const monthParam = Astro.params.month;
+const match = /^(\d{4})-(\d{2})$/.exec(monthParam ?? "");
+if (!city || !match) throw new Error("Missing calendar month");
+const now = new Date();
+const events = await getSiteEvents();
+const recurring = await getRecurring();
+const model = monthPageModel(city, Number(match[1]), Number(match[2]), events, recurring, now);
+const hub = cityHubPage(city);
+const cityName = cityDisplayName(city);
+---
+
+<EventsLayout
+  meta={{ path: model.path, title: model.title, description: model.description, label: model.label }}
+  h1={model.h1}
+  intro={model.intro}
+  chips={eventChips(city, events, now, "")}
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Events", path: "/events/" },
+    { name: cityName, path: hub.path },
+    { name: model.label, path: model.path },
+  ]}
+>
+  <nav class="month-nav" aria-label="Months">
+    {model.prev ? <a href={model.prev.href}>← {model.prev.label}</a> : <span></span>}
+    {model.next && <a href={model.next.href}>{model.next.label} →</a>}
+  </nav>
+  <MonthBoard grid={model.grid} />
+</EventsLayout>

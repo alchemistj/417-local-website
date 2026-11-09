@@ -1,0 +1,16 @@
+---
+import type { EventChip } from "../lib/eventRoutes";
+
+interface Props {
+  chips: EventChip[];
+}
+const { chips } = Astro.props;
+---
+
+<nav aria-label="Event categories">
+  <ul class="event-chips">
+    {chips.map((chip) => (
+      <li><a href={chip.href} aria-current={chip.current ? "page" : undefined}>{chip.label}</a></li>
+    ))}
+  </ul>
+</nav>

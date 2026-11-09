@@ -1,0 +1,37 @@
+---
+/** Free and Kids toggles. Without JavaScript every row stays visible. */
+---
+
+<div class="event-filters" data-event-filters>
+  <button type="button" aria-pressed="false" data-filter="free">Free</button>
+  <button type="button" aria-pressed="false" data-filter="kids">Kids</button>
+</div>
+<script is:inline>
+  (function () {
+    const root = document.querySelector("[data-event-filters]");
+    if (!root || root.getAttribute("data-ready")) return;
+    root.setAttribute("data-ready", "true");
+    function pressed(name) {
+      const button = root.querySelector('[data-filter="' + name + '"]');
+      return button && button.getAttribute("aria-pressed") === "true";
+    }
+    function apply() {
+      const free = pressed("free");
+      const kids = pressed("kids");
+      document.querySelectorAll("[data-event-row]").forEach(function (row) {
+        const show = (!free || row.getAttribute("data-free") === "true") && (!kids || row.getAttribute("data-kids") === "true");
+        row.hidden = !show;
+      });
+      document.querySelectorAll("[data-event-day]").forEach(function (day) {
+        day.hidden = !day.querySelector("[data-event-row]:not([hidden])");
+      });
+    }
+    root.addEventListener("click", function (event) {
+      const target = event.target;
+      const button = target && target.closest ? target.closest("[data-filter]") : null;
+      if (!button || !root.contains(button)) return;
+      button.setAttribute("aria-pressed", button.getAttribute("aria-pressed") === "true" ? "false" : "true");
+      apply();
+    });
+  })();
+</script>

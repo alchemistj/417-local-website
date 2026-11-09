@@ -1,14 +1,21 @@
 ---
 import type { EventData } from "../lib/eventSchema";
-import { formatEventDate, formatPrice, placeName } from "../lib/events";
+import { groupEventsByDay, eventListTime, isKidsEvent, showsFreeTag } from "../lib/calendarView";
+import { categoryLabel } from "../lib/eventPage";
+import { placeName } from "../lib/events";
 import { eventPath } from "../lib/eventPaths";
 
 interface Props {
   events: EventData[];
   /** When set, replaces the business-events empty sentence. */
   emptyMessage?: string;
+  /** Keeps day-header ids unique when more than one list is on the page. */
+  idPrefix?: string;
+  /** Day pages already name the date in the H1. */
+  headings?: boolean;
 }
-const { events, emptyMessage } = Astro.props;
+const { events, emptyMessage, idPrefix = "events", headings = true } = Astro.props;
+const groups = groupEventsByDay(events);
 ---
 
 {events.length === 0 ? (
@@ -23,17 +30,38 @@ const { events, emptyMessage } = Astro.props;
     )}
   </div>
 ) : (
-  <ul class="event-list">
-    {events.map((e) => {
-      const place = [placeName(e.venue), e.city].filter(Boolean).join(", ");
-      const price = formatPrice(e);
-      return (
-        <li>
-          <h3><a href={eventPath(e)}>{e.title}</a></h3>
-          <p class="event-meta">{formatEventDate(e)}{place && ` · ${place}`}{price && ` · ${price}`}</p>
-          {e.description && <p>{e.description}</p>}
-        </li>
-      );
-    })}
-  </ul>
+  groups.map((group) => (
+    <section class="event-day" data-event-day aria-labelledby={headings ? `day-${idPrefix}-${group.date}` : undefined}>
+      {headings && <h2 id={`day-${idPrefix}-${group.date}`} class="event-day-head">{group.heading}</h2>}
+      <ul class="event-rows">
+        {group.events.map((event) => {
+          const city = typeof event.city === "string" ? event.city.trim() : "";
+          const place = [placeName(event.venue), city].filter(Boolean).join(" · ");
+          const tags = event.categories.slice(0, 2).map((slug) => categoryLabel(slug));
+          return (
+            <li
+              class="event-row"
+              data-event-row
+              data-free={showsFreeTag(event) ? "true" : undefined}
+              data-kids={isKidsEvent(event) ? "true" : undefined}
+            >
+              <p class="event-time">{eventListTime(event)}</p>
+              <div>
+                <p class="event-line">
+                  <a href={eventPath(event)}>{event.title}</a>
+                  {place && <span class="event-place"> · {place}</span>}
+                </p>
+                {(tags.length > 0 || showsFreeTag(event)) && (
+                  <p class="event-tags">
+                    {tags.map((tag) => <span class="event-tag">{tag}</span>)}
+                    {showsFreeTag(event) && <span class="event-tag">Free</span>}
+                  </p>
+                )}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  ))
 )}

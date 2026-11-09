@@ -1,6 +1,10 @@
 ---
 import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
+import DayPage from "../../../components/DayPage.astro";
+import AddToCalendar from "../../../components/AddToCalendar.astro";
+import EventChips from "../../../components/EventChips.astro";
+import EventFilters from "../../../components/EventFilters.astro";
 import EventList from "../../../components/EventList.astro";
 import CtaBand from "../../../components/CtaBand.astro";
 import { cityHubPage, generalCategoryCopy, generalCategoryPage } from "../../../data/staticPages";
@@ -9,7 +13,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { eventAction } from "../../../lib/eventAction";
 import { googleCalendarUrl } from "../../../lib/eventCalendar";
 import { isGeneralEventCategory, type EventData, type GeneralEventCategory } from "../../../lib/eventSchema";
-import { citiesWithEvents, listedCategories } from "../../../lib/eventRoutes";
+import { citiesWithEvents, eventChips, listedCategories } from "../../../lib/eventRoutes";
 import {
   assertNoReservedEventSlug,
   assertUniqueEventPaths,
@@ -21,6 +25,13 @@ import {
   mapsSearchUrl,
   venueGuidePath,
 } from "../../../lib/eventPaths";
+import {
+  dayPageDates,
+  dayPageDescription,
+  dayPageH1,
+  dayPageTitle,
+  eventsOnDate,
+} from "../../../lib/calendarView";
 import {
   categoryLabel,
   eventBreadcrumbLd,
@@ -35,8 +46,9 @@ import {
   relatedUpcoming,
   sourceCredit,
 } from "../../../lib/eventPage";
-import { isIndexableEvent, isListedEvent, isUpcoming, placeName, primaryCategory } from "../../../lib/events";
-import { getSiteEvents } from "../../../lib/loadEvents";
+import { isIndexableEvent, isUpcoming, placeName, primaryCategory } from "../../../lib/events";
+import { getRecurring, getSiteEvents } from "../../../lib/loadEvents";
+import { recurringOnDate } from "../../../lib/recurring";
 import { absoluteUrl } from "../../../lib/site";
 
 interface EventProps {
@@ -49,9 +61,15 @@ interface CategoryProps {
   category: GeneralEventCategory;
 }
 
+interface DayProps {
+  kind: "day";
+  date: string;
+}
+
 export const getStaticPaths = (async () => {
   const now = new Date();
   const events = await getSiteEvents();
+  const recurring = await getRecurring();
   assertNoReservedEventSlug(events);
   assertUniqueEventPaths(events);
   const eventPaths = events.map((event) => ({
@@ -67,22 +85,46 @@ export const getStaticPaths = (async () => {
       props: { kind: "category" as const, category },
     })),
   );
-  return [...categoryPaths, ...eventPaths];
+  const dayPaths = citiesWithEvents(events).flatMap((citySlug) =>
+    dayPageDates(citySlug, events, recurring, now).map((date) => ({
+      params: { city: citySlug, event: date },
+      props: { kind: "day" as const, date },
+    })),
+  );
+  return [...categoryPaths, ...dayPaths, ...eventPaths];
 }) satisfies GetStaticPaths;
 
-const props = Astro.props as EventProps | CategoryProps;
+const props = Astro.props as EventProps | CategoryProps | DayProps;
 const city = Astro.params.city;
 if (!city) throw new Error("Missing city");
 const now = new Date();
 const allEvents = await getSiteEvents();
+const recurring = await getRecurring();
+const cityName = cityDisplayName(city);
+const hub = cityHubPage(city);
+
+const dayDate = props.kind === "day" ? props.date : null;
+const dayEvents = dayDate ? eventsOnDate(allEvents, city, dayDate, now) : [];
+const dayWeekly = dayDate ? recurringOnDate(recurring, city, dayDate) : [];
+const dayDates = dayDate ? dayPageDates(city, allEvents, recurring, now) : [];
+const dayIndex = dayDate ? dayDates.indexOf(dayDate) : -1;
+const prevDay = dayIndex > 0 ? dayDates[dayIndex - 1] ?? null : null;
+const nextDay = dayIndex >= 0 && dayIndex < dayDates.length - 1 ? dayDates[dayIndex + 1] ?? null : null;
+const dayMeta = dayDate
+  ? {
+      path: `/events/${city}/${dayDate}/`,
+      title: dayPageTitle(cityName, dayDate),
+      description: dayPageDescription(cityName, dayDate, dayEvents, dayWeekly.map((item) => item.title)),
+      label: dayPageH1(cityName, dayDate),
+    }
+  : null;
 
 const category = props.kind === "category" ? props.category : null;
 const categoryEvents = category
-  ? allEvents.filter((event) => eventCitySlug(event) === city && event.categories.includes(category) && isListedEvent(event, now))
+  ? allEvents.filter((event) => eventCitySlug(event) === city && event.categories.includes(category) && isUpcoming(event, now))
   : [];
 const categoryCopy = category && isGeneralEventCategory(category) ? generalCategoryCopy(category, city) : null;
 const categoryMeta = category && isGeneralEventCategory(category) ? generalCategoryPage(category, city) : null;
-const hub = cityHubPage(city);
 
 const event = props.kind === "event" ? props.event : null;
 const passed = event ? !isUpcoming(event, now) : false;
@@ -102,7 +144,6 @@ const posts = event
 const venuePost = venue ? venueGuidePath(venue, posts) : null;
 const venueHref = venuePost || maps;
 const venueExternal = !venuePost;
-const cityName = cityDisplayName(city);
 const state = event && typeof event.state === "string" && event.state.trim() ? event.state.trim() : "MO";
 const addressLine = [address, cityName, state].filter(Boolean).join(", ");
 const nearby = event && !passed ? nearbyEvents(event, allEvents, now) : [];
@@ -112,10 +153,10 @@ const categorySlug = event ? primaryCategory(event) : null;
 const categoryCrumb = (() => {
   if (!categorySlug) return null;
   if (isGeneralEventCategory(categorySlug)) {
-    const listed = allEvents.some(
-      (item) => eventCitySlug(item) === city && item.categories.includes(categorySlug) && isListedEvent(item, now),
+    const upcoming = allEvents.some(
+      (item) => eventCitySlug(item) === city && item.categories.includes(categorySlug) && isUpcoming(item, now),
     );
-    if (!listed) return null;
+    if (!upcoming) return null;
     return { name: categoryLabel(categorySlug), path: `/events/${city}/${categorySlug}/` };
   }
   if (isBusinessCategory(categorySlug)) {
@@ -135,20 +176,36 @@ const crumbs = event
 const outbound = (href: string) => href.startsWith("http");
 ---
 
-{category && categoryCopy && categoryMeta ? (
+{dayDate && dayMeta ? (
+  <DayPage
+    meta={dayMeta}
+    h1={dayPageH1(cityName, dayDate)}
+    city={city}
+    cityName={cityName}
+    hubPath={hub.path}
+    events={dayEvents}
+    weekly={dayWeekly}
+    prev={prevDay}
+    next={nextDay}
+    chips={eventChips(city, allEvents, now, "")}
+  />
+) : category && categoryCopy && categoryMeta ? (
   <EventsLayout
     meta={categoryMeta}
     h1={categoryCopy.h1}
     intro={categoryCopy.intro}
-    events={categoryEvents}
-    emptyMessage={categoryCopy.emptyState}
+    chips={eventChips(city, allEvents, now, categoryMeta.path)}
+    backLink={{ href: hub.path, label: `← All ${cityName} events` }}
     crumbs={[
       { name: "Home", path: "/" },
       { name: "Events", path: "/events/" },
       { name: hub.label, path: hub.path },
       { name: categoryCopy.h1, path: categoryMeta.path },
     ]}
-  />
+  >
+    {categoryEvents.length > 0 && <EventFilters />}
+    <EventList events={categoryEvents} emptyMessage={categoryCopy.emptyState} idPrefix={category} />
+  </EventsLayout>
 ) : event ? (
   <BaseLayout
     title={eventPageTitle(event)}
@@ -179,16 +236,10 @@ const outbound = (href: string) => href.startsWith("http");
             {action?.secondary?.href && (
               <a class="text-link" href={action.secondary.href} rel={outbound(action.secondary.href) ? "noopener" : undefined}>{action.secondary.label}</a>
             )}
-            <details class="cal-menu">
-              <summary class="btn btn-light">Add to calendar</summary>
-              <div class="cal-links">
-                <a href={googleUrl} rel="noopener">Google Calendar</a>
-                <a href={icsPath}>Apple Calendar</a>
-                <a href={icsPath} download={`${eventPublicSlug(event)}.ics`}>Download (.ics)</a>
-              </div>
-            </details>
+            <AddToCalendar light googleUrl={googleUrl} icsPath={icsPath} downloadName={`${eventPublicSlug(event)}.ics`} />
           </div>
         )}
+        <EventChips chips={eventChips(city, allEvents, now, "")} />
       </div>
     </section>
     <section class="band">
@@ -196,7 +247,7 @@ const outbound = (href: string) => href.startsWith("http");
         {passed && related.length > 0 && (
           <section class="related-block" aria-labelledby="related-heading">
             <h2 id="related-heading">Coming up in {cityName}</h2>
-            <EventList events={related} />
+            <EventList events={related} idPrefix="related" />
           </section>
         )}
         {event.description && <p>{event.description}</p>}
@@ -209,13 +260,13 @@ const outbound = (href: string) => href.startsWith("http");
         {nearby.length > 0 && (
           <section class="related-block" aria-labelledby="nearby-heading">
             <h2 id="nearby-heading">More this weekend in {cityName}</h2>
-            <EventList events={nearby} />
+            <EventList events={nearby} idPrefix="nearby" />
           </section>
         )}
         {more.length > 0 && categorySlug && (
           <section class="related-block" aria-labelledby="more-heading">
             <h2 id="more-heading">More {categoryLabel(categorySlug)} in {cityName}</h2>
-            <EventList events={more} />
+            <EventList events={more} idPrefix="more" />
           </section>
         )}
         <p class="source-note">{sourceCredit(event)}</p>

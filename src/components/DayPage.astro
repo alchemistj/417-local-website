@@ -1,0 +1,60 @@
+---
+import EventFilters from "./EventFilters.astro";
+import EventList from "./EventList.astro";
+import EventsLayout from "../layouts/EventsLayout.astro";
+import type { StaticPageMeta } from "../data/staticPages";
+import type { EventChip } from "../lib/eventRoutes";
+import type { EventData } from "../lib/eventSchema";
+import { formatDayHeading } from "../lib/events";
+import { recurringPlace, recurringWhen, seriesPath, type RecurringItem } from "../lib/recurring";
+
+interface Props {
+  meta: StaticPageMeta;
+  h1: string;
+  cityName: string;
+  hubPath: string;
+  events: EventData[];
+  weekly: RecurringItem[];
+  prev: string | null;
+  next: string | null;
+  chips: EventChip[];
+  city: string;
+}
+const { meta, h1, cityName, hubPath, events, weekly, prev, next, chips, city } = Astro.props;
+---
+
+<EventsLayout
+  meta={meta}
+  h1={h1}
+  intro={`What is happening in ${cityName} on this day. One-off events are listed by start time.`}
+  chips={chips}
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Events", path: "/events/" },
+    { name: cityName, path: hubPath },
+    { name: h1, path: meta.path },
+  ]}
+>
+  <nav class="day-nav" aria-label="Nearby days">
+    {prev ? <a href={`/events/${city}/${prev}/`}>← {formatDayHeading(prev)}</a> : <span></span>}
+    {next && <a href={`/events/${city}/${next}/`}>{formatDayHeading(next)} →</a>}
+  </nav>
+  {events.length > 0 && <EventFilters />}
+  {events.length > 0 && <EventList events={events} headings={false} idPrefix="day" />}
+  {weekly.length > 0 && (
+    <section id="weekly" aria-labelledby="weekly-heading">
+      <h2 id="weekly-heading">Weekly happenings this day</h2>
+      <ul class="weekly-list">
+        {weekly.map((item) => {
+          const detail = [recurringWhen(item), recurringPlace(item.venue)].filter(Boolean).join(" · ");
+          return (
+            <li>
+              <a href={seriesPath(item)}>{item.title}</a>
+              {detail && <span class="event-place"> {detail}</span>}
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  )}
+</EventsLayout>

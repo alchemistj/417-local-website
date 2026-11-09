@@ -9,7 +9,7 @@ import {
   reservedEventSlugs,
   venueGuidePath,
 } from "../src/lib/eventPaths";
-import { calendarDaysAfter, isIndexableEvent, isListedEvent, shouldArchiveEvent } from "../src/lib/events";
+import { calendarDaysAfter, isIndexableEvent, isListedEvent } from "../src/lib/events";
 import { eventMetaDescription, eventPageTitle } from "../src/lib/eventPage";
 import { readSiteEvents } from "./helpers/events";
 
@@ -85,7 +85,7 @@ describe("reserved event slugs", () => {
 });
 
 describe("past event window", () => {
-  it("lists an event for 30 days, indexes it for 90, and archives it within 2 days", () => {
+  it("lists an event on the sitemap for 30 days and indexes it for 90", () => {
     const on = (start: string) => ev({ id: start, title: start, start });
     expect(calendarDaysAfter(on("2026-11-04T18:00:00-06:00"), wednesday)).toBe(0);
     expect(calendarDaysAfter(on("2026-10-06T20:00:00-05:00"), wednesday)).toBe(29);
@@ -94,12 +94,6 @@ describe("past event window", () => {
     expect(isListedEvent(on("2026-10-05T20:00:00-05:00"), wednesday)).toBe(false);
     expect(isIndexableEvent(on("2026-08-07T12:00:00-05:00"), wednesday)).toBe(true);
     expect(isIndexableEvent(on("2026-08-06T12:00:00-05:00"), wednesday)).toBe(false);
-
-    expect(shouldArchiveEvent(on("2026-11-04"), wednesday)).toBe(true);
-    expect(shouldArchiveEvent(on("2026-11-02"), wednesday)).toBe(true);
-    expect(shouldArchiveEvent(on("2026-11-06"), wednesday)).toBe(true);
-    expect(shouldArchiveEvent(on("2026-11-01"), wednesday)).toBe(false);
-    expect(shouldArchiveEvent(on("2026-11-07"), wednesday)).toBe(false);
   });
 
   it("drops a 30-day-old event from the sitemap and a 90-day-old event from the index", () => {
@@ -111,7 +105,8 @@ describe("past event window", () => {
     expect(byId("recent")).toMatchObject({ indexable: true, sitemap: true, llms: false });
     expect(byId("stale")).toMatchObject({ indexable: false, sitemap: false, llms: false });
     expect(byId("soon")).toMatchObject({ indexable: true, sitemap: true, llms: true });
-    expect(routes.map((route) => route.path)).toContain("/events/springfield/live-music/");
+    expect(routes.map((route) => route.path)).not.toContain("/events/springfield/live-music/");
+    expect(routes.map((route) => route.path)).toContain("/events/springfield/family/");
     expect(routes.map((route) => route.path)).not.toContain("/events/springfield/sports/");
   });
 });

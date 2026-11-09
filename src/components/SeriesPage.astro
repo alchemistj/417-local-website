@@ -1,0 +1,79 @@
+---
+import AddToCalendar from "./AddToCalendar.astro";
+import EventsLayout from "../layouts/EventsLayout.astro";
+import { cityHubPage } from "../data/staticPages";
+import { eventChips } from "../lib/eventRoutes";
+import { getRecurring, getSiteEvents } from "../lib/loadEvents";
+import { cityDisplayName } from "../lib/eventPaths";
+import {
+  formatSeriesDate,
+  recurringCitySlug,
+  recurringPlace,
+  recurringWhen,
+  seriesAction,
+  seriesGoogleUrl,
+  seriesMapsUrl,
+  seriesMeta,
+  seriesPath,
+  seriesSlug,
+  upcomingDates,
+  type RecurringItem,
+} from "../lib/recurring";
+
+interface Props {
+  item: RecurringItem;
+}
+const { item } = Astro.props;
+const now = new Date();
+const city = recurringCitySlug(item);
+const cityName = cityDisplayName(city);
+const hub = cityHubPage(city);
+const metaInfo = seriesMeta(await getRecurring()).get(item.id);
+if (!metaInfo) throw new Error(`Missing series page text for ${item.id}`);
+const when = recurringWhen(item);
+const venue = recurringPlace(item.venue);
+const address = recurringPlace(item.address);
+const state = "MO";
+const addressLine = [address, cityName, state].filter(Boolean).join(", ");
+const dates = upcomingDates(item, now, 8);
+const action = seriesAction(item);
+const googleUrl = seriesGoogleUrl(item, now);
+const path = seriesPath(item);
+const chips = eventChips(city, await getSiteEvents(), now, "");
+const outbound = (href: string) => href.startsWith("http");
+---
+
+<EventsLayout
+  meta={{ path, title: metaInfo.title, description: metaInfo.description, label: item.title }}
+  h1={item.title}
+  intro={when || `A recurring happening in ${cityName}.`}
+  chips={chips}
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Events", path: "/events/" },
+    { name: cityName, path: hub.path },
+    { name: "Weekly happenings", path: `/events/${city}/weekly/` },
+    { name: item.title, path },
+  ]}
+>
+  <div slot="band" class="event-actions">
+    {action && (
+      <a class="btn btn-light" href={action.href} rel={outbound(action.href) ? "noopener" : undefined}>{action.label}</a>
+    )}
+    {googleUrl && <AddToCalendar light googleUrl={googleUrl} icsPath={`${path}event.ics`} downloadName={`${seriesSlug(item)}.ics`} />}
+  </div>
+  {(venue || address) && (
+    <p>
+      {[venue, addressLine].filter(Boolean).join(", ")}{" "}
+      <a href={seriesMapsUrl(item)} rel="noopener">Get directions</a>
+    </p>
+  )}
+  {dates.length > 0 && (
+    <section aria-labelledby="next-dates">
+      <h2 id="next-dates">Next dates</h2>
+      <ul>
+        {dates.map((date) => <li>{formatSeriesDate(date)}</li>)}
+      </ul>
+    </section>
+  )}
+</EventsLayout>
