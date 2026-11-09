@@ -1,47 +1,19 @@
 ---
 import type { GetStaticPaths } from "astro";
-import EventList from "../../../components/EventList.astro";
-import { cityHubPage, cityWeekendCopy, cityWeekendPage } from "../../../data/staticPages";
-import EventsLayout from "../../../layouts/EventsLayout.astro";
-import { eventChips, citiesWithEvents } from "../../../lib/eventRoutes";
-import { eventCitySlug } from "../../../lib/eventPaths";
-import { thisWeekendView } from "../../../lib/events";
+import WeekendPage from "../../../components/WeekendPage.astro";
+import { citiesWithEvents } from "../../../lib/eventRoutes";
 import { getSiteEvents } from "../../../lib/loadEvents";
 
+// Springfield's weekend guide lives at its own flat address; other cities keep this one.
 export const getStaticPaths = (async () => {
   const events = await getSiteEvents();
-  return citiesWithEvents(events).map((city) => ({ params: { city } }));
+  return citiesWithEvents(events)
+    .filter((city) => city !== "springfield")
+    .map((city) => ({ params: { city } }));
 }) satisfies GetStaticPaths;
 
 const city = Astro.params.city;
 if (!city) throw new Error("Missing city");
-const now = new Date();
-const events = (await getSiteEvents()).filter((event) => eventCitySlug(event) === city);
-const view = thisWeekendView(events, now);
-const listed = view.mode === "weekend" ? view.groups.flatMap((group) => group.events) : view.fallback;
-const page = cityWeekendCopy(city);
-const meta = cityWeekendPage(city);
-const hub = cityHubPage(city);
 ---
 
-<EventsLayout
-  meta={meta}
-  h1={page.h1}
-  intro={page.intro}
-  chips={eventChips(city, events, now, "")}
-  crumbs={[
-    { name: "Home", path: "/" },
-    { name: "Events", path: "/events/" },
-    { name: hub.label, path: hub.path },
-    { name: page.h1, path: meta.path },
-  ]}
->
-  {view.mode === "weekend" ? (
-    <EventList events={listed} idPrefix="weekend" />
-  ) : (
-    <>
-      <p class="empty-state">{page.emptyState}</p>
-      {listed.length > 0 && <EventList events={listed} idPrefix="weekend" />}
-    </>
-  )}
-</EventsLayout>
+<WeekendPage city={city} />

@@ -1,5 +1,5 @@
 import type { EventData } from "./eventSchema";
-import { eventPath, eventCitySlug, cityDisplayName } from "./eventPaths";
+import { eventPath, eventCitySlug, cityDisplayName, cityWeekendPath } from "./eventPaths";
 import {
   addDaysToYmd,
   chicagoDateParts,
@@ -338,7 +338,7 @@ export function dateStrip(city: string, events: EventData[], recurring: Recurrin
   const ranges: DateStripRange[] = [
     { key: "today", title: "Today", detail: `${todayBits.weekday} ${todayBits.day} · ${countLabel(on(today), weeklyOn(today))}`, href: hrefFor(today) },
     { key: "tomorrow", title: "Tomorrow", detail: `${tomorrowBits.weekday} ${tomorrowBits.day} · ${countLabel(on(tomorrow), weeklyOn(tomorrow))}`, href: hrefFor(tomorrow) },
-    { key: "weekend", title: "This weekend", detail: countLabel(weekendCount), href: `/events/${city}/this-weekend/` },
+    { key: "weekend", title: "This weekend", detail: countLabel(weekendCount), href: cityWeekendPath(city) },
     { key: "week", title: "Next 7 days", detail: countLabel(next7), href: next14.length > 0 ? "#upcoming" : `/events/${city}/calendar/` },
     { key: "pick", title: "Pick a date", detail: countLabel(monthCount), href: `/events/${city}/calendar/` },
   ];

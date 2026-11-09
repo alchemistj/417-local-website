@@ -314,7 +314,7 @@ describe.skipIf(!built)("built site", () => {
     } else {
       expect(cityHub).toContain(eventsCopy.hub.weekendHeading);
       expect(cityHub).toContain(">See all of this weekend<");
-      expect(cityHub).toContain('href="/events/springfield/this-weekend/"');
+      expect(cityHub).toContain('href="/things-to-do-in-springfield-mo-this-weekend/"');
       for (const event of preview) expect(decode(cityHub)).toContain(event.title);
     }
 
@@ -325,12 +325,12 @@ describe.skipIf(!built)("built site", () => {
       else expect(cityHub).not.toContain(href);
     }
 
-    const weekendPage = pages.find((p) => p.route === "/events/springfield/this-weekend/");
-    expect(weekendPage, "/events/springfield/this-weekend/").toBeTruthy();
+    const weekendPage = pages.find((p) => p.route === "/things-to-do-in-springfield-mo-this-weekend/");
+    expect(weekendPage, "/things-to-do-in-springfield-mo-this-weekend/").toBeTruthy();
     const weekendHtml = weekendPage!.html;
     expectCopy(
       weekendHtml,
-      "/events/springfield/this-weekend/",
+      "/things-to-do-in-springfield-mo-this-weekend/",
       eventsCopy.thisWeekend.seoTitle,
       eventsCopy.thisWeekend.description,
       eventsCopy.thisWeekend.h1,
@@ -344,7 +344,7 @@ describe.skipIf(!built)("built site", () => {
       `${SITE}/`,
       `${SITE}/events/`,
       `${SITE}/events/springfield/`,
-      `${SITE}/events/springfield/this-weekend/`,
+      `${SITE}/things-to-do-in-springfield-mo-this-weekend/`,
     ]);
 
     const view = thisWeekendView(springfield, builtAt);
@@ -452,7 +452,7 @@ describe.skipIf(!built)("built site", () => {
       expect(decode(music.html)).toContain("← All Springfield events");
     }
 
-    const weekend = pages.find((page) => page.route === "/events/springfield/this-weekend/");
+    const weekend = pages.find((page) => page.route === "/things-to-do-in-springfield-mo-this-weekend/");
     expect(weekend).toBeTruthy();
     expect(chips(weekend!.html)[0]?.label).toBe("All events");
     expect(chips(weekend!.html).some((chip) => chip.current)).toBe(false);

@@ -194,7 +194,7 @@ describe("event chips", () => {
 
     const hub = eventChips("springfield", events, sunday, "/events/springfield/");
     expect(hub[0]).toMatchObject({ label: "All events", current: true });
-    expect(eventChips("springfield", events, sunday, "/events/springfield/this-weekend/").every((chip) => !chip.current)).toBe(true);
+    expect(eventChips("springfield", events, sunday, "/things-to-do-in-springfield-mo-this-weekend/").every((chip) => !chip.current)).toBe(true);
   });
 });
 

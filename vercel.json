@@ -289,12 +289,22 @@
     },
     {
       "source": "/events/this-weekend",
-      "destination": "/events/springfield/this-weekend/",
+      "destination": "/things-to-do-in-springfield-mo-this-weekend/",
       "statusCode": 301
     },
     {
       "source": "/events/this-weekend/",
-      "destination": "/events/springfield/this-weekend/",
+      "destination": "/things-to-do-in-springfield-mo-this-weekend/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/springfield/this-weekend",
+      "destination": "/things-to-do-in-springfield-mo-this-weekend/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/springfield/this-weekend/",
+      "destination": "/things-to-do-in-springfield-mo-this-weekend/",
       "statusCode": 301
     },
     {

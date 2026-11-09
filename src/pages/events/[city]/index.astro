@@ -7,8 +7,9 @@ import WeeklyList from "../../../components/WeeklyList.astro";
 import { cityHubCopy, cityHubPage } from "../../../data/staticPages";
 import EventsLayout from "../../../layouts/EventsLayout.astro";
 import { dateStrip, dontMissEvents, eventsBetween } from "../../../lib/calendarView";
+import { inlineHeroAvif } from "../../../lib/heroPhoto";
 import { citiesWithEvents, eventChips } from "../../../lib/eventRoutes";
-import { eventCitySlug } from "../../../lib/eventPaths";
+import { cityWeekendPath, eventCitySlug } from "../../../lib/eventPaths";
 import { hubWeekendPreview, isUpcoming } from "../../../lib/events";
 import { getRecurring, getSiteEvents } from "../../../lib/loadEvents";
 import { groupSeriesByWeekday, recurringCitySlug } from "../../../lib/recurring";
@@ -30,12 +31,27 @@ const weekly = groupSeriesByWeekday(recurring);
 const anyUpcoming = events.some((event) => isUpcoming(event, now));
 const page = cityHubCopy(city);
 const meta = cityHubPage(city);
+const weekendHref = cityWeekendPath(city);
+// Same photo and crop as the homepage hero, inlined once at build time.
+const photo = await inlineHeroAvif({
+  file: "src/assets/home/fountain-square.jpg",
+  crop: { left: 0, top: 150, width: 1440, height: 330 },
+  width: 1280,
+  quality: 60,
+});
 const showFilters = weekend.length + dontMiss.length + upcoming.length > 0;
 ---
 
 <EventsLayout
   meta={meta}
   h1={page.h1}
+  hero={{
+    photo,
+    actions: [
+      { label: "This weekend", href: weekendHref },
+      { label: "Calendar", href: `/events/${city}/calendar/` },
+    ],
+  }}
   intro={page.intro}
   chips={eventChips(city, events, now, meta.path)}
   crumbs={[
@@ -50,7 +66,7 @@ const showFilters = weekend.length + dontMiss.length + upcoming.length > 0;
     <section class="weekend-block" aria-labelledby="weekend-heading">
       <h2 id="weekend-heading">{page.weekendHeading}</h2>
       <EventList events={weekend} idPrefix="weekend" />
-      <p><a class="more-link" href={`/events/${city}/this-weekend/`}>See all of this weekend</a></p>
+      <p><a class="more-link" href={weekendHref}>See all of this weekend</a></p>
     </section>
   )}
   {dontMiss.length > 0 && (
@@ -74,5 +90,6 @@ const showFilters = weekend.length + dontMiss.length + upcoming.length > 0;
     </section>
   )}
   {!anyUpcoming && weekly.length === 0 && <p class="empty-state">{page.emptyState}</p>}
+  <p>{page.weekendLink} <a href={weekendHref}>This weekend in {meta.label}</a></p>
   <p>{page.businessLink}</p>
 </EventsLayout>
