@@ -1,8 +1,10 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import EventChips from "../components/EventChips.astro";
 import EventList from "../components/EventList.astro";
 import CtaBand from "../components/CtaBand.astro";
 import type { StaticPageMeta } from "../data/staticPages";
+import type { EventChip } from "../lib/eventRoutes";
 import type { EventData } from "../lib/eventSchema";
 import { absoluteUrl } from "../lib/site";
 
@@ -16,8 +18,10 @@ interface Props {
   subnav?: { label: string; href: string }[];
   /** Replaces the business-events empty sentence. Business pages omit this. */
   emptyMessage?: string;
+  chips?: EventChip[];
+  backLink?: { href: string; label: string };
 }
-const { meta, h1, intro, events = [], crumbs, subnav, emptyMessage } = Astro.props;
+const { meta, h1, intro, events = [], crumbs, subnav, emptyMessage, chips, backLink } = Astro.props;
 const paragraphs = typeof intro === "string" ? [intro] : intro;
 const customBody = Astro.slots.has("default");
 
@@ -37,7 +41,10 @@ const crumbLd = {
   <section class="band band-blue page-band">
     <div class="container">
       <h1>{h1}</h1>
+      {backLink && <p class="back-link"><a href={backLink.href}>{backLink.label}</a></p>}
       {paragraphs.map((paragraph) => <p class="lead">{paragraph}</p>)}
+      {chips && <EventChips chips={chips} />}
+      <slot name="band" />
       {subnav && (
         <nav aria-label="Event types">
           <ul class="subnav">

@@ -15,7 +15,7 @@ export const GET: APIRoute = async () => {
     "> A local guide to Springfield, MO and the 417 area: things to do, food and drink, outdoors and parks, small business help and events.",
     "",
     "## Sections",
-    ...routes.filter((r) => r.type === "static" || r.path === "/blog/").map((r) => line(r.title, r.path, r.description)),
+    ...routes.filter((r) => (r.type === "static" || r.path === "/blog/") && r.llms !== false).map((r) => line(r.title, r.path, r.description)),
   ];
   for (const c of CATEGORIES) {
     const posts = routes.filter((r) => r.type === "post" && r.category === c.slug);

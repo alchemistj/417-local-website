@@ -1,0 +1,39 @@
+---
+import type { DateStripModel } from "../lib/calendarView";
+
+interface Props {
+  strip: DateStripModel;
+}
+const { strip } = Astro.props;
+---
+
+<nav class="date-strip" aria-label="Dates">
+  <div class="date-ranges">
+    {strip.ranges.map((item) => item.href ? (
+      <a class="date-chip" href={item.href}>
+        <span class="date-chip-label">{item.title}</span>
+        <span class="date-chip-count">{item.detail}</span>
+      </a>
+    ) : (
+      <span class="date-chip">
+        <span class="date-chip-label">{item.title}</span>
+        <span class="date-chip-count">{item.detail}</span>
+      </span>
+    ))}
+  </div>
+  <div class="date-days">
+    {strip.days.map((day) => day.href ? (
+      <a class="date-day" href={day.href}>
+        <span class="date-day-name">{day.weekday}</span>
+        <span class="date-day-num">{day.day}</span>
+        <span class="date-day-count">{day.label}</span>
+      </a>
+    ) : (
+      <span class="date-day">
+        <span class="date-day-name">{day.weekday}</span>
+        <span class="date-day-num">{day.day}</span>
+        <span class="date-day-count">{day.label}</span>
+      </span>
+    ))}
+  </div>
+</nav>

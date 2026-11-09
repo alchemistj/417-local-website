@@ -1,0 +1,45 @@
+---
+import type { GetStaticPaths } from "astro";
+import WeeklyList from "../../../../components/WeeklyList.astro";
+import { cityHubPage } from "../../../../data/staticPages";
+import EventsLayout from "../../../../layouts/EventsLayout.astro";
+import { eventChips, citiesWithEvents } from "../../../../lib/eventRoutes";
+import { cityDisplayName } from "../../../../lib/eventPaths";
+import { getRecurring, getSiteEvents } from "../../../../lib/loadEvents";
+import { groupSeriesByWeekday, recurringCitySlug } from "../../../../lib/recurring";
+
+export const getStaticPaths = (async () => {
+  const events = await getSiteEvents();
+  return citiesWithEvents(events).map((city) => ({ params: { city } }));
+}) satisfies GetStaticPaths;
+
+const city = Astro.params.city;
+if (!city) throw new Error("Missing city");
+const now = new Date();
+const events = await getSiteEvents();
+const groups = groupSeriesByWeekday((await getRecurring()).filter((item) => recurringCitySlug(item) === city));
+const hub = cityHubPage(city);
+const cityName = cityDisplayName(city);
+const path = `/events/${city}/weekly/`;
+const title = `Weekly Happenings in ${cityName}, MO | 417 Local`;
+const description = `Weekly happenings in ${cityName}, MO: markets, trivia, classes and other recurring events.`;
+---
+
+<EventsLayout
+  meta={{ path, title, description, label: "Weekly happenings" }}
+  h1={`Weekly Happenings in ${cityName}`}
+  intro={`Markets, trivia, classes and other recurring events in ${cityName}. One-off events stay on the calendar.`}
+  chips={eventChips(city, events, now, "")}
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Events", path: "/events/" },
+    { name: cityName, path: hub.path },
+    { name: "Weekly happenings", path },
+  ]}
+>
+  {groups.length > 0 ? (
+    <WeeklyList groups={groups} />
+  ) : (
+    <p class="empty-state">No weekly happenings are listed right now. Check back soon.</p>
+  )}
+</EventsLayout>

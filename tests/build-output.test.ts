@@ -7,9 +7,11 @@ import { describe, expect, it } from "vitest";
 import eventsCopy from "../docs/events-pages-copy.json";
 import { REDIRECTS, RETIRED_SLUGS, sourceMatches } from "../src/data/redirects";
 import { GENERAL_EVENT_CATEGORIES } from "../src/lib/eventSchema";
+import { builtMonths, monthLabel, monthPageTitle } from "../src/lib/calendarView";
 import { eventSectionRoutes, listedCategories } from "../src/lib/eventRoutes";
 import { eventCitySlug, eventPath } from "../src/lib/eventPaths";
 import { hubWeekendPreview, thisWeekendView } from "../src/lib/events";
+import { readRecurringDir } from "../src/lib/recurring";
 import { listsIncludedInBuild } from "../src/lib/lists";
 import { buildRoutes } from "../src/lib/routes";
 import { readSiteEvents } from "./helpers/events";
@@ -20,7 +22,7 @@ import batch4 from "../docs/build/batch-4.json";
 import copy from "../docs/food-and-drink-guide-copy.json";
 import { EXPLORE_LINKS } from "../src/data/nav";
 import { groupFoodPosts } from "../src/lib/foodGuide";
-import { DIST_DIR, postSummaries } from "./helpers/posts";
+import { DIST_DIR, postSummaries, ROOT } from "./helpers/posts";
 import { readListSummaries } from "./helpers/lists";
 import { decode, htmlFiles, routeOf } from "./helpers/html";
 
@@ -42,7 +44,7 @@ const allPages: Page[] = built
 const notFound = allPages.find((p) => p.route === "/404.html");
 const pages: Page[] = allPages.filter((p) => p.route !== "/404.html");
 const registry = built
-  ? buildRoutes(postSummaries(), listsIncludedInBuild(readListSummaries()), eventSectionRoutes(siteEvents, builtAt))
+  ? buildRoutes(postSummaries(), listsIncludedInBuild(readListSummaries()), eventSectionRoutes(siteEvents, builtAt, readRecurringDir(`${ROOT}src/content/recurring`)))
   : [];
 const routeSet = new Set(registry.map((r) => r.path));
 
@@ -308,10 +310,10 @@ describe.skipIf(!built)("built site", () => {
     const preview = hubWeekendPreview(springfield, builtAt);
     if (preview.length === 0) {
       expect(cityHub).not.toContain(eventsCopy.hub.weekendHeading);
-      expect(cityHub).not.toContain('href="/events/springfield/this-weekend/"');
+      expect(cityHub).not.toContain(">See all of this weekend<");
     } else {
       expect(cityHub).toContain(eventsCopy.hub.weekendHeading);
-      expect(cityHub).toContain(">See everything this weekend<");
+      expect(cityHub).toContain(">See all of this weekend<");
       expect(cityHub).toContain('href="/events/springfield/this-weekend/"');
       for (const event of preview) expect(decode(cityHub)).toContain(event.title);
     }
@@ -404,5 +406,55 @@ describe.skipIf(!built)("built site", () => {
     expect(tbdHtml).toContain("Time not listed");
     const tbdIcs = readFileSync(`${DIST_DIR}${tbdRoute}event.ics`, "utf8");
     expect(tbdIcs).toContain("DTSTART;VALUE=DATE:");
+  });
+
+  it("builds the calendar, a day page, and category chips", () => {
+    const chipNav = (html: string) => html.split('aria-label="Event categories"')[1]?.split("</nav>")[0] ?? "";
+    const chips = (html: string) =>
+      [...chipNav(html).matchAll(/<a\b([^>]*)>([^<]*)<\/a>/g)].map((match) => ({
+        attrs: match[1],
+        label: decode(match[2]),
+        current: match[1].includes('aria-current="page"'),
+      }));
+
+    const hub = pages.find((page) => page.route === "/events/springfield/")?.html ?? "";
+    const hubChips = chips(hub);
+    expect(hubChips[0]?.label).toBe("All events");
+    expect(hubChips[0]?.current).toBe(true);
+    expect(hubChips.at(-1)?.label).toBe("Business events");
+    expect(hub).toContain('class="date-strip"');
+    expect(hub).toContain('class="date-days"');
+    expect(hub).not.toContain('class="month-grid"');
+
+    const [current] = builtMonths(builtAt);
+    expect(current).toBeTruthy();
+    const calendar = pages.find((page) => page.route === "/events/springfield/calendar/");
+    expect(calendar, "/events/springfield/calendar/").toBeTruthy();
+    const calendarHtml = calendar!.html;
+    expect(decode(calendarHtml.match(/<title>([^<]*)<\/title>/)?.[1] ?? "")).toBe(
+      monthPageTitle("Springfield", monthLabel(current!.year, current!.month)),
+    );
+    expect(calendarHtml).toContain('class="month-grid"');
+    expect(calendarHtml).toContain('class="month-agenda"');
+    expect(chips(calendarHtml)[0]?.label).toBe("All events");
+    expect(chips(calendarHtml).some((chip) => chip.current)).toBe(false);
+
+    const day = pages.find((page) => page.route === "/events/springfield/2026-12-19/");
+    expect(day, "/events/springfield/2026-12-19/").toBeTruthy();
+    expect(decode(day!.html)).toContain("Events in Springfield on Saturday, December 19");
+    expect(chips(day!.html)[0]?.label).toBe("All events");
+
+    const music = pages.find((page) => page.route === "/events/springfield/live-music/");
+    if (music) {
+      const musicChips = chips(music.html);
+      expect(musicChips[0]?.label).toBe("All events");
+      expect(musicChips.find((chip) => chip.label === "Live Music")?.current).toBe(true);
+      expect(decode(music.html)).toContain("← All Springfield events");
+    }
+
+    const weekend = pages.find((page) => page.route === "/events/springfield/this-weekend/");
+    expect(weekend).toBeTruthy();
+    expect(chips(weekend!.html)[0]?.label).toBe("All events");
+    expect(chips(weekend!.html).some((chip) => chip.current)).toBe(false);
   });
 });

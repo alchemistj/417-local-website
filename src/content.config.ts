@@ -1,8 +1,11 @@
+import { existsSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import { defineCollection } from "astro:content";
-import { glob } from "astro/loaders";
+import { glob, type Loader } from "astro/loaders";
 import { eventSchema } from "./lib/eventSchema";
 import { listSchema } from "./lib/listSchema";
 import { makePostSchema } from "./lib/postSchema";
+import { recurringSchema } from "./lib/recurring";
 
 const posts = defineCollection({
   // Files starting with "_" (samples, drafts) are ignored.
@@ -24,14 +27,21 @@ const events = defineCollection({
   schema: eventSchema,
 });
 
-const pastEvents = defineCollection({
-  // A build copies an event here when its date is within two days, so the page survives the next export.
-  loader: glob({
+const recurringDir = fileURLToPath(new URL("./content/recurring", import.meta.url));
+
+/** An empty or missing `src/content/recurring` folder still builds. */
+function recurringLoader(): Loader {
+  if (!existsSync(recurringDir)) return { name: "recurring-empty", load: async () => {} };
+  return glob({
     pattern: ["*.json", "!_*"],
-    base: "./src/content/past-events",
+    base: "./src/content/recurring",
     generateId: eventFileId,
-  }),
-  schema: eventSchema,
+  });
+}
+
+const recurring = defineCollection({
+  loader: recurringLoader(),
+  schema: recurringSchema,
 });
 
 const lists = defineCollection({
@@ -44,4 +54,4 @@ const lists = defineCollection({
   schema: listSchema,
 });
 
-export const collections = { posts, events, pastEvents, lists };
+export const collections = { posts, events, recurring, lists };

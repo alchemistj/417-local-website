@@ -1,13 +1,17 @@
 ---
 import type { GetStaticPaths } from "astro";
+import DateStrip from "../../../components/DateStrip.astro";
+import EventFilters from "../../../components/EventFilters.astro";
 import EventList from "../../../components/EventList.astro";
-import { BUSINESS_EVENTS, cityHubCopy, cityHubPage, generalCategoryPage } from "../../../data/staticPages";
+import WeeklyList from "../../../components/WeeklyList.astro";
+import { cityHubCopy, cityHubPage } from "../../../data/staticPages";
 import EventsLayout from "../../../layouts/EventsLayout.astro";
-import { GENERAL_EVENT_CATEGORY_LABELS } from "../../../lib/eventSchema";
-import { citiesWithEvents, listedCategories } from "../../../lib/eventRoutes";
+import { dateStrip, dontMissEvents, eventsBetween } from "../../../lib/calendarView";
+import { citiesWithEvents, eventChips } from "../../../lib/eventRoutes";
 import { eventCitySlug } from "../../../lib/eventPaths";
-import { hubWeekendPreview, isListedEvent } from "../../../lib/events";
-import { getSiteEvents } from "../../../lib/loadEvents";
+import { hubWeekendPreview, isUpcoming } from "../../../lib/events";
+import { getRecurring, getSiteEvents } from "../../../lib/loadEvents";
+import { groupSeriesByWeekday, recurringCitySlug } from "../../../lib/recurring";
 
 export const getStaticPaths = (async () => {
   const events = await getSiteEvents();
@@ -18,42 +22,57 @@ const city = Astro.params.city;
 if (!city) throw new Error("Missing city");
 const now = new Date();
 const events = (await getSiteEvents()).filter((event) => eventCitySlug(event) === city);
-const listed = events.filter((event) => isListedEvent(event, now));
+const recurring = (await getRecurring()).filter((item) => recurringCitySlug(item) === city);
 const weekend = hubWeekendPreview(events, now);
+const dontMiss = dontMissEvents(events, now);
+const upcoming = eventsBetween(events, city, now, 0, 13);
+const weekly = groupSeriesByWeekday(recurring);
+const anyUpcoming = events.some((event) => isUpcoming(event, now));
 const page = cityHubCopy(city);
 const meta = cityHubPage(city);
-const business = BUSINESS_EVENTS[0];
-const categoryLinks = listedCategories(events, now).map((slug) => ({
-  label: GENERAL_EVENT_CATEGORY_LABELS[slug],
-  href: generalCategoryPage(slug, city).path,
-}));
+const showFilters = weekend.length + dontMiss.length + upcoming.length > 0;
 ---
 
 <EventsLayout
   meta={meta}
   h1={page.h1}
   intro={page.intro}
+  chips={eventChips(city, events, now, meta.path)}
   crumbs={[
     { name: "Home", path: "/" },
     { name: "Events", path: "/events/" },
     { name: meta.label, path: meta.path },
   ]}
 >
+  <DateStrip strip={dateStrip(city, events, recurring, now)} />
+  {showFilters && <EventFilters />}
   {weekend.length > 0 && (
     <section class="weekend-block" aria-labelledby="weekend-heading">
       <h2 id="weekend-heading">{page.weekendHeading}</h2>
-      <EventList events={weekend} />
-      <p><a class="more-link" href={`/events/${city}/this-weekend/`}>See everything this weekend</a></p>
+      <EventList events={weekend} idPrefix="weekend" />
+      <p><a class="more-link" href={`/events/${city}/this-weekend/`}>See all of this weekend</a></p>
     </section>
   )}
-  <nav aria-label="Event categories">
-    <ul class="subnav">
-      {categoryLinks.map((link) => (
-        <li><a href={link.href}>{link.label}</a></li>
-      ))}
-      <li><a href={business.path}>{business.label}</a></li>
-    </ul>
-  </nav>
+  {dontMiss.length > 0 && (
+    <section aria-labelledby="dont-miss-heading">
+      <h2 id="dont-miss-heading">Don't miss this month</h2>
+      <EventList events={dontMiss} idPrefix="miss" />
+    </section>
+  )}
+  {upcoming.length > 0 && (
+    <section id="upcoming" aria-labelledby="upcoming-heading">
+      <h2 id="upcoming-heading">Upcoming</h2>
+      <EventList events={upcoming} idPrefix="upcoming" />
+      <p><a class="more-link" href={`/events/${city}/calendar/`}>See the full calendar</a></p>
+    </section>
+  )}
+  {weekly.length > 0 && (
+    <section aria-labelledby="weekly-happenings">
+      <h2 id="weekly-happenings">Weekly happenings</h2>
+      <WeeklyList groups={weekly} />
+      <p><a class="more-link" href={`/events/${city}/weekly/`}>See all weekly happenings</a></p>
+    </section>
+  )}
+  {!anyUpcoming && weekly.length === 0 && <p class="empty-state">{page.emptyState}</p>}
   <p>{page.businessLink}</p>
-  <EventList events={listed} emptyMessage={page.emptyState} />
 </EventsLayout>

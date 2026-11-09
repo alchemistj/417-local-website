@@ -1,0 +1,47 @@
+---
+import { formatDayHeading } from "../lib/events";
+import type { MonthGrid } from "../lib/calendarView";
+
+interface Props {
+  grid: MonthGrid;
+}
+const { grid } = Astro.props;
+const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const agenda = grid.weeks.flat().filter((cell) => cell.inMonth && !cell.isPast && (cell.shown.length > 0 || cell.weekly > 0));
+---
+
+<div class="month-dow" aria-hidden="true">
+  {weekdays.map((day) => <span>{day}</span>)}
+</div>
+<div class="month-grid">
+  {grid.weeks.flat().map((cell) => (
+    <div class:list={["month-cell", cell.isToday && "is-today", cell.isPast && "is-past", !cell.inMonth && "is-outside"]}>
+      {cell.dayHref ? <a class="month-num" href={cell.dayHref}>{cell.day}</a> : <span class="month-num">{cell.day}</span>}
+      {cell.shown.length > 0 && (
+        <ul class="month-events">
+          {cell.shown.map((event) => (
+            <li><a href={event.href}>{event.title}</a></li>
+          ))}
+        </ul>
+      )}
+      {cell.more > 0 && cell.dayHref && <a class="month-more" href={cell.dayHref}>+{cell.more} more</a>}
+      {cell.weekly > 0 && cell.dayHref && <a class="month-weekly" href={`${cell.dayHref}#weekly`}>+{cell.weekly} weekly</a>}
+    </div>
+  ))}
+</div>
+<div class="month-agenda">
+  {agenda.map((cell) => (
+    <article class="agenda-day">
+      <h2>{cell.dayHref ? <a href={cell.dayHref}>{formatDayHeading(cell.date)}</a> : formatDayHeading(cell.date)}</h2>
+      {cell.shown.length > 0 && (
+        <ul class="month-events">
+          {cell.shown.map((event) => (
+            <li><a href={event.href}>{event.title}</a></li>
+          ))}
+        </ul>
+      )}
+      {cell.more > 0 && cell.dayHref && <a class="month-more" href={cell.dayHref}>+{cell.more} more</a>}
+      {cell.weekly > 0 && cell.dayHref && <a class="month-weekly" href={`${cell.dayHref}#weekly`}>+{cell.weekly} weekly</a>}
+    </article>
+  ))}
+</div>

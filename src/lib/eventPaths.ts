@@ -72,10 +72,18 @@ export function reservedEventSlugs(events: EventData[] = []): Set<string> {
     "this-weekend",
     "weekly",
     "monthly",
+    "calendar",
     ...GENERAL_EVENT_CATEGORIES,
     ...BUSINESS_EVENT_CATEGORIES,
     ...cities,
   ]);
+}
+
+const BARE_DATE = /^\d{4}-\d{2}-\d{2}$/;
+
+/** A bare date or another reserved word would steal a city, day, or calendar address. */
+export function isReservedEventSlug(slug: string, reserved: Set<string> = reservedEventSlugs()): boolean {
+  return reserved.has(slug) || BARE_DATE.test(slug);
 }
 
 /** Fails the build when an event slug would take a city, category, or other reserved address. */
@@ -84,7 +92,7 @@ export function assertNoReservedEventSlug(events: EventData[]): void {
   const collisions: string[] = [];
   for (const event of events) {
     const slug = eventRouteParams(event).event;
-    if (reserved.has(slug)) collisions.push(`${event.id} (${slug})`);
+    if (isReservedEventSlug(slug, reserved)) collisions.push(`${event.id} (${slug})`);
   }
   if (collisions.length > 0) {
     throw new Error(`Event slug collides with a reserved address: ${collisions.join(", ")}`);

@@ -1,0 +1,19 @@
+---
+interface Props {
+  googleUrl: string;
+  icsPath: string;
+  downloadName: string;
+  /** White button for the blue page band. */
+  light?: boolean;
+}
+const { googleUrl, icsPath, downloadName, light = false } = Astro.props;
+---
+
+<details class="cal-menu">
+  <summary class:list={["btn", light && "btn-light"]}>Add to calendar</summary>
+  <div class="cal-links">
+    <a href={googleUrl} rel="noopener">Google Calendar</a>
+    <a href={icsPath}>Apple Calendar</a>
+    <a href={icsPath} download={downloadName}>Download (.ics)</a>
+  </div>
+</details>

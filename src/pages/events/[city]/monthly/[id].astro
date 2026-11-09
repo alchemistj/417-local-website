@@ -1,0 +1,20 @@
+---
+import type { GetStaticPaths } from "astro";
+import SeriesPage from "../../../../components/SeriesPage.astro";
+import { getRecurring } from "../../../../lib/loadEvents";
+import { isMonthlySeries, recurringCitySlug, seriesSlug } from "../../../../lib/recurring";
+
+export const getStaticPaths = (async () => {
+  const items = await getRecurring();
+  return items
+    .filter((item) => isMonthlySeries(item))
+    .map((item) => ({
+      params: { city: recurringCitySlug(item), id: seriesSlug(item) },
+      props: { item },
+    }));
+}) satisfies GetStaticPaths;
+
+const { item } = Astro.props;
+---
+
+<SeriesPage item={item} />
