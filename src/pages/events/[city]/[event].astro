@@ -30,7 +30,11 @@ import {
   dayPageDescription,
   dayPageH1,
   dayPageTitle,
+  alsoPlaying,
+  collapseRuns,
   eventsOnDate,
+  performanceLabel,
+  runCanonicalPath,
   uniqueUpcomingEvents,
 } from "../../../lib/calendarView";
 import {
@@ -133,6 +137,8 @@ const price = event ? eventPriceText(event) : "";
 const action = event && !passed ? eventAction(event) : null;
 const maps = event ? mapsSearchUrl(event) : "";
 const pagePath = event ? eventPath(event) : "";
+const canonicalPath = event ? runCanonicalPath(event, allEvents, now) : "";
+const playing = event && !passed ? alsoPlaying(event, allEvents, now) : [];
 const pageUrl = pagePath ? absoluteUrl(pagePath) : "";
 const icsPath = pagePath ? `${pagePath}event.ics` : "";
 const googleUrl = event ? googleCalendarUrl(event, { pageUrl }) : "";
@@ -146,7 +152,7 @@ const venueHref = venuePost || maps;
 const venueExternal = !venuePost;
 const state = event && typeof event.state === "string" && event.state.trim() ? event.state.trim() : "MO";
 const addressLine = [address, cityName, state].filter(Boolean).join(", ");
-const nearby = event && !passed ? uniqueUpcomingEvents(allEvents, recurring, city, now).filter((item) => item.id !== event.id).slice(0, 8) : [];
+const nearby = event && !passed ? collapseRuns(uniqueUpcomingEvents(allEvents, recurring, city, now), allEvents, now, event).filter((item) => item.id !== event.id).slice(0, 8) : [];
 const more = event && !passed ? moreInCategory(event, allEvents, now, nearby) : [];
 const related = event && passed ? relatedUpcoming(event, allEvents, now) : [];
 const categorySlug = event ? primaryCategory(event) : null;
@@ -210,7 +216,7 @@ const outbound = (href: string) => href.startsWith("http");
   <BaseLayout
     title={eventPageTitle(event)}
     description={eventMetaDescription(event)}
-    path={pagePath}
+    path={canonicalPath}
     noindex={!isIndexableEvent(event, now)}
     jsonLd={[eventJsonLd(event), eventBreadcrumbLd(crumbs)]}
   >
@@ -218,6 +224,7 @@ const outbound = (href: string) => href.startsWith("http");
       <div class="container">
         <h1>{event.title}</h1>
         <p class="lead">{when}</p>
+        {playing.length > 0 && <p class="lead">Also playing: {playing.map(performanceLabel).join(" · ")}</p>}
         {venue && (
           <p class="lead">
             <a href={venueHref} rel={venueExternal ? "noopener" : undefined}>{venue}</a>{cityName && `, ${cityName}`}

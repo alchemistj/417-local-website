@@ -53,22 +53,128 @@ export function dontMissEvents(events: EventData[], now: Date, limit = 6): Event
   })).slice(0, limit);
 }
 
+/** A title is a short run (a play, a two-weekend show) when it has at most this many upcoming dates... */
+export const RUN_MAX_DATES = 10;
+/** ...and the first and last of those dates are at most this many days apart. */
+export const RUN_MAX_SPAN_DAYS = 21;
+
+function daysBetween(from: string, to: string): number {
+  const [fy, fm, fd] = from.split("-").map(Number);
+  const [ty, tm, td] = to.split("-").map(Number);
+  return Math.round((Date.UTC(ty, tm - 1, td) - Date.UTC(fy, fm - 1, fd)) / 86_400_000);
+}
+
+/** True when these dates are few and close enough to be one run rather than a weekly regular. */
+function isRunDates(dates: string[]): boolean {
+  const sorted = [...new Set(dates)].filter(Boolean).sort();
+  if (sorted.length === 0) return false;
+  if (sorted.length > RUN_MAX_DATES) return false;
+  return daysBetween(sorted[0] as string, sorted[sorted.length - 1] as string) <= RUN_MAX_SPAN_DAYS;
+}
+
+function titleKey(event: EventData): string {
+  return `${eventCitySlug(event)}|${norm(event.title)}`;
+}
+
+export interface EventRun {
+  /** Upcoming performances at this venue, soonest first. */
+  performances: EventData[];
+  /** The earliest upcoming performance. Every row of the run links to its page. */
+  canonical: EventData;
+  /** First and last performance dates (YYYY-MM-DD). */
+  firstDate: string;
+  lastDate: string;
+  /** More than one performance day. */
+  multiDay: boolean;
+}
+
 /**
- * Unique (one-off) upcoming events from today through today + 27 days (28 days, US Central dates).
- * An event is treated as recurring, and left out, when its title matches an active recurring series
- * or the same title is on more than one date among the city's upcoming events.
+ * The run this event belongs to, or null when its title repeats too often or too far apart
+ * (a weekly regular) or the event has no upcoming performance. Past performances are ignored.
+ */
+export function eventRun(event: EventData, events: EventData[], now: Date): EventRun | null {
+  const key = titleKey(event);
+  const sameTitle = events.filter((item) => isUpcoming(item, now) && titleKey(item) === key);
+  if (sameTitle.length === 0 || !isRunDates(sameTitle.map((item) => eventChicagoDate(item)))) return null;
+  const venue = norm(placeName(event.venue));
+  const performances = sortByStart(sameTitle.filter((item) => norm(placeName(item.venue)) === venue));
+  const canonical = performances[0];
+  if (!canonical) return null;
+  const dates = performances.map((item) => eventChicagoDate(item));
+  const firstDate = dates[0] as string;
+  const lastDate = dates.reduce((a, b) => (b > a ? b : a), firstDate);
+  return { performances, canonical, firstDate, lastDate, multiDay: new Set(dates).size > 1 };
+}
+
+/** Where a list row for this event links: the run's earliest upcoming page, or the event's own page. */
+export function runCanonicalPath(event: EventData, events: EventData[], now: Date): string {
+  const run = eventRun(event, events, now);
+  return run ? eventPath(run.canonical) : eventPath(event);
+}
+
+function shortMonthDay(ymd: string): { month: string; day: number } {
+  const [year, month, day] = ymd.split("-").map(Number);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  return { month: new Intl.DateTimeFormat("en-US", { month: "short", timeZone: "UTC" }).format(date), day };
+}
+
+/** "Nov 13–22" or "Nov 28–Dec 2" for a multi-day run, otherwise null. */
+export function runRangeLabel(run: EventRun | null): string | null {
+  if (!run || !run.multiDay) return null;
+  const first = shortMonthDay(run.firstDate);
+  const last = shortMonthDay(run.lastDate);
+  return first.month === last.month ? `${first.month} ${first.day}–${last.day}` : `${first.month} ${first.day}–${last.month} ${last.day}`;
+}
+
+/** "Fri Nov 13, 7:00 PM" for the Also playing line. */
+export function performanceLabel(event: EventData): string {
+  const zone = event.timezone || "America/Chicago";
+  const time = Date.parse(event.start);
+  if (isDateOnly(event.start) || Number.isNaN(time)) {
+    const { month, day } = shortMonthDay(eventChicagoDate(event));
+    return `${month} ${day}`;
+  }
+  const day = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: zone }).format(new Date(time)).replace(",", "");
+  return event.time_tbd === true ? day : `${day}, ${eventListTime(event)}`;
+}
+
+/** Other upcoming performances of this event's run, soonest first. */
+export function alsoPlaying(event: EventData, events: EventData[], now: Date): EventData[] {
+  const run = eventRun(event, events, now);
+  return run && run.multiDay ? run.performances.filter((item) => item.id !== event.id) : [];
+}
+
+/** Shows each run once (its first listed performance) and leaves out the run `exclude` belongs to. */
+export function collapseRuns(list: EventData[], events: EventData[], now: Date, exclude?: EventData): EventData[] {
+  const keyOf = (event: EventData): string => {
+    const run = eventRun(event, events, now);
+    return run && run.multiDay ? `run:${eventPath(run.canonical)}` : `id:${event.id}`;
+  };
+  const skip = exclude ? keyOf(exclude) : null;
+  const seen = new Set<string>();
+  return list.filter((event) => {
+    const key = keyOf(event);
+    if (key === skip || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+/**
+ * Upcoming events for the hub list, from today through today + 27 days (28 days, US Central dates).
+ * One-off events and short runs (see RUN_MAX_DATES and RUN_MAX_SPAN_DAYS) stay, a run on every
+ * performance day. A title that repeats more often or over a longer stretch, or that matches an
+ * active recurring series, is a weekly regular and is left out.
  */
 export function uniqueUpcomingEvents(events: EventData[], recurring: RecurringItem[], city: string, now: Date, days = 28): EventData[] {
   const seriesTitles = new Set(
     recurring.filter((item) => item.active !== false && recurringCitySlug(item) === city).map((item) => norm(item.title)),
   );
   const cityUpcoming = events.filter((event) => eventCitySlug(event) === city && isUpcoming(event, now));
-  const datesByTitle = new Map<string, Set<string>>();
+  const datesByTitle = new Map<string, string[]>();
   for (const event of cityUpcoming) {
     const key = norm(event.title);
-    const dates = datesByTitle.get(key) ?? new Set<string>();
-    dates.add(eventChicagoDate(event));
-    datesByTitle.set(key, dates);
+    datesByTitle.set(key, [...(datesByTitle.get(key) ?? []), eventChicagoDate(event)]);
   }
   const start = chicagoYmd(now);
   const end = addDaysToYmd(start, days - 1);
@@ -76,7 +182,7 @@ export function uniqueUpcomingEvents(events: EventData[], recurring: RecurringIt
     const date = eventChicagoDate(event);
     if (date < start || date > end) return false;
     const key = norm(event.title);
-    return !seriesTitles.has(key) && (datesByTitle.get(key)?.size ?? 0) <= 1;
+    return !seriesTitles.has(key) && isRunDates(datesByTitle.get(key) ?? []);
   }));
 }
 
@@ -264,7 +370,7 @@ export function buildMonthGrid(city: string, year: number, month: number, events
         inMonth,
         isToday: inMonth && date === today,
         isPast,
-        shown: dayEvents.slice(0, 3).map((event) => ({ href: eventPath(event), title: shortEventTitle(event.title) })),
+        shown: dayEvents.slice(0, 3).map((event) => ({ href: runCanonicalPath(event, cityEvents, now), title: shortEventTitle(event.title) })),
         more: Math.max(0, dayEvents.length - 3),
         weekly,
         dayHref: inMonth && !isPast && pageDates.has(date) ? `/events/${city}/${date}/` : null,

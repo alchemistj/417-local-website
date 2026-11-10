@@ -7,7 +7,7 @@ import { describe, expect, it } from "vitest";
 import eventsCopy from "../docs/events-pages-copy.json";
 import { REDIRECTS, RETIRED_SLUGS, sourceMatches } from "../src/data/redirects";
 import { GENERAL_EVENT_CATEGORIES } from "../src/lib/eventSchema";
-import { builtMonths, monthLabel, monthPageTitle } from "../src/lib/calendarView";
+import { builtMonths, monthLabel, monthPageTitle, runCanonicalPath } from "../src/lib/calendarView";
 import { eventSectionRoutes, listedCategories } from "../src/lib/eventRoutes";
 import { eventCitySlug, eventPath } from "../src/lib/eventPaths";
 import { thisWeekendView } from "../src/lib/events";
@@ -97,7 +97,10 @@ describe.skipIf(!built)("built site", () => {
 
   it("has a canonical tag on the canonical host, valid JSON-LD and no stray noindex", () => {
     for (const p of pages) {
-      expect(p.html, p.route).toContain(`<link rel="canonical" href="${SITE}${p.route}">`);
+      // A later performance of a run points at the run's first upcoming page.
+      const event = siteEvents.find((item) => eventPath(item) === p.route);
+      const canonicalRoute = event ? runCanonicalPath(event, siteEvents, builtAt) : p.route;
+      expect(p.html, p.route).toContain(`<link rel="canonical" href="${SITE}${canonicalRoute}">`);
       for (const m of p.html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
         expect(() => JSON.parse(m[1]), `${p.route} JSON-LD`).not.toThrow();
       }
