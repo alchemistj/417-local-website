@@ -1,0 +1,35 @@
+{
+  "id": "2cb67bbf-6f17-47b4-9b0e-360b15a2b345",
+  "slug": "ozark-christmas-parade-gathering-at-the-workshop",
+  "title": "Ozark Christmas Parade Gathering at The Workshop",
+  "seo_title": "Ozark Christmas Parade Gathering at The Workshop",
+  "description": "The Ozark Christmas Parade Gathering takes place on Saturday, November 21, 2026, from 3:00 PM to 7:30 PM at The Workshop, 840 Finley Farms Ln in Ozark, Missouri. The event is a holiday festival aimed at a business audience and includes a professional development focus.",
+  "start": "2026-11-21T21:00:00+00:00",
+  "end": "2026-11-22T01:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "The Workshop, 840 Finley Farms Ln, Ozark, MO, 65721, United States",
+  "address": "The Workshop, 840 Finley Farms Ln, Ozark, MO, 65721, United States",
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "professional-development",
+    "festivals",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://finleyfarmsmo.com/events/ozark-christmas-parade-gathering-at-the-workshop",
+  "image_url": null,
+  "source_urls": [
+    "https://finleyfarmsmo.com/events/ozark-christmas-parade-gathering-at-the-workshop"
+  ],
+  "updated_at": "2026-11-10T10:27:29.685Z",
+  "public_slug": "ozark-christmas-parade-gathering-at-workshop-2026-11-21",
+  "city_slug": "springfield",
+  "path": "/events/springfield/ozark-christmas-parade-gathering-at-workshop-2026-11-21/",
+  "action_type": "details"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "farmers-market-of-the-ozarks-winter",
+  "title": "Farmers Market of the Ozarks",
+  "venue": "Farmers Park Pavilion",
+  "address": "2144 E Republic Rd",
+  "city": "Springfield",
+  "state": "MO",
+  "categories": [
+    "festivals",
+    "food_drink"
+  ],
+  "rule": {
+    "freq": "weekly",
+    "byday": [
+      "SA"
+    ],
+    "start_time": "09:00",
+    "end_time": "13:00"
+  },
+  "season": {
+    "from": "11-22",
+    "to": "03-20"
+  },
+  "url": "https://www.loveyourfarmer.com/springfield.html",
+  "organizer": "Farmers Market of the Ozarks",
+  "verified": true,
+  "last_checked": "2026-11-08",
+  "notes": "Winter hours on loveyourfarmer.com: 9:00 a.m. to 1:00 p.m. The homepage labels January-March as 9-1, and the calendar page says 9-1 during winter. The season wraps the year, approximated as the Saturday after Thanksgiving through the last Saturday before March 21 (11-22 to 03-20).",
+  "active": true,
+  "next_dates": [
+    "2026-11-28T09:00:00-06:00",
+    "2026-12-05T09:00:00-06:00",
+    "2026-12-12T09:00:00-06:00",
+    "2026-12-19T09:00:00-06:00",
+    "2026-12-26T09:00:00-06:00",
+    "2027-01-02T09:00:00-06:00",
+    "2027-01-09T09:00:00-06:00",
+    "2027-01-16T09:00:00-06:00"
+  ]
+}

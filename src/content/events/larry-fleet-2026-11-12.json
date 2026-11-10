@@ -1,0 +1,34 @@
+{
+  "id": "0f596f7c-61e4-40ec-a213-37effa4df45f",
+  "slug": "larry-fleet",
+  "title": "Larry Fleet",
+  "seo_title": "Larry Fleet at Gillioz Theatre in Springfield, MO",
+  "description": "Larry Fleet performs live on Thursday, November 12, 2026, at 8:00 PM. The concert takes place at the Gillioz Theatre, 325 Park Central, E Springfield, Missouri, and is open to a general audience.",
+  "start": "2026-11-13T02:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Gillioz Theatre",
+  "address": "325 Park Central, E Springfield, Missouri",
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "live-music",
+    "arts-and-theater"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://gillioztheatre.com/event/larry-fleet/gillioz-theatre/e-springfield-missouri",
+  "image_url": "https://gillioztheatre.com/wp-content/uploads/2026/08/larry-fleet.jpeg",
+  "source_urls": [
+    "https://gillioztheatre.com/event/larry-fleet/gillioz-theatre/e-springfield-missouri"
+  ],
+  "updated_at": "2026-11-10T10:27:29.685Z",
+  "public_slug": "larry-fleet-2026-11-12",
+  "city_slug": "springfield",
+  "path": "/events/springfield/larry-fleet-2026-11-12/",
+  "action_type": "tickets"
+}

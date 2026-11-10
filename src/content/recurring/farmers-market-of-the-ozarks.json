@@ -1,0 +1,40 @@
+{
+  "id": "farmers-market-of-the-ozarks",
+  "title": "Farmers Market of the Ozarks",
+  "venue": "Farmers Park Pavilion",
+  "address": "2144 E Republic Rd",
+  "city": "Springfield",
+  "state": "MO",
+  "categories": [
+    "festivals",
+    "food_drink"
+  ],
+  "rule": {
+    "freq": "weekly",
+    "byday": [
+      "SA"
+    ],
+    "start_time": "08:00",
+    "end_time": "13:00"
+  },
+  "season": {
+    "from": "03-21",
+    "to": "11-21"
+  },
+  "url": "https://www.loveyourfarmer.com/springfield.html",
+  "organizer": "Farmers Market of the Ozarks",
+  "verified": true,
+  "last_checked": "2026-11-08",
+  "notes": "Verified on loveyourfarmer.com (farmersmarketoftheozarks.com does not resolve). Springfield Farmers Park is Saturdays year-round. The calendar page says open 8-1 every Saturday and 9-1 during winter. This entry is the 8:00 a.m. to 1:00 p.m. season, from the Saturday closest to March 21 through the Saturday before Thanksgiving, approximated as 03-21 to 11-21. The downtown market page says it is closed.",
+  "active": true,
+  "next_dates": [
+    "2026-11-14T08:00:00-06:00",
+    "2026-11-21T08:00:00-06:00",
+    "2027-03-27T08:00:00-05:00",
+    "2027-04-03T08:00:00-05:00",
+    "2027-04-10T08:00:00-05:00",
+    "2027-04-17T08:00:00-05:00",
+    "2027-04-24T08:00:00-05:00",
+    "2027-05-01T08:00:00-05:00"
+  ]
+}

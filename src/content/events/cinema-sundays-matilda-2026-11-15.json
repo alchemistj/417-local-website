@@ -1,0 +1,34 @@
+{
+  "id": "98d4485e-46ef-4da5-a8ab-ff0262b81307",
+  "slug": "cinema-sundays-matilda",
+  "title": "Cinema Sundays: Matilda",
+  "seo_title": "Cinema Sundays: Matilda at Gillioz Theatre, Nov 15",
+  "description": "Cinema Sundays presents a screening of Matilda on Sunday, November 15, 2026 at 2:00 PM. It takes place at the Gillioz Theatre, 325 Park Central, E Springfield, Missouri. This film event is open to a general audience.",
+  "start": "2026-11-15T20:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Gillioz Theatre",
+  "address": "325 Park Central, E Springfield, Missouri",
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "film",
+    "arts-and-theater"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://gillioztheatre.com/event/cinema-sundays-matilda/gillioz-theatre/e-springfield-missouri",
+  "image_url": "https://gillioztheatre.com/wp-content/uploads/2026/08/cinema-sundays-matilda.jpeg",
+  "source_urls": [
+    "https://gillioztheatre.com/event/cinema-sundays-matilda/gillioz-theatre/e-springfield-missouri"
+  ],
+  "updated_at": "2026-11-10T10:27:29.685Z",
+  "public_slug": "cinema-sundays-matilda-2026-11-15",
+  "city_slug": "springfield",
+  "path": "/events/springfield/cinema-sundays-matilda-2026-11-15/",
+  "action_type": "tickets"
+}

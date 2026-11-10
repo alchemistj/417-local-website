@@ -1,0 +1,33 @@
+{
+  "id": "4044cdd3-6aaf-4e3a-bc81-8c6122a7f2ba",
+  "slug": "justin-willman-one-for-the-ages-tour",
+  "title": "Justin Willman: One For the Ages Tour",
+  "seo_title": "Justin Willman: One For the Ages Tour in Springfield, MO",
+  "description": "Justin Willman brings his One For the Ages Tour to the Gillioz Theatre on Thursday, January 14, 2027, at 7:00 PM. The show takes place at 325 Park Central in Springfield, Missouri, and is open to a general audience.",
+  "start": "2027-01-15T01:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Gillioz Theatre",
+  "address": "325 Park Central, E Springfield, Missouri",
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "arts-and-theater"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://gillioztheatre.com/event/justin-willman-one-for-the-ages-tour/gillioz-theatre/e-springfield-missouri",
+  "image_url": "https://gillioztheatre.com/wp-content/uploads/2026/09/justin-willman-one-for-the-ages-tour.jpeg",
+  "source_urls": [
+    "https://gillioztheatre.com/event/justin-willman-one-for-the-ages-tour/gillioz-theatre/e-springfield-missouri"
+  ],
+  "updated_at": "2026-11-10T10:27:29.685Z",
+  "public_slug": "justin-willman-one-for-ages-2027-01-14",
+  "city_slug": "springfield",
+  "path": "/events/springfield/justin-willman-one-for-ages-2027-01-14/",
+  "action_type": "tickets"
+}

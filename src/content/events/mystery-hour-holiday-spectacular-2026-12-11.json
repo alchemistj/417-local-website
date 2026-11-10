@@ -1,0 +1,35 @@
+{
+  "id": "1128f9ae-8b06-4f8e-b862-818b74e74f32",
+  "slug": "the-mystery-hour-holiday-spectacular",
+  "title": "The Mystery Hour Holiday Spectacular",
+  "seo_title": "The Mystery Hour Holiday Spectacular in Springfield, MO",
+  "description": "The Mystery Hour Holiday Spectacular is a holiday-themed theater event happening on Friday, December 11, 2026 at 7:30 PM. It takes place at the Gillioz Theatre, 325 Park Central in Springfield, Missouri. The event is open to a general audience.",
+  "start": "2026-12-12T01:30:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Gillioz Theatre",
+  "address": "325 Park Central, E Springfield, Missouri",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Gillioz Theatre",
+    "website": "https://allevents.in/org/gillioz-theatre/3393097"
+  },
+  "categories": [
+    "arts-and-theater",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://gillioztheatre.com/event/the-mystery-hour-holiday-spectacular/gillioz-theatre/e-springfield-missouri",
+  "image_url": "https://gillioztheatre.com/wp-content/uploads/2026/11/the-mystery-hour-holiday-spectacular.jpeg",
+  "source_urls": [
+    "https://gillioztheatre.com/event/the-mystery-hour-holiday-spectacular/gillioz-theatre/e-springfield-missouri",
+    "https://allevents.in/springfield/the-mystery-hour-holiday-spectacular/200031001205742"
+  ],
+  "updated_at": "2026-11-10T10:27:29.685Z",
+  "public_slug": "mystery-hour-holiday-spectacular-2026-12-11",
+  "city_slug": "springfield",
+  "path": "/events/springfield/mystery-hour-holiday-spectacular-2026-12-11/",
+  "action_type": "tickets"
+}

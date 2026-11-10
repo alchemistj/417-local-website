@@ -1,0 +1,36 @@
+{
+  "id": "10cecd22-bc12-4099-8c63-3c365c1ca6c5",
+  "slug": "its-a-wonderful-life-2026",
+  "title": "It's A Wonderful Life 2026",
+  "seo_title": "It's A Wonderful Life 2026",
+  "description": "It's A Wonderful Life 2026 is scheduled for Sunday, December 13, 2026 at 2:00 PM CST at Gillioz Theatre, 325 Park Central E., Springfield. Gillioz Center for Arts & Entertainment is the organizer.",
+  "start": "2026-12-13T20:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Gillioz Theatre",
+  "address": "325 Park Central E.",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Gillioz Center for Arts & Entertainment",
+    "website": "https://gillioztheatre.com/"
+  },
+  "categories": [
+    "film",
+    "arts-and-theater",
+    "holiday",
+    "family"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://gillioztheatre.com/event/its-a-wonderful-life-2026",
+  "image_url": null,
+  "source_urls": [
+    "https://gillioztheatre.com/event/its-a-wonderful-life-2026"
+  ],
+  "updated_at": "2026-11-10T10:27:29.685Z",
+  "public_slug": "it-s-wonderful-life-2026-12-13",
+  "city_slug": "springfield",
+  "path": "/events/springfield/it-s-wonderful-life-2026-12-13/",
+  "action_type": "tickets"
+}

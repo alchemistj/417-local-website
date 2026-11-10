@@ -1,0 +1,33 @@
+{
+  "id": "564c2fb7-af2f-40c6-adc6-dbcf8211b33f",
+  "slug": "cigar-spirit-tasting-arturo-fuente",
+  "title": "Cigar & Spirit Tasting | Arturo Fuente",
+  "seo_title": "Cigar & Spirit Tasting | Arturo Fuente",
+  "description": "Cigar & Spirit Tasting | Arturo Fuente is scheduled for Thursday, November 12, 2026 at 6:00 PM CST at Vineyard Market, 1759 W State Hwy J, Ozark. Vineyard Market is the organizer. The price is $65.",
+  "start": "2026-11-13T00:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Vineyard Market",
+  "address": "1759 W State Hwy J",
+  "city": "Ozark",
+  "state": "MO",
+  "organizer": {
+    "name": "Vineyard Market",
+    "website": "https://thevineyardmarket.com/"
+  },
+  "categories": [
+    "food-and-drink"
+  ],
+  "price": "$65",
+  "is_free": false,
+  "registration_url": "https://thevineyardmarket.com/events/cigar-spirit-tasting-arturo-fuente-november-2026",
+  "image_url": null,
+  "source_urls": [
+    "https://thevineyardmarket.com/events/cigar-spirit-tasting-arturo-fuente-november-2026"
+  ],
+  "updated_at": "2026-11-10T10:27:29.685Z",
+  "public_slug": "cigar-spirit-tasting-arturo-fuente-2026-11-12",
+  "city_slug": "ozark",
+  "path": "/events/ozark/cigar-spirit-tasting-arturo-fuente-2026-11-12/",
+  "action_type": "details"
+}

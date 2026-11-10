@@ -1,0 +1,33 @@
+{
+  "id": "7ccd30bf-8013-463d-8e74-2239281cef52",
+  "slug": "thanksgiving-at-the-garrison",
+  "title": "Thanksgiving at The Garrison",
+  "seo_title": "Thanksgiving at The Garrison – Nov 26, 2026",
+  "description": "Thanksgiving at The Garrison takes place on Thursday, November 26, 2026, from 12:00 PM to 8:00 PM. This holiday event is held at The Garrison and is open to a general audience.",
+  "start": "2026-11-26T18:00:00+00:00",
+  "end": "2026-11-27T02:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "The Garrison",
+  "address": "The Garrison",
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://finleyfarmsmo.com/events/thanksgiving-at-the-garrison",
+  "image_url": null,
+  "source_urls": [
+    "https://finleyfarmsmo.com/events/thanksgiving-at-the-garrison"
+  ],
+  "updated_at": "2026-11-10T10:27:29.685Z",
+  "public_slug": "thanksgiving-at-garrison-2026-11-26",
+  "city_slug": "springfield",
+  "path": "/events/springfield/thanksgiving-at-garrison-2026-11-26/",
+  "action_type": "details"
+}

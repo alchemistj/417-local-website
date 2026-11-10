@@ -1,0 +1,34 @@
+{
+  "id": "b6960d13-aa9c-4342-a001-7d92eb049664",
+  "slug": "acc-rec-ceramics",
+  "title": "Acc Rec Ceramics",
+  "seo_title": "Acc Rec Ceramics in Springfield, MO – Nov 25, 2026",
+  "description": "Acc Rec Ceramics takes place on Wednesday, November 25, 2026 at 9:00 AM at 305 E Talmage in Springfield, MO. It is listed as an outdoors event and is open to a general audience.",
+  "start": "2026-11-25T15:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "305 E Talmage",
+  "address": "305 E Talmage, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.parkboard.org/Calendar.aspx?EID=9362",
+  "image_url": null,
+  "source_urls": [
+    "https://www.parkboard.org/Calendar.aspx?EID=9362",
+    "https://www.parkboard.org/Calendar.aspx?EID=9395"
+  ],
+  "updated_at": "2026-11-10T10:27:29.685Z",
+  "public_slug": "acc-rec-ceramics-2026-11-25",
+  "city_slug": "springfield",
+  "path": "/events/springfield/acc-rec-ceramics-2026-11-25/",
+  "action_type": "details"
+}

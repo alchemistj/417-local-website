@@ -1,0 +1,33 @@
+{
+  "id": "b06271b5-fcec-4fcf-8e6a-b1e1a0156d07",
+  "slug": "wonders-of-wildlife-stream-cleanup",
+  "title": "Wonders of Wildlife Stream Cleanup",
+  "seo_title": "Wonders of Wildlife Stream Cleanup in Springfield, MO",
+  "description": "Wonders of Wildlife Stream Cleanup takes place on Saturday, November 14, 2026 at 9:00 AM. It is held at the Springfield Art Museum Hatch Lawn, 1111 E Brookside Dr in Springfield, MO. This event is open to a general audience.",
+  "start": "2026-11-14T15:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Springfield Art Museum Hatch Lawn",
+  "address": "1111 E Brookside Dr, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "arts-and-theater"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://sgfmuseum.org/Calendar.aspx?EID=10966",
+  "image_url": null,
+  "source_urls": [
+    "https://sgfmuseum.org/Calendar.aspx?EID=10966"
+  ],
+  "updated_at": "2026-11-10T10:27:29.685Z",
+  "public_slug": "wonders-of-wildlife-stream-cleanup-2026-11-14",
+  "city_slug": "springfield",
+  "path": "/events/springfield/wonders-of-wildlife-stream-cleanup-2026-11-14/",
+  "action_type": "details"
+}

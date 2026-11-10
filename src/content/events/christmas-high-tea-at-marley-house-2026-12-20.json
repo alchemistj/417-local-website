@@ -1,0 +1,33 @@
+{
+  "id": "1b81b45c-e07b-4e7f-97ee-7e98d34d0bd7",
+  "slug": "christmas-high-tea-at-the-marley-house",
+  "title": "Christmas High Tea at The Marley House",
+  "seo_title": "Christmas High Tea at The Marley House in Ozark, MO",
+  "description": "Christmas High Tea at The Marley House is a holiday event on Sunday, December 20, 2026, running from 11:00 AM to 4:00 PM. It takes place at 802 Finley Farms Lane in Ozark, Missouri. The event is open to a general audience.",
+  "start": "2026-12-20T17:00:00+00:00",
+  "end": "2026-12-20T22:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "The Marley House, 802 Finley Farms Lane, Ozark, MO, 65721, United States",
+  "address": "The Marley House, 802 Finley Farms Lane, Ozark, MO, 65721, United States",
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://finleyfarmsmo.com/events/christmas-high-tea-at-the-marley-house/2026-12-20",
+  "image_url": null,
+  "source_urls": [
+    "https://finleyfarmsmo.com/events/christmas-high-tea-at-the-marley-house/2026-12-20"
+  ],
+  "updated_at": "2026-11-10T10:27:29.685Z",
+  "public_slug": "christmas-high-tea-at-marley-house-2026-12-20",
+  "city_slug": "springfield",
+  "path": "/events/springfield/christmas-high-tea-at-marley-house-2026-12-20/",
+  "action_type": "details"
+}
