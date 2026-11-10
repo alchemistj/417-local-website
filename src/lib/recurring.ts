@@ -21,7 +21,11 @@ export const recurringSchema = z
     city_slug: z.string().nullish(),
     categories: z.array(z.string()).optional().default([]),
     rule: z.any().nullish(),
-    season: z.string().nullish(),
+    // event-radar writes `{ from: "MM-DD", to: "MM-DD" }`; older files used a plain string.
+    season: z
+      .union([z.string(), z.object({ from: z.string().nullish(), to: z.string().nullish() }).passthrough()])
+      .nullish()
+      .transform((value) => seasonLabel(value)),
     url: z.string().nullish(),
     next_dates: z.array(z.string()).optional().default([]),
     active: z.boolean().nullish(),
@@ -30,6 +34,25 @@ export const recurringSchema = z
   .passthrough();
 
 export type RecurringItem = z.infer<typeof recurringSchema>;
+
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+/** "March–October" from `{ from: "03-14", to: "10-31" }`; a string season passes through. */
+export function seasonLabel(value: unknown): string | null {
+  if (value == null) return null;
+  if (typeof value === "string") return value;
+  if (typeof value !== "object") return null;
+  const record = value as { from?: unknown; to?: unknown };
+  const month = (raw: unknown) => {
+    const match = typeof raw === "string" ? raw.match(/^(\d{1,2})-\d{1,2}$/) : null;
+    const index = match ? Number(match[1]) - 1 : -1;
+    return index >= 0 && index < 12 ? MONTHS[index] : "";
+  };
+  const from = month(record.from);
+  const to = month(record.to);
+  if (from && to) return from === to ? from : `${from}–${to}`;
+  return from || to || null;
+}
 
 const WEEKDAYS = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"] as const;
 const WEEKDAY_LABELS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
