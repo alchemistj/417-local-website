@@ -1,4 +1,5 @@
 import type { EventData } from "./eventSchema";
+import { requiresTickets, TICKETED_VENUES } from "./eventAction";
 import { eventPath, eventCitySlug, cityDisplayName, cityWeekendPath } from "./eventPaths";
 import {
   addDaysToYmd,
@@ -64,12 +65,40 @@ function daysBetween(from: string, to: string): number {
   return Math.round((Date.UTC(ty, tm - 1, td) - Date.UTC(fy, fm - 1, fd)) / 86_400_000);
 }
 
-/** True when these dates are few and close enough to be one run rather than a weekly regular. */
+const SHOW_CATEGORIES = new Set(["arts-and-theater", "live-music", "comedy", "festivals", "holiday", "film"]);
+const CLASS_CATEGORIES = new Set(["fitness", "classes-and-workshops", "sports-league", "sports-league-type"]);
+/** Titles that read like a weekly class or program, never a run. */
+export const CLASS_TITLE_PATTERN = /\b(acc rec|aerobics|workout|fit|yoga|zumba|chi|toning|strength|core|boom|silversneakers|class|open studio|bowling|ceramics)\b/i;
+
+function weekdayOf(ymd: string): number {
+  const [year, month, day] = ymd.split("-").map(Number);
+  return new Date(Date.UTC(year, month - 1, day)).getUTCDay();
+}
+
+/** True when these dates are few and close enough, and not one weekday over and over, to be a run. */
 function isRunDates(dates: string[]): boolean {
   const sorted = [...new Set(dates)].filter(Boolean).sort();
   if (sorted.length === 0) return false;
   if (sorted.length > RUN_MAX_DATES) return false;
-  return daysBetween(sorted[0] as string, sorted[sorted.length - 1] as string) <= RUN_MAX_SPAN_DAYS;
+  if (daysBetween(sorted[0] as string, sorted[sorted.length - 1] as string) > RUN_MAX_SPAN_DAYS) return false;
+  if (sorted.length >= 3 && new Set(sorted.map(weekdayOf)).size === 1) return false;
+  return true;
+}
+
+function looksLikeShow(group: EventData[]): boolean {
+  const first = group[0];
+  if (!first) return false;
+  if (group.some((event) => event.categories.some((category) => CLASS_CATEGORIES.has(category)))) return false;
+  if (CLASS_TITLE_PATTERN.test(first.title)) return false;
+  if (group.some((event) => event.categories.some((category) => SHOW_CATEGORIES.has(category)))) return true;
+  const venue = norm(placeName(first.venue));
+  if (venue && TICKETED_VENUES.some((name) => venue.includes(norm(name)))) return true;
+  return group.some((event) => requiresTickets(event));
+}
+
+/** A group of same-title upcoming events is a run: show-like, few dates, close together, not one weekday. */
+function isRunGroup(group: EventData[]): boolean {
+  return looksLikeShow(group) && isRunDates(group.map((event) => eventChicagoDate(event)));
 }
 
 function titleKey(event: EventData): string {
@@ -95,7 +124,7 @@ export interface EventRun {
 export function eventRun(event: EventData, events: EventData[], now: Date): EventRun | null {
   const key = titleKey(event);
   const sameTitle = events.filter((item) => isUpcoming(item, now) && titleKey(item) === key);
-  if (sameTitle.length === 0 || !isRunDates(sameTitle.map((item) => eventChicagoDate(item)))) return null;
+  if (sameTitle.length === 0 || !isRunGroup(sameTitle)) return null;
   const venue = norm(placeName(event.venue));
   const performances = sortByStart(sameTitle.filter((item) => norm(placeName(item.venue)) === venue));
   const canonical = performances[0];
@@ -171,10 +200,10 @@ export function uniqueUpcomingEvents(events: EventData[], recurring: RecurringIt
     recurring.filter((item) => item.active !== false && recurringCitySlug(item) === city).map((item) => norm(item.title)),
   );
   const cityUpcoming = events.filter((event) => eventCitySlug(event) === city && isUpcoming(event, now));
-  const datesByTitle = new Map<string, string[]>();
+  const groups = new Map<string, EventData[]>();
   for (const event of cityUpcoming) {
     const key = norm(event.title);
-    datesByTitle.set(key, [...(datesByTitle.get(key) ?? []), eventChicagoDate(event)]);
+    groups.set(key, [...(groups.get(key) ?? []), event]);
   }
   const start = chicagoYmd(now);
   const end = addDaysToYmd(start, days - 1);
@@ -182,7 +211,9 @@ export function uniqueUpcomingEvents(events: EventData[], recurring: RecurringIt
     const date = eventChicagoDate(event);
     if (date < start || date > end) return false;
     const key = norm(event.title);
-    return !seriesTitles.has(key) && isRunDates(datesByTitle.get(key) ?? []);
+    const group = groups.get(key) ?? [];
+    // A title seen once is a one-off. Repeats must qualify as a run.
+    return !seriesTitles.has(key) && (group.length <= 1 || isRunGroup(group));
   }));
 }
 

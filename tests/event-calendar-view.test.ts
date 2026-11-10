@@ -316,6 +316,26 @@ describe("runs and weekly regulars", () => {
     expect(runCanonicalPath(weekly[3] as EventData, weekly, sunday)).toBe(eventPath(weekly[3] as EventData));
   });
 
+  it("excludes a fitness class on 6 dates over 3 weeks (MWF)", () => {
+    const days = ["2026-11-09", "2026-11-11", "2026-11-13", "2026-11-16", "2026-11-18", "2026-11-20"];
+    const classes = days.map((day) => e(`fit-${day}`, "Morning Stretch", `${day}T09:00:00-06:00`, { venue: "Community Center", categories: ["fitness"] }));
+    expect(hub(classes)).toEqual([]);
+    expect(eventRun(classes[0] as EventData, classes, sunday)).toBeNull();
+    const named = days.map((day) => e(`aer-${day}`, "Low Impact Aerobics", `${day}T09:00:00-06:00`, { venue: "Community Center", categories: ["community"], is_free: true }));
+    expect(hub(named)).toEqual([]);
+  });
+
+  it("excludes 3 or more dates on the same weekday", () => {
+    const shows = ["2026-11-10", "2026-11-17", "2026-11-24"].map((day) => e(`tue-${day}`, "Tuesday Revue", `${day}T19:00:00-06:00`, { categories: ["comedy"] }));
+    expect(hub(shows)).toEqual([]);
+  });
+
+  it("treats a 3-night holiday event as a run", () => {
+    const lights = ["2026-11-27", "2026-11-28", "2026-11-29"].map((day) => e(`lights-${day}`, "Gardens Aglow", `${day}T17:00:00-06:00`, { venue: "Botanical Center", categories: ["holiday"] }));
+    expect(hub(lights).map((event) => event.id)).toEqual(lights.map((event) => event.id));
+    expect(runCanonicalPath(lights[2] as EventData, lights, sunday)).toBe(eventPath(lights[0] as EventData));
+  });
+
   it("excludes a title with 12 dates in 3 weeks", () => {
     const many = Array.from({ length: 12 }, (_, index) => {
       const day = new Date(Date.UTC(2026, 10, 9 + index)).toISOString().slice(0, 10);
