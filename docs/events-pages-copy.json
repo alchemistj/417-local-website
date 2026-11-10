@@ -10,24 +10,24 @@
     "emptyState": "We have no city event lists right now. Check back soon, since the lists are updated daily."
   },
   "hub": {
-    "seoTitle": "Springfield, MO Events: Music, Family, Business | 417 Local",
-    "description": "Find events in Springfield, MO and the Ozarks: music, family outings, festivals, business meetups and more. The list is updated daily.",
-    "h1": "Events in Springfield, MO",
+    "seoTitle": "Springfield, MO Events Calendar | 417 Local",
+    "description": "See upcoming events in Springfield, MO: live music, festivals, family outings, business meetups and more. The calendar is updated daily.",
+    "h1": "Springfield, MO Events",
     "intro": [
-      "Here is what is happening around Springfield and the Ozarks. You will find business meetups, live music, family outings, festivals and more.",
+      "Live music, festivals, family outings and business meetups happening around Springfield.",
       "We update the list daily. Details can change, so confirm times and tickets with the organizer before you go."
     ],
     "emptyState": "We have no events listed right now. Check back soon, since the list is updated daily.",
-    "weekendHeading": "This Weekend in Springfield",
+    "upcomingHeading": "Coming up in Springfield",
     "businessLink": "Looking for networking, workshops and chamber-style meetups? See our business events page."
   },
   "thisWeekend": {
     "seoTitle": "Things to Do in Springfield, MO This Weekend | 417 Local",
-    "description": "Looking for things to do in Springfield, MO this weekend? See music, family events, festivals and more. Updated daily. Confirm details with organizers.",
+    "description": "Looking for things to do in Springfield, MO this weekend? Our weekend guide covers music, family outings, festivals and more from Friday through Sunday.",
     "h1": "Things to Do in Springfield, MO This Weekend",
     "intro": [
-      "Planning your weekend in Springfield? Here are events happening from Friday through Sunday, from Downtown shows to family outings around the Ozarks.",
-      "We update the list daily. Hours and tickets can change, so check with the organizer before you head out."
+      "Making weekend plans in Springfield? Here is what is on from Friday through Sunday, from Downtown shows to family outings around the Ozarks.",
+      "We update this guide daily. Hours and tickets can change, so check with the organizer before you head out. For the full month, see the Springfield events calendar."
     ],
     "emptyState": "No weekend events are listed yet. Check back soon, since the list is updated daily."
   },

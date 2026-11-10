@@ -64,6 +64,11 @@ export function eventRouteParams(event: EventData): { city: string; event: strin
   return { city: eventCitySlug(event), event: eventPublicSlug(event) };
 }
 
+/** Springfield's weekend guide is a flat page for its own keyword. Other cities keep a page under their hub. */
+export function cityWeekendPath(citySlug: string): string {
+  return citySlug === "springfield" ? "/things-to-do-in-springfield-mo-this-weekend/" : `/events/${citySlug}/this-weekend/`;
+}
+
 export function reservedEventSlugs(events: EventData[] = []): Set<string> {
   const cities = new Set<string>(KNOWN_CITY_SLUGS);
   for (const event of events) cities.add(eventCitySlug(event));

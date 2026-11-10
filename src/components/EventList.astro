@@ -1,9 +1,10 @@
 ---
 import type { EventData } from "../lib/eventSchema";
-import { groupEventsByDay, eventListTime, isKidsEvent, showsFreeTag } from "../lib/calendarView";
+import { eventRun, groupEventsByDay, eventListTime, isKidsEvent, runRangeLabel, showsFreeTag } from "../lib/calendarView";
 import { categoryLabel } from "../lib/eventPage";
 import { placeName } from "../lib/events";
 import { eventPath } from "../lib/eventPaths";
+import { getSiteEvents } from "../lib/loadEvents";
 
 interface Props {
   events: EventData[];
@@ -13,8 +14,12 @@ interface Props {
   idPrefix?: string;
   /** Day pages already name the date in the H1. */
   headings?: boolean;
+  /** Every site event, used to find each row's run. Defaults to the loaded export. */
+  allEvents?: EventData[];
 }
-const { events, emptyMessage, idPrefix = "events", headings = true } = Astro.props;
+const { events, emptyMessage, idPrefix = "events", headings = true, allEvents } = Astro.props;
+const now = new Date();
+const pool = allEvents ?? (await getSiteEvents());
 const groups = groupEventsByDay(events);
 ---
 
@@ -37,6 +42,9 @@ const groups = groupEventsByDay(events);
         {group.events.map((event) => {
           const city = typeof event.city === "string" ? event.city.trim() : "";
           const place = [placeName(event.venue), city].filter(Boolean).join(" · ");
+          const run = eventRun(event, pool, now);
+          const href = run ? eventPath(run.canonical) : eventPath(event);
+          const range = runRangeLabel(run);
           const tags = event.categories.slice(0, 2).map((slug) => categoryLabel(slug));
           return (
             <li
@@ -48,8 +56,9 @@ const groups = groupEventsByDay(events);
               <p class="event-time">{eventListTime(event)}</p>
               <div>
                 <p class="event-line">
-                  <a href={eventPath(event)}>{event.title}</a>
+                  <a href={href}>{event.title}</a>
                   {place && <span class="event-place"> · {place}</span>}
+                  {range && <span class="event-place"> · Runs {range}</span>}
                 </p>
                 {(tags.length > 0 || showsFreeTag(event)) && (
                   <p class="event-tags">

@@ -67,7 +67,7 @@ describe("event action button", () => {
 
   it("uses event details when action_type is details or missing", () => {
     for (const action_type of ["details", undefined] as const) {
-      const action = eventAction(ev({ action_type, registration_url: "https://tickets.example.com/ignore" }));
+      const action = eventAction(ev({ action_type, venue: "Library Center", registration_url: "https://tickets.example.com/ignore" }));
       expect(action.label).toBe("Event details");
       expect(action.href).toBe(source);
       expect(action.secondary?.label).toBe("Get directions");
@@ -77,5 +77,26 @@ describe("event action button", () => {
   it("uses registration when a details event has no source URL", () => {
     const action = eventAction(ev({ action_type: "details", source_urls: [] }));
     expect(action.href).toBe(registration);
+  });
+});
+
+describe("ticket inference", () => {
+  const base = { id: "x", slug: "x", title: "Show", start: "2026-11-12T19:00:00-06:00", categories: [], city: "Springfield" };
+  it("sends a ticketed venue with unknown pricing to Get tickets", () => {
+    const event = eventSchema.parse({ ...base, title: "Larry Fleet", venue: "Gillioz Theatre", is_free: null });
+    expect(eventAction(event).label).toBe("Get tickets");
+  });
+  it("treats a $ price as tickets and a free library event as details", () => {
+    expect(eventAction(eventSchema.parse({ ...base, price: "$25" })).label).toBe("Get tickets");
+    const free = eventSchema.parse({ ...base, venue: "Library Center", is_free: true, source_urls: ["https://thelibrary.org/e"] });
+    expect(eventAction(free).label).toBe("Event details");
+  });
+  it("never infers tickets for is_free true and keeps explicit action types", () => {
+    expect(eventAction(eventSchema.parse({ ...base, venue: "Gillioz Theatre", is_free: true })).label).toBe("Event details");
+    expect(eventAction(eventSchema.parse({ ...base, venue: "Gillioz Theatre", action_type: "rsvp" })).label).toBe("RSVP");
+  });
+  it("recognises ticketing hosts", () => {
+    const event = eventSchema.parse({ ...base, registration_url: "https://www.ticketmaster.com/e/1" });
+    expect(eventAction(event).label).toBe("Get tickets");
   });
 });

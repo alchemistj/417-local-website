@@ -2,7 +2,7 @@ import bestOfCopy from "../../docs/best-of-hub-copy.json";
 import eventsCopy from "../../docs/events-pages-copy.json";
 import foodGuideCopy from "../../docs/food-and-drink-guide-copy.json";
 import { GENERAL_EVENT_CATEGORY_LABELS, type GeneralEventCategory } from "../lib/eventSchema";
-import { cityDisplayName } from "../lib/eventPaths";
+import { cityDisplayName, cityWeekendPath } from "../lib/eventPaths";
 
 /**
  * Every non-article route and its SEO text. The route registry, sitemap, llms.txt and the page
@@ -79,7 +79,7 @@ export function cityHubPage(citySlug: string): StaticPageMeta {
 
 export function cityWeekendPage(citySlug: string): StaticPageMeta {
   return {
-    path: `/events/${citySlug}/this-weekend/`,
+    path: cityWeekendPath(citySlug),
     title: cityCopy(eventsCopy.thisWeekend.seoTitle, citySlug),
     description: cityCopy(eventsCopy.thisWeekend.description, citySlug),
     label: citySlug === "springfield" ? "This weekend" : `This weekend in ${cityDisplayName(citySlug)}`,
@@ -92,12 +92,12 @@ export interface CityPageCopy {
   emptyState: string;
 }
 
-export function cityHubCopy(citySlug: string): CityPageCopy & { weekendHeading: string; businessLink: string } {
+export function cityHubCopy(citySlug: string): CityPageCopy & { upcomingHeading: string; businessLink: string } {
   return {
     h1: cityCopy(eventsCopy.hub.h1, citySlug),
     intro: eventsCopy.hub.intro.map((paragraph) => cityCopy(paragraph, citySlug)),
     emptyState: cityCopy(eventsCopy.hub.emptyState, citySlug),
-    weekendHeading: cityCopy(eventsCopy.hub.weekendHeading, citySlug),
+    upcomingHeading: cityCopy(eventsCopy.hub.upcomingHeading, citySlug),
     businessLink: eventsCopy.hub.businessLink,
   };
 }

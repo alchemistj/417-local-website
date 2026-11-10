@@ -57,7 +57,9 @@ export function buildRedirects(): Redirect[] {
   // City-first event URLs. Flat category pages and This Weekend moved under Springfield.
   // food-and-drink has no page in this export, so it is not redirected at a missing address.
   const movedEventPages: Record<string, string> = {
-    "events/this-weekend": "/events/springfield/this-weekend/",
+    "events/this-weekend": "/things-to-do-in-springfield-mo-this-weekend/",
+    // Springfield's weekend guide moved to its own flat page for the "things to do this weekend" keyword.
+    "events/springfield/this-weekend": "/things-to-do-in-springfield-mo-this-weekend/",
   };
   for (const slug of ["live-music", "arts-and-theater", "festivals", "family", "sports", "outdoors", "community", "holiday"]) {
     movedEventPages[`events/${slug}`] = `/events/springfield/${slug}/`;

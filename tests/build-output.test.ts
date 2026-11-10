@@ -7,10 +7,11 @@ import { describe, expect, it } from "vitest";
 import eventsCopy from "../docs/events-pages-copy.json";
 import { REDIRECTS, RETIRED_SLUGS, sourceMatches } from "../src/data/redirects";
 import { GENERAL_EVENT_CATEGORIES } from "../src/lib/eventSchema";
-import { builtMonths, monthLabel, monthPageTitle } from "../src/lib/calendarView";
+import { builtMonths, monthLabel, monthPageTitle, runCanonicalPath } from "../src/lib/calendarView";
 import { eventSectionRoutes, listedCategories } from "../src/lib/eventRoutes";
 import { eventCitySlug, eventPath } from "../src/lib/eventPaths";
-import { hubWeekendPreview, thisWeekendView } from "../src/lib/events";
+import { thisWeekendView } from "../src/lib/events";
+import { uniqueUpcomingEvents } from "../src/lib/calendarView";
 import { readRecurringDir } from "../src/lib/recurring";
 import { listsIncludedInBuild } from "../src/lib/lists";
 import { buildRoutes } from "../src/lib/routes";
@@ -67,6 +68,12 @@ describe.skipIf(!built)("built site", () => {
     expect(notFound!.html).toMatch(/<meta name="robots" content="noindex/);
   });
 
+  it("never hides a page behind .atf without the .atf-ready marker", () => {
+    for (const page of pages) {
+      if (/class="atf"/.test(page.html)) expect(page.html, page.route).toMatch(/class="atf-ready"/);
+    }
+  });
+
   it("has exactly one <h1> on every page", () => {
     for (const p of pages) {
       expect((p.html.match(/<h1[\s>]/g) ?? []).length, p.route).toBe(1);
@@ -90,7 +97,10 @@ describe.skipIf(!built)("built site", () => {
 
   it("has a canonical tag on the canonical host, valid JSON-LD and no stray noindex", () => {
     for (const p of pages) {
-      expect(p.html, p.route).toContain(`<link rel="canonical" href="${SITE}${p.route}">`);
+      // A later performance of a run points at the run's first upcoming page.
+      const event = siteEvents.find((item) => eventPath(item) === p.route);
+      const canonicalRoute = event ? runCanonicalPath(event, siteEvents, builtAt) : p.route;
+      expect(p.html, p.route).toContain(`<link rel="canonical" href="${SITE}${canonicalRoute}">`);
       for (const m of p.html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
         expect(() => JSON.parse(m[1]), `${p.route} JSON-LD`).not.toThrow();
       }
@@ -307,16 +317,12 @@ describe.skipIf(!built)("built site", () => {
     expectCopy(cityHub, "/events/springfield/", eventsCopy.hub.seoTitle, eventsCopy.hub.description, eventsCopy.hub.h1, eventsCopy.hub.intro);
     expect(decode(cityHub)).toContain(eventsCopy.hub.businessLink);
 
-    const preview = hubWeekendPreview(springfield, builtAt);
-    if (preview.length === 0) {
-      expect(cityHub).not.toContain(eventsCopy.hub.weekendHeading);
-      expect(cityHub).not.toContain(">See all of this weekend<");
-    } else {
-      expect(cityHub).toContain(eventsCopy.hub.weekendHeading);
-      expect(cityHub).toContain(">See all of this weekend<");
-      expect(cityHub).toContain('href="/events/springfield/this-weekend/"');
-      for (const event of preview) expect(decode(cityHub)).toContain(event.title);
-    }
+    const headings = [...cityHub.matchAll(/<h[1-6][^>]*>([\s\S]*?)<\/h[1-6]>/g)].map((m) => decode(m[1].replace(/<[^>]+>/g, "")));
+    expect(headings.some((text) => /this weekend/i.test(text))).toBe(false);
+    expect(cityHub).toContain('href="/things-to-do-in-springfield-mo-this-weekend/"');
+    const unique = uniqueUpcomingEvents(springfield, [], "springfield", builtAt);
+    if (unique.length > 0) expect(headings).toContain(eventsCopy.hub.upcomingHeading);
+    for (const event of unique) expect(decode(cityHub)).toContain(event.title);
 
     const builtCategories = listedCategories(springfield, builtAt);
     for (const slug of GENERAL_EVENT_CATEGORIES) {
@@ -325,12 +331,12 @@ describe.skipIf(!built)("built site", () => {
       else expect(cityHub).not.toContain(href);
     }
 
-    const weekendPage = pages.find((p) => p.route === "/events/springfield/this-weekend/");
-    expect(weekendPage, "/events/springfield/this-weekend/").toBeTruthy();
+    const weekendPage = pages.find((p) => p.route === "/things-to-do-in-springfield-mo-this-weekend/");
+    expect(weekendPage, "/things-to-do-in-springfield-mo-this-weekend/").toBeTruthy();
     const weekendHtml = weekendPage!.html;
     expectCopy(
       weekendHtml,
-      "/events/springfield/this-weekend/",
+      "/things-to-do-in-springfield-mo-this-weekend/",
       eventsCopy.thisWeekend.seoTitle,
       eventsCopy.thisWeekend.description,
       eventsCopy.thisWeekend.h1,
@@ -344,7 +350,7 @@ describe.skipIf(!built)("built site", () => {
       `${SITE}/`,
       `${SITE}/events/`,
       `${SITE}/events/springfield/`,
-      `${SITE}/events/springfield/this-weekend/`,
+      `${SITE}/things-to-do-in-springfield-mo-this-weekend/`,
     ]);
 
     const view = thisWeekendView(springfield, builtAt);
@@ -452,7 +458,7 @@ describe.skipIf(!built)("built site", () => {
       expect(decode(music.html)).toContain("← All Springfield events");
     }
 
-    const weekend = pages.find((page) => page.route === "/events/springfield/this-weekend/");
+    const weekend = pages.find((page) => page.route === "/things-to-do-in-springfield-mo-this-weekend/");
     expect(weekend).toBeTruthy();
     expect(chips(weekend!.html)[0]?.label).toBe("All events");
     expect(chips(weekend!.html).some((chip) => chip.current)).toBe(false);

@@ -2,11 +2,11 @@ import { mkdtempSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { buildMonthGrid, dateStrip, dontMissEvents, eventListTime, groupEventsByDay, monthNav } from "../src/lib/calendarView";
+import { alsoPlaying, buildMonthGrid, collapseRuns, dateStrip, runCanonicalPath, runRangeLabel, eventRun, dontMissEvents, eventsOnDate, eventListTime, uniqueUpcomingEvents, groupEventsByDay, monthNav } from "../src/lib/calendarView";
 import { eventSchema, type EventData } from "../src/lib/eventSchema";
 import { eventChips, eventSectionRoutes } from "../src/lib/eventRoutes";
 import { assertNoReservedEventSlug, eventPath, isReservedEventSlug } from "../src/lib/eventPaths";
-import { isListedEvent, isUpcoming, sortByStart } from "../src/lib/events";
+import { eventChicagoDate, isListedEvent, isUpcoming, sortByStart } from "../src/lib/events";
 import { readRecurringDir, recurringSchema, recurringWhen, type RecurringItem } from "../src/lib/recurring";
 
 const sunday = new Date("2026-11-08T18:00:00Z"); // Sun Nov 8, 2026, 12:00 PM Chicago
@@ -194,7 +194,7 @@ describe("event chips", () => {
 
     const hub = eventChips("springfield", events, sunday, "/events/springfield/");
     expect(hub[0]).toMatchObject({ label: "All events", current: true });
-    expect(eventChips("springfield", events, sunday, "/events/springfield/this-weekend/").every((chip) => !chip.current)).toBe(true);
+    expect(eventChips("springfield", events, sunday, "/things-to-do-in-springfield-mo-this-weekend/").every((chip) => !chip.current)).toBe(true);
   });
 });
 
@@ -249,3 +249,131 @@ describe("recurring folder", () => {
     expect(strip.ranges[4]?.href).toBe("/events/springfield/calendar/");
   });
 });
+
+describe("uniqueUpcomingEvents", () => {
+  const e = (id: string, title: string, start: string, extra: Partial<EventData> = {}) => ev({ id, title, start, ...extra });
+  const list = (events: EventData[], recurring: RecurringItem[] = []) =>
+    uniqueUpcomingEvents(events, recurring, "springfield", sunday).map((event) => event.id);
+
+  it("covers today through day 27 and drops past events", () => {
+    const events = [
+      e("past", "Past Show", "2026-11-01T19:00:00-06:00"),
+      e("today", "Today Show", "2026-11-08T19:00:00-06:00"),
+      e("day27", "Last Day Show", "2026-12-05T19:00:00-06:00"),
+      e("day28", "Too Far Show", "2026-12-06T19:00:00-06:00"),
+    ];
+    expect(list(events)).toEqual(["today", "day27"]);
+  });
+
+  it("leaves out titles that repeat weekly beyond a short run", () => {
+    const events = [
+      e("w1", "Total Workout", "2026-11-09T09:00:00-06:00"),
+      e("w2", "Total Workout", "2026-11-16T09:00:00-06:00"),
+      e("w3", "Total Workout", "2026-11-23T09:00:00-06:00"),
+      e("w4", "Total Workout", "2026-11-30T09:00:00-06:00"),
+      e("w5", "Total Workout", "2026-12-14T09:00:00-06:00"),
+      e("one", "Craft Fair", "2026-11-14T10:00:00-06:00"),
+    ];
+    expect(list(events)).toEqual(["one"]);
+  });
+
+  it("leaves out events that match an active recurring series and other cities", () => {
+    const events = [
+      e("s1", "SilverSneakers Classic", "2026-11-10T09:00:00-06:00"),
+      e("one", "Craft Fair", "2026-11-14T10:00:00-06:00"),
+      e("rep", "Republic Parade", "2026-11-14T10:00:00-06:00", { city: "Republic" }),
+    ];
+    expect(list(events, [series({ id: "ss", title: "SilverSneakers classic" })])).toEqual(["one"]);
+  });
+});
+
+describe("runs and weekly regulars", () => {
+  const e = (id: string, title: string, start: string, extra: Partial<EventData> = {}) => ev({ id, title, start, venue: "Landers Theatre", ...extra });
+  const nights = ["2026-11-09", "2026-11-10", "2026-11-11", "2026-11-12", "2026-11-13"];
+  const play = nights.map((day) => e(`play-${day}`, "Little Women", `${day}T19:00:00-06:00`));
+  const hub = (events: EventData[], recurring: RecurringItem[] = []) => uniqueUpcomingEvents(events, recurring, "springfield", sunday);
+
+  it("lists a Mon-Fri run on all five days and links every row to the first night", () => {
+    const listed = hub(play);
+    expect(listed.map((event) => eventChicagoDateOf(event))).toEqual(nights);
+    const paths = new Set(listed.map((event) => runCanonicalPath(event, play, sunday)));
+    expect([...paths]).toEqual([eventPath(play[0] as EventData)]);
+    for (const day of nights) {
+      const onDay = eventsOnDate(play, "springfield", day, sunday);
+      expect(onDay).toHaveLength(1);
+      expect(runCanonicalPath(onDay[0] as EventData, play, sunday)).toBe(eventPath(play[0] as EventData));
+    }
+    expect(runRangeLabel(eventRun(play[2] as EventData, play, sunday))).toBe("Nov 9–13");
+  });
+
+  it("excludes a weekly class over 8 weeks", () => {
+    const weekly = Array.from({ length: 8 }, (_, index) => {
+      const day = new Date(Date.UTC(2026, 10, 9 + index * 7)).toISOString().slice(0, 10);
+      return e(`class-${index}`, "Total Workout", `${day}T09:00:00-06:00`);
+    });
+    expect(hub(weekly)).toEqual([]);
+    expect(eventRun(weekly[0] as EventData, weekly, sunday)).toBeNull();
+    expect(runCanonicalPath(weekly[3] as EventData, weekly, sunday)).toBe(eventPath(weekly[3] as EventData));
+  });
+
+  it("excludes a fitness class on 6 dates over 3 weeks (MWF)", () => {
+    const days = ["2026-11-09", "2026-11-11", "2026-11-13", "2026-11-16", "2026-11-18", "2026-11-20"];
+    const classes = days.map((day) => e(`fit-${day}`, "Morning Stretch", `${day}T09:00:00-06:00`, { venue: "Community Center", categories: ["fitness"] }));
+    expect(hub(classes)).toEqual([]);
+    expect(eventRun(classes[0] as EventData, classes, sunday)).toBeNull();
+    const named = days.map((day) => e(`aer-${day}`, "Low Impact Aerobics", `${day}T09:00:00-06:00`, { venue: "Community Center", categories: ["community"], is_free: true }));
+    expect(hub(named)).toEqual([]);
+  });
+
+  it("excludes 3 or more dates on the same weekday", () => {
+    const shows = ["2026-11-10", "2026-11-17", "2026-11-24"].map((day) => e(`tue-${day}`, "Tuesday Revue", `${day}T19:00:00-06:00`, { categories: ["comedy"] }));
+    expect(hub(shows)).toEqual([]);
+  });
+
+  it("treats a 3-night holiday event as a run", () => {
+    const lights = ["2026-11-27", "2026-11-28", "2026-11-29"].map((day) => e(`lights-${day}`, "Gardens Aglow", `${day}T17:00:00-06:00`, { venue: "Botanical Center", categories: ["holiday"] }));
+    expect(hub(lights).map((event) => event.id)).toEqual(lights.map((event) => event.id));
+    expect(runCanonicalPath(lights[2] as EventData, lights, sunday)).toBe(eventPath(lights[0] as EventData));
+  });
+
+  it("treats consecutive nights as a run regardless of category, but not a class", () => {
+    const nightsOut = ["2026-11-27", "2026-11-28", "2026-11-29"];
+    const lights = nightsOut.map((day) => e(`glow-${day}`, "Gardens Aglow", `${day}T17:00:00-06:00`, { venue: "Botanical Center", categories: ["outdoors"], is_free: true }));
+    expect(hub(lights).map((event) => event.id)).toEqual(lights.map((event) => event.id));
+    expect(new Set(lights.map((event) => runCanonicalPath(event, lights, sunday))).size).toBe(1);
+    const classes = nightsOut.map((day) => e(`cls-${day}`, "Morning Stretch", `${day}T09:00:00-06:00`, { venue: "Community Center", categories: ["fitness"], is_free: true }));
+    expect(hub(classes)).toEqual([]);
+  });
+
+  it("excludes a title with 12 dates in 3 weeks", () => {
+    const many = Array.from({ length: 12 }, (_, index) => {
+      const day = new Date(Date.UTC(2026, 10, 9 + index)).toISOString().slice(0, 10);
+      return e(`many-${index}`, "Open Skate", `${day}T18:00:00-06:00`);
+    });
+    expect(hub(many)).toEqual([]);
+  });
+
+  it("excludes a run-sized title that matches an active recurring series", () => {
+    expect(hub(play, [series({ id: "lw", title: "Little Women" })])).toEqual([]);
+  });
+
+  it("points a later performance at the first, ignoring past performances", () => {
+    const past = e("play-past", "Little Women", "2026-11-06T19:00:00-06:00");
+    const all = [past, ...play];
+    expect(runCanonicalPath(past, all, sunday)).toBe(eventPath(play[0] as EventData));
+    expect(runCanonicalPath(play[4] as EventData, all, sunday)).toBe(eventPath(play[0] as EventData));
+    expect(eventRun(play[4] as EventData, all, sunday)?.canonical.id).toBe(play[0]?.id);
+    expect(alsoPlaying(play[4] as EventData, all, sunday).map((event) => event.id)).toEqual(play.slice(0, 4).map((event) => event.id));
+  });
+
+  it("shows a run once and drops the current run from the more-events block", () => {
+    const other = e("fair", "Craft Fair", "2026-11-14T10:00:00-06:00", { venue: "Expo Center" });
+    const listed = hub([...play, other]);
+    expect(collapseRuns(listed, [...play, other], sunday).map((event) => event.id)).toEqual([play[0]?.id, "fair"]);
+    expect(collapseRuns(listed, [...play, other], sunday, play[2]).map((event) => event.id)).toEqual(["fair"]);
+  });
+});
+
+function eventChicagoDateOf(event: EventData): string {
+  return eventChicagoDate(event);
+}
