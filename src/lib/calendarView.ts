@@ -85,20 +85,36 @@ function isRunDates(dates: string[]): boolean {
   return true;
 }
 
+function looksLikeClass(group: EventData[]): boolean {
+  const first = group[0];
+  if (!first) return true;
+  return group.some((event) => event.categories.some((category) => CLASS_CATEGORIES.has(category))) || CLASS_TITLE_PATTERN.test(first.title);
+}
+
 function looksLikeShow(group: EventData[]): boolean {
   const first = group[0];
   if (!first) return false;
-  if (group.some((event) => event.categories.some((category) => CLASS_CATEGORIES.has(category)))) return false;
-  if (CLASS_TITLE_PATTERN.test(first.title)) return false;
   if (group.some((event) => event.categories.some((category) => SHOW_CATEGORIES.has(category)))) return true;
   const venue = norm(placeName(first.venue));
   if (venue && TICKETED_VENUES.some((name) => venue.includes(norm(name)))) return true;
   return group.some((event) => requiresTickets(event));
 }
 
-/** A group of same-title upcoming events is a run: show-like, few dates, close together, not one weekday. */
+/** 2 to 7 dates, each exactly one day after the last (a Mon-Fri play, a three-night festival). */
+function isConsecutiveRun(dates: string[]): boolean {
+  const sorted = [...new Set(dates)].filter(Boolean).sort();
+  if (sorted.length < 2 || sorted.length > 7) return false;
+  return sorted.every((date, index) => index === 0 || daysBetween(sorted[index - 1] as string, date) === 1);
+}
+
+/**
+ * A group of same-title upcoming events is a run when it is not a class and either its dates are
+ * consecutive days, or it looks like a show with few dates close together that are not one weekday.
+ */
 function isRunGroup(group: EventData[]): boolean {
-  return looksLikeShow(group) && isRunDates(group.map((event) => eventChicagoDate(event)));
+  if (looksLikeClass(group)) return false;
+  const dates = group.map((event) => eventChicagoDate(event));
+  return isConsecutiveRun(dates) || (looksLikeShow(group) && isRunDates(dates));
 }
 
 function titleKey(event: EventData): string {

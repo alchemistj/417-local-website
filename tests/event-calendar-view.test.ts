@@ -336,6 +336,15 @@ describe("runs and weekly regulars", () => {
     expect(runCanonicalPath(lights[2] as EventData, lights, sunday)).toBe(eventPath(lights[0] as EventData));
   });
 
+  it("treats consecutive nights as a run regardless of category, but not a class", () => {
+    const nightsOut = ["2026-11-27", "2026-11-28", "2026-11-29"];
+    const lights = nightsOut.map((day) => e(`glow-${day}`, "Gardens Aglow", `${day}T17:00:00-06:00`, { venue: "Botanical Center", categories: ["outdoors"], is_free: true }));
+    expect(hub(lights).map((event) => event.id)).toEqual(lights.map((event) => event.id));
+    expect(new Set(lights.map((event) => runCanonicalPath(event, lights, sunday))).size).toBe(1);
+    const classes = nightsOut.map((day) => e(`cls-${day}`, "Morning Stretch", `${day}T09:00:00-06:00`, { venue: "Community Center", categories: ["fitness"], is_free: true }));
+    expect(hub(classes)).toEqual([]);
+  });
+
   it("excludes a title with 12 dates in 3 weeks", () => {
     const many = Array.from({ length: 12 }, (_, index) => {
       const day = new Date(Date.UTC(2026, 10, 9 + index)).toISOString().slice(0, 10);
