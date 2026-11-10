@@ -173,7 +173,7 @@ describe("google calendar link", () => {
 describe("exported symphony file", () => {
   it("matches the 7:30 PM Central example in the content export", () => {
     const raw = JSON.parse(
-      readFileSync(new URL("../src/content/events/2026-12-19-springfield-symphony-a-holiday-christmas.json", import.meta.url), "utf8"),
+      readFileSync(new URL("../src/content/events/springfield-symphony-holiday-christmas-2026-12-19.json", import.meta.url), "utf8"),
     ) as unknown;
     const event = eventSchema.parse(raw);
     const lines = unfold(buildEventIcs(event, { pageUrl, stamp }));
