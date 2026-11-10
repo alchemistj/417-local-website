@@ -1,0 +1,33 @@
+{
+  "id": "20a7f58b-666a-4fd9-b4fa-72f153a605dc",
+  "slug": "mahj-mondays-at-the-gillioz",
+  "title": "Mahj Mondays at the Gillioz",
+  "seo_title": "Mahj Mondays at the Gillioz in Springfield, MO",
+  "description": "Mahj Mondays at the Gillioz takes place on Monday, November 16, 2026, from 5:30 PM to 8:30 PM at The Gallery at the Gillioz Theatre, 325 Park Central E. in Springfield, MO. Admission is free, and this social, arts-minded evening is open to a general audience.",
+  "start": "2026-11-16T23:30:00+00:00",
+  "end": "2026-11-17T02:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "The Gallery at the Gillioz Theatre",
+  "address": "325 Park Central E.",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "The Gallery at the Gillioz",
+    "website": null
+  },
+  "categories": [
+    "arts-and-theater"
+  ],
+  "price": "Free",
+  "is_free": true,
+  "registration_url": "https://gillioztheatre.com/event/mahj-mondays-at-the-gillioz-4",
+  "image_url": null,
+  "source_urls": [
+    "https://gillioztheatre.com/event/mahj-mondays-at-the-gillioz-4"
+  ],
+  "updated_at": "2026-11-10T10:27:29.685Z",
+  "public_slug": "mahj-mondays-at-gillioz-2026-11-16",
+  "city_slug": "springfield",
+  "path": "/events/springfield/mahj-mondays-at-gillioz-2026-11-16/",
+  "action_type": "tickets"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "125a8cea-fc97-41b1-ad95-65b1d4782aea",
+  "slug": "springfield-symphony-a-holiday-christmas",
+  "title": "SPRINGFIELD SYMPHONY: A Holiday Christmas",
+  "seo_title": "SPRINGFIELD SYMPHONY: A Holiday Christmas",
+  "description": "SPRINGFIELD SYMPHONY: A Holiday Christmas is scheduled for Saturday, December 19, 2026 at 7:30 PM CST at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield. Springfield Symphony Orchestra is the organizer.",
+  "start": "2026-12-20T01:30:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Juanita K. Hammons Hall for the Performing Arts",
+  "address": "901 S. National Ave.",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Springfield Symphony Orchestra",
+    "website": "https://www.hammonshall.com/viewshow.aspx?ID=4075"
+  },
+  "categories": [
+    "live-music",
+    "holiday",
+    "family"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.hammonshall.com/viewshow.aspx?ID=4075",
+  "image_url": null,
+  "source_urls": [
+    "https://www.hammonshall.com/viewshow.aspx?ID=4075"
+  ],
+  "updated_at": "2026-11-10T10:27:29.685Z",
+  "public_slug": "springfield-symphony-holiday-christmas-2026-12-19",
+  "city_slug": "springfield",
+  "path": "/events/springfield/springfield-symphony-holiday-christmas-2026-12-19/",
+  "action_type": "tickets"
+}

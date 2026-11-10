@@ -1,0 +1,36 @@
+{
+  "id": "2a54a977-1b08-4263-a5ca-b8ebf24d6fa0",
+  "slug": "springfield-ballets-the-nutcracker",
+  "title": "Springfield Ballet's The Nutcracker",
+  "seo_title": "Springfield Ballet's The Nutcracker",
+  "description": "Springfield Ballet's The Nutcracker is scheduled for December 17, 2026, Time TBD at The Landers Theatre, 311 E. Walnut Street, Springfield. Springfield Ballet, Inc. is the organizer. The price is $40.00 adult; $35.00 senior/student/military; $29.00 children 12 and under; $25.00 groups 12+.",
+  "start": "2026-12-17",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "The Landers Theatre",
+  "address": "311 E. Walnut Street",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Springfield Ballet, Inc.",
+    "website": null
+  },
+  "categories": [
+    "arts-and-theater",
+    "holiday",
+    "family"
+  ],
+  "price": "Adult: $40.00; Senior (62+)/Student/Military $35.00; Children (ages 12 and under) $29.00; Groups 12+: $25.00",
+  "is_free": false,
+  "registration_url": "https://www.springfieldlittletheatre.org/show/springfield-ballets-nutcracker",
+  "image_url": null,
+  "source_urls": [
+    "https://www.springfieldlittletheatre.org/show/springfield-ballets-nutcracker"
+  ],
+  "updated_at": "2026-11-10T10:27:29.685Z",
+  "public_slug": "springfield-ballet-s-nutcracker-2026-12-17",
+  "city_slug": "springfield",
+  "path": "/events/springfield/springfield-ballet-s-nutcracker-2026-12-17/",
+  "action_type": "details"
+}

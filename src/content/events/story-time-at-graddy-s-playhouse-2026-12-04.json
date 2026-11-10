@@ -1,0 +1,33 @@
+{
+  "id": "dfe47b1b-af21-4f86-bdc7-62c0aa423954",
+  "slug": "story-time-at-graddys-playhouse",
+  "title": "Story Time at Graddy's Playhouse",
+  "seo_title": "Story Time at Graddy's Playhouse in Springfield, MO",
+  "description": "Story Time at Graddy's Playhouse takes place on Friday, December 4, 2026 at 10:30 AM at the Discovery Center of Springfield, 438 E St. Louis St. in Springfield, MO. This kids' event is open to a general audience.",
+  "start": "2026-12-04T16:30:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Discovery Center of Springfield",
+  "address": "438 E St. Louis St.",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Discovery Center of Springfield",
+    "website": "https://www.discoverycenter.org/"
+  },
+  "categories": [
+    "kids"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.discoverycenter.org/event/story-time-at-graddys-playhouse-7",
+  "image_url": null,
+  "source_urls": [
+    "https://www.discoverycenter.org/event/story-time-at-graddys-playhouse-7"
+  ],
+  "updated_at": "2026-11-10T10:27:29.685Z",
+  "public_slug": "story-time-at-graddy-s-playhouse-2026-12-04",
+  "city_slug": "springfield",
+  "path": "/events/springfield/story-time-at-graddy-s-playhouse-2026-12-04/",
+  "action_type": "details"
+}

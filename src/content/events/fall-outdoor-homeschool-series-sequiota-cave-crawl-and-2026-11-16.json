@@ -1,0 +1,34 @@
+{
+  "id": "702dc1e5-2562-4e83-aada-50156237020a",
+  "slug": "fall-outdoor-homeschool-series-sequiota-cave-crawl-and-salamander-program",
+  "title": "Fall Outdoor Homeschool Series (Sequiota Cave Crawl and Salamander Program)",
+  "seo_title": "Fall Outdoor Homeschool Series at Sequiota Park",
+  "description": "The Fall Outdoor Homeschool Series features a Sequiota Cave Crawl and Salamander Program on Monday, November 16, 2026 at 11:00 AM. It takes place at Sequiota Park, 3500 S Lone Pine in Springfield, MO. This outdoor program is geared toward kids.",
+  "start": "2026-11-16T17:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Sequiota Park",
+  "address": "3500 S Lone Pine, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "kids",
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.parkboard.org/Calendar.aspx?EID=9642",
+  "image_url": null,
+  "source_urls": [
+    "https://www.parkboard.org/Calendar.aspx?EID=9642"
+  ],
+  "updated_at": "2026-11-10T10:27:29.685Z",
+  "public_slug": "fall-outdoor-homeschool-series-sequiota-cave-crawl-and-2026-11-16",
+  "city_slug": "springfield",
+  "path": "/events/springfield/fall-outdoor-homeschool-series-sequiota-cave-crawl-and-2026-11-16/",
+  "action_type": "details"
+}

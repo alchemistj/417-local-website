@@ -1,0 +1,34 @@
+{
+  "id": "0611e286-9aa9-4348-aca1-762e8051820d",
+  "slug": "mahj-mondays-at-the-gillioz",
+  "title": "Mahj Mondays at the Gillioz",
+  "seo_title": "Mahj Mondays at the Gillioz in Springfield, MO",
+  "description": "Mahj Mondays at the Gillioz takes place on Monday, December 7, 2026, from 5:30 PM to 8:30 PM at The Gallery at the Gillioz, 325 Park Central E. in Springfield, MO. Admission is free, and the event is open to a general audience looking for a social evening out.",
+  "start": "2026-12-07T23:30:00+00:00",
+  "end": "2026-12-08T02:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "The Gallery at the Gillioz",
+  "address": "325 Park Central E.",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "The Gallery at the Gillioz",
+    "website": "https://gillioztheatre.com/"
+  },
+  "categories": [
+    "arts-and-theater",
+    "outdoors"
+  ],
+  "price": "FREE",
+  "is_free": true,
+  "registration_url": "https://gillioztheatre.com/event/mahj-mondays-at-the-gillioz-5",
+  "image_url": null,
+  "source_urls": [
+    "https://gillioztheatre.com/event/mahj-mondays-at-the-gillioz-5"
+  ],
+  "updated_at": "2026-11-10T10:27:29.685Z",
+  "public_slug": "mahj-mondays-at-gillioz-2026-12-07",
+  "city_slug": "springfield",
+  "path": "/events/springfield/mahj-mondays-at-gillioz-2026-12-07/",
+  "action_type": "tickets"
+}

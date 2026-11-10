@@ -1,0 +1,40 @@
+{
+  "id": "c-street-saturday-market",
+  "title": "C-Street City Market",
+  "venue": "C-Street City Market",
+  "address": "321 E Commercial St",
+  "city": "Springfield",
+  "state": "MO",
+  "categories": [
+    "festivals",
+    "food_drink"
+  ],
+  "rule": {
+    "freq": "weekly",
+    "byday": [
+      "SA"
+    ],
+    "start_time": "09:00",
+    "end_time": "14:00"
+  },
+  "season": {
+    "from": "03-14",
+    "to": "10-31"
+  },
+  "url": "https://www.cstreetcitymarket.org/",
+  "organizer": "C-Street City Market",
+  "verified": true,
+  "last_checked": "2026-11-08",
+  "notes": "Verified on the market site and its public Google Calendar (embedded on cstreetcitymarket.org; cstreetmarket.org does not resolve). The homepage says the 2026 season is mid March through October, 9 a.m. to 2 p.m. Calendar events titled Market Day are Saturdays 9:00-14:00 (2026-05-02 is 8:00-14:00). Season starts 03-14 to include the 2026-03-14 first market day.",
+  "active": true,
+  "next_dates": [
+    "2027-03-20T09:00:00-05:00",
+    "2027-03-27T09:00:00-05:00",
+    "2027-04-03T09:00:00-05:00",
+    "2027-04-10T09:00:00-05:00",
+    "2027-04-17T09:00:00-05:00",
+    "2027-04-24T09:00:00-05:00",
+    "2027-05-01T09:00:00-05:00",
+    "2027-05-08T09:00:00-05:00"
+  ]
+}
