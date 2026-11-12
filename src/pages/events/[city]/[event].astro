@@ -2,6 +2,7 @@
 import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import DayPage from "../../../components/DayPage.astro";
+import EventCard from "../../../components/EventCard.astro";
 import AddToCalendar from "../../../components/AddToCalendar.astro";
 import EventChips from "../../../components/EventChips.astro";
 import EventFilters from "../../../components/EventFilters.astro";
@@ -19,6 +20,7 @@ import {
   assertUniqueEventPaths,
   cityDisplayName,
   eventCitySlug,
+  eventCardImagePath,
   eventPath,
   eventPublicSlug,
   eventRouteParams,
@@ -32,9 +34,11 @@ import {
   dayPageTitle,
   alsoPlaying,
   collapseRuns,
+  eventRun,
   eventsOnDate,
   performanceLabel,
   runCanonicalPath,
+  runRangeLabel,
   uniqueUpcomingEvents,
 } from "../../../lib/calendarView";
 import {
@@ -44,7 +48,6 @@ import {
   eventMetaDescription,
   eventPageTitle,
   eventPriceText,
-  formatEventWhen,
   isBusinessCategory,
   moreInCategory,
   relatedUpcoming,
@@ -132,8 +135,8 @@ const categoryMeta = category && isGeneralEventCategory(category) ? generalCateg
 
 const event = props.kind === "event" ? props.event : null;
 const passed = event ? !isUpcoming(event, now) : false;
-const when = event ? formatEventWhen(event) : "";
 const price = event ? eventPriceText(event) : "";
+const runRange = event ? runRangeLabel(eventRun(event, allEvents, now)) : null;
 const action = event && !passed ? eventAction(event) : null;
 const maps = event ? mapsSearchUrl(event) : "";
 const pagePath = event ? eventPath(event) : "";
@@ -218,23 +221,16 @@ const outbound = (href: string) => href.startsWith("http");
     description={eventMetaDescription(event)}
     path={canonicalPath}
     noindex={!isIndexableEvent(event, now)}
+    ogImagePath={eventCardImagePath(event)}
     jsonLd={[eventJsonLd(event), eventBreadcrumbLd(crumbs)]}
   >
-    <section class="band band-blue page-band">
+    <header class="event-card-band">
       <div class="container">
-        <h1>{event.title}</h1>
-        <p class="lead">{when}</p>
-        {playing.length > 0 && <p class="lead">Also playing: {playing.map(performanceLabel).join(" · ")}</p>}
-        {venue && (
-          <p class="lead">
-            <a href={venueHref} rel={venueExternal ? "noopener" : undefined}>{venue}</a>{cityName && `, ${cityName}`}
-          </p>
-        )}
-        {!venue && cityName && <p class="lead">{cityName}</p>}
-        {price && <p class="lead">{price}</p>}
+        <EventCard event={event} runRange={runRange} price={price} venueHref={venue ? venueHref : ""} venueExternal={venueExternal} />
+        {playing.length > 0 && <p class="event-card-note">Also playing: {playing.map(performanceLabel).join(" · ")}</p>}
         {passed && <p class="passed-note">This event has passed.</p>}
       </div>
-    </section>
+    </header>
     <section class="band">
       <div class="container stack">
         {passed && related.length > 0 && (

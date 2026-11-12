@@ -1,8 +1,9 @@
 ---
 import type { EventData } from "../lib/eventSchema";
 import { eventRun, groupEventsByDay, eventListTime, isKidsEvent, runRangeLabel, showsFreeTag } from "../lib/calendarView";
+import { cardPaletteForCategory, eventCardDate } from "../lib/eventCard";
 import { categoryLabel } from "../lib/eventPage";
-import { placeName } from "../lib/events";
+import { placeName, primaryCategory } from "../lib/events";
 import { eventPath } from "../lib/eventPaths";
 import { getSiteEvents } from "../lib/loadEvents";
 
@@ -46,6 +47,8 @@ const groups = groupEventsByDay(events);
           const href = run ? eventPath(run.canonical) : eventPath(event);
           const range = runRangeLabel(run);
           const tags = event.categories.slice(0, 2).map((slug) => categoryLabel(slug));
+          const date = eventCardDate(event);
+          const tile = cardPaletteForCategory(primaryCategory(event)).solid;
           return (
             <li
               class="event-row"
@@ -53,19 +56,21 @@ const groups = groupEventsByDay(events);
               data-free={showsFreeTag(event) ? "true" : undefined}
               data-kids={isKidsEvent(event) ? "true" : undefined}
             >
-              <p class="event-time">{eventListTime(event)}</p>
+              <div class="date-tile" style={`background:${tile}`}>
+                <span class="date-tile-day">{date.day}</span>
+                <span class="date-tile-month">{date.month}</span>
+              </div>
               <div>
                 <p class="event-line">
                   <a href={href}>{event.title}</a>
                   {place && <span class="event-place"> · {place}</span>}
                   {range && <span class="event-place"> · Runs {range}</span>}
                 </p>
-                {(tags.length > 0 || showsFreeTag(event)) && (
-                  <p class="event-tags">
-                    {tags.map((tag) => <span class="event-tag">{tag}</span>)}
-                    {showsFreeTag(event) && <span class="event-tag">Free</span>}
-                  </p>
-                )}
+                <p class="event-tags">
+                  <span class="event-when">{eventListTime(event)}</span>
+                  {tags.map((tag) => <span class="event-tag">{tag}</span>)}
+                  {showsFreeTag(event) && <span class="event-tag">Free</span>}
+                </p>
               </div>
             </li>
           );
