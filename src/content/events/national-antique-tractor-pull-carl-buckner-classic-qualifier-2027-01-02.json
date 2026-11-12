@@ -1,0 +1,33 @@
+{
+  "id": "c86a3ac4-036b-45d3-96a6-0552b500d768",
+  "slug": "national-antique-tractor-pull-carl-buckner-classic-qualifier",
+  "title": "National Antique Tractor Pull - Carl Buckner Classic Qualifier",
+  "seo_title": "National Antique Tractor Pull Qualifier in Lebanon, MO",
+  "description": "The National Antique Tractor Pull - Carl Buckner Classic Qualifier is a tractor pulling event where you can watch pullers compete to qualify for the National Championship Pull. It takes place on Saturday, January 2, 2027 at 8:00 AM at the Cowan Civic Center, 500 East Elm Street in Lebanon, Missouri.",
+  "start": "2027-01-02T14:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Cowan Civic Center",
+  "address": "500 East Elm Street, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "community"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/national-antique-tractor-pull2222222",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/national-antique-tractor-pull2222222"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "national-antique-tractor-pull-carl-buckner-classic-qualifier-2027-01-02",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/national-antique-tractor-pull-carl-buckner-classic-qualifier-2027-01-02/",
+  "action_type": "details"
+}

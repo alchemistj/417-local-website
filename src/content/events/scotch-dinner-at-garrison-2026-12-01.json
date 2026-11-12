@@ -1,0 +1,33 @@
+{
+  "id": "aeb326d5-fa36-444f-91d1-8b826399640b",
+  "slug": "scotch-dinner-at-the-garrison",
+  "title": "Scotch Dinner at The Garrison",
+  "seo_title": "Scotch Dinner at The Garrison – Dec 1, 2026",
+  "description": "This is a curated Scotch dinner at The Garrison featuring four pours and a specialty cocktail, led by a mixologist who guides a tasting tour of the Highlands, Lowlands, Islay, and Speyside. The pours are paired with a seven-course dinner inspired by traditional Scottish fare with a Garrison/Ozarks twist. It takes place Tuesday, December 1, 2026, from 5:30 PM to 8:00 PM at The Garrison.",
+  "start": "2026-12-01T23:30:00+00:00",
+  "end": "2026-12-02T02:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "The Garrison",
+  "address": "The Garrison",
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://finleyfarmsmo.com/events/scotch-dinner-at-the-garrison",
+  "image_url": null,
+  "source_urls": [
+    "https://finleyfarmsmo.com/events/scotch-dinner-at-the-garrison"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "scotch-dinner-at-garrison-2026-12-01",
+  "city_slug": "springfield",
+  "path": "/events/springfield/scotch-dinner-at-garrison-2026-12-01/",
+  "action_type": "details"
+}

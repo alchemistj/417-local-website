@@ -1,0 +1,36 @@
+{
+  "id": "2da3720c-6c90-4e72-9284-1d7321be6494",
+  "slug": "skerryvore",
+  "title": "Skerryvore",
+  "seo_title": "Skerryvore Live in Joplin, MO – January 23, 2027",
+  "description": "Skerryvore is a live concert by one of Scotland's leading contemporary folk bands, known for blending traditional Scottish music with rock, pop, and Celtic influences. It takes place on Saturday, January 23, 2027, from 7:00 PM to 9:00 PM at Connect2Culture at the Cornell Complex, 212 West 7th Street in Joplin, Missouri.",
+  "start": "2027-01-24T01:00:00+00:00",
+  "end": "2027-01-24T03:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Connect2Culture at the Cornell Complex",
+  "address": "212 West 7th Street, Joplin, MO 64801",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Connect2Culture",
+    "website": null
+  },
+  "categories": [
+    "live-music",
+    "arts-and-theater",
+    "community"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitjoplinmo.com/events/skerryvore",
+  "image_url": "https://www.visitjoplinmo.com/imager/cmsimages/721427/skerryvore-VJ_91852798b59be8b28fc00edfe4aec23a.jpg",
+  "source_urls": [
+    "https://www.visitjoplinmo.com/events/skerryvore",
+    "https://happeningnext.com/event/skerryvore-eid3a0dxbando"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "skerryvore-2027-01-23",
+  "city_slug": "joplin",
+  "path": "/events/joplin/skerryvore-2027-01-23/",
+  "action_type": "details"
+}

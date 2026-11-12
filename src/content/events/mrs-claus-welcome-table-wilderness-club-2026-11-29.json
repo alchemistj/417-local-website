@@ -1,0 +1,33 @@
+{
+  "id": "7d06f22c-dbc8-4d15-a7e6-1fcb93d65770",
+  "slug": "mrs-claus-welcome-table-wilderness-club",
+  "title": "Mrs. Claus Welcome Table – Wilderness Club",
+  "seo_title": "Mrs. Claus Welcome Table at Wilderness Club, Ridgedale MO",
+  "description": "Visit the Holiday Welcome Table in the Brushy Creek Clubhouse, where Mrs. Claus and the elves serve holiday cookies and take photos with you and your family. It takes place Sunday, November 29, 2026, from 3:00 to 4:00 PM at the Wilderness Club at Big Cedar Lodge, 1285 Estate Dr in Ridgedale, Missouri.",
+  "start": "2026-11-29T21:00:00+00:00",
+  "end": "2026-11-29T22:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Wilderness Club at Big Cedar Lodge",
+  "address": "1285 Estate Dr, Ridgedale, MO, 65739",
+  "city": "Ridgedale",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://bigcedar.com/activity/mrs-claus-welcome-table-wilderness-club",
+  "image_url": "https://bigcedar.com/wp-content/uploads/2026/06/Web-JPG-2025_BCL_Events_Holidays_MrsClausWelcome-Table-3.jpg",
+  "source_urls": [
+    "https://bigcedar.com/activity/mrs-claus-welcome-table-wilderness-club"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "mrs-claus-welcome-table-wilderness-club-2026-11-29",
+  "city_slug": "ridgedale",
+  "path": "/events/ridgedale/mrs-claus-welcome-table-wilderness-club-2026-11-29/",
+  "action_type": "details"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "3a55c4af-2811-44bc-9176-80c9c812f31d",
+  "slug": "let-it-snow-ball-father-daughter-dance",
+  "title": "Let it Snow Ball Father-Daughter Dance!",
+  "seo_title": "Let it Snow Ball Father-Daughter Dance in Lebanon, MO",
+  "description": "The Let it Snow Ball is an annual father-daughter dance with dancing, a DJ, and food. Tickets are required. It takes place Sunday, February 14, 2027, from 4:00 PM to 7:00 PM at Mighty Oak Lodge, 1720 Lynn Street in Lebanon, Missouri.",
+  "start": "2027-02-14T22:00:00+00:00",
+  "end": "2027-02-15T01:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Mighty Oak Lodge",
+  "address": "1720 Lynn Street, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "arts-and-theater"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/let-it-snow-ball-father-daughter-dance2222",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/let-it-snow-ball-father-daughter-dance2222"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "let-it-snow-ball-father-daughter-dance-2027-02-14",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/let-it-snow-ball-father-daughter-dance-2027-02-14/",
+  "action_type": "details"
+}

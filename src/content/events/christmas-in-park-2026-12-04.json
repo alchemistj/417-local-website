@@ -1,0 +1,35 @@
+{
+  "id": "a2004abc-af70-4a88-9ba6-4f9f441dbbe8",
+  "slug": "christmas-in-the-park",
+  "title": "Christmas in the Park",
+  "seo_title": "Christmas in the Park at Boswell Park in Lebanon, MO",
+  "description": "Christmas in the Park is a free holiday evening with hot chocolate, hay rides, inflatables, Santa photos, live choir performances, hot dogs, and food trucks. The first 200 kids also get a special mystery squishy dumpling, and the event is presented by the Lebanon Parks Department. It takes place Friday, December 4, 2026, from 5:00 PM to 8:00 PM at Boswell Park on Drury Lane in Lebanon, MO.",
+  "start": "2026-12-04T23:00:00+00:00",
+  "end": "2026-12-05T02:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Boswell Park",
+  "address": "Drury Lane, Lebanon, MO",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "food-and-drink",
+    "outdoors",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": true,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/christmas-in-the-park22(2)",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/christmas-in-the-park22(2)"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "christmas-in-park-2026-12-04",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/christmas-in-park-2026-12-04/",
+  "action_type": "show_up"
+}

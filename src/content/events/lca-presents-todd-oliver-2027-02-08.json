@@ -1,0 +1,34 @@
+{
+  "id": "68a74e7d-b68f-4d73-859c-14ff54268ec5",
+  "slug": "lca-presents-todd-oliver",
+  "title": "LCA Presents : Todd Oliver",
+  "seo_title": "Todd Oliver Ventriloquist Show in Lebanon, MO | Feb 8",
+  "description": "Todd Oliver, a nationally recognized ventriloquist and comedian, performs a family-friendly show with laughter, magic, and music, featuring his talking dog Irving and a rotating cast of characters. It takes place Monday, February 8, 2027 at 7:00 PM at the Cowan Civic Center, 500 East Elm Street in Lebanon, MO, as part of LCA Presents.",
+  "start": "2027-02-09T01:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Cowan Civic Center",
+  "address": "500 East Elm Street, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "comedy",
+    "community"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/lca-presents--todd-oliver",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/lca-presents--todd-oliver"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "lca-presents-todd-oliver-2027-02-08",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/lca-presents-todd-oliver-2027-02-08/",
+  "action_type": "details"
+}

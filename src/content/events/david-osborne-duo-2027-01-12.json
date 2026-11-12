@@ -1,0 +1,36 @@
+{
+  "id": "d954e508-b2f4-496c-b43f-f9bf47ab0dc7",
+  "slug": "david-osborne-duo",
+  "title": "David Osborne Duo",
+  "seo_title": "David Osborne Duo at Connect2Culture in Joplin, MO",
+  "description": "The David Osborne Duo is a live music performance featuring David Osborne, an internationally known pianist billed as the \"Pianist to the Presidents,\" who has performed at the White House for six presidential administrations. It takes place Tuesday, January 12, 2027, from 7:00 PM to 9:00 PM at Connect2Culture at the Cornell Complex, 212 West 7th Street in Joplin, MO.",
+  "start": "2027-01-13T01:00:00+00:00",
+  "end": "2027-01-13T03:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Connect2Culture at the Cornell Complex",
+  "address": "212 West 7th Street, Joplin, MO 64801",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Connect2Culture",
+    "website": null
+  },
+  "categories": [
+    "live-music",
+    "arts-and-theater",
+    "community"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitjoplinmo.com/events/david-osborne-duo",
+  "image_url": "https://www.visitjoplinmo.com/imager/cmsimages/721425/david-osborne-JV_91852798b59be8b28fc00edfe4aec23a.jpg",
+  "source_urls": [
+    "https://www.visitjoplinmo.com/events/david-osborne-duo",
+    "https://happeningnext.com/event/david-osborne-duo-eid3a0e1a0vfr"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "david-osborne-duo-2027-01-12",
+  "city_slug": "joplin",
+  "path": "/events/joplin/david-osborne-duo-2027-01-12/",
+  "action_type": "details"
+}

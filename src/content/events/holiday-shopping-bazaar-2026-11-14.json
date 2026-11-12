@@ -1,0 +1,33 @@
+{
+  "id": "312b500f-176c-4a53-adc5-2e351cec5663",
+  "slug": "holiday-shopping-bazaar",
+  "title": "Holiday Shopping Bazaar",
+  "seo_title": "Holiday Shopping Bazaar in Lebanon, MO on Nov 14",
+  "description": "This is the Annual Holiday Shopping Bazaar, where you can browse items from local makers, and there are door prizes and treats. It takes place on Saturday, November 14, 2026, from 10:00 AM to 3:00 PM at 399 Hoover in Lebanon, MO.",
+  "start": "2026-11-14T16:00:00+00:00",
+  "end": "2026-11-14T21:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "399 Hoover Lebanon, MO 65536",
+  "address": "399 Hoover, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/holiday-shopping-bazaar",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/holiday-shopping-bazaar"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "holiday-shopping-bazaar-2026-11-14",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/holiday-shopping-bazaar-2026-11-14/",
+  "action_type": "details"
+}

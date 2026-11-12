@@ -1,0 +1,33 @@
+{
+  "id": "24e83692-0222-4c26-9693-27fe2a423d25",
+  "slug": "glass-half-full-theatre-maebelles-suitcase",
+  "title": "Glass Half Full Theatre: “Maebelle’s Suitcase”",
+  "seo_title": "Maebelle's Suitcase Puppet Show in Joplin, MO",
+  "description": "Glass Half Full Theatre presents \"Maebelle's Suitcase,\" a bilingual puppet adventure based on the picture book by Tricia Tusa. It takes place Saturday, March 6, 2027, from 2:00 PM to 3:30 PM at Connect2Culture at the Cornell Complex, 212 West 7th Street in Joplin, MO.",
+  "start": "2027-03-06T20:00:00+00:00",
+  "end": "2027-03-06T21:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Connect2Culture at the Cornell Complex",
+  "address": "212 West 7th Street, Joplin, MO 64801",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "arts-and-theater"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitjoplinmo.com/events/glass-half-full-theatre-maebelles-suitcase",
+  "image_url": "https://www.visitjoplinmo.com/imager/cmsimages/721443/maebelle-VJ_91852798b59be8b28fc00edfe4aec23a.jpg",
+  "source_urls": [
+    "https://www.visitjoplinmo.com/events/glass-half-full-theatre-maebelles-suitcase"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "glass-half-full-theatre-maebelle-s-suitcase-2027-03-06",
+  "city_slug": "joplin",
+  "path": "/events/joplin/glass-half-full-theatre-maebelle-s-suitcase-2027-03-06/",
+  "action_type": "details"
+}

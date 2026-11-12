@@ -1,0 +1,33 @@
+{
+  "id": "fae37693-df11-441f-9512-194116376936",
+  "slug": "veterans-day-silent-vigil",
+  "title": "Veterans Day Silent Vigil",
+  "seo_title": "Veterans Day Silent Vigil in Lebanon, MO – Nov. 11, 2026",
+  "description": "The Veterans Day Silent Vigil is Lebanon's first, a day-long tribute honoring those who served. Veterans, service members, and military families are invited to participate. It takes place Wednesday, November 11, 2026, starting at 10:45 AM at the Veterans Memorial, 500 East Elm Street, Lebanon, MO.",
+  "start": "2026-11-11T16:45:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Veterans Memorial",
+  "address": "500 East Elm Street, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/veterans-day-silent-vigil",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/veterans-day-silent-vigil"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "veterans-day-silent-vigil-2026-11-11",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/veterans-day-silent-vigil-2026-11-11/",
+  "action_type": "details"
+}

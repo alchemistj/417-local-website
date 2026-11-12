@@ -1,0 +1,34 @@
+{
+  "id": "759d0933-e852-4a2c-812d-bff25df6bcd0",
+  "slug": "pies-pages",
+  "title": "Pies & Pages",
+  "seo_title": "Pies & Pages at Book Burrow in Lebanon, MO",
+  "description": "Pies & Pages is a pre-holiday evening at The Book Burrow with pie tasting, a book-themed Family Feud, laughs from the Unthankful Jar, and a storewide sale. It's an evening for book lovers, and tickets are required. It takes place Friday, November 13, 2026 at 6:00 PM at Book Burrow, 114 W Commercial St., Lebanon, MO.",
+  "start": "2026-11-14T00:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Book Burrow",
+  "address": "114 W Commercial St., Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "food-and-drink",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/pies--pages",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/pies--pages"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "pies-pages-2026-11-13",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/pies-pages-2026-11-13/",
+  "action_type": "details"
+}

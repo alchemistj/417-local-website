@@ -1,0 +1,34 @@
+{
+  "id": "8019ada9-db41-4dbf-a32c-612d5fd79aa5",
+  "slug": "pancakes-with-santa",
+  "title": "Pancakes with Santa",
+  "seo_title": "Pancakes with Santa in Lebanon, MO on Dec 5, 2026",
+  "description": "Pancakes with Santa is a holiday morning with a free pancake breakfast, a free professional photo with Santa by Cherry Pic'd Photography, and a special gift for the kids. It takes place Saturday, December 5, 2026, from 8:30 AM to 10:30 AM at Big Whiskey;s, 2540 Granite Lane in Lebanon, Missouri. Admission is free.",
+  "start": "2026-12-05T14:30:00+00:00",
+  "end": "2026-12-05T16:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Big Whiskey;s",
+  "address": "2540 Granite Lane, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "networking",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": true,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/pancakes-with-santa2",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/pancakes-with-santa2"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "pancakes-with-santa-2026-12-05",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/pancakes-with-santa-2026-12-05/",
+  "action_type": "show_up"
+}

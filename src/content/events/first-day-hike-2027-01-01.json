@@ -1,0 +1,33 @@
+{
+  "id": "e6c10e6c-252d-47f3-8f60-2aa84a1f2c7c",
+  "slug": "first-day-hike",
+  "title": "First Day Hike",
+  "seo_title": "First Day Hike at Bennett Spring State Park",
+  "description": "This is a guided First Day Hike led by Bennett Spring State Park staff on the Natural Tunnel Trail, a strenuous 7.5-mile route with rocks, slopes, and uneven surfaces. Meet at the Natural Tunnel Trailhead before 10 AM, as the hike begins promptly. It takes place Friday, January 1, 2027, from 10:00 AM to 3:30 PM at Bennett Spring State Park, 26250 MO-64A in Lebanon, Missouri.",
+  "start": "2027-01-01T16:00:00+00:00",
+  "end": "2027-01-01T21:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Bennett Spring State Park",
+  "address": "26250 MO-64A, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/first-day-hike22",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/first-day-hike22"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "first-day-hike-2027-01-01",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/first-day-hike-2027-01-01/",
+  "action_type": "details"
+}

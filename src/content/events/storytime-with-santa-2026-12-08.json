@@ -1,0 +1,36 @@
+{
+  "id": "7c4bdcaa-05d0-46db-b43e-f92e600885d2",
+  "slug": "storytime-with-santa",
+  "title": "Storytime with Santa",
+  "seo_title": "Storytime with Santa at Lebanon-Laclede County Library",
+  "description": "Storytime with Santa is a free holiday event at the library where Santa reads stories and The Grinch makes a special visit, with free photos, crafts, and snacks. Santa begins reading at 5:30 sharp, and the summary says no registration is required. It takes place Tuesday, December 8, 2026, from 5:30 to 7:30 PM at the Lebanon-Laclede County Library, 915 South Jefferson Ave, Lebanon, MO.",
+  "start": "2026-12-08T23:30:00+00:00",
+  "end": "2026-12-09T01:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Lebanon-Laclede County Library",
+  "address": "915 South Jefferson Ave, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "classes-and-workshops",
+    "kids",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": true,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/storytime-with-santa223",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czUvYmFubmVycy82NDllYjk0NTIwMjM3YWYxMjViNWNhYmI3NDlmYjg4ZjNmMWU3NTcyZGMwY2RhNmE3NWVlYzA0OWNlZDkwNDNhLXJpbWctdzExOTktaDYyOC1kY2Y4ZjhmOC1nbWlyP3Y9MTc5MzcxMDU2OA.avif",
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/storytime-with-santa223",
+    "https://allevents.in/lebanon/storytime-with-santa/200030962819108"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "storytime-with-santa-2026-12-08",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/storytime-with-santa-2026-12-08/",
+  "action_type": "signup"
+}

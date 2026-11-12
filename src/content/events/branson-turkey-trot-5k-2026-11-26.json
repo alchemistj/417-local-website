@@ -1,0 +1,33 @@
+{
+  "id": "f8f2e956-795a-4d49-bd6d-d7fd7a9e6004",
+  "slug": "branson-turkey-trot-5k",
+  "title": "Branson Turkey Trot 5K",
+  "seo_title": "Branson Turkey Trot 5K at Branson Landing, Nov 26",
+  "description": "The Branson Turkey Trot 5K is a sports event where participants take part in a 5K run on Thanksgiving morning. It takes place on Thursday, November 26, 2026, from 7:00 AM to 9:30 AM at Branson Landing, 100 Branson Landing Boulevard in Branson, Missouri.",
+  "start": "2026-11-26T13:00:00+00:00",
+  "end": "2026-11-26T15:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Branson Landing",
+  "address": "100 Branson Landing Boulevard Branson, Missouri, 65616 United States",
+  "city": "Branson",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "sports"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.experience-branson.com/calendar/branson-turkey-trot-5k",
+  "image_url": null,
+  "source_urls": [
+    "https://www.experience-branson.com/calendar/branson-turkey-trot-5k"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "branson-turkey-trot-5k-2026-11-26",
+  "city_slug": "branson",
+  "path": "/events/branson/branson-turkey-trot-5k-2026-11-26/",
+  "action_type": "details"
+}

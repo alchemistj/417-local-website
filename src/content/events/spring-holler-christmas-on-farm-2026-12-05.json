@@ -1,0 +1,35 @@
+{
+  "id": "e98251d1-8e43-48c6-b98e-a22db5ece1f6",
+  "slug": "spring-holler-christmas-on-the-farm",
+  "title": "Spring Holler Christmas on the Farm",
+  "seo_title": "Spring Holler Christmas on the Farm",
+  "description": "Christmas on the Farm returns to Spring Hollow on Dec. 5 from 10 AM to 3 PM. Spring Holler Christmas on the Farm is scheduled for Saturday, December 5, 2026 at 10:00 AM CST at Spring Holler, 26901 Stanton Lane, Lebanon, MO, 65536, Lebanon. Admission is free.",
+  "start": "2026-12-05T16:00:00+00:00",
+  "end": "2026-12-05T21:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Spring Holler",
+  "address": "26901 Stanton Lane, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "food-and-drink",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": true,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/spring-holler-2nd-annual-christmas-on-the-farm22",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy84OTVhNjFhYzdhZTVkOWRmYTVkNDc5MTVkNjE4M2EwMjdkMTYxZTNiNzM3ODUzMDllNWY2M2RiN2UwYTkxZjg4LXJpbWctdzg1MS1oMzE1LWRjZjhmOGY4LWdtaXI_dj0xNzk0MTM0MTc2.avif",
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/spring-holler-2nd-annual-christmas-on-the-farm22",
+    "https://allevents.in/lebanon/spring-holler-presents-christmas-on-the-farm/200030999845016"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "spring-holler-christmas-on-farm-2026-12-05",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/spring-holler-christmas-on-farm-2026-12-05/",
+  "action_type": "show_up"
+}

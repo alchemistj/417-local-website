@@ -1,0 +1,33 @@
+{
+  "id": "301b6d97-c791-46bc-847e-a9acc4a030ee",
+  "slug": "dance-fitness",
+  "title": "Dance Fitness",
+  "seo_title": "Dance Fitness at Big Cedar Fitness Center, Nov 23",
+  "description": "Dance Fitness is a high-energy dance class set to fun music that doubles as a calorie-burning workout. It takes place on Monday, November 23, 2026, from 10:30 AM to 11:30 AM at Big Cedar Fitness Center.",
+  "start": "2026-11-23T16:30:00+00:00",
+  "end": "2026-11-23T17:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Big Cedar Fitness Center",
+  "address": null,
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "arts-and-theater"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://bigcedar.com/activity/dance-fitness",
+  "image_url": "https://bigcedar.com/wp-content/uploads/2025/06/Web-JPG-2025_BCL_Fitness_Dance-Class-15.jpg",
+  "source_urls": [
+    "https://bigcedar.com/activity/dance-fitness"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "dance-fitness-2026-11-23",
+  "city_slug": "branson",
+  "path": "/events/branson/dance-fitness-2026-11-23/",
+  "action_type": "details"
+}

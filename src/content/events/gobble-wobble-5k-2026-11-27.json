@@ -1,0 +1,33 @@
+{
+  "id": "359ec51a-8bf9-42df-af34-466ecb53f72a",
+  "slug": "gobble-wobble-5k",
+  "title": "Gobble Wobble 5k",
+  "seo_title": "Gobble Wobble 5k at Big Cedar Fitness Center",
+  "description": "The Gobble Wobble 5k is a scenic 5K route where you can walk off your Thanksgiving feast, with Tom The Turkey on hand to help kick things off. Participants meet behind the recreation building at the start. It takes place Friday, November 27, 2026, from 9:30 AM to 11:30 AM at Big Cedar Fitness Center.",
+  "start": "2026-11-27T15:30:00+00:00",
+  "end": "2026-11-27T17:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Big Cedar Fitness Center",
+  "address": null,
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "sports"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://bigcedar.com/activity/gobble-wobble-5k",
+  "image_url": "https://bigcedar.com/wp-content/uploads/2020/09/Turkey-Trot-5K-scaled.jpeg",
+  "source_urls": [
+    "https://bigcedar.com/activity/gobble-wobble-5k"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "gobble-wobble-5k-2026-11-27",
+  "city_slug": "branson",
+  "path": "/events/branson/gobble-wobble-5k-2026-11-27/",
+  "action_type": "details"
+}

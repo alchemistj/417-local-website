@@ -1,0 +1,34 @@
+{
+  "id": "371df534-fda4-4ef2-a3b2-ca92c6b7909d",
+  "slug": "dawson-hollow-christmas",
+  "title": "Dawson Hollow Christmas",
+  "seo_title": "Dawson Hollow Christmas at Cowan Civic Center, Lebanon MO",
+  "description": "Dawson Hollow Christmas is a free holiday show with performances from Dawson Hollow, and all are welcome. It takes place on Tuesday, December 1, 2026, from 6:00 PM to 6:30 PM, with doors opening at 6:00 PM. The event is at the Cowan Civic Center, 500 East Elm Street in Lebanon, MO.",
+  "start": "2026-12-02T00:00:00+00:00",
+  "end": "2026-12-02T00:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Cowan Civic Center",
+  "address": "500 East Elm Street, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "community",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": true,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/a-very-merry-dawson-hollow-christmas2",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/a-very-merry-dawson-hollow-christmas2"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "dawson-hollow-christmas-2026-12-01",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/dawson-hollow-christmas-2026-12-01/",
+  "action_type": "show_up"
+}

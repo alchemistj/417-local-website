@@ -1,0 +1,33 @@
+{
+  "id": "4595819c-beef-46b3-ba0b-c8bd740c42ec",
+  "slug": "steeped-in-christmas-spirit-a-tea-party",
+  "title": "Steeped in Christmas Spirit: A Tea Party",
+  "seo_title": "Steeped in Christmas Spirit Tea Party in Lebanon, MO",
+  "description": "This is a festive Christmas tea party hosted by Bramble Springs Bakery, with the event benefiting L-Life Food Pantry. Tickets are available now. It takes place Saturday, December 12, 2026, from 12:00 PM to 2:00 PM at 410 S Jackson Ave in Lebanon, MO.",
+  "start": "2026-12-12T18:00:00+00:00",
+  "end": "2026-12-12T20:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Bramble Springs Bakery",
+  "address": "410 S Jackson Ave,, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/steeped-in-christmas-spirit-a-tea-party",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/steeped-in-christmas-spirit-a-tea-party"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "steeped-in-christmas-spirit-tea-party-2026-12-12",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/steeped-in-christmas-spirit-tea-party-2026-12-12/",
+  "action_type": "details"
+}

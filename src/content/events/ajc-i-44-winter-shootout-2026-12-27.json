@@ -1,0 +1,34 @@
+{
+  "id": "27fd3279-c831-408a-8dbb-7c4d7031987d",
+  "slug": "ajc-i-44-winter-shootout",
+  "title": "AJC I-44 Winter Shootout",
+  "seo_title": "AJC I-44 Winter Shootout Kart Racing in Lebanon, MO",
+  "description": "The AJC I-44 Winter Shootout is an indoor kart racing event where you can watch practice sessions, heats, qualifying races, and open tire competition. It is a two-day event held at the Cowan Civic Center, 500 East Elm Street in Lebanon, MO. It starts Sunday, December 27, 2026 at 8:00 AM.",
+  "start": "2026-12-27T14:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Cowan Civic Center",
+  "address": "500 East Elm Street, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "sports",
+    "community"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/ajc-i-44-winter-shootout",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/ajc-i-44-winter-shootout"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "ajc-i-44-winter-shootout-2026-12-27",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/ajc-i-44-winter-shootout-2026-12-27/",
+  "action_type": "details"
+}

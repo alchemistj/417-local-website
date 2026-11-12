@@ -1,0 +1,33 @@
+{
+  "id": "003888fa-6960-4649-8502-51206049e0c2",
+  "slug": "patriotic-5k-ruck",
+  "title": "Patriotic 5K Ruck",
+  "seo_title": "Patriotic 5K Ruck at Big Cedar Fitness Center",
+  "description": "This is a 5K rucking class, a guided sightseeing walk where you carry a weighted backpack sized to your experience level. It takes place on Wednesday, November 11, 2026, from 8:00 AM to 11:00 AM at Big Cedar Fitness Center.",
+  "start": "2026-11-11T14:00:00+00:00",
+  "end": "2026-11-11T17:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Big Cedar Fitness Center",
+  "address": null,
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "sports"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://bigcedar.com/activity/5k-rucking-class",
+  "image_url": "https://bigcedar.com/wp-content/uploads/2025/07/SUNSET-AND-GLO-RUCKING-CLASS.jpg",
+  "source_urls": [
+    "https://bigcedar.com/activity/5k-rucking-class"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "patriotic-5k-ruck-2026-11-11",
+  "city_slug": "branson",
+  "path": "/events/branson/patriotic-5k-ruck-2026-11-11/",
+  "action_type": "details"
+}

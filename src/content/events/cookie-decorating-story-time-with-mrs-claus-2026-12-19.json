@@ -3,7 +3,7 @@
   "slug": "cookie-decorating-story-time-with-mrs-claus",
   "title": "Cookie Decorating & Story Time with Mrs. Claus",
   "seo_title": "Cookie Decorating & Story Time with Mrs. Claus in Ozark",
-  "description": "Cookie Decorating & Story Time with Mrs. Claus takes place on Saturday, December 19, 2026, from 3:00 PM to 5:00 PM. It is held at The Workshop, 840 Finley Farms Ln, Ozark, MO 65721. The event is listed for kids and for a business audience.",
+  "description": "A holiday afternoon at The Workshop where you can decorate cookies from a $7 kit (three holiday-shaped cookies, decorating supplies, and a sprinkles and toppings bar) and hear a story from Mrs. Claus. She arrives at 4 PM, with story time and holiday activities from 4 to 4:45 PM and a group photo at 4:45 PM; the full menu, hot cocoa, coffee, and pastries are available to buy. It is a kids and holiday event on Saturday, December 19, 2026, from 3 to 5 PM at 840 Finley Farms Ln in Ozark, Missouri, and admission is free.",
   "start": "2026-12-19T21:00:00+00:00",
   "end": "2026-12-19T23:00:00+00:00",
   "timezone": "America/Chicago",
@@ -17,18 +17,19 @@
   },
   "categories": [
     "professional-development",
-    "kids"
+    "kids",
+    "holiday"
   ],
   "price": null,
-  "is_free": null,
+  "is_free": true,
   "registration_url": "https://finleyfarmsmo.com/events/cookie-decorating-story-time-with-mrs-claus",
   "image_url": null,
   "source_urls": [
     "https://finleyfarmsmo.com/events/cookie-decorating-story-time-with-mrs-claus"
   ],
-  "updated_at": "2026-11-10T10:27:29.685Z",
+  "updated_at": "2026-11-12T10:28:51.397Z",
   "public_slug": "cookie-decorating-story-time-with-mrs-claus-2026-12-19",
   "city_slug": "springfield",
   "path": "/events/springfield/cookie-decorating-story-time-with-mrs-claus-2026-12-19/",
-  "action_type": "details"
+  "action_type": "show_up"
 }

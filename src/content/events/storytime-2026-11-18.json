@@ -1,0 +1,33 @@
+{
+  "id": "78d4e7a1-1d34-403b-a63f-418865b90225",
+  "slug": "storytime",
+  "title": "Storytime",
+  "seo_title": "Storytime at Lebanon-Laclede County Library, Nov 18",
+  "description": "Storytime is a kids' program where children sing songs, hear a few books read aloud, make a craft and have a snack. It is typically geared toward 2-6 year olds, and Wednesday and Thursday sessions cover the same material with a different theme each week. It takes place Wednesday, November 18, 2026, from 10:00 to 11:00 AM at Lebanon-Laclede County Library, 915 South Jefferson Ave in Lebanon, MO.",
+  "start": "2026-11-18T16:00:00+00:00",
+  "end": "2026-11-18T17:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Lebanon-Laclede County Library",
+  "address": "915 South Jefferson Ave, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "kids"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/storytime52325422232324322232232",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/storytime52325422232324322232232"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "storytime-2026-11-18",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/storytime-2026-11-18/",
+  "action_type": "details"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "401ef585-7b91-4d48-8ce7-471914175350",
+  "slug": "thanksgiving-weekend-welcome-table",
+  "title": "Thanksgiving Weekend Welcome Table",
+  "seo_title": "Thanksgiving Weekend Welcome Table, Nov 27, 2026",
+  "description": "The Thanksgiving Weekend Welcome Table is a stop after check-in where you can talk with the Big Cedar Activities Team and learn about the activities planned during your stay. It takes place at the Registration Building on Friday, November 27, 2026, from 3:30 PM to 4:30 PM.",
+  "start": "2026-11-27T21:30:00+00:00",
+  "end": "2026-11-27T22:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Registration Building",
+  "address": null,
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://bigcedar.com/activity/welcome-table",
+  "image_url": "https://bigcedar.com/wp-content/uploads/2026/10/Web-JPG-2018_BigCedar_Registration_0006.jpg",
+  "source_urls": [
+    "https://bigcedar.com/activity/welcome-table"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "thanksgiving-weekend-welcome-table-2026-11-27",
+  "city_slug": "branson",
+  "path": "/events/branson/thanksgiving-weekend-welcome-table-2026-11-27/",
+  "action_type": "register"
+}

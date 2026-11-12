@@ -1,0 +1,35 @@
+{
+  "id": "3c955c1a-f7ea-4a5f-afa7-8c0d178eb8d2",
+  "slug": "lightwire-theater-a-very-electric-christmas",
+  "title": "Lightwire Theater: “A Very Electric Christmas”",
+  "seo_title": "Lightwire Theater: A Very Electric Christmas in Joplin",
+  "description": "Lightwire Theater presents \"A Very Electric Christmas,\" a holiday theater show with glowing characters, music, and visual effects. It takes place on Saturday, December 5, 2026, from 2:00 PM to 4:00 PM at Connect2Culture at the Cornell Complex, 212 West 7th Street in Joplin, Missouri.",
+  "start": "2026-12-05T20:00:00+00:00",
+  "end": "2026-12-05T22:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Connect2Culture at the Cornell Complex",
+  "address": "212 West 7th Street, Joplin, MO 64801",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Connect2Culture",
+    "website": null
+  },
+  "categories": [
+    "arts-and-theater",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitjoplinmo.com/events/lightwire-theater-a-very-electric-christmas",
+  "image_url": "https://www.visitjoplinmo.com/imager/cmsimages/721421/lightwire-JV_91852798b59be8b28fc00edfe4aec23a.jpg",
+  "source_urls": [
+    "https://www.visitjoplinmo.com/events/lightwire-theater-a-very-electric-christmas",
+    "https://happeningnext.com/event/lightwire-theater-a-very-electric-christmas-eid3a0dud21u2"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "lightwire-theater-very-electric-christmas-2026-12-05",
+  "city_slug": "joplin",
+  "path": "/events/joplin/lightwire-theater-very-electric-christmas-2026-12-05/",
+  "action_type": "details"
+}

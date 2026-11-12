@@ -1,0 +1,36 @@
+{
+  "id": "e888673d-f4cd-4d6a-a277-22f352f279f8",
+  "slug": "dawson-hollow",
+  "title": "Dawson Hollow",
+  "seo_title": "Dawson Hollow Live at Connect2Culture in Joplin, MO",
+  "description": "Dawson Hollow is an indie folk-rock band formed by five siblings from the Ozark Mountains of Missouri, and this is a live music performance by the group. The summary describes their sound as a blend of cinematic indie-pop and Americana influences. It takes place Saturday, February 20, 2027, from 7:00 PM to 9:00 PM at Connect2Culture at the Cornell Complex, 212 West 7th Street, Joplin, MO.",
+  "start": "2027-02-21T01:00:00+00:00",
+  "end": "2027-02-21T03:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Connect2Culture at the Cornell Complex",
+  "address": "212 West 7th Street, Joplin, MO 64801",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Connect2Culture",
+    "website": null
+  },
+  "categories": [
+    "live-music",
+    "arts-and-theater",
+    "community"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitjoplinmo.com/events/dawson-hollow",
+  "image_url": "https://www.visitjoplinmo.com/imager/cmsimages/721431/dawson-hollow-VJ_91852798b59be8b28fc00edfe4aec23a.jpg",
+  "source_urls": [
+    "https://www.visitjoplinmo.com/events/dawson-hollow",
+    "https://happeningnext.com/event/dawson-hollow-eid3a0dxbanmo"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "dawson-hollow-2027-02-20",
+  "city_slug": "joplin",
+  "path": "/events/joplin/dawson-hollow-2027-02-20/",
+  "action_type": "details"
+}

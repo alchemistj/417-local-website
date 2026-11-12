@@ -1,0 +1,33 @@
+{
+  "id": "6a302c13-b27e-430e-9a34-cf1f81bb2925",
+  "slug": "first-friday",
+  "title": "First Friday",
+  "seo_title": "First Friday in Downtown Lebanon, MO – Dec 4, 2026",
+  "description": "First Friday is a festival in downtown Lebanon where you can take in local art and music, dine, and shop. It takes place on Friday, December 4, 2026, from 5:00 PM to 8:00 PM at Downtown Lebanon, 125 W Commercial St, Lebanon, MO.",
+  "start": "2026-12-04T23:00:00+00:00",
+  "end": "2026-12-05T02:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Downtown Lebanon",
+  "address": "125 W Commercial St, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "festivals"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/first-friday22222222422222222324222",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/first-friday22222222422222222324222"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "first-friday-2026-12-04",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/first-friday-2026-12-04/",
+  "action_type": "details"
+}

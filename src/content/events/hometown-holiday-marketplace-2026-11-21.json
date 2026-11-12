@@ -1,0 +1,36 @@
+{
+  "id": "42a35345-213a-42fe-8ce7-49c1c3025369",
+  "slug": "hometown-holiday-marketplace",
+  "title": "Hometown Holiday Marketplace",
+  "seo_title": "Hometown Holiday Marketplace in Lebanon, MO | Nov 21",
+  "description": "Hometown Holiday Marketplace is a holiday shopping event with a variety of items, including boutiques, home decor, crafts, vintage finds, handcrafted pieces, and custom gifts. It takes place on Saturday, November 21, 2026, from 9:00 AM to 4:00 PM at the Cowan Civic Center, 500 East Elm Street in Lebanon, MO.",
+  "start": "2026-11-21T15:00:00+00:00",
+  "end": "2026-11-21T22:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Cowan Civic Center",
+  "address": "500 East Elm Street, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "classes-and-workshops",
+    "community",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/hometown-holiday-marketplace22222",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy80YjJlMDM5ZmRkYzU2ZTU0ODRiYWFkZmEyZGRmY2EyZDliNTExZDU4ZTEzMzVlODljMDlhODI1Y2U0ZjRmZWZkLXJpbWctdzEwODAtaDEzNTAtZGNmOGY4ZjgtZ21pcj92PTE3OTIzNzIzMTk.avif",
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/hometown-holiday-marketplace22222",
+    "https://allevents.in/lebanon/2026-hometown-holiday-marketplace/200030853273259"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "hometown-holiday-marketplace-2026-11-21",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/hometown-holiday-marketplace-2026-11-21/",
+  "action_type": "details"
+}

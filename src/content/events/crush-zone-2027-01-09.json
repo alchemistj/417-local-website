@@ -1,0 +1,33 @@
+{
+  "id": "f28ca086-61f7-40e7-add5-74997e8270da",
+  "slug": "crush-zone",
+  "title": "Crush Zone",
+  "seo_title": "Crush Zone Monster Truck Show in Lebanon, MO",
+  "description": "Crush Zone is a monster truck show where you can watch trucks in live action, with two shows planned on January 8-9, 2027. This listing is for the Saturday, January 9 show at 1:00 PM. It takes place at the Kenneth E. Cowan Civic Center, 500 East Elm Street in Lebanon, Missouri.",
+  "start": "2027-01-09T19:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Cowan Civic Center",
+  "address": "500 East Elm Street, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "community"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/crush-zone2",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/crush-zone2"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "crush-zone-2027-01-09",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/crush-zone-2027-01-09/",
+  "action_type": "details"
+}

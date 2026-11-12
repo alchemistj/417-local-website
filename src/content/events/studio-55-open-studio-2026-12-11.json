@@ -1,0 +1,33 @@
+{
+  "id": "0336b5f8-cf37-4b1e-922c-7948da2cfa61",
+  "slug": "studio-55-open-studio",
+  "title": "Studio 55: Open Studio",
+  "seo_title": "Studio 55: Open Studio at Spiva Center for the Arts",
+  "description": "Studio 55: Open Studio is a free, facilitated kids' art session held in the Art Studio, Classroom #1, at the Spiva Center for the Arts. It takes place on Friday, December 11, 2026, from 4:00 PM to 6:00 PM.",
+  "start": "2026-12-11T22:00:00+00:00",
+  "end": "2026-12-12T00:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Art Studio | Classroom #1",
+  "address": null,
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": "Spiva Center for the Arts",
+    "website": null
+  },
+  "categories": [
+    "kids"
+  ],
+  "price": null,
+  "is_free": true,
+  "registration_url": "https://spivaarts.org/event/studio-55-open-studio-6/2026-12-11",
+  "image_url": "https://spivaarts.org/wp-content/uploads/2026/01/Open-Studio.png",
+  "source_urls": [
+    "https://spivaarts.org/event/studio-55-open-studio-6/2026-12-11"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "studio-55-open-studio-2026-12-11",
+  "city_slug": "joplin",
+  "path": "/events/joplin/studio-55-open-studio-2026-12-11/",
+  "action_type": "show_up"
+}

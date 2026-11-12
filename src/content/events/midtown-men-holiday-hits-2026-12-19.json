@@ -1,0 +1,35 @@
+{
+  "id": "d86f0427-02c4-4064-9c38-9fd77e13d0db",
+  "slug": "the-midtown-men-holiday-hits",
+  "title": "The Midtown Men – “Holiday Hits”",
+  "seo_title": "The Midtown Men: Holiday Hits in Joplin, MO – Dec 19",
+  "description": "The Midtown Men perform \"Holiday Hits,\" a festive holiday concert featuring stars from the original Broadway cast of Jersey Boys. It takes place Saturday, December 19, 2026, from 7:00 PM to 9:00 PM at Connect2Culture at the Cornell Complex, 212 West 7th Street in Joplin, Missouri.",
+  "start": "2026-12-20T01:00:00+00:00",
+  "end": "2026-12-20T03:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Connect2Culture at the Cornell Complex",
+  "address": "212 West 7th Street, Joplin, MO 64801",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Connect2Culture",
+    "website": null
+  },
+  "categories": [
+    "live-music",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitjoplinmo.com/events/the-midtown-men-holiday-hits",
+  "image_url": "https://www.visitjoplinmo.com/imager/cmsimages/721423/midtown-men-JV_91852798b59be8b28fc00edfe4aec23a.jpg",
+  "source_urls": [
+    "https://www.visitjoplinmo.com/events/the-midtown-men-holiday-hits",
+    "https://happeningnext.com/event/the-midtown-men-%E2%80%93-holiday-hits-eid3a0e1a0v6u"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "midtown-men-holiday-hits-2026-12-19",
+  "city_slug": "joplin",
+  "path": "/events/joplin/midtown-men-holiday-hits-2026-12-19/",
+  "action_type": "details"
+}

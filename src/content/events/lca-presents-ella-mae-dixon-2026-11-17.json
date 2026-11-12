@@ -1,0 +1,33 @@
+{
+  "id": "5f03032a-25e6-4673-8335-11777fc966c0",
+  "slug": "lca-presents-ella-mae-dixon",
+  "title": "LCA Presents: Ella Mae Dixon",
+  "seo_title": "LCA Presents: Ella Mae Dixon in Lebanon, MO",
+  "description": "This is a live music performance by Ella Mae Dixon, presented by LCA. She is drawn to the music of a bygone era, giving new energy to old melodies while paying homage to the styles of yesterday. It takes place Tuesday, November 17, 2026 at 7:00 PM at the Cowan Civic Center, 500 East Elm Street in Lebanon, MO.",
+  "start": "2026-11-18T01:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Cowan Civic Center",
+  "address": "500 East Elm Street, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "community"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/lca-presents-ella-mae-dixon",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/lca-presents-ella-mae-dixon"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "lca-presents-ella-mae-dixon-2026-11-17",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/lca-presents-ella-mae-dixon-2026-11-17/",
+  "action_type": "details"
+}

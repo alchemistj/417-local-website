@@ -12,8 +12,8 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Gillioz Theatre",
-    "website": "https://allevents.in/org/gillioz-theatre/3393097"
+    "name": null,
+    "website": null
   },
   "categories": [
     "film",
@@ -28,7 +28,7 @@
     "https://gillioztheatre.com/event/fall-classics-national-lampoons-christmas-vacation-2026/gillioz-theatre/e-springfield-missouri",
     "https://allevents.in/springfield/fall-classics-national-lampoons-christmas-vacation-2026/200030203538431"
   ],
-  "updated_at": "2026-11-10T10:27:29.685Z",
+  "updated_at": "2026-11-12T10:28:51.397Z",
   "public_slug": "fall-classics-national-lampoon-s-christmas-vacation-2026-11-27",
   "city_slug": "springfield",
   "path": "/events/springfield/fall-classics-national-lampoon-s-christmas-vacation-2026-11-27/",

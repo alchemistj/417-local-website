@@ -2,8 +2,8 @@
   "id": "d3db38b1-5d0f-4870-8d4f-ed0ddb4bc0dc",
   "slug": "a-charlie-brown-christmas-live-on-stage",
   "title": "A Charlie Brown Christmas Live on Stage",
-  "seo_title": "A Charlie Brown Christmas Live on Stage",
-  "description": "A Charlie Brown Christmas Live on Stage is scheduled for Sunday, December 20, 2026 at 7:00 PM CST at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield. Missouri State University is the organizer.",
+  "seo_title": "A Charlie Brown Christmas Live on Stage in Springfield",
+  "description": "This touring stage production of A Charlie Brown Christmas follows Charlie Brown, Snoopy, Lucy, Linus and the Peanuts gang as they put on their own Christmas play and discover the true meaning of the season. Adapted from Charles M. Schulz's animated special, it features music by Vince Guaraldi and is suitable for all ages, though every patron needs a ticket. It takes place Sunday, December 20, 2026 at 7:00 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO.",
   "start": "2026-12-21T01:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -18,7 +18,8 @@
   "categories": [
     "holiday",
     "arts-and-theater",
-    "family"
+    "family",
+    "kids"
   ],
   "price": null,
   "is_free": null,
@@ -27,7 +28,7 @@
   "source_urls": [
     "https://www.hammonshall.com/viewshow.aspx?ID=3691"
   ],
-  "updated_at": "2026-11-10T10:27:29.685Z",
+  "updated_at": "2026-11-12T10:28:51.397Z",
   "public_slug": "charlie-brown-christmas-live-on-stage-2026-12-20",
   "city_slug": "springfield",
   "path": "/events/springfield/charlie-brown-christmas-live-on-stage-2026-12-20/",

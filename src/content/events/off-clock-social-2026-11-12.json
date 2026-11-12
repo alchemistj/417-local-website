@@ -2,8 +2,8 @@
   "id": "ddb582d9-7d71-4c06-a38f-f6a1707119b1",
   "slug": "off-the-clock-social",
   "title": "Off the Clock Social",
-  "seo_title": "Off the Clock Social",
-  "description": "Off the Clock Social is scheduled for Thursday, November 12, 2026 at 4:30 PM CST at Bair's All American Sports Grill, Republic. Republic Area Chamber of Commerce is the organizer.",
+  "seo_title": "Off the Clock Social Networking in Republic, MO",
+  "description": "Off the Clock Social is a come-and-go networking event sponsored by Arvest Bank, with raffles during the event. No registration is necessary, and it is for members only. It takes place Thursday, November 12, 2026, from 4:30 PM to 6:00 PM at Bair's All American Sports Grill in Republic, MO.",
   "start": "2026-11-12T22:30:00+00:00",
   "end": "2026-11-13T00:00:00+00:00",
   "timezone": "America/Chicago",
@@ -25,9 +25,9 @@
   "source_urls": [
     "https://republicchamber.com/events/details/off-the-clock-social-13808"
   ],
-  "updated_at": "2026-11-10T10:27:29.685Z",
+  "updated_at": "2026-11-12T10:28:51.397Z",
   "public_slug": "off-clock-social-2026-11-12",
   "city_slug": "republic",
   "path": "/events/republic/off-clock-social-2026-11-12/",
-  "action_type": "details"
+  "action_type": "register"
 }

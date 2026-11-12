@@ -1,0 +1,33 @@
+{
+  "id": "0431d5ca-b58d-46d7-af8b-6b9a0643de97",
+  "slug": "the-garden-chapel-service",
+  "title": "The Garden Chapel Service",
+  "seo_title": "The Garden Chapel Service on Nov 15, 2026",
+  "description": "The Garden Chapel Service is a weekly Sunday gathering led by Pastor Al at the Garden Chapel, a chapel set against a hillside with traditional church pews and floor-to-ceiling windows. It takes place on Sunday, November 15, 2026, from 9:00 AM to 9:45 AM.",
+  "start": "2026-11-15T15:00:00+00:00",
+  "end": "2026-11-15T15:45:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Garden Chapel",
+  "address": null,
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://bigcedar.com/activity/the-garden-chapel",
+  "image_url": "https://bigcedar.com/wp-content/uploads/2019/03/wedding-chapel-hillside.jpg",
+  "source_urls": [
+    "https://bigcedar.com/activity/the-garden-chapel"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "garden-chapel-service-2026-11-15",
+  "city_slug": "branson",
+  "path": "/events/branson/garden-chapel-service-2026-11-15/",
+  "action_type": "details"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "ff957341-0ac3-4bab-8165-4a4a91969648",
+  "slug": "paint-and-sip-pumpkin-spice-and-paint",
+  "title": "Paint and Sip- Pumpkin Spice and Paint",
+  "seo_title": "Paint and Sip: Pumpkin Spice and Paint in Lebanon, MO",
+  "description": "Paint and Sip: Pumpkin Spice and Paint is a painting class hosted by Lindsay (Doll Paintz) at Café Judes. Tickets are required. It takes place Tuesday, November 17, 2026 at 6:00 PM at 116 W. Commercial Street in Lebanon, MO.",
+  "start": "2026-11-18T00:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Café Judes",
+  "address": "116 W. Commercial Street, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "classes-and-workshops"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/paint-and-sip--pumpkin-spice-and-paint",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/paint-and-sip--pumpkin-spice-and-paint"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "paint-and-sip-pumpkin-spice-and-paint-2026-11-17",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/paint-and-sip-pumpkin-spice-and-paint-2026-11-17/",
+  "action_type": "details"
+}

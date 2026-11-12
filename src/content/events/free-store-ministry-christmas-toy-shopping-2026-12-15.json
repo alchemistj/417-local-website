@@ -1,0 +1,33 @@
+{
+  "id": "c0ed1824-b81b-4d85-bd85-d8625bbbd474",
+  "slug": "free-store-ministry-christmas-toy-shopping",
+  "title": "Free Store Ministry Christmas Toy Shopping",
+  "seo_title": "Free Christmas Toy Shopping in Lebanon, MO",
+  "description": "Free Store Ministry hosts a Christmas toy shopping event where registered families can select gifts for children ages birth through 18. Admission is free. It takes place Tuesday, December 15, 2026, from 9:00 AM to 7:00 PM at the Mills Center, 650 Mills Drive in Lebanon, MO.",
+  "start": "2026-12-15T15:00:00+00:00",
+  "end": "2026-12-16T01:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Mills Center",
+  "address": "650 Mills Drive, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": true,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/free-store-ministry-christmas-toy-shopping",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/free-store-ministry-christmas-toy-shopping"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "free-store-ministry-christmas-toy-shopping-2026-12-15",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/free-store-ministry-christmas-toy-shopping-2026-12-15/",
+  "action_type": "show_up"
+}

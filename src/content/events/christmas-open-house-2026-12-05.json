@@ -1,0 +1,34 @@
+{
+  "id": "ad08d2db-3c0f-48f6-88a4-d73f649cca3c",
+  "slug": "christmas-open-house",
+  "title": "Christmas Open House",
+  "seo_title": "Christmas Open House at Kinderhook Treasures in Lebanon, MO",
+  "description": "This Christmas open house at Kinderhook Treasures offers free cozy refreshments, holiday décor and new arrivals to browse, plus festive prize drawings and discounts all day. Admission is free. It takes place Saturday, December 5, 2026, from 10:00 AM to 4:00 PM at 915 S. Jefferson Ave in Lebanon, Missouri.",
+  "start": "2026-12-05T16:00:00+00:00",
+  "end": "2026-12-05T22:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Kinderhook Treasures",
+  "address": "915 S. Jefferson Ave, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "community",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": true,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/christmas-open-house2(3)",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/christmas-open-house2(3)"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "christmas-open-house-2026-12-05",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/christmas-open-house-2026-12-05/",
+  "action_type": "show_up"
+}

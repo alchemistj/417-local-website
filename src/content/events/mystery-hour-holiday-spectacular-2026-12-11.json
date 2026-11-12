@@ -12,8 +12,8 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Gillioz Theatre",
-    "website": "https://allevents.in/org/gillioz-theatre/3393097"
+    "name": null,
+    "website": null
   },
   "categories": [
     "arts-and-theater",
@@ -27,7 +27,7 @@
     "https://gillioztheatre.com/event/the-mystery-hour-holiday-spectacular/gillioz-theatre/e-springfield-missouri",
     "https://allevents.in/springfield/the-mystery-hour-holiday-spectacular/200031001205742"
   ],
-  "updated_at": "2026-11-10T10:27:29.685Z",
+  "updated_at": "2026-11-12T10:28:51.397Z",
   "public_slug": "mystery-hour-holiday-spectacular-2026-12-11",
   "city_slug": "springfield",
   "path": "/events/springfield/mystery-hour-holiday-spectacular-2026-12-11/",

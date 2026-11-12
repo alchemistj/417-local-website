@@ -1,0 +1,34 @@
+{
+  "id": "0fc76fb9-dda8-48bd-92a5-f244b0ae39e7",
+  "slug": "thanksgiving-buffet-at-grandview-conference-center",
+  "title": "Thanksgiving Buffet at Grandview Conference Center",
+  "seo_title": "Thanksgiving Buffet at Grandview Conference Center",
+  "description": "This Thanksgiving buffet features a chef-crafted holiday feast, live music, and views of Table Rock Lake. Guests can gather with loved ones for a holiday meal at Grandview Conference Center. It takes place Thursday, November 26, 2026, from 10:30 AM to 7:30 PM.",
+  "start": "2026-11-26T16:30:00+00:00",
+  "end": "2026-11-27T01:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Grandview Conference Center",
+  "address": null,
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "live-music",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://bigcedar.com/event/buffet-at-grandview",
+  "image_url": "https://bigcedar.com/wp-content/uploads/2025/08/Web-JPG-2024_BigCedarLodge_HolidaysEvents_Thanksgiving_GrandviewConferenceCenter_9-e1787262937522.jpg",
+  "source_urls": [
+    "https://bigcedar.com/event/buffet-at-grandview"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "thanksgiving-buffet-at-grandview-conference-center-2026-11-26",
+  "city_slug": "branson",
+  "path": "/events/branson/thanksgiving-buffet-at-grandview-conference-center-2026-11-26/",
+  "action_type": "details"
+}

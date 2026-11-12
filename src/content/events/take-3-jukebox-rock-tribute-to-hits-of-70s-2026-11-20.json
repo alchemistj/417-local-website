@@ -1,0 +1,39 @@
+{
+  "id": "61adc923-5883-44f8-92ad-c0e9e461c459",
+  "slug": "take-3-jukebox-rock-a-tribute-to-the-hits-of-the-70s",
+  "title": "TAKE 3: “Jukebox Rock – A Tribute to the Hits of the 70s”",
+  "seo_title": "Jukebox Rock: Tribute to 70s Hits in Joplin, MO",
+  "description": "TAKE3 presents \"Jukebox Rock – A Tribute to the Hits of the 70s,\" a concert that blends the biggest hits of the decade with dazzling production. It takes place Friday, November 20, 2026, from 7:00 PM to 9:00 PM at Connect2Culture at the Cornell Complex, 212 West 7th Street in Joplin, MO.",
+  "start": "2026-11-21T01:00:00+00:00",
+  "end": "2026-11-21T03:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Connect2Culture at the Cornell Complex",
+  "address": "212 West 7th Street, Joplin, MO 64801",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Connect2Culture",
+    "website": null
+  },
+  "categories": [
+    "live-music",
+    "festivals",
+    "community",
+    "arts-and-theater",
+    "family",
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitjoplinmo.com/events/take-3-jukebox-rock-a-tribute-to-the-hits-of-the-70s",
+  "image_url": "https://www.visitjoplinmo.com/imager/cmsimages/721419/take3-VJ_91852798b59be8b28fc00edfe4aec23a.jpg",
+  "source_urls": [
+    "https://www.visitjoplinmo.com/events/take-3-jukebox-rock-a-tribute-to-the-hits-of-the-70s",
+    "https://happeningnext.com/event/take-3-jukebox-rock-%E2%80%93-a-tribute-to-the-hits-of-the-70s-eid3a0duwtaos"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "take-3-jukebox-rock-tribute-to-hits-of-70s-2026-11-20",
+  "city_slug": "joplin",
+  "path": "/events/joplin/take-3-jukebox-rock-tribute-to-hits-of-70s-2026-11-20/",
+  "action_type": "details"
+}

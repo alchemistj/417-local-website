@@ -1,0 +1,33 @@
+{
+  "id": "d512407a-f67e-48a6-84bb-8892a49187da",
+  "slug": "thanksgiving-buffet-at-osage-restaurant",
+  "title": "Thanksgiving Buffet at Osage Restaurant",
+  "seo_title": "Thanksgiving Buffet at Osage Restaurant in Ridgedale, MO",
+  "description": "This Thanksgiving buffet at Osage Restaurant offers holiday favorites, seasonal specialties, and desserts, with views of the Ozarks. Top of the Rock entry is required, and a fee may apply. It runs Thursday, November 26, 2026, from 11:00 AM to 8:00 PM at 150 Top of the Rock in Ridgedale, MO.",
+  "start": "2026-11-26T17:00:00+00:00",
+  "end": "2026-11-27T02:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Osage Restaurant",
+  "address": "150 Top of the Rock, Ridgedale, MO, 65739",
+  "city": "Ridgedale",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://bigcedar.com/event/thanksgiving-buffet-at-osage-restaurant",
+  "image_url": "https://bigcedar.com/wp-content/uploads/2024/08/Web-JPG-2021_BigCedar_HolidaysEvents_Thanksgiving_0024.jpg",
+  "source_urls": [
+    "https://bigcedar.com/event/thanksgiving-buffet-at-osage-restaurant"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "thanksgiving-buffet-at-osage-restaurant-2026-11-26",
+  "city_slug": "ridgedale",
+  "path": "/events/ridgedale/thanksgiving-buffet-at-osage-restaurant-2026-11-26/",
+  "action_type": "details"
+}

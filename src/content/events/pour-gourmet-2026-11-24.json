@@ -1,0 +1,33 @@
+{
+  "id": "b50fa0d3-921c-4ac6-a72c-f7b773e3615e",
+  "slug": "pour-gourmet-tour",
+  "title": "Pour & Gourmet Tour",
+  "seo_title": "Pour & Gourmet Tour at Worman House, Nov 24",
+  "description": "The Pour & Gourmet Tour is a progressive tasting experience through Big Cedar Lodge, with stops at five locations, beginning with the Worman House. It takes place on Tuesday, November 24, 2026, from 4:30 PM to 7:30 PM.",
+  "start": "2026-11-24T22:30:00+00:00",
+  "end": "2026-11-25T01:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Worman House",
+  "address": null,
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://bigcedar.com/activity/pour-gourmet-tour",
+  "image_url": "https://bigcedar.com/wp-content/uploads/2026/02/Web-PNG-2026_BCL_Events_Dining_PourAndGourmet-41.png",
+  "source_urls": [
+    "https://bigcedar.com/activity/pour-gourmet-tour"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "pour-gourmet-2026-11-24",
+  "city_slug": "branson",
+  "path": "/events/branson/pour-gourmet-2026-11-24/",
+  "action_type": "details"
+}

@@ -2,8 +2,8 @@
   "id": "f0a2f974-b2ef-4d31-8a3a-57b7cb01210c",
   "slug": "diy-pressed-flower-ornaments",
   "title": "DIY Pressed Flower Ornaments",
-  "seo_title": "DIY Pressed Flower Ornaments in Ozark, MO – Dec 16",
-  "description": "DIY Pressed Flower Ornaments takes place on Wednesday, December 16, 2026, from 6:00 PM to 8:00 PM at The Workshop, 840 Finley Farms Ln in Ozark, Missouri. The event is aimed at a business audience.",
+  "seo_title": "DIY Pressed Flower Ornaments Class in Ozark, MO",
+  "description": "This is a hands-on class where flower preservation artist Hannah Klein teaches the art of flower pressing and guides you in making your own pressed flower ornaments. The class includes two ornaments, and additional ornament kits can be bought on-site for $10 each. It takes place Wednesday, December 16, 2026, from 6:00 to 8:00 PM at The Workshop, 840 Finley Farms Ln in Ozark, Missouri.",
   "start": "2026-12-17T00:00:00+00:00",
   "end": "2026-12-17T02:00:00+00:00",
   "timezone": "America/Chicago",
@@ -16,7 +16,8 @@
     "website": null
   },
   "categories": [
-    "professional-development"
+    "professional-development",
+    "holiday"
   ],
   "price": null,
   "is_free": null,
@@ -25,7 +26,7 @@
   "source_urls": [
     "https://finleyfarmsmo.com/events/diy-pressed-flower-ornaments"
   ],
-  "updated_at": "2026-11-10T10:27:29.685Z",
+  "updated_at": "2026-11-12T10:28:51.397Z",
   "public_slug": "diy-pressed-flower-ornaments-2026-12-16",
   "city_slug": "springfield",
   "path": "/events/springfield/diy-pressed-flower-ornaments-2026-12-16/",

@@ -3,7 +3,7 @@
   "slug": "festival-of-lights-free-ice-skating",
   "title": "Festival of Lights Free Ice Skating",
   "seo_title": "Festival of Lights Free Ice Skating in Springfield, MO",
-  "description": "Festival of Lights Free Ice Skating takes place on Saturday, November 21, 2026 at 6:00 PM at Brightspeed Ice Park, 635 E Trafficway in Springfield, MO. This outdoor holiday festival offers free admission and is open to a general audience.",
+  "description": "Festival of Lights Free Ice Skating is a holiday festival where you can ice skate outdoors. It is for all ages. It takes place Saturday, November 21, 2026 at 6:00 PM at Brightspeed Ice Park, 635 E Trafficway in Springfield, MO.",
   "start": "2026-11-22T00:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -21,16 +21,16 @@
     "holiday"
   ],
   "price": null,
-  "is_free": true,
+  "is_free": null,
   "registration_url": "https://www.parkboard.org/Calendar.aspx?EID=9934",
   "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czUvYmFubmVycy81YjQyNzhjZDFlNGUxNjhlMjkwM2RmZWRmMGM0NzJiMThhMDUxY2EwNWJjZTk5NjViNWMxMDE4MTFkNzY1MTM3LXJpbWctdzEyMDAtaDYyOC1kY2Y4ZjhmOC1nbWlyP3Y9MTc5NDA3NDU3OA.avif",
   "source_urls": [
     "https://www.parkboard.org/Calendar.aspx?EID=9934",
     "https://allevents.in/springfield/festival-of-lights-2026-free-ice-skating/200030994706358"
   ],
-  "updated_at": "2026-11-10T10:27:29.685Z",
+  "updated_at": "2026-11-12T10:28:51.397Z",
   "public_slug": "festival-of-lights-free-ice-skating-2026-11-21",
   "city_slug": "springfield",
   "path": "/events/springfield/festival-of-lights-free-ice-skating-2026-11-21/",
-  "action_type": "show_up"
+  "action_type": "details"
 }

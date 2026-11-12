@@ -1,0 +1,33 @@
+{
+  "id": "3ce56da1-d11b-4f6f-8e86-c5e882c69c6b",
+  "slug": "lca-presents-molly-healey-string-project",
+  "title": "LCA Presents: Molly Healey String Project",
+  "seo_title": "Molly Healey String Project at Cowan Civic Center",
+  "description": "LCA presents the Molly Healey String Project, a community event at the Cowan Civic Center in Lebanon, Missouri. It takes place on Tuesday, March 2, 2027 at 7:00 PM at 500 East Elm Street.",
+  "start": "2027-03-03T01:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Cowan Civic Center",
+  "address": "500 East Elm Street, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "community"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/lca-presents-molly-healey-string-project",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/lca-presents-molly-healey-string-project"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "lca-presents-molly-healey-string-project-2027-03-02",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/lca-presents-molly-healey-string-project-2027-03-02/",
+  "action_type": "details"
+}

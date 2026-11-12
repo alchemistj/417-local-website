@@ -1,0 +1,33 @@
+{
+  "id": "cb7bfb6e-801d-4cc1-9a60-130faa5c8133",
+  "slug": "holiday-market",
+  "title": "Holiday Market",
+  "seo_title": "Holiday Market in Lebanon, MO on Nov 28, 2026",
+  "description": "The Holiday Market is a day of seasonal shopping where you can browse local vendors, support small businesses, and look for unique gifts. It takes place on Saturday, November 28, 2026, from 10:00 AM to 8:00 PM at 143 W Elm Street in Lebanon, Missouri.",
+  "start": "2026-11-28T16:00:00+00:00",
+  "end": "2026-11-29T02:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "143 W, Elm Street Lebanon, MO 65536",
+  "address": "143 W, Elm Street, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/holiday-market",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/holiday-market"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "holiday-market-2026-11-28",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/holiday-market-2026-11-28/",
+  "action_type": "details"
+}

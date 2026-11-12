@@ -1,0 +1,33 @@
+{
+  "id": "973e2dae-9d89-4adc-a363-6fcafa1ebf35",
+  "slug": "paws-for-reading",
+  "title": "Paws for Reading",
+  "seo_title": "Paws for Reading with Therapy Dog Levi in Lebanon, MO",
+  "description": "Paws for Reading is a library program where library volunteer Autumn Burrows and her certified Therapy Dog, Levi, help reluctant readers gain confidence while improving their reading skills. It takes place on Saturday, November 21, 2026, from 11:00 AM to 12:00 PM at the Lebanon-Laclede County Library, 915 South Jefferson Ave in Lebanon, MO.",
+  "start": "2026-11-21T17:00:00+00:00",
+  "end": "2026-11-21T18:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Lebanon-Laclede County Library",
+  "address": "915 South Jefferson Ave, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "community"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/paws-for-reading22222222222222322",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/paws-for-reading22222222222222322"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "paws-for-reading-2026-11-21",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/paws-for-reading-2026-11-21/",
+  "action_type": "details"
+}

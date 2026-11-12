@@ -1,0 +1,33 @@
+{
+  "id": "7ee84b3e-a17e-404c-bbc2-75fb17be3804",
+  "slug": "stars-above-the-ozarks-at-the-worman-house",
+  "title": "Stars Above the Ozarks at The Worman House",
+  "seo_title": "Stars Above the Ozarks at The Worman House, Nov 13",
+  "description": "Stars Above the Ozarks is an evening at the historic Worman House that includes a four-course dinner, a stargazing experience at The Summit with David Jarkins, and live music. It takes place on Friday, November 13, 2026, from 6:30 PM to 9:30 PM at the Worman House.",
+  "start": "2026-11-14T00:30:00+00:00",
+  "end": "2026-11-14T03:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Worman House",
+  "address": null,
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "live-music"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://bigcedar.com/event/stars-above-the-ozarks-at-the-worman-house/2026-11-13",
+  "image_url": "https://bigcedar.com/wp-content/uploads/2026/08/Web-JPG-Worman-Night.jpg",
+  "source_urls": [
+    "https://bigcedar.com/event/stars-above-the-ozarks-at-the-worman-house/2026-11-13"
+  ],
+  "updated_at": "2026-11-12T10:28:51.397Z",
+  "public_slug": "stars-above-ozarks-at-worman-house-2026-11-13",
+  "city_slug": "branson",
+  "path": "/events/branson/stars-above-ozarks-at-worman-house-2026-11-13/",
+  "action_type": "details"
+}
