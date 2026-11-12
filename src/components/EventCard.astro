@@ -1,0 +1,45 @@
+---
+import { eventCardModel } from "../lib/eventCard";
+import { categoryIcon } from "../lib/eventCardIcons";
+import type { EventData } from "../lib/eventSchema";
+
+interface Props {
+  event: EventData;
+  /** From `runRangeLabel`, such as "Nov 27–29". */
+  runRange?: string | null;
+  price?: string;
+  venueHref?: string;
+  venueExternal?: boolean;
+}
+
+const { event, runRange = null, price = "", venueHref = "", venueExternal = false } = Astro.props;
+const card = eventCardModel(event, { runRange, price });
+const icon = categoryIcon(card.palette.id);
+const style = `--card-from:${card.palette.from};--card-to:${card.palette.to}`;
+---
+
+<div class="event-card" style={style} data-event-card data-palette={card.palette.id}>
+  <div class="event-card-date">
+    <p class="event-card-month">{card.month}</p>
+    <p class="event-card-day">{card.day}</p>
+    <p class="event-card-schedule">{card.schedule}</p>
+  </div>
+  <div class="event-card-body">
+    {card.category && <p class="event-card-category">{card.category}</p>}
+    <h1 class="event-card-title">{card.title}</h1>
+    {card.runLabel && <p class="event-card-run">{card.runLabel}</p>}
+    {card.price && <p class="event-card-price">{card.price}</p>}
+    {card.venueLine && (
+      <p class="event-card-venue">
+        {card.venueName && venueHref ? (
+          <a href={venueHref} rel={venueExternal ? "noopener" : undefined}>{card.venueName}</a>
+        ) : card.venueName}
+        {card.venueName && card.cityName ? " · " : ""}
+        {card.cityName}
+      </p>
+    )}
+  </div>
+  <svg class="event-card-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    {icon.paths.map((d) => <path fill="currentColor" fill-rule={icon.fillRule} d={d} />)}
+  </svg>
+</div>

@@ -409,7 +409,7 @@ describe.skipIf(!built)("built site", () => {
 
     const tbdRoute = eventPath(tbd!);
     const tbdHtml = decode(pages.find((page) => page.route === tbdRoute)?.html ?? "");
-    expect(tbdHtml).toContain("Time not listed");
+    expect(tbdHtml).toContain("Time TBD");
     const tbdIcs = readFileSync(`${DIST_DIR}${tbdRoute}event.ics`, "utf8");
     expect(tbdIcs).toContain("DTSTART;VALUE=DATE:");
   });

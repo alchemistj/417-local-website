@@ -64,6 +64,12 @@ export function eventRouteParams(event: EventData): { city: string; event: strin
   return { city: eventCitySlug(event), event: eventPublicSlug(event) };
 }
 
+/** 1200×630 share image written at build time for this event's page. */
+export function eventCardImagePath(event: EventData): string {
+  const { city, event: slug } = eventRouteParams(event);
+  return `/event-cards/${city}/${slug}.png`;
+}
+
 /** Springfield's weekend guide is a flat page for its own keyword. Other cities keep a page under their hub. */
 export function cityWeekendPath(citySlug: string): string {
   return citySlug === "springfield" ? "/things-to-do-in-springfield-mo-this-weekend/" : `/events/${citySlug}/this-weekend/`;

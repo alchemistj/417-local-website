@@ -6,7 +6,7 @@ import {
 } from "./eventSchema";
 import { eventAction } from "./eventAction";
 import { formatChicagoOffset, isAllDayEvent } from "./eventCalendar";
-import { eventCityName, eventCitySlug, eventPath } from "./eventPaths";
+import { eventCardImagePath, eventCityName, eventCitySlug, eventPath } from "./eventPaths";
 import { absoluteUrl } from "./site";
 import {
   DEFAULT_TIMEZONE,
@@ -250,9 +250,7 @@ export function eventJsonLd(event: EventData): Record<string, unknown> {
       },
     },
   };
-  const image = event.image_url?.trim();
-  // WordPress and Supabase URLs are hotlinks. The rest of the site does not publish them.
-  if (image && !/wp-content|supabase\.co/i.test(image)) data.image = image;
+  data.image = absoluteUrl(eventCardImagePath(event));
   const organizer = event.organizer?.name?.trim();
   if (organizer) {
     data.organizer = {

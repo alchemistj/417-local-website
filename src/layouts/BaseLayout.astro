@@ -16,20 +16,24 @@ interface Props {
   ogType?: "website" | "article";
   /** Social image. Falls back to the brand mark. */
   ogImage?: ImageMetadata;
+  /** Built file, such as a generated event card (`/event-cards/…png`). */
+  ogImagePath?: string;
   noindex?: boolean;
   /** Full robots content. When set, replaces the noindex flag. Draft lists pass "noindex, nofollow". */
   robots?: string;
   jsonLd?: Record<string, unknown>[];
 }
 
-const { title, description, path, ogType = "website", ogImage, noindex = false, robots, jsonLd = [] } = Astro.props;
+const { title, description, path, ogType = "website", ogImage, ogImagePath, noindex = false, robots, jsonLd = [] } = Astro.props;
 
 const canonical = absoluteUrl(path);
 const icon32 = await getImage({ src: favicon, width: 48, height: 48, format: "png" });
 const icon180 = await getImage({ src: favicon, width: 180, height: 180, format: "png" });
-const social = ogImage
+const processed = ogImage
   ? await getImage({ src: ogImage, width: 1200, height: 630, format: "jpg", fit: "cover" })
-  : icon180;
+  : null;
+const socialUrl = ogImagePath ? absoluteUrl(ogImagePath) : absoluteUrl((processed ?? icon180).src);
+const largeCard = Boolean(ogImage || ogImagePath);
 
 const organization = {
   "@type": "Organization",
@@ -66,8 +70,11 @@ const graphs = [{ "@context": "https://schema.org", "@graph": [organization, web
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={absoluteUrl(social.src)} />
-    <meta name="twitter:card" content={ogImage ? "summary_large_image" : "summary"} />
+    <meta property="og:image" content={socialUrl} />
+    {largeCard && <meta property="og:image:width" content="1200" />}
+    {largeCard && <meta property="og:image:height" content="630" />}
+    <meta name="twitter:card" content={largeCard ? "summary_large_image" : "summary"} />
+    {largeCard && <meta name="twitter:image" content={socialUrl} />}
     {/* No analytics yet: GA4 / GTM are added later and must fire after load + 3 s (SOP Rule 16). */}
     {graphs.map((g) => <script type="application/ld+json" set:html={JSON.stringify(g)} />)}
   </head>

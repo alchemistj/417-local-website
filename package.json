@@ -29,11 +29,15 @@
   "dependencies": {
     "@astrojs/check": "^0.9.12",
     "@astrojs/vercel": "^8.2.11",
+    "@fontsource/open-sans": "^5.3.0",
+    "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^5.18.2",
+    "satori": "^0.63.2",
     "sharp": "^0.35.5",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3",
+    "wawoff2": "^2.0.1",
     "yaml": "^2.9.1"
   }
 }
