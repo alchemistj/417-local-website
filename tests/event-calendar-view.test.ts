@@ -2,7 +2,7 @@ import { mkdtempSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { alsoPlaying, buildMonthGrid, collapseRuns, dateStrip, runCanonicalPath, runRangeLabel, eventRun, dontMissEvents, eventsOnDate, eventListTime, uniqueUpcomingEvents, groupEventsByDay, monthNav } from "../src/lib/calendarView";
+import { alsoPlaying, buildMonthGrid, collapseRuns, comingUpEvents, dateStrip, dedupeSameDayEvents, runCanonicalPath, runRangeLabel, eventRun, dontMissEvents, eventsOnDate, eventListTime, uniqueUpcomingEvents, groupEventsByDay, monthNav } from "../src/lib/calendarView";
 import { eventSchema, type EventData } from "../src/lib/eventSchema";
 import { eventChips, eventSectionRoutes } from "../src/lib/eventRoutes";
 import { assertNoReservedEventSlug, eventPath, isReservedEventSlug } from "../src/lib/eventPaths";
@@ -84,7 +84,23 @@ describe("month grid", () => {
     expect(cell?.dayHref).toBe("/events/springfield/2026-11-20/");
 
     const past = grid.weeks.flat().find((item) => item.date === "2026-11-07");
-    expect(past).toMatchObject({ isPast: true, shown: [], more: 0, weekly: 0, dayHref: null });
+    expect(past).toMatchObject({ isPast: true, shown: [], more: 0, weekly: 0, regulars: 0, dayHref: null });
+  });
+
+  it("keeps repeating titles out of the one-off slots", () => {
+    const classes = ["2026-11-16", "2026-11-17", "2026-11-18", "2026-11-19", "2026-11-20"].map((day) =>
+      ev({ id: `bowl-${day}`, title: "Acc Rec Bowling", start: `${day}T09:00:00-06:00`, categories: ["fitness"], venue: "Activity Center" }),
+    );
+    const special = ev({ id: "show", title: "Matinee", start: "2026-11-20T19:00:00-06:00", categories: ["live-music"], venue: "Gillioz Theatre" });
+    const grid = buildMonthGrid("springfield", 2026, 11, [...classes, special], [], sunday);
+    const cell = grid.weeks.flat().find((item) => item.date === "2026-11-20");
+    expect(cell?.shown.map((item) => item.title)).toEqual(["Matinee"]);
+    expect(cell?.more).toBe(0);
+    expect(cell?.regulars).toBe(1);
+    expect(cell?.weekly).toBe(0);
+    const onlyClass = grid.weeks.flat().find((item) => item.date === "2026-11-16");
+    expect(onlyClass?.shown).toEqual([]);
+    expect(onlyClass?.regulars).toBe(1);
   });
 
   it("links the current month at /calendar/ and stops after the next 3 months", () => {
@@ -247,6 +263,49 @@ describe("recurring folder", () => {
     expect(strip.ranges.map((item) => item.title)).toEqual(["Today", "Tomorrow", "This weekend", "Next 7 days", "Pick a date"]);
     expect(strip.ranges[0]?.detail).toContain("1 event");
     expect(strip.ranges[4]?.href).toBe("/events/springfield/calendar/");
+  });
+});
+
+describe("coming up without standouts", () => {
+  it("drops events that are already in Don't miss", () => {
+    const fest = ev({ id: "fest", title: "Fest", start: "2026-11-20", categories: ["festivals"], venue: "Park" });
+    const fair = ev({ id: "fair", title: "Craft Fair", start: "2026-11-14T10:00:00-06:00", venue: "Expo Center" });
+    expect(dontMissEvents([fest, fair], sunday).map((event) => event.id)).toEqual(["fest"]);
+    expect(comingUpEvents([fest, fair], [], "springfield", sunday).map((event) => event.id)).toEqual(["fair"]);
+  });
+});
+
+describe("same-day duplicates", () => {
+  it("keeps one event when the title, place and day match, including a street stored as the venue", () => {
+    const timed = ev({
+      id: "timed",
+      title: "Cinema Sundays: Matilda",
+      start: "2026-11-15T20:00:00Z",
+      venue: "Gillioz Theatre",
+      address: "325 Park Central, E Springfield, Missouri",
+      public_slug: "cinema-sundays-matilda-2026-11-15",
+    });
+    const bare = ev({
+      id: "bare",
+      title: "Cinema Sundays: Matilda",
+      start: "2026-11-15",
+      venue: "325 Park Central E, Springfield, MO",
+      address: "325 Park Central E, Springfield, MO 65806",
+      public_slug: "cinema-sundays-matilda-2026-11-15-2",
+      time_tbd: true,
+    });
+    const other = ev({ id: "other", title: "Other Show", start: "2026-11-15T19:00:00-06:00", venue: "Gillioz Theatre" });
+    expect(dedupeSameDayEvents([bare, timed, other]).map((event) => event.id).sort()).toEqual(["other", "timed"]);
+  });
+
+  it("keeps different venues and different days", () => {
+    const events = [
+      ev({ id: "a", title: "Trivia", start: "2026-11-20T19:00:00-06:00", venue: "Bar A" }),
+      ev({ id: "b", title: "Trivia", start: "2026-11-20T21:00:00-06:00", venue: "Bar B" }),
+      ev({ id: "c", title: "Bowling", start: "2026-11-16T09:00:00-06:00", venue: "Activity Center" }),
+      ev({ id: "d", title: "Bowling", start: "2026-11-23T09:00:00-06:00", venue: "Activity Center" }),
+    ];
+    expect(dedupeSameDayEvents(events).map((event) => event.id)).toEqual(["a", "b", "c", "d"]);
   });
 });
 
