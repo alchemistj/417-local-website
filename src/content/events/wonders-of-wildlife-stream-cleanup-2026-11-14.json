@@ -3,7 +3,7 @@
   "slug": "wonders-of-wildlife-stream-cleanup",
   "title": "Wonders of Wildlife Stream Cleanup",
   "seo_title": "Wonders of Wildlife Stream Cleanup in Springfield, MO",
-  "description": "Wonders of Wildlife Stream Cleanup takes place on Saturday, November 14, 2026 at 9:00 AM. It is held at the Springfield Art Museum Hatch Lawn, 1111 E Brookside Dr in Springfield, MO. This event is open to a general audience.",
+  "description": "Volunteers help clean Fassnight Creek in a hands-on stream cleanup led by Wonders of Wildlife and the Springfield Art Museum. The work aims to protect local wildlife habitat and keep this natural space in good shape, and volunteers are invited to take part. It takes place Saturday, November 14, 2026 at 9:00 AM at the Springfield Art Museum Hatch Lawn, 1111 E Brookside Dr, Springfield, MO.",
   "start": "2026-11-14T15:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -16,7 +16,10 @@
     "website": null
   },
   "categories": [
-    "arts-and-theater"
+    "networking",
+    "arts-and-theater",
+    "outdoors",
+    "community"
   ],
   "price": null,
   "is_free": null,
@@ -25,7 +28,7 @@
   "source_urls": [
     "https://sgfmuseum.org/Calendar.aspx?EID=10966"
   ],
-  "updated_at": "2026-11-12T19:04:13.356Z",
+  "updated_at": "2026-11-13T10:28:47.473Z",
   "public_slug": "wonders-of-wildlife-stream-cleanup-2026-11-14",
   "city_slug": "springfield",
   "path": "/events/springfield/wonders-of-wildlife-stream-cleanup-2026-11-14/",

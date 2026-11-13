@@ -1,9 +1,9 @@
 {
-  "exportedAt": "2026-11-12T19:04:13.356Z",
+  "exportedAt": "2026-11-13T10:28:47.473Z",
   "market": "all",
   "counts": {
     "events": 170,
-    "networking": 9,
+    "networking": 10,
     "professional-development": 10,
     "live-music": 23,
     "arts-and-theater": 34,
@@ -11,12 +11,12 @@
     "family": 6,
     "food-and-drink": 13,
     "sports": 13,
-    "outdoors": 29,
-    "community": 36,
+    "outdoors": 27,
+    "community": 37,
     "holiday": 65,
     "comedy": 5,
     "film": 4,
     "kids": 15,
-    "classes-and-workshops": 6
+    "classes-and-workshops": 9
   }
 }

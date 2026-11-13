@@ -2,8 +2,8 @@
   "id": "9229f2ba-f037-44d8-bbc2-f1a08094e8b7",
   "slug": "caving-cadets-homeschool-series-sequiota-cave-exploration",
   "title": "Caving Cadets Homeschool Series (Sequiota Cave Exploration)",
-  "seo_title": "Caving Cadets Homeschool Series (Sequiota Cave Exploration)",
-  "description": "Caving Cadets Homeschool Series (Sequiota Cave Exploration) is scheduled for Friday, November 20, 2026 at 11:00 AM CST at Sequiota Park, 3500 S Lone Pine, Springfield, MO, Springfield.",
+  "seo_title": "Caving Cadets Homeschool: Sequiota Cave Exploration",
+  "description": "Caving Cadets is a homeschool series from Outdoor Initiatives where students explore caves, learn about bats, cave formations and salamanders, and take part in educational games and a cave-specific activity each day. The series visits caves in Lost Hill, Ritter Springs, and Doling Parks, with drop-off at the main parking lot at 11 AM and pickup at 2 PM. This session is Friday, November 20, 2026 at 11:00 AM at Sequiota Park, 3500 S Lone Pine, Springfield, MO; register by the Friday before, and call 417-833-8647 with questions.",
   "start": "2026-11-20T17:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -26,9 +26,9 @@
   "source_urls": [
     "https://www.parkboard.org/Calendar.aspx?EID=9631"
   ],
-  "updated_at": "2026-11-12T19:04:13.356Z",
+  "updated_at": "2026-11-13T10:28:47.473Z",
   "public_slug": "caving-cadets-homeschool-series-sequiota-cave-exploration-2026-11-20",
   "city_slug": "springfield",
   "path": "/events/springfield/caving-cadets-homeschool-series-sequiota-cave-exploration-2026-11-20/",
-  "action_type": "details"
+  "action_type": "register"
 }

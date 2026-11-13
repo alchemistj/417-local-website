@@ -3,7 +3,7 @@
   "slug": "fall-sequiota-cave-john-boat-tours",
   "title": "Fall Sequiota Cave John Boat Tours",
   "seo_title": "Fall Sequiota Cave John Boat Tours in Springfield, MO",
-  "description": "This is a John boat tour of Sequiota Cave, held in the fall and listed as an outdoors activity. It takes place on Saturday, November 21, 2026 at 10:00 AM at Sequiota Park, 3500 S Lone Pine in Springfield, MO.",
+  "description": "This is a guided John Boat Tour through Sequiota Park Cave, where you paddle slowly while learning about the cave's facts, myths and history. Bring your own headlamp or flashlight. Space is limited and there is no on-site registration, and dates are subject to weather and bat activity. It takes place Saturday, November 21, 2026 at 10:00 AM at Sequiota Park, 3500 S Lone Pine, Springfield, MO.",
   "start": "2026-11-21T16:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -25,9 +25,9 @@
   "source_urls": [
     "https://www.parkboard.org/Calendar.aspx?EID=9838"
   ],
-  "updated_at": "2026-11-12T19:04:13.356Z",
+  "updated_at": "2026-11-13T10:28:47.473Z",
   "public_slug": "fall-sequiota-cave-john-boat-tours-2026-11-21",
   "city_slug": "springfield",
   "path": "/events/springfield/fall-sequiota-cave-john-boat-tours-2026-11-21/",
-  "action_type": "details"
+  "action_type": "register"
 }
