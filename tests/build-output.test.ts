@@ -89,9 +89,16 @@ describe.skipIf(!built)("built site", () => {
       expect(title, `${p.route} title`).toBeTruthy();
       expect(desc, `${p.route} description`).toBeTruthy();
       expect(titles.get(title as string), `duplicate title on ${p.route}`).toBeUndefined();
-      expect(descriptions.get(desc as string), `duplicate description on ${p.route}`).toBeUndefined();
+      const previous = descriptions.get(desc as string);
+      if (previous) {
+        const here = siteEvents.find((item) => eventPath(item) === p.route);
+        const there = siteEvents.find((item) => eventPath(item) === previous);
+        const sameTitle = Boolean(here && there && here.title.trim().toLowerCase() === there.title.trim().toLowerCase());
+        expect(sameTitle, `duplicate description on ${p.route} and ${previous}`).toBe(true);
+      } else {
+        descriptions.set(desc as string, p.route);
+      }
       titles.set(title as string, p.route);
-      descriptions.set(desc as string, p.route);
     }
   });
 

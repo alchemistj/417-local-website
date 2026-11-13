@@ -2,7 +2,8 @@
 /** Free and Kids toggles. Without JavaScript every row stays visible. */
 ---
 
-<div class="event-filters" data-event-filters>
+<div class="event-filters" data-event-filters role="group" aria-labelledby="show-only-label">
+  <span class="event-filters-label" id="show-only-label">Show only:</span>
   <button type="button" aria-pressed="false" data-filter="free">Free</button>
   <button type="button" aria-pressed="false" data-filter="kids">Kids</button>
 </div>

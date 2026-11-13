@@ -56,22 +56,24 @@ const groups = groupEventsByDay(events);
               data-free={showsFreeTag(event) ? "true" : undefined}
               data-kids={isKidsEvent(event) ? "true" : undefined}
             >
-              <div class="date-tile" style={`background:${tile}`}>
-                <span class="date-tile-day">{date.day}</span>
-                <span class="date-tile-month">{date.month}</span>
-              </div>
-              <div>
-                <p class="event-line">
-                  <a href={href}>{event.title}</a>
-                  {place && <span class="event-place"> · {place}</span>}
-                  {range && <span class="event-place"> · Runs {range}</span>}
-                </p>
-                <p class="event-tags">
-                  <span class="event-when">{eventListTime(event)}</span>
-                  {tags.map((tag) => <span class="event-tag">{tag}</span>)}
-                  {showsFreeTag(event) && <span class="event-tag">Free</span>}
-                </p>
-              </div>
+              <a class="event-row-link" href={href}>
+                <span class="date-tile" style={`background:${tile}`}>
+                  <span class="date-tile-day">{date.day}</span>
+                  <span class="date-tile-month">{date.month}</span>
+                </span>
+                <span class="event-row-text">
+                  <span class="event-line">
+                    <span class="event-title">{event.title}</span>
+                    {place && <span class="event-place"> · {place}</span>}
+                    {range && <span class="event-place"> · Runs {range}</span>}
+                  </span>
+                  <span class="event-tags">
+                    <span class="event-when">{eventListTime(event)}</span>
+                    {tags.map((tag) => <span class="event-tag">{tag}</span>)}
+                    {showsFreeTag(event) && <span class="event-tag">Free</span>}
+                  </span>
+                </span>
+              </a>
             </li>
           );
         })}
