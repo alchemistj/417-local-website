@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { recurringSchema, recurringWhen, seasonLabel } from "../src/lib/recurring";
+import { recurringSchema, recurringWeekday, recurringWhen, seasonLabel } from "../src/lib/recurring";
 
 describe("recurring season", () => {
   it("turns the engine's { from, to } season into month names", () => {
@@ -21,6 +21,17 @@ describe("recurring season", () => {
       season: { from: "03-14", to: "10-31" },
     });
     expect(item.season).toBe("March–October");
-    expect(recurringWhen(item)).toContain("March–October");
+    expect(recurringWhen(item)).toBe("Every Saturday, 9 AM–2 PM, March–October");
+    expect(recurringWeekday(item)).toBe(6);
+  });
+
+  it("maps other byday codes and keeps minutes that are not on the hour", () => {
+    const item = recurringSchema.parse({
+      id: "tuesday-trivia",
+      title: "Tuesday Trivia",
+      rule: { freq: "weekly", byday: ["TU"], start_time: "18:30", end_time: "20:00" },
+    });
+    expect(recurringWhen(item)).toBe("Every Tuesday, 6:30 PM–8 PM");
+    expect(recurringWeekday(item)).toBe(2);
   });
 });

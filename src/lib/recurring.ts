@@ -56,6 +56,53 @@ export function seasonLabel(value: unknown): string | null {
 
 const WEEKDAYS = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"] as const;
 const WEEKDAY_LABELS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const BYDAY_CODES = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"] as const;
+
+function ruleRecord(rule: unknown): Record<string, unknown> | null {
+  if (!rule || typeof rule !== "object") return null;
+  return rule as Record<string, unknown>;
+}
+
+/** iCal `SA` (or `1SA`) and a full name both become "Saturday". Anything else is kept as written. */
+function weekdayToken(value: unknown): string {
+  if (typeof value !== "string") return "";
+  const trimmed = value.trim();
+  if (!trimmed) return "";
+  const code = trimmed.toUpperCase().replace(/^-?\d+/, "");
+  const codeIndex = BYDAY_CODES.indexOf(code as (typeof BYDAY_CODES)[number]);
+  if (codeIndex >= 0) return WEEKDAY_LABELS[codeIndex] ?? "";
+  const nameIndex = WEEKDAYS.indexOf(trimmed.toLowerCase() as (typeof WEEKDAYS)[number]);
+  if (nameIndex >= 0) return WEEKDAY_LABELS[nameIndex] ?? "";
+  return trimmed;
+}
+
+function ruleDayValues(record: Record<string, unknown>): unknown[] {
+  for (const key of ["byday", "weekday", "day"]) {
+    const raw = record[key];
+    if (Array.isArray(raw) && raw.length > 0) return raw;
+    if (typeof raw === "string" && raw.trim()) return [raw];
+  }
+  return [];
+}
+
+function joinEnglish(parts: string[]): string {
+  if (parts.length <= 1) return parts[0] ?? "";
+  if (parts.length === 2) return `${parts[0]} and ${parts[1]}`;
+  return `${parts.slice(0, -1).join(", ")}, and ${parts[parts.length - 1]}`;
+}
+
+/** "9 AM" or "6:30 PM" from a 24-hour "HH:MM" export. Other strings pass through. */
+function formatClock(value: string): string {
+  const trimmed = value.trim();
+  const match = /^(\d{1,2}):(\d{2})(?::\d{2})?$/.exec(trimmed);
+  if (!match) return trimmed;
+  const hour24 = Number(match[1]);
+  const minute = Number(match[2]);
+  if (hour24 > 23 || minute > 59) return trimmed;
+  const suffix = hour24 >= 12 ? "PM" : "AM";
+  const hour12 = hour24 % 12 || 12;
+  return minute === 0 ? `${hour12} ${suffix}` : `${hour12}:${match[2]} ${suffix}`;
+}
 
 /** Missing and empty folders both mean there are no series. Invalid JSON still throws. */
 export function readRecurringDir(dir: string): RecurringItem[] {
@@ -103,19 +150,32 @@ export function seriesPath(item: RecurringItem): string {
 
 function formatRule(rule: unknown): string {
   if (typeof rule === "string") return rule.trim();
-  if (!rule || typeof rule !== "object") return "";
-  const record = rule as Record<string, unknown>;
+  const record = ruleRecord(rule);
+  if (!record) return "";
   for (const key of ["label", "text", "summary", "description"]) {
     const value = record[key];
     if (typeof value === "string" && value.trim()) return value.trim();
   }
   const frequency = typeof record.frequency === "string" ? record.frequency : typeof record.freq === "string" ? record.freq : "";
-  const weekday = typeof record.weekday === "string" ? record.weekday : typeof record.byday === "string" ? record.byday : typeof record.day === "string" ? record.day : "";
-  const start = typeof record.start === "string" ? record.start : typeof record.start_time === "string" ? record.start_time : "";
-  const end = typeof record.end === "string" ? record.end : typeof record.end_time === "string" ? record.end_time : "";
+  const days = joinEnglish(ruleDayValues(record).map(weekdayToken).filter(Boolean));
+  const startRaw = typeof record.start === "string" ? record.start : typeof record.start_time === "string" ? record.start_time : "";
+  const endRaw = typeof record.end === "string" ? record.end : typeof record.end_time === "string" ? record.end_time : "";
+  const start = startRaw ? formatClock(startRaw) : "";
+  const end = endRaw ? formatClock(endRaw) : "";
   const time = start && end ? `${start}–${end}` : start;
-  const every = /month/i.test(frequency) ? "Every month" : frequency ? `Every ${frequency}` : weekday ? "Every" : "";
-  return [every, weekday, time].filter(Boolean).join(" ").replace(/\s+/g, " ").trim();
+  const cadence = days
+    ? /month/i.test(frequency)
+      ? `Every month on ${days}`
+      : `Every ${days}`
+    : /month/i.test(frequency)
+      ? "Every month"
+      : /week/i.test(frequency)
+        ? "Every week"
+        : frequency
+          ? `Every ${frequency}`
+          : "";
+  if (cadence && time) return `${cadence}, ${time}`;
+  return cadence || time;
 }
 
 /** "Every Saturday, 9 AM–1 PM, March–October" from `rule` plus `season`. */
@@ -126,9 +186,16 @@ export function recurringWhen(item: RecurringItem): string {
   return rule || season;
 }
 
-/** Weekday from the rule text, otherwise the weekday of the first next date. */
+/** Weekday from the rule's `byday` array, otherwise the rule text, otherwise the first next date. */
 export function recurringWeekday(item: RecurringItem): number | null {
-  const extra = item.rule && typeof item.rule === "object" ? JSON.stringify(item.rule) : "";
+  const record = ruleRecord(item.rule);
+  if (record) {
+    for (const value of ruleDayValues(record)) {
+      const nameIndex = WEEKDAY_LABELS.indexOf(weekdayToken(value));
+      if (nameIndex >= 0) return nameIndex;
+    }
+  }
+  const extra = record ? JSON.stringify(record) : "";
   const text = `${recurringWhen(item)} ${extra}`.toLowerCase();
   const found = WEEKDAYS.findIndex((name) => text.includes(name));
   if (found >= 0) return found;
