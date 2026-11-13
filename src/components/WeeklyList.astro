@@ -9,14 +9,14 @@ const { groups } = Astro.props;
 
 {groups.map((group) => (
   <section class="weekly-day" aria-labelledby={`weekly-${group.weekday}`}>
-    <h2 id={`weekly-${group.weekday}`}>{group.weekday}</h2>
+    <h3 id={`weekly-${group.weekday}`}>{group.weekday}</h3>
     <ul class="weekly-list">
       {group.items.map((item) => {
         const detail = [recurringWhen(item), recurringPlace(item.venue)].filter(Boolean).join(" · ");
         return (
           <li>
             <a href={seriesPath(item)}>{item.title}</a>
-            {detail && <span class="event-place"> {detail}</span>}
+            {detail && <span class="event-place"> · {detail}</span>}
           </li>
         );
       })}
