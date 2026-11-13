@@ -1,0 +1,39 @@
+{
+  "id": "7bb7fc3e-460e-4015-be06-0fc6ddca42a0",
+  "slug": "3a-event-venue-grand-opening",
+  "title": "3A Event Venue Grand Opening!",
+  "seo_title": "3A Event Venue Grand Opening in Joplin, MO",
+  "description": "This is the grand opening of 3A Event Venue, a festival-style community event with arts and theater, live music, food and drink, and family activities. It takes place on November 22, 2026, with the time to be determined, at 2873 S Kenser Rd in Joplin, Missouri.",
+  "start": "2026-11-22",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "2873 S Kenser rd, Joplin, Mo",
+  "address": "2873 S Kenser Rd, Joplin, MO 64801-7737, United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "3A Event Venue",
+    "website": null
+  },
+  "categories": [
+    "festivals",
+    "community",
+    "arts-and-theater",
+    "live-music",
+    "family",
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/3a-event-venue-grand-opening-eid3a0eakbo09",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czcvYmFubmVycy8yMzM5ZWRmZDcwMDg3ODM5MzhlNWNmOWRkNzQyYzg4Y2IyMTllNjFjYWRhMTI3MmUwNDBiNTg3YzVkMWVlYWZjLXJpbWctdzEyMDAtaDE1NTMtZGNmOGY4ZTgtZ21pcj92PTE3OTQ0MzQ0MzI.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/3a-event-venue-grand-opening-eid3a0eakbo09"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "3a-event-venue-grand-opening-2026-11-22",
+  "city_slug": "joplin",
+  "path": "/events/joplin/3a-event-venue-grand-opening-2026-11-22/",
+  "action_type": "details"
+}

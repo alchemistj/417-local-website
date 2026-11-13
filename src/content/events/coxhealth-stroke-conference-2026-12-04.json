@@ -1,0 +1,36 @@
+{
+  "id": "309a0b44-0278-4d92-830c-c4be6f302dcb",
+  "slug": "coxhealth-stroke-conference",
+  "title": "CoxHealth Stroke Conference",
+  "seo_title": "CoxHealth Stroke Conference",
+  "description": "CoxHealth Stroke Conference is scheduled for December 4, 2026, Time TBD at The Hatch Auditorium at The Library Center, 4653 South Campbell Avenue, Springfield, MO, 65810, Springfield. CoxHealth Education Center is the organizer.",
+  "start": "2026-12-04",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "The Hatch Auditorium at The Library Center",
+  "address": "4653 South Campbell Avenue, Springfield, MO, 65810",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "CoxHealth Education Center",
+    "website": null
+  },
+  "categories": [
+    "professional-development",
+    "networking"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/coxhealth-stroke-conference-tickets-1991403484429",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F608482739%2F352990788203%2F1%2Foriginal.20220802-135547?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C1%2C1058%2C529&s=429c4095da354ef0b13d26935fb44b7c",
+  "source_urls": [
+    "https://happeningnext.com/event/coxhealth-stroke-conference-eid1ef0l0t6sgpr",
+    "https://www.eventbrite.com/e/coxhealth-stroke-conference-tickets-1991403484429"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "coxhealth-stroke-conference-2026-12-04",
+  "city_slug": "springfield",
+  "path": "/events/springfield/coxhealth-stroke-conference-2026-12-04/",
+  "action_type": "details"
+}

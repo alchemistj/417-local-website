@@ -1,0 +1,35 @@
+{
+  "id": "10f3e691-8465-4345-a0ac-fa6f77a1e1a6",
+  "slug": "no-signal",
+  "title": "NO SIGNAL….",
+  "seo_title": "NO SIGNAL….",
+  "description": "NO SIGNAL…. is scheduled for November 21, 2026, Time TBD at The Regency Live, 307 Park Central East, Springfield, MO, 65806, Springfield. SPRINGOOD is the organizer.",
+  "start": "2026-11-21",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "The Regency Live",
+  "address": "307 Park Central East, Springfield, MO, 65806",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "SPRINGOOD",
+    "website": "https://allevents.in/org/springood/27528570"
+  },
+  "categories": [
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/no-signal-tickets-2003855880882",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1197403164%2F384535808383%2F1%2Foriginal.20261106-033620?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.652&fp-y=0.071&s=b38b22c3c7750ffceda68c975bdf5609",
+  "source_urls": [
+    "https://www.eventbrite.com/e/no-signal-tickets-2003855880882",
+    "https://allevents.in/springfield/no-signal%E2%80%A6/100002002357637596"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "no-signal-2026-11-21",
+  "city_slug": "springfield",
+  "path": "/events/springfield/no-signal-2026-11-21/",
+  "action_type": "details"
+}

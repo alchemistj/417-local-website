@@ -1,0 +1,36 @@
+{
+  "id": "74bbbc5b-3a12-4e6b-8436-688388ee8da0",
+  "slug": "mcbingo-43840",
+  "title": "McBingo- 43840",
+  "seo_title": "McBingo in Joplin, MO on November 25, 2026",
+  "description": "McBingo is a community event hosted by Close-Maffei Family McDonalds, listed under live music, arts and theater, and community. It takes place on November 25, 2026, with the time to be determined, at Fir Rd in Joplin, Missouri.",
+  "start": "2026-11-25",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "25861 Fir Rd, Joplin, MO 64801-6308, United States",
+  "address": "25884 Fir Rd, Joplin, MO 64801-6308, United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Close-Maffei Family McDonalds",
+    "website": null
+  },
+  "categories": [
+    "live-music",
+    "arts-and-theater",
+    "community"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/mcbingo-43840-eid3a0e9j9hmi",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEvYmFubmVycy80NDhmZTA4ZDdlYWQ4ODliNzAyZDcyMjQyZmE4YWRjYWQ3M2U1YmExMGU4M2I4MzYxNTYyZjk0Yjg1YTVmZTQ4LXJpbWctdzEyMDAtaDE1NTMtZGNmOGY4ZjgtZ21pcj92PTE3OTM5MjM5NTA.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/mcbingo-43840-eid3a0e9j9hmi"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "mcbingo-43840-2026-11-25",
+  "city_slug": "joplin",
+  "path": "/events/joplin/mcbingo-43840-2026-11-25/",
+  "action_type": "details"
+}

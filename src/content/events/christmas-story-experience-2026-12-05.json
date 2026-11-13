@@ -1,0 +1,34 @@
+{
+  "id": "0fe5f5a1-464f-4205-ae7b-430f43aa7155",
+  "slug": "the-christmas-story-experience",
+  "title": "The Christmas Story Experience",
+  "seo_title": "The Christmas Story Experience in Joplin, MO",
+  "description": "The Christmas Story Experience is a holiday event in Joplin, Missouri, hosted by Central Christian Center. It takes place on December 5, 2026, with the time to be determined, at 410 S Virginia Ave, Joplin, MO 64801-2301.",
+  "start": "2026-12-05",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "410 S Virginia Ave, Joplin, MO",
+  "address": "410 S Virginia Ave, Joplin, MO 64801-2301, United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Central Christian Center",
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/the-christmas-story-experience-eid3a0eaa5v5v",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czMvYmFubmVycy8zYzg2MTBkZTkyYjIxN2FiMWI5YzU1YmVkMDU2NzhkNzI2OWZjMWI5MjBiNjQwMTIwMTM1MWVkMWNmODZkMTA5LXJpbWctdzEyMDAtaDEyMDAtZGM1ODA4MDgtZ21pcj92PTE3OTQyMzg1MzM.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/the-christmas-story-experience-eid3a0eaa5v5v"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "christmas-story-experience-2026-12-05",
+  "city_slug": "joplin",
+  "path": "/events/joplin/christmas-story-experience-2026-12-05/",
+  "action_type": "details"
+}

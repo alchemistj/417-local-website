@@ -1,0 +1,34 @@
+{
+  "id": "43729599-0b0b-4803-bcb1-754c8751bfb3",
+  "slug": "acls-course",
+  "title": "ACLS Course",
+  "seo_title": "ACLS Course",
+  "description": "ACLS Course is scheduled for January 18, 2027, Time TBD at Cox North Hospital, 1423 N Jefferson, Springfield, MO, 65802, Springfield.",
+  "start": "2027-01-18",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Cox North Hospital",
+  "address": "1423 N Jefferson, Springfield, MO, 65802",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "professional-development"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/acls-course-tickets-1993482144758",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1190924131%2F42710748964%2F1%2Foriginal.20260812-201147?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.057&fp-y=0.5&s=2b6f25933d2bf7f6758ddede810fba22",
+  "source_urls": [
+    "https://www.eventbrite.com/e/acls-course-tickets-1993482144758"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "acls-course-2027-01-18",
+  "city_slug": "springfield",
+  "path": "/events/springfield/acls-course-2027-01-18/",
+  "action_type": "details"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "31799fb5-a755-4ae9-959e-f8000a155272",
+  "slug": "bls-for-healthcare-providers",
+  "title": "BLS for Healthcare Providers",
+  "seo_title": "BLS for Healthcare Providers",
+  "description": "BLS for Healthcare Providers is scheduled for November 18, 2026, Time TBD at Cox North Hospital - Robberson Avenue Training Center, 1499 N. Jefferson Ave, Springfield, MO, 65802, Springfield.",
+  "start": "2026-11-18",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Cox North Hospital - Robberson Avenue Training Center",
+  "address": "1499 N. Jefferson Ave, Springfield, MO, 65802",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "professional-development"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/bls-for-healthcare-providers-tickets-1986091373763",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1147900913%2F42710748964%2F1%2Foriginal.20251008-143316?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.214&fp-y=0.481&s=beec5ec3977e443559ded71e18d1bdbe",
+  "source_urls": [
+    "https://www.eventbrite.com/e/bls-for-healthcare-providers-tickets-1986091373763"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "bls-for-healthcare-providers-2026-11-18",
+  "city_slug": "springfield",
+  "path": "/events/springfield/bls-for-healthcare-providers-2026-11-18/",
+  "action_type": "details"
+}

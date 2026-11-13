@@ -1,0 +1,35 @@
+{
+  "id": "429300bf-22df-4364-89cc-ba7341dbcd05",
+  "slug": "tech-in-the-417-findings-from-the-regional-workplace-survey",
+  "title": "Tech in the 417: Findings from the Regional Workplace Survey",
+  "seo_title": "Tech in the 417: Regional Workplace Survey Findings",
+  "description": "Tech in the 417: Findings from the Regional Workplace Survey takes place on Tuesday, November 17, 2026 at 5:30 PM. It will be held at The eFactory (Robert W Plaster Free Enterprise Center), 405 N Jefferson Ave, in Springfield, MO. The event is hosted by Springfield Women In Technology and is aimed at a business audience.",
+  "start": "2026-11-17T23:30:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "The eFactory (Robert W Plaster Free Enterprise Center)",
+  "address": "405 N Jefferson Ave, Springfield, MO, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Springfield Women In Technology",
+    "website": "https://www.meetup.com/springfield-women-in-technology"
+  },
+  "categories": [
+    "networking",
+    "entrepreneurship",
+    "professional-development"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.meetup.com/springfield-women-in-technology/events/314271715",
+  "image_url": "/images/fallbacks/redesign/group-cover-1-square.webp",
+  "source_urls": [
+    "https://www.meetup.com/springfield-women-in-technology/events/314271715"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "tech-in-417-findings-from-regional-workplace-survey-2026-11-17",
+  "city_slug": "springfield",
+  "path": "/events/springfield/tech-in-417-findings-from-regional-workplace-survey-2026-11-17/",
+  "action_type": "details"
+}

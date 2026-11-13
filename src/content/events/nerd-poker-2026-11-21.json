@@ -1,0 +1,39 @@
+{
+  "id": "d8e45e6f-b065-4803-99e9-d7d190c140f8",
+  "slug": "nerd-poker",
+  "title": "Nerd Poker",
+  "seo_title": "Nerd Poker in Joplin, MO on November 21, 2026",
+  "description": "Nerd Poker is an event hosted by The Clubhouse that is listed under festivals, community, arts and theater, live music, family, and food and drink. It takes place on November 21, 2026, with the time to be determined, at 213 E 12th St in Joplin, MO.",
+  "start": "2026-11-21",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "213 E 12th St, Joplin, MO",
+  "address": "213 E 12th St, Joplin, MO 64801, United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "The Clubhouse",
+    "website": null
+  },
+  "categories": [
+    "festivals",
+    "community",
+    "arts-and-theater",
+    "live-music",
+    "family",
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/nerd-poker-eid3a0e9s5hjm",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czcvYmFubmVycy9mZjMzNzMzNmUyOWQ0NTY0MDI3OGZmNGVjOTc4NTVjNGFhMDk4OWUwOTUxMzc0ZjZkNTlkZTQ4MDdhMzUzMDcwLXJpbWctdzgyMi1oMzE2LWRjZjhmOGY4LWdtaXI_dj0xNzk0MDE3ODAw.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/nerd-poker-eid3a0e9s5hjm"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "nerd-poker-2026-11-21",
+  "city_slug": "joplin",
+  "path": "/events/joplin/nerd-poker-2026-11-21/",
+  "action_type": "details"
+}

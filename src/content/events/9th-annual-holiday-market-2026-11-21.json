@@ -1,0 +1,35 @@
+{
+  "id": "d3856918-9994-4491-9cea-a811fa66cf86",
+  "slug": "9th-annual-holiday-market",
+  "title": "9th Annual Holiday Market",
+  "seo_title": "9th Annual Holiday Market at Joplin Empire Market",
+  "description": "The 9th Annual Holiday Market is a holiday-themed market held at the Joplin Empire Market. It takes place on November 21, 2026, at 998 E 3rd St in Joplin, MO, with the time TBD.",
+  "start": "2026-11-21",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "annual": true,
+  "venue": "Joplin Empire Market",
+  "address": "998 E 3rd St, Joplin, MO 64801, United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Joplin Empire Market",
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/9th-annual-holiday-market-eid3a0e8wkbfl",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czYvYmFubmVycy8wNDk2YmYxNTdhMTFkZTBmOTllZmY3ODkyYjBkMzcyZTZkOTgzN2U3MDAzNmFiMWQ0Mjk1ZjlmNGFiMzE0ZDRlLXJpbWctdzEyMDAtaDY3NS1kY2Q4ZThlOC1nbWlyP3Y9MTc5MzYwMzMyNw.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/9th-annual-holiday-market-eid3a0e8wkbfl"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "9th-annual-holiday-market-2026-11-21",
+  "city_slug": "joplin",
+  "path": "/events/joplin/9th-annual-holiday-market-2026-11-21/",
+  "action_type": "details"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "dbf83ab1-c51d-4e78-af7e-33409ee25ed8",
+  "slug": "handmade-a-childrens-market",
+  "title": "Handmade: A Children's Market",
+  "seo_title": "Handmade: A Children's Market in Lebanon, MO",
+  "description": "Handmade: A Children's Market is a holiday market where children from Bloom Co-op and other children in the community host their own handmade market, and visitors can shop for gifts from these young creatives. It takes place on December 5, 2026, Time TBD, at 18125 Jaybird Lane in Lebanon, Missouri. More details are still to come.",
+  "start": "2026-12-05",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "18125 Jaybird Lane, Lebanon, MO, United States, Missouri 65536",
+  "address": "18125 Jaybird Ln, Lebanon, MO 65536-5058, United States, Lebanon, MO",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "kids",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/lebanon/handmade-a-childrens-market/200031030696156",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czcvYmFubmVycy9iYzk4ODQ0MDU1NjhiMWRkYTFjYWU3NDg5ZGJjMDE0ODJlMzk1MjlmZTVhODQwNjlmNDYwNThhYzVlNDNlZTY1LXJpbWctdzEyMDAtaDE2MDAtZGNmOGM4OTgtZ21pcj92PTE3OTQ0NzczNTU.avif",
+  "source_urls": [
+    "https://allevents.in/lebanon/handmade-a-childrens-market/200031030696156"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "handmade-children-s-market-2026-12-05",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/handmade-children-s-market-2026-12-05/",
+  "action_type": "details"
+}

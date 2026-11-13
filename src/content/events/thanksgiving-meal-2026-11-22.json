@@ -1,0 +1,34 @@
+{
+  "id": "c9e3d357-9303-4ecb-8e3f-e71b04abc64d",
+  "slug": "thanksgiving-meal",
+  "title": "Thanksgiving Meal",
+  "seo_title": "Thanksgiving Meal in Joplin, MO on Nov 22, 2026",
+  "description": "This is a Thanksgiving meal hosted by Joplin City Church, a holiday gathering where people come together to share a meal. It takes place on November 22, 2026, with the time to be determined, at 1924 W 4th St in Joplin, MO.",
+  "start": "2026-11-22",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "1924 W 4th St, Joplin, MO",
+  "address": "1924 W 4th St, Joplin, MO 64801-3203, United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Joplin City Church",
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/thanksgiving-meal-eid3a0e9fqar6",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czYvYmFubmVycy9lODhlNGFkOGVlZTM4ZmY3ZjVkM2QxYjkxOTljYjRhYjUwNmNlNTZmMjVkMGU1NWY2Mjg3ZDc4NWJkM2U0MjkzLXJpbWctdzEyMDAtaDkyNy1kY2Y4ZThkOC1nbWlyP3Y9MTc5Mzg2MzcwMA.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/thanksgiving-meal-eid3a0e9fqar6"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "thanksgiving-meal-2026-11-22",
+  "city_slug": "joplin",
+  "path": "/events/joplin/thanksgiving-meal-2026-11-22/",
+  "action_type": "details"
+}

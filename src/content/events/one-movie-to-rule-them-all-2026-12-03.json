@@ -1,0 +1,36 @@
+{
+  "id": "66b4322c-50c6-4848-96ec-ff1e5c748c91",
+  "slug": "one-movie-to-rule-them-all",
+  "title": "One Movie to Rule Them All...",
+  "seo_title": "One Movie to Rule Them All... at Joplin Public Library",
+  "description": "One Movie to Rule Them All... is a community event at the Joplin Public Library in Joplin, Missouri, with ties to live music and arts and theater. It takes place on December 3, 2026, at 1915 S Connecticut Ave, with the time to be determined (Time TBD).",
+  "start": "2026-12-03",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Joplin Public Library",
+  "address": "1915 S Connecticut Ave, Joplin, MO 64804, United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Joplin Public Library",
+    "website": null
+  },
+  "categories": [
+    "live-music",
+    "arts-and-theater",
+    "community"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/one-movie-to-rule-them-all-eid3a0e9ga9c1",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czkvYmFubmVycy9jZjhjY2UwNzdjMWIyNzE5MGRmZDViY2Q5OTE5ZDc1NDZjNTc3MGExZTgyM2MyM2RkYThkMjg5MzhiOTA0MmQzLXJpbWctdzEyMDAtaDY3NS1kY2U4ZThkOC1nbWlyP3Y9MTc5Mzg2OTE2MQ.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/one-movie-to-rule-them-all-eid3a0e9ga9c1"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "one-movie-to-rule-them-all-2026-12-03",
+  "city_slug": "joplin",
+  "path": "/events/joplin/one-movie-to-rule-them-all-2026-12-03/",
+  "action_type": "details"
+}

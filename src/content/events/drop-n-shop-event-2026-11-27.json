@@ -1,0 +1,39 @@
+{
+  "id": "ba7bb23b-aa08-4275-a306-81f45b8986d4",
+  "slug": "drop-n-shop-event",
+  "title": "Drop N' Shop Event",
+  "seo_title": "Drop N' Shop Event in Joplin, MO – Nov 27, 2026",
+  "description": "Drop N' Shop Event is a festival-style community event in Joplin, Missouri, listed with categories including arts and theater, live music, family, and food and drink. It takes place on November 27, 2026, with the time to be determined, at 2800 E 24th St in Joplin.",
+  "start": "2026-11-27",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "2800 E 24th St, Joplin, MO, United States, Missouri 64804",
+  "address": "2800 E 24th St, Joplin, MO 64804-2413, United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Roller City Entertainment",
+    "website": null
+  },
+  "categories": [
+    "festivals",
+    "community",
+    "arts-and-theater",
+    "live-music",
+    "family",
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/drop-n-shop-event-eid3a0e98qqvp",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy8wNzk2MWFlMzI3NjM4MjcyNWViMzU1ZjgxZjAwZmEzNmQ2NWUwYTE3ZDZiOTllYTcwOWI4MmZkMjA4YTIyNjBhLXJpbWctdzEyMDAtaDYyOC1kY2Y4NTg0OC1nbWlyP3Y9MTc5Mzc1NDY3OQ.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/drop-n-shop-event-eid3a0e98qqvp"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "drop-n-shop-event-2026-11-27",
+  "city_slug": "joplin",
+  "path": "/events/joplin/drop-n-shop-event-2026-11-27/",
+  "action_type": "details"
+}

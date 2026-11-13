@@ -1,0 +1,39 @@
+{
+  "id": "b39efd20-eff7-4a33-8235-2965915ea340",
+  "slug": "midwest-caribbean-classic",
+  "title": "Midwest Caribbean Classic",
+  "seo_title": "Midwest Caribbean Classic in Joplin, MO – Feb 5, 2027",
+  "description": "The Midwest Caribbean Classic is a festival in Joplin, Missouri, with community, arts and theater, live music, family, and food and drink themes. It takes place on February 5, 2027, in Joplin, MO. The start time is TBD.",
+  "start": "2027-02-05",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Joplin, Missouri",
+  "address": "Joplin, Missouri, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Helix.Gymnastics",
+    "website": null
+  },
+  "categories": [
+    "festivals",
+    "community",
+    "arts-and-theater",
+    "live-music",
+    "family",
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/midwest-caribbean-classic-eid3a0dwats4e",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czgvYmFubmVycy9kMmZjNmE0ZDE5ZTdlOWRkYjI3MmM2MWQzMmY1ZmRkOWI0YzlkZjdmNmY1ZTIxYTFjN2ZmNDEwODk3NzNmYmI0LXJpbWctdzEwMjQtaDE1MzYtZGMwODA4MTgtZ21pcj92PTE3ODgzNjE0NjA.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/midwest-caribbean-classic-eid3a0dwats4e"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "midwest-caribbean-classic-2027-02-05",
+  "city_slug": "joplin",
+  "path": "/events/joplin/midwest-caribbean-classic-2027-02-05/",
+  "action_type": "details"
+}

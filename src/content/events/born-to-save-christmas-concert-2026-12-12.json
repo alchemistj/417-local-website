@@ -1,0 +1,35 @@
+{
+  "id": "311b02a5-e5a3-441f-bdbe-532db4a865d6",
+  "slug": "born-to-save-2026-christmas-concert",
+  "title": "\"Born to Save\" - 2026 Christmas Concert",
+  "seo_title": "\"Born to Save\" Christmas Concert in Joplin, MO",
+  "description": "\"Born to Save\" is a 2026 Christmas concert presented by the Proclamation Youth Choir, featuring live holiday music. It takes place on December 12, 2026, at College Heights Christian Church, 4311 Newman Rd in Joplin, MO. Time TBD.",
+  "start": "2026-12-12",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "College Heights Christian Church",
+  "address": "College Heights Christian Church, 4311 Newman Rd, Joplin, MO 64801, United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Proclamation Youth Choir",
+    "website": null
+  },
+  "categories": [
+    "live-music",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/andquotborn-to-saveandquot-2026-christmas-concert-eid3a0dtm6xo2",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy9iNzcyYjk3N2Y4MzM5NjNhZmM2NTdmODJlMmIwNDM5YzM2ZDZlZDQwMGRkNGNhNmQ1ODNkYTQ5Y2IyNjg4MzBhLXJpbWctdzEyMDAtaDU3Mi1kYzA4NTgyOC1nbWlyP3Y9MTc4ODM0MDc2Mw.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/andquotborn-to-saveandquot-2026-christmas-concert-eid3a0dtm6xo2"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "born-to-save-christmas-concert-2026-12-12",
+  "city_slug": "joplin",
+  "path": "/events/joplin/born-to-save-christmas-concert-2026-12-12/",
+  "action_type": "details"
+}

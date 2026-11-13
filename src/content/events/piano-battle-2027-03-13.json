@@ -1,0 +1,36 @@
+{
+  "id": "8d348fda-1df6-4566-af52-98f3fb3849ca",
+  "slug": "piano-battle",
+  "title": "PIANO BATTLE",
+  "seo_title": "Piano Battle at Connect2Culture in Joplin, MO",
+  "description": "Piano Battle is a live music event in the arts and theater category, held at Connect2Culture. It takes place on March 13, 2027, with the time to be determined, at 212 West 7th Street in Joplin, Missouri.",
+  "start": "2027-03-13",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Connect2Culture",
+  "address": "212 West 7th Street,Joplin,MO,United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Connect2Culture",
+    "website": null
+  },
+  "categories": [
+    "live-music",
+    "arts-and-theater",
+    "community"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/piano-battle-eid3a0e21irtm",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy9iMzNkYzVjMDhkNWE1NDMwODc0NjQzYjQ0OGU1YjU3YjUxN2M2N2EyNzJlZDBiZjgyZGY3ZDgwNWY5MjhlMWEzLXJpbWctdzEyMDAtaDYyOC1kYzA4MDgwOC1nbWlyP3Y9MTc4ODE5MzY3Mg.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/piano-battle-eid3a0e21irtm"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "piano-battle-2027-03-13",
+  "city_slug": "joplin",
+  "path": "/events/joplin/piano-battle-2027-03-13/",
+  "action_type": "details"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "3b50a8f2-0478-4e43-ae12-fb79504ab8d8",
+  "slug": "rudolph-the-red-nosed-reindeer",
+  "title": "Rudolph The Red-Nosed Reindeer",
+  "seo_title": "Rudolph The Red-Nosed Reindeer",
+  "description": "Rudolph The Red-Nosed Reindeer is scheduled for November 28, 2026, Time TBD at Springfield Little Theatre At The Landers Theatre, 311 East Walnut Street, Springfield, MO, Springfield. Ticket Network Events is the organizer.",
+  "start": "2026-11-28",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Springfield Little Theatre At The Landers Theatre",
+  "address": "311 East Walnut Street, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Ticket Network Events",
+    "website": "https://allevents.in/org/ticket-network-events/23491279"
+  },
+  "categories": [
+    "arts-and-theater"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/rudolph-the-red-nosed-reindeer/2300030613075720",
+  "image_url": "https://dyn-image.allevents.in/generate-image?v=4&title=Rudolph+The+Red-Nosed+Reindeer&date=Sat%2C+28+Nov+at+02%3A00+pm&bg=1",
+  "source_urls": [
+    "https://allevents.in/springfield/rudolph-the-red-nosed-reindeer/2300030613075720"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "rudolph-red-nosed-reindeer-2026-11-28",
+  "city_slug": "springfield",
+  "path": "/events/springfield/rudolph-red-nosed-reindeer-2026-11-28/",
+  "action_type": "details"
+}

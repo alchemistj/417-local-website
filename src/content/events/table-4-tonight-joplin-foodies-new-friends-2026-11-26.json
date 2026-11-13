@@ -1,0 +1,38 @@
+{
+  "id": "c6b4670f-a075-4ba7-9c19-8e807ad1443e",
+  "slug": "table-4-tonight-joplin-foodies-new-friends",
+  "title": "Table 4 Tonight: Joplin | Foodies + New Friends",
+  "seo_title": "Table 4 Tonight: Joplin Dinner and New Friends",
+  "description": "Table 4 Tonight is a group dinner in Joplin where strangers sit down together and get to know each other over a meal, meant for people who are too busy to make new connections on their own. It takes place at the Restaurant of the Week in Joplin, MO 64801, on November 26, 2026. The time is TBD.",
+  "start": "2026-11-26",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Restaurant of the Week",
+  "address": "Joplin, Joplin, MO, 64801",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "community",
+    "festivals",
+    "live-music",
+    "food-and-drink",
+    "family"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/table-4-tonight-joplin-foodies-new-friends-tickets-1826681937849",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1093186363%2F2849070603201%2F1%2Foriginal.20250811-195151?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.559845559846&fp-y=0.542832896303&s=bc7237a3378d31b5a94ae62f930ad6ce",
+  "source_urls": [
+    "https://www.eventbrite.com/e/table-4-tonight-joplin-foodies-new-friends-tickets-1826681937849"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "table-4-tonight-joplin-foodies-new-friends-2026-11-26",
+  "city_slug": "joplin",
+  "path": "/events/joplin/table-4-tonight-joplin-foodies-new-friends-2026-11-26/",
+  "action_type": "details"
+}

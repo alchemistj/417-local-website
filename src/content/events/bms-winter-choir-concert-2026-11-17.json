@@ -1,0 +1,34 @@
+{
+  "id": "e1f74dce-54b3-4a8a-bfce-b040e93052af",
+  "slug": "bms-winter-choir-concert",
+  "title": "BMS Winter Choir Concert",
+  "seo_title": "BMS Winter Choir Concert in Bolivar, MO",
+  "description": "This is a winter choir concert presented by the Bolivar Middle School Choir, where you can attend and listen to live vocal music. It takes place on November 17, 2026, with the time to be determined, at 1401 N Pomme de Terre Ave in Bolivar, Missouri.",
+  "start": "2026-11-17",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "1401 N Pomme de Terre Ave, Bolivar, MO 65613-7600, United States",
+  "address": "1401 N Pomme de Terre Ave, Bolivar, MO 65613-7600, United States, Bolivar, MO",
+  "city": "Bolivar",
+  "state": "MO",
+  "organizer": {
+    "name": "Bolivar Middle School Choir",
+    "website": null
+  },
+  "categories": [
+    "live-music"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/bms-winter-choir-concert-eid3a0ead22fp",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czMvYmFubmVycy84NjI5ZTc3NTZiNjYyYzYzMWVmMzVhYzBjZjk3MWI2MmU5MTVjN2VjMjI2NmY0NWRiMjQ2MWMyODA5MzI1MTNiLXJpbWctdzg1MS1oMzE1LWRjNTg2OGM4LWdtaXI_dj0xNzk0MjkxODc5.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/bms-winter-choir-concert-eid3a0ead22fp"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "bms-winter-choir-concert-2026-11-17",
+  "city_slug": "bolivar",
+  "path": "/events/bolivar/bms-winter-choir-concert-2026-11-17/",
+  "action_type": "details"
+}

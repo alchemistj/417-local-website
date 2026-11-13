@@ -1,0 +1,33 @@
+{
+  "id": "5a9b02dd-32fc-4574-ab46-bd73465b3118",
+  "slug": "code-night",
+  "title": "Code Night",
+  "seo_title": "Code Night at efactory in Springfield, MO",
+  "description": "Code Night takes place on Tuesday, November 17, 2026 at 6:30 PM at efactory, 405 N Jefferson Ave in Springfield, Missouri. The event is geared toward a business audience and is presented by Open SGF.",
+  "start": "2026-11-18T00:30:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "efactory",
+  "address": "405 N Jefferson Ave, Springfield, MO, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Open SGF",
+    "website": "https://www.meetup.com/open-sgf"
+  },
+  "categories": [
+    "professional-development"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.meetup.com/open-sgf/events/317183373",
+  "image_url": "/images/fallbacks/redesign/group-cover-3-square.webp",
+  "source_urls": [
+    "https://www.meetup.com/open-sgf/events/317183373"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "code-night-2026-11-17",
+  "city_slug": "springfield",
+  "path": "/events/springfield/code-night-2026-11-17/",
+  "action_type": "details"
+}

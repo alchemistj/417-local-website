@@ -1,0 +1,35 @@
+{
+  "id": "6eee10e1-96c8-42c6-8ecd-9efc15d35942",
+  "slug": "south-creek-trash-pickup",
+  "title": "South Creek Trash Pickup",
+  "seo_title": "South Creek Trash Pickup in Springfield, MO – Nov 15",
+  "description": "South Creek Trash Pickup takes place on Sunday, November 15, 2026 at 1:30 PM. It meets at 2655 South Campbell Avenue in Springfield, Missouri. The event is hosted by Sierra Club- White River Group Outings.",
+  "start": "2026-11-15T19:30:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "2655 South Campbell Avenue",
+  "address": "2655 S Campbell Ave, Springfield, MO 65807, USA, Springfield, MO, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Sierra Club- White River Group Outings",
+    "website": "https://www.meetup.com/sierra-club-white-river-group-outings"
+  },
+  "categories": [
+    "networking",
+    "entrepreneurship",
+    "professional-development"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.meetup.com/sierra-club-white-river-group-outings/events/317270788",
+  "image_url": "/images/fallbacks/redesign/group-cover-3-square.webp",
+  "source_urls": [
+    "https://www.meetup.com/sierra-club-white-river-group-outings/events/317270788"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "south-creek-trash-pickup-2026-11-15",
+  "city_slug": "springfield",
+  "path": "/events/springfield/south-creek-trash-pickup-2026-11-15/",
+  "action_type": "details"
+}

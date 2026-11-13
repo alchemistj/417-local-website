@@ -1,0 +1,34 @@
+{
+  "id": "8f87a836-2056-4958-ad30-714e0fe0760a",
+  "slug": "christmas-cards",
+  "title": "Christmas Cards",
+  "seo_title": "Christmas Cards at Snicklefritz in Lebanon, MO",
+  "description": "This is a Christmas Cards holiday event hosted by Snicklefritz Scrapbook and Craft Store. It takes place on November 18, 2026, with the time to be determined, at 301 W. Commercial in Lebanon, MO.",
+  "start": "2026-11-18",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "301 W. Commercial, Lebanon, MO",
+  "address": "301 W Commercial St, Lebanon, MO 65536-3105, United States, Lebanon, MO",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": "Snicklefritz Scrapbook and Craft Store",
+    "website": "https://allevents.in/org/snicklefritz-scrapbook-and-craft-store/25545081"
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/lebanon/christmas-cards/200030834737322",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czUvYmFubmVycy81ODgzMTFkYjBiYzEyMDgyNTViMTkyYjRhOWVkNTBkYTFjMTllYzU0Mzg5NzhlMTZhMTExNWI1ZTM3ZWIzZTJiLXJpbWctdzEyMDAtaDEyNjMtZGNlOGU4ZTgtZ21pcj92PTE3OTE5ODU5NDI.avif",
+  "source_urls": [
+    "https://allevents.in/lebanon/christmas-cards/200030834737322"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "christmas-cards-2026-11-18",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/christmas-cards-2026-11-18/",
+  "action_type": "details"
+}

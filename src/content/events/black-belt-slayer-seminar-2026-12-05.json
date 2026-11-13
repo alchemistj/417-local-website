@@ -1,0 +1,35 @@
+{
+  "id": "3fa2da56-64c3-470f-9666-ee5ffc594ac4",
+  "slug": "black-belt-slayer-seminar",
+  "title": "Black Belt Slayer Seminar",
+  "seo_title": "Black Belt Slayer Seminar",
+  "description": "Black Belt Slayer Seminar is scheduled for December 5, 2026, Time TBD at Team Fusion Jiu-Jitsu & MMA, 2400 East Bennett Street, Springfield, MO, 65804, Springfield.",
+  "start": "2026-12-05",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Team Fusion Jiu-Jitsu & MMA",
+  "address": "2400 East Bennett Street, Springfield, MO, 65804",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "professional-development",
+    "sports"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/black-belt-slayer-seminar-tickets-2003177183881",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195410999%2F1819401468323%2F1%2Foriginal.20261008-221936?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.526&fp-y=0.353&s=a96a03fd6870abaf9f03654faa8dff7b",
+  "source_urls": [
+    "https://www.eventbrite.com/e/black-belt-slayer-seminar-tickets-2003177183881"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "black-belt-slayer-seminar-2026-12-05",
+  "city_slug": "springfield",
+  "path": "/events/springfield/black-belt-slayer-seminar-2026-12-05/",
+  "action_type": "details"
+}

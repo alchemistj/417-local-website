@@ -1,0 +1,39 @@
+{
+  "id": "80dc7c56-5acd-4955-a629-141d88e0cf2c",
+  "slug": "commencement-ceremony",
+  "title": "Commencement Ceremony",
+  "seo_title": "Commencement Ceremony in Joplin, MO – Dec 12, 2026",
+  "description": "This is a commencement ceremony hosted by Missouri Southern State University. It takes place on December 12, 2026, with the time to be determined, at 3950 Newman Rd in Joplin, Missouri.",
+  "start": "2026-12-12",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "3950 Newman Rd, Joplin, MO, United States, Missouri 64801",
+  "address": "3950 Newman Rd, Joplin, MO 64801-1512, United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Missouri Southern State University",
+    "website": null
+  },
+  "categories": [
+    "festivals",
+    "community",
+    "arts-and-theater",
+    "live-music",
+    "family",
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/commencement-ceremony-eid3a0eapbtiw",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy85YjBkN2MwNWUxZWFiZGJhOWVkNDAwMTJlZTk4ZmM4MTRjZjdlMGU3NTc1NTMyYmYxNWU1NDVlODc0NzFmOTdkLXJpbWctdzEyMDAtaDgwMC1kY2E4YThiOC1nbWlyP3Y9MTc5NDQ5OTM0Nw.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/commencement-ceremony-eid3a0eapbtiw"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "commencement-ceremony-2026-12-12",
+  "city_slug": "joplin",
+  "path": "/events/joplin/commencement-ceremony-2026-12-12/",
+  "action_type": "details"
+}

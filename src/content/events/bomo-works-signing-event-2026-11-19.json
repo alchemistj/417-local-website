@@ -1,0 +1,36 @@
+{
+  "id": "3c0e0840-07a3-4a27-9eb8-306f913231b8",
+  "slug": "bomo-works-signing-event",
+  "title": "BoMo Works Signing Event",
+  "seo_title": "BoMo Works Signing Event at Bolivar High School",
+  "description": "BoMo Works Signing Event is a community gathering hosted by BOMO Works Apprenticeships & Internships. It takes place on November 19, 2026, with the time to be determined, at Bolivar High School, 1401 Highway D in Bolivar, Missouri.",
+  "start": "2026-11-19",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Bolivar High School",
+  "address": "1401 Highway D,Bolivar, Missouri, Bolivar, MO",
+  "city": "Bolivar",
+  "state": "MO",
+  "organizer": {
+    "name": "BOMO Works Apprenticeships & Internships",
+    "website": null
+  },
+  "categories": [
+    "community",
+    "family",
+    "festivals"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/bomo-works-signing-event-eid3a0e9pmiuq",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czcvYmFubmVycy8xODgwNGJmMGE5MzdlNTgyZWM3MjgzOGE4NmY0ZTA2ODA3MDM0MmE2Y2EzMjVmZmUyMTk5NzNiOGZlMGEzMTJiLXJpbWctdzEwODAtaDEzNTAtZGNmOGY4ZjgtZ21pcj92PTE3OTM5OTA1NTM.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/bomo-works-signing-event-eid3a0e9pmiuq"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "bomo-works-signing-event-2026-11-19",
+  "city_slug": "bolivar",
+  "path": "/events/bolivar/bomo-works-signing-event-2026-11-19/",
+  "action_type": "details"
+}

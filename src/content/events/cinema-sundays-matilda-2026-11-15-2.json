@@ -1,0 +1,35 @@
+{
+  "id": "f5181674-434a-425b-a4dc-2281b4c7a970",
+  "slug": "cinema-sundays-matilda",
+  "title": "Cinema Sundays: Matilda",
+  "seo_title": "Cinema Sundays: Matilda",
+  "description": "Cinema Sundays: Matilda is scheduled for November 15, 2026, Time TBD at 325 Park Central E, Springfield, MO, United States, Missouri 65806, 325 Park Central E, Springfield, MO 65806-2206, United States, Springfield, MO, Springfield. Gillioz Theatre is the organizer.",
+  "start": "2026-11-15",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "325 Park Central E, Springfield, MO, United States, Missouri 65806",
+  "address": "325 Park Central E, Springfield, MO 65806-2206, United States, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Gillioz Theatre",
+    "website": "https://allevents.in/org/gillioz-theatre/3393097"
+  },
+  "categories": [
+    "film",
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/cinema-sundays-matilda/200030606925453",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEvYmFubmVycy82YTIzZWUyZWUzMjAxZmY5ZDE2ZWNhYzA4NTk5ZDMzNTU2ZWY1ZGNiNzhiZTRkMGFmMzRmZWRmN2I3ZTc4ODVkLXJpbWctdzEyMDAtaDY3NS1kYzA4MDgwOC1nbWlyP3Y9MTc4ODMwMDk5MA.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/cinema-sundays-matilda/200030606925453"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "cinema-sundays-matilda-2026-11-15-2",
+  "city_slug": "springfield",
+  "path": "/events/springfield/cinema-sundays-matilda-2026-11-15-2/",
+  "action_type": "details"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "d31327b1-807b-45b6-8f88-f2e13d9d790f",
+  "slug": "beater-with-a-heater",
+  "title": "Beater with a Heater",
+  "seo_title": "Beater with a Heater at Hooter Holler Offroad, Lebanon MO",
+  "description": "Beater with a Heater is a community event with live music and food in Lebanon, Missouri. The listing mentions a concert Friday night at 6pm, a concert Saturday night at 5pm, and a food truck on site, plus a share contest on the event post with a $100 prize. It takes place November 14, 2026 (Time TBD) at Hooter Holler Offroad, 8101 Thornhill Dr, and is hosted by Misty Oak Getaways.",
+  "start": "2026-11-14",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Hooter Holler Offroad",
+  "address": "8101 Thornhill Dr,Lebanon, Missouri, Lebanon, MO",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": "Lebanon-Laclede County Library",
+    "website": "https://allevents.in/org/lebanon-laclede-county-library/21264264"
+  },
+  "categories": [
+    "community",
+    "family",
+    "live-music",
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/lebanon/beater-with-a-heater/200030991844731",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czYvYmFubmVycy8xYzJiOTk5YjhhYjM2ZjMzNzAzNDRlY2E1YTUzMjNiYmUyZGMwNmNmYjI0Y2EzOGZkMGIxOTkxOWM4NWViZDBhLXJpbWctdzEwMjQtaDE1MzYtZGMwODA4MDgtZ21pcj92PTE3OTQwMjQzMzE.avif",
+  "source_urls": [
+    "https://allevents.in/lebanon/beater-with-a-heater/200030991844731"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "beater-with-heater-2026-11-14",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/beater-with-heater-2026-11-14/",
+  "action_type": "details"
+}

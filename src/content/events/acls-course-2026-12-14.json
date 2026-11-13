@@ -1,0 +1,34 @@
+{
+  "id": "b58e6483-2d5c-437b-bbf4-0d3252b8346f",
+  "slug": "acls-course",
+  "title": "ACLS Course",
+  "seo_title": "ACLS Course",
+  "description": "ACLS Course is scheduled for December 14, 2026, Time TBD at Cox North - Education Center - K400, Classroom #1/Enter on Robberson St. side labeled Northwest Entrance, 1423 N Jefferson Ave, Springfield, MO, 65802, Springfield.",
+  "start": "2026-12-14",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Cox North - Education Center - K400, Classroom #1/Enter on Robberson St. side labeled Northwest Entrance",
+  "address": "1423 N Jefferson Ave, Springfield, MO, 65802",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "professional-development"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/acls-course-tickets-1986013286201",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1171273006%2F42710748964%2F1%2Foriginal.20251118-201457?w=400&auto=format%2Ccompress&q=75&sharp=10&s=b6ac2dd0b7dc6cc6b898817b448401ce",
+  "source_urls": [
+    "https://www.eventbrite.com/e/acls-course-tickets-1986013286201"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "acls-course-2026-12-14",
+  "city_slug": "springfield",
+  "path": "/events/springfield/acls-course-2026-12-14/",
+  "action_type": "details"
+}

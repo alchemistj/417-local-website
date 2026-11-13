@@ -1,0 +1,39 @@
+{
+  "id": "52efcf2e-8594-4154-8403-01939267b4b4",
+  "slug": "mommy-and-me",
+  "title": "Mommy and Me!",
+  "seo_title": "Mommy and Me! in Joplin, MO on Nov 21, 2026",
+  "description": "Mommy and Me! is a family-oriented festival event in Joplin, Missouri, listed with live music, arts and theater, community, and food and drink themes. It takes place on November 21, 2026, with the time to be determined, at 5065 N Main St in Joplin, MO. Baylees Music Academy is the organizer.",
+  "start": "2026-11-21",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "5065 N main St. Joplin Mo., Joplin, MO",
+  "address": "5065 N Main St Rd, Joplin, MO 64801-7821, United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Baylees Music Academy",
+    "website": null
+  },
+  "categories": [
+    "festivals",
+    "community",
+    "arts-and-theater",
+    "live-music",
+    "family",
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/mommy-and-me-eid3a0e9lulb8",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czkvYmFubmVycy80NzcyNjdlM2Q3NTVhYTE5MGZlYjY4NTZhYjUyZTk3ZDEwYzBkZGRhMGE3MTZmOGE2NWY3MjEzMWFmZWYxMTYyLXJpbWctdzEwMjQtaDE1MzYtZGNmOGU4ZDgtZ21pcj92PTE3OTM5NTI4MDY.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/mommy-and-me-eid3a0e9lulb8"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "mommy-and-me-2026-11-21",
+  "city_slug": "joplin",
+  "path": "/events/joplin/mommy-and-me-2026-11-21/",
+  "action_type": "details"
+}

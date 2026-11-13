@@ -1,0 +1,34 @@
+{
+  "id": "1b1460de-aa79-452c-8700-29f7931829a7",
+  "slug": "music-bingo-followed-by-karaoke-night-in-boones-bar",
+  "title": "Music Bingo followed by Karaoke night in Boone’s Bar",
+  "seo_title": "Music Bingo and Karaoke Night in Bolivar, MO",
+  "description": "This is a Music Bingo game followed by a Karaoke night in Boone's Bar, hosted by Boones BBQ Barn. It takes place on November 14, 2026, with the time to be determined, at 5260 S Scenic Ave in Bolivar, MO.",
+  "start": "2026-11-14",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "5260 S Scenic Ave, Bolivar, MO",
+  "address": "5260 Scenic Ave, Bolivar, MO 65613-3142, United States, Bolivar, MO",
+  "city": "Bolivar",
+  "state": "MO",
+  "organizer": {
+    "name": "Boones BBQ Barn",
+    "website": null
+  },
+  "categories": [
+    "community"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/music-bingo-followed-by-karaoke-night-in-boone%E2%80%99s-bar-eid3a0ead226p",
+  "image_url": "https://dyn-image.allevents.in/generate-image?v=4&title=Music+Bingo+followed+by+Karaoke+night+in+Boone%E2%80%99s+Bar&date=Sat%2C+14+Nov+at+08%3A30+pm&bg=4",
+  "source_urls": [
+    "https://happeningnext.com/event/music-bingo-followed-by-karaoke-night-in-boone%E2%80%99s-bar-eid3a0ead226p"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "music-bingo-followed-by-karaoke-night-in-boone-s-bar-2026-11-14",
+  "city_slug": "bolivar",
+  "path": "/events/bolivar/music-bingo-followed-by-karaoke-night-in-boone-s-bar-2026-11-14/",
+  "action_type": "details"
+}

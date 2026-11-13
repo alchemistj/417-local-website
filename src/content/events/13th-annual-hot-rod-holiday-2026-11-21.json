@@ -1,0 +1,36 @@
+{
+  "id": "f9b80938-9168-4193-8354-c02dd9458fe4",
+  "slug": "13th-annual-2026-hot-rod-holiday",
+  "title": "13th Annual 2026 Hot Rod Holiday",
+  "seo_title": "13th Annual 2026 Hot Rod Holiday",
+  "description": "13th Annual 2026 Hot Rod Holiday is scheduled for November 21, 2026, Time TBD at Ozark Empire Fair, Fairgrounds Arena, Springfield, MO 65803, United States, Springfield, MO, Springfield. Hot Rod Holiday is the organizer.",
+  "start": "2026-11-21",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "annual": true,
+  "venue": "Ozark Empire Fair",
+  "address": "Fairgrounds Arena, Springfield, MO 65803, United States, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Hot Rod Holiday",
+    "website": "https://allevents.in/org/hot-rod-holiday/5579688"
+  },
+  "categories": [
+    "festivals",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/13th-annual-2026-hot-rod-holiday/200029276509826",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy8zMTFhODRhMGFiMjYzMWM2ZGU5YzBjZmM1MzAwNmNjOGJhOGFlYmVhMTRmNWY5ZDkzNTYzZWE4MTM1M2UwMDE4LXJpbWctdzEyMDAtaDY0OS1kY2Y4ZjhmOC1nbWlyP3Y9MTc4NzUxNDQwOQ.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/13th-annual-2026-hot-rod-holiday/200029276509826"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "13th-annual-hot-rod-holiday-2026-11-21",
+  "city_slug": "springfield",
+  "path": "/events/springfield/13th-annual-hot-rod-holiday-2026-11-21/",
+  "action_type": "details"
+}

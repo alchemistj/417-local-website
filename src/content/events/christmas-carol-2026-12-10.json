@@ -1,0 +1,34 @@
+{
+  "id": "a43bc409-df4b-4b46-95f5-ff0d2685de4a",
+  "slug": "a-christmas-carol",
+  "title": "“A Christmas Carol”",
+  "seo_title": "A Christmas Carol in Joplin, MO – December 10, 2026",
+  "description": "\"A Christmas Carol\" is a holiday event hosted by Connect2Culture. It takes place on December 10, 2026, at 212 West 7th Street in Joplin, MO, with the time to be determined (Time TBD).",
+  "start": "2026-12-10",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Connect2Culture",
+  "address": "212 West 7th Street,Joplin,MO,United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Connect2Culture",
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/a-christmas-carol-eid3a0dxbamqs",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czgvYmFubmVycy8zMjc0Mzc5NDMxNTUyYWVjYWUyZmRhYjkwODA0YzIzY2QzOTJjMTEwYWJiZjhkNDg1NGU2NzdiYTQwMThmNGNiLXJpbWctdzEyMDAtaDYyOC1kYzA4MDgwOC1nbWlyP3Y9MTc4ODQ1MjY2Ng.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/a-christmas-carol-eid3a0dxbamqs"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "christmas-carol-2026-12-10",
+  "city_slug": "joplin",
+  "path": "/events/joplin/christmas-carol-2026-12-10/",
+  "action_type": "details"
+}

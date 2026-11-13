@@ -1,0 +1,34 @@
+{
+  "id": "aed23334-1298-4c04-8e2d-99ef9c1ddd23",
+  "slug": "christmas-on-commercial",
+  "title": "Christmas on Commercial",
+  "seo_title": "Christmas on Commercial at Cackle Hatchery in Lebanon, MO",
+  "description": "Christmas on Commercial is a holiday event in downtown Lebanon where families can make Cackle Hatchery one of their stops for the evening, with Santa Claus on the schedule. It takes place Friday, December 11, 2026, at Cackle Hatchery, 411 W Commercial St in Lebanon, MO. The start time is TBD.",
+  "start": "2026-12-11",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Cackle Hatchery",
+  "address": "411 W Commercial St,Lebanon,MO,United States, Lebanon, MO",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/lebanon/christmas-on-commercial/200031038657746",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy8zZTcyNzBkNGMzMjFmNGQyOGMzODhlODc4MzFlMmQzYTFkNjAxNGVjYjdkYmNlYTA1ZWQ2NmEzNmE5N2Y2ZWI3LXJpbWctdzEyMDAtaDU0MC1kYzA4MDgwOC1nbWlyP3Y9MTc5NDU1NDc0Ng.avif",
+  "source_urls": [
+    "https://allevents.in/lebanon/christmas-on-commercial/200031038657746"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "christmas-on-commercial-2026-12-11",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/christmas-on-commercial-2026-12-11/",
+  "action_type": "details"
+}

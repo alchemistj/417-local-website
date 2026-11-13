@@ -1,0 +1,37 @@
+{
+  "id": "d971be68-3af5-4415-8267-1c1ba0970bfa",
+  "slug": "jeb-a-very-grinchy-family-night",
+  "title": "JEB A Very Grinchy Family Night",
+  "seo_title": "JEB A Very Grinchy Family Night in Lebanon, MO",
+  "description": "JEB A Very Grinchy Family Night is a free family event with Grinchy learning and an interactive story at 4:15 pm in the Cafeteria, followed by movie night at 6:00 pm in the gyms, with a live version in the Main Gym and an animated version in the FEMA Gym. It is for JEB families, and students may not attend without a parent or guardian; each person gets a free bag of popcorn, concessions are sold at regular prices, and guests can bring blankets and chairs. It takes place December 3, 2026 (Time TBD, doors at 5:15 pm) at 16050 Highway KK in Lebanon, MO.",
+  "start": "2026-12-03",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "16050 Highway KK, Lebanon, MO, United States, Missouri 65536",
+  "address": "16050 Highway KK, Lebanon, MO 65536-7849, United States, Lebanon, MO",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": "Joel E. Barber C-5",
+    "website": "https://allevents.in/org/joel-e-barber-c-5/20106812"
+  },
+  "categories": [
+    "community",
+    "family",
+    "live-music",
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": true,
+  "registration_url": "https://allevents.in/lebanon/jeb-a-very-grinchy-family-night/200031019241844",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy84ODViZDJiZmRiMDhjOWFmMWYzYmFmOTI4ODc3YmQ3YTZiMjI5ZDZmZTE2MmZmM2I0ZWUxZjU3ZDFhMjRhOGM0LXJpbWctdzEyMDAtaDkyOC1kYzc4OTg1OC1nbWlyP3Y9MTc5NDMzMDE2NA.avif",
+  "source_urls": [
+    "https://allevents.in/lebanon/jeb-a-very-grinchy-family-night/200031019241844"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "jeb-very-grinchy-family-night-2026-12-03",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/jeb-very-grinchy-family-night-2026-12-03/",
+  "action_type": "show_up"
+}

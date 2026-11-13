@@ -1,0 +1,34 @@
+{
+  "id": "cfc68650-7ac9-4e65-a85a-b59f15b0a4dd",
+  "slug": "dinner-and-concert",
+  "title": "Dinner and concert",
+  "seo_title": "Dinner and concert",
+  "description": "Dinner and concert is scheduled for December 5, 2026, Time TBD at South Street Christian Church (Disciples of Christ), 500 South Ave,Springfield, Missouri, Springfield, MO, Springfield. Hy-Vee (2150 E. Sunshine St Springfield MO) is the organizer.",
+  "start": "2026-12-05",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "South Street Christian Church (Disciples of Christ)",
+  "address": "500 South Ave,Springfield, Missouri, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Hy-Vee (2150 E. Sunshine St Springfield MO)",
+    "website": "https://allevents.in/org/hy-vee-2150-e-sunshine-st-springfield-mo/20606188"
+  },
+  "categories": [
+    "live-music"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/dinner-and-concert/200030877994935",
+  "image_url": "https://dyn-image.allevents.in/generate-image?v=4&title=Dinner+and+concert+&date=Sat%2C+05+Dec+at+05%3A30+pm&bg=1",
+  "source_urls": [
+    "https://allevents.in/springfield/dinner-and-concert/200030877994935"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "dinner-and-concert-2026-12-05",
+  "city_slug": "springfield",
+  "path": "/events/springfield/dinner-and-concert-2026-12-05/",
+  "action_type": "details"
+}

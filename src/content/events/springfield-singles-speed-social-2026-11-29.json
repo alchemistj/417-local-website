@@ -1,0 +1,33 @@
+{
+  "id": "98ff66a3-aac3-48ad-8eed-b15298404923",
+  "slug": "springfield-singles-speed-social",
+  "title": "Springfield Singles Speed Social",
+  "seo_title": "Springfield Singles Speed Social – Nov 29, 2026",
+  "description": "Springfield Singles Speed Social takes place on Sunday, November 29, 2026 at 4:00 PM. It is held at 2046 S Delaware Ave in Springfield, MO. The event is aimed at a business audience.",
+  "start": "2026-11-29T22:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "2046 S Delaware Ave",
+  "address": "2046 S Delaware Ave, Springfield, MO, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Saddle Up Mentorship Circle Collective",
+    "website": "https://www.meetup.com/saddle-up-mentorship-circle-collective"
+  },
+  "categories": [
+    "professional-development"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.meetup.com/saddle-up-mentorship-circle-collective/events/317349372",
+  "image_url": "/images/fallbacks/redesign/group-cover-5-square.webp",
+  "source_urls": [
+    "https://www.meetup.com/saddle-up-mentorship-circle-collective/events/317349372"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "springfield-singles-speed-social-2026-11-29",
+  "city_slug": "springfield",
+  "path": "/events/springfield/springfield-singles-speed-social-2026-11-29/",
+  "action_type": "details"
+}

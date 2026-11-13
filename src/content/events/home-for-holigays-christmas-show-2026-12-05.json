@@ -1,0 +1,34 @@
+{
+  "id": "df56c782-ae23-4bb4-ae98-89e2aff7007d",
+  "slug": "home-for-the-holigays-christmas-show",
+  "title": "Home for the HoliGays Christmas Show",
+  "seo_title": "Home for the HoliGays Christmas Show in Joplin, MO",
+  "description": "Home for the HoliGays Christmas Show is a holiday event presented by JOMO Pride Inc. It takes place on December 5, 2026, with the time still to be determined, at Blackthorn Pizza & Pub, 510 S Joplin Ave in Joplin, Missouri.",
+  "start": "2026-12-05",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Blackthorn Pizza & Pub",
+  "address": "510 S Joplin Ave,Joplin, Missouri, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "JOMO Pride Inc",
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/home-for-the-holigays-christmas-show-eid3a0e6vxv1e",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czgvYmFubmVycy84MGFhZGU1ZGE2NzRhYzM1Y2M0YjlmZWE1NTQyMzU1YjI5MWRkMDBjMjNjZWQ3Yzg5MTk0NDYxYWMzZGI4ZjZlLXJpbWctdzEyMDAtaDY3NS1kY2Y4ZjhmOC1nbWlyP3Y9MTc5MjQ3Njk2MA.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/home-for-the-holigays-christmas-show-eid3a0e6vxv1e"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "home-for-holigays-christmas-show-2026-12-05",
+  "city_slug": "joplin",
+  "path": "/events/joplin/home-for-holigays-christmas-show-2026-12-05/",
+  "action_type": "details"
+}

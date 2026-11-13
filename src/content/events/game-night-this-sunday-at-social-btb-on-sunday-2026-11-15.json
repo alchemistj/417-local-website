@@ -1,0 +1,39 @@
+{
+  "id": "fe1b7e5d-83b1-4fab-8555-645f981ef7af",
+  "slug": "game-night-this-sunday-at-the-social-btb-on-sunday",
+  "title": "Game night this Sunday at the Social BTB on Sunday",
+  "seo_title": "Game Night at Social BTB in Joplin, MO – Nov 15",
+  "description": "This is a game night at Social BTB Joplin, held on a Sunday. Details about the games and who it is for are not given. It takes place on November 15, 2026, Time TBD, at 1027 S Main St, Suite 102 in Joplin, MO.",
+  "start": "2026-11-15",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Social BTB Joplin",
+  "address": "1027 S Main St, Suite 102,Joplin,MO,United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Glenn Dikeman",
+    "website": null
+  },
+  "categories": [
+    "festivals",
+    "community",
+    "arts-and-theater",
+    "live-music",
+    "family",
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/game-night-this-sunday-at-the-social-btb-on-sunday-eid3a0eaimfu1",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czYvYmFubmVycy9hNzRkMTgxMmRhZTU4ZTk3OGMwMjVmMDg4NGFjMzEyZWU1MDQ5NDY0NzYyOGE2ZjA3OWJjMjgwNzU2MDczMGM4LXJpbWctdzEyMDAtaDkwMC1kY2Q4Yjg1OC1nbWlyP3Y9MTc5NDQwMjQ5Mg.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/game-night-this-sunday-at-the-social-btb-on-sunday-eid3a0eaimfu1"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "game-night-this-sunday-at-social-btb-on-sunday-2026-11-15",
+  "city_slug": "joplin",
+  "path": "/events/joplin/game-night-this-sunday-at-social-btb-on-sunday-2026-11-15/",
+  "action_type": "details"
+}

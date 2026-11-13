@@ -1,0 +1,35 @@
+{
+  "id": "d6cbb17e-5c12-434f-aa62-dfa0b51c233c",
+  "slug": "gary-owen-at-gillioz-theatre",
+  "title": "Gary Owen at Gillioz Theatre",
+  "seo_title": "Gary Owen at Gillioz Theatre",
+  "description": "Gary Owen at Gillioz Theatre is scheduled for December 3, 2026, Time TBD at Gillioz Theatre, 325 Park Central E, Springfield, MO 65806, Springfield, MO, Springfield. Vivid Events is the organizer.",
+  "start": "2026-12-03",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Gillioz Theatre",
+  "address": "325 Park Central E, Springfield, MO 65806, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Vivid Events",
+    "website": "https://allevents.in/org/vivid-events/22309944"
+  },
+  "categories": [
+    "comedy",
+    "arts-and-theater"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/gary-owen-at-gillioz-theatre/2400030131703655",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy8yNDZhYmUzMC05YTgxLTExZjEtOWJjNi04YjRmNTZkYjZjNDMtcmltZy13MTIwMC1oODAwLWRjZjhmOGY4LWdtaXIuanBnP3Y9MTc4NzAwMTUwNg.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/gary-owen-at-gillioz-theatre/2400030131703655"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "gary-owen-at-gillioz-theatre-2026-12-03",
+  "city_slug": "springfield",
+  "path": "/events/springfield/gary-owen-at-gillioz-theatre-2026-12-03/",
+  "action_type": "details"
+}

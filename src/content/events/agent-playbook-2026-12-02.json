@@ -1,0 +1,37 @@
+{
+  "id": "22075fa7-8611-4d3d-8af6-9e2528f64549",
+  "slug": "the-agent-playbook",
+  "title": "The Agent Playbook",
+  "seo_title": "The Agent Playbook in Springfield, MO on Dec 2, 2026",
+  "description": "The Agent Playbook takes place on December 2, 2026, with the time to be determined. It is held at 4350 South National Avenue in Springfield, Missouri. The event is aimed at a business audience and covers business networking and professional development.",
+  "start": "2026-12-02",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "4350 S National Ave",
+  "address": "4350 South National Avenue, Springfield, MO, 65810",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Huddle Home Team",
+    "website": "https://allevents.in/org/huddle-home-team/28322209"
+  },
+  "categories": [
+    "networking",
+    "professional-development"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/the-agent-playbook-tickets-2004097582819",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1197461078%2F1212412501263%2F1%2Foriginal.20261106-213736?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=17708c60f9fded9fec65a1de760d6afa",
+  "source_urls": [
+    "https://www.eventbrite.com/e/the-agent-playbook-tickets-2004097582819",
+    "https://happeningnext.com/event/the-agent-playbook-eid1ef0l92k0mor",
+    "https://allevents.in/springfield/the-agent-playbook/100002004097582819"
+  ],
+  "updated_at": "2026-11-13T17:13:44.902Z",
+  "public_slug": "agent-playbook-2026-12-02",
+  "city_slug": "springfield",
+  "path": "/events/springfield/agent-playbook-2026-12-02/",
+  "action_type": "details"
+}
