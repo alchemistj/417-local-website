@@ -235,6 +235,30 @@ export function groupWeekendEvents(events: EventData[], now: Date): WeekendDayGr
     .filter((group) => group.events.length > 0);
 }
 
+/**
+ * Friday–Sunday for a weekend page, in America/Chicago.
+ * A day already before today's Chicago date is left off once the weekend has started.
+ */
+export function weekendPageDays(events: EventData[], now: Date): WeekendDayGroup[] {
+  const today = chicagoYmd(now);
+  return weekendDateStrings(now)
+    .filter((date) => date >= today)
+    .map((date) => ({
+      date,
+      heading: formatDayHeading(date),
+      events: sortByStart(events.filter((event) => isUpcoming(event, now) && eventChicagoDate(event) === date)),
+    }));
+}
+
+/** One line for weekend days that are still ahead and have no events. Past days are not named. */
+export function emptyWeekendDaysLine(days: WeekendDayGroup[]): string {
+  const names = days.filter((day) => day.events.length === 0).map((day) => day.heading.split(",")[0] || day.heading);
+  if (names.length === 0) return "";
+  if (names.length === 1) return `Nothing listed for ${names[0]} yet.`;
+  if (names.length === 2) return `Nothing listed for ${names[0]} or ${names[1]} yet.`;
+  return `Nothing listed for ${names.slice(0, -1).join(", ")}, or ${names[names.length - 1]} yet.`;
+}
+
 /** Seven Chicago calendar days starting today, by the event's Chicago start date. */
 export function nextSevenDayEvents(events: EventData[], now: Date): EventData[] {
   const today = chicagoDateParts(now);

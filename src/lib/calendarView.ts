@@ -232,16 +232,22 @@ export function fourWeekCount(events: EventData[], city: string, now: Date): num
   return events.filter((event) => eventCitySlug(event) === city && isInNextFourWeeks(event, now)).length;
 }
 
+/** Upcoming events in this city on the coming Friday–Sunday, soonest first. */
+export function topWeekendEvents(events: EventData[], city: string, now: Date, limit = 3): EventData[] {
+  const [start, , end] = weekendDateStrings(now);
+  return events
+    .filter((event) => {
+      if (eventCitySlug(event) !== city || !isUpcoming(event, now) || startAlreadyPassed(event, now)) return false;
+      const date = eventChicagoDate(event);
+      return date >= start && date <= end;
+    })
+    .sort((a, b) => eventChicagoDate(a).localeCompare(eventChicagoDate(b)) || Date.parse(a.start) - Date.parse(b.start) || a.title.localeCompare(b.title))
+    .slice(0, limit);
+}
+
 /** First upcoming event in this city on the coming Friday–Sunday. */
 export function topWeekendEvent(events: EventData[], city: string, now: Date): EventData | null {
-  const [start, , end] = weekendDateStrings(now);
-  const list = events.filter((event) => {
-    if (eventCitySlug(event) !== city || !isUpcoming(event, now) || startAlreadyPassed(event, now)) return false;
-    const date = eventChicagoDate(event);
-    return date >= start && date <= end;
-  });
-  list.sort((a, b) => eventChicagoDate(a).localeCompare(eventChicagoDate(b)) || Date.parse(a.start) - Date.parse(b.start) || a.title.localeCompare(b.title));
-  return list[0] ?? null;
+  return topWeekendEvents(events, city, now, 1)[0] ?? null;
 }
 
 function shortWeekdayMonthDay(ymd: string): string {
@@ -396,13 +402,19 @@ export function uniqueUpcomingEvents(events: EventData[], recurring: RecurringIt
   }));
 }
 
+/** Same event, or the same show in the same city under the same title. */
+export function omitShownEvents(list: EventData[], shown: EventData[]): EventData[] {
+  const ids = new Set(shown.map((event) => event.id));
+  const titles = new Set(shown.map((event) => `${eventCitySlug(event)}|${norm(event.title)}`));
+  return list.filter((event) => !ids.has(event.id) && !titles.has(`${eventCitySlug(event)}|${norm(event.title)}`));
+}
+
 /**
  * Hub "Coming up": unique one-offs for the next 28 days, without the standouts already
- * shown in Don't miss. A standout that did not fit the six-event cap stays here.
+ * shown in Don't miss. A standout that did not fit the cap stays here.
  */
 export function comingUpEvents(events: EventData[], recurring: RecurringItem[], city: string, now: Date, featured?: EventData[]): EventData[] {
-  const featuredIds = new Set((featured ?? dontMissEvents(events, now)).map((event) => event.id));
-  return uniqueUpcomingEvents(events, recurring, city, now).filter((event) => !featuredIds.has(event.id));
+  return omitShownEvents(uniqueUpcomingEvents(events, recurring, city, now), featured ?? dontMissEvents(events, now));
 }
 
 function streetKey(value: string): string {

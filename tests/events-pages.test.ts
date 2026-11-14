@@ -8,6 +8,8 @@ import {
   type EventData,
 } from "../src/lib/eventSchema";
 import {
+  chicagoYmd,
+  emptyWeekendDaysLine,
   eventChicagoDate,
   generalCategoriesWithUpcoming,
   groupWeekendEvents,
@@ -17,6 +19,7 @@ import {
   thisWeekendView,
   upcomingFromEntries,
   weekendDateStrings,
+  weekendPageDays,
 } from "../src/lib/events";
 import { generalCategoryRoutes } from "../src/lib/eventRoutes";
 
@@ -94,6 +97,12 @@ describe("this weekend", () => {
     expect(weekendDateStrings(saturday)).toEqual(["2026-11-06", "2026-11-07", "2026-11-08"]);
     expect(weekendDateStrings(sundayNight)).toEqual(["2026-11-06", "2026-11-07", "2026-11-08"]);
 
+    // Friday 8:00 PM America/Chicago is already Saturday 02:00 UTC. The weekend day is still Friday.
+    const fridayEvening = new Date("2026-11-14T02:00:00Z");
+    expect(chicagoYmd(fridayEvening)).toBe("2026-11-13");
+    expect(fridayEvening.toISOString().slice(0, 10)).toBe("2026-11-14");
+    expect(weekendDateStrings(fridayEvening)).toEqual(["2026-11-13", "2026-11-14", "2026-11-15"]);
+
     const thursdayNightChicago = ev({
       id: "thu",
       title: "Thursday Late",
@@ -157,6 +166,28 @@ describe("this weekend", () => {
       }),
     ]);
     expect(groupWeekendEvents(fixtures, sundayNight).map((group) => group.date)).toEqual(["2026-11-06", "2026-11-07", "2026-11-08"]);
+  });
+
+  it("drops past weekend days in America/Chicago, including a Friday 8 PM Central build", () => {
+    const fridayEvening = new Date("2026-11-14T02:00:00Z"); // Fri Nov 13, 2026, 8:00 PM Chicago (Sat 02:00 UTC)
+    const fridayShow = ev({
+      id: "fri",
+      title: "Friday Show",
+      start: "2026-11-14T01:00:00Z",
+      end: "2026-11-14T03:00:00Z",
+      city_slug: "joplin",
+    });
+    const stillFriday = weekendPageDays([fridayShow], fridayEvening);
+    expect(stillFriday.map((day) => day.date)).toEqual(["2026-11-13", "2026-11-14", "2026-11-15"]);
+    expect(stillFriday[0]?.events.map((event) => event.id)).toEqual(["fri"]);
+    expect(emptyWeekendDaysLine(stillFriday)).toBe("Nothing listed for Saturday or Sunday yet.");
+
+    const saturdayMorning = new Date("2026-11-14T15:00:00Z"); // Sat Nov 14, 2026, 9:00 AM Chicago
+    const started = weekendPageDays([fridayShow], saturdayMorning);
+    expect(started.map((day) => day.date)).toEqual(["2026-11-14", "2026-11-15"]);
+    expect(started.some((day) => day.heading.startsWith("Friday"))).toBe(false);
+    expect(emptyWeekendDaysLine(started)).toBe("Nothing listed for Saturday or Sunday yet.");
+    expect(emptyWeekendDaysLine(started)).not.toContain("Friday");
   });
 
   it("falls back to the next 7 Chicago days when the weekend has no upcoming events", () => {

@@ -7,7 +7,7 @@ import WeeklyList from "../../../components/WeeklyList.astro";
 import { cityHubCopy, cityHubPage } from "../../../data/staticPages";
 import EventsLayout from "../../../layouts/EventsLayout.astro";
 import { withCityLabel } from "../../../data/weekendCities";
-import { comingUpEvents, dateStrip, hubDontMiss, uniqueUpcomingEvents } from "../../../lib/calendarView";
+import { comingUpEvents, dateStrip, hubDontMiss, omitShownEvents, uniqueUpcomingEvents } from "../../../lib/calendarView";
 import { inlineHeroAvif } from "../../../lib/heroPhoto";
 import { citiesWithEvents, eventChips } from "../../../lib/eventRoutes";
 import { WEEKEND_CITY_SLUGS, cityDisplayName, cityWeekendPath, eventCitySlug, hasWeekendPage } from "../../../lib/eventPaths";
@@ -29,10 +29,9 @@ const allRecurring = await getRecurring();
 const recurring = allRecurring.filter((item) => recurringCitySlug(item) === city);
 const dontMiss = hubDontMiss(allEvents, allRecurring, city, now);
 const comingUp = comingUpEvents(events, recurring, city, now, dontMiss);
-const alreadyShown = new Set([...dontMiss, ...comingUp].map((event) => event.id));
 const name = cityDisplayName(city);
 const otherCities = WEEKEND_CITY_SLUGS.filter((slug) => slug !== city);
-const upcoming = uniqueUpcomingEvents(events, recurring, city, now, 14).filter((event) => !alreadyShown.has(event.id));
+const upcoming = omitShownEvents(uniqueUpcomingEvents(events, recurring, city, now, 14), [...dontMiss, ...comingUp]);
 const weekly = groupSeriesByWeekday(recurring);
 const anyUpcoming = events.some((event) => isUpcoming(event, now));
 const page = cityHubCopy(city);
@@ -68,16 +67,16 @@ const showFilters = dontMiss.length + comingUp.length + upcoming.length > 0;
 >
   <DateStrip strip={dateStrip(city, events, recurring, now)} />
   {showFilters && <EventFilters />}
-  {comingUp.length > 0 && (
-    <section aria-labelledby="coming-up-heading">
-      <h2 id="coming-up-heading">{page.upcomingHeading}</h2>
-      <EventList events={comingUp} idPrefix="coming" />
-    </section>
-  )}
   {dontMiss.length > 0 && (
     <section aria-labelledby="dont-miss-heading">
       <h2 id="dont-miss-heading">Don't miss: the next 4 weeks</h2>
       <EventList events={dontMiss.map((event) => withCityLabel(event, city))} idPrefix="miss" allEvents={allEvents} />
+    </section>
+  )}
+  {comingUp.length > 0 && (
+    <section aria-labelledby="coming-up-heading">
+      <h2 id="coming-up-heading">{page.upcomingHeading}</h2>
+      <EventList events={comingUp} idPrefix="coming" />
     </section>
   )}
   <section id="upcoming" aria-labelledby={upcoming.length > 0 ? "upcoming-heading" : undefined}>

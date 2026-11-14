@@ -7,12 +7,12 @@ import { describe, expect, it } from "vitest";
 import eventsCopy from "../docs/events-pages-copy.json";
 import { REDIRECTS, RETIRED_SLUGS, sourceMatches } from "../src/data/redirects";
 import { GENERAL_EVENT_CATEGORIES } from "../src/lib/eventSchema";
-import { builtMonths, monthLabel, monthPageTitle, runCanonicalPath } from "../src/lib/calendarView";
+import { builtMonths, monthLabel, monthPageTitle, runCanonicalPath, topWeekendEvents } from "../src/lib/calendarView";
 import { cityWeekendPage } from "../src/data/staticPages";
 import { WEEKEND_INTRO } from "../src/data/weekendCities";
 import { eventSectionRoutes, listedCategories } from "../src/lib/eventRoutes";
 import { WEEKEND_CITY_SLUGS, cityDisplayName, eventCitySlug, eventPath } from "../src/lib/eventPaths";
-import { thisWeekendView } from "../src/lib/events";
+import { chicagoYmd, thisWeekendView } from "../src/lib/events";
 import { uniqueUpcomingEvents } from "../src/lib/calendarView";
 import { readRecurringDir } from "../src/lib/recurring";
 import { listsIncludedInBuild } from "../src/lib/lists";
@@ -218,7 +218,7 @@ describe.skipIf(!built)("built site", () => {
     expect(hrefs).toEqual([...grouped.featured, ...grouped.rest].map((p) => `/${p.slug}/`));
   });
 
-  it("points the nav and the Explore Springfield footer at the ranking pages", () => {
+  it("points the nav and the Explore 417 Local footer at the ranking pages", () => {
     const home = pages.find((p) => p.route === "/")?.html ?? "";
     const header = home.slice(home.indexOf("<header"), home.indexOf("</header>") + "</header>".length);
     const desktop = header.match(/<nav class="nav-desktop"[\s\S]*?<\/nav>/)?.[0] ?? "";
@@ -229,7 +229,7 @@ describe.skipIf(!built)("built site", () => {
     expect(menu).not.toContain("Grow Your Business");
     expect(header).toMatch(/class="nav-cta-bar"[^>]*>[\s\S]*Grow Your Business/);
     const footer = home.slice(home.indexOf("<footer"));
-    const column = footer.split("Explore Springfield")[1]?.split("<h2>")[0] ?? "";
+    const column = footer.split("Explore 417 Local")[1]?.split("<h2>")[0] ?? "";
     const links = [...column.matchAll(/<a href="([^"]+)">([^<]+)<\/a>/g)].map((m) => ({
       href: m[1],
       label: decode(m[2]),
@@ -342,6 +342,13 @@ describe.skipIf(!built)("built site", () => {
     }
     expect(hub).toContain('href="/events/springfield/"');
     expect(hub).toContain('href="/events/springfield-business-events/"');
+    const picks = topWeekendEvents(siteEvents, "springfield", builtAt, 3);
+    if (picks.length > 0) {
+      expect(hub).toContain('class="sw-picks"');
+      for (const event of picks) expect(hub).toContain(`href="${eventPath(event)}"`);
+    }
+    expect(hub).toMatch(/-webkit-line-clamp:2/);
+    expect(hub).not.toMatch(/\.sw-pick\{[^}]*-webkit-line-clamp:1/);
     expect(hub).not.toContain('href="/events/this-weekend/"');
     expect(hub).not.toContain('href="/events/live-music/"');
 
@@ -353,6 +360,11 @@ describe.skipIf(!built)("built site", () => {
     const headings = [...cityHub.matchAll(/<h[1-6][^>]*>([\s\S]*?)<\/h[1-6]>/g)].map((m) => decode(m[1].replace(/<[^>]+>/g, "")));
     expect(headings.some((text) => /this weekend/i.test(text))).toBe(false);
     expect(cityHub).toContain('href="/things-to-do-in-springfield-mo-this-weekend/"');
+    const dontMissAt = cityHub.indexOf('id="dont-miss-heading"');
+    const comingAt = cityHub.indexOf('id="coming-up-heading"');
+    const upcomingAt = cityHub.indexOf('id="upcoming-heading"');
+    if (dontMissAt !== -1 && comingAt !== -1) expect(dontMissAt).toBeLessThan(comingAt);
+    if (dontMissAt !== -1 && upcomingAt !== -1) expect(dontMissAt).toBeLessThan(upcomingAt);
     const unique = uniqueUpcomingEvents(springfield, [], "springfield", builtAt);
     if (unique.length > 0) expect(headings).toContain(eventsCopy.hub.upcomingHeading);
     for (const event of unique) expect(decode(cityHub)).toContain(event.title);
@@ -378,7 +390,8 @@ describe.skipIf(!built)("built site", () => {
     const crumbs = [...weekendHtml.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
       .map((match) => JSON.parse(match[1]) as { "@type"?: string; itemListElement?: { name: string; item: string }[] })
       .find((data) => data["@type"] === "BreadcrumbList");
-    expect(crumbs?.itemListElement?.map((item) => item.name)).toEqual(["Home", "Events", "Springfield", eventsCopy.thisWeekend.h1]);
+    expect(crumbs?.itemListElement?.map((item) => item.name)).toEqual(["Home", "Events", "Springfield", "This weekend"]);
+    expect(weekendHtml).toMatch(/aria-current="page"[^>]*>This weekend</);
     expect(crumbs?.itemListElement?.map((item) => item.item)).toEqual([
       `${SITE}/`,
       `${SITE}/events/`,
@@ -399,11 +412,18 @@ describe.skipIf(!built)("built site", () => {
 
     const view = thisWeekendView(springfield, builtAt);
     const weekendText = decode(weekendHtml);
+    const todayChicago = chicagoYmd(builtAt);
     expect(weekendText).toContain("Worth the drive this weekend");
     expect(weekendHtml).not.toMatch(/href="\/events\/[^"]*this-weekend\/"/);
     if (view.mode === "weekend") {
       expect(weekendText).not.toContain(eventsCopy.thisWeekend.emptyState);
       for (const group of view.groups) {
+        const weekday = group.heading.split(",")[0] ?? group.heading;
+        if (group.date < todayChicago) {
+          expect(weekendHtml, group.date).not.toContain(`id="day-${group.date}"`);
+          expect(weekendText, group.date).not.toContain(`Nothing listed for ${weekday}`);
+          continue;
+        }
         expect(weekendText).toContain(group.heading);
         for (const event of group.events) expect(weekendText).toContain(event.title);
       }

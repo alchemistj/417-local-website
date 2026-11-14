@@ -3,9 +3,9 @@ import copy from "../../../docs/events-pages-copy.json";
 import { BUSINESS_EVENTS, EVENTS_HUB } from "../../data/staticPages";
 import { withCityLabel } from "../../data/weekendCities";
 import EventsLayout from "../../layouts/EventsLayout.astro";
-import { fourWeekCount, regionDontMiss, topWeekendEvent } from "../../lib/calendarView";
+import { fourWeekCount, regionDontMiss, topWeekendEvents } from "../../lib/calendarView";
 import { citiesWithEvents } from "../../lib/eventRoutes";
-import { WEEKEND_CITY_SLUGS, cityDisplayName, cityWeekendPath } from "../../lib/eventPaths";
+import { WEEKEND_CITY_SLUGS, cityDisplayName, cityWeekendPath, eventPath } from "../../lib/eventPaths";
 import { getRecurring, getSiteEvents } from "../../lib/loadEvents";
 import EventList from "../../components/EventList.astro";
 
@@ -18,12 +18,13 @@ const moreTowns = citiesWithEvents(events).filter((city) => !(WEEKEND_CITY_SLUGS
 const [intro, confirm] = copy.region.intro;
 const cards = WEEKEND_CITY_SLUGS.map((city) => {
   const count = fourWeekCount(events, city, now);
-  const top = topWeekendEvent(events, city, now);
+  const picks = topWeekendEvents(events, city, now, city === "springfield" ? 3 : 1);
   return {
     city,
     name: cityDisplayName(city),
     count,
-    top: top?.title ?? "",
+    top: picks[0]?.title ?? "",
+    picks: city === "springfield" ? picks : [],
     hub: `/events/${city}/`,
     weekend: cityWeekendPath(city),
   };
@@ -41,8 +42,21 @@ const cards = WEEKEND_CITY_SLUGS.map((city) => {
       <article class:list={["sw-card", card.city === "springfield" && "sw-lead"]}>
         <h2>{card.name}</h2>
         <p class="sw-eye">This weekend</p>
-        <p class="sw-pick">{card.top || "Nothing listed yet."}</p>
-        <p class="sw-count"><b>{card.count}</b> {card.count === 1 ? "event" : "events"}<span class="sw-rest"> in the next 4 weeks</span></p>
+        {card.picks.length > 0 && (
+          <p class="sw-count"><b>{card.count}</b> {card.count === 1 ? "event" : "events"}<span class="sw-rest"> in the next 4 weeks</span></p>
+        )}
+        {card.picks.length > 0 ? (
+          <ul class="sw-picks">
+            {card.picks.map((event) => (
+              <li><a href={eventPath(event)}>{event.title}</a></li>
+            ))}
+          </ul>
+        ) : (
+          <p class="sw-pick">{card.top || "Nothing listed yet."}</p>
+        )}
+        {card.picks.length === 0 && (
+          <p class="sw-count"><b>{card.count}</b> {card.count === 1 ? "event" : "events"}<span class="sw-rest"> in the next 4 weeks</span></p>
+        )}
         <div class="sw-go">
           <a class="btn sw-hub" href={card.hub}>{card.name} events</a>
           <a class="btn sw-wk" href={card.weekend}>This weekend →</a>
@@ -74,14 +88,16 @@ const cards = WEEKEND_CITY_SLUGS.map((city) => {
   .sw-lead{grid-column:1/-1}
   .sw-hero h2{margin:0;color:var(--ink);font-size:1.15rem;font-weight:700;line-height:1.15}
   .sw-eye{margin:.35rem 0 0;color:var(--blue);font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-  .sw-pick{margin:.1rem 0 0;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;min-height:1.3em}
-  .sw-lead .sw-pick{-webkit-line-clamp:2;min-height:2.6em}
+  .sw-pick{flex:0 0 auto;margin:.1rem 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.3;height:2.6em}
+  .sw-picks{flex:1 1 auto;display:flex;flex-direction:column;justify-content:space-evenly;gap:.2rem;margin:.35rem 0 0;padding:0;list-style:none}
+  .band-blue .sw-card .sw-picks a{position:relative;z-index:1;display:flex;align-items:center;box-sizing:border-box;min-height:44px;padding-block:.25rem;color:var(--blue);font-weight:700;line-height:1.25;text-decoration:underline}
+  .band-blue .sw-card .sw-picks a:hover{color:var(--blue-deep)}
   .sw-count{margin:.3rem 0 0;color:var(--muted);font-size:.85rem}
   .sw-go{display:flex;flex-direction:column;gap:.35rem;margin-top:auto;padding-top:.4rem}
+  .sw-lead .sw-go{margin-top:.4rem}
   .sw-go .btn{width:100%;padding-inline:.35rem;font-size:.78rem;letter-spacing:0;white-space:nowrap}
   .sw-hub:after{content:"";position:absolute;inset:0}
   .sw-wk{position:relative;z-index:1;background:var(--white);color:var(--blue)}
-  .sw-go .sw-wk:hover{background:var(--tint);border-color:var(--blue);color:var(--blue)}
   .sw-rest{display:none}
   .page-band{padding-block:1.25rem}
   .page-band .lead,.sw-h{text-wrap:balance}
@@ -89,7 +105,6 @@ const cards = WEEKEND_CITY_SLUGS.map((city) => {
     .sw-hero{grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:.75rem}
     .sw-lead{grid-column:1;grid-row:span 2}
     .sw-lead h2{font-size:2.5rem;line-height:1.05}
-    .sw-pick{-webkit-line-clamp:2;min-height:2.6em}
     .sw-go .btn{font-size:1rem;padding-inline:.6rem}
     .sw-lead b{font-size:3rem;line-height:.9;display:block}
     .sw-rest{display:inline}
