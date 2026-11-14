@@ -7,9 +7,8 @@ import EventsLayout from "../layouts/EventsLayout.astro";
 import { uniqueUpcomingEvents, weekendRangeLabel, worthTheDrive } from "../lib/calendarView";
 import { eventChips } from "../lib/eventRoutes";
 import { WEEKEND_CITY_SLUGS, cityDisplayName, cityWeekendPath, eventCitySlug } from "../lib/eventPaths";
-import { eventChicagoDate, formatDayHeading, isUpcoming, sortByStart, weekendDateStrings } from "../lib/events";
+import { emptyWeekendDaysLine, weekendPageDays } from "../lib/events";
 import { getRecurring, getSiteEvents } from "../lib/loadEvents";
-import type { EventData } from "../lib/eventSchema";
 
 interface Props {
   city: string;
@@ -19,15 +18,9 @@ const now = new Date();
 const allEvents = await getSiteEvents();
 const recurring = await getRecurring();
 const events = allEvents.filter((event) => eventCitySlug(event) === city);
-const [friday, saturday, sunday] = weekendDateStrings(now);
-const days = [friday, saturday, sunday].map((date) => ({
-  date,
-  heading: formatDayHeading(date),
-  weekday: formatDayHeading(date).split(",")[0] ?? formatDayHeading(date),
-  events: sortByStart(events.filter((event) => isUpcoming(event, now) && eventChicagoDate(event) === date)),
-}));
+const days = weekendPageDays(events, now);
 const filled = days.filter((day) => day.events.length > 0);
-const emptyLine = emptyDaysLine(days);
+const emptyLine = emptyWeekendDaysLine(days);
 const listed = days.flatMap((day) => day.events);
 const drive = worthTheDrive(allEvents, recurring, city, now).map((event) => withCityLabel(event, city));
 const shown = new Set(listed.map((event) => event.id));
@@ -40,14 +33,6 @@ const hub = cityHubPage(city);
 const name = cityDisplayName(city);
 const others = WEEKEND_CITY_SLUGS.filter((slug) => slug !== city);
 const chips = eventChips(city, events, now, "");
-
-function emptyDaysLine(groups: { weekday: string; events: EventData[] }[]): string {
-  const names = groups.filter((day) => day.events.length === 0).map((day) => day.weekday);
-  if (names.length === 0) return "";
-  if (names.length === 1) return `Nothing listed for ${names[0]} yet.`;
-  if (names.length === 2) return `Nothing listed for ${names[0]} or ${names[1]} yet.`;
-  return `Nothing listed for ${names.slice(0, -1).join(", ")}, or ${names[names.length - 1]} yet.`;
-}
 ---
 
 <EventsLayout
@@ -58,7 +43,7 @@ function emptyDaysLine(groups: { weekday: string; events: EventData[] }[]): stri
     { name: "Home", path: "/" },
     { name: "Events", path: "/events/" },
     { name: hub.label, path: hub.path },
-    { name: page.h1, path: meta.path },
+    { name: "This weekend", path: meta.path },
   ]}
 >
   <h2 class="weekend-range">{weekendRangeLabel(now)}</h2>

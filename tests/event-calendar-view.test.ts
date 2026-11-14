@@ -2,7 +2,7 @@ import { mkdtempSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { alsoPlaying, buildMonthGrid, collapseRuns, comingUpEvents, dateStrip, dedupeSameDayEvents, runCanonicalPath, runRangeLabel, eventRun, dontMissEvents, eventsOnDate, eventListTime, uniqueUpcomingEvents, groupEventsByDay, monthNav } from "../src/lib/calendarView";
+import { alsoPlaying, buildMonthGrid, collapseRuns, comingUpEvents, dateStrip, dedupeSameDayEvents, runCanonicalPath, runRangeLabel, eventRun, dontMissEvents, eventsOnDate, eventListTime, omitShownEvents, uniqueUpcomingEvents, groupEventsByDay, monthNav } from "../src/lib/calendarView";
 import { eventSchema, type EventData } from "../src/lib/eventSchema";
 import { eventChips, eventSectionRoutes } from "../src/lib/eventRoutes";
 import { assertNoReservedEventSlug, eventPath, isReservedEventSlug } from "../src/lib/eventPaths";
@@ -272,6 +272,15 @@ describe("coming up without standouts", () => {
     const fair = ev({ id: "fair", title: "Craft Fair", start: "2026-11-14T10:00:00-06:00", venue: "Expo Center" });
     expect(dontMissEvents([fest, fair], sunday).map((event) => event.id)).toEqual(["fest"]);
     expect(comingUpEvents([fest, fair], [], "springfield", sunday).map((event) => event.id)).toEqual(["fair"]);
+  });
+
+  it("drops a later performance that shares a Don't miss title", () => {
+    const first = ev({ id: "a", title: "Harvest Fest", start: "2026-11-20", categories: ["festivals"], city_slug: "springfield" });
+    const second = ev({ id: "b", title: "Harvest Fest", start: "2026-11-21", categories: ["festivals"], city_slug: "springfield" });
+    const other = ev({ id: "c", title: "Craft Fair", start: "2026-11-22", categories: ["community"], city_slug: "springfield" });
+    const away = ev({ id: "d", title: "Harvest Fest", start: "2026-11-22", categories: ["festivals"], city_slug: "joplin" });
+    expect(comingUpEvents([first, second, other], [], "springfield", sunday, [first]).map((event) => event.id)).toEqual(["c"]);
+    expect(omitShownEvents([second, other, away], [first]).map((event) => event.id)).toEqual(["c", "d"]);
   });
 });
 
