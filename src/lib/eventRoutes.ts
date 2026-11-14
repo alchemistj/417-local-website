@@ -9,6 +9,7 @@ import {
 } from "./calendarView";
 import { GENERAL_EVENT_CATEGORIES, GENERAL_EVENT_CATEGORY_LABELS, isGeneralEventCategory, type EventData, type GeneralEventCategory } from "./eventSchema";
 import {
+  chicagoYmd,
   eventChicagoDate,
   isIndexableEvent,
   isListedEvent,
@@ -16,7 +17,7 @@ import {
   sortByStart,
 } from "./events";
 import { eventMetaDescription, eventPageTitle } from "./eventPage";
-import { KNOWN_CITY_SLUGS, assertNoReservedEventSlug, assertUniqueEventPaths, cityDisplayName, eventCitySlug, eventPath } from "./eventPaths";
+import { KNOWN_CITY_SLUGS, WEEKEND_CITY_SLUGS, assertNoReservedEventSlug, assertUniqueEventPaths, cityDisplayName, eventCitySlug, eventPath } from "./eventPaths";
 import { assertUniqueSeriesPaths, recurringOnDate, seriesMeta, seriesPath, type RecurringItem } from "./recurring";
 import type { RouteEntry } from "./routes";
 
@@ -88,10 +89,17 @@ function cityHubRoutes(events: EventData[]): RouteEntry[] {
   });
 }
 
-function cityWeekendRoutes(events: EventData[]): RouteEntry[] {
-  return citiesWithEvents(events).map((city) => {
-    const meta = cityWeekendPage(city);
-    return { path: meta.path, type: "static" as const, title: meta.title, description: meta.description, indexable: true };
+function cityWeekendRoutes(events: EventData[], now: Date): RouteEntry[] {
+  return WEEKEND_CITY_SLUGS.map((city) => {
+    const meta = cityWeekendPage(city, events, now);
+    return {
+      path: meta.path,
+      type: "static" as const,
+      title: meta.title,
+      description: meta.description,
+      lastmod: chicagoYmd(now),
+      indexable: true,
+    };
   });
 }
 
@@ -174,7 +182,7 @@ export function eventSectionRoutes(events: EventData[], now: Date = new Date(), 
   assertUniqueEventPaths(events);
   return [
     ...cityHubRoutes(events),
-    ...cityWeekendRoutes(events),
+    ...cityWeekendRoutes(events, now),
     ...generalCategoryRoutes(events, now),
     ...calendarRoutes(events, recurring, now),
     ...dayRoutes(events, recurring, now),

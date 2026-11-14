@@ -308,6 +308,106 @@
       "statusCode": 301
     },
     {
+      "source": "/events/branson/this-weekend",
+      "destination": "/things-to-do-in-branson-mo-this-weekend/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/branson/this-weekend/",
+      "destination": "/things-to-do-in-branson-mo-this-weekend/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/joplin/this-weekend",
+      "destination": "/things-to-do-in-joplin-mo-this-weekend/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/joplin/this-weekend/",
+      "destination": "/things-to-do-in-joplin-mo-this-weekend/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/lebanon/this-weekend",
+      "destination": "/things-to-do-in-lebanon-mo-this-weekend/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/lebanon/this-weekend/",
+      "destination": "/things-to-do-in-lebanon-mo-this-weekend/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/bolivar/this-weekend",
+      "destination": "/things-to-do-in-bolivar-mo-this-weekend/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/bolivar/this-weekend/",
+      "destination": "/things-to-do-in-bolivar-mo-this-weekend/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/republic/this-weekend",
+      "destination": "/events/republic/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/republic/this-weekend/",
+      "destination": "/events/republic/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/lake-ozark/this-weekend",
+      "destination": "/events/lake-ozark/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/lake-ozark/this-weekend/",
+      "destination": "/events/lake-ozark/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/nixa/this-weekend",
+      "destination": "/events/nixa/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/nixa/this-weekend/",
+      "destination": "/events/nixa/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/ozark/this-weekend",
+      "destination": "/events/ozark/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/ozark/this-weekend/",
+      "destination": "/events/ozark/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/ridgedale/this-weekend",
+      "destination": "/events/ridgedale/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/ridgedale/this-weekend/",
+      "destination": "/events/ridgedale/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/rogersville/this-weekend",
+      "destination": "/events/rogersville/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/rogersville/this-weekend/",
+      "destination": "/events/rogersville/",
+      "statusCode": 301
+    },
+    {
       "source": "/events/live-music",
       "destination": "/events/springfield/live-music/",
       "statusCode": 301

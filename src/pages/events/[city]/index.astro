@@ -6,10 +6,11 @@ import EventList from "../../../components/EventList.astro";
 import WeeklyList from "../../../components/WeeklyList.astro";
 import { cityHubCopy, cityHubPage } from "../../../data/staticPages";
 import EventsLayout from "../../../layouts/EventsLayout.astro";
-import { comingUpEvents, dateStrip, dontMissEvents, uniqueUpcomingEvents } from "../../../lib/calendarView";
+import { withCityLabel } from "../../../data/weekendCities";
+import { comingUpEvents, dateStrip, hubDontMiss, uniqueUpcomingEvents } from "../../../lib/calendarView";
 import { inlineHeroAvif } from "../../../lib/heroPhoto";
 import { citiesWithEvents, eventChips } from "../../../lib/eventRoutes";
-import { cityWeekendPath, eventCitySlug } from "../../../lib/eventPaths";
+import { WEEKEND_CITY_SLUGS, cityDisplayName, cityWeekendPath, eventCitySlug, hasWeekendPage } from "../../../lib/eventPaths";
 import { isUpcoming } from "../../../lib/events";
 import { getRecurring, getSiteEvents } from "../../../lib/loadEvents";
 import { groupSeriesByWeekday, recurringCitySlug } from "../../../lib/recurring";
@@ -22,10 +23,14 @@ export const getStaticPaths = (async () => {
 const city = Astro.params.city;
 if (!city) throw new Error("Missing city");
 const now = new Date();
-const events = (await getSiteEvents()).filter((event) => eventCitySlug(event) === city);
-const recurring = (await getRecurring()).filter((item) => recurringCitySlug(item) === city);
-const dontMiss = dontMissEvents(events, now);
-const comingUp = comingUpEvents(events, recurring, city, now);
+const allEvents = await getSiteEvents();
+const events = allEvents.filter((event) => eventCitySlug(event) === city);
+const allRecurring = await getRecurring();
+const recurring = allRecurring.filter((item) => recurringCitySlug(item) === city);
+const dontMiss = hubDontMiss(allEvents, allRecurring, city, now);
+const comingUp = comingUpEvents(events, recurring, city, now, dontMiss);
+const name = cityDisplayName(city);
+const otherCities = WEEKEND_CITY_SLUGS.filter((slug) => slug !== city);
 const upcoming = uniqueUpcomingEvents(events, recurring, city, now, 14);
 const weekly = groupSeriesByWeekday(recurring);
 const anyUpcoming = events.some((event) => isUpcoming(event, now));
@@ -48,7 +53,7 @@ const showFilters = dontMiss.length + comingUp.length + upcoming.length > 0;
   hero={{
     photo,
     actions: [
-      { label: "This weekend", href: weekendHref },
+      ...(hasWeekendPage(city) ? [{ label: `Things to do in ${name}, MO this weekend`, href: weekendHref }] : []),
       { label: "Calendar", href: `/events/${city}/calendar/` },
     ],
   }}
@@ -70,8 +75,8 @@ const showFilters = dontMiss.length + comingUp.length + upcoming.length > 0;
   )}
   {dontMiss.length > 0 && (
     <section aria-labelledby="dont-miss-heading">
-      <h2 id="dont-miss-heading">Don't miss this month</h2>
-      <EventList events={dontMiss} idPrefix="miss" />
+      <h2 id="dont-miss-heading">Don't miss: the next 4 weeks</h2>
+      <EventList events={dontMiss.map((event) => withCityLabel(event))} idPrefix="miss" allEvents={allEvents} />
     </section>
   )}
   <section id="upcoming" aria-labelledby={upcoming.length > 0 ? "upcoming-heading" : undefined}>
@@ -92,4 +97,11 @@ const showFilters = dontMiss.length + comingUp.length + upcoming.length > 0;
   )}
   {!anyUpcoming && weekly.length === 0 && <p class="empty-state">{page.emptyState}</p>}
   <p>{page.businessLink}</p>
+  <nav aria-label="Other cities">
+    <ul class="subnav">
+      {otherCities.map((slug) => (
+        <li><a href={`/events/${slug}/`}>{cityDisplayName(slug)}</a></li>
+      ))}
+    </ul>
+  </nav>
 </EventsLayout>

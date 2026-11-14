@@ -43,11 +43,27 @@ describe("Vercel redirect routes", () => {
       expect(match(path)?.headers.Location, path).toBe("/things-to-do-in-springfield-mo-this-weekend/");
       expect(match(path)?.status, path).toBe(301);
     }
+    for (const city of ["joplin", "branson", "bolivar", "lebanon"]) {
+      for (const path of [`/events/${city}/this-weekend/`, `/events/${city}/this-weekend`]) {
+        expect(match(path)?.headers.Location, path).toBe(`/things-to-do-in-${city}-mo-this-weekend/`);
+        expect(match(path)?.status, path).toBe(301);
+      }
+    }
+    for (const city of ["republic", "lake-ozark", "nixa", "ozark", "ridgedale", "rogersville"]) {
+      for (const path of [`/events/${city}/this-weekend/`, `/events/${city}/this-weekend`]) {
+        expect(match(path)?.headers.Location, path).toBe(`/events/${city}/`);
+        expect(match(path)?.status, path).toBe(301);
+      }
+    }
     for (const path of [
       "/",
       "/events/",
       "/events/springfield/",
       "/things-to-do-in-springfield-mo-this-weekend/",
+      "/things-to-do-in-joplin-mo-this-weekend/",
+      "/things-to-do-in-branson-mo-this-weekend/",
+      "/things-to-do-in-bolivar-mo-this-weekend/",
+      "/things-to-do-in-lebanon-mo-this-weekend/",
       "/events/springfield/live-music/",
       "/events/springfield-business-events/",
       "/blog/",
