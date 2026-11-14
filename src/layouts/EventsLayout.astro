@@ -32,8 +32,29 @@ interface Props {
    * the breadcrumb still shows, with the chips under it.
    */
   titleBand?: boolean;
+  /** Share image for the event page. Other pages omit it. */
+  ogImagePath?: string;
+  /** Passed event pages set this once the date is 90 days old. */
+  noindex?: boolean;
+  /** Extra JSON-LD graphs, after the breadcrumb. The event page passes the Event node. */
+  jsonLd?: Record<string, unknown>[];
 }
-const { meta, h1, intro, events = [], crumbs, subnav, emptyMessage, chips, backLink, hero, titleBand = true } = Astro.props;
+const {
+  meta,
+  h1,
+  intro,
+  events = [],
+  crumbs,
+  subnav,
+  emptyMessage,
+  chips,
+  backLink,
+  hero,
+  titleBand = true,
+  ogImagePath,
+  noindex = false,
+  jsonLd = [],
+} = Astro.props;
 const paragraphs = typeof intro === "string" ? [intro] : intro;
 const customBody = Astro.slots.has("default");
 
@@ -49,7 +70,14 @@ const crumbLd = {
 };
 ---
 
-<BaseLayout title={meta.title} description={meta.description} path={meta.path} jsonLd={[crumbLd]}>
+<BaseLayout
+  title={meta.title}
+  description={meta.description}
+  path={meta.path}
+  ogImagePath={ogImagePath}
+  noindex={noindex}
+  jsonLd={[crumbLd, ...jsonLd]}
+>
   <section class:list={[titleBand ? "band band-blue page-band" : "event-crumb-row"]}>
     <div class="container">
       <nav class="crumbs" aria-label="Breadcrumb">

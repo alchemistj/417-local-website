@@ -59,10 +59,46 @@ export function formatEventWhen(event: EventData): string {
   return `${day} · ${time}`;
 }
 
-function clampText(text: string, max: number): string {
-  const clean = text.replace(/\s+/g, " ").trim();
+function normalizeSpace(text: string): string {
+  return text.replace(/\s+/g, " ").trim();
+}
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+/** A period, question mark, or exclamation that ends a sentence, not "St." or "Q.". */
+function lastSentenceEnd(text: string, max: number): number {
+  let end = -1;
+  const limit = Math.min(text.length, max);
+  for (let i = 0; i < limit; i++) {
+    const ch = text[i];
+    if (ch !== "." && ch !== "!" && ch !== "?") continue;
+    if (ch === "." && (text[i - 1] === "." || text[i + 1] === ".")) continue;
+    const before = text.slice(0, i);
+    if (ch === "." && /(?:^|\s)[A-Za-z]$/.test(before)) continue;
+    if (ch === "." && /\b[A-Za-z]\.[A-Za-z]$/.test(before)) continue;
+    if (ch === "." && /\b(?:Mr|Mrs|Ms|Dr|St|Jr|Sr|vs|etc)$/i.test(before)) continue;
+    const rest = text.slice(i + 1);
+    if (rest.length > 0 && !/^\s+[A-Z"“]/.test(rest)) continue;
+    end = i + 1;
+  }
+  return end;
+}
+
+/**
+ * Keep a meta description on a whole sentence, or a whole word when the first sentence
+ * itself is longer than `max`. Never end on a cut-off ellipsis.
+ */
+function clampMeta(text: string, max = 155): string {
+  const clean = normalizeSpace(text);
   if (clean.length <= max) return clean;
-  return `${clean.slice(0, max - 1).trimEnd()}…`;
+  const sentence = lastSentenceEnd(clean, max);
+  if (sentence > 0) return clean.slice(0, sentence).trim();
+  const cut = clean.slice(0, max + 1);
+  const space = cut.lastIndexOf(" ");
+  const words = (space > 0 ? cut.slice(0, space) : cut.slice(0, max)).replace(/[\s,;:–—-]+$/, "");
+  return words;
 }
 
 /** "SPRINGFIELD SYMPHONY: A Holiday Christmas" -> "Springfield Symphony: A Holiday Christmas". Short all-caps words (MSU, SBC) stay. */
@@ -99,14 +135,83 @@ export function eventPageTitle(event: EventData): string {
   return `${clampWords(name, 60 - tail.length)}${tail}`;
 }
 
-/** Meta description from the write-up, 155 characters or fewer. */
+/** Meta description from the write-up, 155 characters or fewer, ending on a sentence or a word. */
 export function eventMetaDescription(event: EventData): string {
   const writeup = event.description?.trim();
-  if (writeup) return clampText(writeup, 155);
-  return clampText(
+  if (writeup) return clampMeta(writeup);
+  return clampMeta(
     `${event.title} in ${eventCityName(event)}, MO on ${formatShortDate(event)}. Confirm details with the organizer.`,
-    155,
   );
+}
+
+function hasStateToken(text: string, state: string): boolean {
+  if (/\bmissouri\b/i.test(text)) return true;
+  if (!state) return false;
+  return new RegExp(`\\b${escapeRegExp(state)}\\b`, "i").test(text);
+}
+
+/** A comma-separated piece that is the city itself, not a venue whose name starts with the city. */
+function isCityPart(part: string, city: string): boolean {
+  const value = part.trim().toLowerCase();
+  const name = city.trim().toLowerCase();
+  if (!name || !value.startsWith(name)) return false;
+  const rest = value.slice(name.length).trim();
+  if (!rest) return true;
+  return /^(?:mo|missouri)?\s*\d{5}(?:-\d{4})?$/.test(rest) || /^(?:mo|missouri)$/.test(rest);
+}
+
+function isStatePart(part: string, state: string): boolean {
+  const value = part.trim().toLowerCase();
+  if (value === "us" || value === "usa" || value === "united states") return false;
+  if (value === "missouri" || value.startsWith("missouri ")) return true;
+  const token = state.trim().toLowerCase();
+  return Boolean(token) && (value === token || value.startsWith(`${token} `));
+}
+
+/**
+ * Drop a trailing ", City, ST" when that city was already named earlier in the line,
+ * so the page does not read "Springfield, MO, Springfield, MO".
+ */
+function dropRepeatedTrailingLocality(line: string, city: string, state: string): string {
+  const parts = line.split(",").map((part) => part.trim()).filter(Boolean);
+  if (!city.trim() || parts.length < 2) return line;
+  let end = parts.length;
+  const cityCount = () => parts.slice(0, end).filter((part) => isCityPart(part, city)).length;
+  while (cityCount() >= 2 && end > 1) {
+    if (isStatePart(parts[end - 1] ?? "", state)) end -= 1;
+    if (end > 0 && isCityPart(parts[end - 1] ?? "", city)) {
+      end -= 1;
+      continue;
+    }
+    break;
+  }
+  return parts.slice(0, end).join(", ");
+}
+
+/**
+ * Venue plus street address, with the city and state added only when the address
+ * does not already include them. The venue is left off when the address already starts with it.
+ */
+export function eventPlaceLine(venue: string, address: string, city: string, state: string): string {
+  const place = normalizeSpace(venue);
+  const street = normalizeSpace(address).replace(/\s+,/g, ",").replace(/,\s*/g, ", ");
+  const cityName = city.trim();
+  const stateName = state.trim();
+  let line = street;
+  const hasCity = Boolean(cityName) && line.toLowerCase().includes(cityName.toLowerCase());
+  const hasState = hasStateToken(line, stateName);
+  if (!hasCity && !hasState && (cityName || stateName)) {
+    const locality = [cityName, stateName].filter(Boolean).join(", ");
+    line = line ? `${line}, ${locality}` : locality;
+  } else if (hasCity && !hasState && stateName) {
+    line = line ? `${line}, ${stateName}` : stateName;
+  } else if (!hasCity && hasState && cityName) {
+    line = line ? `${line}, ${cityName}` : cityName;
+  }
+  if (place && !line.toLowerCase().includes(place.toLowerCase())) {
+    line = line ? `${place}, ${line}` : place;
+  }
+  return dropRepeatedTrailingLocality(line, cityName, stateName);
 }
 
 export function categoryLabel(slug: string): string {
