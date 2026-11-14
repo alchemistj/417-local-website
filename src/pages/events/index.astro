@@ -15,13 +15,14 @@ const recurring = await getRecurring();
 const business = BUSINESS_EVENTS[0];
 const dontMiss = regionDontMiss(events, recurring, now).map((event) => withCityLabel(event));
 const moreTowns = citiesWithEvents(events).filter((city) => !(WEEKEND_CITY_SLUGS as readonly string[]).includes(city));
+const [intro, confirm] = copy.region.intro;
 const cards = WEEKEND_CITY_SLUGS.map((city) => {
   const count = fourWeekCount(events, city, now);
   const top = topWeekendEvent(events, city, now);
   return {
     city,
     name: cityDisplayName(city),
-    countLabel: `${count} event${count === 1 ? "" : "s"} in the next 4 weeks`,
+    count,
     top: top?.title ?? "",
     hub: `/events/${city}/`,
     weekend: cityWeekendPath(city),
@@ -32,25 +33,27 @@ const cards = WEEKEND_CITY_SLUGS.map((city) => {
 <EventsLayout
   meta={EVENTS_HUB}
   h1={copy.region.h1}
-  intro={copy.region.intro}
+  intro={intro}
   crumbs={[{ name: "Home", path: "/" }, { name: "Events", path: "/events/" }]}
 >
   <nav class="sw-hero" slot="band" aria-label="Southwest Missouri cities">
     {cards.map((card) => (
-      <article class="sw-card" style="padding:.9rem 1rem;border:2px solid var(--white);border-radius:12px;text-align:left;margin-top:.75rem">
-        <h2 style={card.city === "springfield" ? "font-size:2rem" : undefined}><a class="more-link" href={card.hub}>{card.name}</a></h2>
-        <p>{card.countLabel}</p>
-        <p>{card.top ? card.top : "Nothing listed this weekend yet."}</p>
-        <ul class="subnav">
-          <li><a href={card.hub}>{card.name} events</a></li>
-          <li><a href={card.weekend}>This weekend</a></li>
-        </ul>
+      <article class:list={["sw-card", card.city === "springfield" && "sw-lead"]}>
+        <h2>{card.name}</h2>
+        <p class="sw-eye">This weekend</p>
+        <p class="sw-pick">{card.top || "Nothing listed yet."}</p>
+        <p class="sw-count"><b>{card.count}</b> {card.count === 1 ? "event" : "events"}<span class="sw-rest"> in the next 4 weeks</span></p>
+        <div class="sw-go">
+          <a class="btn sw-hub" href={card.hub}>{card.name} events</a>
+          <a class="btn sw-wk" href={card.weekend}>This weekend →</a>
+        </div>
       </article>
     ))}
   </nav>
+  <p class="source-note">{confirm}</p>
   {dontMiss.length > 0 && (
     <section aria-labelledby="dont-miss-heading">
-      <h2 id="dont-miss-heading">Don't miss across Southwest Missouri: the next 4 weeks</h2>
+      <h2 id="dont-miss-heading" class="sw-h">Don't miss across Southwest Missouri: the next 4 weeks</h2>
       <EventList events={dontMiss} idPrefix="miss" allEvents={events} />
     </section>
   )}
@@ -65,9 +68,30 @@ const cards = WEEKEND_CITY_SLUGS.map((city) => {
   </section>
 </EventsLayout>
 
-<style>
-  @media (min-width: 720px) {
-    .sw-hero { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 0.75rem; }
-    .sw-hero > :first-child { grid-row: span 2; }
+<style is:global>
+  .sw-hero{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:1rem;text-align:left}
+  .sw-card{position:relative;display:flex;flex-direction:column;height:100%;min-width:0;padding:.65rem;border-radius:12px;background:var(--white);color:var(--ink)}
+  .sw-lead{grid-column:1/-1}
+  .sw-hero h2{margin:0;color:var(--ink);font-size:1.15rem;font-weight:700;line-height:1.15}
+  .sw-eye{margin:.35rem 0 0;color:var(--blue);font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+  .sw-pick{margin:.1rem 0 0;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;min-height:1.3em}
+  .sw-lead .sw-pick{-webkit-line-clamp:2;min-height:2.6em}
+  .sw-count{margin:.3rem 0 0;color:var(--muted);font-size:.85rem}
+  .sw-go{display:flex;flex-direction:column;gap:.35rem;margin-top:auto;padding-top:.4rem}
+  .sw-go .btn{width:100%;padding-inline:.35rem;font-size:.78rem;letter-spacing:0;white-space:nowrap}
+  .sw-hub:after{content:"";position:absolute;inset:0}
+  .sw-wk{position:relative;z-index:1;background:var(--white);color:var(--blue)}
+  .sw-go .sw-wk:hover{background:var(--tint);border-color:var(--blue);color:var(--blue)}
+  .sw-rest{display:none}
+  .page-band{padding-block:1.25rem}
+  .page-band .lead,.sw-h{text-wrap:balance}
+  @media(min-width:720px){
+    .sw-hero{grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:.75rem}
+    .sw-lead{grid-column:1;grid-row:span 2}
+    .sw-lead h2{font-size:2.5rem;line-height:1.05}
+    .sw-pick{-webkit-line-clamp:2;min-height:2.6em}
+    .sw-go .btn{font-size:1rem;padding-inline:.6rem}
+    .sw-lead b{font-size:3rem;line-height:.9;display:block}
+    .sw-rest{display:inline}
   }
 </style>

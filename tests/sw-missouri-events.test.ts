@@ -8,6 +8,7 @@ import {
   hubDontMiss,
   isSignificantOneOff,
   regionDontMiss,
+  topWeekendEvent,
   weekendMetaDescription,
   worthTheDrive,
 } from "../src/lib/calendarView";
@@ -90,6 +91,65 @@ describe("isSignificantOneOff", () => {
     expect(isSignificantOneOff(matched, { recurring: [recurring] })).toBe(false);
     expect(isSignificantOneOff(matched, { recurring: [series({ id: "other", title: "Saturday Market", city_slug: "joplin" })] })).toBe(true);
   });
+
+  it("rejects series titles and any title with 3 or more dates in the window", () => {
+    const titled = (title: string) => ev({ id: "series", title, start: "2026-11-15", categories: ["festivals"], city_slug: "springfield" });
+    expect(isSignificantOneOff(titled("Cinema Sundays: Matilda"))).toBe(false);
+    expect(isSignificantOneOff(titled("Mahj Mondays at the Gillioz"))).toBe(false);
+    expect(isSignificantOneOff(titled("November Saturday Food Box Distribution"))).toBe(false);
+    expect(isSignificantOneOff(titled("Holiday Shopping Bazaar"))).toBe(false);
+    expect(isSignificantOneOff(titled("Game night this Sunday at the Social BTB on Sunday"))).toBe(false);
+    expect(isSignificantOneOff(titled("Movie Matinee: Blue Hawaii"))).toBe(false);
+    expect(isSignificantOneOff(titled("Springfield Job Fair - Springfield Career Fair"))).toBe(false);
+
+    const saturday = new Date("2026-11-14T16:00:00Z");
+    const rims = ["2026-11-14", "2026-11-15", "2026-11-21"].map((start, index) =>
+      ev({
+        id: `rims-${index}`,
+        title: "Midwest Battle of the Rims: Thanksgiving Throwdown",
+        start,
+        categories: ["holiday"],
+        city_slug: "springfield",
+      }),
+    );
+    expect(isSignificantOneOff(rims[0]!, { peers: rims, now: saturday })).toBe(false);
+    const twoNights = rims.slice(0, 2);
+    expect(isSignificantOneOff(twoNights[0]!, { peers: twoNights, now: saturday })).toBe(true);
+  });
+});
+
+describe("past starts stay out of the lead lists", () => {
+  const saturdayMorning = new Date("2026-11-14T16:00:00Z");
+
+  it("skips a Friday show that has started, and keeps a later one", () => {
+    const nutcracker = ev({
+      id: "nut",
+      title: "NUTCRACKER! Magical Christmas Ballet",
+      start: "2026-11-14T01:00:00+00:00",
+      end: "2026-11-15T05:00:00+00:00",
+      categories: ["holiday"],
+      action_type: "tickets",
+      venue: "Gillioz Theatre",
+      city_slug: "springfield",
+    });
+    const saturdayShow = ev({
+      id: "sat",
+      title: "Saturday Concert",
+      start: "2026-11-15T01:00:00+00:00",
+      categories: ["live-music"],
+      action_type: "tickets",
+      city_slug: "joplin",
+    });
+    expect(topWeekendEvent([nutcracker], "springfield", saturdayMorning)).toBeNull();
+    expect(topWeekendEvent([saturdayShow], "joplin", saturdayMorning)?.id).toBe("sat");
+    expect(worthTheDrive([nutcracker, saturdayShow], [], "springfield", saturdayMorning).map((event) => event.id)).toEqual(["sat"]);
+    expect(hubDontMiss([nutcracker], [], "springfield", saturdayMorning)).toEqual([]);
+    expect(regionDontMiss([nutcracker], [], saturdayMorning)).toEqual([]);
+
+    const fridayAllDay = ev({ id: "fri", title: "Friday Fest", start: "2026-11-13", categories: ["festivals"], city_slug: "bolivar" });
+    const saturdayAllDay = ev({ id: "day", title: "Saturday Fest", start: "2026-11-14", categories: ["festivals"], city_slug: "bolivar" });
+    expect(worthTheDrive([fridayAllDay, saturdayAllDay], [], "springfield", saturdayMorning).map((event) => event.id)).toEqual(["day"]);
+  });
 });
 
 describe("cross-city don't miss", () => {
@@ -103,6 +163,7 @@ describe("cross-city don't miss", () => {
     expect(hubDontMiss(events, [], "joplin", friday).map((event) => event.id)).toEqual(["local", "branson", "springfield"]);
     expect(cityRowLabel(branson)).toBe("in Branson");
     expect(cityRowLabel(branson, "joplin")).toBe("in Branson · about 1 hr 45 min");
+    expect(cityRowLabel(springfield, "springfield")).toBe("");
     expect(driveBetween("springfield", "bolivar")).toBe("about 35 min");
     expect(regionDontMiss(events, [], friday).map((event) => event.id)).toEqual(["branson", "local", "springfield"]);
     expect(worthTheDrive(events, [], "joplin", friday).map((event) => event.id)).toEqual(["branson"]);

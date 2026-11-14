@@ -29,9 +29,10 @@ const allRecurring = await getRecurring();
 const recurring = allRecurring.filter((item) => recurringCitySlug(item) === city);
 const dontMiss = hubDontMiss(allEvents, allRecurring, city, now);
 const comingUp = comingUpEvents(events, recurring, city, now, dontMiss);
+const alreadyShown = new Set([...dontMiss, ...comingUp].map((event) => event.id));
 const name = cityDisplayName(city);
 const otherCities = WEEKEND_CITY_SLUGS.filter((slug) => slug !== city);
-const upcoming = uniqueUpcomingEvents(events, recurring, city, now, 14);
+const upcoming = uniqueUpcomingEvents(events, recurring, city, now, 14).filter((event) => !alreadyShown.has(event.id));
 const weekly = groupSeriesByWeekday(recurring);
 const anyUpcoming = events.some((event) => isUpcoming(event, now));
 const page = cityHubCopy(city);
@@ -76,7 +77,7 @@ const showFilters = dontMiss.length + comingUp.length + upcoming.length > 0;
   {dontMiss.length > 0 && (
     <section aria-labelledby="dont-miss-heading">
       <h2 id="dont-miss-heading">Don't miss: the next 4 weeks</h2>
-      <EventList events={dontMiss.map((event) => withCityLabel(event))} idPrefix="miss" allEvents={allEvents} />
+      <EventList events={dontMiss.map((event) => withCityLabel(event, city))} idPrefix="miss" allEvents={allEvents} />
     </section>
   )}
   <section id="upcoming" aria-labelledby={upcoming.length > 0 ? "upcoming-heading" : undefined}>

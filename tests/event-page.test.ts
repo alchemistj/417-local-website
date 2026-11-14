@@ -1,7 +1,8 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { eventCityName } from "../src/lib/eventPaths";
-import { eventMetaDescription, eventPlaceLine } from "../src/lib/eventPage";
+import { eventMetaDescription, eventPlaceLine, eventRowPlace, listRowPlace } from "../src/lib/eventPage";
+import { withCityLabel } from "../src/data/weekendCities";
 import { eventSchema, type EventData } from "../src/lib/eventSchema";
 import { placeName } from "../src/lib/events";
 import { readSiteEvents } from "./helpers/events";
@@ -68,6 +69,42 @@ describe("event place line", () => {
       const line = eventPlaceLine(placeName(event.venue), placeName(event.address), city, state);
       const doubled = new RegExp(`, ${city}, ${state}, ${city}, ${state}$`, "i");
       expect(line, event.slug).not.toMatch(doubled);
+    }
+  });
+});
+
+describe("event row place", () => {
+  it("uses a venue name or street and city, without the country or a repeated state and ZIP", () => {
+    expect(eventRowPlace(
+      "5594 W Junge Blvd. , Joplin, MO, United States, Missouri 64804",
+      "5594 W Junge Blvd, Joplin, MO 64804-8172, United States, Joplin, MO",
+      "Joplin",
+    )).toBe("5594 W Junge Blvd, Joplin");
+    expect(eventRowPlace("4450 Scenic Ave, Bolivar, MO, United States, Missouri 65613", "", "Bolivar")).toBe(
+      "4450 Scenic Ave, Bolivar",
+    );
+    expect(eventRowPlace("Gillioz Theatre", "325 Park Central, E Springfield, Missouri", "Springfield")).toBe("Gillioz Theatre");
+    expect(eventRowPlace("Springfield", "Job Fair, Springfield, MO, 65806", "Springfield")).toBe("");
+
+    const jobFair = ev({
+      venue: "Springfield",
+      address: "Job Fair, Springfield, MO, 65806",
+      city: "Springfield",
+      city_slug: "springfield",
+    });
+    expect(listRowPlace(withCityLabel(jobFair, "springfield"))).toBe("");
+    expect(listRowPlace(ev({ venue: "Robert W. Plaster Stadium", address: "", city: "Springfield", city_slug: "springfield" }))).toBe(
+      "Robert W. Plaster Stadium",
+    );
+    expect(listRowPlace(withCityLabel(ev({ venue: "Gillioz Theatre", address: "", city: "Springfield", city_slug: "springfield" }), "joplin"))).toBe(
+      "Gillioz Theatre · in Springfield · about 1 hr 15 min",
+    );
+
+    for (const event of readSiteEvents()) {
+      const line = listRowPlace(event);
+      expect(line, event.slug).not.toMatch(/united states/i);
+      expect(line, event.slug).not.toMatch(/\bmissouri\s+\d{5}/i);
+      expect(line, event.slug).not.toMatch(/\s,/);
     }
   });
 });

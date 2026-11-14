@@ -191,10 +191,12 @@ describe("event card picture", () => {
 describe("event card layout", () => {
   it("clamps the title to three lines and uses a 72×56 date tile", () => {
     const css = readFileSync(new URL("../src/styles/global.css", import.meta.url), "utf8");
+    const card = readFileSync(new URL("../src/components/EventCard.astro", import.meta.url), "utf8");
     expect(css).toMatch(/-webkit-line-clamp:\s*3/);
     expect(css).toMatch(/\.date-tile\s*\{[^}]*width:\s*72px/);
     expect(css).toMatch(/\.date-tile\s*\{[^}]*height:\s*56px/);
-    expect(css).toMatch(/@media \(min-width: 641px\)/);
+    // Desktop card layout lives with the component so list pages stay under the inline CSS budget.
+    expect(card).toMatch(/@media \(min-width: 641px\)/);
     const list = readFileSync(new URL("../src/components/EventList.astro", import.meta.url), "utf8");
     expect(list).toContain("date-tile");
     expect(list).toContain("event-when");
