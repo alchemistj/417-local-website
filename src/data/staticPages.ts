@@ -1,8 +1,10 @@
 import bestOfCopy from "../../docs/best-of-hub-copy.json";
 import eventsCopy from "../../docs/events-pages-copy.json";
 import foodGuideCopy from "../../docs/food-and-drink-guide-copy.json";
-import { GENERAL_EVENT_CATEGORY_LABELS, type GeneralEventCategory } from "../lib/eventSchema";
+import { weekendMetaDescription } from "../lib/calendarView";
+import { GENERAL_EVENT_CATEGORY_LABELS, type EventData, type GeneralEventCategory } from "../lib/eventSchema";
 import { cityDisplayName, cityWeekendPath } from "../lib/eventPaths";
+import { WEEKEND_INTRO } from "./weekendCities";
 
 /**
  * Every non-article route and its SEO text. The route registry, sitemap, llms.txt and the page
@@ -77,12 +79,13 @@ export function cityHubPage(citySlug: string): StaticPageMeta {
   };
 }
 
-export function cityWeekendPage(citySlug: string): StaticPageMeta {
+export function cityWeekendPage(citySlug: string, events: EventData[] = [], now = new Date()): StaticPageMeta {
+  const name = cityDisplayName(citySlug);
   return {
     path: cityWeekendPath(citySlug),
-    title: cityCopy(eventsCopy.thisWeekend.seoTitle, citySlug),
-    description: cityCopy(eventsCopy.thisWeekend.description, citySlug),
-    label: citySlug === "springfield" ? "This weekend" : `This weekend in ${cityDisplayName(citySlug)}`,
+    title: `Things to Do in ${name}, MO This Weekend | 417 Local`,
+    description: weekendMetaDescription(citySlug, events, now),
+    label: `This weekend in ${name}`,
   };
 }
 
@@ -103,10 +106,12 @@ export function cityHubCopy(citySlug: string): CityPageCopy & { upcomingHeading:
 }
 
 export function cityWeekendCopy(citySlug: string): CityPageCopy {
+  const name = cityDisplayName(citySlug);
+  const intro = WEEKEND_INTRO[citySlug] ?? `Things to do in ${name}, MO this weekend, updated weekly.`;
   return {
-    h1: cityCopy(eventsCopy.thisWeekend.h1, citySlug),
-    intro: eventsCopy.thisWeekend.intro.map((paragraph) => cityCopy(paragraph, citySlug)),
-    emptyState: cityCopy(eventsCopy.thisWeekend.emptyState, citySlug),
+    h1: `Things to Do in ${name}, MO This Weekend`,
+    intro: [intro],
+    emptyState: `No weekend events are listed in ${name} yet. Check back soon, since the guide is updated weekly.`,
   };
 }
 

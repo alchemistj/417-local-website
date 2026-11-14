@@ -1,24 +1,33 @@
 ---
 import copy from "../../../docs/events-pages-copy.json";
-import { BUSINESS_EVENTS, EVENTS_HUB, cityHubPage } from "../../data/staticPages";
+import { BUSINESS_EVENTS, EVENTS_HUB } from "../../data/staticPages";
+import { withCityLabel } from "../../data/weekendCities";
 import EventsLayout from "../../layouts/EventsLayout.astro";
+import { fourWeekCount, regionDontMiss, topWeekendEvent } from "../../lib/calendarView";
 import { citiesWithEvents } from "../../lib/eventRoutes";
-import { cityDisplayName } from "../../lib/eventPaths";
-import { getSiteEvents } from "../../lib/loadEvents";
+import { WEEKEND_CITY_SLUGS, cityDisplayName, cityWeekendPath } from "../../lib/eventPaths";
+import { getRecurring, getSiteEvents } from "../../lib/loadEvents";
+import EventList from "../../components/EventList.astro";
 
-const cities = citiesWithEvents(await getSiteEvents());
+const now = new Date();
+const events = await getSiteEvents();
+const recurring = await getRecurring();
 const business = BUSINESS_EVENTS[0];
-
-/** Names every city that has events, in the same order as the city links. */
-function cityListSentence(names: string[]): string | null {
-  if (names.length === 0) return null;
-  if (names.length === 1) return `${names[0]} is the city we list today.`;
-  const last = names[names.length - 1];
-  return `${names.slice(0, -1).join(", ")} and ${last} are the cities we list today.`;
-}
-
-const listedToday = cityListSentence(cities.map((city) => cityDisplayName(city)));
-const intro = listedToday ? [copy.region.intro[0], listedToday, ...copy.region.intro.slice(1)] : copy.region.intro;
+const dontMiss = regionDontMiss(events, recurring, now).map((event) => withCityLabel(event));
+const moreTowns = citiesWithEvents(events).filter((city) => !(WEEKEND_CITY_SLUGS as readonly string[]).includes(city));
+const [intro, confirm] = copy.region.intro;
+const cards = WEEKEND_CITY_SLUGS.map((city) => {
+  const count = fourWeekCount(events, city, now);
+  const top = topWeekendEvent(events, city, now);
+  return {
+    city,
+    name: cityDisplayName(city),
+    count,
+    top: top?.title ?? "",
+    hub: `/events/${city}/`,
+    weekend: cityWeekendPath(city),
+  };
+});
 ---
 
 <EventsLayout
@@ -27,16 +36,62 @@ const intro = listedToday ? [copy.region.intro[0], listedToday, ...copy.region.i
   intro={intro}
   crumbs={[{ name: "Home", path: "/" }, { name: "Events", path: "/events/" }]}
 >
-  {cities.length === 0 ? (
-    <p>{copy.region.emptyState}</p>
-  ) : (
-    <nav aria-label="Cities">
-      <ul class="subnav">
-        {cities.map((city) => (
-          <li><a href={cityHubPage(city).path}>{cityDisplayName(city)}</a></li>
-        ))}
-        <li><a href={business.path}>{business.label}</a></li>
-      </ul>
-    </nav>
+  <nav class="sw-hero" slot="band" aria-label="Southwest Missouri cities">
+    {cards.map((card) => (
+      <article class:list={["sw-card", card.city === "springfield" && "sw-lead"]}>
+        <h2>{card.name}</h2>
+        <p class="sw-eye">This weekend</p>
+        <p class="sw-pick">{card.top || "Nothing listed yet."}</p>
+        <p class="sw-count"><b>{card.count}</b> {card.count === 1 ? "event" : "events"}<span class="sw-rest"> in the next 4 weeks</span></p>
+        <div class="sw-go">
+          <a class="btn sw-hub" href={card.hub}>{card.name} events</a>
+          <a class="btn sw-wk" href={card.weekend}>This weekend →</a>
+        </div>
+      </article>
+    ))}
+  </nav>
+  <p class="source-note">{confirm}</p>
+  {dontMiss.length > 0 && (
+    <section aria-labelledby="dont-miss-heading">
+      <h2 id="dont-miss-heading" class="sw-h">Don't miss across Southwest Missouri: the next 4 weeks</h2>
+      <EventList events={dontMiss} idPrefix="miss" allEvents={events} />
+    </section>
   )}
+  <section aria-labelledby="more-towns-heading">
+    <h2 id="more-towns-heading">More towns</h2>
+    <ul class="subnav">
+      {moreTowns.map((city) => (
+        <li><a href={`/events/${city}/`}>{cityDisplayName(city)}</a></li>
+      ))}
+      <li><a href={business.path}>{business.label}</a></li>
+    </ul>
+  </section>
 </EventsLayout>
+
+<style is:global>
+  .sw-hero{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:1rem;text-align:left}
+  .sw-card{position:relative;display:flex;flex-direction:column;height:100%;min-width:0;padding:.65rem;border-radius:12px;background:var(--white);color:var(--ink)}
+  .sw-lead{grid-column:1/-1}
+  .sw-hero h2{margin:0;color:var(--ink);font-size:1.15rem;font-weight:700;line-height:1.15}
+  .sw-eye{margin:.35rem 0 0;color:var(--blue);font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+  .sw-pick{margin:.1rem 0 0;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;min-height:1.3em}
+  .sw-lead .sw-pick{-webkit-line-clamp:2;min-height:2.6em}
+  .sw-count{margin:.3rem 0 0;color:var(--muted);font-size:.85rem}
+  .sw-go{display:flex;flex-direction:column;gap:.35rem;margin-top:auto;padding-top:.4rem}
+  .sw-go .btn{width:100%;padding-inline:.35rem;font-size:.78rem;letter-spacing:0;white-space:nowrap}
+  .sw-hub:after{content:"";position:absolute;inset:0}
+  .sw-wk{position:relative;z-index:1;background:var(--white);color:var(--blue)}
+  .sw-go .sw-wk:hover{background:var(--tint);border-color:var(--blue);color:var(--blue)}
+  .sw-rest{display:none}
+  .page-band{padding-block:1.25rem}
+  .page-band .lead,.sw-h{text-wrap:balance}
+  @media(min-width:720px){
+    .sw-hero{grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:.75rem}
+    .sw-lead{grid-column:1;grid-row:span 2}
+    .sw-lead h2{font-size:2.5rem;line-height:1.05}
+    .sw-pick{-webkit-line-clamp:2;min-height:2.6em}
+    .sw-go .btn{font-size:1rem;padding-inline:.6rem}
+    .sw-lead b{font-size:3rem;line-height:.9;display:block}
+    .sw-rest{display:inline}
+  }
+</style>

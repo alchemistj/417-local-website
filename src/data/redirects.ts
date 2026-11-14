@@ -1,5 +1,6 @@
 import seed from "../../docs/build/redirects-seed.json";
 import shortlinks from "../../docs/build/shortlinks.json";
+import { WEEKEND_CITY_SLUGS, cityWeekendPath } from "../lib/eventPaths";
 
 /**
  * The one redirect map (SOP Rule 15). `npm run redirects` writes vercel.json from it and a test
@@ -54,13 +55,18 @@ export function buildRedirects(): Redirect[] {
   }
   for (const [pattern, dest] of Object.entries(patterns)) add(toVercelPattern(pattern), dest);
   for (const [source, dest] of Object.entries(imageRedirects)) add(source, dest);
-  // City-first event URLs. Flat category pages and This Weekend moved under Springfield.
+  // City-first event URLs. Flat category pages moved under Springfield.
   // food-and-drink has no page in this export, so it is not redirected at a missing address.
+  // The five weekend cities 301 to the flat keyword URL. The other cities 301 to their hub.
   const movedEventPages: Record<string, string> = {
     "events/this-weekend": "/things-to-do-in-springfield-mo-this-weekend/",
-    // Springfield's weekend guide moved to its own flat page for the "things to do this weekend" keyword.
-    "events/springfield/this-weekend": "/things-to-do-in-springfield-mo-this-weekend/",
   };
+  for (const city of WEEKEND_CITY_SLUGS) {
+    movedEventPages[`events/${city}/this-weekend`] = cityWeekendPath(city);
+  }
+  for (const city of ["republic", "lake-ozark", "nixa", "ozark", "ridgedale", "rogersville"]) {
+    movedEventPages[`events/${city}/this-weekend`] = `/events/${city}/`;
+  }
   for (const slug of ["live-music", "arts-and-theater", "festivals", "family", "sports", "outdoors", "community", "holiday"]) {
     movedEventPages[`events/${slug}`] = `/events/springfield/${slug}/`;
   }

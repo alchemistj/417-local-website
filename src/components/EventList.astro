@@ -3,7 +3,8 @@ import type { EventData } from "../lib/eventSchema";
 import { eventRun, groupEventsByDay, eventListTime, isKidsEvent, runRangeLabel, showsFreeTag } from "../lib/calendarView";
 import { cardPaletteForCategory, eventCardDate } from "../lib/eventCard";
 import { categoryLabel } from "../lib/eventPage";
-import { placeName, primaryCategory } from "../lib/events";
+import { listRowPlace } from "../lib/eventPage";
+import { primaryCategory } from "../lib/events";
 import { eventPath } from "../lib/eventPaths";
 import { getSiteEvents } from "../lib/loadEvents";
 
@@ -41,8 +42,8 @@ const groups = groupEventsByDay(events);
       {headings && <h2 id={`day-${idPrefix}-${group.date}`} class="event-day-head">{group.heading}</h2>}
       <ul class="event-rows">
         {group.events.map((event) => {
-          const city = typeof event.city === "string" ? event.city.trim() : "";
-          const place = [placeName(event.venue), city].filter(Boolean).join(" · ");
+          const place = listRowPlace(event);
+          const when = eventListTime(event);
           const run = eventRun(event, pool, now);
           const href = run ? eventPath(run.canonical) : eventPath(event);
           const range = runRangeLabel(run);
@@ -68,7 +69,7 @@ const groups = groupEventsByDay(events);
                     {range && <span class="event-place"> · Runs {range}</span>}
                   </span>
                   <span class="event-tags">
-                    <span class="event-when">{eventListTime(event)}</span>
+                    {when !== "Time TBA" && <span class="event-when">{when}</span>}
                     {tags.map((tag) => <span class="event-tag">{tag}</span>)}
                     {showsFreeTag(event) && <span class="event-tag">Free</span>}
                   </span>

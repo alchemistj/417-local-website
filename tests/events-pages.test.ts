@@ -75,6 +75,20 @@ describe("general event categories", () => {
 });
 
 describe("this weekend", () => {
+  it("uses the coming weekend Monday through Thursday and the current weekend Friday through Sunday", () => {
+    const noon = (day: number) => new Date(`2026-11-${String(day).padStart(2, "0")}T18:00:00Z`);
+    const thisWeekend = ["2026-11-06", "2026-11-07", "2026-11-08"];
+    const nextWeekend = ["2026-11-13", "2026-11-14", "2026-11-15"];
+    expect(weekendDateStrings(noon(2))).toEqual(thisWeekend); // Monday
+    expect(weekendDateStrings(noon(3))).toEqual(thisWeekend); // Tuesday
+    expect(weekendDateStrings(noon(4))).toEqual(thisWeekend); // Wednesday
+    expect(weekendDateStrings(noon(5))).toEqual(thisWeekend); // Thursday
+    expect(weekendDateStrings(noon(6))).toEqual(thisWeekend); // Friday
+    expect(weekendDateStrings(noon(7))).toEqual(thisWeekend); // Saturday
+    expect(weekendDateStrings(noon(8))).toEqual(thisWeekend); // Sunday
+    expect(weekendDateStrings(noon(9))).toEqual(nextWeekend); // the next Monday
+  });
+
   it("uses the Chicago Friday–Sunday window on a Wednesday, a Saturday, and a Sunday at 11 PM", () => {
     expect(weekendDateStrings(wednesday)).toEqual(["2026-11-06", "2026-11-07", "2026-11-08"]);
     expect(weekendDateStrings(saturday)).toEqual(["2026-11-06", "2026-11-07", "2026-11-08"]);

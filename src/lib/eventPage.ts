@@ -214,6 +214,60 @@ export function eventPlaceLine(venue: string, address: string, city: string, sta
   return dropRepeatedTrailingLocality(line, cityName, stateName);
 }
 
+const COUNTRY_PART = /^(?:united states|usa|u\.s\.a\.|u\.s\.)$/i;
+const STATE_ZIP_PART = /^(?:mo|missouri)(?:\s+\d{5}(?:-\d{4})?)?$|^\d{5}(?:-\d{4})?$/i;
+
+/** Comma pieces with the country, state, and ZIP dropped. */
+function placeParts(raw: string): string[] {
+  return raw
+    .replace(/\b(?:united states|u\.s\.a\.|u\.s\.)\b/gi, "")
+    .replace(/\s+,/g, ",")
+    .replace(/,\s*/g, ", ")
+    .split(",")
+    .map((part) => part.replace(/\s+/g, " ").trim())
+    .filter((part) => part.length > 0 && !COUNTRY_PART.test(part) && !STATE_ZIP_PART.test(part));
+}
+
+function isStreetPart(part: string): boolean {
+  return /^\d/.test(part);
+}
+
+function tidyStreet(value: string): string {
+  return value.replace(/\s+\./g, ".").replace(/\.+$/, "").trim();
+}
+
+/**
+ * A venue name, or "street, city" when the export stored a postal address.
+ * "United States" and a repeated "Missouri 64804" are left off.
+ */
+export function eventRowPlace(venue: string, address: string, city: string): string {
+  const cityName = city.trim();
+  const onlyCity = (value: string) => Boolean(cityName) && value.trim().toLowerCase() === cityName.toLowerCase();
+  const venueParts = placeParts(venue);
+  const lead = venueParts[0] ?? "";
+  if (lead && !isStreetPart(lead) && !onlyCity(lead)) return lead;
+
+  const parts = isStreetPart(lead) ? venueParts : placeParts(address);
+  const street = tidyStreet(parts.find((part) => isStreetPart(part)) ?? "");
+  const locality = parts.find((part) => cityName && !isStreetPart(part) && part.toLowerCase().includes(cityName.toLowerCase())) ?? "";
+  const placeCity = locality ? cityName : "";
+  if (!street) return "";
+  if (placeCity && !street.toLowerCase().includes(placeCity.toLowerCase())) return `${street}, ${placeCity}`;
+  return street;
+}
+
+/** Place text for a list row. A cross-city "in City" label stays; the page's own city is not repeated. */
+export function listRowPlace(event: EventData): string {
+  const cityName = eventCityName(event);
+  let core = eventRowPlace(placeName(event.venue), placeName(event.address), cityName);
+  const label = typeof event.city === "string" ? event.city.trim() : "";
+  const cross = /^in\s+/i.test(label);
+  if (cross && cityName) core = core.replace(new RegExp(`,\\s*${escapeRegExp(cityName)}$`, "i"), "");
+  const plainCity = Boolean(cityName) && label.toLowerCase() === cityName.toLowerCase();
+  const extra = !label || plainCity ? "" : label;
+  return [core, extra].filter(Boolean).join(" · ");
+}
+
 export function categoryLabel(slug: string): string {
   if (isGeneralEventCategory(slug)) return GENERAL_EVENT_CATEGORY_LABELS[slug];
   return slug

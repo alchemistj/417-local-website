@@ -1,0 +1,14 @@
+---
+import type { GetStaticPaths } from "astro";
+import WeekendPage from "../components/WeekendPage.astro";
+import { WEEKEND_CITY_SLUGS } from "../lib/eventPaths";
+
+export const getStaticPaths = (() => {
+  return WEEKEND_CITY_SLUGS.map((city) => ({ params: { city } }));
+}) satisfies GetStaticPaths;
+
+const city = Astro.params.city;
+if (!city) throw new Error("Missing city");
+---
+
+<WeekendPage city={city} />

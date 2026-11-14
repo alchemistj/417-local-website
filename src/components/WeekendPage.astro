@@ -1,31 +1,59 @@
 ---
+import EventChips from "../components/EventChips.astro";
 import EventList from "../components/EventList.astro";
 import { cityHubPage, cityWeekendCopy, cityWeekendPage } from "../data/staticPages";
+import { withCityLabel } from "../data/weekendCities";
 import EventsLayout from "../layouts/EventsLayout.astro";
+import { uniqueUpcomingEvents, weekendRangeLabel, worthTheDrive } from "../lib/calendarView";
 import { eventChips } from "../lib/eventRoutes";
-import { eventCitySlug } from "../lib/eventPaths";
-import { thisWeekendView } from "../lib/events";
-import { getSiteEvents } from "../lib/loadEvents";
-
+import { WEEKEND_CITY_SLUGS, cityDisplayName, cityWeekendPath, eventCitySlug } from "../lib/eventPaths";
+import { eventChicagoDate, formatDayHeading, isUpcoming, sortByStart, weekendDateStrings } from "../lib/events";
+import { getRecurring, getSiteEvents } from "../lib/loadEvents";
+import type { EventData } from "../lib/eventSchema";
 
 interface Props {
   city: string;
 }
 const { city } = Astro.props;
 const now = new Date();
-const events = (await getSiteEvents()).filter((event) => eventCitySlug(event) === city);
-const view = thisWeekendView(events, now);
-const listed = view.mode === "weekend" ? view.groups.flatMap((group) => group.events) : view.fallback;
+const allEvents = await getSiteEvents();
+const recurring = await getRecurring();
+const events = allEvents.filter((event) => eventCitySlug(event) === city);
+const [friday, saturday, sunday] = weekendDateStrings(now);
+const days = [friday, saturday, sunday].map((date) => ({
+  date,
+  heading: formatDayHeading(date),
+  weekday: formatDayHeading(date).split(",")[0] ?? formatDayHeading(date),
+  events: sortByStart(events.filter((event) => isUpcoming(event, now) && eventChicagoDate(event) === date)),
+}));
+const filled = days.filter((day) => day.events.length > 0);
+const emptyLine = emptyDaysLine(days);
+const listed = days.flatMap((day) => day.events);
+const drive = worthTheDrive(allEvents, recurring, city, now).map((event) => withCityLabel(event, city));
+const shown = new Set(listed.map((event) => event.id));
+const also = listed.length < 3
+  ? uniqueUpcomingEvents(allEvents, recurring, city, now).filter((event) => !shown.has(event.id)).slice(0, 6)
+  : [];
 const page = cityWeekendCopy(city);
-const meta = cityWeekendPage(city);
+const meta = cityWeekendPage(city, allEvents, now);
 const hub = cityHubPage(city);
+const name = cityDisplayName(city);
+const others = WEEKEND_CITY_SLUGS.filter((slug) => slug !== city);
+const chips = eventChips(city, events, now, "");
+
+function emptyDaysLine(groups: { weekday: string; events: EventData[] }[]): string {
+  const names = groups.filter((day) => day.events.length === 0).map((day) => day.weekday);
+  if (names.length === 0) return "";
+  if (names.length === 1) return `Nothing listed for ${names[0]} yet.`;
+  if (names.length === 2) return `Nothing listed for ${names[0]} or ${names[1]} yet.`;
+  return `Nothing listed for ${names.slice(0, -1).join(", ")}, or ${names[names.length - 1]} yet.`;
+}
 ---
 
 <EventsLayout
   meta={meta}
   h1={page.h1}
   intro={page.intro}
-  chips={eventChips(city, events, now, "")}
   crumbs={[
     { name: "Home", path: "/" },
     { name: "Events", path: "/events/" },
@@ -33,12 +61,51 @@ const hub = cityHubPage(city);
     { name: page.h1, path: meta.path },
   ]}
 >
-  {view.mode === "weekend" ? (
-    <EventList events={listed} idPrefix="weekend" />
-  ) : (
-    <>
-      <p class="empty-state">{page.emptyState}</p>
-      {listed.length > 0 && <EventList events={listed} idPrefix="weekend" />}
-    </>
+  <h2 class="weekend-range">{weekendRangeLabel(now)}</h2>
+  {filled.map((day) => (
+    <section aria-labelledby={`day-${day.date}`}>
+      <h3 id={`day-${day.date}`} class="event-day-head">{day.heading}</h3>
+      <EventList
+        events={day.events}
+        idPrefix={day.date}
+        headings={false}
+        allEvents={allEvents}
+      />
+    </section>
+  ))}
+  {emptyLine && <p class="weekend-empty">{emptyLine}</p>}
+  <EventChips chips={chips} />
+  <section aria-labelledby="worth-the-drive">
+    <h2 id="worth-the-drive">Worth the drive this weekend</h2>
+    <EventList
+      events={drive}
+      idPrefix="drive"
+      headings={false}
+      allEvents={allEvents}
+      emptyMessage="No nearby one-off events are listed for this weekend."
+    />
+  </section>
+  {also.length > 0 && (
+    <section aria-labelledby="next-four-weeks">
+      <h2 id="next-four-weeks">The next 4 weeks</h2>
+      <EventList events={also} idPrefix="soon" allEvents={allEvents} />
+    </section>
   )}
+  <div class="btn-row">
+    <a class="btn" href={hub.path}>Full {name} events calendar</a>
+    <a class="btn" href="/events/">Southwest Missouri events</a>
+  </div>
+  <nav aria-label="This weekend in other cities">
+    <p>This weekend in</p>
+    <ul class="subnav">
+      {others.map((slug) => (
+        <li><a href={cityWeekendPath(slug)}>{cityDisplayName(slug)}</a></li>
+      ))}
+    </ul>
+  </nav>
 </EventsLayout>
+
+<style>
+  .weekend-range { margin: 0 0 0.25rem; color: var(--muted); font-size: 1rem; font-weight: 700; }
+  .weekend-empty { margin: 0.75rem 0 0; }
+</style>

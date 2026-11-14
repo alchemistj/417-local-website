@@ -8,8 +8,10 @@ import eventsCopy from "../docs/events-pages-copy.json";
 import { REDIRECTS, RETIRED_SLUGS, sourceMatches } from "../src/data/redirects";
 import { GENERAL_EVENT_CATEGORIES } from "../src/lib/eventSchema";
 import { builtMonths, monthLabel, monthPageTitle, runCanonicalPath } from "../src/lib/calendarView";
-import { citiesWithEvents, eventSectionRoutes, listedCategories } from "../src/lib/eventRoutes";
-import { cityDisplayName, eventCitySlug, eventPath } from "../src/lib/eventPaths";
+import { cityWeekendPage } from "../src/data/staticPages";
+import { WEEKEND_INTRO } from "../src/data/weekendCities";
+import { eventSectionRoutes, listedCategories } from "../src/lib/eventRoutes";
+import { WEEKEND_CITY_SLUGS, cityDisplayName, eventCitySlug, eventPath } from "../src/lib/eventPaths";
 import { thisWeekendView } from "../src/lib/events";
 import { uniqueUpcomingEvents } from "../src/lib/calendarView";
 import { readRecurringDir } from "../src/lib/recurring";
@@ -178,6 +180,10 @@ describe.skipIf(!built)("built site", () => {
     const locs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
     expect(locs.sort()).toEqual(registry.filter((r) => r.indexable && r.sitemap !== false).map((r) => `${SITE}${r.path}`).sort());
     expect(locs).not.toContain(`${SITE}/thank-you/`);
+    expect(locs.some((loc) => loc.includes("/this-weekend/"))).toBe(false);
+    for (const slug of WEEKEND_CITY_SLUGS) {
+      expect(locs).toContain(`${SITE}/things-to-do-in-${slug}-mo-this-weekend/`);
+    }
     expect(locs.some((loc) => loc.includes("/category/"))).toBe(false);
     expect(locs).toContain(`${SITE}/food-and-drink-springfield-mo/`);
     expect(readFileSync(`${DIST_DIR}/robots.txt`, "utf8")).toContain(`Sitemap: ${SITE}/sitemap.xml`);
@@ -267,7 +273,7 @@ describe.skipIf(!built)("built site", () => {
   it("shows a breadcrumb on events pages and keeps it off the rest of the site", () => {
     const listPaths = new Set(registry.filter((r) => r.type === "list").map((r) => r.path));
     const eventsShell = (route: string) =>
-      route.startsWith("/events/") || route === "/things-to-do-in-springfield-mo-this-weekend/";
+      route.startsWith("/events/") || /^\/things-to-do-in-[a-z0-9-]+-mo-this-weekend\/$/.test(route);
     for (const p of pages) {
       if (listPaths.has(p.route) || eventsShell(p.route)) continue;
       expect(p.html, p.route).not.toMatch(/aria-label="Breadcrumb"|class="breadcrumbs"/);
@@ -315,7 +321,7 @@ describe.skipIf(!built)("built site", () => {
     const expectCopy = (html: string, route: string, seoTitle: string, description: string, h1: string, intro: readonly string[]) => {
       expect((html.match(/<h1[\s>]/g) ?? []).length, route).toBe(1);
       expect(decode(html.match(/<title>([^<]*)<\/title>/)?.[1] ?? ""), route).toBe(seoTitle);
-      expect(html.match(/<meta name="description" content="([^"]*)"/)?.[1], route).toBe(description);
+      expect(decode(html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? ""), route).toBe(description);
       const text = decode(html);
       expect(text, route).toContain(`>${h1}<`);
       for (const paragraph of intro) expect(text, route).toContain(paragraph);
@@ -323,14 +329,16 @@ describe.skipIf(!built)("built site", () => {
 
     const hub = pages.find((p) => p.route === "/events/")?.html ?? "";
     expectCopy(hub, "/events/", eventsCopy.region.seoTitle, eventsCopy.region.description, eventsCopy.region.h1, eventsCopy.region.intro);
-    const cityNames = citiesWithEvents(siteEvents).map((slug) => cityDisplayName(slug));
-    if (cityNames.length > 0) {
-      const last = cityNames[cityNames.length - 1];
-      const sentence =
-        cityNames.length === 1
-          ? `${last} is the city we list today.`
-          : `${cityNames.slice(0, -1).join(", ")} and ${last} are the cities we list today.`;
-      expect(decode(hub), "city list is read from event data").toContain(sentence);
+    expect(decode(hub)).toContain("Don't miss across Southwest Missouri: the next 4 weeks");
+    expect(decode(hub)).toContain("More towns");
+    const hero = hub.slice(hub.indexOf('aria-label="Southwest Missouri cities"'), hub.indexOf('id="dont-miss-heading"'));
+    const heroHubs = [...hero.matchAll(/href="(\/events\/[a-z0-9-]+\/)"/g)].map((match) => match[1]);
+    expect(heroHubs.filter((href, index) => heroHubs.indexOf(href) === index).slice(0, 5)).toEqual(
+      WEEKEND_CITY_SLUGS.map((slug) => `/events/${slug}/`),
+    );
+    for (const slug of WEEKEND_CITY_SLUGS) {
+      expect(hub, slug).toContain(`href="/things-to-do-in-${slug}-mo-this-weekend/"`);
+      expect(hub, slug).toContain(`${cityDisplayName(slug)} events`);
     }
     expect(hub).toContain('href="/events/springfield/"');
     expect(hub).toContain('href="/events/springfield-business-events/"');
@@ -363,7 +371,7 @@ describe.skipIf(!built)("built site", () => {
       weekendHtml,
       "/things-to-do-in-springfield-mo-this-weekend/",
       eventsCopy.thisWeekend.seoTitle,
-      eventsCopy.thisWeekend.description,
+      cityWeekendPage("springfield", siteEvents, builtAt).description,
       eventsCopy.thisWeekend.h1,
       eventsCopy.thisWeekend.intro,
     );
@@ -378,8 +386,21 @@ describe.skipIf(!built)("built site", () => {
       `${SITE}/things-to-do-in-springfield-mo-this-weekend/`,
     ]);
 
+    const joplin = pages.find((page) => page.route === "/things-to-do-in-joplin-mo-this-weekend/");
+    expect(joplin, "joplin weekend page").toBeTruthy();
+    const joplinText = decode(joplin!.html);
+    expect(joplinText).toContain(WEEKEND_INTRO.joplin);
+    expect(joplinText).not.toContain(WEEKEND_INTRO.springfield);
+    expect(joplinText).toContain(">Things to Do in Joplin, MO This Weekend<");
+    expect(joplin!.html).toContain(`<link rel="canonical" href="${SITE}/things-to-do-in-joplin-mo-this-weekend/">`);
+    for (const page of pages) {
+      expect(page.html, page.route).not.toMatch(/href="\/events\/[^"]*this-weekend\/"/);
+    }
+
     const view = thisWeekendView(springfield, builtAt);
     const weekendText = decode(weekendHtml);
+    expect(weekendText).toContain("Worth the drive this weekend");
+    expect(weekendHtml).not.toMatch(/href="\/events\/[^"]*this-weekend\/"/);
     if (view.mode === "weekend") {
       expect(weekendText).not.toContain(eventsCopy.thisWeekend.emptyState);
       for (const group of view.groups) {

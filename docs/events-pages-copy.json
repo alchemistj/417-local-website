@@ -1,35 +1,34 @@
 {
   "region": {
-    "seoTitle": "Events in the 417: Springfield and Nearby Cities | 417 Local",
-    "description": "Find events in the 417 area. Open a city page to see music, family outings, festivals and more, updated daily.",
-    "h1": "Events in the 417",
+    "seoTitle": "Southwest Missouri Events: Springfield, Joplin, Branson & More | 417 Local",
+    "description": "What's on across Southwest Missouri: Springfield, Joplin, Branson, Bolivar and Lebanon. This weekend, the next 4 weeks and the big events worth a drive.",
+    "h1": "Southwest Missouri Events",
     "intro": [
-      "Each city in the 417 has its own events page. Open a city to see what is coming up.",
-      "We update the lists daily. Details can change, so confirm times and tickets with the organizer before you go."
+      "What's on across Southwest Missouri this weekend and over the next 4 weeks.",
+      "Lists are updated weekly. Details can change, so confirm times and tickets with the organizer before you go."
     ],
-    "emptyState": "We have no city event lists right now. Check back soon, since the lists are updated daily."
+    "emptyState": "We have no city event lists right now. Check back soon, since the lists are updated weekly."
   },
   "hub": {
     "seoTitle": "Springfield, MO Events Calendar | 417 Local",
-    "description": "See upcoming events in Springfield, MO: live music, festivals, family outings, business meetups and more. The calendar is updated daily.",
+    "description": "See upcoming events in Springfield, MO: live music, festivals, family outings, business meetups and more. The calendar is updated weekly.",
     "h1": "Springfield, MO Events",
     "intro": [
       "Live music, festivals, family outings and business meetups happening around Springfield.",
-      "We update the list daily. Details can change, so confirm times and tickets with the organizer before you go."
+      "We update the list weekly. Details can change, so confirm times and tickets with the organizer before you go."
     ],
-    "emptyState": "We have no events listed right now. Check back soon, since the list is updated daily.",
+    "emptyState": "We have no events listed right now. Check back soon, since the list is updated weekly.",
     "upcomingHeading": "Coming up in Springfield",
     "businessLink": "Looking for networking, workshops and chamber-style meetups? See our business events page."
   },
   "thisWeekend": {
     "seoTitle": "Things to Do in Springfield, MO This Weekend | 417 Local",
-    "description": "Looking for things to do in Springfield, MO this weekend? Our weekend guide covers music, family outings, festivals and more from Friday through Sunday.",
+    "description": "Things to do in Springfield, MO this weekend. Free picks and big events nearby. Refreshed weekly.",
     "h1": "Things to Do in Springfield, MO This Weekend",
     "intro": [
-      "Making weekend plans in Springfield? Here is what is on from Friday through Sunday, from Downtown shows to family outings around the Ozarks.",
-      "We update this guide daily. Hours and tickets can change, so check with the organizer before you head out. For the full month, see the Springfield events calendar."
+      "Making weekend plans in Springfield, MO? Here is what is on from Friday through Sunday, updated weekly."
     ],
-    "emptyState": "No weekend events are listed yet. Check back soon, since the list is updated daily."
+    "emptyState": "No weekend events are listed in Springfield yet. Check back soon, since the guide is updated weekly."
   },
   "categories": {
     "live-music": {

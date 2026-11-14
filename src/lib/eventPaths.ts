@@ -4,10 +4,21 @@ import { eventChicagoDate, placeName } from "./events";
 /** Cities the 417 hub names even before each one has events. */
 export const KNOWN_CITY_SLUGS = ["springfield", "republic", "joplin"] as const;
 
+/** Weekend guides. Order is the hero order on /events/. */
+export const WEEKEND_CITY_SLUGS = ["springfield", "branson", "joplin", "lebanon", "bolivar"] as const;
+
 const CITY_NAMES: Record<string, string> = {
   springfield: "Springfield",
-  republic: "Republic",
+  branson: "Branson",
   joplin: "Joplin",
+  lebanon: "Lebanon",
+  bolivar: "Bolivar",
+  republic: "Republic",
+  "lake-ozark": "Lake Ozark",
+  nixa: "Nixa",
+  ozark: "Ozark",
+  ridgedale: "Ridgedale",
+  rogersville: "Rogersville",
 };
 
 export function slugify(value: string): string {
@@ -70,9 +81,14 @@ export function eventCardImagePath(event: EventData): string {
   return `/event-cards/${city}/${slug}.png`;
 }
 
-/** Springfield's weekend guide is a flat page for its own keyword. Other cities keep a page under their hub. */
+/** The five cities with a flat this-weekend page. */
+export function hasWeekendPage(citySlug: string): boolean {
+  return (WEEKEND_CITY_SLUGS as readonly string[]).includes(citySlug);
+}
+
+/** Flat keyword URL for the five weekend cities. Other cities link to their hub. */
 export function cityWeekendPath(citySlug: string): string {
-  return citySlug === "springfield" ? "/things-to-do-in-springfield-mo-this-weekend/" : `/events/${citySlug}/this-weekend/`;
+  return hasWeekendPage(citySlug) ? `/things-to-do-in-${citySlug}-mo-this-weekend/` : `/events/${citySlug}/`;
 }
 
 export function reservedEventSlugs(events: EventData[] = []): Set<string> {
@@ -81,6 +97,7 @@ export function reservedEventSlugs(events: EventData[] = []): Set<string> {
   return new Set([
     "springfield-business-events",
     "this-weekend",
+    "weekend",
     "weekly",
     "monthly",
     "calendar",
