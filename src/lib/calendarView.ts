@@ -12,6 +12,7 @@ import {
   isUpcoming,
   placeName,
   sortByStart,
+  startAlreadyPassed,
   weekendDateStrings,
   type WeekendDayGroup,
 } from "./events";
@@ -49,7 +50,7 @@ export function dontMissEvents(events: EventData[], now: Date, limit = 6): Event
   const start = chicagoYmd(now);
   const end = addDaysToYmd(start, 29);
   return sortByStart(events.filter((event) => {
-    if (!isUpcoming(event, now) || !isStandoutEvent(event)) return false;
+    if (!isUpcoming(event, now) || startAlreadyPassed(event, now) || !isStandoutEvent(event)) return false;
     const date = eventChicagoDate(event);
     return date >= start && date <= end;
   })).slice(0, limit);
@@ -70,6 +71,13 @@ const SHOW_CATEGORIES = new Set(["arts-and-theater", "live-music", "comedy", "fe
 const CLASS_CATEGORIES = new Set(["fitness", "classes-and-workshops", "sports-league", "sports-league-type"]);
 /** Titles that read like a weekly class or program, never a run. */
 export const CLASS_TITLE_PATTERN = /\b(acc rec|aerobics|workout|fit|yoga|zumba|chi|toning|strength|core|boom|silversneakers|class|open studio|bowling|ceramics)\b/i;
+
+/**
+ * A recurring program or community listing, even when this week's title is unique
+ * ("Cinema Sundays: Matilda", "Mahj Mondays", a food-box distribution, a job fair).
+ */
+export const SERIES_TITLE_PATTERN =
+  /\b(?:cinema sundays|movie matinee|mahj|food box|job fair|career fair|game night|bazaar|distribution)\b|\b(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday)s\b|\bthis (?:sunday|monday|tuesday|wednesday|thursday|friday|saturday)\b/i;
 
 function weekdayOf(ymd: string): number {
   const [year, month, day] = ymd.split("-").map(Number);
@@ -127,6 +135,27 @@ export function hasOfficialSource(event: EventData): boolean {
 export interface SignificantContext {
   peers?: EventData[];
   recurring?: RecurringItem[];
+  /** When set, the 3-date series check counts only today through today + 27 days. */
+  now?: Date;
+}
+
+/** Distinct Chicago dates for this title. With `now`, only the next 4 weeks count. */
+function titleDateCount(event: EventData, peers: EventData[], now?: Date): number {
+  const title = norm(event.title);
+  const city = eventCitySlug(event);
+  const start = now ? chicagoYmd(now) : "";
+  const end = now ? addDaysToYmd(start, 27) : "";
+  const dates = new Set<string>();
+  const add = (item: EventData) => {
+    if (eventCitySlug(item) !== city || norm(item.title) !== title) return;
+    const date = eventChicagoDate(item);
+    if (!date) return;
+    if (now && (date < start || date > end)) return;
+    dates.add(date);
+  };
+  add(event);
+  for (const item of peers) add(item);
+  return dates.size;
 }
 
 /** Same title as a weekly or monthly series, or the dates repeat beyond a short run. */
@@ -141,19 +170,22 @@ export function isWeeklyOrMonthlySeries(event: EventData, peers: EventData[] = [
 
 /**
  * Standout (festival, holiday, big room, or ticketed music, comedy, or theater),
- * not a weekly or monthly series, not a class-like title, and it has an official source URL.
+ * not a weekly or monthly series, not a class-like or series-like title,
+ * not a title with 3 or more dates in the next 4 weeks, and it has an official source URL.
  */
 export function isSignificantOneOff(event: EventData, context: SignificantContext = {}): boolean {
   if (!isStandoutEvent(event)) return false;
-  if (CLASS_TITLE_PATTERN.test(event.title)) return false;
+  if (CLASS_TITLE_PATTERN.test(event.title) || SERIES_TITLE_PATTERN.test(event.title)) return false;
   if (!hasOfficialSource(event)) return false;
-  if (isWeeklyOrMonthlySeries(event, context.peers ?? [], context.recurring ?? [])) return false;
+  const peers = context.peers ?? [];
+  if (titleDateCount(event, peers, context.now) >= 3) return false;
+  if (isWeeklyOrMonthlySeries(event, peers, context.recurring ?? [])) return false;
   return true;
 }
 
-/** Today through today + 27 days (28 Chicago dates), still upcoming. */
+/** Today through today + 27 days (28 Chicago dates), still upcoming, and not already started. */
 export function isInNextFourWeeks(event: EventData, now: Date): boolean {
-  if (!isUpcoming(event, now)) return false;
+  if (!isUpcoming(event, now) || startAlreadyPassed(event, now)) return false;
   const date = eventChicagoDate(event);
   const start = chicagoYmd(now);
   return date >= start && date <= addDaysToYmd(start, 27);
@@ -164,7 +196,7 @@ function significantInCities(events: EventData[], recurring: RecurringItem[], no
   return events.filter((event) =>
     allowed.has(eventCitySlug(event))
     && isInNextFourWeeks(event, now)
-    && isSignificantOneOff(event, { peers: events, recurring }),
+    && isSignificantOneOff(event, { peers: events, recurring, now }),
   );
 }
 
@@ -189,10 +221,10 @@ export function worthTheDrive(events: EventData[], recurring: RecurringItem[], c
   const [start, , end] = weekendDateStrings(now);
   const away = new Set(WEEKEND_CITY_SLUGS.filter((slug) => slug !== city));
   return sortByStart(events.filter((event) => {
-    if (!away.has(eventCitySlug(event)) || !isUpcoming(event, now)) return false;
+    if (!away.has(eventCitySlug(event)) || !isUpcoming(event, now) || startAlreadyPassed(event, now)) return false;
     const date = eventChicagoDate(event);
     if (date < start || date > end) return false;
-    return isSignificantOneOff(event, { peers: events, recurring });
+    return isSignificantOneOff(event, { peers: events, recurring, now });
   })).slice(0, limit);
 }
 
@@ -204,7 +236,7 @@ export function fourWeekCount(events: EventData[], city: string, now: Date): num
 export function topWeekendEvent(events: EventData[], city: string, now: Date): EventData | null {
   const [start, , end] = weekendDateStrings(now);
   const list = events.filter((event) => {
-    if (eventCitySlug(event) !== city || !isUpcoming(event, now)) return false;
+    if (eventCitySlug(event) !== city || !isUpcoming(event, now) || startAlreadyPassed(event, now)) return false;
     const date = eventChicagoDate(event);
     return date >= start && date <= end;
   });

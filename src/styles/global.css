@@ -373,29 +373,7 @@ h3 { font-size: 1.25rem; }
 .date-tile-day { font-size: 1.35rem; font-weight: 700; }
 .date-tile-month { margin-top: 0.12rem; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
 .event-when { font-weight: 700; margin-right: 0.45rem; }
-.event-card-band { padding: 1.25rem 0 0.25rem; }
-.event-card { position: relative; display: flex; flex-direction: column; gap: 0.85rem; overflow: hidden; border-radius: 16px; padding: 1.05rem 1.1rem 1.15rem; color: #fff; background: linear-gradient(135deg, var(--card-from), var(--card-to)); }
-.event-card-date { position: relative; z-index: 1; display: flex; flex-direction: row; align-items: baseline; gap: 0.65rem; }
-.event-card-month, .event-card-day, .event-card-schedule, .event-card-category, .event-card-run, .event-card-price, .event-card-venue { margin: 0; color: #fff; }
-.event-card-month { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
-.event-card-day { font-size: 2.35rem; font-weight: 700; line-height: 0.85; }
-.event-card-schedule { font-size: 0.95rem; }
-.event-card-body { position: relative; z-index: 1; display: flex; flex-direction: column; min-width: 0; }
-.event-card-category { margin-bottom: 0.3rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
-.event-card h1.event-card-title { margin: 0; color: #fff; font-size: clamp(1.35rem, 2.6vw, 1.85rem); font-weight: 700; line-height: 1.25; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
-.event-card-run, .event-card-price { margin-top: 0.45rem; }
-.event-card-venue { margin-top: 0.7rem; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
-.event-card a { color: #fff; }
-.event-card-icon { position: absolute; z-index: 0; top: 0.35rem; right: 0.4rem; width: 6.5rem; height: 6.5rem; color: #fff; opacity: 0.13; pointer-events: none; }
-.event-card-note { margin: 0.85rem 0 0; }
-@media (min-width: 641px) {
-  .event-card { flex-direction: row; align-items: stretch; gap: 1.15rem; min-height: 11.5rem; padding: 1.2rem 1.3rem; }
-  .event-card-date { flex-direction: column; align-items: flex-start; justify-content: center; gap: 0.15rem; width: 8.75rem; flex: none; padding: 0.8rem 0.85rem; border-radius: 12px; background: color-mix(in srgb, #000 18%, transparent); }
-  .event-card-day { font-size: 3.15rem; }
-  .event-card-body { flex: 1; }
-  .event-card-venue { margin-top: auto; padding-top: 0.75rem; }
-  .event-card-icon { width: 8.5rem; height: 8.5rem; top: 0.55rem; right: 0.6rem; }
-}
+.event-card h1.event-card-title { -webkit-line-clamp: 3; }
 .event-place { color: var(--muted); }
 .event-tag { display: inline-block; margin-right: 0.45rem; font-size: 0.8rem; font-weight: 700; color: var(--muted); }
 .weekly-list li { padding-block: 0.15rem; border-top: 1px solid var(--line); }

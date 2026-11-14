@@ -35,9 +35,13 @@ export function driveBetween(fromSlug: string, toSlug: string): string {
   return DRIVE_LABEL[[fromSlug, toSlug].sort().join("|")] ?? "";
 }
 
-/** "in Joplin" or "in Joplin · about 1 hr 15 min" when the row is on another city's page. */
+/**
+ * "in Joplin" or "in Joplin · about 1 hr 15 min" on another city's page.
+ * The page's own city is blank, so a hub row does not read "Springfield · in Springfield".
+ */
 export function cityRowLabel(event: EventData, fromSlug = ""): string {
   const city = eventCitySlug(event);
+  if (fromSlug && fromSlug === city) return "";
   const drive = fromSlug && fromSlug !== city ? driveBetween(fromSlug, city) : "";
   const name = `in ${eventCityName(event)}`;
   return drive ? `${name} · ${drive}` : name;

@@ -29,6 +29,20 @@ export function isUpcoming(event: EventData, now: Date): boolean {
   return endMs(event) >= now.getTime();
 }
 
+/**
+ * The start is already in the past at `now`. A date-only or "Time TBA" listing
+ * stays up for its whole Chicago day. A timed listing drops once that clock time has passed,
+ * even when the end is still ahead.
+ */
+export function startAlreadyPassed(event: EventData, now: Date): boolean {
+  if (isDateOnly(event.start) || event.time_tbd === true) {
+    return eventChicagoDate(event) < chicagoYmd(now);
+  }
+  const time = Date.parse(event.start);
+  if (Number.isNaN(time)) return false;
+  return time < now.getTime();
+}
+
 export function sortByStart(events: EventData[]): EventData[] {
   return [...events].sort((a, b) => Date.parse(a.start) - Date.parse(b.start) || a.title.localeCompare(b.title));
 }

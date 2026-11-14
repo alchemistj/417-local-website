@@ -1,13 +1,15 @@
 ---
+import EventChips from "../components/EventChips.astro";
 import EventList from "../components/EventList.astro";
 import { cityHubPage, cityWeekendCopy, cityWeekendPage } from "../data/staticPages";
 import { withCityLabel } from "../data/weekendCities";
 import EventsLayout from "../layouts/EventsLayout.astro";
-import { uniqueUpcomingEvents, worthTheDrive } from "../lib/calendarView";
+import { uniqueUpcomingEvents, weekendRangeLabel, worthTheDrive } from "../lib/calendarView";
 import { eventChips } from "../lib/eventRoutes";
 import { WEEKEND_CITY_SLUGS, cityDisplayName, cityWeekendPath, eventCitySlug } from "../lib/eventPaths";
 import { eventChicagoDate, formatDayHeading, isUpcoming, sortByStart, weekendDateStrings } from "../lib/events";
 import { getRecurring, getSiteEvents } from "../lib/loadEvents";
+import type { EventData } from "../lib/eventSchema";
 
 interface Props {
   city: string;
@@ -21,8 +23,11 @@ const [friday, saturday, sunday] = weekendDateStrings(now);
 const days = [friday, saturday, sunday].map((date) => ({
   date,
   heading: formatDayHeading(date),
+  weekday: formatDayHeading(date).split(",")[0] ?? formatDayHeading(date),
   events: sortByStart(events.filter((event) => isUpcoming(event, now) && eventChicagoDate(event) === date)),
 }));
+const filled = days.filter((day) => day.events.length > 0);
+const emptyLine = emptyDaysLine(days);
 const listed = days.flatMap((day) => day.events);
 const drive = worthTheDrive(allEvents, recurring, city, now).map((event) => withCityLabel(event, city));
 const shown = new Set(listed.map((event) => event.id));
@@ -34,14 +39,21 @@ const meta = cityWeekendPage(city, allEvents, now);
 const hub = cityHubPage(city);
 const name = cityDisplayName(city);
 const others = WEEKEND_CITY_SLUGS.filter((slug) => slug !== city);
-const rangeHeading = `${formatDayHeading(friday)} to ${formatDayHeading(sunday)}`;
+const chips = eventChips(city, events, now, "");
+
+function emptyDaysLine(groups: { weekday: string; events: EventData[] }[]): string {
+  const names = groups.filter((day) => day.events.length === 0).map((day) => day.weekday);
+  if (names.length === 0) return "";
+  if (names.length === 1) return `Nothing listed for ${names[0]} yet.`;
+  if (names.length === 2) return `Nothing listed for ${names[0]} or ${names[1]} yet.`;
+  return `Nothing listed for ${names.slice(0, -1).join(", ")}, or ${names[names.length - 1]} yet.`;
+}
 ---
 
 <EventsLayout
   meta={meta}
   h1={page.h1}
   intro={page.intro}
-  chips={eventChips(city, events, now, "")}
   crumbs={[
     { name: "Home", path: "/" },
     { name: "Events", path: "/events/" },
@@ -49,19 +61,20 @@ const rangeHeading = `${formatDayHeading(friday)} to ${formatDayHeading(sunday)}
     { name: page.h1, path: meta.path },
   ]}
 >
-  <h2>{rangeHeading}</h2>
-  {days.map((day) => (
+  <h2 class="weekend-range">{weekendRangeLabel(now)}</h2>
+  {filled.map((day) => (
     <section aria-labelledby={`day-${day.date}`}>
-      <h2 id={`day-${day.date}`}>{day.heading}</h2>
+      <h3 id={`day-${day.date}`} class="event-day-head">{day.heading}</h3>
       <EventList
         events={day.events}
         idPrefix={day.date}
         headings={false}
         allEvents={allEvents}
-        emptyMessage={`Nothing listed for ${day.heading}.`}
       />
     </section>
   ))}
+  {emptyLine && <p class="weekend-empty">{emptyLine}</p>}
+  <EventChips chips={chips} />
   <section aria-labelledby="worth-the-drive">
     <h2 id="worth-the-drive">Worth the drive this weekend</h2>
     <EventList
@@ -78,8 +91,10 @@ const rangeHeading = `${formatDayHeading(friday)} to ${formatDayHeading(sunday)}
       <EventList events={also} idPrefix="soon" allEvents={allEvents} />
     </section>
   )}
-  <p><a class="more-link" href={hub.path}>Full {name} events calendar</a></p>
-  <p><a class="more-link" href="/events/">Southwest Missouri events</a></p>
+  <div class="btn-row">
+    <a class="btn" href={hub.path}>Full {name} events calendar</a>
+    <a class="btn" href="/events/">Southwest Missouri events</a>
+  </div>
   <nav aria-label="This weekend in other cities">
     <p>This weekend in</p>
     <ul class="subnav">
@@ -89,3 +104,8 @@ const rangeHeading = `${formatDayHeading(friday)} to ${formatDayHeading(sunday)}
     </ul>
   </nav>
 </EventsLayout>
+
+<style>
+  .weekend-range { margin: 0 0 0.25rem; color: var(--muted); font-size: 1rem; font-weight: 700; }
+  .weekend-empty { margin: 0.75rem 0 0; }
+</style>
