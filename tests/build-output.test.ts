@@ -404,6 +404,13 @@ describe.skipIf(!built)("built site", () => {
     const joplinText = decode(joplin!.html);
     expect(joplinText).toContain(WEEKEND_INTRO.joplin);
     expect(joplinText).not.toContain(WEEKEND_INTRO.springfield);
+    expect(joplinText).not.toMatch(/theater shows|the strip|Route 66 corridor|on the square/);
+
+    const bransonHub = decode(pages.find((page) => page.route === "/events/branson/")?.html ?? "");
+    expect(bransonHub).toContain("This weekend in Branson");
+    expect(bransonHub).not.toContain("Things to do in Branson, MO this weekend");
+    expect(bransonHub).toContain("Runs Nov 17");
+    expect(bransonHub.match(/Holiday Family Bingo/g)?.length).toBe(1);
     expect(joplinText).toContain(">Things to Do in Joplin, MO This Weekend<");
     expect(joplin!.html).toContain(`<link rel="canonical" href="${SITE}/things-to-do-in-joplin-mo-this-weekend/">`);
     for (const page of pages) {

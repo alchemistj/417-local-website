@@ -53,7 +53,7 @@ const showFilters = dontMiss.length + comingUp.length + upcoming.length > 0;
   hero={{
     photo,
     actions: [
-      ...(hasWeekendPage(city) ? [{ label: `Things to do in ${name}, MO this weekend`, href: weekendHref }] : []),
+      ...(hasWeekendPage(city) ? [{ label: `This weekend in ${name}`, href: weekendHref }] : []),
       { label: "Calendar", href: `/events/${city}/calendar/` },
     ],
   }}
@@ -105,3 +105,7 @@ const showFilters = dontMiss.length + comingUp.length + upcoming.length > 0;
     </ul>
   </nav>
 </EventsLayout>
+
+<style>
+  :global(.page-band .btn) { white-space: nowrap; }
+</style>

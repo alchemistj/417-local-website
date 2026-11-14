@@ -4,10 +4,12 @@ import { REDIRECTS } from "../src/data/redirects";
 import { cityWeekendPage } from "../src/data/staticPages";
 import { cityRowLabel, driveBetween } from "../src/data/weekendCities";
 import {
+  eventRun,
   hasOfficialSource,
   hubDontMiss,
   isSignificantOneOff,
   regionDontMiss,
+  runRangeLabel,
   topWeekendEvent,
   weekendMetaDescription,
   worthTheDrive,
@@ -155,7 +157,7 @@ describe("past starts stay out of the lead lists", () => {
 describe("cross-city don't miss", () => {
   it("keeps local one-offs first, then the other four cities, and labels each city", () => {
     const localLate = ev({ id: "local", title: "Joplin Fest", start: "2026-11-20", categories: ["festivals"], city_slug: "joplin" });
-    const branson = ev({ id: "branson", title: "Branson Lights", start: "2026-11-14", categories: ["holiday"], city_slug: "branson" });
+    const branson = ev({ id: "branson", title: "Branson Holiday Festival", start: "2026-11-14", categories: ["holiday"], city_slug: "branson" });
     const springfield = ev({ id: "springfield", title: "Springfield Fair", start: "2026-11-21", categories: ["festivals"], city_slug: "springfield" });
     const republic = ev({ id: "republic", title: "Republic Days", start: "2026-11-15", categories: ["festivals"], city_slug: "republic" });
     const friday = new Date("2026-11-13T18:00:00Z");
@@ -167,6 +169,79 @@ describe("cross-city don't miss", () => {
     expect(driveBetween("springfield", "bolivar")).toBe("about 35 min");
     expect(regionDontMiss(events, [], friday).map((event) => event.id)).toEqual(["branson", "local", "springfield"]);
     expect(worthTheDrive(events, [], "joplin", friday).map((event) => event.id)).toEqual(["branson"]);
+  });
+
+  it("spreads picks across Friday, Saturday and Sunday and across cities", () => {
+    const fridayMorning = new Date("2026-11-13T15:00:00Z");
+    const row = (id: string, title: string, start: string, city: string, extra: Partial<EventData> = {}) =>
+      ev({ id, title, start, city_slug: city, categories: ["festivals"], ...extra });
+    const events = [
+      row("fri", "Friday Festival", "2026-11-13T18:00:00-06:00", "springfield"),
+      row("sat-a", "Saturday Festival A", "2026-11-14", "springfield"),
+      row("sat-b", "Saturday Festival B", "2026-11-14", "springfield"),
+      row("sat-c", "Saturday Festival C", "2026-11-14", "springfield"),
+      row("sat-d", "Saturday Market", "2026-11-14", "joplin", { categories: ["holiday"] }),
+      row("sun", "Sunday Concert", "2026-11-15T15:00:00-06:00", "lebanon", { categories: ["live-music"], action_type: "tickets" }),
+      row("home", "Branson Fest", "2026-11-14", "branson"),
+    ];
+    const ids = worthTheDrive(events, [], "branson", fridayMorning).map((event) => event.id);
+    expect(ids).toContain("fri");
+    expect(ids).toContain("sun");
+    expect(ids).toContain("sat-d");
+    expect(ids).not.toContain("home");
+    expect(ids.filter((id) => id.startsWith("sat")).length).toBeLessThan(5);
+  });
+
+  it("collapses a repeated title at one venue and leaves out a 3-date series", () => {
+    const saturday = new Date("2026-11-14T16:00:00Z");
+    const bingo = [17, 24].map((day) =>
+      ev({
+        id: `bingo-${day}`,
+        title: "Holiday Family Bingo",
+        start: `2026-11-${day}T20:00:00-06:00`,
+        categories: ["holiday"],
+        venue: "Table Rock Event Room",
+        city_slug: "branson",
+      }),
+    );
+    const grinch = ["2026-11-18", "2026-11-25", "2026-12-02"].map((start) =>
+      ev({
+        id: `grinch-${start}`,
+        title: "Grinch Takeover Kids' Club",
+        start: `${start}T17:00:00-06:00`,
+        categories: ["holiday"],
+        venue: "Fun Mountain",
+        city_slug: "branson",
+      }),
+    );
+    const picked = hubDontMiss([...bingo, ...grinch], [], "branson", saturday);
+    expect(picked.map((event) => event.id)).toEqual(["bingo-17"]);
+    expect(runRangeLabel(eventRun(picked[0]!, [...bingo, ...grinch], saturday))).toBe("Nov 17–24");
+  });
+
+  it("ranks headline one-offs first and does not pad with weak local listings", () => {
+    const saturday = new Date("2026-11-14T16:00:00Z");
+    const fest = ev({ id: "fest", title: "Fall Festival", start: "2026-11-20", categories: ["festivals"], city_slug: "bolivar" });
+    const weak = ["Doormat Painting", "Fall Break Camp", "Nerd Poker", "Mommy and Me!"].map((title, index) =>
+      ev({
+        id: `weak-${index}`,
+        title,
+        start: `2026-11-${String(15 + index).padStart(2, "0")}`,
+        categories: ["festivals", "community"],
+        city_slug: "bolivar",
+      }),
+    );
+    const away = ev({
+      id: "away",
+      title: "Springfield Symphony",
+      start: "2026-11-21T19:30:00-06:00",
+      categories: ["live-music"],
+      action_type: "tickets",
+      venue: "Juanita K. Hammons Hall for the Performing Arts",
+      city_slug: "springfield",
+    });
+    const ids = hubDontMiss([away, ...weak, fest], [], "bolivar", saturday).map((event) => event.id);
+    expect(ids).toEqual(["fest", "away"]);
   });
 
   it("caps the region at 12 and a hub at 10", () => {
