@@ -8,8 +8,8 @@ import eventsCopy from "../docs/events-pages-copy.json";
 import { REDIRECTS, RETIRED_SLUGS, sourceMatches } from "../src/data/redirects";
 import { GENERAL_EVENT_CATEGORIES } from "../src/lib/eventSchema";
 import { builtMonths, monthLabel, monthPageTitle, runCanonicalPath } from "../src/lib/calendarView";
-import { eventSectionRoutes, listedCategories } from "../src/lib/eventRoutes";
-import { eventCitySlug, eventPath } from "../src/lib/eventPaths";
+import { citiesWithEvents, eventSectionRoutes, listedCategories } from "../src/lib/eventRoutes";
+import { cityDisplayName, eventCitySlug, eventPath } from "../src/lib/eventPaths";
 import { thisWeekendView } from "../src/lib/events";
 import { uniqueUpcomingEvents } from "../src/lib/calendarView";
 import { readRecurringDir } from "../src/lib/recurring";
@@ -257,11 +257,20 @@ describe.skipIf(!built)("built site", () => {
     expect(blogCard!.html).toContain("--hero-pos: center 20%");
   });
 
-  it("has no visible breadcrumb on any page but keeps BreadcrumbList JSON-LD on articles", () => {
+  it("shows a breadcrumb on events pages and keeps it off the rest of the site", () => {
     const listPaths = new Set(registry.filter((r) => r.type === "list").map((r) => r.path));
+    const eventsShell = (route: string) =>
+      route.startsWith("/events/") || route === "/things-to-do-in-springfield-mo-this-weekend/";
     for (const p of pages) {
-      if (listPaths.has(p.route)) continue;
+      if (listPaths.has(p.route) || eventsShell(p.route)) continue;
       expect(p.html, p.route).not.toMatch(/aria-label="Breadcrumb"|class="breadcrumbs"/);
+    }
+    for (const route of ["/events/", "/events/springfield/", "/things-to-do-in-springfield-mo-this-weekend/"]) {
+      const html = pages.find((p) => p.route === route)?.html ?? "";
+      expect(html, route).toMatch(/<nav class="crumbs" aria-label="Breadcrumb"/);
+      expect(html, route).toContain(">Home<");
+      expect(html, route).toContain(">Events<");
+      expect(html, route).toContain('"@type":"BreadcrumbList"');
     }
     const kids = pages.find((p) => p.route === "/best-kids-activities-in-springfield-mo/")?.html ?? "";
     expect(kids).toContain('"@type":"BreadcrumbList"');
@@ -307,6 +316,15 @@ describe.skipIf(!built)("built site", () => {
 
     const hub = pages.find((p) => p.route === "/events/")?.html ?? "";
     expectCopy(hub, "/events/", eventsCopy.region.seoTitle, eventsCopy.region.description, eventsCopy.region.h1, eventsCopy.region.intro);
+    const cityNames = citiesWithEvents(siteEvents).map((slug) => cityDisplayName(slug));
+    if (cityNames.length > 0) {
+      const last = cityNames[cityNames.length - 1];
+      const sentence =
+        cityNames.length === 1
+          ? `${last} is the city we list today.`
+          : `${cityNames.slice(0, -1).join(", ")} and ${last} are the cities we list today.`;
+      expect(decode(hub), "city list is read from event data").toContain(sentence);
+    }
     expect(hub).toContain('href="/events/springfield/"');
     expect(hub).toContain('href="/events/springfield-business-events/"');
     expect(hub).not.toContain('href="/events/this-weekend/"');
@@ -448,6 +466,11 @@ describe.skipIf(!built)("built site", () => {
     const day = pages.find((page) => page.route === "/events/springfield/2026-12-19/");
     expect(day, "/events/springfield/2026-12-19/").toBeTruthy();
     expect(decode(day!.html)).toContain("Events in Springfield on Saturday, December 19");
+    const nearby = day!.html.split('aria-label="Nearby days"')[1]?.split("</nav>")[0] ?? "";
+    if (nearby.includes("←")) {
+      expect(nearby).toMatch(/← (Mon|Tue|Wed|Thu|Fri|Sat|Sun), /);
+      expect(nearby).not.toMatch(/← (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),/);
+    }
     expect(chips(day!.html)[0]?.label).toBe("All events");
 
     const music = pages.find((page) => page.route === "/events/springfield/live-music/");

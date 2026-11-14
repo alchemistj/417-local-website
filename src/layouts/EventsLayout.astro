@@ -21,10 +21,19 @@ interface Props {
   emptyMessage?: string;
   chips?: EventChip[];
   backLink?: { href: string; label: string };
-  /** Photo hero (same pattern as the homepage) with the H1, a subhead and buttons in place of the blue band. */
+  /**
+   * City-hub actions (This weekend, Calendar), drawn in the shared blue header.
+   * `photo` stays on the prop so the hub can keep passing it, and is not painted:
+   * every events page uses this one header.
+   */
   hero?: { photo: InlineHero; actions: { label: string; href: string }[] };
+  /**
+   * Shared blue header. The event page passes false so the card stays the header;
+   * the breadcrumb still shows, with the chips under it.
+   */
+  titleBand?: boolean;
 }
-const { meta, h1, intro, events = [], crumbs, subnav, emptyMessage, chips, backLink, hero } = Astro.props;
+const { meta, h1, intro, events = [], crumbs, subnav, emptyMessage, chips, backLink, hero, titleBand = true } = Astro.props;
 const paragraphs = typeof intro === "string" ? [intro] : intro;
 const customBody = Astro.slots.has("default");
 
@@ -41,56 +50,44 @@ const crumbLd = {
 ---
 
 <BaseLayout title={meta.title} description={meta.description} path={meta.path} jsonLd={[crumbLd]}>
-  {hero && (
-    <img
-      slot="hero-photo"
-      class="atf-photo"
-      src={hero.photo.src}
-      alt=""
-      width={hero.photo.width}
-      height={hero.photo.height}
-      loading="eager"
-      decoding="sync"
-      fetchpriority="high"
-      data-ff-lcp-hero
-    />
-  )}
-  {hero && (
-    <section class="home-hero event-hero">
-      <h1>{h1}</h1>
-      <p class="hero-sub">{paragraphs[0]}</p>
-      <div class="btn-row">
-        {hero.actions.map((a, i) => <a class:list={["btn", i === 0 ? "btn-light" : "btn-outline"]} href={a.href}>{a.label}</a>)}
-      </div>
-    </section>
-  )}
-  <span class="atf-ready" hidden></span>
-  {hero && chips && (
-    <section class="band event-chips-band">
-      <div class="container">
-        <EventChips chips={chips} />
-        {paragraphs.slice(1).map((paragraph) => <p class="event-note">{paragraph}</p>)}
-      </div>
-    </section>
-  )}
-  {!hero && <section class="band band-blue page-band">
+  <section class:list={[titleBand ? "band band-blue page-band" : "event-crumb-row"]}>
     <div class="container">
-      <h1>{h1}</h1>
-      {backLink && <p class="back-link"><a href={backLink.href}>{backLink.label}</a></p>}
-      {paragraphs.map((paragraph) => <p class="lead">{paragraph}</p>)}
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          {crumbs.map((crumb, index) => (
+            <li>
+              {index < crumbs.length - 1 ? (
+                <a href={crumb.path}>{crumb.name}</a>
+              ) : (
+                <span aria-current="page">{crumb.name}</span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </nav>
+      {titleBand && <h1>{h1}</h1>}
+      {titleBand && backLink && <p class="back-link"><a href={backLink.href}>{backLink.label}</a></p>}
+      {titleBand && paragraphs.map((paragraph) => <p class="lead">{paragraph}</p>)}
+      {titleBand && hero && hero.actions.length > 0 && (
+        <div class="btn-row">
+          {hero.actions.map((action, index) => (
+            <a class:list={["btn", index === 0 ? "btn-light" : "btn-outline"]} href={action.href}>{action.label}</a>
+          ))}
+        </div>
+      )}
       {chips && <EventChips chips={chips} />}
-      <slot name="band" />
-      {subnav && (
+      {titleBand && <slot name="band" />}
+      {titleBand && subnav && (
         <nav aria-label="Event types">
           <ul class="subnav">
-            {subnav.map((l) => (
-              <li><a href={l.href} aria-current={l.href === meta.path ? "page" : undefined}>{l.label}</a></li>
+            {subnav.map((link) => (
+              <li><a href={link.href} aria-current={link.href === meta.path ? "page" : undefined}>{link.label}</a></li>
             ))}
           </ul>
         </nav>
       )}
     </div>
-  </section>}
+  </section>
   <section class="band">
     <div class:list={["container", customBody && "stack"]}>
       {customBody ? <slot /> : <EventList events={events} emptyMessage={emptyMessage} />}
@@ -102,3 +99,21 @@ const crumbLd = {
     primary={{ label: "Submit Your Event", href: "/submit-your-event/" }}
   />
 </BaseLayout>
+
+<style>
+  .page-band .crumbs ol { max-width: 100%; }
+  .page-band .crumbs li { min-width: 0; max-width: 100%; }
+  .page-band .crumbs a,
+  .page-band .crumbs [aria-current="page"] {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--white);
+    text-align: center;
+  }
+  .page-band .crumbs [aria-current="page"] { text-decoration: none; }
+  .page-band .crumbs li + li::before { color: var(--white); }
+  .page-band .btn-row { margin-top: 1rem; }
+  .event-crumb-row { padding-block: 1rem 0; }
+  .event-crumb-row .crumbs ol { justify-content: flex-start; }
+</style>

@@ -14,3 +14,13 @@ const { chips } = Astro.props;
     ))}
   </ul>
 </nav>
+
+<style>
+  /* Phones keep the single scrolling row. Wider screens wrap so the last chip is not clipped. */
+  @media (min-width: 640px) {
+    .event-chips {
+      flex-wrap: wrap;
+      overflow: visible;
+    }
+  }
+</style>

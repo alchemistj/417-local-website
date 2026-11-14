@@ -24,15 +24,15 @@ Approved by Josh, Nov 8, 2026. This is the second of three PRs.
 | Whole-417 hub | `/events/` (exists; keep) |
 | City hub | `/events/springfield/` |
 | City category page | `/events/springfield/{category}/`, for example `/events/springfield/live-music/` |
-| City This Weekend | `/events/springfield/this-weekend/` |
+| City This Weekend | `/things-to-do-in-springfield-mo-this-weekend/` for Springfield. Other cities stay at `/events/{city}/this-weekend/`. |
 | One event (one date) | `/events/{city_slug}/{public_slug}/`, for example `/events/springfield/springfield-symphony-holiday-christmas-2026-12-19/` |
 | Weekly or monthly series | `/events/{city_slug}/weekly/{series-slug}/` and `/events/{city_slug}/monthly/{series-slug}/`, from the recurring export in `src/content/recurring/` if present. If there's no recurring data, skip series pages for now. |
 | Business events | `/events/springfield-business-events/` (exists; keep at this address, it may rank) |
 
 **Moving the existing pages:**
 - Today's `/events/{category}/` pages move to `/events/springfield/{category}/`.
-- `/events/this-weekend/` moves to `/events/springfield/this-weekend/`.
-- Add 301 redirects for both in `vercel.json`.
+- Springfield's weekend page is the flat URL `/things-to-do-in-springfield-mo-this-weekend/`. `/events/this-weekend/` and `/events/springfield/this-weekend/` both 301 there. Other cities keep `/events/{city}/this-weekend/`.
+- Add 301 redirects for the old category and weekend addresses in `vercel.json`.
 
 **Reserved words:** `springfield-business-events`, `this-weekend`, `weekly`, `monthly`, every city slug and every
 category slug. They can never be an event slug. Add a build-time check that fails if one collides.
@@ -131,7 +131,7 @@ escaping commas and semicolons, and line folding.
 ## Hubs and lists
 
 - `EventList.astro` links each event to its new page, not to the source. The source link moves to the event page.
-- `/events/` stays the whole-417 hub and links to each city hub that has events (Springfield, Republic, Joplin for now).
+- `/events/` stays the whole-417 hub and links to each city hub that has events. The city names in the intro come from that same list, not a fixed set of cities.
 - **Sitemap and `llms.txt`:** include city hubs, city category pages and upcoming event pages.
 
 ## Don't
@@ -148,4 +148,4 @@ escaping commas and semicolons, and line folding.
   - a `show_up` event (Garden Story Time);
   - a `time_tbd` event;
   - `/events/springfield/live-music/`;
-  - the redirects from `/events/live-music/` and `/events/this-weekend/`.
+  - the redirects from `/events/live-music/` and `/events/this-weekend/` (Springfield's weekend page is `/things-to-do-in-springfield-mo-this-weekend/`).
