@@ -200,32 +200,144 @@ function significantInCities(events: EventData[], recurring: RecurringItem[], no
   );
 }
 
-/** Significant one-offs across the five cities, soonest first, capped at 12. */
-export function regionDontMiss(events: EventData[], recurring: RecurringItem[], now: Date, limit = 12): EventData[] {
-  return sortByStart(significantInCities(events, recurring, now, WEEKEND_CITY_SLUGS)).slice(0, limit);
+/** Festivals, markets, parades, concerts, and the other public one-offs a highlight list should lead with. */
+const HEADLINE_TITLE =
+  /\b(?:fest(?:ival)?|fair|market(?:place)?|parade|concert|symphony|trot|5k|theat(?:re|er)|carol|bazaar|craft show|aglow|christmas on)\b/i;
+
+/** Small listings that read as filler when a scrape tags them festivals or holiday. */
+const WEAK_LISTING_TITLE =
+  /\b(?:camp|doormat|paint your own|santa photos|photos with santa|poker|mommy and me|one[- ]shot|workshop|pop-?up|grand opening|meal pickup|decorating night|storytime|open studio)\b/i;
+
+const SHOW_PICK_CATEGORIES = new Set(["arts-and-theater", "live-music", "comedy", "film"]);
+
+/** How many local rows Don't miss keeps. Weak listings do not fill the rest. */
+const HUB_LOCAL_CAP = 5;
+
+function hasListedTime(event: EventData): boolean {
+  return eventHasClockTime(event) && event.time_tbd !== true;
+}
+
+/** Big room, ticketed music, comedy, or theater, or a title that names a public one-off. */
+export function isHeadlineEvent(event: EventData): boolean {
+  if (isBigVenue(event)) return true;
+  const tickets = (event.action_type ?? "").trim() === "tickets";
+  if (tickets && event.categories.some((category) => TICKET_CATEGORIES.has(category))) return true;
+  return HEADLINE_TITLE.test(event.title);
 }
 
 /**
- * This city's significant one-offs first (by date), then the other four cities' (by date).
- * A city outside the five still gets the five cities' one-offs after its own. Capped at 10.
+ * A standout a scrape tagged festivals or holiday, with no clock time or a small-listing title.
+ * Headline events stay even when the time is still TBD.
  */
-export function hubDontMiss(events: EventData[], recurring: RecurringItem[], city: string, now: Date, limit = 10): EventData[] {
-  const local = sortByStart(significantInCities(events, recurring, now, [city]));
-  const awaySlugs = WEEKEND_CITY_SLUGS.filter((slug) => slug !== city);
-  const away = sortByStart(significantInCities(events, recurring, now, awaySlugs));
-  return [...local, ...away].slice(0, limit);
+function isWeakListing(event: EventData): boolean {
+  if (isHeadlineEvent(event)) return false;
+  if (WEAK_LISTING_TITLE.test(event.title)) return true;
+  return !hasListedTime(event);
 }
 
-/** Significant one-offs in the other four cities on the coming Friday–Sunday. Capped at 6. */
+/** Headlines first (their date order), then other timed one-offs. Weak listings stay out. */
+function rankedHighlights(list: EventData[]): EventData[] {
+  const headlines = list.filter((event) => isHeadlineEvent(event));
+  const rest = list.filter((event) => !isHeadlineEvent(event) && !isWeakListing(event));
+  return [...headlines, ...rest];
+}
+
+function collapsedHighlights(events: EventData[], recurring: RecurringItem[], now: Date, cities: readonly string[]): EventData[] {
+  return collapseRuns(sortByStart(significantInCities(events, recurring, now, cities)), events, now);
+}
+
+/** Significant one-offs across the five cities, soonest first, one row per run, capped at 12. */
+export function regionDontMiss(events: EventData[], recurring: RecurringItem[], now: Date, limit = 12): EventData[] {
+  return collapsedHighlights(events, recurring, now, WEEKEND_CITY_SLUGS).slice(0, limit);
+}
+
+/**
+ * Local headline one-offs first, then this city's other timed one-offs, up to 5.
+ * A repeated title at the same venue is one row. A title on 3 or more dates in the
+ * next 4 weeks is a series and stays out. Weak listings do not fill the list.
+ * Other cities' highlights follow. A city outside the five still gets the five cities
+ * after its own. Capped at 10, and shorter when there is less worth highlighting.
+ */
+export function hubDontMiss(events: EventData[], recurring: RecurringItem[], city: string, now: Date, limit = 10): EventData[] {
+  const local = rankedHighlights(collapsedHighlights(events, recurring, now, [city])).slice(0, Math.min(HUB_LOCAL_CAP, limit));
+  const awaySlugs = WEEKEND_CITY_SLUGS.filter((slug) => slug !== city);
+  const away = rankedHighlights(collapsedHighlights(events, recurring, now, awaySlugs));
+  return [...local, ...omitShownEvents(away, local)].slice(0, limit);
+}
+
+const DRIVE_SHOW_RANK = 6;
+
+function driveRank(event: EventData, significant: ReadonlySet<string>): number {
+  let rank = 0;
+  if (significant.has(event.id)) rank += DRIVE_SHOW_RANK;
+  if (isHeadlineEvent(event)) rank += 4;
+  if (isBigVenue(event)) rank += 2;
+  if ((event.action_type ?? "").trim() === "tickets") rank += 2;
+  if (hasListedTime(event)) rank += 1;
+  return rank;
+}
+
+/**
+ * Worth a drive when it is a real one-off in another city: a significant highlight that
+ * is not a weak listing, or a timed show / headline title that is not a weekly series.
+ */
+function isWorthTheDrive(event: EventData, context: SignificantContext): boolean {
+  if (CLASS_TITLE_PATTERN.test(event.title) || SERIES_TITLE_PATTERN.test(event.title)) return false;
+  if (isWeeklyOrMonthlySeries(event, context.peers ?? [], context.recurring ?? [])) return false;
+  if (isSignificantOneOff(event, context)) return !WEAK_LISTING_TITLE.test(event.title);
+  if (!hasOfficialSource(event) || isWeakListing(event)) return false;
+  if (isHeadlineEvent(event)) return true;
+  return hasListedTime(event) && event.categories.some((category) => SHOW_PICK_CATEGORIES.has(category));
+}
+
+/**
+ * One pick per weekend day before any day gets a second, and within a day the next
+ * pick is a city that has been chosen less often. Returned soonest first.
+ */
+function spreadWeekendPicks(list: EventData[], days: readonly string[], limit: number, significant: ReadonlySet<string>): EventData[] {
+  const buckets = days.map((day) => list.filter((event) => eventChicagoDate(event) === day).sort((a, b) => (
+    driveRank(b, significant) - driveRank(a, significant) || Date.parse(a.start) - Date.parse(b.start) || a.title.localeCompare(b.title)
+  )));
+  const picked: EventData[] = [];
+  const used = new Set<string>();
+  const counts = new Map<string, number>();
+  let moved = true;
+  while (picked.length < limit && moved) {
+    moved = false;
+    for (const bucket of buckets) {
+      if (picked.length >= limit) break;
+      const remaining = bucket.filter((event) => !used.has(event.id));
+      if (remaining.length === 0) continue;
+      const lowest = Math.min(...remaining.map((event) => counts.get(eventCitySlug(event)) ?? 0));
+      const next = remaining.find((event) => (counts.get(eventCitySlug(event)) ?? 0) === lowest);
+      if (!next) continue;
+      picked.push(next);
+      used.add(next.id);
+      const slug = eventCitySlug(next);
+      counts.set(slug, (counts.get(slug) ?? 0) + 1);
+      moved = true;
+    }
+  }
+  return sortByStart(picked);
+}
+
+/**
+ * Other cities' weekend picks, spread across Friday, Saturday and Sunday and across cities.
+ * The page's own city stays out. A repeated title is one row. Capped at 6.
+ */
 export function worthTheDrive(events: EventData[], recurring: RecurringItem[], city: string, now: Date, limit = 6): EventData[] {
-  const [start, , end] = weekendDateStrings(now);
+  const days = weekendDateStrings(now);
+  const [start, , end] = days;
   const away = new Set(WEEKEND_CITY_SLUGS.filter((slug) => slug !== city));
-  return sortByStart(events.filter((event) => {
+  const context: SignificantContext = { peers: events, recurring, now };
+  const pool = events.filter((event) => {
     if (!away.has(eventCitySlug(event)) || !isUpcoming(event, now) || startAlreadyPassed(event, now)) return false;
     const date = eventChicagoDate(event);
     if (date < start || date > end) return false;
-    return isSignificantOneOff(event, { peers: events, recurring, now });
-  })).slice(0, limit);
+    return isWorthTheDrive(event, context);
+  });
+  const significant = new Set(pool.filter((event) => isSignificantOneOff(event, context)).map((event) => event.id));
+  return spreadWeekendPicks(collapseRuns(sortByStart(pool), events, now), days, limit, significant);
 }
 
 export function fourWeekCount(events: EventData[], city: string, now: Date): number {

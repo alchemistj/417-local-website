@@ -3,14 +3,15 @@ import { eventCityName, eventCitySlug } from "../lib/eventPaths";
 
 /**
  * One sentence per weekend city. Kept here so Joplin never inherits Springfield's wording.
+ * Plain on purpose: the sentence does not promise theaters, markets, or any other kind of event.
  * Each line says the guide is updated weekly.
  */
 export const WEEKEND_INTRO: Record<string, string> = {
   springfield: "Making weekend plans in Springfield, MO? Here is what is on from Friday through Sunday, updated weekly.",
-  branson: "Things to do in Branson, MO this weekend run from theater shows to the strip, updated weekly.",
-  joplin: "Things to do in Joplin, MO this weekend are downtown and along Route 66, updated weekly.",
-  lebanon: "Things to do in Lebanon, MO this weekend are downtown and along the Route 66 corridor, updated weekly.",
-  bolivar: "Things to do in Bolivar, MO this weekend are on the square and around town, updated weekly.",
+  branson: "Here is what is on in Branson, MO from Friday through Sunday, updated weekly.",
+  joplin: "Here is what is on in Joplin, MO from Friday through Sunday, updated weekly.",
+  lebanon: "Here is what is on in Lebanon, MO from Friday through Sunday, updated weekly.",
+  bolivar: "Here is what is on in Bolivar, MO from Friday through Sunday, updated weekly.",
 };
 
 /**
