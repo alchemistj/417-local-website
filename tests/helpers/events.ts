@@ -1,4 +1,5 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { dedupeSameDayEvents } from "../../src/lib/calendarView";
 import { eventSchema, type EventData } from "../../src/lib/eventSchema";
 import { ROOT } from "./posts";
 
@@ -9,7 +10,7 @@ export function readEventDir(dir: string): EventData[] {
     .map((name) => eventSchema.parse(JSON.parse(readFileSync(`${dir}/${name}`, "utf8")) as unknown));
 }
 
-/** Events from the export. Lists drop passed events; their pages still build from this folder. */
+/** Events from the export, with same-day title and place duplicates collapsed the way the loader does. */
 export function readSiteEvents(): EventData[] {
-  return readEventDir(`${ROOT}src/content/events`);
+  return dedupeSameDayEvents(readEventDir(`${ROOT}src/content/events`));
 }

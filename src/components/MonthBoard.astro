@@ -7,7 +7,7 @@ interface Props {
 }
 const { grid } = Astro.props;
 const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-const agenda = grid.weeks.flat().filter((cell) => cell.inMonth && !cell.isPast && (cell.shown.length > 0 || cell.weekly > 0));
+const agenda = grid.weeks.flat().filter((cell) => cell.inMonth && !cell.isPast && (cell.shown.length > 0 || cell.weekly > 0 || cell.regulars > 0));
 ---
 
 <div class="month-dow" aria-hidden="true">
@@ -26,6 +26,7 @@ const agenda = grid.weeks.flat().filter((cell) => cell.inMonth && !cell.isPast &
       )}
       {cell.more > 0 && cell.dayHref && <a class="month-more" href={cell.dayHref}>+{cell.more} more</a>}
       {cell.weekly > 0 && cell.dayHref && <a class="month-weekly" href={`${cell.dayHref}#weekly`}>+{cell.weekly} weekly</a>}
+      {cell.regulars > 0 && cell.weekly === 0 && cell.dayHref && <a class="month-weekly" href={cell.dayHref}>+{cell.regulars} weekly</a>}
     </div>
   ))}
 </div>
@@ -42,6 +43,7 @@ const agenda = grid.weeks.flat().filter((cell) => cell.inMonth && !cell.isPast &
       )}
       {cell.more > 0 && cell.dayHref && <a class="month-more" href={cell.dayHref}>+{cell.more} more</a>}
       {cell.weekly > 0 && cell.dayHref && <a class="month-weekly" href={`${cell.dayHref}#weekly`}>+{cell.weekly} weekly</a>}
+      {cell.regulars > 0 && cell.weekly === 0 && cell.dayHref && <a class="month-weekly" href={cell.dayHref}>+{cell.regulars} weekly</a>}
     </article>
   ))}
 </div>

@@ -6,6 +6,7 @@ import {
   chicagoDateParts,
   chicagoYmd,
   eventChicagoDate,
+  eventHasClockTime,
   formatDayHeading,
   isDateOnly,
   isUpcoming,
@@ -233,6 +234,73 @@ export function uniqueUpcomingEvents(events: EventData[], recurring: RecurringIt
   }));
 }
 
+/**
+ * Hub "Coming up": unique one-offs for the next 28 days, without the standouts already
+ * shown in Don't miss. A standout that did not fit the six-event cap stays here.
+ */
+export function comingUpEvents(events: EventData[], recurring: RecurringItem[], city: string, now: Date): EventData[] {
+  const featured = new Set(dontMissEvents(events, now).map((event) => event.id));
+  return uniqueUpcomingEvents(events, recurring, city, now).filter((event) => !featured.has(event.id));
+}
+
+function streetKey(value: string): string {
+  const match = /(\d{2,})\s+([a-z]+(?:\s+[a-z]+){0,2})/.exec(value);
+  return match ? `${match[1]} ${match[2]}` : "";
+}
+
+function samePlace(a: EventData, b: EventData): boolean {
+  const nameA = norm(placeName(a.venue));
+  const nameB = norm(placeName(b.venue));
+  const addressA = norm(placeName(a.address));
+  const addressB = norm(placeName(b.address));
+  if (!nameA && !nameB && !addressA && !addressB) return true;
+  if (nameA && nameA === nameB) return true;
+  if (addressA && addressA === addressB) return true;
+  const streetsA = [streetKey(nameA), streetKey(addressA)].filter(Boolean);
+  const streetsB = [streetKey(nameB), streetKey(addressB)].filter(Boolean);
+  if (streetsA.some((key) => streetsB.includes(key))) return true;
+  if (nameA.length >= 8 && (nameB.includes(nameA) || addressB.includes(nameA))) return true;
+  if (nameB.length >= 8 && (nameA.includes(nameB) || addressA.includes(nameB))) return true;
+  return false;
+}
+
+function duplicateRank(event: EventData): number {
+  let rank = 0;
+  if (eventHasClockTime(event)) rank += 4;
+  const name = norm(placeName(event.venue));
+  if (name && !/^\d/.test(name)) rank += 2;
+  const slug = event.public_slug ?? event.slug;
+  if (!/-\d+$/.test(slug)) rank += 1;
+  return rank;
+}
+
+/**
+ * One row per event that shares a title, a place, and a start on the same Chicago day.
+ * Keeps the copy with a clock time and a venue name when the export stored the same
+ * event twice (a street address in one file, the venue name in the other).
+ */
+export function dedupeSameDayEvents(events: EventData[]): EventData[] {
+  const kept: EventData[] = [];
+  for (const event of events) {
+    const title = norm(event.title);
+    const city = eventCitySlug(event);
+    const date = eventChicagoDate(event);
+    const index = kept.findIndex((other) => (
+      eventCitySlug(other) === city
+      && norm(other.title) === title
+      && eventChicagoDate(other) === date
+      && samePlace(other, event)
+    ));
+    if (index === -1) {
+      kept.push(event);
+      continue;
+    }
+    const current = kept[index];
+    if (current && duplicateRank(event) > duplicateRank(current)) kept[index] = event;
+  }
+  return kept;
+}
+
 export function eventsOnDate(events: EventData[], city: string, date: string, now: Date): EventData[] {
   return sortByStart(events.filter((event) => eventCitySlug(event) === city && isUpcoming(event, now) && eventChicagoDate(event) === date));
 }
@@ -384,6 +452,8 @@ export interface MonthCell {
   shown: { href: string; title: string }[];
   more: number;
   weekly: number;
+  /** Repeating titles left out of the one-off slots so they do not crowd the day. */
+  regulars: number;
   dayHref: string | null;
 }
 
@@ -393,10 +463,17 @@ export interface MonthGrid {
   eventCount: number;
 }
 
+/** One-off ids through the last built month. Repeating titles and series matches are left out. */
+function oneOffIds(city: string, events: EventData[], recurring: RecurringItem[], now: Date): Set<string> {
+  const span = Math.max(1, daysBetween(chicagoYmd(now), lastBuiltYmd(now)) + 1);
+  return new Set(uniqueUpcomingEvents(events, recurring, city, now, span).map((event) => event.id));
+}
+
 export function buildMonthGrid(city: string, year: number, month: number, events: EventData[], recurring: RecurringItem[], now: Date): MonthGrid {
   const today = chicagoYmd(now);
   const pageDates = new Set(dayPageDates(city, events, recurring, now));
   const cityEvents = events.filter((event) => eventCitySlug(event) === city && isUpcoming(event, now));
+  const oneOffs = oneOffIds(city, events, recurring, now);
   const first = new Date(Date.UTC(year, month - 1, 1));
   const cursor = new Date(first);
   cursor.setUTCDate(1 - first.getUTCDay());
@@ -410,6 +487,7 @@ export function buildMonthGrid(city: string, year: number, month: number, events
       const inMonth = date.startsWith(monthKey);
       const isPast = inMonth && date < today;
       const dayEvents = !inMonth || isPast ? [] : sortByStart(cityEvents.filter((event) => eventChicagoDate(event) === date));
+      const listed = dayEvents.filter((event) => oneOffs.has(event.id));
       const weekly = !inMonth || isPast ? 0 : recurringOnDate(recurring, city, date).length;
       week.push({
         date,
@@ -417,9 +495,10 @@ export function buildMonthGrid(city: string, year: number, month: number, events
         inMonth,
         isToday: inMonth && date === today,
         isPast,
-        shown: dayEvents.slice(0, 3).map((event) => ({ href: runCanonicalPath(event, cityEvents, now), title: shortEventTitle(event.title) })),
-        more: Math.max(0, dayEvents.length - 3),
+        shown: listed.slice(0, 3).map((event) => ({ href: runCanonicalPath(event, cityEvents, now), title: event.title })),
+        more: Math.max(0, listed.length - 3),
         weekly,
+        regulars: dayEvents.length - listed.length,
         dayHref: inMonth && !isPast && pageDates.has(date) ? `/events/${city}/${date}/` : null,
       });
       cursor.setUTCDate(cursor.getUTCDate() + 1);

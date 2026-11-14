@@ -6,7 +6,7 @@ import EventList from "../../../components/EventList.astro";
 import WeeklyList from "../../../components/WeeklyList.astro";
 import { cityHubCopy, cityHubPage } from "../../../data/staticPages";
 import EventsLayout from "../../../layouts/EventsLayout.astro";
-import { dateStrip, dontMissEvents, uniqueUpcomingEvents } from "../../../lib/calendarView";
+import { comingUpEvents, dateStrip, dontMissEvents, uniqueUpcomingEvents } from "../../../lib/calendarView";
 import { inlineHeroAvif } from "../../../lib/heroPhoto";
 import { citiesWithEvents, eventChips } from "../../../lib/eventRoutes";
 import { cityWeekendPath, eventCitySlug } from "../../../lib/eventPaths";
@@ -25,7 +25,8 @@ const now = new Date();
 const events = (await getSiteEvents()).filter((event) => eventCitySlug(event) === city);
 const recurring = (await getRecurring()).filter((item) => recurringCitySlug(item) === city);
 const dontMiss = dontMissEvents(events, now);
-const upcoming = uniqueUpcomingEvents(events, recurring, city, now);
+const comingUp = comingUpEvents(events, recurring, city, now);
+const upcoming = uniqueUpcomingEvents(events, recurring, city, now, 14);
 const weekly = groupSeriesByWeekday(recurring);
 const anyUpcoming = events.some((event) => isUpcoming(event, now));
 const page = cityHubCopy(city);
@@ -38,7 +39,7 @@ const photo = await inlineHeroAvif({
   width: 1280,
   quality: 60,
 });
-const showFilters = dontMiss.length + upcoming.length > 0;
+const showFilters = dontMiss.length + comingUp.length + upcoming.length > 0;
 ---
 
 <EventsLayout
@@ -61,24 +62,32 @@ const showFilters = dontMiss.length + upcoming.length > 0;
 >
   <DateStrip strip={dateStrip(city, events, recurring, now)} />
   {showFilters && <EventFilters />}
+  {comingUp.length > 0 && (
+    <section aria-labelledby="coming-up-heading">
+      <h2 id="coming-up-heading">{page.upcomingHeading}</h2>
+      <EventList events={comingUp} idPrefix="coming" />
+    </section>
+  )}
   {dontMiss.length > 0 && (
     <section aria-labelledby="dont-miss-heading">
       <h2 id="dont-miss-heading">Don't miss this month</h2>
       <EventList events={dontMiss} idPrefix="miss" />
     </section>
   )}
-  {upcoming.length > 0 && (
-    <section id="upcoming" aria-labelledby="upcoming-heading">
-      <h2 id="upcoming-heading">{page.upcomingHeading}</h2>
-      <EventList events={upcoming} idPrefix="upcoming" />
-      <p><a class="more-link" href={`/events/${city}/calendar/`}>See the full calendar</a></p>
-    </section>
-  )}
+  <section id="upcoming" aria-labelledby={upcoming.length > 0 ? "upcoming-heading" : undefined}>
+    {upcoming.length > 0 && (
+      <>
+        <h2 id="upcoming-heading">Upcoming</h2>
+        <EventList events={upcoming} idPrefix="upcoming" />
+      </>
+    )}
+    <p><a class="more-link" href={`/events/${city}/calendar/`}>See the full calendar</a></p>
+  </section>
   {weekly.length > 0 && (
     <section aria-labelledby="weekly-happenings">
       <h2 id="weekly-happenings">Weekly happenings</h2>
       <WeeklyList groups={weekly} />
-      <p><a class="more-link" href={`/events/${city}/weekly/`}>Weekly classes and regulars</a></p>
+      <p><a class="more-link" href={`/events/${city}/weekly/`}>See all weekly happenings</a></p>
     </section>
   )}
   {!anyUpcoming && weekly.length === 0 && <p class="empty-state">{page.emptyState}</p>}
