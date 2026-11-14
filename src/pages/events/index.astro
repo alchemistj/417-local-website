@@ -8,12 +8,23 @@ import { getSiteEvents } from "../../lib/loadEvents";
 
 const cities = citiesWithEvents(await getSiteEvents());
 const business = BUSINESS_EVENTS[0];
+
+/** Names every city that has events, in the same order as the city links. */
+function cityListSentence(names: string[]): string | null {
+  if (names.length === 0) return null;
+  if (names.length === 1) return `${names[0]} is the city we list today.`;
+  const last = names[names.length - 1];
+  return `${names.slice(0, -1).join(", ")} and ${last} are the cities we list today.`;
+}
+
+const listedToday = cityListSentence(cities.map((city) => cityDisplayName(city)));
+const intro = listedToday ? [copy.region.intro[0], listedToday, ...copy.region.intro.slice(1)] : copy.region.intro;
 ---
 
 <EventsLayout
   meta={EVENTS_HUB}
   h1={copy.region.h1}
-  intro={copy.region.intro}
+  intro={intro}
   crumbs={[{ name: "Home", path: "/" }, { name: "Events", path: "/events/" }]}
 >
   {cities.length === 0 ? (

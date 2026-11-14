@@ -5,7 +5,6 @@ import EventsLayout from "../layouts/EventsLayout.astro";
 import type { StaticPageMeta } from "../data/staticPages";
 import type { EventChip } from "../lib/eventRoutes";
 import type { EventData } from "../lib/eventSchema";
-import { formatDayHeading } from "../lib/events";
 import { recurringPlace, recurringWhen, seriesPath, type RecurringItem } from "../lib/recurring";
 
 interface Props {
@@ -21,6 +20,19 @@ interface Props {
   city: string;
 }
 const { meta, h1, cityName, hubPath, events, weekly, prev, next, chips, city } = Astro.props;
+
+/** Short enough to stay on one line at 390px: "Fri, Nov 13". */
+function shortDayLabel(ymdDate: string): string {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(ymdDate);
+  if (!match) return ymdDate;
+  const date = new Date(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3])));
+  return new Intl.DateTimeFormat("en-US", {
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC",
+  }).format(date);
+}
 ---
 
 <EventsLayout
@@ -36,8 +48,8 @@ const { meta, h1, cityName, hubPath, events, weekly, prev, next, chips, city } =
   ]}
 >
   <nav class="day-nav" aria-label="Nearby days">
-    {prev ? <a href={`/events/${city}/${prev}/`}>← {formatDayHeading(prev)}</a> : <span></span>}
-    {next && <a href={`/events/${city}/${next}/`}>{formatDayHeading(next)} →</a>}
+    {prev ? <a href={`/events/${city}/${prev}/`}>← {shortDayLabel(prev)}</a> : <span></span>}
+    {next && <a href={`/events/${city}/${next}/`}>{shortDayLabel(next)} →</a>}
   </nav>
   {events.length > 0 && <EventFilters />}
   {events.length > 0 && <EventList events={events} headings={false} idPrefix="day" />}
@@ -58,3 +70,9 @@ const { meta, h1, cityName, hubPath, events, weekly, prev, next, chips, city } =
     </section>
   )}
 </EventsLayout>
+
+<style>
+  .day-nav { flex-wrap: nowrap; align-items: center; }
+  .day-nav a { white-space: nowrap; }
+  .day-nav a:last-child { margin-left: auto; }
+</style>
