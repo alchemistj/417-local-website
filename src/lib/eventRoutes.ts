@@ -1,4 +1,5 @@
 import { cityHubPage, cityWeekendPage, generalCategoryPage } from "../data/staticPages";
+import { fridayTextPage } from "./fridayText";
 import {
   builtMonths,
   dayPageDates,
@@ -89,6 +90,18 @@ function cityHubRoutes(events: EventData[]): RouteEntry[] {
   });
 }
 
+function fridayTextRoute(events: EventData[], recurring: RecurringItem[], now: Date): RouteEntry {
+  const model = fridayTextPage(events, recurring, now);
+  return {
+    path: model.path,
+    type: "static",
+    title: model.title,
+    description: model.description,
+    lastmod: chicagoYmd(now),
+    indexable: true,
+  };
+}
+
 function cityWeekendRoutes(events: EventData[], now: Date): RouteEntry[] {
   return WEEKEND_CITY_SLUGS.map((city) => {
     const meta = cityWeekendPage(city, events, now);
@@ -176,13 +189,14 @@ function seriesRoutes(recurring: RecurringItem[]): RouteEntry[] {
   return routes;
 }
 
-/** City hubs, calendars, day pages, category pages, weekly happenings, and one route per event. */
+/** City hubs, calendars, day pages, category pages, weekly happenings, the Friday text, and one route per event. */
 export function eventSectionRoutes(events: EventData[], now: Date = new Date(), recurring: RecurringItem[] = []): RouteEntry[] {
   assertNoReservedEventSlug(events);
   assertUniqueEventPaths(events);
   return [
     ...cityHubRoutes(events),
     ...cityWeekendRoutes(events, now),
+    fridayTextRoute(events, recurring, now),
     ...generalCategoryRoutes(events, now),
     ...calendarRoutes(events, recurring, now),
     ...dayRoutes(events, recurring, now),
