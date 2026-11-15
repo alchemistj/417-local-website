@@ -273,12 +273,14 @@ describe.skipIf(!built)("built site", () => {
   it("shows a breadcrumb on events pages and keeps it off the rest of the site", () => {
     const listPaths = new Set(registry.filter((r) => r.type === "list").map((r) => r.path));
     const eventsShell = (route: string) =>
-      route.startsWith("/events/") || /^\/things-to-do-in-[a-z0-9-]+-mo-this-weekend\/$/.test(route);
+      route.startsWith("/events/")
+      || route === "/this-friday-in-springfield/"
+      || /^\/things-to-do-in-[a-z0-9-]+-mo-this-weekend\/$/.test(route);
     for (const p of pages) {
       if (listPaths.has(p.route) || eventsShell(p.route)) continue;
       expect(p.html, p.route).not.toMatch(/aria-label="Breadcrumb"|class="breadcrumbs"/);
     }
-    for (const route of ["/events/", "/events/springfield/", "/things-to-do-in-springfield-mo-this-weekend/"]) {
+    for (const route of ["/events/", "/events/springfield/", "/things-to-do-in-springfield-mo-this-weekend/", "/this-friday-in-springfield/"]) {
       const html = pages.find((p) => p.route === route)?.html ?? "";
       expect(html, route).toMatch(/<nav class="crumbs" aria-label="Breadcrumb"/);
       expect(html, route).toContain(">Home<");

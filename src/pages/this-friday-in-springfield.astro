@@ -1,0 +1,98 @@
+---
+import EventList from "../components/EventList.astro";
+import EventsLayout from "../layouts/EventsLayout.astro";
+import { cityHubPage } from "../data/staticPages";
+import { cityWeekendPath } from "../lib/eventPaths";
+import { fridayTextPage } from "../lib/fridayText";
+import { getRecurring, getSiteEvents } from "../lib/loadEvents";
+
+const now = new Date();
+const events = await getSiteEvents();
+const recurring = await getRecurring();
+const model = fridayTextPage(events, recurring, now);
+const hub = cityHubPage("springfield");
+const weekend = cityWeekendPath("springfield");
+---
+
+<EventsLayout
+  meta={{ path: model.path, title: model.title, description: model.description, label: "This Friday" }}
+  h1={model.h1}
+  intro={model.intro}
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Events", path: "/events/" },
+    { name: hub.label, path: hub.path },
+    { name: "This Friday", path: model.path },
+  ]}
+>
+  <pre id="friday-text" class="friday-text">{model.text}</pre>
+  <div class="btn-row">
+    <button type="button" class="btn" id="copy-friday-text">Copy text</button>
+  </div>
+  <EventList
+    events={model.events}
+    idPrefix="friday"
+    headings={false}
+    allEvents={events}
+    emptyMessage={model.emptyMessage}
+  />
+  <div class="btn-row">
+    <a class="btn" href={weekend}>Springfield this weekend</a>
+    <a class="btn" href={hub.path}>Springfield events</a>
+  </div>
+  <script is:inline>
+    (function () {
+      const button = document.getElementById("copy-friday-text");
+      const block = document.getElementById("friday-text");
+      if (!button || !block) return;
+      const label = "Copy text";
+      function markCopied() {
+        button.textContent = "Copied";
+        window.setTimeout(function () {
+          button.textContent = label;
+        }, 2000);
+      }
+      function selectText() {
+        const selection = window.getSelection();
+        if (!selection) return;
+        const range = document.createRange();
+        range.selectNodeContents(block);
+        selection.removeAllRanges();
+        selection.addRange(range);
+        try {
+          document.execCommand("copy");
+        } catch {
+          /* The selected text is the fallback when copy is blocked. */
+        }
+      }
+      button.addEventListener("click", function () {
+        const text = block.textContent || "";
+        const clipboard = navigator.clipboard;
+        if (clipboard && clipboard.writeText) {
+          clipboard.writeText(text).then(markCopied).catch(function () {
+            selectText();
+            markCopied();
+          });
+          return;
+        }
+        selectText();
+        markCopied();
+      });
+    })();
+  </script>
+</EventsLayout>
+
+<style>
+  .friday-text {
+    margin: 0;
+    padding: 0.9rem 1rem;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font: inherit;
+    line-height: 1.45;
+    background: var(--tint);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    color: var(--ink);
+  }
+</style>

@@ -8,6 +8,7 @@ import { uniqueUpcomingEvents, weekendRangeLabel, worthTheDrive } from "../lib/c
 import { eventChips } from "../lib/eventRoutes";
 import { WEEKEND_CITY_SLUGS, cityDisplayName, cityWeekendPath, eventCitySlug } from "../lib/eventPaths";
 import { emptyWeekendDaysLine, weekendPageDays } from "../lib/events";
+import { FRIDAY_TEXT_PATH } from "../lib/fridayText";
 import { getRecurring, getSiteEvents } from "../lib/loadEvents";
 
 interface Props {
@@ -77,6 +78,7 @@ const chips = eventChips(city, events, now, "");
     </section>
   )}
   <div class="btn-row">
+    {city === "springfield" && <a class="btn" href={FRIDAY_TEXT_PATH}>This Friday in Springfield</a>}
     <a class="btn" href={hub.path}>Full {name} events calendar</a>
     <a class="btn" href="/events/">Southwest Missouri events</a>
   </div>
