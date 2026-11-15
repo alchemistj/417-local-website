@@ -197,6 +197,16 @@ export const THANK_YOU: StaticPageMeta = {
   indexable: false,
 };
 
+/** Noindex draft. Stays out of the sitemap and llms.txt until it is approved. */
+export const REBUILDING: StaticPageMeta = {
+  path: "/rebuilding-417-local/",
+  title: "How we're rebuilding 417 Local in the open | 417 Local",
+  description:
+    "How Fluid Frame is rebuilding 417 Local in the open: the Search Console baseline, what changed, and what gets measured each week.",
+  label: "Rebuilding 417 Local",
+  indexable: false,
+};
+
 export const GET_STARTED: StaticPageMeta = {
   path: "/get-started/",
   title: "Get Started With a Reviews Consultation | 417 Local",
@@ -218,4 +228,5 @@ export const STATIC_PAGES: StaticPageMeta[] = [
   SUBMIT_EVENT,
   THANK_YOU,
   GET_STARTED,
+  REBUILDING,
 ];

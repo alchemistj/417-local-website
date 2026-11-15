@@ -1,0 +1,202 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { REBUILDING } from "../data/staticPages";
+
+const topPages = [
+  { page: "best-kids-activities", clicks: "616", impressions: "87,879", position: "11.7" },
+  { page: "best-date-night-ideas", clicks: "468", impressions: "36,986", position: "10.5" },
+  { page: "best-fall-festivals", clicks: "385", impressions: "23,355", position: "12.0" },
+  { page: "/events/", clicks: "178", impressions: "15,049", position: "19.8" },
+];
+---
+
+<BaseLayout title={REBUILDING.title} description={REBUILDING.description} path={REBUILDING.path} robots="noindex">
+  <p slot="banner" class="draft-bar">Preview only</p>
+  <div class="band">
+    <div class="container stack-lg">
+      <p class="updated-line">Updated November 15, 2026</p>
+      <h1>How we're rebuilding 417 Local in the open</h1>
+      <p class="byline">Fluid Frame. Started November 2026.</p>
+
+      <section class="stack" aria-labelledby="why-heading">
+        <h2 id="why-heading">Why we're doing this</h2>
+        <p>
+          417 Local is Fluid Frame's open lab for SEO, GEO (answers in AI search), split testing and reporting.
+          Every method runs here first, in public.
+        </p>
+      </section>
+
+      <section class="stack" aria-labelledby="baseline-heading">
+        <h2 id="baseline-heading">Where it started</h2>
+        <p>
+          Baseline, Google Search Console, Jul 11, 2025 – Nov 10, 2026, 16 months, URL-prefix property
+          https://417local.com/.
+        </p>
+        <p>3,189 clicks and 493,217 impressions across 770 pages; no content updates in years.</p>
+        <ul class="stat-row">
+          <li><strong>3,189</strong> <span>clicks</span></li>
+          <li><strong>493,217</strong> <span>impressions</span></li>
+          <li><strong>770</strong> <span>pages</span></li>
+        </ul>
+        <table class="baseline-table">
+          <caption>Top pages</caption>
+          <thead>
+            <tr>
+              <th scope="col">Page</th>
+              <th scope="col">Clicks</th>
+              <th scope="col">Impressions</th>
+              <th scope="col">Avg position</th>
+            </tr>
+          </thead>
+          <tbody>
+            {topPages.map((row) => (
+              <tr>
+                <th scope="row">{row.page}</th>
+                <td data-label="Clicks">{row.clicks}</td>
+                <td data-label="Impressions">{row.impressions}</td>
+                <td data-label="Avg position">{row.position}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p>&ldquo;things to do in springfield mo&rdquo;: 14,028 impressions at position 8 with 23 clicks.</p>
+        <p>&ldquo;this weekend&rdquo; searches: about 2,840 impressions across 288 queries, mostly position 18–60.</p>
+        <p>Old site: WordPress with 54 posts, 22 pages and 932 old event URLs last touched in 2021–2022.</p>
+      </section>
+
+      <section class="stack" aria-labelledby="changed-heading">
+        <h2 id="changed-heading">What we changed</h2>
+        <ul>
+          <li>Rebuilt on Astro.</li>
+          <li>
+            A daily event engine reads official sources and publishes approved events for Springfield, Branson, Joplin,
+            Lebanon and Bolivar.
+          </li>
+          <li>One &ldquo;things to do this weekend&rdquo; page per city.</li>
+          <li>A Southwest Missouri events hub.</li>
+          <li>Every old URL with impressions kept or redirected (67 kept, 680 redirected).</li>
+          <li>Annual-event posts keep the original writer's words with yearly date refreshes.</li>
+          <li>A design-review gate before anything ships.</li>
+        </ul>
+      </section>
+
+      <section class="stack" aria-labelledby="measure-heading">
+        <h2 id="measure-heading">What we'll measure</h2>
+        <p>From FF Reports, weekly:</p>
+        <ul>
+          <li>Clicks, impressions, CTR and position for the top 20 pages.</li>
+          <li>
+            Clicks, impressions, CTR and position for the &ldquo;things to do in springfield mo&rdquo; and &ldquo;this
+            weekend&rdquo; query groups.
+          </li>
+          <li>Indexed pages.</li>
+          <li>Core Web Vitals.</li>
+          <li>Event pages published per week.</li>
+          <li>Split tests run and their results.</li>
+        </ul>
+      </section>
+
+      <section class="stack" aria-labelledby="next-heading">
+        <h2 id="next-heading">What's next</h2>
+        <ul>
+          <li>Launch date (TBD).</li>
+          <li>First split tests.</li>
+          <li>Monthly updates.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .stat-row li {
+    flex: 1 1 8.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 48px;
+    padding: 0.75rem 1rem;
+    background: var(--tint);
+    border-radius: 12px;
+  }
+  .stat-row strong {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .stat-row span { color: var(--muted); }
+  .baseline-table {
+    display: block;
+    overflow-x: auto;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.97rem;
+  }
+  .baseline-table caption {
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .baseline-table th,
+  .baseline-table td {
+    text-align: left;
+    padding: 0.7rem 0.8rem;
+    border-bottom: 1px solid var(--line);
+    vertical-align: middle;
+  }
+  .baseline-table th { background: var(--tint); }
+  /* Phones: the four columns do not fit, so each page becomes one block. */
+  @media (max-width: 640px) {
+    .baseline-table { position: relative; overflow: visible; }
+    .baseline-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .baseline-table tbody,
+    .baseline-table tr { display: block; }
+    .baseline-table tr { padding-block: 0.65rem; border-bottom: 1px solid var(--line); }
+    .baseline-table th[scope="row"] {
+      display: block;
+      width: auto;
+      padding: 0 0 0.35rem;
+      background: none;
+      border: 0;
+    }
+    .baseline-table td {
+      display: inline-block;
+      width: auto;
+      min-height: 44px;
+      padding: 0 0.85rem 0 0;
+      border: 0;
+      vertical-align: top;
+    }
+    .baseline-table td::before {
+      content: attr(data-label);
+      display: block;
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+  }
+  .stack ul { margin: 0; padding-left: 1.4rem; list-style: outside; }
+  .stack li + li { margin-top: 0.35rem; }
+  .stack .stat-row { padding: 0; }
+  .stack .stat-row li + li { margin-top: 0; }
+</style>
