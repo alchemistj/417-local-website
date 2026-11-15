@@ -1,22 +1,20 @@
 # Refresh draft: things-to-do-valentines-day
 
 - **Old URL:** https://417local.com/things-to-do-valentines-day/
-- **What changed:**
-  - 2023 dates (Feb 11 pottery night, Feb 11 Chocolate Walk, Feb 10-11 Soulfire conference) replaced with the to-be-confirmed placeholder
-  - Feb 14 left in the intro and the Finley Farms section because it is Valentine's Day itself; Finley class flagged
-  - Weekly line dancing, the festival and the pottery night flagged for current-schedule checks
-- **Sources used:**
-  - annual-events.csv rows for the six Valentine's events (all unverified; 'Old post (2023) only' for all but Midnight Rodeo, whose weekly schedule was not checked)
-  - Link check run Nov 13, 2026 (finleyfarmsmo.com and others returned 403 to curl, which is inconclusive)
-- **Open CHECK items (6):**
-  1. (Date Night on the Pottery Wheel) 2023 Art Zone Nixa event; no 2027 listing checked
-  2. (Chocolate Walk) 2023 Chocolate Walk; the chamber page layout reference may be out of date
-  3. (Line Dancing) weekly Thursday/Friday lessons and 8pm start are from 2023; not checked against the venue's current schedule
-  4. (Cocktail Making at Finley Farms) 2023 class; confirm Finley Farms offers a Couple's Cocktails class on Feb 14, 2027 (page returned 403 to curl)
-  5. (Beer, Wine, Cheese, & Chocolate Festival) the post gives no date; 2027 edition not confirmed and the venue/organizer (Ozark Empire Fairgrounds events) was not checked
-  6. (Soulfire Marriage Conference) 2023 conference; organizer not named in the CSV and 2027 not confirmed
+- **What changed (rest of the body is the writer's original):**
+  - One update sentence added (Feb 6, 2027 festival)
+  - Beer, Wine, Cheese & Chocolate Festival: date added; "tickets at the door or online" changed to "reserve your tickets online" (the page sells tickets through Stubwire and says the 2026 event sold out)
+  - Other 2023 dates (Art Zone pottery night, Fair Grove Chocolate Walk, Soulfire conference) replaced with "Check the organizer's site for this year's date"
+  - Finley Farms: "all happens on actual Valentines Day (Feb 14th)" replaced with a pointer to its events page; Fair Grove "(on the right hand side of the page)" removed
+- **Sources (curl, checked Nov 15, 2026):**
+  - https://www.ozarkempirefair.com/p/events/ozark-empire-fairgrounds-produced-events/beer-wine-cheese-and-chocolate-festival (200): "the 14th Annual Beer Wine Cheese & Chocolate Festival on February 6, 2027. This is a unique tasting and shopping experience for guests 21 and older."; "Tickets ... will be available for purchase on Stubwire.com on December 14, 2026. This event SOLD OUT for 2026!"
+  - https://www.soulfireministries.org/soulfire-marriage-conference-2027 (200): "Want a soul-filled marriage? ... amazing worship, powerful speakers, dinner, and a retro themed prom!" No date on the page, so none added
+  - https://finleyfarmsmo.com/happenings/ (200 to plain curl): no Valentine's or Couple's Cocktails class listed
+- **Editor notes (not in body):**
+  1. Art Zone, Fair Grove chamber and Midnight Rodeo pages show no Valentine's listing; Midnight Rodeo's Thursday/Friday 8pm lessons are the writer's 2023 text, unverified (Facebook login wall).
+  2. Roundup is thin on confirmed 2027 items (one of six). Consider holding until more organizers post (Dec to Jan).
 
-Marking key: edited spans are **bold**; a removed word or year shows as ~~struck through~~ next to the bold replacement; images appear as [img: alt text]; the original date and byline lines are left as published (set a "last updated" date at publish time).
+Marking key: edited spans are **bold**.
 
 ---
 # 6 Things To Do for Valentine’s Day in 417 Land
@@ -25,7 +23,7 @@ February 6, 2023
 
 By Carla Broderick
 
-**2027 update: this roundup was written for Valentine's Day 2023, and the organizers haven't posted 2027 dates yet, so each date below is marked to be confirmed.**
+**Update: the Beer, Wine, Cheese & Chocolate Festival is on February 6, 2027, so check each event’s site below for this year’s dates before you go.**
 
 Love is in the air. Or hopefully, it will be for you, by the time Feb 14th rolls around. It’s a great time to show a little extra love to that special someone in your life. Or, if you are rocking life solo, go ahead and show a little extra love to yourself, you beautiful soul, you!
 
@@ -41,17 +39,17 @@ Anyway, if getting your hands dirty with your date sounds like a fun time, this 
 
 Art Zone in Nixa will be hosting this event. You and your boo will each get to create and glaze a piece of pottery on the wheel (and maybe even recreate that Ghost scene).
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet].** Check out all the deets [here](https://www.artzonenixa.com/). **[CHECK: 2023 Art Zone Nixa event; no 2027 listing checked]**
+**Check the organizer’s site for this year’s date.** Check out all the deets [here](https://www.artzonenixa.com/).
 
 ## Chocolate Walk
 
 All my single ladies, all my single ladies. And men too. You can get in on this one and treat yo self!
 
-The adorable little town of Fair Grove is having a Chocolate Walk on **[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**.
+The adorable little town of Fair Grove is having a Chocolate Walk. **Check the organizer’s site for this year’s date.**
 
 Take a stroll down their historic Main St and sample your way through chocolate goodness that the shops and merchants will be spoiling you with.
 
-All the info is [here](https://www.fairgrovechamber.org/) (on the right hand side of the page). **[CHECK: 2023 Chocolate Walk; the chamber page layout reference may be out of date]**
+All the info is [here](https://www.fairgrovechamber.org/).
 
 ## Line Dancing
 
@@ -63,7 +61,7 @@ Midnight Rodeo teaches you and your partner how to boot-scoot and boogie on Thur
 
 The dancing lessons won’t start until 8pm, so you’ll have plenty of time to wine and dine before heading on over to the club. Stick around after the lessons to strut your newfound two-step knowledge on the dance floor as the dj plays line-danceable jams late into the night.
 
-Mosey on over [here](https://www.facebook.com/midnightrodeomo) for more info. **[CHECK: weekly Thursday/Friday lessons and 8pm start are from 2023; not checked against the venue's current schedule]**
+Mosey on over [here](https://www.facebook.com/midnightrodeomo) for more info.
 
 ## Cocktail Making at Finley Farms
 
@@ -73,7 +71,7 @@ Kick that romance up a notch by taking your 21 or older date over to their Works
 
 You and your boozed-up love will taste specially paired hors d’oeuvres while learning how to make three unique cocktails.
 
-And it all happens on actual Valentines Day (Feb 14th). Get your tickets [here](https://finleyfarmsmo.com/happenings/). **[CHECK: 2023 class; confirm Finley Farms offers a Couple's Cocktails class on Feb 14, 2027 (page returned 403 to curl)]**
+**Check their [events page](https://finleyfarmsmo.com/happenings/) to see if the class is offered this year.**
 
 ## Beer, Wine, Cheese, & Chocolate Festival
 
@@ -81,7 +79,7 @@ The three ways to any human’s heart: booze, cheese, and chocolate!
 
 Take your plus one (and a readily empty stomach) to eat and drink your way through all the best indulgence 417 land has to offer!
 
-Get your tickets at the door or reserve them online [here](https://www.ozarkempirefair.com/p/events/ozark-empire-fairgrounds-produced-events/beer-wine-cheese-and-chocolate-festival). **[CHECK: the post gives no date; 2027 edition not confirmed and the venue/organizer (Ozark Empire Fairgrounds events) was not checked]**
+**The festival is on February 6, 2027. Reserve your tickets online [here](https://www.ozarkempirefair.com/p/events/ozark-empire-fairgrounds-produced-events/beer-wine-cheese-and-chocolate-festival).**
 
 ## Soulfire Marriage Conference
 
@@ -91,7 +89,7 @@ This conference not only has all the tools to strengthen your marriage, it’s a
 
 The conference is two incredible days of speakers, worship, workshops, and finishes up on Saturday night with dinner and dancing.
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet].** Talk it over with your bride (or groom) and then get all the info/tickets [here](https://www.soulfireministries.org/?fbclid=IwAR0E-TO5fJ9lSKU6l9GAQlXZFKColMG-jYyOugl6zlZBY7drtdR4HWDJhGI). **[CHECK: 2023 conference; organizer not named in the CSV and 2027 not confirmed]**
+**Check the organizer’s site for this year’s date.** Talk it over with your bride (or groom) and then get all the info/tickets [here](https://www.soulfireministries.org/?fbclid=IwAR0E-TO5fJ9lSKU6l9GAQlXZFKColMG-jYyOugl6zlZBY7drtdR4HWDJhGI).
 
 And Much, Much, More
 

@@ -1,29 +1,21 @@
 # Refresh draft: best-fall-festivals-in-springfield-mo
 
 - **Old URL:** https://417local.com/best-fall-festivals-in-springfield-mo/
-- **What changed:**
-  - Every 2024 date line (about 27 events) replaced with the to-be-confirmed placeholder; Harvest Fest and Shepherd's Pumpkin Fest date ranges inside the paragraphs replaced too
-  - Specific 2024 details (ordinals, 'this year' programs, a one-night Rocky Horror screening) left as written and flagged; other festival descriptions untouched
-  - Dead links (Ozark Oktoberfest, Country Roads, Gray/Campbell Farmstead) flagged, not replaced, because no verified replacement exists. Note: title says 27 but the closing paragraph says THIRTY; left as written
-- **Sources used:**
-  - annual-events.csv rows for the fall festivals (all unverified; none shows a 2027 date; Japanese Fall Festival and Cider Days had 2026 dates in other listings but those are past and unverified, so not used)
-  - Link check run Nov 13, 2026: 404s are flagged; hosts that did not respond from this session (e.g. several http:// sites) are not treated as dead
-- **Open CHECK items (13):**
-  1. (Japanese Fall Festival) 2024 program; confirm performances and activities for 2027
-  2. (Seymour Apple Festival) 2024 program details (contests, 5K, parade); official site not re-checked
-  3. (Oktoberfest In Downtown Ozark) 2024 headline band; replace or drop once 2027 lineup is out
-  4. (Oktoberfest In Downtown Ozark) this link now returns 404; no replacement URL is on file
-  5. (Autumn Daze Festival) 'forty-eighth' is the 2024 count; Branson is outside Springfield
-  6. (Marshfield Harvest Days) Facebook profile link not checked; no official page on file
-  7. (The 1860’s Lifestyle Exposition) this link returned 404; try the farmstead's home page and confirm the 2027 expo
-  8. (Republic Pumpkin Daze) '30 years' is the 2024 count
-  9. (Harvest Moon Festival) 'This year' lineup is from 2024
-  10. (Fall Classics: Rocky Horror Picture Show) this was a one-night 2024 Gillioz screening with a 2024 ticket link; consider removing the section unless a 2027 screening is announced
-  11. (Wingapalooza) venue and event features are from 2024; the same Sertoma clubs' Chili Cook-Off (Sat Feb 20, 2027, Expo Center, sertomachilicookoff.com, verified) could be mentioned here if the editor wants a cross-link
-  12. (Country Roads for Down on the Farm Fall) this link returns 404; find the current Country Roads fall page
-  13. (Harvest Fest at Rutledge Wilson Farm Park) the corn-maze weekends are the 2024 pattern; confirm for 2027
+- **What changed (rest of the body is the writer's original):**
+  - One update sentence added; Seymour Apple Festival date set to Sept 9-11, 2027
+  - Every other 2024 date line replaced with "Check the organizer's site for this year's date"; Harvest Fest and Shepherd's PumpkinFest date ranges and the corn-maze weekends replaced with "check ... for this year's dates"
+  - Rocky Horror section removed (one-night 2024 Gillioz screening with a 2024 ticket link)
+  - Dead links removed, text kept: Ozark Oktoberfest (4csertoma.com, 404), Gray/Campbell Farmstead (404), Country Roads fall page (404)
+  - 2024-specific statements made neutral: Japanese Fall Festival performers, Oktoberfest band, Harvest Moon lineup, Autumn Daze "forty-eighth", Pumpkin Daze "30 years" to "more than 30 years"
+  - Closing "THIRTY" changed to "TWENTY-SEVEN" to match the title's 27 (20 festivals plus 7 ongoing after the Rocky Horror removal)
+- **Sources (curl, checked Nov 15, 2026):**
+  - https://seymourapplefestival.com/ (HTTP 200): "Seymour Apple Festival September 9-11, 2027" and "Join Us in 2027!"; menu lists Parade, Contests, Apple Princess, 5K Race
+- **Editor notes (not in body):**
+  1. Japanese Fall Festival, Apple Butter Makin' Days, Republic Pumpkin Daze, Shepherd's PumpkinFest and Wingapalooza show 2026 dates or no 2027 dates, so the neutral wording is used.
+  2. Links that answer 403/406 to curl only (bot blocks, not dead): itsalldowntown.com/ciderdays, explorebranson.com, peacethroughpeople.org, theshepherdofthehills.com; Facebook links load a login shell.
+  3. Wingapalooza section could cross-link the Chili Cook-Off (Sat Feb 20, 2027, sertomachilicookoff.com, verified) if the editor wants; not added (one-update-sentence rule).
 
-Marking key: edited spans are **bold**; a removed word or year shows as ~~struck through~~ next to the bold replacement; images appear as [img: alt text]; the original date and byline lines are left as published (set a "last updated" date at publish time).
+Marking key: edited spans are **bold**.
 
 ---
 # Top 27 Fall Festivals & Activities in Springfield MO and 417 Land
@@ -32,7 +24,7 @@ September 12, 2024
 
 By Carla Broderick
 
-**2027 update: this roundup was written in September 2024, and the organizers haven't posted 2027 festival dates yet, so each date below is marked to be confirmed.**
+**Update: this roundup was written in September 2024; the Seymour Apple Festival has posted its 2027 dates (September 9–11), so check each festival’s site for this year’s dates before you go.**
 
 It’s faaaaaaallllll!!!! Ok, maybe it’s not “officially” fall until September 22nd (who can really trust that though when the “official” end date of fall is December 21st???). But as soon as September hits, I’m ready for all the pumpkins, apple picking, crisp air, crunchy leaves, and of course, fall festivities.
 
@@ -48,13 +40,13 @@ These events are listed by date. So don’t worry if you’ve already missed the
 
 [img: women performing at the japanese fall festival in springfield]
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+Check the organizer’s site for this year’s date
 
 I absolutely love this festival! If you haven’t been to the Japanese Fall Festival at the Mizumoto Japanese Stroll Garden go check it out this year!
 
 The garden is one of the [top things to do in Springfield](https://417local.com/best-things-to-do-in-springfield-mo/) any time of year, but it really comes alive during this festival.
 
-While you’re at the festival make sure to catch a show or two! Our lovely partners from our sister city in Japan will be performing traditional yosakoi dance, storytelling, music, and more. **[CHECK: 2024 program; confirm performances and activities for 2027]**
+While you’re at the festival make sure to catch a show or two! Our lovely partners from our sister city in Japan **have performed** traditional yosakoi dance, storytelling, music, and more.
 
 As you walk the festival you’ll find plenty of Japanese vendors, crafts, and activities.
 
@@ -64,11 +56,11 @@ Stay until dusk and you’ll get to experience the magical glow of hundreds of t
 
 ## Seymour Apple Festival
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+**THURSDAY, SEPTEMBER 9th – SATURDAY, SEPTEMBER 11th, 2027**
 
 There’s a little something for everyone at this Apple Festival. Live entertainment, vendors and crafters, a turtle race, and (as with most great fall festivals) there are also many food offerings to choose from.
 
-Plenty of apple themed activities also fill this fest. You’ll find a Johnny Appleseed contest, a lucky girl will be crowned Apple Princess, you can try your hand at the apple peeling contest, and drool over the entries in the apple baking contest. **[CHECK: 2024 program details (contests, 5K, parade); official site not re-checked]**
+Plenty of apple themed activities also fill this fest. You’ll find a Johnny Appleseed contest, a lucky girl will be crowned Apple Princess, you can try your hand at the apple peeling contest, and drool over the entries in the apple baking contest.
 
 For those of you who like to stay more active, there’s even a 5K run! And for those of us who like to take it easy and actually enjoy life, you can sit on the sidelines and watch the Apple Fest parade.
 
@@ -76,7 +68,7 @@ For those of you who like to stay more active, there’s even a 5K run! And for 
 
 ## [img: food truck fest at ozark empire fairgrounds]MO Food Truck Fest
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+Check the organizer’s site for this year’s date
 
 Anyone who knows me knows that food is my love language. So of course Food Truck Fest is one of my favorite fall fests!!
 
@@ -92,7 +84,7 @@ Burn off all those calories you just consumed by walking around to all of the ve
 
 ## StateoftheOzarks Fest
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+Check the organizer’s site for this year’s date
 
 SOTO (State of the Ozarks) is a community that is made up of local artists, craftsmen, mom and pop shops, and hometown restaurants. Its goal is to help and encourage tradesmen in both business and life.
 
@@ -106,7 +98,7 @@ What makes it even more unique from your average fall fest is that there will be
 
 ## Oktoberfest In Downtown Ozark
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+Check the organizer’s site for this year’s date
 
 Obviously, fall in the Ozarks involves quite a few Oktoberfests. This one in Ozark is definitely worth checking out.
 
@@ -116,15 +108,14 @@ There will obviously be beer. Good beer. Beer from local breweries.
 
 But there will also be plenty of family-friendly games, shopping, food, and live music.
 
-You guys, the live music will include the super awesome band Members Only!!! *insert high-pitched fangirl scream here* **[CHECK: 2024 headline band; replace or drop once 2027 lineup is out]**
+You guys, **in 2024** the live music **included** the super awesome band Members Only!!! *insert high-pitched fangirl scream here*
 
 Oh, and there’s also a 5k run at this one for all of you weirdos out there that like to run during these fall festivals.
 
-[Octoberfest Site](https://4csertoma.com/oktoberfest/) **[CHECK: this link now returns 404; no replacement URL is on file]**
 
 ## Wickman’s Annual Fall Festival
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+Check the organizer’s site for this year’s date
 
 This festival always feels like the official start of fall for our family. Every year it’s one of the first fall events we go to.
 
@@ -136,9 +127,9 @@ For those of us who are a little too tall to ride the ponies, there’s plenty o
 
 ## Autumn Daze Festival
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+Check the organizer’s site for this year’s date
 
-You read that right. This is the forty-eighth time Branson has hosted the Autumn Daze Festival. **[CHECK: 'forty-eighth' is the 2024 count; Branson is outside Springfield]** Needless to say, they’re getting pretty good at it.
+You read that right. **Branson has hosted the Autumn Daze Festival many times.** Needless to say, they’re getting pretty good at it.
 
 Enjoy 100s of craft vendors showing off their wares of glasswork, jewelry, soaps, woodworks, knick-knacks and paddywhacks (can’t actually guarantee the paddywhacks, I’m not sure what a paddywhack is… but I know they’ll have plenty of knick-knacks).
 
@@ -150,7 +141,7 @@ My favorite of this event: fooooooood. They have oh-so-many food trucks to choos
 
 ## Marshfield Harvest Days
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+Check the organizer’s site for this year’s date
 
 Marshfield community knows how to create a welcoming environment for everyone and it shows through at their festivals.
 
@@ -158,11 +149,11 @@ Come visit them for their Marshfield Harvest Days on the square.
 
 Everything you’d want in a fall festival you’ll find here. Vendors, food, live music, and some good ole pumpkin chuckin.
 
-[Marshfield Harvest Days Page](https://www.facebook.com/profile.php?id=100057586954673) **[CHECK: Facebook profile link not checked; no official page on file]**
+[Marshfield Harvest Days Page](https://www.facebook.com/profile.php?id=100057586954673)
 
 ## Marionville AppleFest
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+Check the organizer’s site for this year’s date
 
 Home of the white squirrel!
 
@@ -176,7 +167,7 @@ Keeping true to the apple theme of AppleFest, they hold an apple dessert auction
 
 ## Cider Days — presented by Simmons Bank
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**[img: cider days]
+Check the organizer’s site for this year’s date[img: cider days]
 
 If you haven’t heard of Cider Days, are you really even a local 417er?
 
@@ -192,7 +183,7 @@ And of course, there’s plenty of delicious apple cider!
 
 ## The 1860’s Lifestyle Exposition
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+Check the organizer’s site for this year’s date
 
 Speaking of Ozarks history, the Gray/Campbell Farmstead will open up all of their buildings to the public for their fantastic 1860’s lifestyle expo.
 
@@ -202,11 +193,10 @@ There will be lots of cooking and crafting and a major lack of cell phones or el
 
 I actually love it all and look forward to being able to go and surround myself in the lifestyle of self-sufficiency and living off the land.
 
-[https://www.graycampbellfarmstead.org/index.html](https://www.graycampbellfarmstead.org/index.html) **[CHECK: this link returned 404; try the farmstead's home page and confirm the 2027 expo]**
 
 ## Fall Festival and Antique Market
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+Check the organizer’s site for this year’s date
 
 If you’re looking for a more intimate festival this one’s for you.
 
@@ -220,7 +210,7 @@ Food trucks and dessert vendors have also been invited for you to enjoy.
 
 ## Fair Grove Fall Festival (Heritage Reunion)
 
-[img: blacksmith at the heritage reunion festival in fair grove]**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+[img: blacksmith at the heritage reunion festival in fair grove]Check the organizer’s site for this year’s date
 
 Another one of my favorites!
 
@@ -236,13 +226,13 @@ The fine people who put this event together are quite picky about who they let j
 
 ## Republic Pumpkin Daze
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+Check the organizer’s site for this year’s date
 
 [img: Republic pumpkin daze]This one is seriously so much fun!!!
 
 Huuuuuge pumpkins (we’re talkin over 600lbs), gourds, veggies, flowers, and all sortsa beautifully homegrown produce are brought in from across the land to show off at this festival.
 
-Pumpkin Daze has been going on for 30 years, so they’ve had a bit of practice to make it the awesome event that it is. **[CHECK: '30 years' is the 2024 count]**
+Pumpkin Daze has been going on for **more than** 30 years, so they’ve had a bit of practice to make it the awesome event that it is.
 
 Apart from prize winning pumpkins, you’ll also enjoy rows and rows of vendors, all the delicious food you could want, games, entertainment, and being among a fantastic community of fall festival goers.
 
@@ -250,11 +240,11 @@ Apart from prize winning pumpkins, you’ll also enjoy rows and rows of vendors,
 
 ## Harvest Moon Festival
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+Check the organizer’s site for this year’s date
 
 A tiny little festival, but still worth checking out, the Harvest Moon Festival in Forsyth, Mo has plenty to offer.
 
-This year they’ll be having a dog show, a car show (maybe dogs in cars show?), a kids zone, and a parade. **[CHECK: 'This year' lineup is from 2024]**
+**The festival has featured** a dog show, a car show (maybe dogs in cars show?), a kids zone, and a parade.
 
 Add that to all the food, live music, vendors, and crafters and it’s sure to be a good time.
 
@@ -262,7 +252,7 @@ Add that to all the food, live music, vendors, and crafters and it’s sure to b
 
 ## Ozark Arts & Craft Show
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+Check the organizer’s site for this year’s date
 
 Crafters and artists galore fill the Finley River Park to bring you an arts and craft show of epic proportions.
 
@@ -274,7 +264,7 @@ You’ll work up an appetite walking through all the art filled rows. The event 
 
 ## Apple Butter Makin’ Days
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+Check the organizer’s site for this year’s date
 
 Aaaaaappplle Buuuuuuttter Maaaaaakin Daaaaaays!!!!!!!
 
@@ -296,7 +286,7 @@ And to top it all off, there is live entertainment to put a grove in your step a
 
 ## Art in the Park
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+Check the organizer’s site for this year’s date
 
 Springfieldians congregate at [Sequiota Park](https://417local.com/sequiota-park-springfield/) to enjoy the beautiful autumn foliage, hiking and bicycling trails, and, for one weekend a year, an exposition of the greatest arts and crafts
 
@@ -308,7 +298,7 @@ In line with their effort to invite only the finest of artists to display their 
 
 ## Sparta Persimmon Days Festival
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+Check the organizer’s site for this year’s date
 
 Another small but mighty festival, Persimmon Days makes you feel like a beloved local in the small hometown.
 
@@ -318,23 +308,9 @@ Head on down to the friendly little town of Sparta, Mo and enjoy the vendors and
 
 [https://www.spartapersimmondays.com/home](https://www.spartapersimmondays.com/home)
 
-## Fall Classics: Rocky Horror Picture Show
-
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
-
-Let’s do the time warp agaaaaaain!
-
-This one is a little saucy and not so much a family event, but it definitely is worth mentioning for the adventurous adults out there.
-
-It’s not just a movie showing, it’s a movie experience.
-
-Tickets to this viewing will include interaction kits, commemorative t-shirts, a costume contest, and one of the most fun nights you will possibly ever have going out to the movies. **[CHECK: this was a one-night 2024 Gillioz screening with a 2024 ticket link; consider removing the section unless a 2027 screening is announced]**
-
-[Buy Tickets Here](https://www.etix.com/ticket/p/49235667/fall-classicsrocky-horror-picture-show-2024-springfield-gillioz-theatre?language=en&amp;country=US&amp;searchType=venue)
-
 ## Wingapalooza
 
-**[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**
+Check the organizer’s site for this year’s date
 
 [img: wingapalooza springfield mo]
 
@@ -344,7 +320,7 @@ Well, let me tell you about WINGAPALOOZA!!!!
 
 You guys (and gals), it’s figgin amazeballs.
 
-Multiple 417 restaurants battle it out in the Springfield Expo center to determine who has the best wings in the land. **[CHECK: venue and event features are from 2024; the same Sertoma clubs' Chili Cook-Off (Sat Feb 20, 2027, Expo Center, sertomachilicookoff.com, verified) could be mentioned here if the editor wants a cross-link]**
+Multiple 417 restaurants battle it out in the Springfield Expo center to determine who has the best wings in the land.
 
 AND YOU GET TO BE THE JUDGE.
 
@@ -384,7 +360,6 @@ Country Roads is another place with an incredible amount of entertainment for th
 
 Indoor and outdoor play areas, bouncy pillows, hayrides, and a petting zoo are just a few things to enjoy there. During the fall they up the ante by adding a pumpkin patch, a corn maze, and other fall themed fun.
 
-[https://countryroads.farm/fall-fun-missouri/](https://countryroads.farm/fall-fun-missouri/) **[CHECK: this link returns 404; find the current Country Roads fall page]**
 
 ## Gardener’s Orchard
 
@@ -402,19 +377,17 @@ If you’re in the mood for indulgence, they also make fresh apple doughnuts and
 
 The adorable city farm we all know and love transforms into a wonderland during fall for its Harvest Fest.
 
-Starting **[Date to be confirmed: the organizer hasn't posted 2027 dates yet]** their 5 acre pumpkin patch will be available for the picking. The park concessions will be open and they will have their famous kettle corn for sale!
+**Their** 5 acre pumpkin patch will be available for the picking **(check the park’s page for this year’s dates).** The park concessions will be open and they will have their famous kettle corn for sale!
 
-During the first four weekends of October you can also try your hand at their 2.5 mile corn maze. **[CHECK: the corn-maze weekends are the 2024 pattern; confirm for 2027]** The average time to complete it is about an hour, so make sure to have your walking shoes on. There’s a map you can download to use if you get too lost in the corn maze and need help finding your way out. Don’t worry, we won’t tell.
+**You can also try your hand at their 2.5 mile corn maze.** The average time to complete it is about an hour, so make sure to have your walking shoes on. There’s a map you can download to use if you get too lost in the corn maze and need help finding your way out. Don’t worry, we won’t tell.
 
 [https://www.parkboard.org/272/Special-Events?loxi_pathname=%2Fharvest-fest-2900https://www.parkboard.org/531/Harvest-Fest](https://www.parkboard.org/272/Special-Events?loxi_pathname=%2Fharvest-fest-2900)
 
-##
-
-Shepherd’s Pumpkin Fest
+## Shepherd’s Pumpkin Fest
 
 The Shepherd of the Hills is another farm that transforms during fall.
 
-Starting **[Date to be confirmed: the organizer hasn't posted 2027 dates yet]**, you can take your family to enjoy jeep hayrides, scarecrow building, pumpkin picking, as well as plenty of other fall activities.
+**You** can take your family to enjoy jeep hayrides, scarecrow building, pumpkin picking, as well as plenty of other fall activities **(check their page for this year’s dates).**
 
 While you’re there, make sure to get a scoop of their hand-dipped pumpkin spiced ice cream.
 
@@ -430,6 +403,6 @@ Want to enjoy the cool weather and a slower pace to view 417 land’s fall beaut
 
 # So much to enjoy!
 
-Now that I’ve given you THIRTY amazing fall activities you have no excuse for not getting out there and enjoying something awesome this fall in 417 land!!
+Now that I’ve given you **TWENTY-SEVEN** amazing fall activities you have no excuse for not getting out there and enjoying something awesome this fall in 417 land!!
 
 You’re welcome!

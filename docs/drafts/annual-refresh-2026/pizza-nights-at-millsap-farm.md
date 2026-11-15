@@ -2,17 +2,17 @@
 
 - **Old URL:** https://417local.com/pizza-nights-at-millsap-farm/
 - **What changed:**
-  - Update line added with the to-be-confirmed placeholder; the post itself is evergreen (no dates, prices or hours), so nothing else was changed
-  - Reservation link kept because it still works; the CSV's csasignup.com ticketing URL noted as an alternate for the editor
-  - No season, day or price details added because none are in a verified row
-- **Sources used:**
-  - annual-events.csv, Pizza Night at Millsap Farm row (unverified): millsapfarm.com is a redirect stub and ticketing is at millsapfarm.csasignup.com; no 2026 or 2027 season dates found
-  - Link check run Nov 13, 2026: the post's own reservation link (millsapfarms.com/pizza-club, with an s) returned 200 and is a live Pizza Club page, so it was kept
-- **Open CHECK items (2):**
-  1. (The Ambiance) descriptions (live musicians, picnic tables, buffet-style pizza) are from 2021 and not re-checked against the current season
-  2. (What Are You Waiting For?) link works today, but the CSV lists ticketing at millsapfarm.csasignup.com (could not be opened from this session); confirm which one is current before publishing
+  - One update sentence added with the standing season; nothing else in the body changed (body is the writer's original)
+  - Placeholder and CHECK markers removed; reservation link kept (live)
+- **Sources (curl of https://www.millsapfarms.com/pizza-club, HTTP 200, checked Nov 15, 2026):**
+  - "Nearly every Thursday night, May through October from 6 - 8pm, we invite pizza club members to our farm for pizza."
+  - "Starting in October, pizza club times are 5 -7:30pm due to Daylight Savings." (not used in the update, to keep it short)
+  - Live music, buffet style and Horno wood-fired earthen oven: confirmed on the same page
+- **Editor notes (not in body):**
+  1. The page says "Bring along some chairs, or a picnic blanket to sit on, as seating is limited"; it does not mention picnic tables or seats by the fire (writer's 2021 wording left as is).
+  2. Page lists 2026 musical guests; no dates copied. millsapfarm.csasignup.com was unreachable, so the existing pizza-club link was kept.
 
-Marking key: edited spans are **bold**; a removed word or year shows as ~~struck through~~ next to the bold replacement; images appear as [img: alt text]; the original date and byline lines are left as published (set a "last updated" date at publish time).
+Marking key: edited spans are **bold**.
 
 ---
 # Pizza Nights at Millsap Farm
@@ -21,7 +21,7 @@ April 28, 2021
 
 By Carla Broderick
 
-**2027 update: Millsap Farm's 2027 Pizza Night season dates are [Date to be confirmed: the organizer hasn't posted 2027 dates yet]; reservations go through the link at the bottom of this post.**
+**Update: Pizza Nights run nearly every Thursday night, May through October, from 6 to 8 p.m. (Millsap Farms Pizza Club page); reservations go through the link at the bottom of this post.**
 
 Have you ever experienced a night that was so mystical that it seemed like it was something out of a movie?
 
@@ -35,7 +35,7 @@ But I’ll try. 😉
 
 [img: string lights millsap farm]
 
-Millsap Farm does a phenomenal job of making you feel welcome the moment you step foot on the farm. **[CHECK: descriptions (live musicians, picnic tables, buffet-style pizza) are from 2021 and not re-checked against the current season]**
+Millsap Farm does a phenomenal job of making you feel welcome the moment you step foot on the farm.
 
 The area you gather for pizza night is nestled in a little bit of woods, giving it an intimate feel. They’ve added string lights over head to make the area feel like stepping into an enchanted forest.
 
@@ -89,6 +89,6 @@ The pizzas are taken hot out of the oven and served buffet style so you can try 
 
 I could go on and on about the wonders of Millsap’s Pizza Nights, but the best way to know all there is to know is to go experience it for yourself.
 
-You can make your reservations [here](https://www.millsapfarms.com/pizza-club). **[CHECK: link works today, but the CSV lists ticketing at millsapfarm.csasignup.com (could not be opened from this session); confirm which one is current before publishing]**
+You can make your reservations [here](https://www.millsapfarms.com/pizza-club).
 
 I’ll see you at the farm.

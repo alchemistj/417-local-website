@@ -1,5 +1,7 @@
 # Refresh draft: james-river-float-series-springfield-mo
 
+**HOLD: refresh when organizers post 2027 dates (expected Jan–Mar).**
+
 - **Old URL:** https://417local.com/james-river-float-series-springfield-mo/
 - **What changed:**
   - Seven 2021 float dates replaced with 'month + to-be-confirmed' lines, keeping the original April-October one-Saturday-a-month wording
@@ -14,6 +16,8 @@
   3. (The Where:) meeting point (Springfield Brewing Company) and shuttle are from the 2021 post
   4. (Get Out There) the link redirects to 37 North's general adventures page and no longer shows a James River series
 
+- **Fix pass (Nov 15, 2026):** placeholders removed (month labels and route names kept; one "check the organizer's site" sentence added); CHECK markers removed; sign-up link removed because 37northexpeditions.com/all-trips?category=James%20River%20Series redirects to /all-adventures, which does not list a James River series (checked with curl). No new dated facts added, so no new sources to quote. Series may no longer run; editor to confirm before refresh.
+
 Marking key: edited spans are **bold**; a removed word or year shows as ~~struck through~~ next to the bold replacement; images appear as [img: alt text]; the original date and byline lines are left as published (set a "last updated" date at publish time).
 
 ---
@@ -23,7 +27,7 @@ March 22, 2021
 
 By Carla Broderick
 
-**2027 update: this post describes the 2021 James River Float Series, and no newer series schedule was found, so each date below is marked to be confirmed.**
+**Update: this post describes the 2021 James River Float Series, so check the organizers’ sites for this year’s schedule.**
 
 One of the best ways to explore 417 is floating along on the James River.
 
@@ -39,21 +43,21 @@ Here are the deets on all the awesomeness that awaits you:
 
 ## The When
 
-The float series will be one Saturday a month from April through October. **[CHECK: no 2026 or 2027 series schedule or page was found; confirm the James River Basin Partnership / 37 North series still runs]**
+The float series will be one Saturday a month from April through October. **Check the organizer’s site for this year’s dates.**
 
-**April [Date to be confirmed: the organizer hasn't posted 2027 dates yet]:** **Crighton to Southwood Access**
+**April:** **Crighton to Southwood Access**
 
-**May [Date to be confirmed: the organizer hasn't posted 2027 dates yet]:** **Tailwaters to Rivercut Golf Course**
+**May:** **Tailwaters to Rivercut Golf Course**
 
-**June [Date to be confirmed: the organizer hasn't posted 2027 dates yet]:** **Rivercut to Delaware Town Access**
+**June:** **Rivercut to Delaware Town Access**
 
-**July [Date to be confirmed: the organizer hasn't posted 2027 dates yet]:** **Delaware Town to Shelvin Rock Access**
+**July:** **Delaware Town to Shelvin Rock Access**
 
-**August [Date to be confirmed: the organizer hasn't posted 2027 dates yet]:** **Shelvin Rock to Hooten Town Access**
+**August:** **Shelvin Rock to Hooten Town Access**
 
-**September [Date to be confirmed: the organizer hasn't posted 2027 dates yet]:** **Hooten Town to H.L. Kerr Access (Overnight)**
+**September:** **Hooten Town to H.L. Kerr Access (Overnight)**
 
-**October [Date to be confirmed: the organizer hasn't posted 2027 dates yet]:** **H.L. Kerr to Galena** **[CHECK: the seven route names are the 2021 sections and their 37 North trip pages now return 404; confirm routes before publishing]**
+**October:** **H.L. Kerr to Galena**
 
 ## The What
 
@@ -67,7 +71,7 @@ That’s right. Fun and Educating!
 
 You will start each trip by meeting up with your fellow floaters at Springfield Brewing Company.
 
-From there, 37 North Expeditions will shuttle you to the James River starting point for that week. **[CHECK: meeting point (Springfield Brewing Company) and shuttle are from the 2021 post]**
+From there, 37 North Expeditions will shuttle you to the James River starting point for that week.
 
 If you go to each trip of the series (dooooo it!) you will be able to cover an impressive amount of James River.
 
@@ -79,6 +83,6 @@ There’s so much to explore in our beautiful 417 land. The magnificent rivers a
 
 What better way to explore one of those rivers than by joining in on this James River Float Series.
 
-Go sign up [here](https://www.37northexpeditions.com/all-trips?category=James%20River%20Series). **[CHECK: the link redirects to 37 North's general adventures page and no longer shows a James River series]**
+**Check the organizers’ sites for sign-up details.**
 
 See you on the river!!

@@ -1,5 +1,7 @@
 # Refresh draft: mom-prom-in-buffalo-mo
 
+**RETIRE: last held 2021; already 301s to /blog/ on the new site.** (Source: redirect-map.csv row `/mom-prom-in-buffalo-mo/ -> /blog/`, redirect-existing; the old live site at 417local.com still serves the post, so the 301 itself was not checked on the new site. Eventbrite page shows "Saturday, March 6, 2021" and "Event ended". Body left unchanged per instruction and still contains placeholders and CHECK markers; do not publish.)
+
 - **Old URL:** https://417local.com/mom-prom-in-buffalo-mo/
 - **What changed:**
   - March 6th references replaced with the to-be-confirmed placeholder; 'last year' made 'in 2020' (relative to the Feb 2021 post date)

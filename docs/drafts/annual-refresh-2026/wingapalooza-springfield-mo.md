@@ -2,44 +2,39 @@
 
 - **Old URL:** https://417local.com/wingapalooza-springfield-mo/
 - **What changed:**
-  - Year removed from title and 'at a glance' heading; 2026 date replaced with the to-be-confirmed placeholder, 2026 event noted as past
-  - Update line added pointing to the verified Chili Cook-Off (Feb 20, 2027)
-  - 2026 hours, venue, prices, ticket outlets and the Nov 6 poker night kept as written (poker tense changed to past) and flagged
-- **Sources used:**
-  - annual-events.csv, Sertoma Chili Cook-Off row (status=verified): Feb 20, 2027, Expo Center, sertomachilicookoff.com
-  - annual-events.csv, Wingapalooza row (unverified): wingapalooza.com showed 2026 ticket links and no 2027 date (checked Nov 13, 2026)
-- **Open CHECK items (6):**
-  1. (Wingapalooza Springfield MO ~~2026~~: Date, Tickets and What to Expect) retitle with the year once Sertoma posts the next date
-  2. (Wingapalooza Springfield MO ~~2026~~: Date, Tickets and What to Expect) venue, hours and prices are from the 2026 event (Sat Nov 7); wingapalooza.com shows no 2027 details yet
-  3. (Wingapalooza ~~2026~~ at a glance) 2026 hours
-  4. (Wingapalooza ~~2026~~ at a glance) 2026 prices
-  5. (What to expect) 2027 poker night not confirmed
-  6. (Tickets) 2026 prices and sales outlets; confirm for the next event
-
-Marking key: edited spans are **bold**; a removed word or year shows as ~~struck through~~ next to the bold replacement; images appear as [img: alt text]; the original date and byline lines are left as published (set a "last updated" date at publish time).
+  - Original title, lead and at-a-glance block restored to the writer's words; only the lead's tense changed (is/run/gets to was/ran/got) because the Nov 7, 2026 event has passed
+  - Poker line: "hosts" changed to "hosted" (past event); no other body changes
+  - One update sentence added; all bracketed placeholders and CHECK markers removed
+- **Sources (curl, checked Nov 15, 2026):**
+  - https://www.sertomachilicookoff.com (HTTP 200): "February 20th 2027 Expo Center, Springfield MO"
+  - https://www.wingapalooza.com (HTTP 200 after redirect): shows "Wingapalooza 2026", "Friday Nov 6 Poker Toruanment", "Online Discounted $25 ($30 day of at door) Also Available at Hyvee &Rapid Roberts"; no 2027 date found, so the update says only to check the site
+- **Editor notes (not in body):**
+  1. The site does not state "11 a.m. to 5 p.m." as such (shows anthem 11:25, awards 5:00); left as the writer's original.
+  2. Neither site says the same Sertoma clubs run both events, so the update names only "Sertoma".
+  3. When Sertoma posts 2027 dates, retitle/refresh then.
 
 ---
-# Wingapalooza Springfield MO ~~2026~~: Date, Tickets and What to Expect **[CHECK: retitle with the year once Sertoma posts the next date]**
+# Wingapalooza Springfield MO 2026: Date, Tickets and What to Expect
 
 November 1, 2026
 
 By Carla Broderick
 
-**Update: Wingapalooza 2026 was Saturday, Nov. 7, and no 2027 date has been posted, but the same Sertoma clubs' Chili Cook-Off is Saturday, Feb. 20, 2027, at the Expo Center ([sertomachilicookoff.com](https://www.sertomachilicookoff.com)).**
+**Update: Wingapalooza 2026 has taken place, so check [wingapalooza.com](https://wingapalooza.com) for the next date; Sertoma’s Chili Cook-Off is Saturday, Feb. 20, 2027, at the Expo Center ([sertomachilicookoff.com](https://www.sertomachilicookoff.com)).**
 
-Wingapalooza **is held at the Springfield Expo Center; [Date to be confirmed: the organizer hasn't posted 2027 dates yet].** Doors run from 11 a.m. to 5 p.m., and your ticket gets you wing samples from local restaurants, all in one building. **[CHECK: venue, hours and prices are from the 2026 event (Sat Nov 7); wingapalooza.com shows no 2027 details yet]**
+Wingapalooza 2026 **was** Saturday, November 7 at the Springfield Expo Center. Doors **ran** from 11 a.m. to 5 p.m., and your ticket **got** you wing samples from local restaurants, all in one building.
 
-## Wingapalooza ~~2026~~ at a glance
+## Wingapalooza 2026 at a glance
 
-- Date: **[Date to be confirmed: the organizer hasn't posted 2027 dates yet]** (**2026 was Saturday, November 7, 2026**)
+- Date: Saturday, November 7, 2026
 
-- Time: 11 a.m. to 5 p.m. **[CHECK: 2026 hours]**
+- Time: 11 a.m. to 5 p.m.
 
 - Where: Springfield Expo Center, 635 E. St. Louis St., Springfield, MO 65806
 
 - Put on by: Sertoma Clubs of Springfield
 
-- Tickets: $25 online in advance, $30 at the door ([wingapalooza.com](https://wingapalooza.com)) **[CHECK: 2026 prices]**
+- Tickets: $25 online in advance, $30 at the door ([wingapalooza.com](https://wingapalooza.com))
 
 ## What to expect
 
@@ -47,11 +42,11 @@ Wingapalooza is a wing tasting event. Restaurants and businesses from around the
 
 Expect a crowd. Plan on lines at the popular booths. There is live music and a wing eating contest during the day; the schedule is on the official site.
 
-**In 2026, the night before (Friday, November 6),** Sertoma also **hosted** a Texas Hold ‘Em poker tournament with live music at the Expo Center. Details are on the official site. **[CHECK: 2027 poker night not confirmed]**
+The night before, on Friday, November 6, Sertoma also **hosted** a Texas Hold ‘Em poker tournament with live music at the Expo Center. Details are on the official site.
 
 ## Tickets
 
-Advance tickets are $25 online through [wingapalooza.com](https://wingapalooza.com), or $30 at the door on the day. You can also buy them at Hy-Vee and Rapid Robert’s stores. **[CHECK: 2026 prices and sales outlets; confirm for the next event]**
+Advance tickets are $25 online through [wingapalooza.com](https://wingapalooza.com), or $30 at the door on the day. You can also buy them at Hy-Vee and Rapid Robert’s stores.
 
 ## Tips for going
 
