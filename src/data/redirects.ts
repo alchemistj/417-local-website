@@ -55,6 +55,10 @@ export function buildRedirects(): Redirect[] {
   }
   for (const [pattern, dest] of Object.entries(patterns)) add(toVercelPattern(pattern), dest);
   for (const [source, dest] of Object.entries(imageRedirects)) add(source, dest);
+  // Launch package (Nov 14): every other old WordPress upload and author page
+  // get a home instead of a 403/404. These come after the specific rules above.
+  add("/wp-content/uploads/:path*", "/");
+  add("/author/:path*", "/blog/");
   // City-first event URLs. Flat category pages moved under Springfield.
   // food-and-drink has no page in this export, so it is not redirected at a missing address.
   // The five weekend cities 301 to the flat keyword URL. The other cities 301 to their hub.

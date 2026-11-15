@@ -288,6 +288,16 @@
       "statusCode": 301
     },
     {
+      "source": "/wp-content/uploads/:path*",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
       "source": "/events/this-weekend",
       "destination": "/things-to-do-in-springfield-mo-this-weekend/",
       "statusCode": 301
