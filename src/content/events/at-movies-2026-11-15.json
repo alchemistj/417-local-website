@@ -1,0 +1,36 @@
+{
+  "id": "f86cc45e-3f67-4002-88d7-9e8dc7d10d3b",
+  "slug": "at-the-movies",
+  "title": "At The Movies",
+  "seo_title": "At The Movies in Bolivar, MO on November 15, 2026",
+  "description": "At The Movies is a community and family event hosted by The Heights Church. It takes place on November 15, 2026, at 4787 S. 135th Rd in Bolivar, Missouri. The start time is TBD.",
+  "start": "2026-11-15",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "4787 S. 135th Rd , Bolivar, MO, United States, Missouri 65613",
+  "address": "Bolivar, MO",
+  "city": "Bolivar",
+  "state": "MO",
+  "organizer": {
+    "name": "The Heights Church",
+    "website": null
+  },
+  "categories": [
+    "community",
+    "family",
+    "festivals"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/at-the-movies-eid3a0eb0aio4",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy83YTc4OWViM2Y2ZGNlYjliNjU5MWM3ZTAxODgxNWI5NGYyOGQ5ZjFkN2JiMzY5MGY1NjZlMTc1YTkyODEzY2EwLXJpbWctdzEyMDAtaDQzMy1kYzA4MDgwOC1nbWlyP3Y9MTc5NDY0ODQ4OA.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/at-the-movies-eid3a0eb0aio4"
+  ],
+  "updated_at": "2026-11-15T10:32:51.029Z",
+  "public_slug": "at-movies-2026-11-15",
+  "city_slug": "bolivar",
+  "path": "/events/bolivar/at-movies-2026-11-15/",
+  "action_type": "details"
+}

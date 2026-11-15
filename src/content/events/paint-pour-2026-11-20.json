@@ -1,0 +1,33 @@
+{
+  "id": "40ba70ce-cf76-43f4-a8a5-8bcb920108cf",
+  "slug": "paint-pour",
+  "title": "Paint & Pour",
+  "seo_title": "Paint & Pour at Big Cedar Lodge in Ridgedale, MO",
+  "description": "Paint & Pour is a painting class where an art instructor walks you through step-by-step instructions in a fun, laid-back setting. No painting skills are required, and it is described as a way to create a piece with family and friends. It takes place Friday, November 20, 2026, from 10:00 AM to 12:00 PM at Big Cedar Lodge, 190 Top of the Rock Rd in Ridgedale, MO.",
+  "start": "2026-11-20T16:00:00+00:00",
+  "end": "2026-11-20T18:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Big Cedar Lodge",
+  "address": "190 Top of the Rock rd, Ridgedale, MO, 65739",
+  "city": "Ridgedale",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "classes-and-workshops"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://bigcedar.com/activity/paint-pour",
+  "image_url": "https://bigcedar.com/wp-content/uploads/2019/12/Paint-and-Pour-e1772837388745.jpg",
+  "source_urls": [
+    "https://bigcedar.com/activity/paint-pour"
+  ],
+  "updated_at": "2026-11-15T10:32:51.029Z",
+  "public_slug": "paint-pour-2026-11-20",
+  "city_slug": "ridgedale",
+  "path": "/events/ridgedale/paint-pour-2026-11-20/",
+  "action_type": "details"
+}

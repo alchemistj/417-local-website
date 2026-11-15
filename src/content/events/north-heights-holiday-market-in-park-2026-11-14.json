@@ -2,8 +2,8 @@
   "id": "109e7277-9ec8-44db-8bf9-77af61cbced6",
   "slug": "north-heights-holiday-market-in-the-park",
   "title": "North Heights Holiday Market in the Park",
-  "seo_title": "North Heights Holiday Market in the Park, Joplin MO",
-  "description": "North Heights Holiday Market in the Park is an outdoor holiday market in Joplin, Missouri. It takes place on November 14, 2026, with the time to be determined, at 610 W F Street, Joplin, MO 64801.",
+  "seo_title": "North Heights Holiday Market in the Park, Joplin",
+  "description": "This is the last North Heights Market of the season, where you can shop vendors selling handmade crafts, vintage finds, art, home decor, fashion, and treats, and pick up holiday gifts from local artisans. Food trucks and vendors will be on hand for lunch, with live music from local musicians and activities for kids. It takes place November 14, 2026 (Time TBD) at 610 W F Street in Joplin, MO, with the vendor line-up to be announced closer to the event.",
   "start": "2026-11-14",
   "end": null,
   "timezone": "America/Chicago",
@@ -17,6 +17,9 @@
     "website": null
   },
   "categories": [
+    "classes-and-workshops",
+    "kids",
+    "food-and-drink",
     "outdoors",
     "holiday"
   ],
@@ -27,7 +30,7 @@
   "source_urls": [
     "https://happeningnext.com/event/north-heights-holiday-market-in-the-park-eid3a0dpig4wr"
   ],
-  "updated_at": "2026-11-13T17:13:44.902Z",
+  "updated_at": "2026-11-15T10:32:51.029Z",
   "public_slug": "north-heights-holiday-market-in-park-2026-11-14",
   "city_slug": "joplin",
   "path": "/events/joplin/north-heights-holiday-market-in-park-2026-11-14/",

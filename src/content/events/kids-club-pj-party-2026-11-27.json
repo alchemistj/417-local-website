@@ -1,0 +1,33 @@
+{
+  "id": "0b426bf6-0c30-47b4-9f2c-f57efd2da219",
+  "slug": "kids-club-pj-party",
+  "title": "Kids’ Club PJ Party",
+  "seo_title": "Kids' Club PJ Party at Fun Mountain, Nov 27",
+  "description": "Kids' Club PJ Party is a Christmas-themed evening where children join Santa's elves for holiday adventure while parents can enjoy a night out at one of the award-winning dining locations. It takes place at the Kids' Nature Discovery Center at Fun Mountain on Friday, November 27, 2026, from 5:00 PM to 8:00 PM.",
+  "start": "2026-11-27T23:00:00+00:00",
+  "end": "2026-11-28T02:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Kids’ Nature Discovery Center at Fun Mountain",
+  "address": null,
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://bigcedar.com/activity/kids-club-pj-party",
+  "image_url": "https://bigcedar.com/wp-content/uploads/2022/07/home-for-holidays-christmas-pj-party-scaled.jpeg",
+  "source_urls": [
+    "https://bigcedar.com/activity/kids-club-pj-party"
+  ],
+  "updated_at": "2026-11-15T10:32:51.029Z",
+  "public_slug": "kids-club-pj-party-2026-11-27",
+  "city_slug": "branson",
+  "path": "/events/branson/kids-club-pj-party-2026-11-27/",
+  "action_type": "details"
+}

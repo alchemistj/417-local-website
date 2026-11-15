@@ -1,0 +1,33 @@
+{
+  "id": "85bcaea9-7f61-44e2-8373-496cc733b277",
+  "slug": "fishing-fridays",
+  "title": "Fishing Fridays",
+  "seo_title": "Fishing Fridays at Bent Hook Marina on Dec 4, 2026",
+  "description": "Fishing Fridays is an outdoors event at Bent Hook Marina where you can rent a fishing rod for $10 and get 25% off fishing vessels every Friday. It takes place on Friday, December 4, 2026, from 9:00 AM to 5:00 PM.",
+  "start": "2026-12-04T15:00:00+00:00",
+  "end": "2026-12-04T23:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Bent Hook Marina",
+  "address": null,
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://bigcedar.com/promotion/fishing-fridays",
+  "image_url": "https://bigcedar.com/wp-content/uploads/2020/01/Boat-Fishing-landscape.jpg",
+  "source_urls": [
+    "https://bigcedar.com/promotion/fishing-fridays"
+  ],
+  "updated_at": "2026-11-15T10:32:51.029Z",
+  "public_slug": "fishing-fridays-2026-12-04",
+  "city_slug": "branson",
+  "path": "/events/branson/fishing-fridays-2026-12-04/",
+  "action_type": "details"
+}

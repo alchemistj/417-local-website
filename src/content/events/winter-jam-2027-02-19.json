@@ -1,0 +1,34 @@
+{
+  "id": "4bc4719a-cd9f-4576-a116-ffcec146b8e1",
+  "slug": "winter-jam",
+  "title": "Winter Jam",
+  "seo_title": "Winter Jam 2027 at Great Southern Bank Arena, Springfield",
+  "description": "Winter Jam 2027 is a Christian music concert featuring Crowder, Anne Wilson, Andy Mineo ft. Magic & Bird, Strings & Heart, Terrian, Red, and NewSong, with a message from speaker Zane Black. A Pre-Jam Party with Natural State, CJ Emulous, and Mary-Clair starts earlier, and no advance tickets are required, with a $15 donation at the door. It takes place Friday, February 19, 2027, with doors at 6:00 PM and the show at 7:00 PM, at Great Southern Bank Arena in Springfield, MO.",
+  "start": "2027-02-20T01:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Great Southern Bank Arena",
+  "address": null,
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Great Southern Bank Arena",
+    "website": "https://greatsouthernbankarena.com/"
+  },
+  "categories": [
+    "networking",
+    "live-music"
+  ],
+  "price": "$15 donation at the door",
+  "is_free": false,
+  "registration_url": "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4097",
+  "image_url": null,
+  "source_urls": [
+    "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4097"
+  ],
+  "updated_at": "2026-11-15T10:32:51.029Z",
+  "public_slug": "winter-jam-2027-02-19",
+  "city_slug": "springfield",
+  "path": "/events/springfield/winter-jam-2027-02-19/",
+  "action_type": "door"
+}

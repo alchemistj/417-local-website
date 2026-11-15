@@ -3,7 +3,7 @@
   "slug": "hill-bolivar-christmas-caroling",
   "title": "Hill Bolivar Christmas Caroling",
   "seo_title": "Hill Bolivar Christmas Caroling in Bolivar, MO",
-  "description": "Hill Bolivar Christmas Caroling is a holiday event where people gather to sing Christmas carols. It takes place on December 16, 2026, with the time to be determined, at 2103 S Springfield Ave in Bolivar, Missouri.",
+  "description": "Hill Bolivar Christmas Caroling is a night of singing Christmas songs in local neighborhoods, held in place of the normal midweek service. The group meets at The Hill Bolivar at 6:00 PM and heads out together to share songs, smiles, and fellowship. It takes place on December 16, 2026, starting at 2103 S Springfield Ave in Bolivar, MO.",
   "start": "2026-12-16",
   "end": null,
   "timezone": "America/Chicago",
@@ -17,6 +17,7 @@
     "website": null
   },
   "categories": [
+    "community",
     "holiday"
   ],
   "price": null,
@@ -26,7 +27,7 @@
   "source_urls": [
     "https://happeningnext.com/event/hill-bolivar-christmas-caroling-eid3a0eakurt5"
   ],
-  "updated_at": "2026-11-13T17:13:44.902Z",
+  "updated_at": "2026-11-15T10:32:51.029Z",
   "public_slug": "hill-bolivar-christmas-caroling-2026-12-16",
   "city_slug": "bolivar",
   "path": "/events/bolivar/hill-bolivar-christmas-caroling-2026-12-16/",

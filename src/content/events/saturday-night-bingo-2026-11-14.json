@@ -2,8 +2,8 @@
   "id": "5fceb7fc-3d85-45ca-84db-b4a2b0dc13a4",
   "slug": "saturday-night-bingo",
   "title": "SATURDAY NIGHT BINGO",
-  "seo_title": "Saturday Night Bingo in Bolivar, MO on Nov 14, 2026",
-  "description": "Saturday Night Bingo is a community bingo event where you can play at the American Legion Howard S. Keeling Post 138. It takes place on November 14, 2026, with the time to be determined, at 1424 W Broadway St in Bolivar, Missouri.",
+  "seo_title": "Saturday Night Bingo at American Legion Post 138, Bolivar",
+  "description": "Saturday night bingo at American Legion Howard S. Keeling Post 138 in Bolivar, Missouri, with BINGO games, Pull-Tabs, and Early Birds, plus lasagna on special in the kitchen and a bar open for adult beverages. Veterans and active service members get a free 6-pack or can upgrade to a 9-pack for $5, and the post is collecting non-perishable food items in November and December. It is for ages 16 and older, free to attend, and takes place November 14, 2026 (Time TBD) at 1424 W Broadway St.",
   "start": "2026-11-14",
   "end": null,
   "timezone": "America/Chicago",
@@ -20,15 +20,15 @@
     "community"
   ],
   "price": null,
-  "is_free": null,
+  "is_free": true,
   "registration_url": "https://happeningnext.com/event/saturday-night-bingo-eid3a0eah36g9",
   "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czkvYmFubmVycy9mZTdiNGE3YWQ5NTI4YWQyNjY1ZGJhNGFmNmUyMDlhMzJmZjhjOTViNTFmNjcyNTExYWNiZTE4OGE0MzM2YjJjLXJpbWctdzg0MC1oMTI2MC1kYzA4MDgwOC1nbWlyP3Y9MTc5NDM3MzQwOQ.avif",
   "source_urls": [
     "https://happeningnext.com/event/saturday-night-bingo-eid3a0eah36g9"
   ],
-  "updated_at": "2026-11-13T17:13:44.902Z",
+  "updated_at": "2026-11-15T10:32:51.029Z",
   "public_slug": "saturday-night-bingo-2026-11-14",
   "city_slug": "bolivar",
   "path": "/events/bolivar/saturday-night-bingo-2026-11-14/",
-  "action_type": "details"
+  "action_type": "show_up"
 }

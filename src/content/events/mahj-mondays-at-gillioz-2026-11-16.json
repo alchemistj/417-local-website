@@ -3,7 +3,7 @@
   "slug": "mahj-mondays-at-the-gillioz",
   "title": "Mahj Mondays at the Gillioz",
   "seo_title": "Mahj Mondays at the Gillioz in Springfield, MO",
-  "description": "Mahj Mondays at the Gillioz takes place on Monday, November 16, 2026, from 5:30 PM to 8:30 PM at The Gallery at the Gillioz Theatre, 325 Park Central E. in Springfield, MO. Admission is free, and this social, arts-minded evening is open to a general audience.",
+  "description": "Mahj Mondays is a free open play night for American Mahjong at The Gallery at the Gillioz Theatre, held with Blooming Bams. You can drop in or stay all evening; all skill levels are welcome, but players need to already know American Mahjong under NMJL rules and bring their own 2026 NMJL card. It runs Monday, November 16, 2026, from 5:30 PM to 8:30 PM at 325 Park Central E. in Springfield, MO.",
   "start": "2026-11-16T23:30:00+00:00",
   "end": "2026-11-17T02:30:00+00:00",
   "timezone": "America/Chicago",
@@ -12,7 +12,7 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "The Gallery at the Gillioz",
+    "name": "The Gallery at the Gillioz in collaboration with Blooming Bams",
     "website": null
   },
   "categories": [
@@ -25,7 +25,7 @@
   "source_urls": [
     "https://gillioztheatre.com/event/mahj-mondays-at-the-gillioz-4"
   ],
-  "updated_at": "2026-11-13T17:13:44.902Z",
+  "updated_at": "2026-11-15T10:32:51.029Z",
   "public_slug": "mahj-mondays-at-gillioz-2026-11-16",
   "city_slug": "springfield",
   "path": "/events/springfield/mahj-mondays-at-gillioz-2026-11-16/",

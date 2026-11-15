@@ -1,0 +1,33 @@
+{
+  "id": "4ebaf2f4-ba93-4614-8060-67b860a113d2",
+  "slug": "chick-fil-a-food-truck",
+  "title": "Chick-fil-A Food Truck",
+  "seo_title": "Chick-fil-A Food Truck at The Market in Lebanon, MO",
+  "description": "The Branson Chick-fil-A team is bringing a Chick-fil-A food truck to The Market in Lebanon, where you can stop by for food. It runs Tuesday, November 17, 2026, from 11:00 AM to 7:00 PM at 323 North Jefferson, Lebanon, MO.",
+  "start": "2026-11-17T17:00:00+00:00",
+  "end": "2026-11-18T01:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "The Market",
+  "address": "323 North Jefferson, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/chick-fil-a-food-truck2222222222222222222222222222222",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/chick-fil-a-food-truck2222222222222222222222222222222"
+  ],
+  "updated_at": "2026-11-15T10:32:51.029Z",
+  "public_slug": "chick-fil-food-truck-2026-11-17",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/chick-fil-food-truck-2026-11-17/",
+  "action_type": "details"
+}

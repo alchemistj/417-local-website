@@ -1,0 +1,33 @@
+{
+  "id": "67327f76-365b-44fa-b881-6825b8bc6f2c",
+  "slug": "shucked",
+  "title": "SHUCKED",
+  "seo_title": "SHUCKED at Hammons Hall in Springfield, MO",
+  "description": "SHUCKED is a Broadway musical comedy about Maizy and Beau's wedding, which is thrown into question when the corn protecting Cob County starts to die and someone must venture beyond the town's borders for answers. It is recommended for ages 10+ and contains adult themes, some adult language and corny innuendo. It plays Tuesday, January 19, 2027 at 7:30 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO, with shows running January 19-21.",
+  "start": "2027-01-20T01:30:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Juanita K. Hammons Hall for the Performing Arts",
+  "address": "901 S. National Ave.",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Juanita K. Hammons Hall for the Performing Arts",
+    "website": "https://www.hammonshall.com/"
+  },
+  "categories": [
+    "arts-and-theater"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.hammonshall.com/viewshow.aspx?ID=4083",
+  "image_url": null,
+  "source_urls": [
+    "https://www.hammonshall.com/viewshow.aspx?ID=4083"
+  ],
+  "updated_at": "2026-11-15T10:32:51.029Z",
+  "public_slug": "shucked-2027-01-19",
+  "city_slug": "springfield",
+  "path": "/events/springfield/shucked-2027-01-19/",
+  "action_type": "tickets"
+}

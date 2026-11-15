@@ -2,8 +2,8 @@
   "id": "26297d4d-ca13-4656-bb4a-e2eda79c1442",
   "slug": "santa-is-missing-d-d-one-shot",
   "title": "Santa is Missing D&D one shot",
-  "seo_title": "Santa is Missing D&D One Shot in Joplin, MO",
-  "description": "Santa is Missing is a Dungeons & Dragons one shot, a single-session tabletop game. It takes place on December 12, 2026, with the time still to be determined, at 2002 S Tyler Ave. in Joplin, MO.",
+  "seo_title": "Santa Is Missing D&D One-Shot in Joplin, MO",
+  "description": "Santa Is Missing! is a holiday-themed D&D one-shot set at the North Pole, where your party is hired by the Elves to track down Santa and bring him back before time runs out. Tickets are $10 per person and include hot cider or hot chocolate, freshly baked cookies, and a new dice set to keep; seats are limited and RSVP is needed. It takes place December 12, 2026 (Time TBD) at 2002 S Tyler Ave. in Joplin, MO.",
   "start": "2026-12-12",
   "end": null,
   "timezone": "America/Chicago",
@@ -31,9 +31,9 @@
   "source_urls": [
     "https://happeningnext.com/event/santa-is-missing-dandampd-one-shot-eid3a0eaelw9n"
   ],
-  "updated_at": "2026-11-13T17:13:44.902Z",
+  "updated_at": "2026-11-15T10:32:51.029Z",
   "public_slug": "santa-is-missing-d-d-one-shot-2026-12-12",
   "city_slug": "joplin",
   "path": "/events/joplin/santa-is-missing-d-d-one-shot-2026-12-12/",
-  "action_type": "details"
+  "action_type": "rsvp"
 }

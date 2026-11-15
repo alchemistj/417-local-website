@@ -1,0 +1,36 @@
+{
+  "id": "dcc91d96-374d-4ae9-9725-b910750d9fbd",
+  "slug": "lights-of-remembrance",
+  "title": "Lights of Remembrance",
+  "seo_title": "Lights of Remembrance in Bolivar, MO on Nov 16, 2026",
+  "description": "Lights of Remembrance is a community and family festival event hosted by Citizens Memorial Hospital. It takes place on November 16, 2026 (Time TBD) at 1500 N Oakland Ave in Bolivar, Missouri.",
+  "start": "2026-11-16",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "1500 N Oakland Ave, Bolivar, MO, United States, Missouri 65613",
+  "address": "1500 N Oakland Ave, Bolivar, MO 65613-3011, United States, Bolivar, MO",
+  "city": "Bolivar",
+  "state": "MO",
+  "organizer": {
+    "name": "Citizens Memorial Hospital",
+    "website": null
+  },
+  "categories": [
+    "community",
+    "family",
+    "festivals"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/lights-of-remembrance-eid3a0eb0air2",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czQvYmFubmVycy9mMTY4NTI1ODVmZDJkNDJjNDA5N2Y4MTNiYzUyZGUxN2JjNWJiMzBmMTc0YzVkZmIzNGNkNWFiMzViMGUyNjIwLXJpbWctdzEyMDAtaDY2Ni1kY2Y4ZjhmOC1nbWlyP3Y9MTc5NDY0ODQ4OA.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/lights-of-remembrance-eid3a0eb0air2"
+  ],
+  "updated_at": "2026-11-15T10:32:51.029Z",
+  "public_slug": "lights-of-remembrance-2026-11-16",
+  "city_slug": "bolivar",
+  "path": "/events/bolivar/lights-of-remembrance-2026-11-16/",
+  "action_type": "details"
+}

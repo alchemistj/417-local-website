@@ -1,0 +1,37 @@
+{
+  "id": "a4773c68-7e09-4a0c-a9c5-b82472a7ac41",
+  "slug": "dessert-night-out",
+  "title": "Dessert Night Out",
+  "seo_title": "Dessert Night Out in Lebanon, MO on Nov 20, 2026",
+  "description": "Dessert Night Out is the first of hopefully many dessert-only nights, offering a limited, indulgent dessert menu that differs from the usual Carmen's offerings. It is listed under community, family, live music, and food and drink. It takes place on November 20, 2026 (Time TBD) at 229 W Commercial St in Lebanon, MO.",
+  "start": "2026-11-20",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "229 Commercial Street, Lebanon, MO",
+  "address": "229 W Commercial St, Lebanon, MO 65536-3145, United States, Lebanon, MO",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "community",
+    "family",
+    "live-music",
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/lebanon/dessert-night-out/200031049086300",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czkvYmFubmVycy8zNjgyNGIwYTI2NDRiYjhkZTM1OWEyODA3YjA4OTNjZTk1NWE0NTIyMDBiZjhjNjkyNmM3NTM0NjhlYWUyYWE5LXJpbWctdzEwODAtaDEzNTAtZGM0ODE4MzgtZ21pcj92PTE3OTQ2OTE3NDA.avif",
+  "source_urls": [
+    "https://allevents.in/lebanon/dessert-night-out/200031049086300"
+  ],
+  "updated_at": "2026-11-15T10:32:51.029Z",
+  "public_slug": "dessert-night-out-2026-11-20",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/dessert-night-out-2026-11-20/",
+  "action_type": "details"
+}

@@ -2,8 +2,8 @@
   "id": "d1eb01a8-14ac-4269-b92d-57d5d62d6bb0",
   "slug": "springfield-symphony-ravel-a-theatrical-concert",
   "title": "SPRINGFIELD SYMPHONY: Ravel – A Theatrical Concert",
-  "seo_title": "SPRINGFIELD SYMPHONY: Ravel – A Theatrical Concert",
-  "description": "SPRINGFIELD SYMPHONY: Ravel – A Theatrical Concert is scheduled for Saturday, January 16, 2027 at 7:30 PM CST at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield. Springfield Symphony Orchestra is the organizer.",
+  "seo_title": "Springfield Symphony: Ravel – A Theatrical Concert",
+  "description": "Ravel – A Theatrical Concert is a comic and poignant performance for actors, singers, and orchestra, created by Alice Wiley Pickett. It follows Maurice Ravel's rise to fame as one of France's most important composers, with Claude Debussy and George Gershwin also appearing onstage, and draws on Ravel's own writings, the words of his friends and critics, and his music. The Springfield Symphony presents it on Saturday, January 16, 2027 at 7:30 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO.",
   "start": "2027-01-17T01:30:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -12,7 +12,7 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Springfield Symphony Orchestra",
+    "name": "Springfield Symphony",
     "website": null
   },
   "categories": [
@@ -26,7 +26,7 @@
   "source_urls": [
     "https://www.hammonshall.com/viewshow.aspx?ID=4076"
   ],
-  "updated_at": "2026-11-13T17:13:44.902Z",
+  "updated_at": "2026-11-15T10:32:51.029Z",
   "public_slug": "springfield-symphony-ravel-theatrical-concert-2027-01-16",
   "city_slug": "springfield",
   "path": "/events/springfield/springfield-symphony-ravel-theatrical-concert-2027-01-16/",

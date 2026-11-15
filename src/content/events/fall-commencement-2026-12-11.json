@@ -2,18 +2,18 @@
   "id": "a55f15a4-980d-417d-bdc5-b0bea50f33bb",
   "slug": "fall-commencement",
   "title": "Fall Commencement",
-  "seo_title": "Fall Commencement at Great Southern Bank Arena, Dec 11",
-  "description": "Missouri State University's Fall Commencement takes place on Friday, December 11, 2026, from 10:00 AM to 1:30 PM. It is held at Great Southern Bank Arena, 901 S. National Ave. in Springfield, MO. The event is open to a general audience.",
+  "seo_title": "Missouri State Fall Commencement, Springfield MO",
+  "description": "Fall commencement ceremonies for Missouri State University graduates, with a 10 am ceremony for the Darr College of Agriculture, College of Business, College of Natural and Applied Sciences, and Interdisciplinary Academic Programs, and a 1:30 pm ceremony for the McQueary College of Health and Human Services, Reynolds College of Arts, Social Sciences, and Humanities, and College of Education. No ticket is required and guests per graduate are not limited; doors open 90 minutes before each ceremony, guests pass through security, only clear bags are permitted, and all ceremonies are livestreamed. It takes place Friday, December 11, 2026 at Great Southern Bank Arena in Springfield, MO.",
   "start": "2026-12-11T16:00:00+00:00",
-  "end": "2026-12-11T19:30:00+00:00",
+  "end": null,
   "timezone": "America/Chicago",
   "venue": "Great Southern Bank Arena",
-  "address": "901 S. National Ave.",
+  "address": null,
   "city": "Springfield",
   "state": "MO",
   "organizer": {
     "name": "Missouri State University",
-    "website": "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4093"
+    "website": "https://greatsouthernbankarena.com/"
   },
   "categories": [
     "community"
@@ -25,7 +25,7 @@
   "source_urls": [
     "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4093"
   ],
-  "updated_at": "2026-11-13T17:13:44.902Z",
+  "updated_at": "2026-11-15T10:32:51.029Z",
   "public_slug": "fall-commencement-2026-12-11",
   "city_slug": "springfield",
   "path": "/events/springfield/fall-commencement-2026-12-11/",

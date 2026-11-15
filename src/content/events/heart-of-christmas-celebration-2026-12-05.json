@@ -1,0 +1,33 @@
+{
+  "id": "efd7d650-c14d-48c6-bf71-2cb3b893505b",
+  "slug": "heart-of-christmas-celebration",
+  "title": "Heart of Christmas Celebration",
+  "seo_title": "Heart of Christmas Celebration at Big Cedar Lodge",
+  "description": "Heart of Christmas Celebration is a holiday event at Big Cedar Lodge featuring a heartwarming holiday story, live performances, and festive characters. Family and friends are invited to gather for what the lodge describes as its biggest holiday celebration to date. It takes place Saturday, December 5, 2026, from 5:00 PM to 5:30 PM at 190 Top of the Rock Rd in Ridgedale, MO.",
+  "start": "2026-12-05T23:00:00+00:00",
+  "end": "2026-12-05T23:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Big Cedar Lodge",
+  "address": "190 Top of the Rock rd, Ridgedale, MO, 65739",
+  "city": "Ridgedale",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://bigcedar.com/activity/tree-lighting-ceremony",
+  "image_url": "https://bigcedar.com/wp-content/uploads/2022/07/Web-JPG-2019_BigCedar_HolidaysEvents_Christmas_0005.jpg",
+  "source_urls": [
+    "https://bigcedar.com/activity/tree-lighting-ceremony"
+  ],
+  "updated_at": "2026-11-15T10:32:51.029Z",
+  "public_slug": "heart-of-christmas-celebration-2026-12-05",
+  "city_slug": "ridgedale",
+  "path": "/events/ridgedale/heart-of-christmas-celebration-2026-12-05/",
+  "action_type": "details"
+}
