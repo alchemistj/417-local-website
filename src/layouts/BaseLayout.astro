@@ -75,7 +75,24 @@ const graphs = [{ "@context": "https://schema.org", "@graph": [organization, web
     {largeCard && <meta property="og:image:height" content="630" />}
     <meta name="twitter:card" content={largeCard ? "summary_large_image" : "summary"} />
     {largeCard && <meta name="twitter:image" content={socialUrl} />}
-    {/* No analytics yet: GA4 / GTM are added later and must fire after load + 3 s (SOP Rule 16). */}
+    {/* GA4 (same property as the old WordPress site, so history carries over). Fires after load + 3 s
+        (SOP Rule 16) and only on the production host, so previews don't send data. */}
+    <script is:inline>
+      window.addEventListener("load", function () {
+        if (location.hostname !== "417local.com") return;
+        setTimeout(function () {
+          var id = "G-GNFS7NZMZY";
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function () { window.dataLayer.push(arguments); };
+          window.gtag("js", new Date());
+          window.gtag("config", id);
+          var s = document.createElement("script");
+          s.async = true;
+          s.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+          document.head.appendChild(s);
+        }, 3000);
+      });
+    </script>
     {graphs.map((g) => <script type="application/ld+json" set:html={JSON.stringify(g)} />)}
   </head>
   <body>
