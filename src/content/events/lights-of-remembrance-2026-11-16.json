@@ -2,8 +2,8 @@
   "id": "dcc91d96-374d-4ae9-9725-b910750d9fbd",
   "slug": "lights-of-remembrance",
   "title": "Lights of Remembrance",
-  "seo_title": "Lights of Remembrance in Bolivar, MO on Nov 16, 2026",
-  "description": "Lights of Remembrance is a community and family festival event hosted by Citizens Memorial Hospital. It takes place on November 16, 2026 (Time TBD) at 1500 N Oakland Ave in Bolivar, Missouri.",
+  "seo_title": "Lights of Remembrance Hospice Program in Bolivar, MO",
+  "description": "Lights of Remembrance is CMH Hospice's annual evening of reflection, music and celebration to welcome the holiday season, with performances by the Bolivar High School Chamber Choir, Bolivar Intermediate School Ringers and Ron George. Everyone is welcome, refreshments will be served, and attendees can make a donation to honor someone special and support care for hospice patients and their families. It takes place November 16, 2026 (Time TBD) at 1500 N Oakland Ave in Bolivar, Missouri.",
   "start": "2026-11-16",
   "end": null,
   "timezone": "America/Chicago",
@@ -17,9 +17,9 @@
     "website": null
   },
   "categories": [
-    "community",
-    "family",
-    "festivals"
+    "networking",
+    "arts-and-theater",
+    "holiday"
   ],
   "price": null,
   "is_free": null,
@@ -28,7 +28,7 @@
   "source_urls": [
     "https://happeningnext.com/event/lights-of-remembrance-eid3a0eb0air2"
   ],
-  "updated_at": "2026-11-15T10:32:51.029Z",
+  "updated_at": "2026-11-16T10:36:04.840Z",
   "public_slug": "lights-of-remembrance-2026-11-16",
   "city_slug": "bolivar",
   "path": "/events/bolivar/lights-of-remembrance-2026-11-16/",

@@ -1,0 +1,38 @@
+{
+  "id": "fe8e025c-f274-4bcd-8abb-f1819ef7ba98",
+  "slug": "community-quilt-making-class",
+  "title": "Community Quilt Making Class",
+  "seo_title": "Community Quilt Making Class in Lebanon, MO",
+  "description": "This is a community quilt making class where you work on making quilts. It takes place on February 13, 2027, Time TBD, at The Church of Jesus Christ of Latter-day Saints, 240 Hwy Yy in Lebanon, Missouri.",
+  "start": "2027-02-13",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "The Church of Jesus Christ of Latter-day Saints",
+  "address": "240 Hwy Yy, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "community",
+    "festivals",
+    "food-and-drink",
+    "live-music",
+    "entrepreneurship"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/community-quilt-making-class-tickets-2004865474604",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1198029321%2F2346067996753%2F1%2Foriginal.20261115-195310?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C920%2C460&s=19270318b4c5ffd97601c078edea22f2",
+  "source_urls": [
+    "https://www.eventbrite.com/e/community-quilt-making-class-tickets-2004865474604"
+  ],
+  "updated_at": "2026-11-16T10:36:04.840Z",
+  "public_slug": "community-quilt-making-class-2027-02-13",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/community-quilt-making-class-2027-02-13/",
+  "action_type": "details"
+}

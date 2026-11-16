@@ -2,8 +2,8 @@
   "id": "e73d3cce-a6fb-4aef-be8c-9fcd9f37b9cd",
   "slug": "free-memory-check-up-december",
   "title": "Free Memory Check Up - December",
-  "seo_title": "Free Memory Check Up in Bolivar, MO on Dec 18, 2026",
-  "description": "This is a free memory check up offered by CMH Neurology and Headache Center. It takes place on December 18, 2026, with the time to be determined, at 1245 N. Butterfield Road, Suite C1 in Bolivar, Missouri.",
+  "seo_title": "Free Memory Check Up in Bolivar, MO – December 18",
+  "description": "This is a free memory check up offered by Missouri Memory Center at CMH, a brief assessment that takes about 20 minutes. It is by appointment only, so call 417-327-3530 to schedule. It takes place December 18, 2026 (Time TBD) at 1245 N. Butterfield Road, Suite C1, in Bolivar, Missouri.",
   "start": "2026-12-18",
   "end": null,
   "timezone": "America/Chicago",
@@ -22,15 +22,15 @@
     "festivals"
   ],
   "price": null,
-  "is_free": null,
+  "is_free": true,
   "registration_url": "https://happeningnext.com/event/free-memory-check-up-december-eid3a0e3x2cxd",
   "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czMvYmFubmVycy81OGM3YzVhNmNlNGYwYTkwNzkwNGNjNmEzM2QyY2IyZDk1NTQ1ZmUyODU1ZDVhZGRjYzQzNGM1MTlmNmRjZDJhLXJpbWctdzEyMDAtaDgwMS1kY2Q4ZDhkOC1nbWlyP3Y9MTc5MDA1ODQ3MA.avif",
   "source_urls": [
     "https://happeningnext.com/event/free-memory-check-up-december-eid3a0e3x2cxd"
   ],
-  "updated_at": "2026-11-15T10:32:51.029Z",
+  "updated_at": "2026-11-16T10:36:04.840Z",
   "public_slug": "free-memory-check-up-december-2026-12-18",
   "city_slug": "bolivar",
   "path": "/events/bolivar/free-memory-check-up-december-2026-12-18/",
-  "action_type": "details"
+  "action_type": "show_up"
 }

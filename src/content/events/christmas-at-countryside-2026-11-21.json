@@ -2,8 +2,8 @@
   "id": "7c4d5d72-8a5a-4ad7-9d2c-87b214e79eb7",
   "slug": "christmas-at-countryside",
   "title": "Christmas at Countryside",
-  "seo_title": "Christmas at Countryside in Joplin, MO – Nov 21, 2026",
-  "description": "Christmas at Countryside is a holiday event hosted by Countryside Flowers. It takes place on November 21, 2026, with the time to be determined, at 424 S Joplin Ave in Joplin, Missouri.",
+  "seo_title": "Christmas at Countryside Open House in Joplin, MO",
+  "description": "Christmas at Countryside is a Christmas open house where you can wander the shop for holiday inspiration and browse wreaths, bows, Christmas décor, and gifts. Hot chocolate is served and Santa will be on site. It takes place November 21, 2026, from 9 AM to 2 PM at Countryside Flowers, 424 S Joplin Ave in Joplin, MO.",
   "start": "2026-11-21",
   "end": null,
   "timezone": "America/Chicago",
@@ -17,6 +17,7 @@
     "website": null
   },
   "categories": [
+    "community",
     "holiday"
   ],
   "price": null,
@@ -26,7 +27,7 @@
   "source_urls": [
     "https://happeningnext.com/event/christmas-at-countryside-eid3a0e6unm8v"
   ],
-  "updated_at": "2026-11-15T10:32:51.029Z",
+  "updated_at": "2026-11-16T10:36:04.840Z",
   "public_slug": "christmas-at-countryside-2026-11-21",
   "city_slug": "joplin",
   "path": "/events/joplin/christmas-at-countryside-2026-11-21/",

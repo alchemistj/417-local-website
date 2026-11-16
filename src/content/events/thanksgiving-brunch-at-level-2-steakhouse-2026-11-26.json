@@ -1,0 +1,33 @@
+{
+  "id": "32a0db15-2122-4260-8c0b-569630270587",
+  "slug": "thanksgiving-brunch-at-level-2-steakhouse",
+  "title": "Thanksgiving Brunch at Level 2 Steakhouse",
+  "seo_title": "Thanksgiving Brunch at Level 2 Steakhouse in Branson",
+  "description": "This is a Thanksgiving brunch held at Level 2 Steakhouse, where guests can come for a holiday meal. It takes place on Thursday, November 26, 2026, from 10:00 AM to 3:00 PM at 200 East Main Street in Branson, Missouri.",
+  "start": "2026-11-26T16:00:00+00:00",
+  "end": "2026-11-26T21:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Level 2 Steakhouse",
+  "address": "200 East Main Street Branson, Missouri, 65616 United States",
+  "city": "Branson",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.experience-branson.com/calendar/thanksgiving-brunch-at-level-2-steakhouse",
+  "image_url": null,
+  "source_urls": [
+    "https://www.experience-branson.com/calendar/thanksgiving-brunch-at-level-2-steakhouse"
+  ],
+  "updated_at": "2026-11-16T10:36:04.840Z",
+  "public_slug": "thanksgiving-brunch-at-level-2-steakhouse-2026-11-26",
+  "city_slug": "branson",
+  "path": "/events/branson/thanksgiving-brunch-at-level-2-steakhouse-2026-11-26/",
+  "action_type": "details"
+}

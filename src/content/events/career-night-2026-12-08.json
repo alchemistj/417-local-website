@@ -1,0 +1,39 @@
+{
+  "id": "caeae80d-88a4-420e-940e-d0a2921c1c6b",
+  "slug": "career-night",
+  "title": "Career Night",
+  "seo_title": "Career Night in Joplin, MO on December 8, 2026",
+  "description": "Career Night is a community event in Joplin, Missouri, listed with festival, arts and theater, live music, family, and food and drink themes. It takes place on December 8, 2026, with the time to be determined. The event is at 619 S Florida Ave in Joplin.",
+  "start": "2026-12-08",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "619 S Florida Ave, Joplin, MO 64804, Joplin, MO, United States, Missouri 64804",
+  "address": "619 S Florida Ave, Joplin, MO 64801-2083, United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Real Estate School of Southwest Missouri",
+    "website": null
+  },
+  "categories": [
+    "festivals",
+    "community",
+    "arts-and-theater",
+    "live-music",
+    "family",
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/career-night-eid3a0eb2xutd",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czYvYmFubmVycy9jYWQ4MDA4NTkwOGQ5N2NlMDUxMzE3NDEzNTUxY2Q4ZTg0YWVjYjc5ZDMyZmFkYWRhYWQ0ZmM5YjliYzhkZDVkLXJpbWctdzEyMDAtaDE1NTMtZGMwODA4MDgtZ21pcj92PTE3OTQ2ODMzNjI.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/career-night-eid3a0eb2xutd"
+  ],
+  "updated_at": "2026-11-16T10:36:04.840Z",
+  "public_slug": "career-night-2026-12-08",
+  "city_slug": "joplin",
+  "path": "/events/joplin/career-night-2026-12-08/",
+  "action_type": "details"
+}
