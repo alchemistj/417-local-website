@@ -1,0 +1,35 @@
+{
+  "id": "9e41052b-ae7e-4515-836c-bc9e56dde25d",
+  "slug": "gary-owen",
+  "title": "Gary Owen",
+  "seo_title": "Gary Owen at Gillioz Theatre in Springfield, MO",
+  "description": "Gary Owen is a comedy event where you can watch a live performance in a theater setting. It takes place on December 2, 2026, at the Gillioz Theatre, 317 Park Central E in Springfield, MO. Time TBD.",
+  "start": "2026-12-02",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Gillioz Theatre",
+  "address": "317 Park Central E, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Ticket Network Events",
+    "website": "https://allevents.in/org/ticket-network-events/23491279"
+  },
+  "categories": [
+    "comedy",
+    "arts-and-theater"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/gary-owen/2300030145460211",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czcvYmFubmVycy80OTcyYTRiMC1hNjVmLTExZjEtODk5MC01ZDA0ZDIzMWEyZGQtcmltZy13MTIwMC1oNjc1LWRjZjhmOGY4LWdtaXIuanBnP3Y9MTc4ODMwNjM4NQ.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/gary-owen/2300030145460211"
+  ],
+  "updated_at": "2026-11-17T10:50:10.226Z",
+  "public_slug": "gary-owen-2026-12-02",
+  "city_slug": "springfield",
+  "path": "/events/springfield/gary-owen-2026-12-02/",
+  "action_type": "details"
+}

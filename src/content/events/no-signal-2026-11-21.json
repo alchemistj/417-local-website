@@ -2,8 +2,8 @@
   "id": "10f3e691-8465-4345-a0ac-fa6f77a1e1a6",
   "slug": "no-signal",
   "title": "NO SIGNAL….",
-  "seo_title": "NO SIGNAL….",
-  "description": "NO SIGNAL…. is scheduled for November 21, 2026, Time TBD at The Regency Live, 307 Park Central East, Springfield, MO, 65806, Springfield. SPRINGOOD is the organizer.",
+  "seo_title": "NO SIGNAL…. at The Regency Live in Springfield, MO",
+  "description": "NO SIGNAL…. is a night dedicated to deep and dark underground house and techno. It takes place on November 21, 2026, at The Regency Live, 307 Park Central East in Springfield, MO. The start time is TBD.",
   "start": "2026-11-21",
   "end": null,
   "timezone": "America/Chicago",
@@ -13,8 +13,8 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "SPRINGOOD",
-    "website": "https://allevents.in/org/springood/27528570"
+    "name": null,
+    "website": null
   },
   "categories": [
     "outdoors"
@@ -22,12 +22,12 @@
   "price": null,
   "is_free": null,
   "registration_url": "https://www.eventbrite.com/e/no-signal-tickets-2003855880882",
-  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1197403164%2F384535808383%2F1%2Foriginal.20261106-033620?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.652&fp-y=0.071&s=b38b22c3c7750ffceda68c975bdf5609",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1197403164%2F384535808383%2F1%2Foriginal.20261106-033620?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.652&fp-y=0.071&s=aa32c11cf1cdba06873c740c1abc5fc4",
   "source_urls": [
     "https://www.eventbrite.com/e/no-signal-tickets-2003855880882",
     "https://allevents.in/springfield/no-signal%E2%80%A6/100002002357637596"
   ],
-  "updated_at": "2026-11-16T10:36:04.840Z",
+  "updated_at": "2026-11-17T10:50:10.226Z",
   "public_slug": "no-signal-2026-11-21",
   "city_slug": "springfield",
   "path": "/events/springfield/no-signal-2026-11-21/",

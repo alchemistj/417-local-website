@@ -2,8 +2,8 @@
   "id": "faa3a314-2b1b-42aa-978f-6c75f18aed72",
   "slug": "homicide-hotglue-holiday-party-2026",
   "title": "Homicide & Hotglue: Holiday Party 2026",
-  "seo_title": "Homicide & Hotglue: Holiday Party 2026 in Springfield, MO",
-  "description": "Homicide & Hotglue: Holiday Party 2026 takes place on Friday, December 4, 2026 at 6:00 PM at efactory, 405 N Jefferson Ave in Springfield, MO. The holiday event is geared toward a business audience and is organized by Springfield Devs.",
+  "seo_title": "Homicide & Hotglue Holiday Party 2026 in Springfield, MO",
+  "description": "Homicide & Hotglue is a holiday party where attendees play holiday-themed murder mystery games and do crafting. Newcomers are welcome even if they have never been to a Dev Night, and guests are asked to fill out an RSVP form so organizers can plan food and supplies. It takes place Friday, December 4, 2026 at 6:00 PM at efactory, 405 N Jefferson Ave in Springfield, MO.",
   "start": "2026-12-05T00:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -26,9 +26,9 @@
   "source_urls": [
     "https://www.meetup.com/sgfdevs/events/317152731"
   ],
-  "updated_at": "2026-11-16T10:36:04.840Z",
+  "updated_at": "2026-11-17T10:50:10.226Z",
   "public_slug": "homicide-hotglue-holiday-party-2026-12-04",
   "city_slug": "springfield",
   "path": "/events/springfield/homicide-hotglue-holiday-party-2026-12-04/",
-  "action_type": "details"
+  "action_type": "rsvp"
 }

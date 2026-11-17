@@ -2,24 +2,23 @@
   "id": "d3db38b1-5d0f-4870-8d4f-ed0ddb4bc0dc",
   "slug": "a-charlie-brown-christmas-live-on-stage",
   "title": "A Charlie Brown Christmas Live on Stage",
-  "seo_title": "A Charlie Brown Christmas Live on Stage in Springfield",
-  "description": "A Charlie Brown Christmas Live on Stage is a touring theater production in which Charlie Brown, Snoopy, Lucy, Linus and the Peanuts gang put on their own Christmas play and discover the true meaning of the season. Adapted from Charles M. Schulz's animated TV special, it features music by Vince Guaraldi and is meant for families. It takes place Sunday, December 20, 2026 at 7:00 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO, and all patrons need a ticket regardless of age.",
+  "seo_title": "A Charlie Brown Christmas Live on Stage in Springfield, MO",
+  "description": "A Charlie Brown Christmas Live on Stage is a touring theater production in which Charlie Brown, Snoopy, Lucy, Linus and the Peanuts gang put on their own Christmas play and discover the true meaning of the season. Adapted from Charles M. Schulz's animated television special, it features the music of Vince Guaraldi and is meant for the whole family; all patrons need a ticket, regardless of age. It takes place Sunday, December 20, 2026 at 7:00 PM at Juanita K. Hammons Hall for the Performing Arts in Springfield, MO.",
   "start": "2026-12-21T01:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
   "venue": "Juanita K. Hammons Hall for the Performing Arts",
-  "address": "901 S. National Ave.",
+  "address": null,
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Missouri State University",
+    "name": "Juanita K. Hammons Hall for the Performing Arts, Missouri State University",
     "website": "https://www.hammonshall.com/"
   },
   "categories": [
     "holiday",
     "arts-and-theater",
-    "family",
-    "kids"
+    "family"
   ],
   "price": null,
   "is_free": null,
@@ -28,7 +27,7 @@
   "source_urls": [
     "https://www.hammonshall.com/viewshow.aspx?ID=3691"
   ],
-  "updated_at": "2026-11-16T10:36:04.840Z",
+  "updated_at": "2026-11-17T10:50:10.226Z",
   "public_slug": "charlie-brown-christmas-live-on-stage-2026-12-20",
   "city_slug": "springfield",
   "path": "/events/springfield/charlie-brown-christmas-live-on-stage-2026-12-20/",

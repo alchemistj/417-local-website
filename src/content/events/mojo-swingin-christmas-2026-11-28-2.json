@@ -1,0 +1,35 @@
+{
+  "id": "a5fe86f3-99fd-4069-8122-4025d42943e9",
+  "slug": "mojo-a-swingin-christmas",
+  "title": "MOJO - A Swingin' Christmas",
+  "seo_title": "MOJO - A Swingin' Christmas in Springfield, MO",
+  "description": "MOJO - A Swingin' Christmas is a holiday event presented by Gillioz Theatre. It takes place on November 28, 2026, with the time to be determined, at 325 Park Central E in Springfield, Missouri.",
+  "start": "2026-11-28",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "325 Park Central E, Springfield, MO, United States, Missouri 65806",
+  "address": "325 Park Central E, Springfield, MO 65806-2206, United States, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Gillioz Theatre",
+    "website": "https://allevents.in/org/gillioz-theatre/3393097"
+  },
+  "categories": [
+    "outdoors",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/mojo-a-swingin-christmas/200030969388721",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEwL2Jhbm5lcnMvMDRkYzhjNDJmOTgyYTBkMWU4YjQ2NzdjYzNkMWEyOWFiZTE1Y2M4YTk0YzU3YWVmNzFkZTZlNTkwNDgyNWIxNC1yaW1nLXcxMjAwLWg2MjgtZGNhOGQ4YzgtZ21pcj92PTE3OTM3OTc3MDE.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/mojo-a-swingin-christmas/200030969388721"
+  ],
+  "updated_at": "2026-11-17T10:50:10.226Z",
+  "public_slug": "mojo-swingin-christmas-2026-11-28-2",
+  "city_slug": "springfield",
+  "path": "/events/springfield/mojo-swingin-christmas-2026-11-28-2/",
+  "action_type": "details"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "f6ddbe79-20b1-4b03-893d-66be436ac7d7",
+  "slug": "vegan-thanksgiving-potluck",
+  "title": "Vegan Thanksgiving Potluck",
+  "seo_title": "Vegan Thanksgiving Potluck in Springfield, MO",
+  "description": "This is a 100% vegan Thanksgiving potluck where you can eat vegan versions of holiday classics and connect with fellow vegans and vegan-curious friends. Attendees are asked to bring a vegan dish to share, whether big or small, homemade or store-bought. It takes place Saturday, November 21, 2026 at 5:00 PM at The Library Center, 4653 S Campbell in Springfield, MO.",
+  "start": "2026-11-21T23:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "The Library Center",
+  "address": "4653 S Campbell, Springfield, MO, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Veg Club of the Ozarks",
+    "website": "https://www.meetup.com/vegetarian-vegan-club-of-the-ozarks"
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.meetup.com/vegetarian-vegan-club-of-the-ozarks/events/317455086",
+  "image_url": "/images/fallbacks/redesign/group-cover-4-square.webp",
+  "source_urls": [
+    "https://www.meetup.com/vegetarian-vegan-club-of-the-ozarks/events/317455086"
+  ],
+  "updated_at": "2026-11-17T10:50:10.226Z",
+  "public_slug": "vegan-thanksgiving-potluck-2026-11-21",
+  "city_slug": "springfield",
+  "path": "/events/springfield/vegan-thanksgiving-potluck-2026-11-21/",
+  "action_type": "details"
+}

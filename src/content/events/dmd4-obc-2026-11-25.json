@@ -1,0 +1,39 @@
+{
+  "id": "ab2c93f9-90c9-46dc-8b73-1b575daf4abc",
+  "slug": "dmd4-obc",
+  "title": "DMD4 @ OBC",
+  "seo_title": "DMD4 at Old Broadway Club in Joplin, MO",
+  "description": "DMD4 @ OBC is a festival-style event listed under live music, arts and theater, food and drink, community, and family categories. It takes place at the Old Broadway Club, 125 S Mineral Ave in Joplin, Missouri, on November 25, 2026, with the time to be determined.",
+  "start": "2026-11-25",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Old Broadway Club",
+  "address": "125 S Mineral Ave, Joplin, MO 64801, United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Dance Monkey Dance",
+    "website": null
+  },
+  "categories": [
+    "festivals",
+    "community",
+    "arts-and-theater",
+    "live-music",
+    "family",
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/dmd4-obc-eid3a0eb9erqr",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czUvYmFubmVycy8zNDQxMTdiZGY2OGMzMGJiZDNlZjZmYjQ2NWRhYTNmYjBjZWVhOWExMzNlNWYyZGE5Nzk4OWQzNjkzMjUyNWQ1LXJpbWctdzEyMDAtaDE1NTMtZGM2ODE4MTgtZ21pcj92PTE3OTQ4MzM3NDM.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/dmd4-obc-eid3a0eb9erqr"
+  ],
+  "updated_at": "2026-11-17T10:50:10.226Z",
+  "public_slug": "dmd4-obc-2026-11-25",
+  "city_slug": "joplin",
+  "path": "/events/joplin/dmd4-obc-2026-11-25/",
+  "action_type": "details"
+}

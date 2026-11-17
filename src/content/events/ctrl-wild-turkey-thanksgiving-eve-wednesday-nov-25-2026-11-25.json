@@ -2,8 +2,8 @@
   "id": "a880d833-38b7-436e-95ca-3d7128fd5132",
   "slug": "ctrl-wild-turkey-thanksgiving-eve-wednesday-nov-25-springfield",
   "title": "CTRL WILD TURKEY: Thanksgiving Eve · Wednesday Nov 25 · Springfield",
-  "seo_title": "CTRL WILD TURKEY: Thanksgiving Eve · Wednesday Nov 25 · Spri",
-  "description": "CTRL WILD TURKEY: Thanksgiving Eve · Wednesday Nov 25 · Springfield is scheduled for November 25, 2026, Time TBD at CTRL Nightclub, 311 S Patton Ave, Springfield, MO, Springfield. CTRL Nightclub is the organizer.",
+  "seo_title": "CTRL Wild Turkey: Thanksgiving Eve at CTRL, Springfield",
+  "description": "CTRL Wild Turkey is a Thanksgiving Eve night out presented by CTRL Springfield at CTRL Nightclub, with the pitch that everyone's home and everyone's out. It takes place on November 25, 2026, Time TBD, at 311 S Patton Ave in Springfield, MO.",
   "start": "2026-11-25",
   "end": null,
   "timezone": "America/Chicago",
@@ -13,8 +13,8 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "CTRL Nightclub",
-    "website": "https://allevents.in/org/ctrl-nightclub/28263591"
+    "name": null,
+    "website": null
   },
   "categories": [
     "holiday"
@@ -26,7 +26,7 @@
   "source_urls": [
     "https://allevents.in/springfield/ctrl-wild-turkey-thanksgiving-eve-%C2%B7-wednesday-nov-25-%C2%B7-springfield/100002004271330503"
   ],
-  "updated_at": "2026-11-16T10:36:04.840Z",
+  "updated_at": "2026-11-17T10:50:10.226Z",
   "public_slug": "ctrl-wild-turkey-thanksgiving-eve-wednesday-nov-25-2026-11-25",
   "city_slug": "springfield",
   "path": "/events/springfield/ctrl-wild-turkey-thanksgiving-eve-wednesday-nov-25-2026-11-25/",

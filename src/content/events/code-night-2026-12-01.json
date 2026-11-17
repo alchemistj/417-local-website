@@ -1,0 +1,33 @@
+{
+  "id": "14232236-2b2c-46d1-9762-cd53b4fcdce1",
+  "slug": "code-night",
+  "title": "Code Night",
+  "seo_title": "Code Night in Springfield, MO – Weekly Work Session",
+  "description": "Code Night is a weekly work session where product development teams build technology that helps the local or national community. Newcomers are welcome and are encouraged to contact the organizers on Discord to find a project that fits; food is not provided, though the group often shares a meal afterward. It takes place Tuesday, December 1, 2026 at 6:30 PM at eFactory in The Perch, 405 N Jefferson Ave, Springfield, MO.",
+  "start": "2026-12-02T00:30:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "efactory",
+  "address": "405 N Jefferson Ave, Springfield, MO, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Open SGF",
+    "website": "https://www.meetup.com/open-sgf"
+  },
+  "categories": [
+    "professional-development"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.meetup.com/open-sgf/events/317389921",
+  "image_url": "/images/fallbacks/redesign/group-cover-3-square.webp",
+  "source_urls": [
+    "https://www.meetup.com/open-sgf/events/317389921"
+  ],
+  "updated_at": "2026-11-17T10:50:10.226Z",
+  "public_slug": "code-night-2026-12-01",
+  "city_slug": "springfield",
+  "path": "/events/springfield/code-night-2026-12-01/",
+  "action_type": "details"
+}

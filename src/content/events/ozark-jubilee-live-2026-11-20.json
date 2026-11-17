@@ -2,8 +2,8 @@
   "id": "665dcac6-ce5d-483e-aa2b-1058b6e32e7d",
   "slug": "ozark-jubilee-live-presented-by-coxhealth-celebrating-120-years",
   "title": "Ozark Jubilee Live: Presented by CoxHealth, Celebrating 120 Years",
-  "seo_title": "Ozark Jubilee Live: Presented by CoxHealth, Celebrating 120 ",
-  "description": "Ozark Jubilee Live: Presented by CoxHealth, Celebrating 120 Years is scheduled for November 20, 2026, Time TBD at 157 Park Central Square, Springfield, MO, United States, Missouri 65806, 157 Park Central Sq, Springfield, MO 65806-1313, United States, Springfield, MO, Springfield. Historic Fox Theatre is the organizer.",
+  "seo_title": "Ozark Jubilee Live at Historic Fox Theatre, Springfield",
+  "description": "Ozark Jubilee Live is a variety show with live music, comedy, dance, and storytelling, inspired by the original Ozark Jubilee and celebrating the creative spirit of the Ozarks today. Jeff Houghton hosts, with comedy from The Mystery Hour, music led by the Guinevere Goodwin Band, and performances by Ashtyn Barbaree, Sam Fagan, Lace Wings, Stevie Newman, and a \"Crankie\" storytelling piece by Abbey Waterworth. It takes place November 20, 2026, Time TBD, at 157 Park Central Square in Springfield, MO.",
   "start": "2026-11-20",
   "end": null,
   "timezone": "America/Chicago",
@@ -17,6 +17,9 @@
     "website": "https://allevents.in/org/historic-fox-theatre/27737825"
   },
   "categories": [
+    "live-music",
+    "comedy",
+    "arts-and-theater",
     "outdoors"
   ],
   "price": null,
@@ -26,7 +29,7 @@
   "source_urls": [
     "https://allevents.in/springfield/ozark-jubilee-live-presented-by-coxhealth-celebrating-120-years/200030955236517"
   ],
-  "updated_at": "2026-11-16T10:36:04.840Z",
+  "updated_at": "2026-11-17T10:50:10.226Z",
   "public_slug": "ozark-jubilee-live-2026-11-20",
   "city_slug": "springfield",
   "path": "/events/springfield/ozark-jubilee-live-2026-11-20/",

@@ -1,0 +1,35 @@
+{
+  "id": "a5956dec-fcc5-48fc-9d9a-5c8bf3406062",
+  "slug": "the-nutcracker-2026",
+  "title": "The Nutcracker 2026",
+  "seo_title": "The Nutcracker 2026 at Landers Theatre, Springfield MO",
+  "description": "The Nutcracker 2026 is a holiday ballet performance presented by Springfield Ballet, where you can watch the stage production in person. It takes place on December 19, 2026, with the time to be determined, at Landers Theatre, 311 E Walnut St in Springfield, MO.",
+  "start": "2026-12-19",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Landers Theatre",
+  "address": "311 E Walnut St,Springfield,MO,United States, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Springfield Ballet",
+    "website": "https://allevents.in/org/springfield-ballet/9083183"
+  },
+  "categories": [
+    "arts-and-theater",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/the-nutcracker-2026/200030729669457",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czcvYmFubmVycy9iM2Y0NjM1YjdjYTBkMTA4ODlkNTI0YzFlNjEwNDE5ZTY3ZTE2YmUxODMwMmQyMDVkNDM5NTEyODJjNzU0NDU3LXJpbWctdzEyMDAtaDY3NS1kYzA4MDgwOC1nbWlyP3Y9MTc5MDE4NDQ3NQ.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/the-nutcracker-2026/200030729669457"
+  ],
+  "updated_at": "2026-11-17T10:50:10.226Z",
+  "public_slug": "nutcracker-2026-12-19",
+  "city_slug": "springfield",
+  "path": "/events/springfield/nutcracker-2026-12-19/",
+  "action_type": "details"
+}

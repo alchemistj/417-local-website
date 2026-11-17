@@ -13,8 +13,8 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Vivid Events",
-    "website": "https://allevents.in/org/vivid-events/22309944"
+    "name": null,
+    "website": null
   },
   "categories": [
     "comedy",
@@ -27,7 +27,7 @@
   "source_urls": [
     "https://allevents.in/springfield/gary-owen-at-gillioz-theatre/2400030131703655"
   ],
-  "updated_at": "2026-11-16T10:36:04.840Z",
+  "updated_at": "2026-11-17T10:50:10.226Z",
   "public_slug": "gary-owen-at-gillioz-theatre-2026-12-03",
   "city_slug": "springfield",
   "path": "/events/springfield/gary-owen-at-gillioz-theatre-2026-12-03/",

@@ -13,7 +13,7 @@
   "state": "MO",
   "organizer": {
     "name": "Springfield Symphony Orchestra",
-    "website": null
+    "website": "https://allevents.in/org/springfield-symphony-orchestra-mo/3463339"
   },
   "categories": [
     "live-music",
@@ -22,11 +22,12 @@
   "price": null,
   "is_free": null,
   "registration_url": "https://www.hammonshall.com/viewshow.aspx?ID=4075",
-  "image_url": null,
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czYvYmFubmVycy8wYmQwNGQyODk1YWFmNWU2YzFmZDY2MzM3MTQ4MDg2ZDdiOWI2MGNjZjU4NjEyM2YyZjhhYThlMmFhYmJmN2Y0LXJpbWctdzEyMDAtaDgwMC1kYzA4MDgwOC1nbWlyP3Y9MTc5NDIyNTkyNw.avif",
   "source_urls": [
-    "https://www.hammonshall.com/viewshow.aspx?ID=4075"
+    "https://www.hammonshall.com/viewshow.aspx?ID=4075",
+    "https://allevents.in/springfield/springfield-symphony-a-hollywood-christmas/200031011423027"
   ],
-  "updated_at": "2026-11-16T10:36:04.840Z",
+  "updated_at": "2026-11-17T10:50:10.226Z",
   "public_slug": "springfield-symphony-holiday-christmas-2026-12-19",
   "city_slug": "springfield",
   "path": "/events/springfield/springfield-symphony-holiday-christmas-2026-12-19/",

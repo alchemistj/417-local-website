@@ -1,0 +1,35 @@
+{
+  "id": "9c6f0d89-1ec6-4927-aa36-1f1da14425bc",
+  "slug": "ai-focused-real-estate-roundtable",
+  "title": "AI-Focused Real Estate Roundtable",
+  "seo_title": "AI-Focused Real Estate Roundtable in Springfield, MO",
+  "description": "This is a monthly in-person roundtable where real estate agents discuss tips, tactics, and tools for using AI, such as saving time, marketing, generating and nurturing leads, and streamlining transactions. It is for real estate agents and is free to attend. It takes place Tuesday, December 1, 2026 at 7:30 AM at Architect Coffee, 1604 E Republic Rd in Springfield, MO.",
+  "start": "2026-12-01T13:30:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Architect Coffee",
+  "address": "1604 E Republic Rd, Springfield, MO, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "AI for Real Estate Agents Mastermind",
+    "website": "https://www.meetup.com/ai-for-real-estate-agents-mastermind"
+  },
+  "categories": [
+    "networking",
+    "entrepreneurship",
+    "professional-development"
+  ],
+  "price": null,
+  "is_free": true,
+  "registration_url": "https://www.meetup.com/ai-for-real-estate-agents-mastermind/events/317381318",
+  "image_url": "/images/fallbacks/redesign/group-cover-2-square.webp",
+  "source_urls": [
+    "https://www.meetup.com/ai-for-real-estate-agents-mastermind/events/317381318"
+  ],
+  "updated_at": "2026-11-17T10:50:10.226Z",
+  "public_slug": "ai-focused-real-estate-roundtable-2026-12-01",
+  "city_slug": "springfield",
+  "path": "/events/springfield/ai-focused-real-estate-roundtable-2026-12-01/",
+  "action_type": "show_up"
+}

@@ -3,11 +3,11 @@
   "slug": "cellar-society-wine-dinner",
   "title": "Cellar Society Wine Dinner",
   "seo_title": "Cellar Society Wine Dinner in Ozark, MO – Dec 7",
-  "description": "Cellar Society Wine Dinner is a food and drink event hosted by Vineyard Market. Reservations are made by calling (417) 882-0399. It takes place on Monday, December 7, 2026 at 6:00 PM at 1759 W State Hwy J in Ozark, Missouri.",
+  "description": "Cellar Society Wine Dinner is a food and drink event hosted by Vineyard Market. It takes place on Monday, December 7, 2026 at 6:00 PM at 1759 W State Hwy J in Ozark, Missouri. Reservations are made by calling (417) 882-0399.",
   "start": "2026-12-08T00:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
-  "venue": null,
+  "venue": "Vineyard Market",
   "address": "1759 W State Hwy J",
   "city": "Ozark",
   "state": "MO",
@@ -25,7 +25,7 @@
   "source_urls": [
     "https://thevineyardmarket.com/events/cellar-society-wine-dinner-december-2026"
   ],
-  "updated_at": "2026-11-16T10:36:04.840Z",
+  "updated_at": "2026-11-17T10:50:10.226Z",
   "public_slug": "cellar-society-wine-dinner-2026-12-07",
   "city_slug": "ozark",
   "path": "/events/ozark/cellar-society-wine-dinner-2026-12-07/",

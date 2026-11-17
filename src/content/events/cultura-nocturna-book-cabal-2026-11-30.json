@@ -1,0 +1,34 @@
+{
+  "id": "05cae830-632a-4154-8dbf-c800eb7f0bce",
+  "slug": "cultura-nocturna-book-cabal",
+  "title": "Cultura Nocturna Book Cabal",
+  "seo_title": "Cultura Nocturna Book Cabal in Springfield, MO",
+  "description": "Cultura Nocturna Book Cabal is a publisher-backed book club in Springfield, described as the city's first and only, with books, brews, and good company. It takes place on November 30, 2026, time to be determined, at Moonshine Sports Bar, 1326 West Sunshine Street, Springfield, MO 65807.",
+  "start": "2026-11-30",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Moonshine Sports Bar",
+  "address": "1326 West Sunshine Street, Springfield, MO, 65807",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "networking"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/cultura-nocturna-book-cabal-registration-2004434226730",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1197591624%2F3020399539998%2F1%2Foriginal.20261109-135743?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.703&fp-y=0.424&s=34242584ebf7a378ba42e57972e03239",
+  "source_urls": [
+    "https://www.eventbrite.com/e/cultura-nocturna-book-cabal-registration-2004434226730"
+  ],
+  "updated_at": "2026-11-17T10:50:10.226Z",
+  "public_slug": "cultura-nocturna-book-cabal-2026-11-30",
+  "city_slug": "springfield",
+  "path": "/events/springfield/cultura-nocturna-book-cabal-2026-11-30/",
+  "action_type": "register"
+}

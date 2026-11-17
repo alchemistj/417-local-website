@@ -1,0 +1,34 @@
+{
+  "id": "4c14cf6b-9d93-470c-aaed-f02d00e8c500",
+  "slug": "hot-rod-holiday-show",
+  "title": "Hot Rod Holiday Show",
+  "seo_title": "Hot Rod Holiday Show in Springfield, MO – Nov 20, 2026",
+  "description": "Hot Rod Holiday Show is a holiday-themed event held at the Ozark Empire Fairgrounds in Springfield, Missouri. It takes place on November 20, 2026, with the time to be determined. The venue is at 3001 N Grant Ave.",
+  "start": "2026-11-20",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Ozark Empire Fairgrounds",
+  "address": "3001 N Grant Ave, Springfield, MO 65803, USA, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Hotrod holiday",
+    "website": "https://allevents.in/org/hotrod-holiday/28366770"
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/hot-rod-holiday-show/3700030991125414",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czQvYmFubmVycy8xNzIyMDNhMC1kYTUwLTExZjEtYjBhZC01ZjAzOGVhYTlmMWMtcmltZy13MTIwMC1oMjU5LWRjMDgwODA4LWdtaXIuanBnP3Y9MTc5NDAxNzI5NA.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/hot-rod-holiday-show/3700030991125414"
+  ],
+  "updated_at": "2026-11-17T10:50:10.226Z",
+  "public_slug": "hot-rod-holiday-show-2026-11-20",
+  "city_slug": "springfield",
+  "path": "/events/springfield/hot-rod-holiday-show-2026-11-20/",
+  "action_type": "details"
+}

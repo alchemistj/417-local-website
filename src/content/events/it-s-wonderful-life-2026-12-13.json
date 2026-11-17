@@ -3,7 +3,7 @@
   "slug": "its-a-wonderful-life-2026",
   "title": "It's A Wonderful Life 2026",
   "seo_title": "It's A Wonderful Life 2026 at Gillioz Theatre, Springfield",
-  "description": "This is a free showing of the film It's A Wonderful Life, with free hot chocolate while supplies last and free photo ops with Mr. & Mrs. Claus. It is a family-friendly film event, and tickets must be reserved by phone at 417-863-9491 or at the Gillioz Box Office starting November 9 at 10 am, with a 4 ticket limit per order and general admission seating. It takes place Sunday, December 13, 2026 at the Gillioz Theatre, 325 Park Central E., Springfield, MO, with doors at 1:00 PM and the movie at 2:00 PM.",
+  "description": "This is a free screening of the film It's A Wonderful Life at the Gillioz Theatre, presented by Multipli Credit Union. Doors open at 1:00 PM, and there is free hot chocolate while supplies last and free photo ops with Mr. & Mrs. Claus. It takes place Sunday, December 13, 2026 at 2:00 PM at 325 Park Central E. in Springfield, MO; tickets are reserved by phone or at the Box Office starting November 9 at 10am, with a 4 ticket limit per order.",
   "start": "2026-12-13T20:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -18,16 +18,17 @@
   "categories": [
     "film",
     "arts-and-theater",
-    "family"
+    "holiday"
   ],
-  "price": "FREE",
+  "price": "Free",
   "is_free": true,
   "registration_url": "https://gillioztheatre.com/event/its-a-wonderful-life-2026",
-  "image_url": null,
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czcvYmFubmVycy81ZDM4Mzc5NDg4MTJhNjE0MGMwYWZkZTVkYmZhNmM2Njc2ODg4MjMyN2YzMjdjOTVjN2M3MjJjMmNiMzA1YjZmLXJpbWctdzk2MC1oNTQwLWRjMDgwODA4LWdtaXI_dj0xNzk0ODYzNDA3.avif",
   "source_urls": [
-    "https://gillioztheatre.com/event/its-a-wonderful-life-2026"
+    "https://gillioztheatre.com/event/its-a-wonderful-life-2026",
+    "https://allevents.in/springfield/free-screening-its-a-wonderful-life-2026/200031059612908"
   ],
-  "updated_at": "2026-11-16T10:36:04.840Z",
+  "updated_at": "2026-11-17T10:50:10.226Z",
   "public_slug": "it-s-wonderful-life-2026-12-13",
   "city_slug": "springfield",
   "path": "/events/springfield/it-s-wonderful-life-2026-12-13/",

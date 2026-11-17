@@ -1,0 +1,34 @@
+{
+  "id": "2b4495e7-88ff-4635-9d08-ec4897636682",
+  "slug": "kdk-concert-series",
+  "title": "KDK Concert Series",
+  "seo_title": "KDK Concert Series in Springfield, MO – Dec 19, 2026",
+  "description": "KDK Concert Series is a live music showcase that puts a lineup of local artists on one evening's bill. This is the third consecutive year for the series. It takes place on December 19, 2026 (Time TBD) at The Venue on Sunset, 1900 West Sunset Street in Springfield, MO.",
+  "start": "2026-12-19",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "The Venue on sunset",
+  "address": "1900 West Sunset Street, Springfield, MO, 65807",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "live-music"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/kdk-concert-series-tickets-1993800732663",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1188725759%2F2169936003273%2F1%2Foriginal.20260713-034718?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.777&fp-y=0.436&s=f2aff311cf41d9a36cba5c9201cd267f",
+  "source_urls": [
+    "https://www.eventbrite.com/e/kdk-concert-series-tickets-1993800732663"
+  ],
+  "updated_at": "2026-11-17T10:50:10.226Z",
+  "public_slug": "kdk-concert-series-2026-12-19",
+  "city_slug": "springfield",
+  "path": "/events/springfield/kdk-concert-series-2026-12-19/",
+  "action_type": "details"
+}

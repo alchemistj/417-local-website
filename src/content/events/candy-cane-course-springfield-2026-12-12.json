@@ -1,0 +1,34 @@
+{
+  "id": "eb7536c9-2b23-478a-a6b3-57733e1f71b2",
+  "slug": "candy-cane-course-springfield",
+  "title": "Candy Cane Course- Springfield",
+  "seo_title": "Candy Cane Course in Springfield, MO on Dec 12, 2026",
+  "description": "Candy Cane Course is an outdoors event at Rutledge-Wilson Farm Park in Springfield, Missouri. It takes place on December 12, 2026, with the time to be determined, at 3825 W Farm Road 146.",
+  "start": "2026-12-12",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Rutledge-Wilson Farm Park",
+  "address": "3825 W Farm Road 146,Springfield, Missouri, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Event Vesta - KC",
+    "website": "https://allevents.in/org/event-vesta-kc/22843121"
+  },
+  "categories": [
+    "outdoors"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/candy-cane-course-springfield/200030756060400",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEvYmFubmVycy9jYjhmYjYzMWEwZDAzYzc4MTVjZTAxNDE5NmZhZDM2YjVlNjRmNmM5ZTMwM2RiNTljZjY3NjI0Mjg3YjJmNzkzLXJpbWctdzEyMDAtaDYwMC1kY2Y4ZjhmOC1nbWlyP3Y9MTc5MDc5NjY1OQ.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/candy-cane-course-springfield/200030756060400"
+  ],
+  "updated_at": "2026-11-17T10:50:10.226Z",
+  "public_slug": "candy-cane-course-springfield-2026-12-12",
+  "city_slug": "springfield",
+  "path": "/events/springfield/candy-cane-course-springfield-2026-12-12/",
+  "action_type": "details"
+}

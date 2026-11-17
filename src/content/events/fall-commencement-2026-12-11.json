@@ -3,12 +3,12 @@
   "slug": "fall-commencement",
   "title": "Fall Commencement",
   "seo_title": "Fall Commencement at Great Southern Bank Arena, Springfield",
-  "description": "Missouri State University holds Fall Commencement ceremonies for its graduates, with the 10 am ceremony covering the Darr College of Agriculture, College of Business, College of Natural and Applied Sciences, and Interdisciplinary Academic Programs, and the 1:30 pm ceremony covering the McQueary College of Health and Human Services, Reynolds College of Arts, Social Sciences, and Humanities, and College of Education. No ticket is required and guests per graduate are not limited, doors open 90 minutes before each ceremony, only clear bags are allowed, and all ceremonies will be livestreamed. It takes place Friday, December 11, 2026 at Great Southern Bank Arena, 901 S. National Ave., Springfield, MO.",
+  "description": "Missouri State University holds its Fall Commencement ceremonies for graduates, with the 10 am ceremony covering the Darr College of Agriculture, College of Business, College of Natural and Applied Sciences, and Interdisciplinary Academic Programs, and the 1:30 p.m. ceremony covering the McQueary College of Health and Human Services, Reynolds College of Arts, Social Sciences, and Humanities, and College of Education. No ticket is required, guests per graduate are not limited, doors open 90 minutes before each ceremony, and only clear bags are permitted. It takes place Friday, December 11, 2026 at Great Southern Bank Arena in Springfield, MO, and all ceremonies are livestreamed.",
   "start": "2026-12-11T16:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
   "venue": "Great Southern Bank Arena",
-  "address": "901 S. National Ave.",
+  "address": null,
   "city": "Springfield",
   "state": "MO",
   "organizer": {
@@ -25,7 +25,7 @@
   "source_urls": [
     "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4093"
   ],
-  "updated_at": "2026-11-16T10:36:04.840Z",
+  "updated_at": "2026-11-17T10:50:10.226Z",
   "public_slug": "fall-commencement-2026-12-11",
   "city_slug": "springfield",
   "path": "/events/springfield/fall-commencement-2026-12-11/",

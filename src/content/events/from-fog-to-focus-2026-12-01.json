@@ -2,8 +2,8 @@
   "id": "63b49499-a98c-49c1-ae42-0163cf9fa901",
   "slug": "from-fog-to-focus",
   "title": "From Fog To Focus",
-  "seo_title": "From Fog To Focus: Online Business Event, Dec 1, 2026",
-  "description": "From Fog To Focus is a professional development event for a business audience, scheduled for December 1, 2026, with the time to be determined. It takes place online via Zoom, with a listed location of Springfield, MO 65619.",
+  "seo_title": "From Fog To Focus: Online Productivity Event, Dec 1",
+  "description": "From Fog To Focus is an online session held over Zoom, designed to help participants overcome mental clutter, distractions, and procrastination to regain clarity and productivity. It falls under professional development, business networking, and entrepreneurship. It takes place on December 1, 2026, with the time to be determined, and is listed for Springfield, MO.",
   "start": "2026-12-01",
   "end": null,
   "timezone": "America/Chicago",
@@ -17,7 +17,9 @@
     "website": null
   },
   "categories": [
-    "professional-development"
+    "professional-development",
+    "networking",
+    "entrepreneurship"
   ],
   "price": null,
   "is_free": null,
@@ -26,7 +28,7 @@
   "source_urls": [
     "https://www.eventbrite.com/e/from-fog-to-focus-tickets-1986072312751"
   ],
-  "updated_at": "2026-11-16T10:36:04.840Z",
+  "updated_at": "2026-11-17T10:50:10.226Z",
   "public_slug": "from-fog-to-focus-2026-12-01",
   "city_slug": "springfield",
   "path": "/events/springfield/from-fog-to-focus-2026-12-01/",

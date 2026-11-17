@@ -1,0 +1,34 @@
+{
+  "id": "67ac31a3-24d6-436b-965f-7ba07036f4ad",
+  "slug": "alt-mas-an-alternative-holiday-party-presented-by-the-kinky-cabaret",
+  "title": "ALT-MAS: An Alternative Holiday Party presented by The Kinky Cabaret!",
+  "seo_title": "ALT-MAS Alternative Holiday Party in Springfield, MO",
+  "description": "ALT-MAS is an alternative holiday party presented by The Kinky Cabaret, centered on a burlesque show. It takes place on December 19, 2026, at Ruthie's, 1611 North Campbell Avenue in Springfield, MO. The time is TBD.",
+  "start": "2026-12-19",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Ruthie’s",
+  "address": "1611 North Campbell Avenue, Springfield, MO, 65803",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/alt-mas-an-alternative-holiday-party-presented-by-the-kinky-cabaret-tickets-2003670757172",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196202269%2F2995488346809%2F1%2Foriginal.20261020-162535?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=76686cd96a0136eb01986d1a898839ee",
+  "source_urls": [
+    "https://www.eventbrite.com/e/alt-mas-an-alternative-holiday-party-presented-by-the-kinky-cabaret-tickets-2003670757172"
+  ],
+  "updated_at": "2026-11-17T10:50:10.226Z",
+  "public_slug": "alt-mas-alternative-holiday-party-2026-12-19",
+  "city_slug": "springfield",
+  "path": "/events/springfield/alt-mas-alternative-holiday-party-2026-12-19/",
+  "action_type": "details"
+}

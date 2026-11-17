@@ -1,0 +1,35 @@
+{
+  "id": "30f3bc12-dbd7-44af-b678-784bcb112658",
+  "slug": "2026-holiday-tree-trail",
+  "title": "2026 Holiday Tree Trail",
+  "seo_title": "2026 Holiday Tree Trail in Joplin, MO",
+  "description": "The 2026 Holiday Tree Trail is an outdoor holiday event in Joplin, Missouri, hosted by Joplin Parks and Recreation. It takes place on December 3, 2026, at 3002 Saint Johns Blvd in Joplin. The start time is Time TBD.",
+  "start": "2026-12-03",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "3002 Saint Johns Blvd, Joplin, MO 64804-1884, United States",
+  "address": "3002 Saint Johns Blvd, Joplin, MO 64804-1884, United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Joplin Parks and Recreation",
+    "website": null
+  },
+  "categories": [
+    "outdoors",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/2026-holiday-tree-trail-eid3a0e6t8xh8",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy8xYzFhMGYxY2U1MTllNDA2Y2ZlYzdlMmEwNzJlYzY3ZDQ2YTU5MTcyNzE5NzEyNTNjZWZlODQ3MzgxOGNlYjZiLXJpbWctdzEyMDAtaDY3NS1kYzE4NDg1OC1nbWlyP3Y9MTc5MjQyNTIxMA.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/2026-holiday-tree-trail-eid3a0e6t8xh8"
+  ],
+  "updated_at": "2026-11-17T10:50:10.226Z",
+  "public_slug": "holiday-tree-trail-2026-12-03",
+  "city_slug": "joplin",
+  "path": "/events/joplin/holiday-tree-trail-2026-12-03/",
+  "action_type": "details"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "6d0a8645-9a7a-4526-ba41-aaa6db7682ae",
+  "slug": "christmas-at-first-calvary",
+  "title": "Christmas at First & Calvary",
+  "seo_title": "Christmas at First & Calvary in Springfield, MO",
+  "description": "Christmas at First & Calvary is a holiday event hosted by First & Calvary Presbyterian Church. It takes place on December 24, 2026, at 820 E Cherry St in Springfield, Missouri. The time is TBD.",
+  "start": "2026-12-24",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "820 E Cherry St, Springfield, MO, United States, Missouri 65806",
+  "address": "820 E Cherry St, Springfield, MO 65806-3414, United States, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "First & Calvary Presbyterian Church",
+    "website": "https://allevents.in/org/first-and-calvary-presbyterian-church/13911473"
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/christmas-at-first-and-calvary/200030989916339",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czMvYmFubmVycy9hZWQyMGI5NjliMWNmNWI1MjM2ODhlYzk5ODQ3MGZiZDhiZGI2ZDRhODg2M2QyOWJiODBkNTlmOTQ3MWNkYWUxLXJpbWctdzEyMDAtaDY3NS1kYzQ4NTg0OC1nbWlyP3Y9MTc5NDAwNTY3OQ.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/christmas-at-first-and-calvary/200030989916339"
+  ],
+  "updated_at": "2026-11-17T10:50:10.226Z",
+  "public_slug": "christmas-at-first-calvary-2026-12-24",
+  "city_slug": "springfield",
+  "path": "/events/springfield/christmas-at-first-calvary-2026-12-24/",
+  "action_type": "details"
+}

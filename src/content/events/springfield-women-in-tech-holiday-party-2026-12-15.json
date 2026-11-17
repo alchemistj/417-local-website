@@ -1,0 +1,34 @@
+{
+  "id": "cfcc5264-90d5-44b7-b1dd-b6a17ee47281",
+  "slug": "springfield-women-in-tech-holiday-party",
+  "title": "Springfield Women in Tech Holiday Party",
+  "seo_title": "Springfield Women in Tech Holiday Party at Village Meeple",
+  "description": "A holiday party hosted by Springfield Women in Technology to celebrate the group's year, with dinner, dessert, and unlimited play from the board game library at Village Meeple, a board game cafe. Admission is free, drinks are available for purchase, Pro Members get 2 free drink tickets, and family members are welcome to come along. It takes place Tuesday, December 15, 2026, from 5:30 to 8:30 PM at 1570 E Battlefield Rd in Springfield, Missouri.",
+  "start": "2026-12-15T23:30:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Village Meeple Board Game Cafe",
+  "address": "1570 E Battlefield Rd Ste f, Springfield, MO 65804, USA, Springfield, MO, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Springfield Women In Technology",
+    "website": "https://www.meetup.com/springfield-women-in-technology"
+  },
+  "categories": [
+    "professional-development",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": true,
+  "registration_url": "https://www.meetup.com/springfield-women-in-technology/events/312796218",
+  "image_url": "/images/fallbacks/redesign/group-cover-1-square.webp",
+  "source_urls": [
+    "https://www.meetup.com/springfield-women-in-technology/events/312796218"
+  ],
+  "updated_at": "2026-11-17T10:50:10.226Z",
+  "public_slug": "springfield-women-in-tech-holiday-party-2026-12-15",
+  "city_slug": "springfield",
+  "path": "/events/springfield/springfield-women-in-tech-holiday-party-2026-12-15/",
+  "action_type": "show_up"
+}

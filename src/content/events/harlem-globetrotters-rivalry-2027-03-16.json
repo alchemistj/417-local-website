@@ -1,0 +1,34 @@
+{
+  "id": "f06b8f5c-d83f-44b5-ae71-ac4154d68702",
+  "slug": "the-harlem-globetrotters-rivalry-tour",
+  "title": "The Harlem Globetrotters: Rivalry Tour",
+  "seo_title": "Harlem Globetrotters Rivalry Tour in Springfield, MO",
+  "description": "The Harlem Globetrotters bring their 2027 Rivalry Tour to Great Southern Bank Arena, where they play the Washington Generals and a new lineup of rivals. Fans can be pulled onto the court, help decide the action, and appear on the jumbotron, and a free pre-game tip-off party starts when doors open at 6:00 PM. It is a sports and family event on Tuesday, March 16, 2027 at 7:00 PM at 901 S. National Ave. in Springfield, MO.",
+  "start": "2027-03-17T00:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Great Southern Bank Arena",
+  "address": "901 S. National Ave.",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "sports",
+    "family"
+  ],
+  "price": "Parking $20; Premium Parking $50",
+  "is_free": true,
+  "registration_url": "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4092",
+  "image_url": null,
+  "source_urls": [
+    "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4092"
+  ],
+  "updated_at": "2026-11-17T10:50:10.226Z",
+  "public_slug": "harlem-globetrotters-rivalry-2027-03-16",
+  "city_slug": "springfield",
+  "path": "/events/springfield/harlem-globetrotters-rivalry-2027-03-16/",
+  "action_type": "show_up"
+}
