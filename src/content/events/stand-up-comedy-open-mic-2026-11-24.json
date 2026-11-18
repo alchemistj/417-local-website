@@ -1,0 +1,35 @@
+{
+  "id": "304618a6-ed30-437d-b068-5a81c77bea01",
+  "slug": "stand-up-comedy-open-mic",
+  "title": "Stand-up Comedy Open Mic",
+  "seo_title": "Stand-up Comedy Open Mic in Joplin, MO – Free",
+  "description": "This is a stand-up comedy open mic where comedians sign up for at least 5 minutes of stage time to try out new jokes, and the crowd gets a free show. It takes place on November 24, 2026, Time TBD, at 110 North Rangeline Road in Joplin, MO.",
+  "start": "2026-11-24",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "110 N Rangeline Rd",
+  "address": "110 North Rangeline Road, Joplin, MO, 64801",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "live-music",
+    "comedy"
+  ],
+  "price": null,
+  "is_free": true,
+  "registration_url": "https://www.eventbrite.com/e/stand-up-comedy-open-mic-tickets-1994606747475",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1188979581%2F3008134068528%2F1%2Foriginal.20260716-054738?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=10%2C657%2C1070%2C535&s=da3607fa1e9a1e90ce10a04603d72e16",
+  "source_urls": [
+    "https://www.eventbrite.com/e/stand-up-comedy-open-mic-tickets-1994606747475"
+  ],
+  "updated_at": "2026-11-18T10:32:42.738Z",
+  "public_slug": "stand-up-comedy-open-mic-2026-11-24",
+  "city_slug": "joplin",
+  "path": "/events/joplin/stand-up-comedy-open-mic-2026-11-24/",
+  "action_type": "rsvp"
+}

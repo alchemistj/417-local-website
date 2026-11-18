@@ -2,8 +2,8 @@
   "id": "67327f76-365b-44fa-b881-6825b8bc6f2c",
   "slug": "shucked-great-southern-bank-broadway-season",
   "title": "SHUCKED – Great Southern Bank Broadway Season",
-  "seo_title": "SHUCKED at Hammons Hall, Springfield MO, Jan 2027",
-  "description": "SHUCKED is a Broadway musical comedy in which Maizy and Beau's wedding plans are upended when the corn that protects their small community, Cob County, starts to die. It includes the songs \"Woman of the World,\" \"Somebody Will\" and \"Independently Owned,\" and contains adult themes, some adult language and corny innuendo; it is recommended for ages 10+. It runs from Tuesday, January 19, 2027 at 7:30 PM through January 21, 2027 at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO.",
+  "seo_title": "SHUCKED Broadway Musical in Springfield, MO, Jan 2027",
+  "description": "SHUCKED is a Broadway musical about Maizy and Beau's wedding, a small community whose protective corn starts to die, and a battle for the heart and soil of the town. It features the songs 'Woman of the World', 'Somebody Will' and 'Independently Owned', and is recommended for ages 10+, with adult themes and language. Performances run January 19-21, 2027 at 7:30 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO; single tickets are not yet on sale, so subscriptions are the only way to buy for now.",
   "start": "2027-01-20T01:30:00+00:00",
   "end": "2027-01-22T01:30:00+00:00",
   "timezone": "America/Chicago",
@@ -12,7 +12,7 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Juanita K. Hammons Hall for the Performing Arts, Missouri State University",
+    "name": "Missouri State University",
     "website": "https://www.hammonshall.com/"
   },
   "categories": [
@@ -25,7 +25,7 @@
   "source_urls": [
     "https://www.hammonshall.com/viewshow.aspx?ID=4083"
   ],
-  "updated_at": "2026-11-17T10:50:10.226Z",
+  "updated_at": "2026-11-18T10:32:42.738Z",
   "public_slug": "shucked-2027-01-19",
   "city_slug": "springfield",
   "path": "/events/springfield/shucked-2027-01-19/",

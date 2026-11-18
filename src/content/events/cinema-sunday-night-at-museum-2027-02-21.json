@@ -1,0 +1,35 @@
+{
+  "id": "bc70fc0b-983a-4d50-ac48-97f99441c741",
+  "slug": "cinema-sunday-night-at-the-museum",
+  "title": "Cinema Sunday: Night at the Museum",
+  "seo_title": "Cinema Sunday: Night at the Museum in Springfield, MO",
+  "description": "This is a free screening of Night at the Museum as part of the Cinema Sunday series, following night security guard Larry Daley as an Egyptian curse brings the Natural History Museum's animals to life after closing. It is a family film with general admission seating, and reservations are e-tickets made by phone at 417-863-9491 or in person at the Gillioz Box Office. It takes place Sunday, February 21, 2027 at 2:00 PM at the Gillioz Theatre, 325 Park Central E., Springfield, MO.",
+  "start": "2027-02-21T20:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Gillioz Theatre (Gillioz Center for Arts & Entertainment)",
+  "address": "325 Park Central E.",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Gillioz Center for Arts & Entertainment",
+    "website": "https://gillioztheatre.com/"
+  },
+  "categories": [
+    "film",
+    "arts-and-theater",
+    "family"
+  ],
+  "price": "FREE",
+  "is_free": true,
+  "registration_url": "https://gillioztheatre.com/event/cinema-sunday-night-at-the-museum",
+  "image_url": null,
+  "source_urls": [
+    "https://gillioztheatre.com/event/cinema-sunday-night-at-the-museum"
+  ],
+  "updated_at": "2026-11-18T10:32:42.738Z",
+  "public_slug": "cinema-sunday-night-at-museum-2027-02-21",
+  "city_slug": "springfield",
+  "path": "/events/springfield/cinema-sunday-night-at-museum-2027-02-21/",
+  "action_type": "tickets"
+}

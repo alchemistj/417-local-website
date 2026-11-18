@@ -3,30 +3,30 @@
   "slug": "the-harlem-globetrotters-rivalry-tour",
   "title": "The Harlem Globetrotters: Rivalry Tour",
   "seo_title": "Harlem Globetrotters Rivalry Tour in Springfield, MO",
-  "description": "The Harlem Globetrotters bring their 2027 Rivalry Tour to Great Southern Bank Arena, where they play the Washington Generals and a new lineup of rivals. Fans can be pulled onto the court, help decide the action, and appear on the jumbotron, and a free pre-game tip-off party starts when doors open at 6:00 PM. It is a sports and family event on Tuesday, March 16, 2027 at 7:00 PM at 901 S. National Ave. in Springfield, MO.",
+  "description": "The Harlem Globetrotters bring their Rivalry Tour, part of the 2027 world tour, to the court, where the Washington Generals and a new lineup of rivals take them on and fans can help decide the action, get pulled onto the court, and appear on the jumbotron. It suits families and sports fans, with a free pre-game tip-off party starting when doors open at 6:00 PM. It takes place Tuesday, March 16, 2027 at 7:00 PM at Great Southern Bank Arena in Springfield, MO; parking is $20, or $50 for premium.",
   "start": "2027-03-17T00:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
   "venue": "Great Southern Bank Arena",
-  "address": "901 S. National Ave.",
+  "address": null,
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": null,
+    "name": "Harlem Globetrotters",
     "website": null
   },
   "categories": [
     "sports",
     "family"
   ],
-  "price": "Parking $20; Premium Parking $50",
+  "price": null,
   "is_free": true,
   "registration_url": "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4092",
   "image_url": null,
   "source_urls": [
     "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4092"
   ],
-  "updated_at": "2026-11-17T10:50:10.226Z",
+  "updated_at": "2026-11-18T10:32:42.738Z",
   "public_slug": "harlem-globetrotters-rivalry-2027-03-16",
   "city_slug": "springfield",
   "path": "/events/springfield/harlem-globetrotters-rivalry-2027-03-16/",

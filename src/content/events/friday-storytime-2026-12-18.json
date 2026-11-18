@@ -1,0 +1,33 @@
+{
+  "id": "6158b814-d11d-4f04-b33a-b6bf07403e44",
+  "slug": "friday-storytime",
+  "title": "Friday Storytime",
+  "seo_title": "Friday Storytime at Lebanon-Laclede County Library",
+  "description": "Friday Storytime is a kids' program where families sing songs, read a few books, make a craft and have a snack. It covers the same theme as the Wednesday and Thursday sessions and is typically geared towards children of all ages. It takes place Friday, December 18, 2026, from 10:00 AM to 11:00 AM at the Lebanon-Laclede County Library, 915 South Jefferson Ave in Lebanon, MO.",
+  "start": "2026-12-18T16:00:00+00:00",
+  "end": "2026-12-18T17:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Lebanon-Laclede County Library",
+  "address": "915 South Jefferson Ave, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "kids"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/friday-storytime22222",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/friday-storytime22222"
+  ],
+  "updated_at": "2026-11-18T10:32:42.738Z",
+  "public_slug": "friday-storytime-2026-12-18",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/friday-storytime-2026-12-18/",
+  "action_type": "details"
+}

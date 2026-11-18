@@ -1,0 +1,33 @@
+{
+  "id": "78378464-5042-4691-86c0-0a2149fdece1",
+  "slug": "stars-stripes-sips",
+  "title": "Stars, Stripes & Sips",
+  "seo_title": "Stars, Stripes & Sips Coffee Gathering in Lebanon, MO",
+  "description": "Stars, Stripes & Sips is a coffee and fellowship gathering hosted by 4 Pawz 4 Heroes and Bramble Spring Bakery, with complimentary coffee and breakfast and bakery treats available for purchase. It is for military members, veterans, and first responders. It takes place Thursday, December 3, 2026, from 8:00 to 10:00 AM at Bramble Springs Bakery, 410 S Jackson Ave in Lebanon, Missouri.",
+  "start": "2026-12-03T14:00:00+00:00",
+  "end": "2026-12-03T16:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Bramble Springs Bakery",
+  "address": "410 S Jackson Ave,, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "networking"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/stars-stripes--sips",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/stars-stripes--sips"
+  ],
+  "updated_at": "2026-11-18T10:32:42.738Z",
+  "public_slug": "stars-stripes-sips-2026-12-03",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/stars-stripes-sips-2026-12-03/",
+  "action_type": "details"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "298b33a9-84ff-42d6-a898-3fe1e8125231",
+  "slug": "starboard-showcase-open-mic-night",
+  "title": "Starboard Showcase Open Mic Night!",
+  "seo_title": "Starboard Showcase Open Mic Night in Lebanon, MO",
+  "description": "Starboard Showcase Open Mic Night is a new open mic at Boat Town Brewing where performers get 15 minutes on stage to show off their musical talent. Sign-up starts at 5:30 PM and is first come, first served. It runs Thursday, December 10, 2026, from 6:00 to 8:00 PM at 214 West Commercial Street in Lebanon, MO.",
+  "start": "2026-12-11T00:00:00+00:00",
+  "end": "2026-12-11T02:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Boat Town Brewing",
+  "address": "214 West Commercial Street, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "live-music",
+    "arts-and-theater"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/starboard-showcase-open-mic-night22",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/starboard-showcase-open-mic-night22"
+  ],
+  "updated_at": "2026-11-18T10:32:42.738Z",
+  "public_slug": "starboard-showcase-open-mic-night-2026-12-10",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/starboard-showcase-open-mic-night-2026-12-10/",
+  "action_type": "register"
+}

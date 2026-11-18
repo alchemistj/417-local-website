@@ -2,13 +2,13 @@
   "id": "e39d8d9d-e104-4f37-8e28-76031ca437d3",
   "slug": "giving-tuesday-chamber-gives-back-convoy-of-hope",
   "title": "GIVING TUESDAY - Chamber Gives Back - Convoy of Hope",
-  "seo_title": "Giving Tuesday Volunteering at Convoy of Hope, Springfield",
-  "description": "This is a Giving Tuesday volunteer event at Convoy of Hope's World Distribution Center, sponsored by the Republic Area Chamber of Commerce. Volunteers count, sort, and box or bag product and help clean up their work area at the end; closed-toe shoes, comfortable clothing, and a current liability waiver are required, and youth ages 10-12 need a parent or guardian and a signed consent form. It runs Tuesday, December 1, 2026, from 6:30 to 8:30 PM at One Convoy Drive in Springfield, MO, with volunteers typically arriving around 6 to 6:15 PM.",
+  "seo_title": "Giving Tuesday Volunteer Event at Convoy of Hope",
+  "description": "A Giving Tuesday volunteer event where participants count, sort, box and bag product for Hands of Hope at Convoy of Hope Headquarters, with projects varying by need and a cleanup of the work area at the end. It is sponsored by the Republic Area Chamber of Commerce; youth 10-12 must come with a parent or guardian and a signed consent form, and everyone needs a current liability waiver on file and closed-toe shoes. It takes place Tuesday, December 1, 2026, from 6:30 PM to 8:30 PM at the Convoy of Hope World Distribution Center, One Convoy Drive, Springfield, MO.",
   "start": "2026-12-02T00:30:00+00:00",
   "end": "2026-12-02T02:30:00+00:00",
   "timezone": "America/Chicago",
   "venue": "Convoy of Hope World Distribution Center",
-  "address": "One Convoy Drive",
+  "address": "One Convoy Drive, Springfield, MO 65802",
   "city": "Springfield",
   "state": "MO",
   "organizer": {
@@ -17,7 +17,8 @@
   },
   "categories": [
     "networking",
-    "community"
+    "community",
+    "holiday"
   ],
   "price": null,
   "is_free": null,
@@ -26,7 +27,7 @@
   "source_urls": [
     "https://republicchamber.com/events/details/giving-tuesday-chamber-gives-back-convoy-of-hope-13810"
   ],
-  "updated_at": "2026-11-17T10:50:10.226Z",
+  "updated_at": "2026-11-18T10:32:42.738Z",
   "public_slug": "giving-tuesday-chamber-gives-back-convoy-of-hope-2026-12-01",
   "city_slug": "springfield",
   "path": "/events/springfield/giving-tuesday-chamber-gives-back-convoy-of-hope-2026-12-01/",

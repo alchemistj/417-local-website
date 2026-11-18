@@ -1,0 +1,35 @@
+{
+  "id": "927359f7-faf5-459e-a134-a1280070836b",
+  "slug": "adult-event-holiday-bingo-for-books",
+  "title": "Adult Event: Holiday Bingo for Books",
+  "seo_title": "Holiday Bingo for Books at Lebanon-Laclede County Library",
+  "description": "This is a holiday edition of Bingo for Books, where attendees play as many games of bingo as they can before 7 PM, with a free book of their choice as the prize. It is an adult event at the Lebanon-Laclede County Library, and admission is free. It takes place on Monday, December 7, 2026, from 5:00 PM to 7:00 PM at 915 South Jefferson Ave in Lebanon, MO.",
+  "start": "2026-12-07T23:00:00+00:00",
+  "end": "2026-12-08T01:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Lebanon-Laclede County Library",
+  "address": "915 South Jefferson Ave, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": "Lebanon-Laclede County Library",
+    "website": "https://allevents.in/org/lebanon-laclede-county-library/21264264"
+  },
+  "categories": [
+    "community",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": true,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/adult-event-holiday-bingo-for-books",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czMvYmFubmVycy81ZDQyYjEwNWQxMWUwMzMzYjdjODllMjdjZjg0N2RlODI0Yzk5YWQ1ZGVkOWFhYzZjOTBiMzM3M2VlZTZlMjY3LXJpbWctdzEyMDAtaDYzMC1kY2Y4ZjhlOC1nbWlyP3Y9MTc5NDg4MTk0OQ.avif",
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/adult-event-holiday-bingo-for-books",
+    "https://allevents.in/lebanon/adult-event-holiday-bingo-for-books/200031061455609"
+  ],
+  "updated_at": "2026-11-18T10:32:42.738Z",
+  "public_slug": "adult-event-holiday-bingo-for-books-2026-12-07",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/adult-event-holiday-bingo-for-books-2026-12-07/",
+  "action_type": "show_up"
+}

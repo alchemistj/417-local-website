@@ -1,0 +1,37 @@
+{
+  "id": "c5b4ba6a-d63b-4716-b8ed-e9663f729285",
+  "slug": "friends-of-the-library-2nd-chance-sale",
+  "title": "Friends of the Library 2nd Chance Sale",
+  "seo_title": "Friends of the Library 2nd Chance Sale in Lebanon, MO",
+  "description": "The Friends of the Library 2nd Chance Sale is a book sale where you can browse new and used books, all priced at $1. It takes place on Saturday, November 21, 2026, from 10:30 AM to 3:30 PM at the Lebanon-Laclede County Library, 915 South Jefferson Ave in Lebanon, Missouri.",
+  "start": "2026-11-21T16:30:00+00:00",
+  "end": "2026-11-21T21:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Lebanon-Laclede County Library",
+  "address": "915 South Jefferson Ave, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "community",
+    "family",
+    "live-music",
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/friends-of-the-library-2nd-chance-sale23222",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czMvYmFubmVycy80NzJkZjgyN2EyMWUxZTIwMDQyMzc2YzdjM2U0YWJiN2VlZjgxMzM1YmM2NmUzMTU1YjA3MDliODc2MmE4YjgwLXJpbWctdzEyMDAtaDYzMC1kY2Y4ZjhmOC1nbWlyP3Y9MTc5MzYxMzMyNw.avif",
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/friends-of-the-library-2nd-chance-sale23222",
+    "https://allevents.in/lebanon/friends-2nd-chance-book-sale/200030953575228"
+  ],
+  "updated_at": "2026-11-18T10:32:42.738Z",
+  "public_slug": "friends-of-library-2nd-chance-sale-2026-11-21",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/friends-of-library-2nd-chance-sale-2026-11-21/",
+  "action_type": "details"
+}

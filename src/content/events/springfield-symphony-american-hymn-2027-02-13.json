@@ -3,7 +3,7 @@
   "slug": "springfield-symphony-an-american-hymn",
   "title": "Springfield Symphony: An American Hymn",
   "seo_title": "Springfield Symphony: An American Hymn, Feb 13, 2027",
-  "description": "Springfield Symphony: An American Hymn is an orchestral concert of religious works by American composers, inviting reflection on the sacred and holy. The program includes Bernstein's Chichester Psalms with the Combined University Choirs, Copland's Appalachian Spring, built around the Shaker hymn Simple Gifts, and Jessie Montgomery's fanfare Starburst. It takes place Saturday, February 13, 2027 at 7:30 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO.",
+  "description": "This symphony concert features religious works by American composers that invite reflection on the sacred and holy. The program includes Jessie Montgomery's Starburst, Leonard Bernstein's Chichester Psalms performed by the Combined University Choirs, and Aaron Copland's Appalachian Spring, built around the Shaker hymn Simple Gifts. The Springfield Symphony Orchestra performs Saturday, February 13, 2027 at 7:30 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO.",
   "start": "2027-02-14T01:30:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -16,7 +16,8 @@
     "website": null
   },
   "categories": [
-    "live-music"
+    "live-music",
+    "arts-and-theater"
   ],
   "price": null,
   "is_free": null,
@@ -25,7 +26,7 @@
   "source_urls": [
     "https://www.hammonshall.com/viewshow.aspx?ID=4077"
   ],
-  "updated_at": "2026-11-17T10:50:10.226Z",
+  "updated_at": "2026-11-18T10:32:42.738Z",
   "public_slug": "springfield-symphony-american-hymn-2027-02-13",
   "city_slug": "springfield",
   "path": "/events/springfield/springfield-symphony-american-hymn-2027-02-13/",

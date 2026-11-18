@@ -2,18 +2,18 @@
   "id": "a55f15a4-980d-417d-bdc5-b0bea50f33bb",
   "slug": "fall-commencement",
   "title": "Fall Commencement",
-  "seo_title": "Fall Commencement at Great Southern Bank Arena, Springfield",
-  "description": "Missouri State University holds its Fall Commencement ceremonies for graduates, with the 10 am ceremony covering the Darr College of Agriculture, College of Business, College of Natural and Applied Sciences, and Interdisciplinary Academic Programs, and the 1:30 p.m. ceremony covering the McQueary College of Health and Human Services, Reynolds College of Arts, Social Sciences, and Humanities, and College of Education. No ticket is required, guests per graduate are not limited, doors open 90 minutes before each ceremony, and only clear bags are permitted. It takes place Friday, December 11, 2026 at Great Southern Bank Arena in Springfield, MO, and all ceremonies are livestreamed.",
+  "seo_title": "Fall Commencement at Missouri State University, Dec 11",
+  "description": "Missouri State University holds its fall commencement ceremonies for graduates at Great Southern Bank Arena, with a 10 am ceremony for the Darr College of Agriculture, College of Business, College of Natural and Applied Sciences, and Interdisciplinary Academic Programs, and a 1:30 pm ceremony for the McQueary College of Health and Human Services, Reynolds College of Arts, Social Sciences, and Humanities, and College of Education. No ticket is required, doors open 90 minutes before each ceremony, and only clear bags are permitted. It takes place Friday, December 11, 2026, at 901 S. National Ave. in Springfield, MO.",
   "start": "2026-12-11T16:00:00+00:00",
-  "end": null,
+  "end": "2026-12-11T19:30:00+00:00",
   "timezone": "America/Chicago",
   "venue": "Great Southern Bank Arena",
-  "address": null,
+  "address": "Missouri State University, 901 S. National Ave.",
   "city": "Springfield",
   "state": "MO",
   "organizer": {
     "name": "Missouri State University",
-    "website": null
+    "website": "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4093"
   },
   "categories": [
     "community"
@@ -25,7 +25,7 @@
   "source_urls": [
     "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4093"
   ],
-  "updated_at": "2026-11-17T10:50:10.226Z",
+  "updated_at": "2026-11-18T10:32:42.738Z",
   "public_slug": "fall-commencement-2026-12-11",
   "city_slug": "springfield",
   "path": "/events/springfield/fall-commencement-2026-12-11/",

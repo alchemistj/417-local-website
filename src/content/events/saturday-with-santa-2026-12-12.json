@@ -1,0 +1,33 @@
+{
+  "id": "a1d623ef-da9d-4edb-a83d-6682fb180725",
+  "slug": "saturday-with-santa",
+  "title": "Saturday with SANTA",
+  "seo_title": "Saturday with Santa at Lebanon Family YMCA, Dec 12",
+  "description": "Saturday with Santa is a holiday morning at the Lebanon Family YMCA with Santa and his elves, plus a sweet treat and hot chocolate. Families are invited to bring their kids. It takes place Saturday, December 12, 2026, from 10:00 AM to 12:00 PM at 500 E. Elm St in Lebanon, MO.",
+  "start": "2026-12-12T16:00:00+00:00",
+  "end": "2026-12-12T18:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Lebanon Family YMCA",
+  "address": "500 E. Elm St, Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/saturday-with-santa22",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/saturday-with-santa22"
+  ],
+  "updated_at": "2026-11-18T10:32:42.738Z",
+  "public_slug": "saturday-with-santa-2026-12-12",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/saturday-with-santa-2026-12-12/",
+  "action_type": "details"
+}
