@@ -3,11 +3,11 @@
   "slug": "cinema-sunday-night-at-the-museum",
   "title": "Cinema Sunday: Night at the Museum",
   "seo_title": "Cinema Sunday: Night at the Museum in Springfield, MO",
-  "description": "This is a free screening of Night at the Museum as part of the Cinema Sunday series, following night security guard Larry Daley as an Egyptian curse brings the Natural History Museum's animals to life after closing. It is a family film with general admission seating, and reservations are e-tickets made by phone at 417-863-9491 or in person at the Gillioz Box Office. It takes place Sunday, February 21, 2027 at 2:00 PM at the Gillioz Theatre, 325 Park Central E., Springfield, MO.",
+  "description": "Cinema Sunday is a free screening of Night at the Museum, in which security guard Larry Daley finds that an Egyptian curse brings the museum's animals to life after closing. It takes place Sunday, February 21, 2027 at 2:00 PM at the Gillioz Theatre, 325 Park Central E., Springfield, MO. Tickets are reserved by phone at 417-863-9491 or in person at the Gillioz Box Office starting February 1st, and reserved tickets must be redeemed at least 15 minutes before showtime.",
   "start": "2027-02-21T20:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
-  "venue": "Gillioz Theatre (Gillioz Center for Arts & Entertainment)",
+  "venue": "Gillioz Theatre",
   "address": "325 Park Central E.",
   "city": "Springfield",
   "state": "MO",
@@ -17,17 +17,16 @@
   },
   "categories": [
     "film",
-    "arts-and-theater",
-    "family"
+    "arts-and-theater"
   ],
-  "price": "FREE",
+  "price": "Free",
   "is_free": true,
   "registration_url": "https://gillioztheatre.com/event/cinema-sunday-night-at-the-museum",
   "image_url": null,
   "source_urls": [
     "https://gillioztheatre.com/event/cinema-sunday-night-at-the-museum"
   ],
-  "updated_at": "2026-11-18T10:32:42.738Z",
+  "updated_at": "2026-11-19T10:31:22.026Z",
   "public_slug": "cinema-sunday-night-at-museum-2027-02-21",
   "city_slug": "springfield",
   "path": "/events/springfield/cinema-sunday-night-at-museum-2027-02-21/",

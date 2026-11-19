@@ -2,8 +2,8 @@
   "id": "2a54a977-1b08-4263-a5ca-b8ebf24d6fa0",
   "slug": "springfield-ballets-the-nutcracker",
   "title": "Springfield Ballet's The Nutcracker",
-  "seo_title": "Springfield Ballet's The Nutcracker",
-  "description": "Springfield Ballet's The Nutcracker is scheduled for December 17, 2026, Time TBD at The Landers Theatre, 311 E. Walnut Street, Springfield. Springfield Ballet, Inc. is the organizer. The price is $40.00 adult; $35.00 senior/student/military; $29.00 children 12 and under; $25.00 groups 12+.",
+  "seo_title": "Springfield Ballet's The Nutcracker at Landers Theatre",
+  "description": "Springfield Ballet's annual production of The Nutcracker follows Clara and her Nutcracker through dreams of battling toy soldiers and mice, dancing flowers, and the Sugar Plum Fairy in the Enchanted Forest of Snow and Land of Sweets. It runs about 2 hours with one 20-minute intermission and is rated G. It takes place December 17, 2026 (Time TBD) at The Landers Theatre, 311 E. Walnut Street in Springfield, MO, with performances running December 17-21.",
   "start": "2026-12-17",
   "end": null,
   "timezone": "America/Chicago",
@@ -14,21 +14,20 @@
   "state": "MO",
   "organizer": {
     "name": "Springfield Ballet, Inc.",
-    "website": null
+    "website": "https://www.springfieldlittletheatre.org/"
   },
   "categories": [
     "arts-and-theater",
-    "holiday",
-    "family"
+    "holiday"
   ],
-  "price": "Adult: $40.00; Senior (62+)/Student/Military $35.00; Children (ages 12 and under) $29.00; Groups 12+: $25.00",
+  "price": "Adult $40.00; Senior (62+)/Student/Military $35.00; Children 12 and under $29.00",
   "is_free": false,
   "registration_url": "https://www.springfieldlittletheatre.org/show/springfield-ballets-nutcracker",
   "image_url": null,
   "source_urls": [
     "https://www.springfieldlittletheatre.org/show/springfield-ballets-nutcracker"
   ],
-  "updated_at": "2026-11-18T10:32:42.738Z",
+  "updated_at": "2026-11-19T10:31:22.026Z",
   "public_slug": "springfield-ballet-s-nutcracker-2026-12-17",
   "city_slug": "springfield",
   "path": "/events/springfield/springfield-ballet-s-nutcracker-2026-12-17/",

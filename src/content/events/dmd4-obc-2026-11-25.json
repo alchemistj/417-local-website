@@ -3,7 +3,7 @@
   "slug": "dmd4-obc",
   "title": "DMD4 @ OBC",
   "seo_title": "DMD4 at Old Broadway Club in Joplin, MO",
-  "description": "DMD4 is a live music night where Dance Monkey Dance plays Ozark-bred Americana, psychedelic grooves, and rowdy roots music, with banjo, bass, trombone, piano, and more. You can grab a drink and bring your dancing shoes. It takes place November 25, 2026 (Time TBD) at the Old Broadway Club, 125 S Mineral Ave in Joplin, MO.",
+  "description": "DMD4 is a night of live music by Dance Monkey Dance, who play Ozark-bred Americana, psychedelic grooves, and rowdy roots music with banjo, bass, trombone, piano, and more. You can grab a drink and bring your dancing shoes. It takes place at the Old Broadway Club, 125 S Mineral Ave in Joplin, MO, on November 25, 2026, with the time to be determined.",
   "start": "2026-11-25",
   "end": null,
   "timezone": "America/Chicago",
@@ -17,8 +17,12 @@
     "website": null
   },
   "categories": [
+    "festivals",
+    "community",
+    "arts-and-theater",
     "live-music",
-    "arts-and-theater"
+    "family",
+    "food-and-drink"
   ],
   "price": null,
   "is_free": null,
@@ -27,7 +31,7 @@
   "source_urls": [
     "https://happeningnext.com/event/dmd4-obc-eid3a0eb9erqr"
   ],
-  "updated_at": "2026-11-18T10:32:42.738Z",
+  "updated_at": "2026-11-19T10:31:22.026Z",
   "public_slug": "dmd4-obc-2026-11-25",
   "city_slug": "joplin",
   "path": "/events/joplin/dmd4-obc-2026-11-25/",

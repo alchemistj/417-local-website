@@ -3,7 +3,7 @@
   "slug": "caymus-friendsgiving",
   "title": "Caymus Friendsgiving",
   "seo_title": "Caymus Friendsgiving Wine Dinner in Ozark, MO",
-  "description": "This Caymus Friendsgiving Wine Dinner is a Thanksgiving-style meal paired with Caymus wines, so guests can enjoy a holiday dinner without the shopping, cooking, or cleanup. Happy hour starts at 6pm and dinner follows at 7pm, and reservations are required by calling (417) 882-0399 or reserving online. It takes place Thursday, November 19, 2026 at Vineyard Market, 1759 W State Hwy J in Ozark, MO.",
+  "description": "Caymus Friendsgiving is a Thanksgiving-style wine dinner with Caymus wine pairings, where the restaurant handles the cooking and cleanup. Reservations are required and can be made by calling (417) 882-0399; tickets are $150, or $125 at the Cellar Society price. It takes place Thursday, November 19, 2026 at Vineyard Market, 1759 W State Hwy J in Ozark, MO, with happy hour at 6 PM and dinner at 7 PM.",
   "start": "2026-11-20T00:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -19,14 +19,14 @@
     "holiday",
     "food-and-drink"
   ],
-  "price": "$150; Cellar Society price $125",
+  "price": "$150 ticket; $125 Cellar Society price",
   "is_free": false,
   "registration_url": "https://thevineyardmarket.com/events/caymus-friendsgiving-2026",
   "image_url": null,
   "source_urls": [
     "https://thevineyardmarket.com/events/caymus-friendsgiving-2026"
   ],
-  "updated_at": "2026-11-18T10:32:42.738Z",
+  "updated_at": "2026-11-19T10:31:22.026Z",
   "public_slug": "caymus-friendsgiving-2026-11-19",
   "city_slug": "ozark",
   "path": "/events/ozark/caymus-friendsgiving-2026-11-19/",
