@@ -1,0 +1,33 @@
+{
+  "id": "cbb841e5-1e58-49b1-ab0d-3973a79bf009",
+  "slug": "senior-community-dinner-and-award-ceremony",
+  "title": "Senior Community Dinner and Award Ceremony.",
+  "seo_title": "Senior Community Dinner and Award Ceremony in Lebanon, MO",
+  "description": "The VFW Post 4107 Senior Dinner is a free holiday meal for seniors that also honors local award winners. Donations are welcome. It takes place Saturday, December 5, 2026 at 5:00 PM at Shrine Hall, 204 N. Madison Ave., in Lebanon, MO.",
+  "start": "2026-12-05T23:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Shrine Hall",
+  "address": "204 N. Madison Ave., Lebanon, MO, 65536",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": true,
+  "registration_url": "https://www.visitlebanonmo.org/events/2020/senior-community-dinner-and-award-ceremony",
+  "image_url": null,
+  "source_urls": [
+    "https://www.visitlebanonmo.org/events/2020/senior-community-dinner-and-award-ceremony"
+  ],
+  "updated_at": "2026-11-20T10:31:06.134Z",
+  "public_slug": "senior-community-dinner-and-award-ceremony-2026-12-05",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/senior-community-dinner-and-award-ceremony-2026-12-05/",
+  "action_type": "show_up"
+}

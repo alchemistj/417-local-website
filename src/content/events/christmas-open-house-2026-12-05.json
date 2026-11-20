@@ -12,8 +12,8 @@
   "city": "Lebanon",
   "state": "MO",
   "organizer": {
-    "name": null,
-    "website": null
+    "name": "Kinderhook Treasures Gift Shop",
+    "website": "https://allevents.in/org/kinderhook-treasures-gift-shop/25137159"
   },
   "categories": [
     "community",
@@ -22,11 +22,12 @@
   "price": null,
   "is_free": true,
   "registration_url": "https://www.visitlebanonmo.org/events/2020/christmas-open-house2(3)",
-  "image_url": null,
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEwL2Jhbm5lcnMvNDQ1MzI2MGI1MDc4NGZkMjVkMjQ4MmQwNTVhNWRhOTA0YmM2NTUxMmJjNDAzYjNiODk1ZWZjZWY0ZjdhZDAwMS1yaW1nLXcxMjAwLWg2MzAtZGMzODI4MTgtZ21pcj92PTE3OTM2MTY4Nzk.avif",
   "source_urls": [
-    "https://www.visitlebanonmo.org/events/2020/christmas-open-house2(3)"
+    "https://www.visitlebanonmo.org/events/2020/christmas-open-house2(3)",
+    "https://allevents.in/lebanon/christmas-open-house/200030954028839"
   ],
-  "updated_at": "2026-11-19T10:31:22.026Z",
+  "updated_at": "2026-11-20T10:31:06.134Z",
   "public_slug": "christmas-open-house-2026-12-05",
   "city_slug": "lebanon",
   "path": "/events/lebanon/christmas-open-house-2026-12-05/",

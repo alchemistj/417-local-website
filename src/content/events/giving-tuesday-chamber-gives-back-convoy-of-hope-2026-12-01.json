@@ -3,12 +3,12 @@
   "slug": "giving-tuesday-chamber-gives-back-convoy-of-hope",
   "title": "GIVING TUESDAY - Chamber Gives Back - Convoy of Hope",
   "seo_title": "Giving Tuesday Volunteer Night at Convoy of Hope",
-  "description": "This is a Giving Tuesday volunteer event at Convoy of Hope's headquarters, sponsored by the Republic Area Chamber of Commerce, where volunteers count, sort, box and bag product for Hands of Hope and help clean up their work area at the end. Youth ages 10 to 17 need a signed parental consent form, children under 10 cannot volunteer, and everyone needs a current liability waiver and closed-toe shoes. It runs Tuesday, December 1, 2026, from 6:30 to 8:30 PM at the Convoy of Hope World Distribution Center, One Convoy Drive, Springfield, MO, with volunteers typically arriving around 6 to 6:15 PM.",
+  "description": "This is a Giving Tuesday volunteer event at Convoy of Hope's World Distribution Center, where volunteers count, sort, and box or bag product. Youth ages 10-12 must come with a parent or guardian, and ages 13-17 need signed parental consent; children under 10 are not eligible. It takes place Tuesday, December 1, 2026, from 6:30 to 8:30 PM at One Convoy Drive in Springfield, MO, with volunteers usually arriving around 6 or 6:15 PM.",
   "start": "2026-12-02T00:30:00+00:00",
   "end": "2026-12-02T02:30:00+00:00",
   "timezone": "America/Chicago",
   "venue": "Convoy of Hope World Distribution Center",
-  "address": "One Convoy Drive, Springfield, MO 65802",
+  "address": "One Convoy Drive",
   "city": "Springfield",
   "state": "MO",
   "organizer": {
@@ -18,7 +18,7 @@
   "categories": [
     "networking",
     "community",
-    "kids"
+    "family"
   ],
   "price": null,
   "is_free": null,
@@ -27,7 +27,7 @@
   "source_urls": [
     "https://republicchamber.com/events/details/giving-tuesday-chamber-gives-back-convoy-of-hope-13810"
   ],
-  "updated_at": "2026-11-19T10:31:22.026Z",
+  "updated_at": "2026-11-20T10:31:06.134Z",
   "public_slug": "giving-tuesday-chamber-gives-back-convoy-of-hope-2026-12-01",
   "city_slug": "springfield",
   "path": "/events/springfield/giving-tuesday-chamber-gives-back-convoy-of-hope-2026-12-01/",

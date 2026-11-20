@@ -1,33 +1,33 @@
 {
   "id": "2a54a977-1b08-4263-a5ca-b8ebf24d6fa0",
   "slug": "springfield-ballets-the-nutcracker",
-  "title": "Springfield Ballet's The Nutcracker",
-  "seo_title": "Springfield Ballet's The Nutcracker at Landers Theatre",
-  "description": "Springfield Ballet's annual production of The Nutcracker follows Clara and her Nutcracker through dreams of battling toy soldiers and mice, dancing flowers, and the Sugar Plum Fairy in the Enchanted Forest of Snow and Land of Sweets. It runs about 2 hours with one 20-minute intermission and is rated G. It takes place December 17, 2026 (Time TBD) at The Landers Theatre, 311 E. Walnut Street in Springfield, MO, with performances running December 17-21.",
+  "title": "Springfield Ballet’s The Nutcracker",
+  "seo_title": "Springfield Ballet's The Nutcracker at The Landers Theatre",
+  "description": "Springfield Ballet's The Nutcracker is a holiday ballet performance produced by Springfield Ballet, Inc., with performances running December 17–21, 2026. It runs about 2 hours, including one 20-minute intermission, and is rated G. It takes place at The Landers Theatre, 311 E. Walnut Street in Springfield, MO, on December 17, 2026, Time TBD, with tickets sold only through Springfield Little Theatre.",
   "start": "2026-12-17",
   "end": null,
   "timezone": "America/Chicago",
   "time_tbd": true,
   "venue": "The Landers Theatre",
-  "address": "311 E. Walnut Street",
+  "address": "311 E. Walnut Street, Springfield, MO, 65806",
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Springfield Ballet, Inc.",
+    "name": "Springfield Little Theatre",
     "website": "https://www.springfieldlittletheatre.org/"
   },
   "categories": [
     "arts-and-theater",
     "holiday"
   ],
-  "price": "Adult $40.00; Senior (62+)/Student/Military $35.00; Children 12 and under $29.00",
-  "is_free": false,
+  "price": null,
+  "is_free": null,
   "registration_url": "https://www.springfieldlittletheatre.org/show/springfield-ballets-nutcracker",
-  "image_url": null,
+  "image_url": "https://eadn-wc05-3360844.nxedge.io/wp-content/uploads/2024/07/SB-SLT-Nutcracker26-Update_SLT_Poster-792x1224-1.jpg",
   "source_urls": [
     "https://www.springfieldlittletheatre.org/show/springfield-ballets-nutcracker"
   ],
-  "updated_at": "2026-11-19T10:31:22.026Z",
+  "updated_at": "2026-11-20T10:31:06.134Z",
   "public_slug": "springfield-ballet-s-nutcracker-2026-12-17",
   "city_slug": "springfield",
   "path": "/events/springfield/springfield-ballet-s-nutcracker-2026-12-17/",

@@ -1,0 +1,34 @@
+{
+  "id": "949966ec-638d-4fc0-802f-73ee1c219b40",
+  "slug": "artfully-absurd-holiday-havoc",
+  "title": "Artfully Absurd: Holiday Havoc",
+  "seo_title": "Artfully Absurd: Holiday Havoc in Joplin, MO",
+  "description": "Artfully Absurd: Holiday Havoc is a holiday event at the Spiva Center for the Arts in Joplin, Missouri. It takes place on December 4, 2026, with the time still to be determined (Time TBD). The venue is at 212 W. 7th Street.",
+  "start": "2026-12-04",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "212 W. 7th Street, Joplin, MO, United States, Missouri 64801",
+  "address": "Spiva Center for the Arts, 212 W 7th St, Joplin, MO 64801-2581, United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Spiva Center for the Arts",
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/artfully-absurd-holiday-havoc-eid3a0ebo0pab",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czQvYmFubmVycy8zZmM5M2IzNWRmMTE0ZTRhYmRmZjNkOGE2NzIxNWJjMmY0YzBiM2JiYzA5NmRlYWFiNDZhZmFhMGY2MThlM2I4LXJpbWctdzEwMDAtaDYwMC1kYzA4NTgyOC1nbWlyP3Y9MTc5NTA2MzEzMw.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/artfully-absurd-holiday-havoc-eid3a0ebo0pab"
+  ],
+  "updated_at": "2026-11-20T10:31:06.134Z",
+  "public_slug": "artfully-absurd-holiday-havoc-2026-12-04",
+  "city_slug": "joplin",
+  "path": "/events/joplin/artfully-absurd-holiday-havoc-2026-12-04/",
+  "action_type": "details"
+}

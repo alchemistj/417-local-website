@@ -1,0 +1,34 @@
+{
+  "id": "58cd5246-3d3b-416f-aa46-8938726e77fa",
+  "slug": "a-very-die-hard-christmas",
+  "title": "A Very Die Hard Christmas",
+  "seo_title": "A Very Die Hard Christmas in Joplin, MO – Dec 3, 2026",
+  "description": "A Very Die Hard Christmas is a holiday event presented by Dream Theatre Troupe - Joplin. It takes place on December 3, 2026, at 124 S. Main in Joplin, Missouri. The time is TBD.",
+  "start": "2026-12-03",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "124 S. Main, Joplin, MO, United States, Missouri 64801",
+  "address": "124 S Main St, Joplin, MO 64801-2306, United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Dream Theatre Troupe - Joplin",
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/a-very-die-hard-christmas-eid3a0ebo0o8l",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czgvYmFubmVycy82YjMxYzBlYWQ3YjlmMDNmMGMxNTAzMjAyMmJjMjEzZTE1YWZkN2I4MDUzNDQ3OTQ0YWE0NGM2MWVlODRjYTlmLXJpbWctdzQ5OC1oMjYxLWRjMDgyODE4LWdtaXI_dj0xNzk1MDYzMTIx.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/a-very-die-hard-christmas-eid3a0ebo0o8l"
+  ],
+  "updated_at": "2026-11-20T10:31:06.134Z",
+  "public_slug": "very-die-hard-christmas-2026-12-03",
+  "city_slug": "joplin",
+  "path": "/events/joplin/very-die-hard-christmas-2026-12-03/",
+  "action_type": "details"
+}

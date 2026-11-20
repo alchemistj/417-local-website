@@ -2,8 +2,8 @@
   "id": "b8d4dad2-2b17-4782-af93-e89085d4d1e5",
   "slug": "bolivar-local-new-coat-distribution",
   "title": "Bolivar - Local New Coat Distribution",
-  "seo_title": "Local New Coat Distribution in Bolivar, MO – Nov 21",
-  "description": "This is a local new coat distribution organized by Coats for Kids - Greater Ozarks Chapter. It takes place on November 21, 2026 (Time TBD) at Sacred Heart Catholic Church, 1507 W Fairplay St in Bolivar, MO.",
+  "seo_title": "New Coat Distribution for Kids in Bolivar, MO",
+  "description": "This is a local new coat distribution for kids, where children can try on and receive a coat. It is for kids from babies to teens, with no income requirements; the child must be present to try on the coat, and each child gets one coat. It takes place on November 21, 2026 (Time TBD) at Sacred Heart Catholic Church, 1507 W Fairplay St in Bolivar, MO.",
   "start": "2026-11-21",
   "end": null,
   "timezone": "America/Chicago",
@@ -17,9 +17,7 @@
     "website": null
   },
   "categories": [
-    "community",
-    "family",
-    "festivals"
+    "kids"
   ],
   "price": null,
   "is_free": null,
@@ -28,7 +26,7 @@
   "source_urls": [
     "https://happeningnext.com/event/bolivar-local-new-coat-distribution-eid3a0e61oqxr"
   ],
-  "updated_at": "2026-11-19T10:31:22.026Z",
+  "updated_at": "2026-11-20T10:31:06.134Z",
   "public_slug": "bolivar-local-new-coat-distribution-2026-11-21",
   "city_slug": "bolivar",
   "path": "/events/bolivar/bolivar-local-new-coat-distribution-2026-11-21/",
