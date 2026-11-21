@@ -3,7 +3,7 @@
   "slug": "ozarks-lyric-opera-red-curtain-affair-for-tosca",
   "title": "Ozarks Lyric Opera: Red Curtain Affair for Tosca",
   "seo_title": "Red Curtain Affair for Tosca at Gillioz Theatre",
-  "description": "Ozarks Lyric Opera presents the Red Curtain Affair for Tosca, an arts and theater event at the Gillioz Theatre. It takes place on Friday, March 19, 2027 at 6:30 PM at 325 Park Central, E Springfield, Missouri.",
+  "description": "Red Curtain Affair is a pre-show and intermission hospitality event for Ozarks Lyric Opera's production of Tosca, held in The Gallery on the second floor of the Gillioz Theatre. Guests have food, a complimentary drink, and backstage insights before the opera, plus sweet treats, free coffee and water, and an exclusive bar at intermission; a separate Tosca ticket is required to enter the venue. It takes place Friday, March 19, 2027, at 325 Park Central in E Springfield, Missouri, with doors at 6 PM and the show at 6:30 PM.",
   "start": "2027-03-19T23:30:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -19,13 +19,13 @@
     "arts-and-theater"
   ],
   "price": null,
-  "is_free": null,
+  "is_free": true,
   "registration_url": "https://gillioztheatre.com/event/ozarks-lyric-opera-red-curtain-affair-for-tosca/gillioz-theatre/e-springfield-missouri",
   "image_url": "https://gillioztheatre.com/wp-content/uploads/2026/08/ozarks-lyric-opera-red-curtain-affair-for-tosca-1.jpeg",
   "source_urls": [
     "https://gillioztheatre.com/event/ozarks-lyric-opera-red-curtain-affair-for-tosca/gillioz-theatre/e-springfield-missouri"
   ],
-  "updated_at": "2026-11-20T10:31:06.134Z",
+  "updated_at": "2026-11-21T10:30:52.350Z",
   "public_slug": "ozarks-lyric-opera-red-curtain-affair-for-tosca-2027-03-19",
   "city_slug": "springfield",
   "path": "/events/springfield/ozarks-lyric-opera-red-curtain-affair-for-tosca-2027-03-19/",

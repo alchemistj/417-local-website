@@ -1,0 +1,39 @@
+{
+  "id": "1b3900b9-8b61-4f90-b091-9a552ecacad5",
+  "slug": "all-church-fellowship-dinner",
+  "title": "All Church Fellowship Dinner",
+  "seo_title": "All Church Fellowship Dinner in Joplin, MO – Nov 22",
+  "description": "The All Church Fellowship Dinner is a community meal event at Central Christian Center in Joplin, Missouri. It is listed under festivals, community, family, food and drink, live music, and arts and theater. It takes place on November 22, 2026, at 410 S Virginia Ave, with the time to be determined (Time TBD).",
+  "start": "2026-11-22",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Central Christian Center",
+  "address": "410 S Virginia Ave,Joplin, Missouri, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Central Christian Center",
+    "website": null
+  },
+  "categories": [
+    "festivals",
+    "community",
+    "arts-and-theater",
+    "live-music",
+    "family",
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/all-church-fellowship-dinner-eid3a0ebxdo5m",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy9iZTJjMTZmMDA0MzM4YWExMzRlMTYyNDEzNjRiZjdlYzYzMmUzM2UzNzZlOTNlOTE3MDg1ZTE0NGQwNjRiNTI3LXJpbWctdzEyMDAtaDY3NS1kY2Y4ZjhmOC1nbWlyP3Y9MTc5NTE5NTMzNg.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/all-church-fellowship-dinner-eid3a0ebxdo5m"
+  ],
+  "updated_at": "2026-11-21T10:30:52.350Z",
+  "public_slug": "all-church-fellowship-dinner-2026-11-22",
+  "city_slug": "joplin",
+  "path": "/events/joplin/all-church-fellowship-dinner-2026-11-22/",
+  "action_type": "details"
+}

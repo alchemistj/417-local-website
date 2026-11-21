@@ -2,23 +2,21 @@
   "id": "4bc4719a-cd9f-4576-a116-ffcec146b8e1",
   "slug": "winter-jam",
   "title": "Winter Jam",
-  "seo_title": "Winter Jam 2027 in Springfield, MO",
-  "description": "Winter Jam 2027 is a night of Christian music and worship featuring Crowder, Anne Wilson, Andy Mineo ft. Magic & Bird, Strings & Heart, Terrian, Red, and NewSong, with a message from speaker Zane Black. A Pre-Jam Party with Natural State, CJ Emulous, and Mary-Clair is held before the show, and entry is a $15 donation at the door. It takes place Friday, February 19, 2027 at 7:00 PM at Great Southern Bank Arena, 901 S. National Ave., Springfield, MO, with doors opening at 6:00 PM.",
+  "seo_title": "Winter Jam 2027 at Great Southern Bank Arena, Springfield",
+  "description": "Winter Jam 2027 is a night of Christian music and worship featuring Crowder, Anne Wilson, Andy Mineo ft. Magic & Bird, Strings & Heart, Terrian, Red and NewSong, plus a message from speaker Zane Black. A Pre-Jam Party with Natural State, CJ Emulous and Mary-Clair starts the evening, and entry is a $15 donation at the door with no advance tickets required. It takes place Friday, February 19, 2027 at Great Southern Bank Arena in Springfield, MO, with doors and the pre-show at 6:00 PM and the start at 7:00 PM.",
   "start": "2027-02-20T01:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
   "venue": "Great Southern Bank Arena",
-  "address": "901 S. National Ave.",
+  "address": null,
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": null,
-    "website": null
+    "name": "Missouri State University",
+    "website": "https://greatsouthernbankarena.com/"
   },
   "categories": [
-    "networking",
-    "live-music",
-    "community"
+    "live-music"
   ],
   "price": "$15 donation at the door",
   "is_free": false,
@@ -27,7 +25,7 @@
   "source_urls": [
     "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4097"
   ],
-  "updated_at": "2026-11-20T10:31:06.134Z",
+  "updated_at": "2026-11-21T10:30:52.350Z",
   "public_slug": "winter-jam-2027-02-19",
   "city_slug": "springfield",
   "path": "/events/springfield/winter-jam-2027-02-19/",

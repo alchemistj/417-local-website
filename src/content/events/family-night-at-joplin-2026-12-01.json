@@ -2,8 +2,8 @@
   "id": "c5366266-da46-44f4-a9e0-2ed2d620a458",
   "slug": "family-night-at-joplin",
   "title": "Family Night at Joplin",
-  "seo_title": "Family Night at Joplin – Dec 1, 2026 in Joplin, MO",
-  "description": "Family Night at Joplin is a community event listed under live music, arts and theater, and community. It takes place on December 1, 2026, with the time to be determined, at 3118 South Rangeline Rd in Joplin, Missouri.",
+  "seo_title": "Family Night at Freddy's in Joplin, MO",
+  "description": "Family Night is a monthly gathering at Freddy's Frozen Custard & Steakburgers in Joplin, with raffles, giveaways, and fun activities. Kids get a free meal with the purchase of an adult combo meal, and admission is free. It takes place at 3118 S Rangeline Rd in Joplin, MO on December 1, 2026 (Time TBD), and it is held the first Tuesday of every month from 5-8pm.",
   "start": "2026-12-01",
   "end": null,
   "timezone": "America/Chicago",
@@ -22,15 +22,15 @@
     "community"
   ],
   "price": null,
-  "is_free": null,
+  "is_free": true,
   "registration_url": "https://happeningnext.com/event/family-night-at-joplin-eid3a0ebu1ovm",
   "image_url": "https://dyn-image.allevents.in/generate-image?v=4&title=Family+Night+at+Joplin&date=Tue%2C+01+Dec&bg=5",
   "source_urls": [
     "https://happeningnext.com/event/family-night-at-joplin-eid3a0ebu1ovm"
   ],
-  "updated_at": "2026-11-20T10:31:06.134Z",
+  "updated_at": "2026-11-21T10:30:52.350Z",
   "public_slug": "family-night-at-joplin-2026-12-01",
   "city_slug": "joplin",
   "path": "/events/joplin/family-night-at-joplin-2026-12-01/",
-  "action_type": "details"
+  "action_type": "show_up"
 }
