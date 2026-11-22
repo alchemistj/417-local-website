@@ -1,0 +1,33 @@
+{
+  "id": "3a988007-1d09-4b83-8708-d38533fc8312",
+  "slug": "ozarks-lyric-opera-presents-tosca-3-21",
+  "title": "Ozarks Lyric Opera Presents: Tosca 3/21",
+  "seo_title": "Ozarks Lyric Opera Presents Tosca, March 21, 2027",
+  "description": "Ozarks Lyric Opera presents Tosca, an opera performance in the arts and theater category. It takes place Sunday, March 21, 2027, at 2:30 PM at the Gillioz Theatre, 325 Park Central, E Springfield, Missouri.",
+  "start": "2027-03-21T19:30:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Gillioz Theatre",
+  "address": "325 Park Central, E Springfield, Missouri",
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "arts-and-theater"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://gillioztheatre.com/event/ozarks-lyric-opera-presents-tosca-3-21/gillioz-theatre/e-springfield-missouri",
+  "image_url": "https://gillioztheatre.com/wp-content/uploads/2026/08/ozarks-lyric-opera-presents-tosca-3-19-1.jpeg",
+  "source_urls": [
+    "https://gillioztheatre.com/event/ozarks-lyric-opera-presents-tosca-3-21/gillioz-theatre/e-springfield-missouri"
+  ],
+  "updated_at": "2026-11-22T10:29:27.204Z",
+  "public_slug": "ozarks-lyric-opera-presents-tosca-3-21-2027-03-21",
+  "city_slug": "springfield",
+  "path": "/events/springfield/ozarks-lyric-opera-presents-tosca-3-21-2027-03-21/",
+  "action_type": "tickets"
+}

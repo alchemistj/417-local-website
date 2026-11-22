@@ -2,8 +2,8 @@
   "id": "f06b8f5c-d83f-44b5-ae71-ac4154d68702",
   "slug": "the-harlem-globetrotters",
   "title": "The Harlem Globetrotters",
-  "seo_title": "Harlem Globetrotters 2027 Rivalry Tour in Springfield, MO",
-  "description": "The Harlem Globetrotters bring their 2027 Rivalry Tour to Springfield, playing the Washington Generals and a new lineup of rivals, with fans helping decide the action and some getting pulled onto the court. It is aimed at families and all fans, including first-time families, and a free pre-game tip-off party starts when doors open at 6:00 PM. The game is Tuesday, March 16, 2027 at 7:00 PM at Great Southern Bank Arena, 901 S. National Ave., Springfield, MO.",
+  "seo_title": "Harlem Globetrotters Rivalry Tour in Springfield, MO",
+  "description": "The Harlem Globetrotters bring their Rivalry Tour, part of their all-new 2027 world tour, to the court against the Washington Generals and a new lineup of rivals. Fans can be pulled onto the court, help decide plays, join the squad, and take over the jumbotron, and a free pre-game tip-off party starts when doors open at 6:00 PM. It is for all ages and takes place Tuesday, March 16, 2027 at 7:00 PM at Great Southern Bank Arena, 901 S. National Ave., Springfield, MO.",
   "start": "2027-03-17T00:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -12,21 +12,21 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Great Southern Bank Arena",
+    "name": "Missouri State University",
     "website": "https://greatsouthernbankarena.com/"
   },
   "categories": [
     "sports",
     "family"
   ],
-  "price": null,
+  "price": "Parking $20; Premium Parking $50",
   "is_free": true,
   "registration_url": "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4092",
   "image_url": null,
   "source_urls": [
     "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4092"
   ],
-  "updated_at": "2026-11-21T10:30:52.350Z",
+  "updated_at": "2026-11-22T10:29:27.204Z",
   "public_slug": "harlem-globetrotters-rivalry-2027-03-16",
   "city_slug": "springfield",
   "path": "/events/springfield/harlem-globetrotters-rivalry-2027-03-16/",

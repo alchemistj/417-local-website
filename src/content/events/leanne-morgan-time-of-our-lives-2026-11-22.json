@@ -2,8 +2,8 @@
   "id": "81733c66-7ba1-438d-a550-ffdfa3cd42ee",
   "slug": "leanne-morgan-the-time-of-our-lives-tour",
   "title": "Leanne Morgan - The Time Of Our Lives Tour",
-  "seo_title": "Leanne Morgan Comedy Tour in Springfield, MO – Nov 22",
-  "description": "Leanne Morgan brings her stand-up comedy show, The Time of Our Lives Tour, to Great Southern Bank Arena, following her Netflix special I'm Every Woman and sold-out shows across the United States. It takes place Sunday, November 22, 2026 at 7:00 PM at 901 S. National Ave. in Springfield, MO, with doors opening at 5:30 PM. Parking is $20, and premium parking is $50.",
+  "seo_title": "Leanne Morgan: The Time Of Our Lives Tour in Springfield",
+  "description": "Leanne Morgan brings her stand-up comedy show, The Time of Our Lives Tour, to Great Southern Bank Arena at 901 S. National Ave. in Springfield, MO. She is known for her Netflix special I'm Every Woman and has sold out over 100 theater and arena shows across the United States. It takes place Sunday, November 22, 2026 at 7:00 PM, with doors opening at 5:30 PM.",
   "start": "2026-11-23T01:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -12,21 +12,21 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Great Southern Bank Arena",
+    "name": "Missouri State University",
     "website": "https://greatsouthernbankarena.com/"
   },
   "categories": [
     "comedy",
     "arts-and-theater"
   ],
-  "price": null,
-  "is_free": null,
+  "price": "Parking: $20; Premium Parking: $50",
+  "is_free": false,
   "registration_url": "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4064",
   "image_url": null,
   "source_urls": [
     "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4064"
   ],
-  "updated_at": "2026-11-21T10:30:52.350Z",
+  "updated_at": "2026-11-22T10:29:27.204Z",
   "public_slug": "leanne-morgan-time-of-our-lives-2026-11-22",
   "city_slug": "springfield",
   "path": "/events/springfield/leanne-morgan-time-of-our-lives-2026-11-22/",

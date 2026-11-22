@@ -2,17 +2,17 @@
   "id": "67327f76-365b-44fa-b881-6825b8bc6f2c",
   "slug": "shucked-great-southern-bank-broadway-season",
   "title": "SHUCKED – Great Southern Bank Broadway Season",
-  "seo_title": "SHUCKED Broadway Musical in Springfield, MO, Jan 2027",
-  "description": "SHUCKED is a Broadway musical about Maizy and Beau, whose wedding plans collide with the dying corn that protects their small community of Cob County, and the search for answers beyond its borders. It is recommended for ages 10+ and contains adult themes, adult language and corny innuendo. It runs from January 19 to 21, 2027, starting at 7:30 PM, at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO; tickets are currently available only through Broadway Season subscriptions.",
+  "seo_title": "SHUCKED at Juanita K. Hammons Hall in Springfield, MO",
+  "description": "SHUCKED is a Broadway musical about Maizy and Beau's wedding plans, which are upended when the corn protecting their small community starts to die, and it features the songs \"Woman of the World,\" \"Somebody Will\" and \"Independently Owned.\" It is recommended for ages 10+ and contains adult themes, adult language and corny innuendo. It takes place Tuesday, January 19, 2027 at 7:30 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO, and tickets are currently available only through Broadway Season subscriptions.",
   "start": "2027-01-20T01:30:00+00:00",
-  "end": "2027-01-22T01:30:00+00:00",
+  "end": null,
   "timezone": "America/Chicago",
   "venue": "Juanita K. Hammons Hall for the Performing Arts",
   "address": "901 S. National Ave.",
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Juanita K. Hammons Hall for the Performing Arts",
+    "name": "Missouri State University",
     "website": "https://www.hammonshall.com/"
   },
   "categories": [
@@ -25,7 +25,7 @@
   "source_urls": [
     "https://www.hammonshall.com/viewshow.aspx?ID=4083"
   ],
-  "updated_at": "2026-11-21T10:30:52.350Z",
+  "updated_at": "2026-11-22T10:29:27.204Z",
   "public_slug": "shucked-2027-01-19",
   "city_slug": "springfield",
   "path": "/events/springfield/shucked-2027-01-19/",

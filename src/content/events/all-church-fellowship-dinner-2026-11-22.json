@@ -3,7 +3,7 @@
   "slug": "all-church-fellowship-dinner",
   "title": "All Church Fellowship Dinner",
   "seo_title": "All Church Fellowship Dinner in Joplin, MO – Nov 22",
-  "description": "The All Church Fellowship Dinner is a community meal event at Central Christian Center in Joplin, Missouri. It is listed under festivals, community, family, food and drink, live music, and arts and theater. It takes place on November 22, 2026, at 410 S Virginia Ave, with the time to be determined (Time TBD).",
+  "description": "This is a free fellowship dinner at Central Christian Center celebrating Thanksgiving and family, with Pastor Chris making Chicken Fried Rice for the main course. It is for the whole congregation; guests are asked to bring a dessert or side dish, and there will be cake for Pastor Hank's birthday, so feel free to bring a card. It takes place on November 22, 2026 (time TBD) at 410 S Virginia Ave in Joplin, MO.",
   "start": "2026-11-22",
   "end": null,
   "timezone": "America/Chicago",
@@ -17,23 +17,18 @@
     "website": null
   },
   "categories": [
-    "festivals",
-    "community",
-    "arts-and-theater",
-    "live-music",
-    "family",
-    "food-and-drink"
+    "holiday"
   ],
   "price": null,
-  "is_free": null,
+  "is_free": true,
   "registration_url": "https://happeningnext.com/event/all-church-fellowship-dinner-eid3a0ebxdo5m",
   "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy9iZTJjMTZmMDA0MzM4YWExMzRlMTYyNDEzNjRiZjdlYzYzMmUzM2UzNzZlOTNlOTE3MDg1ZTE0NGQwNjRiNTI3LXJpbWctdzEyMDAtaDY3NS1kY2Y4ZjhmOC1nbWlyP3Y9MTc5NTE5NTMzNg.avif",
   "source_urls": [
     "https://happeningnext.com/event/all-church-fellowship-dinner-eid3a0ebxdo5m"
   ],
-  "updated_at": "2026-11-21T10:30:52.350Z",
+  "updated_at": "2026-11-22T10:29:27.204Z",
   "public_slug": "all-church-fellowship-dinner-2026-11-22",
   "city_slug": "joplin",
   "path": "/events/joplin/all-church-fellowship-dinner-2026-11-22/",
-  "action_type": "details"
+  "action_type": "show_up"
 }

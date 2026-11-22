@@ -2,8 +2,8 @@
   "id": "125a8cea-fc97-41b1-ad95-65b1d4782aea",
   "slug": "springfield-symphony-a-holiday-christmas",
   "title": "SPRINGFIELD SYMPHONY: A Holiday Christmas",
-  "seo_title": "Springfield Symphony: A Holiday Christmas, Dec 19",
-  "description": "This Springfield Symphony Orchestra concert features music from well-known Christmas movies, including A Charlie Brown Christmas, White Christmas, Elf, and a medley from Disney's Frozen, and it ends with the Symphony's annual sing-along. It is for all ages. It takes place Saturday, December 19, 2026 at 7:30 PM at the Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO.",
+  "seo_title": "Springfield Symphony: A Holiday Christmas, Dec 19, 2026",
+  "description": "This Springfield Symphony Orchestra concert features music from Christmas movies, including A Charlie Brown Christmas, Irving Berlin's White Christmas, the Elf soundtrack, and a medley from Disney's Frozen. The program ends with the Symphony's annual holiday sing-along, and it is for all ages. It takes place Saturday, December 19, 2026 at 7:30 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO.",
   "start": "2026-12-20T01:30:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -17,7 +17,8 @@
   },
   "categories": [
     "live-music",
-    "holiday"
+    "holiday",
+    "family"
   ],
   "price": null,
   "is_free": null,
@@ -27,7 +28,7 @@
     "https://www.hammonshall.com/viewshow.aspx?ID=4075",
     "https://allevents.in/springfield/springfield-symphony-a-hollywood-christmas/200031011423027"
   ],
-  "updated_at": "2026-11-21T10:30:52.350Z",
+  "updated_at": "2026-11-22T10:29:27.204Z",
   "public_slug": "springfield-symphony-holiday-christmas-2026-12-19",
   "city_slug": "springfield",
   "path": "/events/springfield/springfield-symphony-holiday-christmas-2026-12-19/",

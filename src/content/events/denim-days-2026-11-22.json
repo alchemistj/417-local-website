@@ -1,0 +1,37 @@
+{
+  "id": "eb8226ff-4dc0-491c-8b41-2d3d90c5d9ee",
+  "slug": "denim-days",
+  "title": "Denim Days",
+  "seo_title": "Denim Days in Lebanon, MO on November 22, 2026",
+  "description": "Denim Days is a one-day jeans sale where you can shop for a pair that fits, with help finding the right fit. It is listed under community, family, live music, and food and drink. It takes place on Sunday, November 22, 2026, time TBD, at 174 Evergreen Pkwy in Lebanon, MO.",
+  "start": "2026-11-22",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "174 Evergreen Pkwy, Lebanon, MO",
+  "address": "174 Evergreen Pkwy, Lebanon, MO 65536-7056, United States, Lebanon, MO",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "community",
+    "family",
+    "live-music",
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/lebanon/denim-days/200031085239658",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy83MjM5ZmFkMzI2M2QzNjEyMThkZjA1YWJkMjhlZmZkZmUxNWQ1OTNkZTc0ZDEzMGUxNzliMTM3MDczM2YzZWRkLXJpbWctdzEwODAtaDEwODAtZGM4ODc4NjgtZ21pcj92PTE3OTUxNTk2Nzg.avif",
+  "source_urls": [
+    "https://allevents.in/lebanon/denim-days/200031085239658"
+  ],
+  "updated_at": "2026-11-22T10:29:27.204Z",
+  "public_slug": "denim-days-2026-11-22",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/denim-days-2026-11-22/",
+  "action_type": "details"
+}
