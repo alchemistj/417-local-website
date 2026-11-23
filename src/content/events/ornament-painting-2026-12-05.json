@@ -2,8 +2,8 @@
   "id": "be7f8098-2c20-42ea-ab28-3d8557fb0ae4",
   "slug": "ornament-painting",
   "title": "Ornament Painting",
-  "seo_title": "Ornament Painting in Joplin, MO on December 5, 2026",
-  "description": "Ornament Painting is a class or workshop where you paint ornaments, held at all McCoy's Stores. It takes place on December 5, 2026, with the time to be determined, at 205 S McCoy Ave in Joplin, MO.",
+  "seo_title": "Ornament Painting at McCoy's in Joplin, MO – Dec 5",
+  "description": "Kids can decorate a wooden ornament for their tree at this free ornament painting event at McCoy's. It is aimed at families with kids, no registration is required, and it runs while supplies last; toys will also be collected for the Holiday Toy Drive. It takes place December 5, 2026 (Time TBD) at all McCoy's locations, including 205 S McCoy Ave in Joplin, MO.",
   "start": "2026-12-05",
   "end": null,
   "timezone": "America/Chicago",
@@ -17,18 +17,19 @@
     "website": null
   },
   "categories": [
-    "classes-and-workshops"
+    "classes-and-workshops",
+    "holiday"
   ],
   "price": null,
-  "is_free": null,
+  "is_free": true,
   "registration_url": "https://happeningnext.com/event/ornament-painting-eid3a0ec2kwls",
   "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEvYmFubmVycy9hYjUyYmQzNDExNjZmM2ZlNmI2MTZiMjE2NDE1MDgxMDAwOTI5ZGY4Y2RjNDFjMGM5ZDVlNjA2ZDUxNWRkZTg4LXJpbWctdzEyMDAtaDY3NS1kY2Q4ZjhmOC1nbWlyP3Y9MTc5NTI4OTIxMA.avif",
   "source_urls": [
     "https://happeningnext.com/event/ornament-painting-eid3a0ec2kwls"
   ],
-  "updated_at": "2026-11-22T10:29:27.204Z",
+  "updated_at": "2026-11-23T10:31:10.623Z",
   "public_slug": "ornament-painting-2026-12-05",
   "city_slug": "joplin",
   "path": "/events/joplin/ornament-painting-2026-12-05/",
-  "action_type": "details"
+  "action_type": "signup"
 }

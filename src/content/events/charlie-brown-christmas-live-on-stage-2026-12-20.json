@@ -3,7 +3,7 @@
   "slug": "a-charlie-brown-christmas-live-on-stage",
   "title": "A Charlie Brown Christmas Live on Stage",
   "seo_title": "A Charlie Brown Christmas Live on Stage in Springfield",
-  "description": "A Charlie Brown Christmas Live on Stage is a touring theater production in which Charlie Brown, Snoopy, Lucy, Linus and the Peanuts gang put on their own Christmas play and discover the true meaning of the season. Adapted from Charles M. Schulz's animated TV special, it features Vince Guaraldi's music and is meant for the whole family; all patrons need a ticket, regardless of age. It takes place Sunday, December 20, 2026 at 7:00 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO.",
+  "description": "A Charlie Brown Christmas Live on Stage is a touring theater production in which Charlie Brown, Snoopy, Lucy, Linus and the Peanuts gang put on their own Christmas play and discover the true meaning of the season. It is adapted from Charles M. Schulz's Emmy and Peabody Award-winning animated special and features the music of Vince Guaraldi. It is for the whole family and takes place Sunday, December 20, 2026 at 7:00 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO; all patrons need a ticket regardless of age.",
   "start": "2026-12-21T01:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -12,7 +12,7 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Missouri State University",
+    "name": "Juanita K. Hammons Hall for the Performing Arts",
     "website": "https://www.hammonshall.com/"
   },
   "categories": [
@@ -27,7 +27,7 @@
   "source_urls": [
     "https://www.hammonshall.com/viewshow.aspx?ID=3691"
   ],
-  "updated_at": "2026-11-22T10:29:27.204Z",
+  "updated_at": "2026-11-23T10:31:10.623Z",
   "public_slug": "charlie-brown-christmas-live-on-stage-2026-12-20",
   "city_slug": "springfield",
   "path": "/events/springfield/charlie-brown-christmas-live-on-stage-2026-12-20/",

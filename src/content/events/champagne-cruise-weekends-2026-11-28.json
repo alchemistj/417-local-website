@@ -1,0 +1,33 @@
+{
+  "id": "8d350678-cf3c-4319-8c5d-50deac19f333",
+  "slug": "champagne-cruise-weekends",
+  "title": "Champagne Cruise Weekends",
+  "seo_title": "Champagne Cruise Weekends at Bent Hook Marina",
+  "description": "Champagne Cruise Weekends offers 50% off champagne cruises on Saturdays and Sundays this holiday season. This listing is for Saturday, November 28, 2026, from 9:00 AM to 5:00 PM at Bent Hook Marina.",
+  "start": "2026-11-28T15:00:00+00:00",
+  "end": "2026-11-28T23:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Bent Hook Marina",
+  "address": null,
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://bigcedar.com/promotion/champagne-cruise-weekends",
+  "image_url": "https://bigcedar.com/wp-content/uploads/2026/10/8e8b1465-6afe-477c-9684-1c269b5d9739.jpg",
+  "source_urls": [
+    "https://bigcedar.com/promotion/champagne-cruise-weekends"
+  ],
+  "updated_at": "2026-11-23T10:31:10.623Z",
+  "public_slug": "champagne-cruise-weekends-2026-11-28",
+  "city_slug": "branson",
+  "path": "/events/branson/champagne-cruise-weekends-2026-11-28/",
+  "action_type": "details"
+}

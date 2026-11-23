@@ -1,0 +1,39 @@
+{
+  "id": "30a23b67-fa1d-4989-a1b9-17b0a5d42670",
+  "slug": "booktok-event",
+  "title": "Booktok Event",
+  "seo_title": "Booktok Event in Joplin, MO on December 11, 2026",
+  "description": "Booktok Event is a festival-style community gathering with arts, live music, and food and drink, and it is listed as family-friendly. It takes place on December 11, 2026, with the time to be determined, at 5357 N Main St in Joplin, Missouri.",
+  "start": "2026-12-11",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "5357 N Main St, Joplin, MO, United States, Missouri 64801",
+  "address": "5357 N Main St Rd, Joplin, MO 64801-8726, United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Amelias Chapter House",
+    "website": null
+  },
+  "categories": [
+    "festivals",
+    "community",
+    "arts-and-theater",
+    "live-music",
+    "family",
+    "food-and-drink"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/booktok-event-eid3a0eax3vmw",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czMvYmFubmVycy9jNGY5Njk2YTA5ZmFjMWZjY2YzNTE2YTFhMmIwYTczMzU0OTQ0MjgwM2UxYTUzNjY4ZWZlNGFjYjdiNGJjYjQ2LXJpbWctdzk2MC1oOTYwLWRjMDgwODA4LWdtaXI_dj0xNzk0NjMwNjky.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/booktok-event-eid3a0eax3vmw"
+  ],
+  "updated_at": "2026-11-23T10:31:10.623Z",
+  "public_slug": "booktok-event-2026-12-11",
+  "city_slug": "joplin",
+  "path": "/events/joplin/booktok-event-2026-12-11/",
+  "action_type": "details"
+}

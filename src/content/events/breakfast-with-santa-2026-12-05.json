@@ -1,0 +1,33 @@
+{
+  "id": "bbc995b5-7f6e-4b3f-9a6f-cde67858a4bd",
+  "slug": "breakfast-with-santa",
+  "title": "Breakfast with Santa",
+  "seo_title": "Breakfast with Santa at Worman House, Dec 5, 2026",
+  "description": "Breakfast with Santa is a morning meal at The Worman House where you can have your photo taken with St. Nick. The menu includes an omelet station, a festive cupcake wall, Belgian waffles, French toast, and more. It takes place on Saturday, December 5, 2026, from 7:00 AM to 11:00 AM at Worman House.",
+  "start": "2026-12-05T13:00:00+00:00",
+  "end": "2026-12-05T17:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Worman House",
+  "address": null,
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "networking"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://bigcedar.com/activity/breakfast-with-santa",
+  "image_url": null,
+  "source_urls": [
+    "https://bigcedar.com/activity/breakfast-with-santa"
+  ],
+  "updated_at": "2026-11-23T10:31:10.623Z",
+  "public_slug": "breakfast-with-santa-2026-12-05",
+  "city_slug": "branson",
+  "path": "/events/branson/breakfast-with-santa-2026-12-05/",
+  "action_type": "details"
+}

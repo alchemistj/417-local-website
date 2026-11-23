@@ -1,0 +1,33 @@
+{
+  "id": "f9762b08-0e0e-4a01-b639-222adb46e1de",
+  "slug": "chocolate-delight-holiday-edition",
+  "title": "Chocolate Delight: Holiday Edition",
+  "seo_title": "Chocolate Delight: Holiday Edition on Dec 2, 2026",
+  "description": "Chocolate Delight: Holiday Edition is an hour-long activity where you make your own candy bars while sipping a drink of your choice. The summary describes it as an introduction to the art of confectionary, starting with a white chocolate creation. It takes place Wednesday, December 2, 2026, from 1:00 to 2:00 PM at the Paint Studio in the Recreation Building.",
+  "start": "2026-12-02T19:00:00+00:00",
+  "end": "2026-12-02T20:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Paint Studio – Recreation Building",
+  "address": null,
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://bigcedar.com/activity/chocolate-delight-holiday-edition",
+  "image_url": "https://bigcedar.com/wp-content/uploads/2023/02/Choc.Delight.2.22.23_900x600.jpg",
+  "source_urls": [
+    "https://bigcedar.com/activity/chocolate-delight-holiday-edition"
+  ],
+  "updated_at": "2026-11-23T10:31:10.623Z",
+  "public_slug": "chocolate-delight-holiday-edition-2026-12-02",
+  "city_slug": "branson",
+  "path": "/events/branson/chocolate-delight-holiday-edition-2026-12-02/",
+  "action_type": "details"
+}
