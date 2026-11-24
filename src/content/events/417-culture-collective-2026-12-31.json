@@ -1,0 +1,34 @@
+{
+  "id": "319c6957-e3d5-426e-8a00-2a9fad47d6c5",
+  "slug": "417-culture-collective",
+  "title": "417 CULTURE COLLECTIVE",
+  "seo_title": "417 Culture Collective New Year's Eve in Springfield, MO",
+  "description": "417 Culture Collective is a New Year's Eve event with live music at 8PM, a fashion and hair show at 9PM, the Purple Carpet Awards at 10PM, and a New Years party at 11PM. It takes place on December 31, 2026 (Time TBD) at 314 S Patton Ave in Springfield, MO.",
+  "start": "2026-12-31",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "314 S Patton Ave",
+  "address": "314 South Patton Avenue, Springfield, MO, 65806",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "live-music"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/417-culture-collective-tickets-2005137464132",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1198391501%2F3012287801541%2F1%2Foriginal.20261120-134450?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.527&fp-y=0.356&s=7f0e1d6a300df96013efe2c28c7fdcf1",
+  "source_urls": [
+    "https://www.eventbrite.com/e/417-culture-collective-tickets-2005137464132"
+  ],
+  "updated_at": "2026-11-24T10:51:46.049Z",
+  "public_slug": "417-culture-collective-2026-12-31",
+  "city_slug": "springfield",
+  "path": "/events/springfield/417-culture-collective-2026-12-31/",
+  "action_type": "details"
+}

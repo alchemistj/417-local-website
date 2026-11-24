@@ -1,0 +1,34 @@
+{
+  "id": "9a485e2c-b8b6-4b38-a61c-cd605a672357",
+  "slug": "c-street-for-the-holidays-discover-the-wonder",
+  "title": "C-Street for the holidays-Discover the Wonder",
+  "seo_title": "C-Street for the Holidays in Springfield, MO",
+  "description": "C-Street for the holidays-Discover the Wonder is a holiday event in the Commercial Street Historic District in Springfield, Missouri. It takes place on November 27, 2026, with the time still to be determined (Time TBD).",
+  "start": "2026-11-27",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Commercial Street Historic District",
+  "address": "Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Visit C-Street",
+    "website": "https://allevents.in/org/visit-c-street/27350381"
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/c-street-for-the-holidays-discover-the-wonder/200031113361049",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czgvYmFubmVycy8xMTAwZTFkNmM4MWUwYmEyZjExZTIyMWQwNWYwYTM5ZDliNWQ1ZTZkMWMyYjliOGY4NTJlYmNhMzkwMmNhMWRlLXJpbWctdzk2MC1oNTAzLWRjZjhmOGU4LWdtaXI_dj0xNzk1NDkwNDQ5.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/c-street-for-the-holidays-discover-the-wonder/200031113361049"
+  ],
+  "updated_at": "2026-11-24T10:51:46.049Z",
+  "public_slug": "c-street-for-holidays-discover-wonder-2026-11-27",
+  "city_slug": "springfield",
+  "path": "/events/springfield/c-street-for-holidays-discover-wonder-2026-11-27/",
+  "action_type": "hours"
+}

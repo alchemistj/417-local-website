@@ -1,0 +1,34 @@
+{
+  "id": "248f25fb-ab0f-4f06-84de-39ffc9a223c3",
+  "slug": "ron-funches",
+  "title": "Ron Funches",
+  "seo_title": "Ron Funches at Springfield Comedy Club, Dec 17, 2026",
+  "description": "Ron Funches is a comedy event where you can watch a live stand-up show. It takes place on December 17, 2026, with the time to be determined, at Springfield Comedy Club, 420 W College Street in Springfield, MO.",
+  "start": "2026-12-17",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Springfield Comedy Club",
+  "address": "420 W College Street, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Ticket Network Events",
+    "website": "https://allevents.in/org/ticket-network-events/23491279"
+  },
+  "categories": [
+    "comedy"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/ron-funches/2300030224778117",
+  "image_url": "https://dyn-image.allevents.in/generate-image?v=4&title=Ron+Funches&date=Thu%2C+17+Dec+at+06%3A00+pm&bg=3",
+  "source_urls": [
+    "https://allevents.in/springfield/ron-funches/2300030224778117"
+  ],
+  "updated_at": "2026-11-24T10:51:46.049Z",
+  "public_slug": "ron-funches-2026-12-17",
+  "city_slug": "springfield",
+  "path": "/events/springfield/ron-funches-2026-12-17/",
+  "action_type": "details"
+}

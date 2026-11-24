@@ -1,0 +1,36 @@
+{
+  "id": "02e1e8b2-244f-451f-8d2a-9752c9bef331",
+  "slug": "candlelight-christmas-classics",
+  "title": "Candlelight: Christmas Classics",
+  "seo_title": "Candlelight: Christmas Classics in Springfield, MO",
+  "description": "Candlelight: Christmas Classics is a live concert of Christmas music, part of the Candlelight series of multi-sensory musical experiences held in distinctive locations. It takes place at Stone Chapel at Drury University, 900 N Benton Ave, in Springfield, MO, on December 18, 2026. Time TBD.",
+  "start": "2026-12-18",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Stone Chapel at Drury University",
+  "address": "Drury University, 900 N Benton Ave, Springfield, MO 65802, Springfield// 65802, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "live-music",
+    "arts-and-theater",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/candlelight-christmas-classics/2700030036629551",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czgvYmFubmVycy8xYzY2NDU2MC1lN2Q5LTExZjEtOWY5OS03ZDNmMjQ5ZDFlNWYtcmltZy13NTUwLWg1NTAtZGNmOGI4MDgtZ21pci5qcGc_dj0xNzk1NTA1OTc2.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/candlelight-christmas-classics/2700030036629551"
+  ],
+  "updated_at": "2026-11-24T10:51:46.049Z",
+  "public_slug": "candlelight-christmas-classics-2026-12-18",
+  "city_slug": "springfield",
+  "path": "/events/springfield/candlelight-christmas-classics-2026-12-18/",
+  "action_type": "details"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "cc7335e8-b8c0-4ea1-8b0c-691c3bc5a778",
+  "slug": "the-s-t-a-b-l-e-program",
+  "title": "The S.T.A.B.L.E. Program",
+  "seo_title": "The S.T.A.B.L.E. Program at Cox North Hospital, Springfield",
+  "description": "The S.T.A.B.L.E. Program is a professional development session on post-resuscitation care for newborns using S.T.A.B.L.E. principles. It takes place on February 10, 2027, with the time to be determined, at Cox North Hospital, 1499 N. Robberson Avenue in Springfield, MO.",
+  "start": "2027-02-10",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Cox North Hospital",
+  "address": "1499 N. Robberson Avenue, Springfield, MO, 65802",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "professional-development"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/the-stable-program-tickets-2001253581334",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193687066%2F42710748964%2F1%2Foriginal.20260916-193428?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.057&fp-y=0.328&s=a8b101c97f1d189b3f619a9a114984d3",
+  "source_urls": [
+    "https://www.eventbrite.com/e/the-stable-program-tickets-2001253581334"
+  ],
+  "updated_at": "2026-11-24T10:51:46.049Z",
+  "public_slug": "s-t-b-l-e-program-2027-02-10",
+  "city_slug": "springfield",
+  "path": "/events/springfield/s-t-b-l-e-program-2027-02-10/",
+  "action_type": "details"
+}

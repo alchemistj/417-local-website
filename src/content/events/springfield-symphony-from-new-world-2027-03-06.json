@@ -2,8 +2,8 @@
   "id": "bcbec162-fab7-4d68-b3fb-684be00a530a",
   "slug": "springfield-symphony-from-the-new-world",
   "title": "SPRINGFIELD SYMPHONY: From the New World",
-  "seo_title": "Springfield Symphony: From the New World, March 6",
-  "description": "The Springfield Symphony Orchestra performs Hailstork's Three Spirituals for Orchestra, Mendelssohn's Violin Concerto with soloist Fiona Shea, and Dvorak's New World Symphony. The program follows Dvorak's call for American composers to draw on African American music and showcases the orchestra's Hellam Competition Winner. It takes place Saturday, March 6, 2027 at 7:30 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO, with tickets sold through HammonsHall.com and MissouriStateTix.com.",
+  "seo_title": "Springfield Symphony: From the New World in Springfield, MO",
+  "description": "The Springfield Symphony Orchestra performs Dvořák's New World Symphony, along with Adolphus Hailstork's Three Spirituals for Orchestra and Mendelssohn's Violin Concerto featuring violinist Fiona Shea. The program also showcases the orchestra's Hellam Competition Winner. It takes place Saturday, March 6, 2027 at 7:30 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO, with tickets sold only through HammonsHall.com and MissouriStateTix.com.",
   "start": "2027-03-07T01:30:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -17,7 +17,7 @@
   },
   "categories": [
     "live-music",
-    "arts-and-theater"
+    "classes-and-workshops"
   ],
   "price": null,
   "is_free": null,
@@ -26,7 +26,7 @@
   "source_urls": [
     "https://www.hammonshall.com/viewshow.aspx?ID=4078"
   ],
-  "updated_at": "2026-11-23T10:31:10.623Z",
+  "updated_at": "2026-11-24T10:51:46.049Z",
   "public_slug": "springfield-symphony-from-new-world-2027-03-06",
   "city_slug": "springfield",
   "path": "/events/springfield/springfield-symphony-from-new-world-2027-03-06/",

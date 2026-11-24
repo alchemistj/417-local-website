@@ -1,0 +1,34 @@
+{
+  "id": "f766744b-f5d6-4e0d-a786-43582113ecdf",
+  "slug": "fy27-action-plan-public-meeting-in-person",
+  "title": "FY27 Action Plan Public Meeting - In Person",
+  "seo_title": "FY27 Action Plan Public Meeting in Springfield, MO",
+  "description": "This is an in-person public meeting about the FY27 Action Plan, where you can join the CDBG team; signing up is encouraged. It takes place on December 7, 2026, Time TBD, at the Springfield-Greene County Library Station, 2535 North Kansas Expressway in Springfield, MO.",
+  "start": "2026-12-07",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Springfield-Greene County Library Station",
+  "address": "2535 North Kansas Expressway, Springfield, MO, 65803",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "professional-development"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/fy27-action-plan-public-meeting-in-person-tickets-2005142992668",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F495612199%2F154027911477%2F1%2Foriginal.20230418-194246?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=409%2C132%2C2104%2C1052&s=490d8a3ace33ddd83710319a9bbddb18",
+  "source_urls": [
+    "https://www.eventbrite.com/e/fy27-action-plan-public-meeting-in-person-tickets-2005142992668"
+  ],
+  "updated_at": "2026-11-24T10:51:46.049Z",
+  "public_slug": "fy27-action-plan-public-meeting-in-person-2026-12-07",
+  "city_slug": "springfield",
+  "path": "/events/springfield/fy27-action-plan-public-meeting-in-person-2026-12-07/",
+  "action_type": "details"
+}

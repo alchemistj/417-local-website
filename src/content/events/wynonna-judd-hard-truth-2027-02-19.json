@@ -1,9 +1,9 @@
 {
   "id": "ead6fab6-a4c0-4050-901d-a8b61a32c19b",
   "slug": "wynonna-judd-the-hard-truth-tour",
-  "title": "WYNONNA JUDD – The Hard Truth Tour",
+  "title": "Wynonna Judd – The Hard Truth Tour",
   "seo_title": "Wynonna Judd: The Hard Truth Tour in Springfield, MO",
-  "description": "This is a live country music concert where Wynonna Judd performs songs from The Hard Truth, her most personal work yet, along with her long-running career as part of The Judds and as a solo artist. She first rose to fame with her mother, Naomi, as one half of The Judds, scoring eight consecutive No. 1 hits. It takes place Friday, February 19, 2027 at 7:30 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO.",
+  "description": "This is a live country music concert by Wynonna Judd on The Hard Truth Tour, where she performs her powerful vocals and personal songs. She first rose to fame with her mother, Naomi, as one half of The Judds, which had eight consecutive No. 1 hits, before starting a solo career. It takes place Friday, February 19, 2027 at 7:30 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO.",
   "start": "2027-02-20T01:30:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -12,7 +12,7 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Juanita K. Hammons Hall for the Performing Arts",
+    "name": "Missouri State University",
     "website": "https://www.hammonshall.com/"
   },
   "categories": [
@@ -25,7 +25,7 @@
   "source_urls": [
     "https://www.hammonshall.com/viewshow.aspx?ID=4096"
   ],
-  "updated_at": "2026-11-23T10:31:10.623Z",
+  "updated_at": "2026-11-24T10:51:46.049Z",
   "public_slug": "wynonna-judd-hard-truth-2027-02-19",
   "city_slug": "springfield",
   "path": "/events/springfield/wynonna-judd-hard-truth-2027-02-19/",

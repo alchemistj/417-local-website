@@ -3,7 +3,7 @@
   "slug": "small-business-saturday-in-downtown-springfield",
   "title": "Small Business Saturday in Downtown Springfield",
   "seo_title": "Small Business Saturday in Downtown Springfield, MO",
-  "description": "Small Business Saturday in Downtown Springfield is a business and entrepreneurship event with an outdoors element, held in the downtown area. It takes place on November 28, 2026, with the time to be determined. The event is at 1 Park Central Sq in Springfield, Missouri.",
+  "description": "Small Business Saturday in Downtown Springfield is a holiday shopping day where you visit the hundreds of small businesses located downtown. Organized by Downtown Springfield, it encourages shoppers to support local businesses, with deals to be announced. It takes place on November 28, 2026, Time TBD, at Park Central Square in Springfield, Missouri.",
   "start": "2026-11-28",
   "end": null,
   "timezone": "America/Chicago",
@@ -18,7 +18,8 @@
   },
   "categories": [
     "entrepreneurship",
-    "outdoors"
+    "outdoors",
+    "holiday"
   ],
   "price": null,
   "is_free": null,
@@ -27,7 +28,7 @@
   "source_urls": [
     "https://allevents.in/springfield/small-business-saturday-in-downtown-springfield/200031046951621"
   ],
-  "updated_at": "2026-11-23T10:31:10.623Z",
+  "updated_at": "2026-11-24T10:51:46.049Z",
   "public_slug": "small-business-saturday-in-downtown-springfield-2026-11-28",
   "city_slug": "springfield",
   "path": "/events/springfield/small-business-saturday-in-downtown-springfield-2026-11-28/",

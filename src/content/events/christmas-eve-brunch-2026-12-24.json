@@ -1,0 +1,35 @@
+{
+  "id": "c44b47c1-96df-426a-8df1-f12be7ad28c6",
+  "slug": "christmas-eve-brunch",
+  "title": "Christmas Eve Brunch",
+  "seo_title": "Christmas Eve Brunch at Vineyard Market in Ozark, MO",
+  "description": "Brunch at Vineyard Market on Christmas Eve morning, with holiday food and specials before the day's festivities. Reservations are taken by phone at (417) 882-0399, and the restaurant is closed for the rest of the holiday and all of Christmas Day. It runs Thursday, December 24, 2026, from 10:30 AM to 3:00 PM at 1759 W State Hwy J in Ozark, MO.",
+  "start": "2026-12-24T16:30:00+00:00",
+  "end": "2026-12-24T21:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Vineyard Market",
+  "address": "1759 W State Hwy J",
+  "city": "Ozark",
+  "state": "MO",
+  "organizer": {
+    "name": "Vineyard Market",
+    "website": "https://thevineyardmarket.com/"
+  },
+  "categories": [
+    "holiday",
+    "food-and-drink",
+    "family"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://thevineyardmarket.com/events/christmas-eve-brunch-december-2026",
+  "image_url": null,
+  "source_urls": [
+    "https://thevineyardmarket.com/events/christmas-eve-brunch-december-2026"
+  ],
+  "updated_at": "2026-11-24T10:51:46.049Z",
+  "public_slug": "christmas-eve-brunch-2026-12-24",
+  "city_slug": "ozark",
+  "path": "/events/ozark/christmas-eve-brunch-2026-12-24/",
+  "action_type": "details"
+}

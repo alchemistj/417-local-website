@@ -1,0 +1,34 @@
+{
+  "id": "a2ce706e-fa13-42a6-8ab8-fff2e8c9a899",
+  "slug": "jason-crabb-christmas-tour",
+  "title": "Jason Crabb Christmas Tour",
+  "seo_title": "Jason Crabb Christmas Tour in Springfield, MO",
+  "description": "The Jason Crabb Christmas Tour is a holiday event where you can attend a Christmas-themed show. It takes place on December 4, 2026, with the time to be determined, at First Baptist Church Springfield, 525 South Ave in Springfield, Missouri.",
+  "start": "2026-12-04",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "First Baptist Church Springfield",
+  "address": "525 South Ave,Springfield,MO,United States, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "The Sound of Home",
+    "website": "https://allevents.in/org/the-sound-of-home/15410197"
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/jason-crabb-christmas-tour/200031080740502",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czcvYmFubmVycy8wYTE3NTdkM2M0NzkxOWQ0NGU5N2VmMDI3ZWRlZGZjY2Y2Zjc0MzA4ZjRjNzI4ODhlMGRlMmRhMDNjYjMxM2QyLXJpbWctdzUxNS1oMzg4LWRjZjhmOGY4LWdtaXI_dj0xNzk1MTAwMzQx.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/jason-crabb-christmas-tour/200031080740502"
+  ],
+  "updated_at": "2026-11-24T10:51:46.049Z",
+  "public_slug": "jason-crabb-christmas-2026-12-04",
+  "city_slug": "springfield",
+  "path": "/events/springfield/jason-crabb-christmas-2026-12-04/",
+  "action_type": "details"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "d4f78f00-bb3e-4984-a801-81fd0a0c4e94",
+  "slug": "springfield-coffee-club-foodies-new-friends",
+  "title": "Springfield Coffee Club | Foodies + New Friends",
+  "seo_title": "Springfield Coffee Club: Monthly Coffee & Brunch Meetup",
+  "description": "Springfield Coffee Club is a monthly meetup where a table of 10 or fewer people connect over coffee or brunch. You sign up and the group books the restaurant, with a focus on supporting local businesses. It takes place on November 28, 2026 (Time TBD) at Cafe of the Month on South Campbell Avenue in Springfield, MO.",
+  "start": "2026-11-28",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Cafe of the Month",
+  "address": "South Campbell Avenue, Springfield, MO, 65807",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "networking",
+    "entrepreneurship",
+    "professional-development"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/springfield-coffee-club-foodies-new-friends-tickets-1992164864738",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1187159273%2F2645192174801%2F1%2Foriginal.20260618-010311?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.465&fp-y=0.364&s=276e423ac6ed27deb1d618e84b0e3e0c",
+  "source_urls": [
+    "https://www.eventbrite.com/e/springfield-coffee-club-foodies-new-friends-tickets-1992164864738"
+  ],
+  "updated_at": "2026-11-24T10:51:46.049Z",
+  "public_slug": "springfield-coffee-club-foodies-new-friends-2026-11-28",
+  "city_slug": "springfield",
+  "path": "/events/springfield/springfield-coffee-club-foodies-new-friends-2026-11-28/",
+  "action_type": "register"
+}

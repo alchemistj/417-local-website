@@ -1,0 +1,34 @@
+{
+  "id": "e66c28f0-24f7-4e4c-8ba0-5d441f0a312a",
+  "slug": "christmas-at-sanctuary",
+  "title": "Christmas at Sanctuary",
+  "seo_title": "Christmas at Sanctuary in Springfield, MO – Dec 12, 2026",
+  "description": "Christmas at Sanctuary is a holiday event hosted by Sanctuary Church. It takes place on December 12, 2026, at 550 S Scenic Ave in Springfield, Missouri, with the time still to be determined (Time TBD).",
+  "start": "2026-12-12",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "550 S Scenic Ave, Springfield, MO",
+  "address": "550 S Scenic Ave, Springfield, MO 65802-4760, United States, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Sanctuary Church",
+    "website": "https://allevents.in/org/sanctuary-church/26646061"
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/christmas-at-sanctuary/200031080741503",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czYvYmFubmVycy8wZDI2Yzk4MTMwMGI3ZjVlNzJmMTZlODcxOTczYTAxZjViYTRmYmUzNjRhN2Q5OGY1MmE2NjU0NjM1MjY0NzkzLXJpbWctdzk2MC1oNTQwLWRjZTg1ODQ4LWdtaXI_dj0xNzk1MTAwMzQz.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/christmas-at-sanctuary/200031080741503"
+  ],
+  "updated_at": "2026-11-24T10:51:46.049Z",
+  "public_slug": "christmas-at-sanctuary-2026-12-12",
+  "city_slug": "springfield",
+  "path": "/events/springfield/christmas-at-sanctuary-2026-12-12/",
+  "action_type": "details"
+}

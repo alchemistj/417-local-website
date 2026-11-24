@@ -1,0 +1,35 @@
+{
+  "id": "4ca0a330-c17b-4a25-9182-41e91a3105ff",
+  "slug": "spend-the-night-at-the-aquarium",
+  "title": "Spend the Night at the Aquarium",
+  "seo_title": "Spend the Night at the Aquarium in Springfield, MO",
+  "description": "Spend the Night at the Aquarium is a WildNIGHT overnight at Wonders of Wildlife where you decorate glowing deep-sea desserts, search exhibits for interactive light stations, and watch a movie with popcorn before falling asleep near an aquarium exhibit. It is designed for families with children ages 5 and up and ties in with the Sea of Lights Enchanted Christmas event. It takes place December 12, 2026 (Time TBD) at 550 W Sunshine St in Springfield, MO.",
+  "start": "2026-12-12",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Wonders of Wildlife",
+  "address": "550 W Sunshine St, Springfield, MO 65807-2436, United States, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Wonders of Wildlife",
+    "website": "https://allevents.in/org/wonders-of-wildlife/14224127"
+  },
+  "categories": [
+    "arts-and-theater",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/spend-the-night-at-the-aquarium/200031046946701",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czQvYmFubmVycy9lODc2NDg5YzAxNDA4ZjBiMTUyMDAxZDk4NTRmOTY1NDlmMGMxNDFjMjhlMzQ1MWY4YWJjZDA3YTAxMTAzZTFlLXJpbWctdzEyMDAtaDYyOC1kYzA4MTgzOC1nbWlyP3Y9MTc5NDY2NjcyMQ.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/spend-the-night-at-the-aquarium/200031046946701"
+  ],
+  "updated_at": "2026-11-24T10:51:46.049Z",
+  "public_slug": "spend-night-at-aquarium-2026-12-12",
+  "city_slug": "springfield",
+  "path": "/events/springfield/spend-night-at-aquarium-2026-12-12/",
+  "action_type": "details"
+}

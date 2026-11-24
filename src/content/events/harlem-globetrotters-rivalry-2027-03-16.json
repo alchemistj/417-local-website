@@ -1,9 +1,9 @@
 {
   "id": "f06b8f5c-d83f-44b5-ae71-ac4154d68702",
-  "slug": "the-harlem-globetrotters",
-  "title": "The Harlem Globetrotters",
+  "slug": "the-harlem-globetrotters-rivalry-tour",
+  "title": "The Harlem Globetrotters: Rivalry Tour",
   "seo_title": "Harlem Globetrotters Rivalry Tour in Springfield, MO",
-  "description": "The Harlem Globetrotters bring their Rivalry Tour basketball show to the court, facing the Washington Generals and a new lineup of rivals, with fan participation on the court and the jumbotron. It is for all ages, and a free pre-game tip-off party starts when doors open at 6:00 PM. The event is Tuesday, March 16, 2027 at 7:00 PM at Great Southern Bank Arena in Springfield, MO.",
+  "description": "The Harlem Globetrotters bring their Rivalry Tour to Springfield, where they face the Washington Generals and a new lineup of rivals, and fans can help decide the action, get pulled onto the court, and take over the jumbotron. A free pre-game tip-off party starts when doors open at 6:00 PM, and the event is for all ages. It takes place Tuesday, March 16, 2027 at 7:00 PM at Great Southern Bank Arena; parking is $20, or $50 for premium.",
   "start": "2027-03-17T00:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -12,7 +12,7 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Missouri State University",
+    "name": "Great Southern Bank Arena, Missouri State University",
     "website": "https://greatsouthernbankarena.com/"
   },
   "categories": [
@@ -26,7 +26,7 @@
   "source_urls": [
     "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4092"
   ],
-  "updated_at": "2026-11-23T10:31:10.623Z",
+  "updated_at": "2026-11-24T10:51:46.049Z",
   "public_slug": "harlem-globetrotters-rivalry-2027-03-16",
   "city_slug": "springfield",
   "path": "/events/springfield/harlem-globetrotters-rivalry-2027-03-16/",

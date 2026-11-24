@@ -1,0 +1,35 @@
+{
+  "id": "3335c22a-e5b7-46b5-8548-5dd0069cc92e",
+  "slug": "candlelight-queen-vs-abba",
+  "title": "Candlelight: Queen vs. ABBA",
+  "seo_title": "Candlelight: Queen vs. ABBA in Springfield, MO",
+  "description": "Candlelight: Queen vs. ABBA is a live concert where you listen to the music of Queen and ABBA in a candlelit setting. It takes place at Stone Chapel at Drury University, 900 N Benton Ave, in Springfield, MO, on February 13, 2027, Time TBD.",
+  "start": "2027-02-13",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Stone Chapel at Drury University",
+  "address": "Drury University, 900 N Benton Ave, Springfield, MO 65802, Springfield// 65802, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "live-music",
+    "arts-and-theater"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/candlelight-queen-vs-abba/2700030443558201",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEvYmFubmVycy8xNDZkNzMwMC1lN2RhLTExZjEtOWY5OS03ZDNmMjQ5ZDFlNWYtcmltZy13NTUwLWg1NTAtZGMxODA4MDgtZ21pci5qcGc_dj0xNzk1NTA1OTk2.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/candlelight-queen-vs-abba/2700030443558201"
+  ],
+  "updated_at": "2026-11-24T10:51:46.049Z",
+  "public_slug": "candlelight-queen-vs-abba-2027-02-13",
+  "city_slug": "springfield",
+  "path": "/events/springfield/candlelight-queen-vs-abba-2027-02-13/",
+  "action_type": "details"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "fb69caec-6db4-469b-b38d-90ea99869f87",
+  "slug": "christmas-lights-run-modified-friday-night-fun-run",
+  "title": "Christmas Lights Run - Modified Friday Night Fun Run",
+  "seo_title": "Christmas Lights Run Friday Night Fun Run in Springfield",
+  "description": "The Christmas Lights Run is a modified Friday Night Fun Run with a holiday theme, hosted by the Rogersville Area Chamber of Commerce. It takes place on November 27, 2026 (Time TBD) at W.F. Cody's, 3138 E Sunshine St in Springfield, MO.",
+  "start": "2026-11-27",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "W.F. Cody's",
+  "address": "3138 E Sunshine St,Springfield,MO,United States, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Rogersville Area Chamber of Commerce",
+    "website": "https://allevents.in/org/rogersville-area-chamber-of-commerce/21744692"
+  },
+  "categories": [
+    "sports",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/christmas-lights-run-modified-friday-night-fun-run/200030980579103",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czUvYmFubmVycy9hMWExZDI2MGMzNjI3M2YwY2Q3M2IxMGVkOWU5MTYzZWE4ZGU5Yjc4MzIxMzk0MjljODI0ZmExMzc2NTliYWM4LXJpbWctdzEyMDAtaDE2MDAtZGMwODA4MDgtZ21pcj92PTE3OTM5MzU2MjM.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/christmas-lights-run-modified-friday-night-fun-run/200030980579103"
+  ],
+  "updated_at": "2026-11-24T10:51:46.049Z",
+  "public_slug": "christmas-lights-run-modified-friday-night-fun-run-2026-11-27",
+  "city_slug": "springfield",
+  "path": "/events/springfield/christmas-lights-run-modified-friday-night-fun-run-2026-11-27/",
+  "action_type": "details"
+}

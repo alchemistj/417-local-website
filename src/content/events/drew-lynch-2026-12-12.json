@@ -3,7 +3,7 @@
   "slug": "drew-lynch",
   "title": "Drew Lynch",
   "seo_title": "Drew Lynch at Springfield Comedy Club, Dec 12, 2026",
-  "description": "Drew Lynch is a comedy show where you watch live stand-up. It takes place on December 12, 2026, at Springfield Comedy Club, 420 W College Street in Springfield, MO. The start time is TBD.",
+  "description": "Drew Lynch is a comedy event where you can watch a live performance. It takes place on December 12, 2026 (Time TBD) at Springfield Comedy Club, 420 W College Street in Springfield, MO.",
   "start": "2026-12-12",
   "end": null,
   "timezone": "America/Chicago",
@@ -13,8 +13,8 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Ticket Network Events",
-    "website": "https://allevents.in/org/ticket-network-events/23491279"
+    "name": null,
+    "website": null
   },
   "categories": [
     "comedy"
@@ -22,11 +22,11 @@
   "price": null,
   "is_free": null,
   "registration_url": "https://allevents.in/springfield/drew-lynch/2300030729831857",
-  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czcvYmFubmVycy80NmI3MzNjMC1lMTJmLTExZjEtYTM1NC1mOWVhODAwNzc2NGItcmltZy13MTIwMC1oNTE0LWRjZjhmOGY4LWdtaXIuanBnP3Y9MTc5NDc3Mjg2NQ.avif",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czQvYmFubmVycy8yOWE3MDYwMC1lNjlhLTExZjEtYjhhMC02NWVmY2MwODlmOTgtcmltZy13MTIwMC1oNTE0LWRjZjhmOGY4LWdtaXIuanBnP3Y9MTc5NTM2ODUzOQ.avif",
   "source_urls": [
     "https://allevents.in/springfield/drew-lynch/2300030729831857"
   ],
-  "updated_at": "2026-11-23T10:31:10.623Z",
+  "updated_at": "2026-11-24T10:51:46.049Z",
   "public_slug": "drew-lynch-2026-12-12",
   "city_slug": "springfield",
   "path": "/events/springfield/drew-lynch-2026-12-12/",

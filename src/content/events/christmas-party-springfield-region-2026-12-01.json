@@ -1,0 +1,34 @@
+{
+  "id": "c6d9da91-2022-4e08-8b62-c767bd6778d5",
+  "slug": "christmas-party-springfield-region",
+  "title": "Christmas Party🎄Springfield Region",
+  "seo_title": "Christmas Party at The Barley House in Springfield, MO",
+  "description": "This is a holiday-themed Christmas party in the Springfield region. It takes place on December 1, 2026, with the time to be determined, at The Barley House at Moon Town Crossing, 3070 N Kentwood Ave in Springfield, MO.",
+  "start": "2026-12-01",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "The Barley House at Moon Town Crossing",
+  "address": "3070 N Kentwood Ave, Springfield, MO 65803-4414, United States, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Restoring Hope LLC",
+    "website": "https://allevents.in/org/restoring-hope-llc/16711837"
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/christmas-partyspringfield-region/200031022900110",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy9jODFkNjEyOWNkMDBkNjQyM2I2OWMyYWQ4YTk0Zjk5YWU5MDkwMTI3MTY5MDFlMjc4NjE5MmNiMjI4YTBmZGNhLXJpbWctdzEyMDAtaDY3NS1kY2Y4ZjhlOC1nbWlyP3Y9MTc5NDM4OTA1MA.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/christmas-partyspringfield-region/200031022900110"
+  ],
+  "updated_at": "2026-11-24T10:51:46.049Z",
+  "public_slug": "christmas-party-springfield-region-2026-12-01",
+  "city_slug": "springfield",
+  "path": "/events/springfield/christmas-party-springfield-region-2026-12-01/",
+  "action_type": "details"
+}

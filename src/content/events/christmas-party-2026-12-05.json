@@ -1,0 +1,34 @@
+{
+  "id": "c17e0c85-1482-4d19-bdd6-be30599cac1c",
+  "slug": "2026-christmas-party",
+  "title": "2026 Christmas Party",
+  "seo_title": "2026 Christmas Party in Springfield, MO",
+  "description": "This is a holiday-themed Christmas party hosted by Ozarks JeepThing. It takes place on December 5, 2026, at 603 W Plainview Rd in Springfield, Missouri, with the time still to be determined (Time TBD).",
+  "start": "2026-12-05",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "603 W Plainview Rd, Springfield, MO 65810-2419, United States",
+  "address": "603 W Plainview Rd, Springfield, MO 65810-2419, United States, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Ozarks JeepThing",
+    "website": "https://allevents.in/org/ozarks-jeepthing/17576164"
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/2026-christmas-party/200030953299319",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czcvYmFubmVycy82YWZkYjY0NmUyM2NiY2MzMDdhMzI1ZjJhNTZjOWI3M2Y3NGU4OGIxMTg5NGZmMDQyM2YzMTA3YzQ3MmNhZWYwLXJpbWctdzEyMDAtaDYzMC1kYzA4MDgwOC1nbWlyP3Y9MTc5MzYxMjI5Ng.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/2026-christmas-party/200030953299319"
+  ],
+  "updated_at": "2026-11-24T10:51:46.049Z",
+  "public_slug": "christmas-party-2026-12-05",
+  "city_slug": "springfield",
+  "path": "/events/springfield/christmas-party-2026-12-05/",
+  "action_type": "details"
+}

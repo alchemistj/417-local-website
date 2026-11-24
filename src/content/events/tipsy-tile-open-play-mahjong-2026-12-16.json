@@ -1,0 +1,33 @@
+{
+  "id": "ced97862-e78d-4bf3-a953-113bb046b845",
+  "slug": "the-tipsy-tile-open-play-mahjong",
+  "title": "The Tipsy Tile | Open Play Mahjong",
+  "seo_title": "The Tipsy Tile Open Play Mahjong in Ozark, MO",
+  "description": "The Tipsy Tile is an open play Mahjong gathering where you play at the table with fellow players and enjoy a drink; food and drinks are available for purchase. It is for experienced players who already know how to play, and admission is free, with reservations by calling (417) 882-0399. It takes place Wednesday, December 16, 2026, from 2:00 PM to 5:00 PM at Vineyard Market, 1759 W State Hwy J in Ozark, MO.",
+  "start": "2026-12-16T20:00:00+00:00",
+  "end": "2026-12-16T23:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Vineyard Market",
+  "address": "1759 W State Hwy J",
+  "city": "Ozark",
+  "state": "MO",
+  "organizer": {
+    "name": "Vineyard Market",
+    "website": "https://thevineyardmarket.com/"
+  },
+  "categories": [
+    "food-and-drink"
+  ],
+  "price": "FREE",
+  "is_free": true,
+  "registration_url": "https://thevineyardmarket.com/events/the-tipsy-tile-open-play-mahjong-december-2026",
+  "image_url": null,
+  "source_urls": [
+    "https://thevineyardmarket.com/events/the-tipsy-tile-open-play-mahjong-december-2026"
+  ],
+  "updated_at": "2026-11-24T10:51:46.049Z",
+  "public_slug": "tipsy-tile-open-play-mahjong-2026-12-16",
+  "city_slug": "ozark",
+  "path": "/events/ozark/tipsy-tile-open-play-mahjong-2026-12-16/",
+  "action_type": "show_up"
+}

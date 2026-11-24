@@ -2,8 +2,8 @@
   "id": "1655ff0c-c002-4693-95e0-c78eaffe6e92",
   "slug": "pancakes-with-santa-at-big-whiskeys-downtown",
   "title": "Pancakes with Santa at Big Whiskey's - Downtown",
-  "seo_title": "Pancakes with Santa at Big Whiskey's Downtown Springfield",
-  "description": "Pancakes with Santa is a holiday event at Big Whiskey's - Downtown where you can enjoy pancakes and meet Santa. It takes place on December 5, 2026, with the time to be determined, at 311 Park Central East in Springfield, MO.",
+  "seo_title": "Pancakes with Santa at Big Whiskey's, Springfield MO",
+  "description": "Pancakes with Santa is a holiday breakfast event at Big Whiskey's in downtown Springfield, with a free pancake breakfast and a free picture with Santa. It takes place on Saturday, December 5, 2026, at 311 Park Central East in Springfield, MO. The event summary lists the morning as 8:30 to 10:30 a.m., and admission is free.",
   "start": "2026-12-05",
   "end": null,
   "timezone": "America/Chicago",
@@ -13,22 +13,24 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Big Whiskeys American Restaurant & Bar",
-    "website": "https://allevents.in/org/big-whiskeys-american-restaurant-and-bar/28322189"
+    "name": null,
+    "website": null
   },
   "categories": [
-    "outdoors"
+    "networking",
+    "outdoors",
+    "holiday"
   ],
   "price": null,
-  "is_free": null,
+  "is_free": true,
   "registration_url": "https://allevents.in/springfield/pancakes-with-santa-at-big-whiskeys-downtown/100002004719175018",
   "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czYvYmFubmVycy9hOTBmMWFiZmE4NGIxMGRlMWJjMTYwYzQxZDlhNjgyZTVhNWRhMjE5MTcwOGNkNjNlZTcwM2U0N2EyZjBhMzY2LXJpbWctdzEyMDAtaDY3NS1kY2Y4ZjhmOC1nbWlyLmpwZz92PTE3OTQ1NDcxNjY.avif",
   "source_urls": [
     "https://allevents.in/springfield/pancakes-with-santa-at-big-whiskeys-downtown/100002004719175018"
   ],
-  "updated_at": "2026-11-23T10:31:10.623Z",
+  "updated_at": "2026-11-24T10:51:46.049Z",
   "public_slug": "pancakes-with-santa-at-big-whiskey-s-downtown-2026-12-05",
   "city_slug": "springfield",
   "path": "/events/springfield/pancakes-with-santa-at-big-whiskey-s-downtown-2026-12-05/",
-  "action_type": "details"
+  "action_type": "show_up"
 }

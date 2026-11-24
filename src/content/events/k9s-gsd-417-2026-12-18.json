@@ -2,8 +2,8 @@
   "id": "704081b6-370b-4f4c-bdb0-642750636666",
   "slug": "k9s-gsd-417",
   "title": "K9S:GSD-417",
-  "seo_title": "K9S:GSD-417 Servant Leader Huddle in Springfield, MO",
-  "description": "K9S:GSD-417 is a K9s Ground Shield huddle where servant leaders find common ground in advancing the mission of K9s For Camo. It is a business networking and professional development event for servant leaders. It takes place on December 18, 2026, at The Daily Blend, 1736 East Sunshine Street in Springfield, MO. Time TBD.",
+  "seo_title": "K9S:GSD-417 Ground Shield Huddle in Springfield, MO",
+  "description": "K9S:GSD-417 is a K9s Ground Shield huddle where servant leaders find common ground in advancing the mission of K9s For Camo. It is geared toward business networking, entrepreneurship, and professional development. It takes place on December 18, 2026, Time TBD, at The Daily Blend, 1736 East Sunshine Street, Springfield, MO.",
   "start": "2026-12-18",
   "end": null,
   "timezone": "America/Chicago",
@@ -18,16 +18,17 @@
   },
   "categories": [
     "networking",
+    "entrepreneurship",
     "professional-development"
   ],
   "price": null,
   "is_free": null,
   "registration_url": "https://www.eventbrite.com/e/k9sgsd-417-tickets-2004045532134",
-  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189098957%2F2601828287651%2F1%2Foriginal.20260717-211321?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=22251c05a57334b620fdbfb5ae73196e",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189098957%2F2601828287651%2F1%2Foriginal.20260717-211321?crop=focalpoint&fit=crop&w=300&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=0de653a6bed54ceaf2895f8bb278f701",
   "source_urls": [
     "https://www.eventbrite.com/e/k9sgsd-417-tickets-2004045532134"
   ],
-  "updated_at": "2026-11-23T10:31:10.623Z",
+  "updated_at": "2026-11-24T10:51:46.049Z",
   "public_slug": "k9s-gsd-417-2026-12-18",
   "city_slug": "springfield",
   "path": "/events/springfield/k9s-gsd-417-2026-12-18/",

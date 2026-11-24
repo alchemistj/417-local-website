@@ -3,7 +3,7 @@
   "slug": "parents-night-out",
   "title": "Parents Night Out",
   "seo_title": "Parents Night Out in Joplin, MO on December 11, 2026",
-  "description": "Parents Night Out is a family-oriented community event listed under festivals, arts and theater, live music, and food and drink. It takes place on December 11, 2026, with the time to be determined, at 2124 Utica St in Joplin, Missouri.",
+  "description": "Parents Night Out gives parents a few hours to shop, wrap presents, have a date night, or relax while children ages 3-12 enjoy food, games, Christmas crafts, and a movie. It is free, and signing up in advance through the Facebook event or registration form helps the church prepare; everyone is welcome and church attendance is not required. It takes place December 11, 2026 (time TBD) at Joplin First Church of the Nazarene, 2124 Utica St, Joplin, MO.",
   "start": "2026-12-11",
   "end": null,
   "timezone": "America/Chicago",
@@ -17,12 +17,8 @@
     "website": null
   },
   "categories": [
-    "festivals",
-    "community",
-    "arts-and-theater",
-    "live-music",
-    "family",
-    "food-and-drink"
+    "classes-and-workshops",
+    "holiday"
   ],
   "price": null,
   "is_free": null,
@@ -31,9 +27,9 @@
   "source_urls": [
     "https://happeningnext.com/event/parents-night-out-eid3a0e8w8abv"
   ],
-  "updated_at": "2026-11-23T10:31:10.623Z",
+  "updated_at": "2026-11-24T10:51:46.049Z",
   "public_slug": "parents-night-out-2026-12-11",
   "city_slug": "joplin",
   "path": "/events/joplin/parents-night-out-2026-12-11/",
-  "action_type": "details"
+  "action_type": "signup"
 }

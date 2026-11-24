@@ -1,0 +1,34 @@
+{
+  "id": "5ae80698-616e-43da-ac4d-4cd907e8f2e1",
+  "slug": "jeff-dye-at-springfield-comedy-club",
+  "title": "Jeff Dye at Springfield Comedy Club",
+  "seo_title": "Jeff Dye at Springfield Comedy Club, Dec 4, 2026",
+  "description": "Jeff Dye is a comedy show where you can watch live stand-up at Springfield Comedy Club. It takes place on December 4, 2026, with the start time to be determined (Time TBD). The venue is at 420 W. College St in Springfield, MO.",
+  "start": "2026-12-04",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Springfield Comedy Club",
+  "address": "420 W. College St, Springfield, MO 65806, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Vivid Events",
+    "website": "https://allevents.in/org/vivid-events/22309944"
+  },
+  "categories": [
+    "comedy"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/jeff-dye-at-springfield-comedy-club/2400030245043223",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czgvYmFubmVycy8zMWQyYjU5MC05YWE1LTExZjEtOWJjNi04YjRmNTZkYjZjNDMtcmltZy13MTIwMC1oODAwLWRjMDgwODA4LWdtaXIuanBnP3Y9MTc4NzAxNzAxMA.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/jeff-dye-at-springfield-comedy-club/2400030245043223"
+  ],
+  "updated_at": "2026-11-24T10:51:46.049Z",
+  "public_slug": "jeff-dye-at-springfield-comedy-club-2026-12-04",
+  "city_slug": "springfield",
+  "path": "/events/springfield/jeff-dye-at-springfield-comedy-club-2026-12-04/",
+  "action_type": "details"
+}

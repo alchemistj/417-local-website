@@ -3,7 +3,7 @@
   "slug": "mojo-a-swingin-christmas",
   "title": "MOJO - A Swingin' Christmas",
   "seo_title": "MOJO - A Swingin' Christmas in Springfield, MO",
-  "description": "MOJO - A Swingin' Christmas is a holiday event presented by Gillioz Theatre. It takes place on November 28, 2026, with the time to be determined, at 325 Park Central E in Springfield, Missouri.",
+  "description": "MOJO - A Swingin' Christmas is a Saturday night of holiday music by the Missouri Jazz Orchestra, with guest vocalists and audience sing-alongs, and possibly a visit from a red-suited cat. It takes place on November 28, 2026 (time TBD) at 325 Park Central E in Springfield, MO.",
   "start": "2026-11-28",
   "end": null,
   "timezone": "America/Chicago",
@@ -17,6 +17,7 @@
     "website": "https://allevents.in/org/gillioz-theatre/3393097"
   },
   "categories": [
+    "live-music",
     "outdoors",
     "holiday"
   ],
@@ -27,7 +28,7 @@
   "source_urls": [
     "https://allevents.in/springfield/mojo-a-swingin-christmas/200030969388721"
   ],
-  "updated_at": "2026-11-23T10:31:10.623Z",
+  "updated_at": "2026-11-24T10:51:46.049Z",
   "public_slug": "mojo-swingin-christmas-2026-11-28-2",
   "city_slug": "springfield",
   "path": "/events/springfield/mojo-swingin-christmas-2026-11-28-2/",
