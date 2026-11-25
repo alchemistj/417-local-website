@@ -14,8 +14,8 @@ const H1: Record<string, { h1: string; intro: string }> = {
   },
 };
 
-export const getStaticPaths = (() =>
-  Object.keys(H1).map((category) => ({ params: { category } }))) satisfies GetStaticPaths;
+// getStaticPaths runs outside the component scope, so the slug list is spelled out here.
+export const getStaticPaths = (() => [{ params: { category: "professional-development" } }]) satisfies GetStaticPaths;
 
 const { category } = Astro.params;
 const meta = BUSINESS_EVENTS.find((p) => p.path.endsWith(`/${category}/`));
