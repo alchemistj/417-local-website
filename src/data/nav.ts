@@ -14,6 +14,7 @@ export const NAV_ITEMS: NavItem[] = [
   // Same menu targets as the old WordPress site: menu links go to the pages that rank, not to archives.
   { label: "Discover Things to Do", href: "/best-things-to-do-in-springfield-mo/", requiresPost: "best-things-to-do-in-springfield-mo" },
   { label: "Food & Drink", href: "/food-and-drink-springfield-mo/" },
+  { label: "This Weekend", href: "/things-to-do-in-springfield-mo-this-weekend/" },
   { label: "Events", href: "/events/" },
   { label: "Blog", href: "/blog/" },
   { label: "Grow Your Business", href: "/small-business-success/", requiresPost: "small-business-success", cta: true },

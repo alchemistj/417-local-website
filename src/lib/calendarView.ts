@@ -374,6 +374,15 @@ export function weekendRangeLabel(now: Date): string {
   return `${shortWeekdayMonthDay(friday)} to ${shortWeekdayMonthDay(sunday)}`;
 }
 
+/** "Nov 27–29", or "Nov 29–Dec 1" when the weekend crosses a month. Used in the weekend title and H1. */
+export function weekendTitleRange(now: Date): string {
+  const [friday, , sunday] = weekendDateStrings(now);
+  const month = (ymd: string) => shortWeekdayMonthDay(ymd).split(" ")[1];
+  const day = (ymd: string) => String(Number(ymd.slice(8, 10)));
+  const end = month(friday) === month(sunday) ? day(sunday) : `${month(sunday)} ${day(sunday)}`;
+  return `${month(friday)} ${day(friday)}\u2013${end}`;
+}
+
 /** Meta description, 155 characters or fewer. City name keeps the five pages distinct. */
 export function weekendMetaDescription(citySlug: string, events: EventData[], now: Date): string {
   const name = cityDisplayName(citySlug);
