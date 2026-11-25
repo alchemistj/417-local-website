@@ -3,7 +3,7 @@
   "slug": "slugbleed-dsffakw-rat-kingdom-box-boy-vintage",
   "title": "SlugBleed, DSFFAKW, Rat Kingdom @ BOX BOY VINTAGE",
   "seo_title": "SlugBleed, DSFFAKW, Rat Kingdom at Box Boy Vintage",
-  "description": "This is a live music show featuring SlugBleed, DSFFAKW, and Rat Kingdom at Box Boy Vintage. It takes place on November 29, 2026, with the time to be determined, at 1619 S Main Street in Joplin, Missouri.",
+  "description": "This is a live music show featuring Alabama Slam band SlugBleed, Deep Sea Fishing For A Killer Whale, and Rat Kingdom, held to support SlugBleed as they play shows across the country. It is all ages, and admission is $5 or pay what you can. It takes place November 29, 2026, Time TBD, at Box Boy Vintage, 1619 S Main Street in Joplin, Missouri.",
   "start": "2026-11-29",
   "end": null,
   "timezone": "America/Chicago",
@@ -18,17 +18,16 @@
   },
   "categories": [
     "live-music",
-    "arts-and-theater",
-    "community"
+    "outdoors"
   ],
-  "price": null,
-  "is_free": null,
+  "price": "$5 (or pay what you can)",
+  "is_free": false,
   "registration_url": "https://happeningnext.com/event/slugbleed-dsffakw-rat-kingdom-box-boy-vintage-eid3a0ec6spaq",
   "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czkvYmFubmVycy85YTkyNjRhNGI2MGYwNDFiNzc0ZDYwZTg2M2JlNmFlOTI2MGI0NWNkNGEyYWRmNGQyMzExZTZiOWFiMDc3MmI5LXJpbWctdzEyMDAtaDE1MDAtZGNiOGI4YjgtZ21pcj92PTE3OTUzNjg3MTg.avif",
   "source_urls": [
     "https://happeningnext.com/event/slugbleed-dsffakw-rat-kingdom-box-boy-vintage-eid3a0ec6spaq"
   ],
-  "updated_at": "2026-11-24T10:51:46.049Z",
+  "updated_at": "2026-11-25T10:28:22.362Z",
   "public_slug": "slugbleed-dsffakw-rat-kingdom-box-boy-vintage-2026-11-29",
   "city_slug": "joplin",
   "path": "/events/joplin/slugbleed-dsffakw-rat-kingdom-box-boy-vintage-2026-11-29/",

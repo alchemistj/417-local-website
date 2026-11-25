@@ -1,19 +1,19 @@
 {
   "id": "f06b8f5c-d83f-44b5-ae71-ac4154d68702",
-  "slug": "the-harlem-globetrotters-rivalry-tour",
-  "title": "The Harlem Globetrotters: Rivalry Tour",
+  "slug": "the-harlem-globetrotters",
+  "title": "The Harlem Globetrotters",
   "seo_title": "Harlem Globetrotters Rivalry Tour in Springfield, MO",
-  "description": "The Harlem Globetrotters bring their Rivalry Tour to Springfield, where they face the Washington Generals and a new lineup of rivals, and fans can help decide the action, get pulled onto the court, and take over the jumbotron. A free pre-game tip-off party starts when doors open at 6:00 PM, and the event is for all ages. It takes place Tuesday, March 16, 2027 at 7:00 PM at Great Southern Bank Arena; parking is $20, or $50 for premium.",
+  "description": "The Harlem Globetrotters bring their Rivalry Tour to the court as they face the Washington Generals and a new lineup of rivals, with fans sometimes pulled onto the court to join the squad. It is for all ages, and a free pre-game tip-off party starts when doors open at 6:00 PM. It takes place Tuesday, March 16, 2027 at 7:00 PM at Great Southern Bank Arena, 901 S. National Ave., Springfield, MO; parking is $20, or $50 for premium parking.",
   "start": "2027-03-17T00:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
   "venue": "Great Southern Bank Arena",
-  "address": null,
+  "address": "901 S. National Ave.",
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Great Southern Bank Arena, Missouri State University",
-    "website": "https://greatsouthernbankarena.com/"
+    "name": null,
+    "website": null
   },
   "categories": [
     "sports",
@@ -26,7 +26,7 @@
   "source_urls": [
     "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4092"
   ],
-  "updated_at": "2026-11-24T10:51:46.049Z",
+  "updated_at": "2026-11-25T10:28:22.362Z",
   "public_slug": "harlem-globetrotters-rivalry-2027-03-16",
   "city_slug": "springfield",
   "path": "/events/springfield/harlem-globetrotters-rivalry-2027-03-16/",

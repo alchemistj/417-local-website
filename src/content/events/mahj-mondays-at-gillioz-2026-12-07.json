@@ -3,21 +3,21 @@
   "slug": "mahj-mondays-at-the-gillioz",
   "title": "Mahj Mondays at the Gillioz",
   "seo_title": "Mahj Mondays at the Gillioz in Springfield, MO",
-  "description": "Mahj Mondays are open play nights for American Mahjong in The Gallery at the Gillioz Theatre, held with Blooming Bams. It is for players who already know American Mahjong (NMJL rules) at any skill level; bring your own 2026 NMJL card, and tile sets are provided or you can bring your own. Free, drop in or stay the whole time on Monday, December 7, 2026, 5:30 to 8:30 PM at 325 Park Central E., Springfield, MO.",
+  "description": "Mahj Mondays is an open play night for American Mahjong, where you can drop in or stay the whole time. It is for players of all skill levels who already know American Mahjong (NMJL rules); bring your own 2026 NMJL card, and several tile sets are provided. Admission is free, and an RSVP is requested via the Facebook event. It takes place Monday, December 7, 2026, from 5:30 PM to 8:30 PM at The Gallery at the Gillioz, 325 Park Central E., Springfield, MO.",
   "start": "2026-12-07T23:30:00+00:00",
   "end": "2026-12-08T02:30:00+00:00",
   "timezone": "America/Chicago",
-  "venue": "The Gallery at the Gillioz Theatre",
+  "venue": "The Gallery at the Gillioz",
   "address": "325 Park Central E.",
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "The Gallery at the Gillioz in collaboration with Blooming Bams",
-    "website": null
+    "name": "The Gallery at the Gillioz",
+    "website": "https://gillioztheatre.com/"
   },
   "categories": [
     "arts-and-theater",
-    "community"
+    "outdoors"
   ],
   "price": "Free",
   "is_free": true,
@@ -26,7 +26,7 @@
   "source_urls": [
     "https://gillioztheatre.com/event/mahj-mondays-at-the-gillioz-5"
   ],
-  "updated_at": "2026-11-24T10:51:46.049Z",
+  "updated_at": "2026-11-25T10:28:22.362Z",
   "public_slug": "mahj-mondays-at-gillioz-2026-12-07",
   "city_slug": "springfield",
   "path": "/events/springfield/mahj-mondays-at-gillioz-2026-12-07/",

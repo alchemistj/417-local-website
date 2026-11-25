@@ -1,0 +1,36 @@
+{
+  "id": "db9c7771-240a-4b9f-916c-7dd5d27bd068",
+  "slug": "wavr-sweet-co-grand-opening",
+  "title": "Wavr Sweet Co. Grand Opening",
+  "seo_title": "Wavr Sweet Co. Grand Opening in Bolivar, MO",
+  "description": "This is the grand opening of Wavr Sweet Co., a community and family event held at the shop's location. It takes place on December 5, 2026, with the time to be determined, at 111 N Elgin Ave in Bolivar, MO.",
+  "start": "2026-12-05",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "111 N Elgin Ave, Bolivar, MO",
+  "address": "111 N Elgin Ave, Bolivar, MO 65613-1700, United States, Bolivar, MO",
+  "city": "Bolivar",
+  "state": "MO",
+  "organizer": {
+    "name": "WAVR Sweet Co.",
+    "website": null
+  },
+  "categories": [
+    "community",
+    "family",
+    "festivals"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/wavr-sweet-co-grand-opening-eid3a0eclakrd",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czQvYmFubmVycy83ZTQyOWUxNWYzYzE4ODcyODAwMmIzNmNlNTc2OGIwZTVkOTJiNTY4MTQwZDk4MDZhZTJiYjIyNDBkMGQzNDM2LXJpbWctdzk2MC1oMzU3LWRjMDgwODA4LWdtaXI_dj0xNzk1NTM0MjEx.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/wavr-sweet-co-grand-opening-eid3a0eclakrd"
+  ],
+  "updated_at": "2026-11-25T10:28:22.362Z",
+  "public_slug": "wavr-sweet-co-grand-opening-2026-12-05",
+  "city_slug": "bolivar",
+  "path": "/events/bolivar/wavr-sweet-co-grand-opening-2026-12-05/",
+  "action_type": "details"
+}

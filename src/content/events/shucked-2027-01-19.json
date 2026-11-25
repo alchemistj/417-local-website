@@ -1,18 +1,18 @@
 {
   "id": "67327f76-365b-44fa-b881-6825b8bc6f2c",
-  "slug": "shucked-great-southern-bank-broadway-season",
-  "title": "SHUCKED – Great Southern Bank Broadway Season",
-  "seo_title": "SHUCKED Broadway Musical in Springfield, MO – Jan 2027",
-  "description": "SHUCKED is a Broadway musical about Maizy and Beau, whose wedding plans collide with the dying corn that protects their small community of Cob County, and the unlikely hero and con artist who get caught up in the town's fight. It is recommended for ages 10+ and contains adult themes, some adult language and corny innuendo. Performances run Tuesday, January 19 through Thursday, January 21, 2027, at 7:30 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave. in Springfield, MO; for now, tickets are available only through Broadway Season subscriptions.",
+  "slug": "shucked",
+  "title": "SHUCKED",
+  "seo_title": "SHUCKED at Juanita K. Hammons Hall, Springfield MO",
+  "description": "SHUCKED is a Broadway musical comedy in which Maizy and Beau's wedding plans are upended when the corn protecting their small community, Cob County, begins to die. It features the songs 'Woman of the World', 'Somebody Will' and 'Independently Owned', and contains adult themes, adult language and corny innuendo; it is recommended for ages 10+. It runs from Tuesday, January 19 to Thursday, January 21, 2027, starting at 7:30 PM, at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO, and tickets are currently available only through Broadway Season subscriptions.",
   "start": "2027-01-20T01:30:00+00:00",
-  "end": null,
+  "end": "2027-01-22T01:30:00+00:00",
   "timezone": "America/Chicago",
   "venue": "Juanita K. Hammons Hall for the Performing Arts",
   "address": "901 S. National Ave.",
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Juanita K. Hammons Hall for the Performing Arts",
+    "name": "Missouri State University",
     "website": "https://www.hammonshall.com/"
   },
   "categories": [
@@ -25,7 +25,7 @@
   "source_urls": [
     "https://www.hammonshall.com/viewshow.aspx?ID=4083"
   ],
-  "updated_at": "2026-11-24T10:51:46.049Z",
+  "updated_at": "2026-11-25T10:28:22.362Z",
   "public_slug": "shucked-2027-01-19",
   "city_slug": "springfield",
   "path": "/events/springfield/shucked-2027-01-19/",
