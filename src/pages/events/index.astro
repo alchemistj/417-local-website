@@ -8,6 +8,9 @@ import { citiesWithEvents } from "../../lib/eventRoutes";
 import { WEEKEND_CITY_SLUGS, cityDisplayName, cityWeekendPath, eventPath } from "../../lib/eventPaths";
 import { getRecurring, getSiteEvents } from "../../lib/loadEvents";
 import EventList from "../../components/EventList.astro";
+import LeadForm from "../../components/LeadForm.astro";
+import { FORM_KEYS } from "../../lib/formsLead";
+import { inlineHeroAvif } from "../../lib/heroPhoto";
 
 const now = new Date();
 const events = await getSiteEvents();
@@ -16,50 +19,59 @@ const business = BUSINESS_EVENTS[0];
 const dontMiss = regionDontMiss(events, recurring, now).map((event) => withCityLabel(event));
 const moreTowns = citiesWithEvents(events).filter((city) => !(WEEKEND_CITY_SLUGS as readonly string[]).includes(city));
 const [intro, confirm] = copy.region.intro;
+const photo = await inlineHeroAvif({
+  file: "src/assets/home/fountain-square.jpg",
+  crop: { left: 0, top: 180, width: 1440, height: 520 },
+  width: 1280,
+  quality: 50,
+});
 const cards = WEEKEND_CITY_SLUGS.map((city) => {
   const count = fourWeekCount(events, city, now);
-  const picks = topWeekendEvents(events, city, now, city === "springfield" ? 3 : 1);
+  const featured = topWeekendEvents(events, city, now, 1)[0] ?? null;
   return {
     city,
     name: cityDisplayName(city),
     count,
-    top: picks[0]?.title ?? "",
-    picks: city === "springfield" ? picks : [],
+    featured,
     hub: `/events/${city}/`,
     weekend: cityWeekendPath(city),
   };
 });
+const signupFields = [
+  { name: "name", label: "Name", value: "Events subscriber", hidden: true },
+  { name: "email", label: "Email", type: "email" as const, required: true, autocomplete: "email" },
+  {
+    name: "message",
+    label: "Message",
+    type: "textarea" as const,
+    value: "Please email new Southwest Missouri experiences.",
+    hidden: true,
+  },
+];
 ---
 
 <EventsLayout
   meta={EVENTS_HUB}
   h1={copy.region.h1}
   intro={intro}
+  photoHero={photo}
   crumbs={[{ name: "Home", path: "/" }, { name: "Events", path: "/events/" }]}
 >
-  <nav class="sw-hero" slot="band" aria-label="Southwest Missouri cities">
+  <div class="events-signup" slot="band">
+    <p class="events-signup-title">Get all new experiences delivered right to your inbox</p>
+    <LeadForm id="events-inbox" formKey={FORM_KEYS.contact} fields={signupFields} submitLabel="Sign up" />
+  </div>
+  <nav class="sw-cities" aria-label="Southwest Missouri cities">
     {cards.map((card) => (
       <article class:list={["sw-card", card.city === "springfield" && "sw-lead"]}>
         <h2>{card.name}</h2>
-        <p class="sw-eye">This weekend</p>
-        {card.picks.length > 0 && (
-          <p class="sw-count"><b>{card.count}</b> {card.count === 1 ? "event" : "events"}<span class="sw-rest"> in the next 4 weeks</span></p>
-        )}
-        {card.picks.length > 0 ? (
-          <ul class="sw-picks">
-            {card.picks.map((event) => (
-              <li><a href={eventPath(event)}>{event.title}</a></li>
-            ))}
-          </ul>
-        ) : (
-          <p class="sw-pick">{card.top || "Nothing listed yet."}</p>
-        )}
-        {card.picks.length === 0 && (
-          <p class="sw-count"><b>{card.count}</b> {card.count === 1 ? "event" : "events"}<span class="sw-rest"> in the next 4 weeks</span></p>
-        )}
+        <p class="sw-feature">
+          {card.featured ? <a href={eventPath(card.featured)}>{card.featured.title}</a> : "Nothing listed yet."}
+        </p>
+        <p class="sw-count">{card.count} {card.count === 1 ? "event" : "events"} in the next 4 weeks</p>
         <div class="sw-go">
-          <a class="btn sw-hub" href={card.hub}>{card.name} events</a>
-          <a class="btn sw-wk" href={card.weekend}>This weekend →</a>
+          <a class="btn" href={card.weekend}>This weekend</a>
+          <a class="btn sw-secondary" href={card.hub}>{card.name} events</a>
         </div>
       </article>
     ))}
@@ -82,31 +94,72 @@ const cards = WEEKEND_CITY_SLUGS.map((city) => {
   </section>
 </EventsLayout>
 
-<style is:global>
-  .sw-hero{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:1rem;text-align:left}
-  .sw-card{position:relative;display:flex;flex-direction:column;height:100%;min-width:0;padding:.65rem;border-radius:12px;background:var(--white);color:var(--ink)}
-  .sw-lead{grid-column:1/-1}
-  .sw-hero h2{margin:0;color:var(--ink);font-size:1.15rem;font-weight:700;line-height:1.15}
-  .sw-eye{margin:.35rem 0 0;color:var(--blue);font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-  .sw-pick{flex:0 0 auto;margin:.1rem 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.3;height:2.6em}
-  .sw-picks{flex:1 1 auto;display:flex;flex-direction:column;justify-content:space-evenly;gap:.2rem;margin:.35rem 0 0;padding:0;list-style:none}
-  .band-blue .sw-card .sw-picks a{position:relative;z-index:1;display:flex;align-items:center;box-sizing:border-box;min-height:44px;padding-block:.25rem;color:var(--blue);font-weight:700;line-height:1.25;text-decoration:underline}
-  .band-blue .sw-card .sw-picks a:hover{color:var(--blue-deep)}
-  .sw-count{margin:.3rem 0 0;color:var(--muted);font-size:.85rem}
-  .sw-go{display:flex;flex-direction:column;gap:.35rem;margin-top:auto;padding-top:.4rem}
-  .sw-lead .sw-go{margin-top:.4rem}
-  .sw-go .btn{width:100%;padding-inline:.35rem;font-size:.78rem;letter-spacing:0;white-space:nowrap}
-  .sw-hub:after{content:"";position:absolute;inset:0}
-  .sw-wk{position:relative;z-index:1;background:var(--white);color:var(--blue)}
-  .sw-rest{display:none}
-  .page-band{padding-block:1.25rem}
-  .page-band .lead,.sw-h{text-wrap:balance}
-  @media(min-width:720px){
-    .sw-hero{grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:.75rem}
-    .sw-lead{grid-column:1;grid-row:span 2}
-    .sw-lead h2{font-size:2.5rem;line-height:1.05}
-    .sw-go .btn{font-size:1rem;padding-inline:.6rem}
-    .sw-lead b{font-size:3rem;line-height:.9;display:block}
-    .sw-rest{display:inline}
+<style>
+  .events-signup {
+    margin: 1rem auto 0;
+    max-width: 34rem;
+    padding: 0.85rem 1rem 0.95rem;
+    border-radius: 12px;
+    background: var(--white);
+    color: var(--ink);
+    text-align: left;
+  }
+  .events-signup-title { margin: 0 0 0.65rem; font-weight: 700; line-height: 1.35; }
+  .events-signup :global(.lead-form) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    align-items: flex-end;
+  }
+  .events-signup :global(.lead-form > div:has(input[type="email"])) { flex: 1 1 12rem; }
+  .events-signup :global(.lead-form label) { color: var(--ink); }
+  .events-signup :global(.lead-form .btn) { width: auto; }
+  .events-signup :global(.lead-form > p),
+  .events-signup :global(.lead-form > noscript) { flex: 1 1 100%; margin: 0; }
+  .sw-cities {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin: 0;
+    text-align: left;
+  }
+  .sw-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: 100%;
+    padding: 0.9rem 0.95rem 0.85rem;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--white);
+    color: var(--ink);
+  }
+  .sw-cities h2 { margin: 0; color: var(--ink); font-size: 1.2rem; font-weight: 700; line-height: 1.15; }
+  .sw-lead h2 { font-size: 1.4rem; }
+  .sw-feature {
+    margin: 0.4rem 0 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.35;
+    min-height: 2.7em;
+  }
+  .sw-feature a { color: var(--ink); font-weight: 400; text-decoration: none; }
+  .sw-feature a:hover { color: var(--blue); text-decoration: underline; }
+  .sw-count { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.85rem; }
+  .sw-go { display: flex; flex-direction: column; gap: 0.4rem; margin-top: auto; padding-top: 0.75rem; }
+  .sw-go .btn { width: 100%; }
+  .sw-secondary { background: var(--white); color: var(--blue); border-color: var(--blue); }
+  .sw-secondary:hover { background: var(--tint); color: var(--blue-deep); border-color: var(--blue-deep); }
+  .sw-h { text-wrap: balance; }
+  @media (max-width: 559px) {
+    .events-signup :global(.lead-form > div:has(.btn)) { flex: 1 1 100%; }
+    .events-signup :global(.lead-form .btn) { width: 100%; }
+  }
+  @media (min-width: 720px) {
+    .sw-cities { grid-template-columns: 1.15fr 1fr 1fr; grid-template-rows: auto auto; gap: 0.75rem; }
+    .sw-lead { grid-column: 1; grid-row: span 2; }
+    .sw-lead h2 { font-size: 1.7rem; }
   }
 </style>

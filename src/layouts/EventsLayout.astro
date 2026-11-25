@@ -28,6 +28,11 @@ interface Props {
    */
   hero?: { photo: InlineHero; actions: { label: string; href: string }[] };
   /**
+   * Region hub only. Replaces the blue band with the fountain photo.
+   * The photo is the first paintable element, same pattern as the homepage.
+   */
+  photoHero?: InlineHero;
+  /**
    * Shared blue header. The event page passes false so the card stays the header;
    * the breadcrumb still shows, with the chips under it.
    */
@@ -50,6 +55,7 @@ const {
   chips,
   backLink,
   hero,
+  photoHero,
   titleBand = true,
   ogImagePath,
   noindex = false,
@@ -78,7 +84,21 @@ const crumbLd = {
   noindex={noindex}
   jsonLd={[crumbLd, ...jsonLd]}
 >
-  <section class:list={[titleBand ? "band band-blue page-band" : "event-crumb-row"]}>
+  {photoHero && (
+    <img
+      slot="hero-photo"
+      class="atf-photo events-hub-photo"
+      src={photoHero.src}
+      alt=""
+      width={photoHero.width}
+      height={photoHero.height}
+      loading="eager"
+      decoding="sync"
+      fetchpriority="high"
+      data-ff-lcp-hero
+    />
+  )}
+  <section class:list={[photoHero ? "events-hub-hero" : titleBand ? "band band-blue page-band" : "event-crumb-row"]}>
     <div class="container">
       <nav class="crumbs" aria-label="Breadcrumb">
         <ol>
@@ -93,10 +113,11 @@ const crumbLd = {
           ))}
         </ol>
       </nav>
-      {titleBand && <h1>{h1}</h1>}
-      {titleBand && backLink && <p class="back-link"><a href={backLink.href}>{backLink.label}</a></p>}
-      {titleBand && paragraphs.map((paragraph) => <p class="lead">{paragraph}</p>)}
-      {titleBand && hero && hero.actions.length > 0 && (
+      {(titleBand || photoHero) && <h1>{h1}</h1>}
+      {photoHero && <span class="atf-ready" hidden></span>}
+      {(titleBand || photoHero) && backLink && <p class="back-link"><a href={backLink.href}>{backLink.label}</a></p>}
+      {(titleBand || photoHero) && paragraphs.map((paragraph) => <p class="lead">{paragraph}</p>)}
+      {titleBand && !photoHero && hero && hero.actions.length > 0 && (
         <div class="btn-row">
           {hero.actions.map((action, index) => (
             <a class:list={["btn", index === 0 ? "btn-light" : "btn-outline"]} href={action.href}>{action.label}</a>
@@ -104,8 +125,8 @@ const crumbLd = {
         </div>
       )}
       {chips && <EventChips chips={chips} />}
-      {titleBand && <slot name="band" />}
-      {titleBand && subnav && (
+      {(titleBand || photoHero) && <slot name="band" />}
+      {titleBand && !photoHero && subnav && (
         <nav aria-label="Event types">
           <ul class="subnav">
             {subnav.map((link) => (
@@ -129,18 +150,42 @@ const crumbLd = {
 </BaseLayout>
 
 <style>
-  .page-band .crumbs ol { max-width: 100%; }
-  .page-band .crumbs li { min-width: 0; max-width: 100%; }
+  .page-band .crumbs ol,
+  .events-hub-hero .crumbs ol { max-width: 100%; }
+  .page-band .crumbs li,
+  .events-hub-hero .crumbs li { min-width: 0; max-width: 100%; }
+  .events-hub-photo { height: 480px; }
+  .events-hub-hero {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    padding-block: 1.35rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    text-align: center;
+  }
+  .events-hub-hero h1 { color: var(--white); text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45); }
+  .events-hub-hero .lead { color: var(--white); margin-top: 0.75rem; max-width: 40rem; margin-inline: auto; }
   .page-band .crumbs a,
-  .page-band .crumbs [aria-current="page"] {
+  .page-band .crumbs [aria-current="page"],
+  .events-hub-hero .crumbs a,
+  .events-hub-hero .crumbs [aria-current="page"] {
     display: inline-flex;
     align-items: center;
     min-height: 44px;
     color: var(--white);
     text-align: center;
   }
-  .page-band .crumbs [aria-current="page"] { text-decoration: none; }
-  .page-band .crumbs li + li::before { color: var(--white); }
+  .page-band .crumbs [aria-current="page"],
+  .events-hub-hero .crumbs [aria-current="page"] { text-decoration: none; }
+  .page-band .crumbs li + li::before,
+  .events-hub-hero .crumbs li + li::before { color: var(--white); }
+  @media (min-width: 720px) {
+    .events-hub-photo { height: 400px; }
+    .events-hub-hero { min-height: 400px; }
+  }
   .page-band .btn-row { margin-top: 1rem; }
   .event-crumb-row { padding-block: 1rem 0; }
   .event-crumb-row .crumbs ol { justify-content: flex-start; }
