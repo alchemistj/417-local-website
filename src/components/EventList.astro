@@ -73,7 +73,7 @@ function rowVenue(event: EventData): string {
                   <span class="date-tile-day">{date.day}</span>
                   <span class="date-tile-month">{date.month}</span>
                 </span>
-                <span class:list={["event-when", when === "Time TBA" && "is-tba"]}>{when}</span>
+                <span class:list={["event-when", when === "Time TBA" && "is-tba"]}>{when === "Time TBA" ? "Time\u00A0TBA" : when}</span>
                 <span class="event-row-text">
                   <span class="event-line">
                     <span class="event-title">{event.title}</span>

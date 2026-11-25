@@ -365,20 +365,19 @@ h3 { font-size: 1.25rem; }
 .event-day h2.event-day-head { margin-bottom: 0; }
 .event-rows, .weekly-list, .month-events { list-style: none; margin: 0; padding: 0; }
 .event-row { border-top: 1px solid var(--line); }
-.event-row-link { display: grid; grid-template-columns: 72px 4.75rem minmax(0, 1fr); gap: 0.2rem 0.65rem; align-items: center; min-height: 44px; padding-block: 0.7rem; color: inherit; text-decoration: none; }
-.event-title { color: var(--ink); font-weight: 700; font-size: 1.05rem; line-height: 1.3; text-decoration: none; }
-.event-row-link:hover .event-title { color: var(--blue); text-decoration: underline; text-underline-offset: 0.18em; }
+.event-row-link { display: grid; grid-template-columns: 72px 6.2rem minmax(0, 1fr); gap: 0.2rem 0.6rem; align-items: center; min-height: 44px; padding-block: 0.7rem; color: inherit; text-decoration: none; }
+.event-title { color: var(--ink); font-weight: 700; text-decoration: none; }
+.event-row-link:hover .event-title { color: var(--blue); text-decoration: underline; }
 .event-line, .event-tags { display: block; margin: 0; }
-.event-tags { margin-top: 0.2rem; }
-.date-tile { display: flex; flex-direction: column; align-items: center; justify-content: center; flex: none; width: 72px; height: 56px; border-radius: 8px; color: #fff; line-height: 1; }
+.date-tile { display: flex; flex-direction: column; align-items: center; justify-content: center; flex: none; width: 72px; height: 56px; border-radius: 8px; color: #fff; }
 .date-tile-day { font-size: 1.35rem; font-weight: 700; }
-.date-tile-month { margin-top: 0.12rem; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
-.event-when { display: flex; align-items: center; justify-content: center; min-height: 1.7rem; padding: 0.1rem 0.3rem; font-size: 0.78rem; font-weight: 700; line-height: 1.15; text-align: center; }
-.event-when.is-tba { border-radius: 999px; background: var(--tint); color: var(--muted); font-size: 0.68rem; }
+.date-tile-month { font-size: 0.68rem; font-weight: 700; }
+.event-when { font-weight: 700; text-align: center; }
+.event-when.is-tba { border-radius: 999px; background: var(--tint); color: var(--muted); }
 .event-card h1.event-card-title { -webkit-line-clamp: 3; }
-.event-place { color: var(--muted); font-weight: 400; }
-.event-free { display: inline-block; margin: 0 0.35rem 0.15rem 0; padding: 0.05rem 0.45rem; border-radius: 999px; background: #e5f2e8; color: #14532d; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.02em; line-height: 1.4; }
-.event-tag { display: inline-block; margin: 0 0.3rem 0.15rem 0; padding: 0.02rem 0.35rem; border-radius: 999px; background: transparent; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.01em; color: var(--muted); }
+.event-place { color: var(--muted); }
+.event-free { padding: 0 .4rem; border-radius: 999px; background: #e5f2e8; color: #14532d; font-size: .72rem; }
+.event-tag { margin-right: .35rem; font-size: .68rem; color: var(--muted); }
 .weekly-list li { padding-block: 0.15rem; border-top: 1px solid var(--line); }
 .weekly-list a { display: inline-flex; align-items: center; min-height: 44px; }
 .month-nav, .day-nav { display: flex; justify-content: space-between; gap: 1rem; }
