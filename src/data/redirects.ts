@@ -1,5 +1,6 @@
 import seed from "../../docs/build/redirects-seed.json";
 import shortlinks from "../../docs/build/shortlinks.json";
+import { BUSINESS_NETWORKING, BUSINESS_NETWORKING_OLD_PATHS } from "./staticPages";
 import { WEEKEND_CITY_SLUGS, cityWeekendPath } from "../lib/eventPaths";
 
 /**
@@ -74,6 +75,8 @@ export function buildRedirects(): Redirect[] {
   for (const slug of ["live-music", "arts-and-theater", "festivals", "family", "sports", "outdoors", "community", "holiday"]) {
     movedEventPages[`events/${slug}`] = `/events/springfield/${slug}/`;
   }
+  // Networking and entrepreneurship events now live on one page, /events/springfield/business-networking/.
+  for (const old of BUSINESS_NETWORKING_OLD_PATHS) movedEventPages[old] = BUSINESS_NETWORKING.path;
   for (const [slug, dest] of Object.entries(movedEventPages)) {
     for (const source of bothSlashForms(slug)) add(source, dest);
   }

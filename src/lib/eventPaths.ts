@@ -96,6 +96,7 @@ export function reservedEventSlugs(events: EventData[] = []): Set<string> {
   for (const event of events) cities.add(eventCitySlug(event));
   return new Set([
     "springfield-business-events",
+    "business-networking",
     "this-weekend",
     "weekend",
     "weekly",

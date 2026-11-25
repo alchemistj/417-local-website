@@ -1,0 +1,66 @@
+---
+import EventList from "../../../../components/EventList.astro";
+import { NETWORKING_GROUPS } from "../../../../data/networkingGroups";
+import { BUSINESS_EVENTS, BUSINESS_NETWORKING } from "../../../../data/staticPages";
+import EventsLayout from "../../../../layouts/EventsLayout.astro";
+import { inCategory } from "../../../../lib/events";
+import { getUpcomingEvents } from "../../../../lib/loadEvents";
+
+const meta = BUSINESS_NETWORKING;
+const upcoming = await getUpcomingEvents();
+const networking = inCategory(upcoming, "networking");
+const founders = inCategory(upcoming, "entrepreneurship");
+const subnav = BUSINESS_EVENTS.map((p) => ({ label: p.label, href: p.path }));
+const hub = BUSINESS_EVENTS[0];
+---
+
+<EventsLayout
+  meta={meta}
+  h1="Business Networking Events in Springfield, MO"
+  intro="Meet other professionals and business owners at networking events around Springfield. Below are the events coming up, then the groups that meet every week or month."
+  subnav={subnav}
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Events", path: "/events/" },
+    { name: "Business Events", path: hub.path },
+    { name: "Business Networking", path: meta.path },
+  ]}
+>
+  <section aria-labelledby="networking-events-heading">
+    <h2 id="networking-events-heading">Upcoming networking events</h2>
+    <EventList
+      events={networking}
+      idPrefix="networking"
+      emptyMessage="No networking events are listed right now. The groups below meet on a regular schedule."
+    />
+  </section>
+  <section aria-labelledby="founders-heading">
+    <h2 id="founders-heading">Founders and small-business owner events</h2>
+    <EventList
+      events={founders}
+      idPrefix="founders"
+      emptyMessage="No founder or small-business events are listed right now. Check back soon."
+    />
+  </section>
+  <section aria-labelledby="groups-heading">
+    <h2 id="groups-heading">Networking groups that meet every week or month</h2>
+    <p>
+      These groups keep a regular schedule. Details come from each group's own website, so check there for the latest
+      meeting times.
+    </p>
+    {NETWORKING_GROUPS.map((group) => (
+      <article>
+        <h3><a href={group.url} rel="noopener">{group.name}</a></h3>
+        <p>{group.what}</p>
+        {(group.when || group.cost) && (
+          <ul>
+            {group.when && <li><strong>When:</strong> {group.when}</li>}
+            {group.cost && <li><strong>Cost:</strong> {group.cost}</li>}
+          </ul>
+        )}
+      </article>
+    ))}
+    <p class="source-note">Group details last checked November 25, 2026.</p>
+  </section>
+  <p><a href={hub.path}>All Springfield business events</a></p>
+</EventsLayout>

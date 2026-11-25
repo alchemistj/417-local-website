@@ -4,17 +4,10 @@ import EventsLayout from "../../../layouts/EventsLayout.astro";
 import { BUSINESS_EVENTS } from "../../../data/staticPages";
 import { getUpcomingEvents } from "../../../lib/loadEvents";
 import { inCategory } from "../../../lib/events";
-import { BUSINESS_EVENT_CATEGORIES } from "../../../lib/eventSchema";
 
+// Networking and entrepreneurship moved to /events/springfield/business-networking/ (301 in redirects.ts).
+// Professional development stays for visitors, marked noindex.
 const H1: Record<string, { h1: string; intro: string }> = {
-  networking: {
-    h1: "Springfield, MO Networking Events",
-    intro: "Meet other professionals and business owners at networking events around Springfield.",
-  },
-  entrepreneurship: {
-    h1: "Springfield, MO Entrepreneurship Events",
-    intro: "Events for founders, startups and side hustles in Springfield and the 417.",
-  },
   "professional-development": {
     h1: "Springfield, MO Professional Development Events",
     intro: "Workshops, classes and training events to build your career and skills in Springfield.",
@@ -22,7 +15,7 @@ const H1: Record<string, { h1: string; intro: string }> = {
 };
 
 export const getStaticPaths = (() =>
-  BUSINESS_EVENT_CATEGORIES.map((category) => ({ params: { category } }))) satisfies GetStaticPaths;
+  Object.keys(H1).map((category) => ({ params: { category } }))) satisfies GetStaticPaths;
 
 const { category } = Astro.params;
 const meta = BUSINESS_EVENTS.find((p) => p.path.endsWith(`/${category}/`));
@@ -37,6 +30,7 @@ const subnav = BUSINESS_EVENTS.map((p) => ({ label: p.label, href: p.path }));
   h1={copy.h1}
   intro={copy.intro}
   events={events}
+  noindex={meta.indexable === false}
   crumbs={[
     { name: "Home", path: "/" },
     { name: "Events", path: "/events/" },
