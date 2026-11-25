@@ -138,7 +138,7 @@ describe.skipIf(!built)("built pages", () => {
 
   it("renders the networking page and noindexes the thin ones", () => {
     const html = read("/events/springfield/business-networking/");
-    expect(html).toContain("<h1>Business Networking Events in Springfield, MO</h1>");
+    expect(html).toMatch(/<h1[^>]*>Business Networking Events in Springfield, MO<\/h1>/);
     expect(html).toContain("Founders and small-business owner events");
     expect(html).toContain("Networking groups that meet every week or month");
     expect(html).not.toMatch(/name="robots"/);

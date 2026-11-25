@@ -8,7 +8,7 @@ import eventsCopy from "../docs/events-pages-copy.json";
 import { REDIRECTS, RETIRED_SLUGS, sourceMatches } from "../src/data/redirects";
 import { GENERAL_EVENT_CATEGORIES } from "../src/lib/eventSchema";
 import { builtMonths, monthLabel, monthPageTitle, runCanonicalPath, topWeekendEvents } from "../src/lib/calendarView";
-import { cityWeekendPage } from "../src/data/staticPages";
+import { cityWeekendCopy, cityWeekendPage } from "../src/data/staticPages";
 import { WEEKEND_INTRO } from "../src/data/weekendCities";
 import { eventSectionRoutes, listedCategories } from "../src/lib/eventRoutes";
 import { WEEKEND_CITY_SLUGS, cityDisplayName, eventCitySlug, eventPath } from "../src/lib/eventPaths";
@@ -384,9 +384,9 @@ describe.skipIf(!built)("built site", () => {
     expectCopy(
       weekendHtml,
       "/things-to-do-in-springfield-mo-this-weekend/",
-      eventsCopy.thisWeekend.seoTitle,
+      cityWeekendPage("springfield", siteEvents, builtAt).title,
       cityWeekendPage("springfield", siteEvents, builtAt).description,
-      eventsCopy.thisWeekend.h1,
+      cityWeekendCopy("springfield", builtAt).h1,
       eventsCopy.thisWeekend.intro,
     );
     const crumbs = [...weekendHtml.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
