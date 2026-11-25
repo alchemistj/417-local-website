@@ -190,14 +190,17 @@ export function calendarDaysAfter(event: EventData, now: Date): number {
   return today - eventDay;
 }
 
-/** The sitemap keeps an event until 30 days after its date. Lists use `isUpcoming`. */
+/** Legacy 30-day window. The sitemap now follows `isIndexableEvent`, so an ended event is already out. */
 export function isListedEvent(event: EventData, now: Date): boolean {
   return calendarDaysAfter(event, now) < 30;
 }
 
-/** The event page stays indexable until 90 days after its date. */
+/**
+ * An event page is indexable only while the event has not ended. A finished event is a thin page:
+ * it stays reachable (noindex, follow) and leaves the sitemap.
+ */
 export function isIndexableEvent(event: EventData, now: Date): boolean {
-  return calendarDaysAfter(event, now) < 90;
+  return isUpcoming(event, now);
 }
 
 /** The first category is the one used in breadcrumbs and the "more in this category" block. */

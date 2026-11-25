@@ -8,7 +8,7 @@ import {
   eventsOnDate,
   monthPageModel,
 } from "./calendarView";
-import { GENERAL_EVENT_CATEGORIES, GENERAL_EVENT_CATEGORY_LABELS, isGeneralEventCategory, type EventData, type GeneralEventCategory } from "./eventSchema";
+import { GENERAL_EVENT_CATEGORIES, GENERAL_EVENT_CATEGORY_LABELS, isGeneralEventCategory, isNoindexEventCategory, type EventData, type GeneralEventCategory } from "./eventSchema";
 import {
   chicagoYmd,
   eventChicagoDate,
@@ -76,7 +76,7 @@ export function generalCategoryRoutes(events: EventData[], now: Date = new Date(
         type: "static",
         title: meta.title,
         description: meta.description,
-        indexable: true,
+        indexable: !isNoindexEventCategory(slug),
       });
     }
   }
@@ -155,7 +155,8 @@ function dayRoutes(events: EventData[], recurring: RecurringItem[], now: Date): 
         type: "static",
         title: dayPageTitle(name, date),
         description: dayPageDescription(name, date, dayEvents, weekly),
-        indexable: true,
+        // A day page is a thin list. It stays reachable and links onward, but stays out of Google.
+        indexable: false,
         llms: false,
       });
     }
