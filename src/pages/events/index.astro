@@ -94,7 +94,44 @@ const signupFields = [
   </section>
 </EventsLayout>
 
-<style>
+<style is:global>
+  .events-hub-hero {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    min-height: 32rem;
+    display: flex;
+    align-items: center;
+    padding-block: 1.5rem 1.75rem;
+    color: var(--white);
+    text-align: center;
+    background: #16384c;
+  }
+  .events-hub-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center 42%;
+  }
+  .events-hub-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 20, 32, 0.55);
+  }
+  .events-hub-hero .container { position: relative; z-index: 1; }
+  .events-hub-hero h1,
+  .events-hub-hero .lead { color: var(--white); }
+  .events-hub-hero h1 { text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45); }
+  .events-hub-hero .lead { margin-top: 0.75rem; max-width: 40rem; margin-inline: auto; }
+  .events-hub-hero .crumbs a,
+  .events-hub-hero .crumbs [aria-current="page"] { color: var(--white); }
+  .events-hub-hero .crumbs [aria-current="page"] { text-decoration: none; }
+  .events-hub-hero .crumbs li + li::before { color: var(--white); }
+  .events-hub-hero .crumbs ol { max-width: 100%; }
   .events-signup {
     margin: 1rem auto 0;
     max-width: 34rem;
@@ -105,17 +142,17 @@ const signupFields = [
     text-align: left;
   }
   .events-signup-title { margin: 0 0 0.65rem; font-weight: 700; line-height: 1.35; }
-  .events-signup :global(.lead-form) {
+  .events-signup .lead-form {
     display: flex;
     flex-wrap: wrap;
     gap: 0.55rem;
     align-items: flex-end;
   }
-  .events-signup :global(.lead-form > div:has(input[type="email"])) { flex: 1 1 12rem; }
-  .events-signup :global(.lead-form label) { color: var(--ink); }
-  .events-signup :global(.lead-form .btn) { width: auto; }
-  .events-signup :global(.lead-form > p),
-  .events-signup :global(.lead-form > noscript) { flex: 1 1 100%; margin: 0; }
+  .events-signup .lead-form > div:has(input[type="email"]) { flex: 1 1 12rem; }
+  .events-signup .lead-form label { color: var(--ink); }
+  .events-signup .lead-form .btn { width: auto; }
+  .events-signup .lead-form > p,
+  .events-signup .lead-form > noscript { flex: 1 1 100%; margin: 0; }
   .sw-cities {
     display: grid;
     grid-template-columns: 1fr;
@@ -154,8 +191,8 @@ const signupFields = [
   .sw-secondary:hover { background: var(--tint); color: var(--blue-deep); border-color: var(--blue-deep); }
   .sw-h { text-wrap: balance; }
   @media (max-width: 559px) {
-    .events-signup :global(.lead-form > div:has(.btn)) { flex: 1 1 100%; }
-    .events-signup :global(.lead-form .btn) { width: 100%; }
+    .events-signup .lead-form > div:has(.btn) { flex: 1 1 100%; }
+    .events-signup .lead-form .btn { width: 100%; }
   }
   @media (min-width: 720px) {
     .sw-cities { grid-template-columns: 1.15fr 1fr 1fr; grid-template-rows: auto auto; gap: 0.75rem; }
