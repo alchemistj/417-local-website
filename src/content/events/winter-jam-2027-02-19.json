@@ -2,8 +2,8 @@
   "id": "4bc4719a-cd9f-4576-a116-ffcec146b8e1",
   "slug": "winter-jam",
   "title": "Winter Jam",
-  "seo_title": "Winter Jam 2027 at Great Southern Bank Arena, Springfield",
-  "description": "Winter Jam is a Christian music and worship night featuring Crowder, Anne Wilson, Andy Mineo ft. Magic & Bird, Strings & Heart, Terrian, Red and NewSong, with a message from speaker Zane Black and a Pre-Jam Party with Natural State, CJ Emulous and Mary-Clair. Entry is a $15 donation at the door with no advance tickets required; parking is $20, or $50 for premium, and Jam Nation members get early entry. It takes place Friday, February 19, 2027 at Great Southern Bank Arena, 901 S. National Ave., Springfield, MO, with doors at 6:00 PM and the show starting at 7:00 PM.",
+  "seo_title": "Winter Jam Christian Music Night in Springfield, MO",
+  "description": "Winter Jam is a night of Christian music and worship featuring Crowder, Anne Wilson, Andy Mineo ft. Magic & Bird, Strings & Heart, Terrian, Red, and NewSong, with a message from speaker Zane Black. A Pre-Jam Party with Natural State, CJ Emulous, and Mary-Clair comes first, and entry is a $15 donation at the door with no advance tickets needed; general admission doors open at 6:00 PM. It takes place Friday, February 19, 2027 at 7:00 PM at Great Southern Bank Arena, 901 S. National Ave., Springfield, MO.",
   "start": "2027-02-20T01:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -12,8 +12,8 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Missouri State University",
-    "website": null
+    "name": "Great Southern Bank Arena",
+    "website": "https://greatsouthernbankarena.com/"
   },
   "categories": [
     "networking",
@@ -26,7 +26,7 @@
   "source_urls": [
     "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4097"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-26T10:32:41.025Z",
   "public_slug": "winter-jam-2027-02-19",
   "city_slug": "springfield",
   "path": "/events/springfield/winter-jam-2027-02-19/",

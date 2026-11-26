@@ -3,11 +3,10 @@
   "slug": "holiday-makers-market-day-1",
   "title": "Holiday Makers Market | Day 1",
   "seo_title": "Holiday Makers Market Day 1 in Joplin, MO",
-  "description": "The Holiday Makers Market is a festive market at Spiva Center for the Arts where you can find unique gifts and support local makers. More programming and a list of participating artists are still to come, and anyone interested in a booth can contact Kearstin Mattox at 417-681-9801. It takes place December 4, 2026, Time TBD, at 215 W 7th St in Joplin, MO.",
-  "start": "2026-12-04",
-  "end": null,
+  "description": "The Holiday Makers Market is a festive market at Spiva where you can shop for unique gifts and support local makers. Day 1 starts Friday, December 4, 2026 at 5:00 PM and runs to 10:00 AM on Saturday, December 5, at 215 W 7th St in Joplin, MO. Spiva Center for the Arts is the organizer, and anyone interested in a booth can contact Kearstin Mattox at 417-681-9801.",
+  "start": "2026-12-04T23:00:00+00:00",
+  "end": "2026-12-05T16:00:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "212 W. 7th Street, Joplin, MO, United States, Missouri 64801",
   "address": "215 W 7th St, Joplin, MO 64801-2572, United States, Joplin, MO",
   "city": "Joplin",
@@ -26,7 +25,7 @@
   "source_urls": [
     "https://happeningnext.com/event/holiday-makers-market-day-1-eid3a0e23dohk"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-26T10:32:41.025Z",
   "public_slug": "holiday-makers-market-day-1-2026-12-04",
   "city_slug": "joplin",
   "path": "/events/joplin/holiday-makers-market-day-1-2026-12-04/",

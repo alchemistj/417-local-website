@@ -3,11 +3,10 @@
   "slug": "cookies-christmas-with-mrs-claus",
   "title": "Cookies & Christmas with Mrs. Claus",
   "seo_title": "Cookies & Christmas with Mrs. Claus in Lebanon, MO",
-  "description": "Cookies & Christmas with Mrs. Claus is a kids' holiday event at The Farme where children enjoy storytime with Mr. Willowby's Christmas Tree, decorate Christmas cookies with Mrs. Claus, and have special picture opportunities. It takes place on December 12, 2026, from 9:30 to 11:30 AM at 14402 Highway 64 in Lebanon, Missouri.",
-  "start": "2026-12-12",
-  "end": null,
+  "description": "Cookies & Christmas with Mrs. Claus is a holiday event for children at The Farme, with storytime featuring Mr. Willowby's Christmas Tree, Christmas cookie decorating with Mrs. Claus, and special picture opportunities. It takes place Saturday, December 12, 2026, from 9:30 to 11:30 AM at 14402 Highway 64 in Lebanon, Missouri.",
+  "start": "2026-12-12T15:30:00+00:00",
+  "end": "2026-12-12T17:30:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "14402 Highway 64, Lebanon, MO 65536-6642, United States",
   "address": "14402 Highway 64, Lebanon, MO 65536-6642, United States, Lebanon, MO",
   "city": "Lebanon",
@@ -27,7 +26,7 @@
   "source_urls": [
     "https://allevents.in/lebanon/cookies-and-christmas-with-mrs-claus/200031085238855"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-26T10:32:41.025Z",
   "public_slug": "cookies-christmas-with-mrs-claus-2026-12-12",
   "city_slug": "lebanon",
   "path": "/events/lebanon/cookies-christmas-with-mrs-claus-2026-12-12/",

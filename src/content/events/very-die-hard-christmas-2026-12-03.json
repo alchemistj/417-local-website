@@ -3,11 +3,10 @@
   "slug": "a-very-die-hard-christmas",
   "title": "A Very Die Hard Christmas",
   "seo_title": "A Very Die Hard Christmas Stage Parody in Joplin, MO",
-  "description": "A Very Die Hard Christmas is a stage parody of the 1988 action film from Dream Theatre Co., told in rhyme by a storybook Narrator with an onstage effects artist making it snow. The show is staged in the round with water pistols and Nerf blasters, runs about 1 hour 45 minutes including intermission, and carries a content advisory for foul language and drug use. It takes place December 3, 2026 at 124 S. Main in Joplin, MO, with doors at 7:00 PM and the performance at 7:30 PM.",
-  "start": "2026-12-03",
-  "end": null,
+  "description": "A Very Die Hard Christmas is a stage parody of the 1988 action film from Dream Theatre Co., told in rhyme by a storybook Narrator with an onstage effects artist making it snow. The show is staged in the round and replays the film's climb with water pistols and Nerf blasters; it runs about 1 hour 45 minutes including intermission and carries a content advisory for foul language and drug use. Performances run December 3 to 5, 2026, at 7:30 PM (doors at 7:00 PM), at 124 S. Main in Joplin, MO.",
+  "start": "2026-12-04T01:30:00+00:00",
+  "end": "2026-12-06T01:30:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "124 S. Main, Joplin, MO, United States, Missouri 64801",
   "address": "124 S Main St, Joplin, MO 64801-2306, United States, Joplin, MO",
   "city": "Joplin",
@@ -26,7 +25,7 @@
   "source_urls": [
     "https://happeningnext.com/event/a-very-die-hard-christmas-eid3a0ebo0o8l"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-26T10:32:41.025Z",
   "public_slug": "very-die-hard-christmas-2026-12-03",
   "city_slug": "joplin",
   "path": "/events/joplin/very-die-hard-christmas-2026-12-03/",

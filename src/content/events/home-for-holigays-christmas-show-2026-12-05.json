@@ -3,11 +3,10 @@
   "slug": "home-for-the-holigays-christmas-show",
   "title": "Home for the HoliGays Christmas Show",
   "seo_title": "Home for the HoliGays Christmas Show in Joplin, MO",
-  "description": "Home for the HoliGays Christmas Show is a holiday evening of live music, a silent auction, raffles and holiday treats. Doors open at 6pm for bidding and treats, and the show starts at 7pm; cover is $15, or $10 with a new toy donated to Toys for Tots. It takes place December 5, 2026 (Time TBD) at Blackthorn Pizza & Pub, 510 S Joplin Ave in Joplin, MO, with the musical lineup to be announced.",
-  "start": "2026-12-05",
+  "description": "Home for the HoliGays Christmas Show is a holiday evening at Blackthorn Pizza & Pub with live music, a silent auction, raffles, and holiday treats. Doors open at 6 PM for bidding, treats, and raffles, and the show starts at 7 PM on Saturday, December 5, 2026, at 510 S Joplin Ave in Joplin, Missouri. Cover is $15, or $10 if you bring a new toy to donate to Toys for Tots; the musical lineup will be released soon.",
+  "start": "2026-12-06T01:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "Blackthorn Pizza & Pub",
   "address": "510 S Joplin Ave,Joplin, Missouri, Joplin, MO",
   "city": "Joplin",
@@ -26,7 +25,7 @@
   "source_urls": [
     "https://happeningnext.com/event/home-for-the-holigays-christmas-show-eid3a0e6vxv1e"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-26T10:32:41.025Z",
   "public_slug": "home-for-holigays-christmas-show-2026-12-05",
   "city_slug": "joplin",
   "path": "/events/joplin/home-for-holigays-christmas-show-2026-12-05/",

@@ -3,11 +3,10 @@
   "slug": "gauxpro-christmas-kids-show",
   "title": "GauxPro Christmas Kids Show",
   "seo_title": "GauxPro Christmas Kids Show in Joplin, MO – Dec 5, 2026",
-  "description": "The GauxPro Christmas Kids Show is a holiday-themed event hosted by GauxPro Performance Horses, with buckles ordered for all arounds and sponsorship forms available. A new show bill and patterns are coming soon, and it is geared toward kids. It takes place on December 5, 2026 (Time TBD) at 5585 W Belle Center Road in Joplin, MO.",
-  "start": "2026-12-05",
-  "end": null,
+  "description": "The GauxPro Christmas Kids Show is a holiday-themed kids show hosted by GauxPro Performance Horses. Buckles for all arounds have been ordered, a new show bill and patterns are coming soon, and sponsorship forms are available. It runs Saturday, December 5, 2026, from 9:00 AM to 4:00 PM at 5585 W Belle Center Road in Joplin, MO.",
+  "start": "2026-12-05T15:00:00+00:00",
+  "end": "2026-12-05T22:00:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "5585 W Belle Center Road, Joplin, MO",
   "address": "5585 W Belle Center Rd, Joplin, MO 64801-8652, United States, Joplin, MO",
   "city": "Joplin",
@@ -26,7 +25,7 @@
   "source_urls": [
     "https://happeningnext.com/event/gauxpro-christmas-kids-show-eid3a0eaqcnu7"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-26T10:32:41.025Z",
   "public_slug": "gauxpro-christmas-kids-show-2026-12-05",
   "city_slug": "joplin",
   "path": "/events/joplin/gauxpro-christmas-kids-show-2026-12-05/",

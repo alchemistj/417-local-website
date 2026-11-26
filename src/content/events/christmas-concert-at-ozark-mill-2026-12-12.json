@@ -1,0 +1,35 @@
+{
+  "id": "9fa428b0-f55c-46b3-aa8a-8ac3a7cf72ab",
+  "slug": "christmas-concert-at-the-ozark-mill",
+  "title": "Christmas Concert at The Ozark Mill",
+  "seo_title": "Christmas Concert at The Ozark Mill, Dec 12, 2026",
+  "description": "This holiday concert in the Riverside Room features live music and dancing, with Caduceus, a nonprofit 17-piece band of doctors and other professionals, playing holiday favorites and songs from past decades. Tickets include admission, hors d'oeuvres, and a coffee, tea, and hot cocoa bar; the band plays with a short intermission, so you can sit or dance. It takes place Saturday, December 12, 2026, from 7:00 to 9:00 PM at The Ozark Mill in MO, with doors opening at 6:30 PM.",
+  "start": "2026-12-13T01:00:00+00:00",
+  "end": "2026-12-13T03:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "MO",
+  "address": "MO",
+  "city": "",
+  "state": "",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "live-music",
+    "arts-and-theater",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://finleyfarmsmo.com/events/a-night-of-christmas-music-in-the-riverside-room",
+  "image_url": null,
+  "source_urls": [
+    "https://finleyfarmsmo.com/events/a-night-of-christmas-music-in-the-riverside-room"
+  ],
+  "updated_at": "2026-11-26T10:32:41.025Z",
+  "public_slug": "christmas-concert-at-ozark-mill-2026-12-12",
+  "city_slug": "springfield",
+  "path": "/events/springfield/christmas-concert-at-ozark-mill-2026-12-12/",
+  "action_type": "details"
+}

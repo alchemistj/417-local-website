@@ -2,12 +2,11 @@
   "id": "64f49fc1-719d-428b-95b2-f3d9b34a63e6",
   "slug": "15th-annual-joplin-turkey-trot-5k-1-mile-fun-run-thanksgiving-11-26-2026",
   "title": "15th Annual Joplin Turkey Trot 5K & 1 Mile Fun Run -Thanksgiving - 11/26/2026",
-  "seo_title": "15th Annual Joplin Turkey Trot 5K & 1 Mile Fun Run",
-  "description": "This is the 15th annual Thanksgiving morning 5K run/walk and 1 mile fun run in downtown Joplin, presented by Freeman Health System. The certified 5K course starts and ends in front of the Schroeder Family Exploreum on roads closed to traffic, and 5K participants receive an event shirt, finisher medal, chip timing, music, and donuts and coffee. It takes place on November 26, 2026 in Joplin, MO, with the 1 Mile Fun Run at 7:30 AM and the 5K at 8:00 AM; be at the start line at least 10 minutes early.",
-  "start": "2026-11-26",
+  "seo_title": "Joplin Turkey Trot 5K & 1 Mile Fun Run, Nov 26, 2026",
+  "description": "The 15th Annual Joplin Turkey Trot is a Thanksgiving morning 5K run/walk and 1 mile fun run on a traffic-closed, certified course that starts and ends in front of the Schroeder Family Exploreum in downtown Joplin, presented by Freeman Health System. 5K participants receive an event shirt, finisher medal, chip timing, music, and donuts and coffee; registration is through runsignup.com, and runners should be at the start line at least 10 minutes before their race. It takes place Thursday, November 26, 2026, with the 1 mile fun run at 7:30 AM and the 5K at 8:00 AM, in Joplin, Missouri.",
+  "start": "2026-11-26T13:30:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "annual": true,
   "venue": "300 S. Main , Joplin, MO, United States, Missouri 64801",
   "address": "100 W 3rd St, Joplin, MO 64801, United States, Joplin, MO",
@@ -28,9 +27,9 @@
   "source_urls": [
     "https://happeningnext.com/event/15th-annual-joplin-turkey-trot-5k-andamp-1-mile-fun-run-thanksgiving-11-26-2026-eid3a0e23dnik"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-26T10:32:41.025Z",
   "public_slug": "15th-annual-joplin-turkey-trot-5k-1-mile-fun-run-2026-11-26",
   "city_slug": "joplin",
   "path": "/events/joplin/15th-annual-joplin-turkey-trot-5k-1-mile-fun-run-2026-11-26/",
-  "action_type": "details"
+  "action_type": "register"
 }

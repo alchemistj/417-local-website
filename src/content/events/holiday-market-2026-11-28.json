@@ -21,11 +21,12 @@
   "price": null,
   "is_free": null,
   "registration_url": "https://www.visitlebanonmo.org/events/2020/holiday-market",
-  "image_url": null,
+  "image_url": "https://dyn-image.allevents.in/generate-image?v=4&title=Holiday+Market&date=Sat%2C+28+Nov+at+10%3A00+am&bg=2",
   "source_urls": [
-    "https://www.visitlebanonmo.org/events/2020/holiday-market"
+    "https://www.visitlebanonmo.org/events/2020/holiday-market",
+    "https://allevents.in/lebanon/holiday-market/200031127556001"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-26T10:32:41.025Z",
   "public_slug": "holiday-market-2026-11-28",
   "city_slug": "lebanon",
   "path": "/events/lebanon/holiday-market-2026-11-28/",
