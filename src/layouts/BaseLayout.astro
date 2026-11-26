@@ -78,6 +78,7 @@ const graphs = [{ "@context": "https://schema.org", "@graph": [organization, web
     {/* GA4 (same property as the old WordPress site, so history carries over). Fires after load + 3 s
         (SOP Rule 16) and only on the production host, so previews don't send data. */}
     <script is:inline>
+      /* eslint-disable no-var, prefer-rest-params -- this is the gtag snippet; arguments is the API */
       window.addEventListener("load", function () {
         if (location.hostname !== "417local.com") return;
         setTimeout(function () {

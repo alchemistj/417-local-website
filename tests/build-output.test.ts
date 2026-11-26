@@ -345,11 +345,14 @@ describe.skipIf(!built)("built site", () => {
     }
     expect(hub).toContain('href="/events/springfield/"');
     expect(hub).toContain('href="/business-events/springfield-mo/"');
-    const picks = topWeekendEvents(siteEvents, "springfield", builtAt, 3);
-    if (picks.length > 0) {
-      expect(hub).toContain('class="sw-picks"');
-      for (const event of picks) expect(hub).toContain(`href="${eventPath(event)}"`);
+    const [featured] = topWeekendEvents(siteEvents, "springfield", builtAt, 1);
+    if (featured) {
+      expect(hub).toContain(featured.title);
+      expect(hub).toContain(`href="${eventPath(featured)}"`);
     }
+    expect(hub).not.toContain('class="sw-picks"');
+    expect(hub).toContain("Get all new experiences delivered right to your inbox");
+    expect(hub).toContain('data-form-key="contact"');
     expect(hub).toMatch(/-webkit-line-clamp:2/);
     expect(hub).not.toMatch(/\.sw-pick\{[^}]*-webkit-line-clamp:1/);
     expect(hub).not.toContain('href="/events/this-weekend/"');

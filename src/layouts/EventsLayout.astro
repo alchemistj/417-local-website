@@ -1,8 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "./BaseLayout.astro";
 import EventChips from "../components/EventChips.astro";
 import EventList from "../components/EventList.astro";
 import CtaBand from "../components/CtaBand.astro";
+import skylineArt from "../assets/decor/springfield-skyline.png";
 import type { StaticPageMeta } from "../data/staticPages";
 import type { EventChip } from "../lib/eventRoutes";
 import type { EventData } from "../lib/eventSchema";
@@ -28,6 +30,18 @@ interface Props {
    */
   hero?: { photo: InlineHero; actions: { label: string; href: string }[] };
   /**
+   * Region hub only. Replaces the blue band with this photo behind the heading.
+   * The image stays in this section. It is not passed up as the site hero slot,
+   * so other events pages do not get an empty photo frame.
+   */
+  photoHero?: InlineHero;
+  /**
+   * Weekend pages and city hubs. Reuses the things-to-do guide skyline
+   * (src/assets/decor/springfield-skyline.png) in place of the plain blue band.
+   * The region hub keeps photoHero and does not use this.
+   */
+  skyline?: boolean;
+  /**
    * Shared blue header. The event page passes false so the card stays the header;
    * the breadcrumb still shows, with the chips under it.
    */
@@ -50,6 +64,8 @@ const {
   chips,
   backLink,
   hero,
+  photoHero,
+  skyline = false,
   titleBand = true,
   ogImagePath,
   noindex = false,
@@ -78,7 +94,22 @@ const crumbLd = {
   noindex={noindex}
   jsonLd={[crumbLd, ...jsonLd]}
 >
-  <section class:list={[titleBand ? "band band-blue page-band" : "event-crumb-row"]}>
+  <section class:list={[photoHero ? "events-hub-hero" : titleBand ? "band band-blue page-band" : "event-crumb-row", skyline && titleBand && !photoHero && "landing-band skyline-band"]}>
+    {skyline && titleBand && !photoHero && (
+      <Image class="skyline" src={skylineArt} alt="" widths={[800, 1600, 2001]} sizes="100vw" format="webp" loading="eager" decoding="async" />
+    )}
+    {photoHero && (
+      <img
+        class="events-hub-photo"
+        src={photoHero.src}
+        alt=""
+        width={photoHero.width}
+        height={photoHero.height}
+        loading="eager"
+        decoding="sync"
+        fetchpriority="high"
+      />
+    )}
     <div class="container">
       <nav class="crumbs" aria-label="Breadcrumb">
         <ol>
@@ -93,10 +124,10 @@ const crumbLd = {
           ))}
         </ol>
       </nav>
-      {titleBand && <h1>{h1}</h1>}
-      {titleBand && backLink && <p class="back-link"><a href={backLink.href}>{backLink.label}</a></p>}
-      {titleBand && paragraphs.map((paragraph) => <p class="lead">{paragraph}</p>)}
-      {titleBand && hero && hero.actions.length > 0 && (
+      {(titleBand || photoHero) && <h1>{h1}</h1>}
+      {(titleBand || photoHero) && backLink && <p class="back-link"><a href={backLink.href}>{backLink.label}</a></p>}
+      {(titleBand || photoHero) && paragraphs.map((paragraph) => <p class="lead">{paragraph}</p>)}
+      {titleBand && !photoHero && hero && hero.actions.length > 0 && (
         <div class="btn-row">
           {hero.actions.map((action, index) => (
             <a class:list={["btn", index === 0 ? "btn-light" : "btn-outline"]} href={action.href}>{action.label}</a>
@@ -104,8 +135,8 @@ const crumbLd = {
         </div>
       )}
       {chips && <EventChips chips={chips} />}
-      {titleBand && <slot name="band" />}
-      {titleBand && subnav && (
+      {(titleBand || photoHero) && <slot name="band" />}
+      {titleBand && !photoHero && subnav && (
         <nav aria-label="Event types">
           <ul class="subnav">
             {subnav.map((link) => (

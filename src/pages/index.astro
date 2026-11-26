@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ArticleCard from "../components/ArticleCard.astro";
 import CtaBand from "../components/CtaBand.astro";
+import WeekendSpotlight from "../components/WeekendSpotlight.astro";
 import { HOME } from "../data/staticPages";
 import { HOME_COPY, HOME_EVENTS_TILE, HOME_SECTIONS } from "../data/homepage";
 import { inlineHeroAvif } from "../lib/heroPhoto";
@@ -46,6 +47,8 @@ const hero = await inlineHeroAvif({
     <h1>{HOME_COPY.h1}</h1>
   </section>
   <span class="atf-ready" hidden></span>
+
+  <WeekendSpotlight />
 
   <section class="intro">
     <div class="container">
