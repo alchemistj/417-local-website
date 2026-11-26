@@ -1,6 +1,7 @@
 import { getCollection } from "astro:content";
 import { dedupeSameDayEvents } from "./calendarView";
 import type { EventData } from "./eventSchema";
+import { filterJunk, withDisplayTitle } from "./eventQuality";
 import { isEventContentId, isUpcoming, sortByStart } from "./events";
 import { type RecurringItem } from "./recurring";
 
@@ -9,12 +10,22 @@ function asEvents(entries: { id: string; data: EventData }[]): EventData[] {
 }
 
 /**
- * Events from the export. Passed events stay in the export for their own pages; lists filter them out.
+ * Every event in the export with display titles, junk included. Only event pages and their .ics files
+ * use this, so a hidden event stays reachable (noindex). Lists use `getSiteEvents`.
+ */
+export async function getAllSiteEvents(): Promise<EventData[]> {
+  const current = await getCollection("events");
+  const events = asEvents(current.map((entry) => ({ id: entry.id, data: entry.data as EventData })));
+  return dedupeSameDayEvents(events.map(withDisplayTitle));
+}
+
+/**
+ * Events for lists, the sitemap and indexable pages: junk (store promos, resort guest activities,
+ * online-only events, exact duplicates) removed. Passed events stay for their own pages; lists filter them out.
  * Two files for the same title, place and day collapse to one event.
  */
 export async function getSiteEvents(): Promise<EventData[]> {
-  const current = await getCollection("events");
-  return dedupeSameDayEvents(asEvents(current.map((entry) => ({ id: entry.id, data: entry.data as EventData }))));
+  return filterJunk(await getAllSiteEvents());
 }
 
 /** Upcoming events at build time, soonest first. */

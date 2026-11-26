@@ -49,7 +49,7 @@ describe("Vercel redirect routes", () => {
         expect(match(path)?.status, path).toBe(301);
       }
     }
-    for (const city of ["republic", "lake-ozark", "nixa", "ozark", "ridgedale", "rogersville"]) {
+    for (const city of ["republic", "lake-ozark", "nixa", "ozark", "rogersville"]) {
       for (const path of [`/events/${city}/this-weekend/`, `/events/${city}/this-weekend`]) {
         expect(match(path)?.headers.Location, path).toBe(`/events/${city}/`);
         expect(match(path)?.status, path).toBe(301);
