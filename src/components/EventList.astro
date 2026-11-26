@@ -2,7 +2,7 @@
 import type { EventData } from "../lib/eventSchema";
 import { eventRun, groupEventsByDay, eventListTime, isKidsEvent, runRangeLabel, showsFreeTag } from "../lib/calendarView";
 import { cardPaletteForCategory, eventCardDate } from "../lib/eventCard";
-import { categoryLabel } from "../lib/eventPage";
+import { eventDisplayTags } from "../lib/eventDisplayTags";
 import { listRowPlace } from "../lib/eventPage";
 import { primaryCategory } from "../lib/events";
 import { eventCityName, eventPath } from "../lib/eventPaths";
@@ -18,8 +18,10 @@ interface Props {
   headings?: boolean;
   /** Every site event, used to find each row's run. Defaults to the loaded export. */
   allEvents?: EventData[];
+  /** B2B pages lead each row with a "Business" chip. */
+  showAudience?: boolean;
 }
-const { events, emptyMessage, idPrefix = "events", headings = true, allEvents } = Astro.props;
+const { events, emptyMessage, idPrefix = "events", headings = true, allEvents, showAudience = false } = Astro.props;
 const now = new Date();
 const pool = allEvents ?? (await getSiteEvents());
 const groups = groupEventsByDay(events);
@@ -58,7 +60,8 @@ function rowVenue(event: EventData): string {
           const run = eventRun(event, pool, now);
           const href = run ? eventPath(run.canonical) : eventPath(event);
           const range = runRangeLabel(run);
-          const tags = event.categories.slice(0, 2).map((slug) => categoryLabel(slug));
+          const tags = eventDisplayTags(event, { showAudience });
+          const free = tags.some((tag) => tag.label === "Free");
           const date = eventCardDate(event);
           const tile = cardPaletteForCategory(primaryCategory(event)).solid;
           return (
@@ -80,10 +83,10 @@ function rowVenue(event: EventData): string {
                     {place && <span class="event-place"> · {place}</span>}
                     {range && <span class="event-place"> · Runs {range}</span>}
                   </span>
-                  {(showsFreeTag(event) || tags.length > 0) && (
+                  {(free || tags.length > 0) && (
                     <span class="event-tags">
-                      {showsFreeTag(event) && <span class="event-free">Free</span>}
-                      {tags.map((tag) => <span class="event-tag">{tag}</span>)}
+                      {free && <span class="event-free">Free</span>}
+                      {tags.filter((tag) => tag.label !== "Free").map((tag) => <span class="event-tag">{tag.label}</span>)}
                     </span>
                   )}
                 </span>

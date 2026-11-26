@@ -37,6 +37,7 @@ const siteUrl = lead.url;
   <section aria-labelledby="group-events-heading">
     <h2 id="group-events-heading">Next events</h2>
     <EventList
+      showAudience
       events={group.events}
       idPrefix={group.slug}
       emptyMessage={hasSchedule

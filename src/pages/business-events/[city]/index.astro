@@ -36,6 +36,7 @@ const subnav = city.niches.map((page) => ({
   <section aria-labelledby="business-upcoming-heading">
     <h2 id="business-upcoming-heading">Upcoming business events</h2>
     <EventList
+      showAudience
       events={city.events}
       idPrefix="business"
       emptyMessage="No business events are listed right now. The groups below meet on a regular schedule."
