@@ -137,4 +137,6 @@ const jumpName: Record<string, string> = { Friday: "Fri", Saturday: "Sat", Sunda
   .weekend-jump a { border-color: var(--blue); color: var(--blue); }
   .weekend-jump a:hover { background: var(--blue); color: var(--white); }
   .weekend-empty { margin: 0.75rem 0 0; }
+  /* The guide skyline sits in the bottom padding. Extra room keeps the lead off the buildings. */
+  :global(.page-band.skyline-band) { padding-bottom: 14rem; }
 </style>

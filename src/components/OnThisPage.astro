@@ -18,7 +18,7 @@ const { headings } = Astro.props;
 
 <style>
   .on-page {
-    position: sticky; top: var(--header-h); z-index: 40;
+    position: sticky; top: 0; z-index: 40;
     background: #fff; border-bottom: 1px solid var(--line);
   }
   .on-page-row { display: flex; align-items: center; gap: 0.75rem; min-height: 52px; }
@@ -33,5 +33,10 @@ const { headings } = Astro.props;
     font-weight: 700; text-decoration: none; white-space: nowrap;
   }
   .on-page a:hover { background: var(--blue); color: #fff; }
+  @media (max-width: 719px) {
+    .on-page-row { flex-wrap: wrap; align-items: flex-start; padding-block: 0.35rem; }
+    .on-page ul { flex-wrap: wrap; }
+    .on-page a { white-space: normal; }
+  }
   :global(.landing .prose h2) { scroll-margin-top: calc(var(--header-h) + 4.25rem); }
 </style>

@@ -109,4 +109,7 @@ const showFilters = dontMiss.length + comingUp.length + upcoming.length > 0;
 
 <style>
   :global(.page-band .btn) { white-space: nowrap; }
+  /* Clear the skyline, and let the category chips scroll instead of being clipped. */
+  :global(.page-band.skyline-band) { padding-bottom: 14rem; }
+  :global(.skyline-band .container) { min-width: 0; width: 100%; }
 </style>
