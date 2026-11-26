@@ -1,7 +1,7 @@
 import bestOfCopy from "../../docs/best-of-hub-copy.json";
 import eventsCopy from "../../docs/events-pages-copy.json";
 import foodGuideCopy from "../../docs/food-and-drink-guide-copy.json";
-import { weekendMetaDescription } from "../lib/calendarView";
+import { weekendMetaDescription, weekendTitleRange } from "../lib/calendarView";
 import { GENERAL_EVENT_CATEGORY_LABELS, type EventData, type GeneralEventCategory } from "../lib/eventSchema";
 import { cityDisplayName, cityWeekendPath } from "../lib/eventPaths";
 import { WEEKEND_INTRO } from "./weekendCities";
@@ -83,7 +83,7 @@ export function cityWeekendPage(citySlug: string, events: EventData[] = [], now 
   const name = cityDisplayName(citySlug);
   return {
     path: cityWeekendPath(citySlug),
-    title: `Things to Do in ${name}, MO This Weekend | 417 Local`,
+    title: `Things to Do in ${name}, MO This Weekend (${weekendTitleRange(now)})`,
     description: weekendMetaDescription(citySlug, events, now),
     label: `This weekend in ${name}`,
   };
@@ -105,11 +105,11 @@ export function cityHubCopy(citySlug: string): CityPageCopy & { upcomingHeading:
   };
 }
 
-export function cityWeekendCopy(citySlug: string): CityPageCopy {
+export function cityWeekendCopy(citySlug: string, now = new Date()): CityPageCopy {
   const name = cityDisplayName(citySlug);
   const intro = WEEKEND_INTRO[citySlug] ?? `Things to do in ${name}, MO this weekend, updated weekly.`;
   return {
-    h1: `Things to Do in ${name}, MO This Weekend`,
+    h1: `Things to Do in ${name}, MO This Weekend (${weekendTitleRange(now)})`,
     intro: [intro],
     emptyState: `No weekend events are listed in ${name} yet. Check back soon, since the guide is updated weekly.`,
   };
@@ -134,6 +134,21 @@ export function generalCategoryCopy(slug: GeneralEventCategory, citySlug = "spri
   };
 }
 
+/** The business networking page. It also holds the founders and small-business section. */
+export const BUSINESS_NETWORKING: StaticPageMeta = {
+  path: "/events/springfield/business-networking/",
+  title: "Business Networking Events in Springfield, MO (This Week and Every Month)",
+  description:
+    "Upcoming business networking events in Springfield, MO, plus groups that meet every week or month. Founders and small-business owners welcome.",
+  label: "Networking events",
+};
+
+/** Old addresses that now redirect to the business networking page. */
+export const BUSINESS_NETWORKING_OLD_PATHS = [
+  "/events/springfield-business-events/networking/",
+  "/events/springfield-business-events/entrepreneurship/",
+] as const;
+
 export const BUSINESS_EVENTS: StaticPageMeta[] = [
   {
     path: "/events/springfield-business-events/",
@@ -141,23 +156,14 @@ export const BUSINESS_EVENTS: StaticPageMeta[] = [
     description: "Upcoming business events in Springfield, MO: networking, entrepreneurship and professional development.",
     label: "Business events",
   },
-  {
-    path: "/events/springfield-business-events/networking/",
-    title: "Springfield, MO Networking Events | 417 Local",
-    description: "Upcoming networking events in Springfield, MO for professionals, owners and job seekers.",
-    label: "Networking events",
-  },
-  {
-    path: "/events/springfield-business-events/entrepreneurship/",
-    title: "Springfield, MO Entrepreneurship Events | 417 Local",
-    description: "Upcoming entrepreneurship events in Springfield, MO for founders, startups and side hustles.",
-    label: "Entrepreneurship events",
-  },
+  BUSINESS_NETWORKING,
   {
     path: "/events/springfield-business-events/professional-development/",
     title: "Springfield, MO Professional Development Events | 417 Local",
     description: "Upcoming workshops, classes and training events in Springfield, MO to build your career and skills.",
     label: "Professional development events",
+    // Searchers want PMP classes and associations here, not events. Kept for visitors, out of Google.
+    indexable: false,
   },
 ];
 

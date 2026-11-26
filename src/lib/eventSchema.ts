@@ -5,6 +5,23 @@ import { z } from "astro/zod";
  * everything else is optional so a newer or older export still builds.
  * TODO: confirm field shapes against event-radar's schema.ts once the first export lands.
  */
+/**
+ * City category pages kept out of Google until they hold enough good events. They stay reachable
+ * (noindex, follow) and out of the sitemap. Live music, comedy, festivals and the rest still index.
+ */
+export const NOINDEX_EVENT_CATEGORIES = [
+  "film",
+  "sports",
+  "outdoors",
+  "food-and-drink",
+  "community",
+  "classes-and-workshops",
+] as const;
+
+export function isNoindexEventCategory(slug: string): boolean {
+  return (NOINDEX_EVENT_CATEGORIES as readonly string[]).includes(slug);
+}
+
 export const BUSINESS_EVENT_CATEGORIES = ["networking", "entrepreneurship", "professional-development"] as const;
 
 /**

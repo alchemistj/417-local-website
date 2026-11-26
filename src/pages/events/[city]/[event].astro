@@ -6,11 +6,11 @@ import EventCard from "../../../components/EventCard.astro";
 import AddToCalendar from "../../../components/AddToCalendar.astro";
 import EventFilters from "../../../components/EventFilters.astro";
 import EventList from "../../../components/EventList.astro";
-import { cityHubPage, generalCategoryCopy, generalCategoryPage } from "../../../data/staticPages";
+import { BUSINESS_NETWORKING, cityHubPage, generalCategoryCopy, generalCategoryPage } from "../../../data/staticPages";
 import EventsLayout from "../../../layouts/EventsLayout.astro";
 import { eventAction } from "../../../lib/eventAction";
 import { googleCalendarUrl } from "../../../lib/eventCalendar";
-import { isGeneralEventCategory, type EventData, type GeneralEventCategory } from "../../../lib/eventSchema";
+import { isGeneralEventCategory, isNoindexEventCategory, type EventData, type GeneralEventCategory } from "../../../lib/eventSchema";
 import { citiesWithEvents, eventChips, listedCategories } from "../../../lib/eventRoutes";
 import {
   assertNoReservedEventSlug,
@@ -166,7 +166,7 @@ const categoryCrumb = (() => {
     return { name: categoryLabel(categorySlug), path: `/events/${city}/${categorySlug}/` };
   }
   if (isBusinessCategory(categorySlug)) {
-    return { name: categoryLabel(categorySlug), path: `/events/springfield-business-events/${categorySlug}/` };
+    return { name: categoryLabel(categorySlug), path: businessCategoryPath(categorySlug) };
   }
   return null;
 })();
@@ -179,6 +179,12 @@ const crumbs = event
       { name: event.title, path: pagePath },
     ]
   : [];
+/** Networking and entrepreneurship share one page. Professional development keeps its own. */
+function businessCategoryPath(slug: string): string {
+  return slug === "networking" || slug === "entrepreneurship"
+    ? BUSINESS_NETWORKING.path
+    : `/events/springfield-business-events/${slug}/`;
+}
 const outbound = (href: string) => href.startsWith("http");
 ---
 
@@ -201,6 +207,7 @@ const outbound = (href: string) => href.startsWith("http");
     h1={categoryCopy.h1}
     intro={categoryCopy.intro}
     chips={eventChips(city, allEvents, now, categoryMeta.path)}
+    noindex={isNoindexEventCategory(category)}
     backLink={{ href: hub.path, label: `← All ${cityName} events` }}
     crumbs={[
       { name: "Home", path: "/" },

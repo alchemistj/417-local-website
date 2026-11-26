@@ -39,7 +39,7 @@ describe("upcoming-only lists", () => {
 
     const routes = eventSectionRoutes([passed, upcoming], sunday);
     const paths = routes.map((route) => route.path);
-    expect(routes.find((route) => route.path === eventPath(passed))).toMatchObject({ indexable: true, sitemap: true, llms: false });
+    expect(routes.find((route) => route.path === eventPath(passed))).toMatchObject({ indexable: false, llms: false });
     expect(paths).toContain(eventPath(upcoming));
     expect(paths).toContain("/events/springfield/live-music/");
     expect(paths).toContain("/events/springfield/2026-11-20/");

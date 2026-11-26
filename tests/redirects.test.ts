@@ -61,7 +61,13 @@ describe("redirect data", () => {
     );
     expect(sources).not.toContain("/events/");
     expect(sources).not.toContain("/events");
-    expect(sources.filter((s) => s.startsWith("/events/springfield-business-events"))).toEqual([]);
+    // Only the two merged business pages redirect. The business hub and professional development stay live.
+    expect(sources.filter((s) => s.startsWith("/events/springfield-business-events")).sort()).toEqual([
+      "/events/springfield-business-events/entrepreneurship",
+      "/events/springfield-business-events/entrepreneurship/",
+      "/events/springfield-business-events/networking",
+      "/events/springfield-business-events/networking/",
+    ]);
   });
 
   it("never matches a live route", () => {

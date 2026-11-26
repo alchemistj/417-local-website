@@ -498,6 +498,26 @@
       "statusCode": 301
     },
     {
+      "source": "/events/springfield-business-events/networking",
+      "destination": "/events/springfield/business-networking/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/springfield-business-events/networking/",
+      "destination": "/events/springfield/business-networking/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/springfield-business-events/entrepreneurship",
+      "destination": "/events/springfield/business-networking/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/springfield-business-events/entrepreneurship/",
+      "destination": "/events/springfield/business-networking/",
+      "statusCode": 301
+    },
+    {
       "source": "/seo",
       "destination": "/small-business-success/",
       "statusCode": 307

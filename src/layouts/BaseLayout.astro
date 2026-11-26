@@ -62,7 +62,7 @@ const graphs = [{ "@context": "https://schema.org", "@graph": [organization, web
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    {robots ? <meta name="robots" content={robots} /> : noindex && <meta name="robots" content="noindex,follow" />}
+    {robots ? <meta name="robots" content={robots} /> : noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="icon" type="image/png" sizes="48x48" href={icon32.src} />
     <link rel="apple-touch-icon" href={icon180.src} />
     <meta property="og:site_name" content={SITE_NAME} />

@@ -63,6 +63,7 @@ export const HOME_EVENTS_TILE = {
   heading: "Events",
   body: "Business events, community happenings and more around Springfield, MO.",
   links: [
+    { label: "Things to do in Springfield this weekend", href: "/things-to-do-in-springfield-mo-this-weekend/" },
     { label: "All events", href: "/events/" },
     { label: "Springfield business events", href: "/events/springfield-business-events/" },
     { label: "Submit your event", href: "/submit-your-event/" },

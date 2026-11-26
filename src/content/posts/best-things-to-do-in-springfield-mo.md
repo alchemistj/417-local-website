@@ -16,6 +16,7 @@ Pick a few and plan your next adventure.
 
 Looking for something more specific? These guides go deeper:
 
+- [Things to do in Springfield this weekend](/things-to-do-in-springfield-mo-this-weekend/)
 - [Top Things to Do With Kids in Springfield](/best-kids-activities-in-springfield-mo/)
 - [Top Walking and Hiking Trails in the Springfield Area](/best-hiking-and-walking-trails-in-springfield/)
 - [Best Parks in Springfield MO](/best-parks-in-springfield-mo/)

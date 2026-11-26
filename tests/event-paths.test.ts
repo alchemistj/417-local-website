@@ -63,6 +63,7 @@ describe("reserved event slugs", () => {
       "weekly",
       "monthly",
       "springfield-business-events",
+      "business-networking",
       "live-music",
       "comedy",
       "classes-and-workshops",
@@ -85,24 +86,25 @@ describe("reserved event slugs", () => {
 });
 
 describe("past event window", () => {
-  it("lists an event on the sitemap for 30 days and indexes it for 90", () => {
+  it("indexes an event page only until the event has ended", () => {
     const on = (start: string) => ev({ id: start, title: start, start });
     expect(calendarDaysAfter(on("2026-11-04T18:00:00-06:00"), wednesday)).toBe(0);
     expect(calendarDaysAfter(on("2026-10-06T20:00:00-05:00"), wednesday)).toBe(29);
     expect(calendarDaysAfter(on("2026-10-05T20:00:00-05:00"), wednesday)).toBe(30);
     expect(isListedEvent(on("2026-10-06T20:00:00-05:00"), wednesday)).toBe(true);
     expect(isListedEvent(on("2026-10-05T20:00:00-05:00"), wednesday)).toBe(false);
-    expect(isIndexableEvent(on("2026-08-07T12:00:00-05:00"), wednesday)).toBe(true);
-    expect(isIndexableEvent(on("2026-08-06T12:00:00-05:00"), wednesday)).toBe(false);
+    expect(isIndexableEvent(on("2026-11-04T23:00:00-06:00"), wednesday)).toBe(true);
+    expect(isIndexableEvent(on("2026-11-04T08:00:00-06:00"), wednesday)).toBe(false);
+    expect(isIndexableEvent(on("2026-10-06T20:00:00-05:00"), wednesday)).toBe(false);
   });
 
-  it("drops a 30-day-old event from the sitemap and a 90-day-old event from the index", () => {
+  it("drops every ended event from the index and the sitemap", () => {
     const recent = ev({ id: "recent", title: "Recent Show", start: "2026-10-06T20:00:00-05:00", categories: ["live-music"] });
     const stale = ev({ id: "stale", title: "Stale Show", start: "2026-08-06T12:00:00-05:00", categories: ["sports"] });
     const upcoming = ev({ id: "soon", title: "Soon Show", start: "2026-11-20T20:00:00-06:00", categories: ["family"] });
     const routes = eventSectionRoutes([recent, stale, upcoming], wednesday);
     const byId = (id: string) => routes.find((route) => route.type === "event" && route.path.includes(id));
-    expect(byId("recent")).toMatchObject({ indexable: true, sitemap: true, llms: false });
+    expect(byId("recent")).toMatchObject({ indexable: false, llms: false });
     expect(byId("stale")).toMatchObject({ indexable: false, sitemap: false, llms: false });
     expect(byId("soon")).toMatchObject({ indexable: true, sitemap: true, llms: true });
     expect(routes.map((route) => route.path)).not.toContain("/events/springfield/live-music/");
