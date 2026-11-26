@@ -65,7 +65,7 @@ describe("Vercel redirect routes", () => {
       "/things-to-do-in-bolivar-mo-this-weekend/",
       "/things-to-do-in-lebanon-mo-this-weekend/",
       "/events/springfield/live-music/",
-      "/events/springfield-business-events/",
+      "/business-events/springfield-mo/",
       "/blog/",
       "/best-parks-in-springfield-mo/",
       "/food-and-drink-springfield-mo/",

@@ -65,7 +65,7 @@ export const HOME_EVENTS_TILE = {
   links: [
     { label: "Things to do in Springfield this weekend", href: "/things-to-do-in-springfield-mo-this-weekend/" },
     { label: "All events", href: "/events/" },
-    { label: "Springfield business events", href: "/events/springfield-business-events/" },
+    { label: "Springfield business events", href: "/business-events/springfield-mo/" },
     { label: "Submit your event", href: "/submit-your-event/" },
   ],
 };

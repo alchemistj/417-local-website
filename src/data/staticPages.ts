@@ -3,6 +3,7 @@ import eventsCopy from "../../docs/events-pages-copy.json";
 import foodGuideCopy from "../../docs/food-and-drink-guide-copy.json";
 import { weekendMetaDescription, weekendTitleRange } from "../lib/calendarView";
 import { GENERAL_EVENT_CATEGORY_LABELS, type EventData, type GeneralEventCategory } from "../lib/eventSchema";
+import { businessHubPath } from "../lib/businessPaths";
 import { cityDisplayName, cityWeekendPath } from "../lib/eventPaths";
 import { WEEKEND_INTRO } from "./weekendCities";
 
@@ -134,38 +135,17 @@ export function generalCategoryCopy(slug: GeneralEventCategory, citySlug = "spri
   };
 }
 
-/** The business networking page. It also holds the founders and small-business section. */
-export const BUSINESS_NETWORKING: StaticPageMeta = {
-  path: "/events/springfield/business-networking/",
-  title: "Business Networking Events in Springfield, MO (This Week and Every Month)",
-  description:
-    "Upcoming business networking events in Springfield, MO, plus groups that meet every week or month. Founders and small-business owners welcome.",
-  label: "Networking events",
+/**
+ * The Springfield business hub. Every business page (hub, niche and group pages for any city) is built
+ * from the event taxonomy in `lib/businessEvents.ts`; this is only the link the events hub and the
+ * homepage point at. The old /events/springfield-business-events/ pages 301 here.
+ */
+export const BUSINESS_EVENTS_HUB: StaticPageMeta = {
+  path: businessHubPath("springfield", "MO"),
+  title: "Business Events in Springfield, MO | 417 Local",
+  description: "Upcoming business events in Springfield, MO: networking, chamber, tech, real estate, training and more, plus the groups behind them.",
+  label: "Business events",
 };
-
-/** Old addresses that now redirect to the business networking page. */
-export const BUSINESS_NETWORKING_OLD_PATHS = [
-  "/events/springfield-business-events/networking/",
-  "/events/springfield-business-events/entrepreneurship/",
-] as const;
-
-export const BUSINESS_EVENTS: StaticPageMeta[] = [
-  {
-    path: "/events/springfield-business-events/",
-    title: "Springfield, MO Business Events | 417 Local",
-    description: "Upcoming business events in Springfield, MO: networking, entrepreneurship and professional development.",
-    label: "Business events",
-  },
-  BUSINESS_NETWORKING,
-  {
-    path: "/events/springfield-business-events/professional-development/",
-    title: "Springfield, MO Professional Development Events | 417 Local",
-    description: "Upcoming workshops, classes and training events in Springfield, MO to build your career and skills.",
-    label: "Professional development events",
-    // Searchers want PMP classes and associations here, not events. Kept for visitors, out of Google.
-    indexable: false,
-  },
-];
 
 export const CONTACT: StaticPageMeta = {
   path: "/contact-us/",
@@ -227,7 +207,6 @@ export const STATIC_PAGES: StaticPageMeta[] = [
   LOCAL_BUSINESS_GUIDE,
   HOW_WE_PICK,
   EVENTS_HUB,
-  ...BUSINESS_EVENTS,
   CONTACT,
   PRIVACY,
   TERMS,

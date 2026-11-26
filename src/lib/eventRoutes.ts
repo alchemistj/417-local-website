@@ -1,5 +1,8 @@
 import { cityHubPage, cityWeekendPage, generalCategoryPage } from "../data/staticPages";
+import { businessEventRoutes } from "./businessEvents";
+import { businessHubPath } from "./businessPaths";
 import { fridayTextPage } from "./fridayText";
+import { generalCategoriesOf, isB2b } from "./eventTaxonomy";
 import {
   builtMonths,
   dayPageDates,
@@ -41,13 +44,21 @@ function eventsInCity(events: EventData[], citySlug: string): EventData[] {
  */
 export function listedCategories(events: EventData[], now: Date): GeneralEventCategory[] {
   const upcoming = events.filter((event) => isUpcoming(event, now));
-  return GENERAL_EVENT_CATEGORIES.filter((slug) => upcoming.some((event) => event.categories.includes(slug)));
+  return GENERAL_EVENT_CATEGORIES.filter((slug) => upcoming.some((event) => generalCategoriesOf(event).includes(slug)));
 }
 
 export interface EventChip {
   label: string;
   href: string;
   current: boolean;
+}
+
+/** The city's own business hub when it has upcoming B2B events, otherwise the Springfield hub. */
+function businessChipHref(cityEvents: EventData[], now: Date): string {
+  const first = cityEvents.find((event) => isUpcoming(event, now) && isB2b(event));
+  if (!first) return businessHubPath("springfield", "MO");
+  const state = typeof first.state === "string" && first.state.trim().length === 2 ? first.state.trim() : "MO";
+  return businessHubPath(eventCitySlug(first), state);
 }
 
 /** All events, then each category with an upcoming event, then business events. */
@@ -60,7 +71,7 @@ export function eventChips(city: string, events: EventData[], now: Date, current
       href: `/events/${city}/${slug}/`,
       current: false,
     })),
-    { label: "Business events", href: "/events/springfield-business-events/", current: false },
+    { label: "Business events", href: businessChipHref(cityEvents, now), current: false },
   ];
   return chips.map((chip) => ({ ...chip, current: chip.href === currentPath }));
 }
@@ -197,6 +208,7 @@ export function eventSectionRoutes(events: EventData[], now: Date = new Date(), 
   return [
     ...cityHubRoutes(events),
     ...cityWeekendRoutes(events, now),
+    ...businessEventRoutes(events, now),
     fridayTextRoute(events, recurring, now),
     ...generalCategoryRoutes(events, now),
     ...calendarRoutes(events, recurring, now),

@@ -343,7 +343,7 @@ describe.skipIf(!built)("built site", () => {
       expect(hub, slug).toContain(`${cityDisplayName(slug)} events`);
     }
     expect(hub).toContain('href="/events/springfield/"');
-    expect(hub).toContain('href="/events/springfield-business-events/"');
+    expect(hub).toContain('href="/business-events/springfield-mo/"');
     const picks = topWeekendEvents(siteEvents, "springfield", builtAt, 3);
     if (picks.length > 0) {
       expect(hub).toContain('class="sw-picks"');

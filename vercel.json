@@ -498,23 +498,53 @@
       "statusCode": 301
     },
     {
+      "source": "/events/springfield-business-events",
+      "destination": "/business-events/springfield-mo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/springfield-business-events/",
+      "destination": "/business-events/springfield-mo/",
+      "statusCode": 301
+    },
+    {
       "source": "/events/springfield-business-events/networking",
-      "destination": "/events/springfield/business-networking/",
+      "destination": "/business-events/springfield-mo/networking/",
       "statusCode": 301
     },
     {
       "source": "/events/springfield-business-events/networking/",
-      "destination": "/events/springfield/business-networking/",
+      "destination": "/business-events/springfield-mo/networking/",
       "statusCode": 301
     },
     {
       "source": "/events/springfield-business-events/entrepreneurship",
-      "destination": "/events/springfield/business-networking/",
+      "destination": "/business-events/springfield-mo/small-business-and-entrepreneurs/",
       "statusCode": 301
     },
     {
       "source": "/events/springfield-business-events/entrepreneurship/",
-      "destination": "/events/springfield/business-networking/",
+      "destination": "/business-events/springfield-mo/small-business-and-entrepreneurs/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/springfield-business-events/professional-development",
+      "destination": "/business-events/springfield-mo/certifications-and-training/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/springfield-business-events/professional-development/",
+      "destination": "/business-events/springfield-mo/certifications-and-training/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/springfield/business-networking",
+      "destination": "/business-events/springfield-mo/networking/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/springfield/business-networking/",
+      "destination": "/business-events/springfield-mo/networking/",
       "statusCode": 301
     },
     {

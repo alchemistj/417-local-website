@@ -204,7 +204,7 @@ describe("event chips", () => {
       "/events/springfield/live-music/",
       "/events/springfield/family/",
       "/events/springfield/kids/",
-      "/events/springfield-business-events/",
+      "/business-events/springfield-mo/",
     ]);
     expect(music.filter((chip) => chip.current).map((chip) => chip.label)).toEqual(["Live Music"]);
 

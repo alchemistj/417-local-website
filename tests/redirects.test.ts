@@ -61,12 +61,16 @@ describe("redirect data", () => {
     );
     expect(sources).not.toContain("/events/");
     expect(sources).not.toContain("/events");
-    // Only the two merged business pages redirect. The business hub and professional development stay live.
+    // Every old business page 301s into /business-events/springfield-mo/.
     expect(sources.filter((s) => s.startsWith("/events/springfield-business-events")).sort()).toEqual([
+      "/events/springfield-business-events",
+      "/events/springfield-business-events/",
       "/events/springfield-business-events/entrepreneurship",
       "/events/springfield-business-events/entrepreneurship/",
       "/events/springfield-business-events/networking",
       "/events/springfield-business-events/networking/",
+      "/events/springfield-business-events/professional-development",
+      "/events/springfield-business-events/professional-development/",
     ]);
   });
 

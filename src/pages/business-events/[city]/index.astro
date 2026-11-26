@@ -1,0 +1,66 @@
+---
+import type { GetStaticPaths } from "astro";
+import EventList from "../../../components/EventList.astro";
+import EventsLayout from "../../../layouts/EventsLayout.astro";
+import { businessGroupPath, businessNichePath } from "../../../lib/businessPaths";
+import { NICHE_COPY, businessCities, businessCity, hubH1, hubMeta } from "../../../lib/businessEvents";
+import { getSiteEvents } from "../../../lib/loadEvents";
+
+export const getStaticPaths = (async () => {
+  const cities = businessCities(await getSiteEvents(), new Date());
+  return cities.map((city) => ({ params: { city: city.key } }));
+}) satisfies GetStaticPaths;
+
+const now = new Date();
+const city = businessCity(businessCities(await getSiteEvents(), now), Astro.params.city ?? "");
+if (!city) throw new Error(`No business events for ${Astro.params.city}`);
+const meta = hubMeta(city);
+const subnav = city.niches.map((page) => ({
+  label: NICHE_COPY[page.niche].label,
+  href: businessNichePath(city.citySlug, city.state, page.niche),
+}));
+---
+
+<EventsLayout
+  meta={meta}
+  h1={hubH1(city)}
+  intro={`Networking, chamber, tech, real estate, training and other events for people who go for work or for their business in ${city.cityName}, ${city.state}. Browse by topic or by group.`}
+  subnav={subnav}
+  noindex={meta.indexable === false}
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Events", path: "/events/" },
+    { name: "Business Events", path: meta.path },
+  ]}
+>
+  <section aria-labelledby="business-upcoming-heading">
+    <h2 id="business-upcoming-heading">Upcoming business events</h2>
+    <EventList
+      events={city.events}
+      idPrefix="business"
+      emptyMessage="No business events are listed right now. The groups below meet on a regular schedule."
+    />
+  </section>
+  <section aria-labelledby="business-topics-heading">
+    <h2 id="business-topics-heading">Browse by topic</h2>
+    <ul>
+      {city.niches.map((page) => (
+        <li>
+          <a href={businessNichePath(city.citySlug, city.state, page.niche)}>{NICHE_COPY[page.niche].label}</a>
+          {page.events.length > 0 && ` (${page.events.length} upcoming)`}
+        </li>
+      ))}
+    </ul>
+  </section>
+  {city.groups.length > 0 && (
+    <section aria-labelledby="business-groups-heading">
+      <h2 id="business-groups-heading">Groups that meet every week or month</h2>
+      <ul>
+        {city.groups.map((group) => (
+          <li><a href={businessGroupPath(city.citySlug, city.state, group.slug)}>{group.name}</a></li>
+        ))}
+      </ul>
+    </section>
+  )}
+  <p><a href="/events/">All events in the 417</a></p>
+</EventsLayout>
