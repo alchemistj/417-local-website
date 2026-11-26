@@ -69,7 +69,8 @@ export function buildRedirects(): Redirect[] {
   for (const city of WEEKEND_CITY_SLUGS) {
     movedEventPages[`events/${city}/this-weekend`] = cityWeekendPath(city);
   }
-  for (const city of ["republic", "lake-ozark", "nixa", "ozark", "ridgedale", "rogersville"]) {
+  // Ridgedale is Big Cedar Lodge resort programming only, which the junk filter hides, so it has no hub to redirect to.
+  for (const city of ["republic", "lake-ozark", "nixa", "ozark", "rogersville"]) {
     movedEventPages[`events/${city}/this-weekend`] = `/events/${city}/`;
   }
   for (const slug of ["live-music", "arts-and-theater", "festivals", "family", "sports", "outdoors", "community", "holiday"]) {

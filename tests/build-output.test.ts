@@ -17,7 +17,7 @@ import { uniqueUpcomingEvents } from "../src/lib/calendarView";
 import { readRecurringDir } from "../src/lib/recurring";
 import { listsIncludedInBuild } from "../src/lib/lists";
 import { buildRoutes } from "../src/lib/routes";
-import { readSiteEvents } from "./helpers/events";
+import { readAllSiteEvents, readSiteEvents } from "./helpers/events";
 import batch1 from "../docs/build/batch-1.json";
 import batch2 from "../docs/build/batch-2.json";
 import batch3 from "../docs/build/batch-3.json";
@@ -45,7 +45,12 @@ const allPages: Page[] = built
   : [];
 // The 404 page is served by Vercel for unknown paths; it is not a route, so it is checked on its own below.
 const notFound = allPages.find((p) => p.route === "/404.html");
-const pages: Page[] = allPages.filter((p) => p.route !== "/404.html");
+// Junk events (store promos, resort guest activities, online-only) keep a noindex page but are in no list or sitemap.
+const hiddenRoutes = new Set(
+  built ? readAllSiteEvents().filter((event) => !siteEvents.some((kept) => kept.id === event.id)).map((event) => eventPath(event)) : [],
+);
+const hiddenPages: Page[] = allPages.filter((p) => hiddenRoutes.has(p.route));
+const pages: Page[] = allPages.filter((p) => p.route !== "/404.html" && !hiddenRoutes.has(p.route));
 const registry = built
   ? buildRoutes(postSummaries(), listsIncludedInBuild(readListSummaries()), eventSectionRoutes(siteEvents, builtAt, readRecurringDir(`${ROOT}src/content/recurring`)))
   : [];
@@ -62,6 +67,11 @@ describe.skipIf(!built)("built site", () => {
   it("builds exactly the pages in the route registry", () => {
     const built = pages.map((p) => p.route).sort();
     expect(built).toEqual([...routeSet].sort());
+  });
+
+  it("keeps hidden junk events reachable but noindex", () => {
+    expect(hiddenPages.length).toBeGreaterThan(0);
+    for (const p of hiddenPages) expect(p.html, p.route).toMatch(/<meta name="robots" content="noindex/);
   });
 
   it("builds a noindex 404 page with one <h1>", () => {

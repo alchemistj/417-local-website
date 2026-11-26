@@ -53,7 +53,7 @@ import {
   sourceCredit,
 } from "../../../lib/eventPage";
 import { isIndexableEvent, isUpcoming, placeName, primaryCategory } from "../../../lib/events";
-import { getRecurring, getSiteEvents } from "../../../lib/loadEvents";
+import { getAllSiteEvents, getRecurring, getSiteEvents } from "../../../lib/loadEvents";
 import { recurringOnDate } from "../../../lib/recurring";
 import { absoluteUrl } from "../../../lib/site";
 
@@ -75,10 +75,11 @@ interface DayProps {
 export const getStaticPaths = (async () => {
   const now = new Date();
   const events = await getSiteEvents();
+  const pageEvents = await getAllSiteEvents();
   const recurring = await getRecurring();
-  assertNoReservedEventSlug(events);
-  assertUniqueEventPaths(events);
-  const eventPaths = events.map((event) => ({
+  assertNoReservedEventSlug(pageEvents);
+  assertUniqueEventPaths(pageEvents);
+  const eventPaths = pageEvents.map((event) => ({
     params: eventRouteParams(event),
     props: { kind: "event" as const, event },
   }));
@@ -239,7 +240,7 @@ const outbound = (href: string) => href.startsWith("http");
     titleBand={false}
     crumbs={crumbs}
     chips={eventChips(city, allEvents, now, "")}
-    noindex={!isIndexableEvent(event, now)}
+    noindex={!isIndexableEvent(event, now) || !allEvents.some((listed) => listed.id === event.id)}
     ogImagePath={eventCardImagePath(event)}
     jsonLd={[eventJsonLd(event)]}
   >
