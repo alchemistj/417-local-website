@@ -13,6 +13,10 @@ export interface Field {
   customLabel?: string;
   autocomplete?: string;
   maxlength?: number;
+  /** Prefilled value. The events inbox signup uses this for fields that stay off the card. */
+  value?: string;
+  /** Submit the field without showing it. */
+  hidden?: boolean;
 }
 
 interface Props {
@@ -26,7 +30,7 @@ const { id, formKey, fields, submitLabel } = Astro.props;
 
 <form class="lead-form" id={id} data-lead-form data-form-key={formKey} method="post" action="#" novalidate>
   {fields.map((f) => (
-    <div>
+    <div class:list={[f.hidden && "is-hidden"]}>
       <label for={`${id}-${f.name}`}>
         {f.label}{!f.required && f.hint === undefined ? " (optional)" : ""}
         {f.hint && <span class="hint"> {f.hint}</span>}
@@ -38,7 +42,7 @@ const { id, formKey, fields, submitLabel } = Astro.props;
           required={f.required}
           maxlength={f.maxlength ?? 2000}
           data-custom-label={f.customLabel}
-        ></textarea>
+        >{f.value}</textarea>
       ) : (
         <input
           id={`${id}-${f.name}`}
@@ -47,6 +51,7 @@ const { id, formKey, fields, submitLabel } = Astro.props;
           required={f.required}
           autocomplete={f.autocomplete}
           maxlength={f.maxlength ?? 300}
+          value={f.value}
           data-custom-label={f.customLabel}
         />
       )}
@@ -64,6 +69,10 @@ const { id, formKey, fields, submitLabel } = Astro.props;
   </div>
   <p class="form-status" role="status" aria-live="polite" data-status></p>
 </form>
+
+<style>
+  .is-hidden { display: none; }
+</style>
 
 <script>
   import { FORM_KEYS, MESSAGES, customField, submitLead, type AttemptState, type CustomField } from "../lib/formsLead";

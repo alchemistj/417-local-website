@@ -3,6 +3,7 @@ import { Image, getImage } from "astro:assets";
 import { getCollection, render, type CollectionEntry } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
 import ArticleCard from "../components/ArticleCard.astro";
+import OnThisPage from "../components/OnThisPage.astro";
 import { SITE_NAME, absoluteUrl } from "../lib/site";
 import HexPattern from "../components/HexPattern.astro";
 import skyline from "../assets/decor/springfield-skyline.png";
@@ -16,7 +17,7 @@ const { post } = Astro.props;
 const { title, seoTitle, description, published, updated, category, heroImage, heroAlt, heroPosition, kind } = post.data;
 const isLanding = kind === "page";
 const eyebrow = LANDING_EYEBROW[post.id];
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
 
 // small-business-success: the first paragraph (the lead) moves into the white card under the H1.
 // Other landing pages and articles render the Markdown as is.
@@ -33,6 +34,9 @@ const same = (await getCollection("posts")).filter((p) => p.data.category === ca
 const related = sortByUpdated(same.map((p) => ({ ...p, title: p.data.title, updated: p.data.updated }))).slice(0, 3);
 
 const crumbs = postCrumbs({ slug: post.id, title, category });
+const guideHeads = post.id === "best-things-to-do-in-springfield-mo"
+  ? headings.filter((heading) => heading.depth === 2).map((heading) => ({ id: heading.slug, label: heading.text }))
+  : [];
 
 const articleLd = {
   "@context": "https://schema.org",
@@ -113,6 +117,7 @@ const crumbLd = {
         <HexPattern />
       </header>
     )}
+    {guideHeads.length > 0 && <OnThisPage headings={guideHeads} />}
     <div class="container">
       <div class="prose">
         {restHtml !== undefined ? <Fragment set:html={restHtml} /> : <Content />}

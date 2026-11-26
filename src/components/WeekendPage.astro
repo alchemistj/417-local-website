@@ -14,6 +14,12 @@ import { getRecurring, getSiteEvents } from "../lib/loadEvents";
 interface Props {
   city: string;
 }
+
+/**
+ * slot "picks": hand-picked items from the SEO thread.
+ * Pass them as <Fragment slot="picks"> on WeekendPage.
+ * An unused slot renders nothing. It sits directly above the day list.
+ */
 const { city } = Astro.props;
 const now = new Date();
 const allEvents = await getSiteEvents();
@@ -34,12 +40,14 @@ const hub = cityHubPage(city);
 const name = cityDisplayName(city);
 const others = WEEKEND_CITY_SLUGS.filter((slug) => slug !== city);
 const chips = eventChips(city, events, now, "");
+const jumpName: Record<string, string> = { Friday: "Fri", Saturday: "Sat", Sunday: "Sun" };
 ---
 
 <EventsLayout
   meta={meta}
   h1={page.h1}
   intro={page.intro}
+  skyline
   crumbs={[
     { name: "Home", path: "/" },
     { name: "Events", path: "/events/" },
@@ -48,6 +56,20 @@ const chips = eventChips(city, events, now, "");
   ]}
 >
   <h2 class="weekend-range">{weekendRangeLabel(now)}</h2>
+  {days.length > 0 && (
+    <nav class="weekend-jump" aria-label="Friday, Saturday and Sunday">
+      {days.map((day) => {
+        const name = day.heading.split(",")[0] ?? day.heading;
+        const label = jumpName[name] ?? name.slice(0, 3);
+        return day.events.length > 0 ? (
+          <a href={`#day-${day.date}`}>{label}</a>
+        ) : (
+          <span>{label}</span>
+        );
+      })}
+    </nav>
+  )}
+  <slot name="picks" />
   {filled.map((day) => (
     <section aria-labelledby={`day-${day.date}`}>
       <h3 id={`day-${day.date}`} class="event-day-head">{day.heading}</h3>
@@ -94,5 +116,27 @@ const chips = eventChips(city, events, now, "");
 
 <style>
   .weekend-range { margin: 0 0 0.25rem; color: var(--muted); font-size: 1rem; font-weight: 700; }
+  .weekend-jump {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+    margin: 0.35rem 0 0.85rem;
+  }
+  .weekend-jump a,
+  .weekend-jump span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    border: 2px solid var(--line);
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--muted);
+  }
+  .weekend-jump a { border-color: var(--blue); color: var(--blue); }
+  .weekend-jump a:hover { background: var(--blue); color: var(--white); }
   .weekend-empty { margin: 0.75rem 0 0; }
+  /* The guide skyline sits in the bottom padding. Extra room keeps the lead off the buildings. */
+  :global(.page-band.skyline-band) { padding-bottom: 14rem; }
 </style>
