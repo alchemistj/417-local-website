@@ -286,6 +286,11 @@ export function isB2b(event: EventData): boolean {
   return classifyEvent(event).audience === "B2B";
 }
 
+/** A course you take for work (ACLS, PMP). Not a "thing to do", so the weekend page leaves it out. */
+export function isTrainingCourse(event: EventData): boolean {
+  return classifyEvent(event).niches.some((niche) => niche === "healthcare-training" || niche === "certifications-and-training");
+}
+
 export function isB2c(event: EventData): boolean {
   return classifyEvent(event).audience === "B2C";
 }

@@ -6,6 +6,7 @@ import { businessCities, groupMeta, hubMeta, nicheMeta } from "../src/lib/busine
 import { eventSchema, type EventData } from "../src/lib/eventSchema";
 import { eventSectionRoutes, listedCategories } from "../src/lib/eventRoutes";
 import { B2B_NICHES, classifyEvent, generalCategoriesOf } from "../src/lib/eventTaxonomy";
+import { weekendPageDays } from "../src/lib/events";
 
 const now = new Date("2026-11-26T18:00:00Z");
 
@@ -54,6 +55,13 @@ describe("audience edge cases from the spec", () => {
     }
     const acls = ev({ id: "acls", title: "ACLS Course", categories: ["community"] });
     expect(listedCategories([acls], now)).toEqual([]);
+  });
+  it("keeps training courses off the weekend page but keeps weekend networking", () => {
+    const sat = "2026-11-28T09:00:00-06:00";
+    const acls = ev({ id: "acls-w", title: "ACLS Course", start: sat, categories: ["professional-development"] });
+    const mixer = ev({ id: "mixer-w", title: "Business After Hours Networking Mixer", start: sat, categories: ["networking"] });
+    const listed = weekendPageDays([acls, mixer], now).flatMap((day) => day.events.map((e) => e.id));
+    expect(listed).toEqual(["mixer-w"]);
   });
   it("treats the FY27 public meeting as B2C community and job fairs as B2B", () => {
     expect(classifyEvent(ev({ id: "h", title: "FY27 Action Plan Public Meeting - In Person", categories: ["professional-development"] }))).toMatchObject({ audience: "B2C", topic: "Community" });
