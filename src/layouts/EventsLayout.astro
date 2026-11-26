@@ -1,8 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "./BaseLayout.astro";
 import EventChips from "../components/EventChips.astro";
 import EventList from "../components/EventList.astro";
 import CtaBand from "../components/CtaBand.astro";
+import skylineArt from "../assets/decor/springfield-skyline.png";
 import type { StaticPageMeta } from "../data/staticPages";
 import type { EventChip } from "../lib/eventRoutes";
 import type { EventData } from "../lib/eventSchema";
@@ -34,6 +36,12 @@ interface Props {
    */
   photoHero?: InlineHero;
   /**
+   * Weekend pages and city hubs. Reuses the things-to-do guide skyline
+   * (src/assets/decor/springfield-skyline.png) in place of the plain blue band.
+   * The region hub keeps photoHero and does not use this.
+   */
+  skyline?: boolean;
+  /**
    * Shared blue header. The event page passes false so the card stays the header;
    * the breadcrumb still shows, with the chips under it.
    */
@@ -57,6 +65,7 @@ const {
   backLink,
   hero,
   photoHero,
+  skyline = false,
   titleBand = true,
   ogImagePath,
   noindex = false,
@@ -85,7 +94,10 @@ const crumbLd = {
   noindex={noindex}
   jsonLd={[crumbLd, ...jsonLd]}
 >
-  <section class:list={[photoHero ? "events-hub-hero" : titleBand ? "band band-blue page-band" : "event-crumb-row"]}>
+  <section class:list={[photoHero ? "events-hub-hero" : titleBand ? "band band-blue page-band" : "event-crumb-row", skyline && titleBand && !photoHero && "landing-band skyline-band"]}>
+    {skyline && titleBand && !photoHero && (
+      <Image class="skyline" src={skylineArt} alt="" widths={[800, 1600, 2001]} sizes="100vw" format="webp" loading="eager" decoding="async" />
+    )}
     {photoHero && (
       <img
         class="events-hub-photo"

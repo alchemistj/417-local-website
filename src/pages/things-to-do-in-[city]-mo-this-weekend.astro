@@ -11,4 +11,5 @@ const city = Astro.params.city;
 if (!city) throw new Error("Missing city");
 ---
 
+<!-- SEO thread: put hand-picked items in slot="picks". Empty, that slot renders nothing. -->
 <WeekendPage city={city} />

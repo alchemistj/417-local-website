@@ -27,7 +27,7 @@ const photo = await inlineHeroAvif({
 });
 const cards = WEEKEND_CITY_SLUGS.map((city) => {
   const count = fourWeekCount(events, city, now);
-  const featured = topWeekendEvents(events, city, now, 1)[0] ?? null;
+  const featured = topWeekendEvents(events, city, now, city === "springfield" ? 2 : 1);
   return {
     city,
     name: cityDisplayName(city),
@@ -65,9 +65,9 @@ const signupFields = [
     {cards.map((card) => (
       <article class:list={["sw-card", card.city === "springfield" && "sw-lead"]}>
         <h2>{card.name}</h2>
-        <p class="sw-feature">
-          {card.featured ? <a href={eventPath(card.featured)}>{card.featured.title}</a> : "Nothing listed yet."}
-        </p>
+        {card.featured.length > 0 ? card.featured.map((event) => (
+          <p class="sw-feature"><a href={eventPath(event)}>{event.title}</a></p>
+        )) : <p class="sw-feature">Nothing listed yet.</p>}
         <p class="sw-count">{card.count} {card.count === 1 ? "event" : "events"} in the next 4 weeks</p>
         <div class="sw-go">
           <a class="btn" href={card.weekend}>This weekend</a>
@@ -110,14 +110,14 @@ const signupFields = [
   .events-signup .lead-form .btn{width:auto}
   .events-signup .form-status{flex:1 1 100%}
   .sw-cities{display:grid;gap:.75rem;margin:0;text-align:left}
-  .sw-card{display:flex;flex-direction:column;height:100%;min-width:0;padding:.9rem;border:1px solid var(--line);border-radius:12px;background:#fff}
+  .sw-card{display:flex;flex-direction:column;align-self:start;min-width:0;padding:.9rem;border:1px solid var(--line);border-radius:12px;background:#fff}
   .sw-cities h2{margin:0;color:var(--ink);font-size:1.2rem;font-weight:700;line-height:1.15}
   .sw-lead h2{font-size:1.4rem}
   .sw-feature{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em;margin:.4rem 0 0;line-height:1.35}
   .sw-feature a{color:var(--ink);font-weight:400;text-decoration:none}
   .sw-feature a:hover{color:var(--blue)}
   .sw-count{margin:.35rem 0 0;color:var(--muted);font-size:.85rem}
-  .sw-go{display:flex;flex-direction:column;gap:.4rem;margin-top:auto;padding-top:.75rem}
+  .sw-go{display:flex;flex-direction:column;gap:.4rem;margin-top:.75rem}
   .sw-go .btn{width:100%}
   .sw-secondary{background:#fff;color:var(--blue)}
   .sw-secondary:hover{background:var(--tint);color:var(--blue-deep)}

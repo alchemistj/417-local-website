@@ -1,0 +1,37 @@
+---
+interface Props {
+  headings: { id: string; label: string }[];
+}
+const { headings } = Astro.props;
+---
+
+<nav class="on-page" aria-label="On this page">
+  <div class="container on-page-row">
+    <p>On this page</p>
+    <ul>
+      {headings.map((heading) => (
+        <li><a href={`#${heading.id}`}>{heading.label}</a></li>
+      ))}
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .on-page {
+    position: sticky; top: var(--header-h); z-index: 40;
+    background: #fff; border-bottom: 1px solid var(--line);
+  }
+  .on-page-row { display: flex; align-items: center; gap: 0.75rem; min-height: 52px; }
+  .on-page p { margin: 0; font-weight: 700; white-space: nowrap; }
+  .on-page ul {
+    display: flex; gap: 0.4rem; margin: 0; padding: 0.35rem 0;
+    list-style: none; overflow-x: auto;
+  }
+  .on-page a {
+    display: inline-flex; align-items: center; min-height: 44px; padding: 0 0.85rem;
+    border: 2px solid var(--blue); border-radius: 999px; color: var(--blue);
+    font-weight: 700; text-decoration: none; white-space: nowrap;
+  }
+  .on-page a:hover { background: var(--blue); color: #fff; }
+  :global(.landing .prose h2) { scroll-margin-top: calc(var(--header-h) + 4.25rem); }
+</style>

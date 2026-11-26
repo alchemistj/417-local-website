@@ -14,6 +14,12 @@ import { getRecurring, getSiteEvents } from "../lib/loadEvents";
 interface Props {
   city: string;
 }
+
+/**
+ * slot "picks": hand-picked items from the SEO thread.
+ * Pass them as <Fragment slot="picks"> on WeekendPage.
+ * An unused slot renders nothing. It sits directly above the day list.
+ */
 const { city } = Astro.props;
 const now = new Date();
 const allEvents = await getSiteEvents();
@@ -41,6 +47,7 @@ const jumpName: Record<string, string> = { Friday: "Fri", Saturday: "Sat", Sunda
   meta={meta}
   h1={page.h1}
   intro={page.intro}
+  skyline
   crumbs={[
     { name: "Home", path: "/" },
     { name: "Events", path: "/events/" },
@@ -62,6 +69,7 @@ const jumpName: Record<string, string> = { Friday: "Fri", Saturday: "Sat", Sunda
       })}
     </nav>
   )}
+  <slot name="picks" />
   {filled.map((day) => (
     <section aria-labelledby={`day-${day.date}`}>
       <h3 id={`day-${day.date}`} class="event-day-head">{day.heading}</h3>
