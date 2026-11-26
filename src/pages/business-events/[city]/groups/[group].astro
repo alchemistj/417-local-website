@@ -1,0 +1,73 @@
+---
+import type { GetStaticPaths } from "astro";
+import EventList from "../../../../components/EventList.astro";
+import EventsLayout from "../../../../layouts/EventsLayout.astro";
+import { businessHubPath, businessNichePath } from "../../../../lib/businessPaths";
+import { NICHE_COPY, businessCities, businessCity, groupMeta, hubMeta } from "../../../../lib/businessEvents";
+import { getSiteEvents } from "../../../../lib/loadEvents";
+
+export const getStaticPaths = (async () => {
+  const cities = businessCities(await getSiteEvents(), new Date());
+  return cities.flatMap((city) => city.groups.map((group) => ({ params: { city: city.key, group: group.slug } })));
+}) satisfies GetStaticPaths;
+
+const now = new Date();
+const city = businessCity(businessCities(await getSiteEvents(), now), Astro.params.city ?? "");
+const group = city?.groups.find((item) => item.slug === Astro.params.group);
+if (!city || !group) throw new Error(`No business group page for ${Astro.params.city}/${Astro.params.group}`);
+const meta = groupMeta(city, group);
+const hub = hubMeta(city);
+const [lead] = group.entries;
+const hasSchedule = group.entries.some((entry) => entry.when);
+const siteUrl = lead.url;
+---
+
+<EventsLayout
+  meta={meta}
+  h1={group.name}
+  intro={lead.what}
+  noindex={meta.indexable === false}
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Events", path: "/events/" },
+    { name: "Business Events", path: hub.path },
+    { name: group.name, path: meta.path },
+  ]}
+>
+  <section aria-labelledby="group-events-heading">
+    <h2 id="group-events-heading">Next events</h2>
+    <EventList
+      events={group.events}
+      idPrefix={group.slug}
+      emptyMessage={hasSchedule
+        ? `No ${group.name} events are listed right now. The group meets on a regular schedule, so check its site for the next one.`
+        : `No ${group.name} events are listed right now. Check the group's site for the next one.`}
+    />
+  </section>
+  <section aria-labelledby="group-join-heading">
+    <h2 id="group-join-heading">How to join</h2>
+    {group.entries.map((entry) => (
+      <article>
+        {group.entries.length > 1 && <h3>{entry.name}</h3>}
+        {group.entries.length > 1 && <p>{entry.what}</p>}
+        {(entry.when || entry.cost) && (
+          <ul>
+            {entry.when && <li><strong>When:</strong> {entry.when}</li>}
+            {entry.cost && <li><strong>Cost:</strong> {entry.cost}</li>}
+          </ul>
+        )}
+      </article>
+    ))}
+    <p><a class="btn" href={siteUrl} rel="noopener">Visit the {group.name} site</a></p>
+    <p class="source-note">Details come from the group's own page, last checked {lead.checkedOn}.</p>
+  </section>
+  <p>
+    {group.niches.map((niche, index) => (
+      <>
+        {index > 0 && " · "}
+        <a href={businessNichePath(city.citySlug, city.state, niche)}>{NICHE_COPY[niche].label} events</a>
+      </>
+    ))}
+  </p>
+  <p><a href={businessHubPath(city.citySlug, city.state)}>All business events in {city.cityName}</a></p>
+</EventsLayout>

@@ -4,7 +4,7 @@ import DateStrip from "../../../components/DateStrip.astro";
 import EventFilters from "../../../components/EventFilters.astro";
 import EventList from "../../../components/EventList.astro";
 import WeeklyList from "../../../components/WeeklyList.astro";
-import { BUSINESS_NETWORKING, cityHubCopy, cityHubPage } from "../../../data/staticPages";
+import { BUSINESS_EVENTS_HUB, cityHubCopy, cityHubPage } from "../../../data/staticPages";
 import EventsLayout from "../../../layouts/EventsLayout.astro";
 import { withCityLabel } from "../../../data/weekendCities";
 import { comingUpEvents, dateStrip, hubDontMiss, omitShownEvents, uniqueUpcomingEvents } from "../../../lib/calendarView";
@@ -102,7 +102,7 @@ const showFilters = dontMiss.length + comingUp.length + upcoming.length > 0;
   )}
   <p>{page.businessLink}</p>
   {city === "springfield" && (
-    <p><a href={BUSINESS_NETWORKING.path}>Business networking events in Springfield</a></p>
+    <p><a href={BUSINESS_EVENTS_HUB.path}>Business events in Springfield</a></p>
   )}
   <nav aria-label="Other cities">
     <ul class="subnav">

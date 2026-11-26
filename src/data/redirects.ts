@@ -1,6 +1,6 @@
 import seed from "../../docs/build/redirects-seed.json";
 import shortlinks from "../../docs/build/shortlinks.json";
-import { BUSINESS_NETWORKING, BUSINESS_NETWORKING_OLD_PATHS } from "./staticPages";
+import { OLD_BUSINESS_PATHS, businessHubPath, businessNichePath } from "../lib/businessPaths";
 import { WEEKEND_CITY_SLUGS, cityWeekendPath } from "../lib/eventPaths";
 
 /**
@@ -75,8 +75,16 @@ export function buildRedirects(): Redirect[] {
   for (const slug of ["live-music", "arts-and-theater", "festivals", "family", "sports", "outdoors", "community", "holiday"]) {
     movedEventPages[`events/${slug}`] = `/events/springfield/${slug}/`;
   }
-  // Networking and entrepreneurship events now live on one page, /events/springfield/business-networking/.
-  for (const old of BUSINESS_NETWORKING_OLD_PATHS) movedEventPages[old] = BUSINESS_NETWORKING.path;
+  // Business events moved to /business-events/springfield-mo/ (hub, niche pages, group pages).
+  // The pass-1 networking page never went live, but it is redirected anyway.
+  const businessMoves: Record<string, string> = {
+    [OLD_BUSINESS_PATHS.hub]: businessHubPath("springfield", "MO"),
+    [OLD_BUSINESS_PATHS.networking]: businessNichePath("springfield", "MO", "networking"),
+    [OLD_BUSINESS_PATHS.entrepreneurship]: businessNichePath("springfield", "MO", "small-business-and-entrepreneurs"),
+    [OLD_BUSINESS_PATHS.professionalDevelopment]: businessNichePath("springfield", "MO", "certifications-and-training"),
+    [OLD_BUSINESS_PATHS.pass1Networking]: businessNichePath("springfield", "MO", "networking"),
+  };
+  for (const [old, dest] of Object.entries(businessMoves)) movedEventPages[old.replace(/^\/+|\/+$/g, "")] = dest;
   for (const [slug, dest] of Object.entries(movedEventPages)) {
     for (const source of bothSlashForms(slug)) add(source, dest);
   }

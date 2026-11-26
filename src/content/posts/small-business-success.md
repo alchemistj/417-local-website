@@ -56,4 +56,4 @@ Depending on your type of business, you can also bring traffic to your site with
 
 ## Keep Learning
 
-Looking for local ways to meet other business owners? Browse upcoming [Springfield business events](/events/springfield-business-events/).
+Looking for local ways to meet other business owners? Browse upcoming [Springfield business events](/business-events/springfield-mo/).

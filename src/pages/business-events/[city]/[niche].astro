@@ -1,0 +1,73 @@
+---
+import type { GetStaticPaths } from "astro";
+import EventList from "../../../components/EventList.astro";
+import EventsLayout from "../../../layouts/EventsLayout.astro";
+import { businessGroupPath, businessHubPath, businessNichePath } from "../../../lib/businessPaths";
+import { NICHE_COPY, businessCities, businessCity, hubMeta, nicheH1, nicheMeta } from "../../../lib/businessEvents";
+import { getSiteEvents } from "../../../lib/loadEvents";
+
+export const getStaticPaths = (async () => {
+  const cities = businessCities(await getSiteEvents(), new Date());
+  return cities.flatMap((city) => city.niches.map((page) => ({ params: { city: city.key, niche: page.niche } })));
+}) satisfies GetStaticPaths;
+
+const now = new Date();
+const city = businessCity(businessCities(await getSiteEvents(), now), Astro.params.city ?? "");
+const page = city?.niches.find((item) => item.niche === Astro.params.niche);
+if (!city || !page) throw new Error(`No business niche page for ${Astro.params.city}/${Astro.params.niche}`);
+const meta = nicheMeta(city, page);
+const copy = NICHE_COPY[page.niche];
+const hub = hubMeta(city);
+const subnav = city.niches.map((item) => ({
+  label: NICHE_COPY[item.niche].label,
+  href: businessNichePath(city.citySlug, city.state, item.niche),
+}));
+---
+
+<EventsLayout
+  meta={meta}
+  h1={nicheH1(city, page.niche)}
+  intro={copy.intro}
+  subnav={subnav}
+  noindex={meta.indexable === false}
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Events", path: "/events/" },
+    { name: "Business Events", path: businessHubPath(city.citySlug, city.state) },
+    { name: copy.label, path: meta.path },
+  ]}
+>
+  <section aria-labelledby="niche-events-heading">
+    <h2 id="niche-events-heading">Upcoming events</h2>
+    <EventList
+      events={page.events}
+      idPrefix={page.niche}
+      emptyMessage={page.groups.length > 0
+        ? "No events in this topic are listed right now. The groups below meet on a regular schedule."
+        : "No events in this topic are listed right now. Check back soon."}
+    />
+  </section>
+  {page.groups.length > 0 && (
+    <section aria-labelledby="niche-groups-heading">
+      <h2 id="niche-groups-heading">Groups that meet every week or month</h2>
+      <p>
+        These groups keep a regular schedule. Details come from each group's own website, so check there for the latest
+        meeting times.
+      </p>
+      {page.groups.map((group) => (
+        <article>
+          <h3><a href={businessGroupPath(city.citySlug, city.state, group.slug)}>{group.name}</a></h3>
+          <p>{group.entries[0].what}</p>
+          {group.entries.some((entry) => entry.when || entry.cost) && (
+            <ul>
+              {group.entries.map((entry) => entry.when && <li><strong>When:</strong> {entry.when}</li>)}
+              {group.entries.map((entry) => entry.cost && <li><strong>Cost:</strong> {entry.cost}</li>)}
+            </ul>
+          )}
+        </article>
+      ))}
+      <p class="source-note">Group details last checked {page.groups[0].entries[0].checkedOn}.</p>
+    </section>
+  )}
+  <p><a href={hub.path}>All business events in {city.cityName}</a></p>
+</EventsLayout>

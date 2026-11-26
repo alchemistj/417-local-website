@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { NETWORKING_GROUPS } from "../src/data/networkingGroups";
 import { REDIRECTS, sourceMatches } from "../src/data/redirects";
-import { BUSINESS_EVENTS, BUSINESS_NETWORKING, STATIC_PAGES, cityWeekendCopy, cityWeekendPage } from "../src/data/staticPages";
+import { BUSINESS_EVENTS_HUB, cityWeekendCopy, cityWeekendPage } from "../src/data/staticPages";
 import { NAV_ITEMS } from "../src/data/nav";
 import { weekendTitleRange } from "../src/lib/calendarView";
 import { eventSectionRoutes } from "../src/lib/eventRoutes";
@@ -44,25 +44,20 @@ describe("weekend title and H1", () => {
   });
 });
 
-describe("business networking page", () => {
+describe("business events section", () => {
   const bySource = Object.fromEntries(REDIRECTS.map((redirect) => [redirect.source, redirect]));
 
-  it("lives at /events/springfield/business-networking/ with the agreed title", () => {
-    expect(BUSINESS_NETWORKING.path).toBe("/events/springfield/business-networking/");
-    expect(BUSINESS_NETWORKING.title).toBe("Business Networking Events in Springfield, MO (This Week and Every Month)");
-    expect(BUSINESS_EVENTS.map((page) => page.path)).toContain(BUSINESS_NETWORKING.path);
-    expect(STATIC_PAGES.find((page) => page.path === BUSINESS_NETWORKING.path)?.indexable).not.toBe(false);
+  it("has the hub at /business-events/springfield-mo/", () => {
+    expect(BUSINESS_EVENTS_HUB.path).toBe("/business-events/springfield-mo/");
   });
 
-  it("reserves the slug so an event cannot take the address", () => {
+  it("reserves the old slug so an event cannot take the address", () => {
     expect(isReservedEventSlug("business-networking")).toBe(true);
   });
 
-  it("301s both old URLs, in both slash forms, to the new page", () => {
-    for (const old of ["networking", "entrepreneurship"]) {
-      for (const form of [`/events/springfield-business-events/${old}`, `/events/springfield-business-events/${old}/`]) {
-        expect(bySource[form], form).toMatchObject({ destination: BUSINESS_NETWORKING.path, statusCode: 301 });
-      }
+  it("301s the pass-1 networking page to the new networking page", () => {
+    for (const form of ["/events/springfield/business-networking", "/events/springfield/business-networking/"]) {
+      expect(bySource[form], form).toMatchObject({ destination: "/business-events/springfield-mo/networking/", statusCode: 301 });
     }
   });
 
@@ -73,17 +68,12 @@ describe("business networking page", () => {
     }
   });
 
-  it("keeps the business events hub and the networking page out of each other's way", () => {
-    expect(BUSINESS_EVENTS[0].path).toBe("/events/springfield-business-events/");
-    expect(BUSINESS_EVENTS.map((page) => page.path)).not.toContain("/events/springfield-business-events/networking/");
-  });
-
-  it("lists only groups with an official source, checked on 2026-11-25", () => {
+  it("lists only groups with an official source, checked on 2026-11-25 or 2026-11-26", () => {
     expect(NETWORKING_GROUPS.length).toBeGreaterThan(0);
     for (const group of NETWORKING_GROUPS) {
       expect(group.url).toMatch(/^https:\/\//);
       expect(group.sourceUrl).toMatch(/^https:\/\//);
-      expect(group.checkedOn).toBe("2026-11-25");
+      expect(["2026-11-25", "2026-11-26"]).toContain(group.checkedOn);
       expect(group.what.length).toBeGreaterThan(10);
     }
   });
@@ -113,20 +103,11 @@ describe("thin pages stay out of Google", () => {
     expect(find("/events/springfield/family/")).toMatchObject({ indexable: true });
   });
 
-  it("leaves professional development out of the sitemap but keeps the page", () => {
-    const page = STATIC_PAGES.find((p) => p.path === "/events/springfield-business-events/professional-development/");
-    expect(page?.indexable).toBe(false);
-    const registry = buildRoutes([], [], routes);
-    const entry = registry.find((route) => route.path === page?.path);
-    expect(entry).toMatchObject({ indexable: false });
-  });
-
   it("keeps all of them out of the registry's sitemap set", () => {
     const sitemap = buildRoutes([], [], routes).filter((route) => route.indexable && route.sitemap !== false).map((route) => route.path);
     expect(sitemap).not.toContain("/events/springfield/passed-show-2026-11-10/");
     expect(sitemap).not.toContain("/events/springfield/film/");
     expect(sitemap).not.toContain("/events/springfield/2026-11-28/");
-    expect(sitemap).toContain("/events/springfield/business-networking/");
     expect(sitemap).toContain("/events/springfield/upcoming-show-2026-11-28/");
   });
 });
@@ -136,20 +117,18 @@ describe.skipIf(!built)("built pages", () => {
   const read = (path: string) => readFileSync(`${DIST_DIR}${path}index.html`, "utf8");
   const robots = /<meta name="robots" content="noindex, follow"\s*\/?>/;
 
-  it("renders the networking page and noindexes the thin ones", () => {
-    const html = read("/events/springfield/business-networking/");
+  it("renders the networking niche page and the hub", () => {
+    const html = read("/business-events/springfield-mo/networking/");
     expect(html).toMatch(/<h1[^>]*>Business Networking Events in Springfield, MO<\/h1>/);
-    expect(html).toContain("Founders and small-business owner events");
-    expect(html).toContain("Networking groups that meet every week or month");
+    expect(html).toContain("Groups that meet every week or month");
     expect(html).not.toMatch(/name="robots"/);
-    expect(read("/events/springfield-business-events/professional-development/")).toMatch(robots);
+    expect(read("/business-events/springfield-mo/")).toContain("Browse by topic");
   });
 
   it("keeps ended events and day pages out of the sitemap", () => {
     const sitemap = readFileSync(`${DIST_DIR}/sitemap.xml`, "utf8");
-    expect(sitemap).toContain("/events/springfield/business-networking/");
+    expect(sitemap).toContain("/business-events/springfield-mo/networking/");
     expect(sitemap).not.toMatch(/\/events\/[a-z-]+\/\d{4}-\d{2}-\d{2}\//);
-    expect(sitemap).not.toContain("/events/springfield-business-events/professional-development/");
     for (const slug of NOINDEX_EVENT_CATEGORIES) expect(sitemap).not.toContain(`/events/springfield/${slug}/`);
   });
 });

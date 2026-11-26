@@ -4,6 +4,7 @@ import {
   type EventData,
   type GeneralEventCategory,
 } from "./eventSchema";
+import { isTrainingCourse } from "./eventTaxonomy";
 
 export const DEFAULT_TIMEZONE = "America/Chicago";
 
@@ -249,7 +250,9 @@ export function weekendPageDays(events: EventData[], now: Date): WeekendDayGroup
     .map((date) => ({
       date,
       heading: formatDayHeading(date),
-      events: sortByStart(events.filter((event) => isUpcoming(event, now) && eventChicagoDate(event) === date)),
+      events: sortByStart(
+        events.filter((event) => isUpcoming(event, now) && eventChicagoDate(event) === date && !isTrainingCourse(event)),
+      ),
     }));
 }
 

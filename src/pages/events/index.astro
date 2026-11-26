@@ -1,6 +1,6 @@
 ---
 import copy from "../../../docs/events-pages-copy.json";
-import { BUSINESS_EVENTS, EVENTS_HUB } from "../../data/staticPages";
+import { BUSINESS_EVENTS_HUB, EVENTS_HUB } from "../../data/staticPages";
 import { withCityLabel } from "../../data/weekendCities";
 import EventsLayout from "../../layouts/EventsLayout.astro";
 import { fourWeekCount, regionDontMiss, topWeekendEvents } from "../../lib/calendarView";
@@ -15,7 +15,7 @@ import { inlineHeroAvif } from "../../lib/heroPhoto";
 const now = new Date();
 const events = await getSiteEvents();
 const recurring = await getRecurring();
-const business = BUSINESS_EVENTS[0];
+const business = BUSINESS_EVENTS_HUB;
 const dontMiss = regionDontMiss(events, recurring, now).map((event) => withCityLabel(event));
 const moreTowns = citiesWithEvents(events).filter((city) => !(WEEKEND_CITY_SLUGS as readonly string[]).includes(city));
 const [intro, confirm] = copy.region.intro;

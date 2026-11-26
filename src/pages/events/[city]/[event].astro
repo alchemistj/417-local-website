@@ -6,12 +6,15 @@ import EventCard from "../../../components/EventCard.astro";
 import AddToCalendar from "../../../components/AddToCalendar.astro";
 import EventFilters from "../../../components/EventFilters.astro";
 import EventList from "../../../components/EventList.astro";
-import { BUSINESS_NETWORKING, cityHubPage, generalCategoryCopy, generalCategoryPage } from "../../../data/staticPages";
+import { cityHubPage, generalCategoryCopy, generalCategoryPage } from "../../../data/staticPages";
 import EventsLayout from "../../../layouts/EventsLayout.astro";
 import { eventAction } from "../../../lib/eventAction";
 import { googleCalendarUrl } from "../../../lib/eventCalendar";
 import { isGeneralEventCategory, isNoindexEventCategory, type EventData, type GeneralEventCategory } from "../../../lib/eventSchema";
+import { NICHE_COPY, businessCities, businessCity, eventNichePage, eventState } from "../../../lib/businessEvents";
+import { businessHubPath, cityStateSlug } from "../../../lib/businessPaths";
 import { citiesWithEvents, eventChips, listedCategories } from "../../../lib/eventRoutes";
+import { classifyEvent, inGeneralCategory } from "../../../lib/eventTaxonomy";
 import {
   assertNoReservedEventSlug,
   assertUniqueEventPaths,
@@ -45,7 +48,6 @@ import {
   eventPageTitle,
   eventPlaceLine,
   eventPriceText,
-  isBusinessCategory,
   moreInCategory,
   relatedUpcoming,
   sourceCredit,
@@ -125,7 +127,7 @@ const dayMeta = dayDate
 
 const category = props.kind === "category" ? props.category : null;
 const categoryEvents = category
-  ? allEvents.filter((event) => eventCitySlug(event) === city && event.categories.includes(category) && isUpcoming(event, now))
+  ? allEvents.filter((event) => eventCitySlug(event) === city && inGeneralCategory(event, category) && isUpcoming(event, now))
   : [];
 const categoryCopy = category && isGeneralEventCategory(category) ? generalCategoryCopy(category, city) : null;
 const categoryMeta = category && isGeneralEventCategory(category) ? generalCategoryPage(category, city) : null;
@@ -153,22 +155,30 @@ const venueExternal = !venuePost;
 const state = event && typeof event.state === "string" && event.state.trim() ? event.state.trim() : "MO";
 const placeLine = event && (venue || address) ? eventPlaceLine(venue, address, cityName, state) : "";
 const nearby = event && !passed ? collapseRuns(uniqueUpcomingEvents(allEvents, recurring, city, now), allEvents, now, event).filter((item) => item.id !== event.id).slice(0, 8) : [];
-const more = event && !passed ? moreInCategory(event, allEvents, now, nearby) : [];
+const taxonomy = event ? classifyEvent(event) : null;
+const businessCityPage = event && taxonomy?.audience === "B2B"
+  ? businessCity(businessCities(allEvents, now), cityStateSlug(eventCitySlug(event), eventState(event)))
+  : undefined;
+const nichePage = event ? eventNichePage(businessCityPage, event) : undefined;
+const nicheMore = nichePage && event && !passed
+  ? nichePage.events.filter((item) => item.id !== event.id && !nearby.some((near) => near.id === item.id)).slice(0, 4)
+  : [];
+const more = event && !passed && taxonomy?.audience === "B2C"
+  ? moreInCategory(event, allEvents, now, nearby).filter((item) => classifyEvent(item).audience === "B2C")
+  : nicheMore;
 const related = event && passed ? relatedUpcoming(event, allEvents, now) : [];
 const categorySlug = event ? primaryCategory(event) : null;
 const categoryCrumb = (() => {
-  if (!categorySlug) return null;
-  if (isGeneralEventCategory(categorySlug)) {
-    const upcoming = allEvents.some(
-      (item) => eventCitySlug(item) === city && item.categories.includes(categorySlug) && isUpcoming(item, now),
-    );
-    if (!upcoming) return null;
-    return { name: categoryLabel(categorySlug), path: `/events/${city}/${categorySlug}/` };
+  if (taxonomy?.audience === "B2B" && event) {
+    if (nichePage) return { name: NICHE_COPY[nichePage.niche].label, path: businessNichePathFor(nichePage.niche) };
+    return businessCityPage ? { name: "Business events", path: businessHubPath(businessCityPage.citySlug, businessCityPage.state) } : null;
   }
-  if (isBusinessCategory(categorySlug)) {
-    return { name: categoryLabel(categorySlug), path: businessCategoryPath(categorySlug) };
-  }
-  return null;
+  if (!categorySlug || !isGeneralEventCategory(categorySlug)) return null;
+  const upcoming = allEvents.some(
+    (item) => eventCitySlug(item) === city && item.categories.includes(categorySlug) && isUpcoming(item, now),
+  );
+  if (!upcoming) return null;
+  return { name: categoryLabel(categorySlug), path: `/events/${city}/${categorySlug}/` };
 })();
 const crumbs = event
   ? [
@@ -179,11 +189,8 @@ const crumbs = event
       { name: event.title, path: pagePath },
     ]
   : [];
-/** Networking and entrepreneurship share one page. Professional development keeps its own. */
-function businessCategoryPath(slug: string): string {
-  return slug === "networking" || slug === "entrepreneurship"
-    ? BUSINESS_NETWORKING.path
-    : `/events/springfield-business-events/${slug}/`;
+function businessNichePathFor(niche: string): string {
+  return `${businessHubPath(businessCityPage?.citySlug ?? city, businessCityPage?.state ?? "MO")}${niche}/`;
 }
 const outbound = (href: string) => href.startsWith("http");
 ---
@@ -277,9 +284,9 @@ const outbound = (href: string) => href.startsWith("http");
         <EventList events={nearby} idPrefix="nearby" />
       </section>
     )}
-    {more.length > 0 && categorySlug && (
+    {more.length > 0 && (categorySlug || nichePage) && (
       <section class="related-block" aria-labelledby="more-heading">
-        <h2 id="more-heading">More {categoryLabel(categorySlug)} in {cityName}</h2>
+        <h2 id="more-heading">More {nichePage ? NICHE_COPY[nichePage.niche].label.toLowerCase() : categoryLabel(categorySlug ?? "")} in {cityName}</h2>
         <EventList events={more} idPrefix="more" />
       </section>
     )}
