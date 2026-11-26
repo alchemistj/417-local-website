@@ -108,7 +108,7 @@ function titleCaseWord(word: string, first: boolean): string {
   if (/\d/.test(word)) return word;
   if (KEEP_UPPER.has(lower) && lower !== "ozarks") return word.toUpperCase();
   if (!first && SMALL_WORDS.has(lower)) return lower;
-  return lower.replace(/(^|['’\-])([a-z])/g, (_m, pre: string, ch: string) => (pre === "'" || pre === "’" ? pre + ch : pre + ch.toUpperCase()));
+  return lower.replace(/(^|['’-])([a-z])/g, (_m, pre: string, ch: string) => (pre === "'" || pre === "’" ? pre + ch : pre + ch.toUpperCase()));
 }
 
 function isAllCaps(title: string): boolean {
@@ -119,7 +119,7 @@ function isAllCaps(title: string): boolean {
 /** Display title: no emoji, no repeated punctuation, ALL CAPS to Title Case. Slugs and URLs never change. */
 export function displayTitle(title: string): string {
   let text = title
-    .replace(/[\p{Extended_Pictographic}\p{Emoji_Modifier}\u200d\ufe0f\u20e3]/gu, " ")
+    .replace(/\p{Extended_Pictographic}|\p{Emoji_Modifier}|‍|️|⃣/gu, " ")
     .replace(/[.…]{2,}/g, ".")
     .replace(/([!?,;:*~_=–—-])\1+/g, "$1")
     .replace(/([!?])[!?]+/g, "$1")
