@@ -1,7 +1,7 @@
 import { NETWORKING_GROUPS } from "../data/networkingGroups";
 import { EVENT_OVERRIDES } from "../data/eventOverrides";
 import type { EventData, GeneralEventCategory } from "./eventSchema";
-import { GENERAL_EVENT_CATEGORIES } from "./eventSchema";
+import { BUSINESS_EVENT_CATEGORIES, GENERAL_EVENT_CATEGORIES } from "./eventSchema";
 
 /**
  * Build-time event taxonomy. The robot's event JSON is never edited. Every event is sorted here
@@ -111,7 +111,7 @@ interface NicheRule {
 }
 
 const NICHE_RULES: NicheRule[] = [
-  { niche: "networking", test: /networking|mastermind|roundtable|\bhuddle\b|referral|business (mixer|after hours)|good morning, springfield|state of the community|faith at work/i },
+  { niche: "networking", test: /networking|\bmixer\b|mastermind|roundtable|\bhuddle\b|referral|business (mixer|after hours)|good morning, springfield|state of the community|faith at work/i },
   { niche: "chamber-of-commerce", test: /chamber of commerce|chamber (gives|party)|\bchamber\b.*\b(party|luncheon|mixer|after hours)\b/i },
   { niche: "small-business-and-entrepreneurs", titleOnly: true, test: /entrepreneur|startup|start-up|small[- ]business owners?|business owners?|from fog to focus|passion with profession/i },
   { niche: "tech-and-developers", test: /developers?|\bdevs\b|open sgf|code night|software|\bcoding\b|hackathon|women in tech/i },
@@ -300,6 +300,8 @@ export function generalCategoriesOf(event: EventData): GeneralEventCategory[] {
   if (tax.audience === "B2B") return [];
   const own = GENERAL_EVENT_CATEGORIES.filter((slug) => event.categories.includes(slug));
   if (own.length > 0) return own;
+  // Only an event the robot tagged as a business one needs a new home. Others keep no category page.
+  if (!event.categories.some((c) => (BUSINESS_EVENT_CATEGORIES as readonly string[]).includes(c))) return [];
   return [TOPIC_DEFAULT_CATEGORY[tax.topic ?? "Community"]];
 }
 

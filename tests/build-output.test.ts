@@ -274,6 +274,7 @@ describe.skipIf(!built)("built site", () => {
     const listPaths = new Set(registry.filter((r) => r.type === "list").map((r) => r.path));
     const eventsShell = (route: string) =>
       route.startsWith("/events/")
+      || route.startsWith("/business-events/")
       || route === "/this-friday-in-springfield/"
       || /^\/things-to-do-in-[a-z0-9-]+-mo-this-weekend\/$/.test(route);
     for (const p of pages) {
