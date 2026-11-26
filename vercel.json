@@ -398,16 +398,6 @@
       "statusCode": 301
     },
     {
-      "source": "/events/ridgedale/this-weekend",
-      "destination": "/events/ridgedale/",
-      "statusCode": 301
-    },
-    {
-      "source": "/events/ridgedale/this-weekend/",
-      "destination": "/events/ridgedale/",
-      "statusCode": 301
-    },
-    {
       "source": "/events/rogersville/this-weekend",
       "destination": "/events/rogersville/",
       "statusCode": 301

@@ -1,7 +1,10 @@
 ---
 import type { GetStaticPaths } from "astro";
 import WeekendPage from "../components/WeekendPage.astro";
-import { WEEKEND_CITY_SLUGS } from "../lib/eventPaths";
+import { WEEKEND_CITY_SLUGS, eventPath } from "../lib/eventPaths";
+import { eventHasClockTime, formatEventDate, placeName } from "../lib/events";
+import { getSiteEvents } from "../lib/loadEvents";
+import { weekendPicks } from "../lib/weekendPicks";
 
 export const getStaticPaths = (() => {
   return WEEKEND_CITY_SLUGS.map((city) => ({ params: { city } }));
@@ -10,7 +13,27 @@ export const getStaticPaths = (() => {
 const city = Astro.params.city;
 if (!city) throw new Error("Missing city");
 
-/** SEO thread: pass hand-picked items as slot="picks" on WeekendPage. Unused, that slot renders nothing. */
+const picks = weekendPicks(await getSiteEvents(), city, new Date());
 ---
 
-<WeekendPage city={city} />
+<WeekendPage city={city}>
+  {picks.length > 0 && (
+    <Fragment slot="picks">
+      <section aria-labelledby="weekend-picks" class="weekend-picks">
+        <h2 id="weekend-picks">Our picks this weekend</h2>
+        <ul>
+          {picks.map((event) => (
+            <li>
+              <h3><a href={eventPath(event)}>{event.title}</a></h3>
+              <p>
+                {formatEventDate(event).replace(/, \d{4}/, "")}
+                {!eventHasClockTime(event) || event.time_tbd ? " · Time TBA" : ""}
+                {placeName(event.venue) ? ` · ${placeName(event.venue)}` : ""}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </Fragment>
+  )}
+</WeekendPage>
