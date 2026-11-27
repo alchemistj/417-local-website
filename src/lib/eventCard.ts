@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { eventListTime } from "./calendarView";
-import { categoryLabel } from "./eventPage";
+import { categoryLabel, venueIsJustAddress } from "./eventPage";
 import { eventCityName } from "./eventPaths";
 import type { EventData } from "./eventSchema";
 import { DEFAULT_TIMEZONE, isDateOnly, placeName, primaryCategory } from "./events";
@@ -143,7 +143,9 @@ export interface EventCardOptions {
 
 export function eventCardModel(event: EventData, options: EventCardOptions = {}): EventCardModel {
   const date = eventCardDate(event);
-  const venueName = placeName(event.venue).replace(/\s+/g, " ").trim();
+  const rawVenue = placeName(event.venue).replace(/\s+/g, " ").trim();
+  // A venue that is only a street address adds nothing in the card header.
+  const venueName = venueIsJustAddress(rawVenue, placeName(event.address)) ? "" : rawVenue;
   const cityName = eventCityName(event);
   const range = options.runRange?.replace(/\s+/g, " ").trim();
   const slug = primaryCategory(event);
