@@ -1,0 +1,33 @@
+{
+  "id": "c291dc42-1959-4f2e-933c-cf89ac87a89b",
+  "slug": "springfield-veteran-job-fair-springfield-career-fair",
+  "title": "Springfield Veteran Job Fair - Springfield Career Fair",
+  "seo_title": "Springfield Veteran Job Fair, Dec 8, 2026 in Springfield MO",
+  "description": "The Springfield Veteran Job Fair is a career fair in Springfield, Missouri, aimed at people hiring and people looking for work in the area. It takes place on Tuesday, December 8, 2026, from 11:00 AM to 3:00 PM at Job Fair, Springfield, MO 65806.",
+  "start": "2026-12-08T17:00:00+00:00",
+  "end": "2026-12-08T21:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Springfield",
+  "address": "Job Fair, Springfield, MO, 65806",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "festivals"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/springfield-veteran-job-fair-springfield-career-fair-registration-2005478491153",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195775566%2F211523508959%2F1%2Foriginal.20261014-130441?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=129fb6f985a7216ca0f6fa8366c5a567",
+  "source_urls": [
+    "https://www.eventbrite.com/e/springfield-veteran-job-fair-springfield-career-fair-registration-2005478491153"
+  ],
+  "updated_at": "2026-11-27T15:04:30.021Z",
+  "public_slug": "springfield-veteran-job-fair-springfield-career-fair-2026-12-08",
+  "city_slug": "springfield",
+  "path": "/events/springfield/springfield-veteran-job-fair-springfield-career-fair-2026-12-08/",
+  "action_type": "register"
+}

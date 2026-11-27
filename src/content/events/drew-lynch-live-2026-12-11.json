@@ -3,11 +3,10 @@
   "slug": "drew-lynch-live",
   "title": "Drew Lynch Live",
   "seo_title": "Drew Lynch Live at Springfield Comedy Club, Dec 11",
-  "description": "Drew Lynch Live is a comedy show where you can watch a live stand-up performance. It takes place on December 11, 2026, with the time to be determined, at Springfield Comedy Club, 420 W College St in Springfield, MO.",
-  "start": "2026-12-11",
+  "description": "Drew Lynch Live is a stand-up comedy show featuring personal stories, humor about his stutter, and an uplifting, self-aware tone. It takes place on Friday, December 11, 2026 at 7:00 PM at Springfield Comedy Club, 420 W College St in Springfield, MO.",
+  "start": "2026-12-12T01:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "Springfield Comedy Club",
   "address": "420 W College St,Springfield,MO,United States, Springfield, MO",
   "city": "Springfield",
@@ -17,7 +16,8 @@
     "website": "https://allevents.in/org/ticket-loo/25851400"
   },
   "categories": [
-    "comedy"
+    "comedy",
+    "arts-and-theater"
   ],
   "price": null,
   "is_free": null,
@@ -26,7 +26,7 @@
   "source_urls": [
     "https://allevents.in/springfield/drew-lynch-live/200030691274932"
   ],
-  "updated_at": "2026-11-27T10:31:44.965Z",
+  "updated_at": "2026-11-27T15:04:30.021Z",
   "public_slug": "drew-lynch-live-2026-12-11",
   "city_slug": "springfield",
   "path": "/events/springfield/drew-lynch-live-2026-12-11/",

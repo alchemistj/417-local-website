@@ -3,11 +3,10 @@
   "slug": "sip-sing-bingo",
   "title": "Sip & Sing Bingo",
   "seo_title": "Sip & Sing Bingo at Biggs Downtown in Springfield, MO",
-  "description": "Sip & Sing Bingo, also called Sip N Sing Bingo, is a community event that mixes bingo with music and culture, where you sip, sing, and try to win. Tickets are available in advance. It takes place on December 11, 2026 (Time TBD) at Biggs Downtown, 312 South Avenue in Springfield, MO.",
-  "start": "2026-12-11",
-  "end": null,
+  "description": "Sip & Sing Bingo is a community event that mixes bingo with music, where you sip, sing and play for wins. It takes place Friday, December 11, 2026, from 8:00 PM to 1:30 AM at Biggs Downtown, 312 South Avenue, Springfield, MO. Tickets are available ahead of time.",
+  "start": "2026-12-12T02:00:00+00:00",
+  "end": "2026-12-12T07:30:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "Biggs Downtown",
   "address": "312 South Avenue, Springfield, MO, 65806",
   "city": "Springfield",
@@ -26,7 +25,7 @@
   "source_urls": [
     "https://www.eventbrite.com/e/sip-sing-bingo-tickets-2004201306058"
   ],
-  "updated_at": "2026-11-27T10:31:44.965Z",
+  "updated_at": "2026-11-27T15:04:30.021Z",
   "public_slug": "sip-sing-bingo-2026-12-11",
   "city_slug": "springfield",
   "path": "/events/springfield/sip-sing-bingo-2026-12-11/",

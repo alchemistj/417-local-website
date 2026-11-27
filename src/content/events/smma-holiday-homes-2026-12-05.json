@@ -3,11 +3,10 @@
   "slug": "smma-holiday-homes-tour",
   "title": "SMMA Holiday Homes Tour",
   "seo_title": "SMMA Holiday Homes Tour in Springfield, MO – Dec 5",
-  "description": "The SMMA Holiday Homes Tour is a holiday-themed event in Springfield, Missouri. It takes place on December 5, 2026, with the time to be determined, in Springfield, MO.",
-  "start": "2026-12-05",
-  "end": null,
+  "description": "The SMMA Holiday Homes Tour is a self-guided visit to seven decorated homes across the Springfield neighborhoods of University Heights, Roundtree, Walnut Street, and Brentwood, with area performing arts groups showcased in the homes. Tickets are required and cost $25 each, plus a $1 mailing fee per ticket if purchased by November 13 and credit card processing fees; they can be bought online or from any SMMA member, and proceeds support arts education and other initiatives benefiting the Springfield Art Museum and the community. It takes place Saturday, December 5, 2026, from 10 AM to 3 PM in Springfield, Missouri.",
+  "start": "2026-12-05T16:00:00+00:00",
+  "end": "2026-12-05T21:00:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "Springfield Missouri",
   "address": "Springfield,MO,United States, Springfield, MO",
   "city": "Springfield",
@@ -17,16 +16,18 @@
     "website": "https://allevents.in/org/smma-holiday-homes-tour/28227375"
   },
   "categories": [
+    "arts-and-theater",
+    "community",
     "holiday"
   ],
-  "price": null,
-  "is_free": null,
-  "registration_url": "https://allevents.in/springfield/smma-holiday-homes-tour/200030821265825",
+  "price": "$25 per ticket, plus $1 mailing fee per ticket if purchased by November 13",
+  "is_free": false,
+  "registration_url": "https://backyardunicorns.com/smma-holiday-homes-tour-1/ols/products/smma-holiday-homes-tour-ticket",
   "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEwL2Jhbm5lcnMvZjg5Mjg2YmU5YjU5ZjY2YzM0OTc5ZDQwNjk0OGJlNmFhYzZkOTQ0YTM2NDIyZGRjMjU0NjYyODk2YzE2YzAzNS1yaW1nLXc2MDYtaDI3OS1kY2Y4ZjhmOC1nbWlyP3Y9MTc5MTcyODk2NQ.avif",
   "source_urls": [
     "https://allevents.in/springfield/smma-holiday-homes-tour/200030821265825"
   ],
-  "updated_at": "2026-11-27T10:31:44.965Z",
+  "updated_at": "2026-11-27T15:04:30.021Z",
   "public_slug": "smma-holiday-homes-2026-12-05",
   "city_slug": "springfield",
   "path": "/events/springfield/smma-holiday-homes-2026-12-05/",

@@ -1,0 +1,33 @@
+{
+  "id": "c495cefa-bc64-49e0-b7d4-9cc66bf18678",
+  "slug": "christmas-at-the-farmstead",
+  "title": "Christmas At the Farmstead",
+  "seo_title": "Christmas At the Farmstead in Springfield, MO – Dec 5",
+  "description": "Christmas At the Farmstead is a holiday event hosted by The Gray Campbell Farmstead. It takes place on Saturday, December 5, 2026 at 1:00 PM at 2400 S Scenic Ave in Springfield, Missouri.",
+  "start": "2026-12-05T19:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "2400 S Scenic Ave, Springfield, MO, United States, Missouri 65807",
+  "address": "2400 S Scenic Ave, Springfield, MO 65807-3220, United States, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "The Gray Campbell Farmstead",
+    "website": "https://allevents.in/org/the-gray-campbell-farmstead/11778884"
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/christmas-at-the-farmstead/200031080741403",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEwL2Jhbm5lcnMvMGViOWYxMWRkODk1NThiYmYwMDBlZGY0ZDkxMjhhZTk5NmM4MzAwYmNkNWIwNTZmNmM0MTM4YTZmZmVkYzUwZi1yaW1nLXc5ODktaDEyODItZGNmOGY4ZjgtZ21pcj92PTE3OTUxMDAzNDM.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/christmas-at-the-farmstead/200031080741403"
+  ],
+  "updated_at": "2026-11-27T15:04:30.021Z",
+  "public_slug": "christmas-at-farmstead-2026-12-05",
+  "city_slug": "springfield",
+  "path": "/events/springfield/christmas-at-farmstead-2026-12-05/",
+  "action_type": "details"
+}
