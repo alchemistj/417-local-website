@@ -10,13 +10,15 @@ kind: post
 
 Where in Springfield can you sit down to eat with your dog?
 
-More places than you might think. We pulled together the dog-friendly patios we could find, from Commercial Street to the downtown square to the south side.
+More places than you might think. We pulled together 18 dog-friendly patios and sorted them by neighborhood: Commercial Street, Downtown, Cherry and Pickwick, and the South Side and Battlefield.
+
+Pick your area and go.
 
 **Call ahead.** Dog policies change with the season, the weather and the staff. Most of what we list comes from local and visitor lists, not from the restaurants themselves. A quick call before you load up the dog saves a wasted trip.
 
 Ready? Let's dive in.
 
-## Dog-Friendly Restaurant Patios
+## Commercial Street
 
 ### Van Gogh's Eeterie
 
@@ -50,6 +52,8 @@ It's Springfield's oldest tavern, dating to 1870. The menu has duck-fat-seared b
 
 There's a patio, and it's listed as dog-friendly.
 
+## Downtown
+
 ### Civil Kitchen
 
 [Civil Kitchen](https://maps.google.com/?q=107+Park+Central+Square+Springfield+MO+65806) is at 107 Park Central Square, right on the downtown square.
@@ -68,6 +72,68 @@ Two local lists call the patio dog-friendly. They're closed Mondays.
 
 The downtown patio is the one noted for dog-friendly seating. Call the other two first.
 
+### Hold Fast Brewing
+
+[Hold Fast Brewing](https://www.hfbrewing.com/) is at [235 N Kimbrough Ave](https://maps.google.com/?q=235+N+Kimbrough+Ave+Springfield+MO+65806).
+
+There's no kitchen. Food trucks rotate through. The beers include Lazy Day Lager and Trafficway IPA.
+
+Most of the seating is outdoors, and a local list says dogs are welcome on the patio. More local taprooms are in our [breweries guide](/best-breweries-in-springfield-mo/).
+
+### Springfield Brewing Company
+
+[Springfield Brewing Company](https://www.springfieldbrewingco.com/) is at [305 S Market Ave](https://maps.google.com/?q=305+S+Market+Ave+Springfield+MO).
+
+The original Springfield brewery. Fish and chips and house beers.
+
+There are two patios, and dogs are welcome at patio tables.
+
+### Mother's Brewing Company
+
+[Mother's Brewing Company](https://www.mothersbrewing.com/) is at [215 S Grant Ave](https://maps.google.com/?q=215+S+Grant+Ave+Springfield+MO).
+
+It's a brewery with a large fenced grass yard, and local lists name it as dog-friendly.
+
+Closed Mondays, so plan around that.
+
+## Cherry and Pickwick
+
+Want an easy outing? Tie & Timber, Team Taco, Cherry Picker and Tea Bar are all clustered near Cherry and Pickwick. Park once and hop between them.
+
+### Tie & Timber Beer Co.
+
+[Tie & Timber Beer Co.](https://www.tieandtimberbeerco.com/) is at [1451 E Cherry St](https://maps.google.com/?q=1451+E+Cherry+St+Springfield+MO).
+
+Small-batch beer and pizza.
+
+There's a grassy, shady area outside for you and the dog.
+
+### Team Taco
+
+[Team Taco](https://www.teamtacosgf.com/) is at [1454 E Cherry St](https://maps.google.com/?q=1454+E+Cherry+St+Springfield+MO), right across Cherry from Tie & Timber.
+
+Try the Globetrotter taco with pork belly, or an agave cocktail.
+
+The outdoor seating is dog-friendly.
+
+### Cherry Picker Package x Fare
+
+[Cherry Picker Package x Fare](https://www.cherrypickerpackage.com/) is at [601 S Pickwick Ave](https://maps.google.com/?q=601+S+Pickwick+Ave+Springfield+MO).
+
+Coffee, sandwiches, soups and salads, plus a bar and package store.
+
+The patio is dog-friendly. They're closed Sundays.
+
+### Tea Bar & Bites
+
+[Tea Bar & Bites](https://www.teabarandbites.com/) is at [621 S Pickwick Ave](https://maps.google.com/?q=621+S+Pickwick+Ave+Springfield+MO).
+
+Curry chicken salad and quiche.
+
+The covered patio is listed as dog-friendly in one source. Hours vary between sources too, so call before you go.
+
+## South Side and Battlefield
+
 ### The Wok on Scenic
 
 [The Wok on Scenic](https://maps.google.com/?q=4153+S+Scenic+Ave+Springfield+MO+65807) is at 4153 S Scenic Ave.
@@ -76,37 +142,37 @@ Chinese classics like General Tso's, sweet and sour and crab rangoon. Open daily
 
 The patio is listed as dog-friendly, but we only found one source. Call first on this one.
 
-### Hold Fast Brewing
+### Galloway Station
 
-[Hold Fast Brewing](https://www.hfbrewing.com/) is at [235 N Kimbrough Ave](https://maps.google.com/?q=235+N+Kimbrough+Ave+Springfield+MO+65806).
+[Galloway Station](https://maps.google.com/?q=1281+E+Republic+Rd+Springfield+MO) is at 1281 E Republic Rd.
 
-Most of the seating is outdoors, and a local list says dogs are welcome on the patio.
+Burgers like the Rajun Cajun with bacon and Swiss, and homemade chips with spicy ranch.
 
-There's no kitchen. Food trucks rotate through. The beers include Lazy Day Lager and Trafficway IPA. More local taprooms are in our [breweries guide](/best-breweries-in-springfield-mo/).
+It's in the Galloway area, so our [Galloway Creek Greenway trail post](/galloway-creek-greenway-trail-in-springfield-mo/) may help you plan a walk.
+
+### El Cafecito
+
+[El Cafecito](https://maps.google.com/?q=2462+S+Campbell+Ave+Springfield+MO) is at 2462 S Campbell Ave.
+
+Latin coffee drinks like a churro latte and a Mexican mocha.
+
+The patio is listed as dog-friendly in one source, so call first.
 
 ### Rita's Italian Ice & Frozen Custard
 
-Not every dog outing needs a full meal.
+[Rita's](https://www.ritasice.com/location/ritas-of-springfield-mo/) is at [2100 W Republic Rd](https://maps.google.com/?q=2100+W+Republic+Rd+Springfield+MO+65807).
 
-[Rita's](https://www.ritasice.com/location/ritas-of-springfield-mo/) is at [2100 W Republic Rd](https://maps.google.com/?q=2100+W+Republic+Rd+Springfield+MO+65807). The Italian ice is made fresh daily, and mango is the top seller.
+Not every dog outing needs a full meal. The Italian ice is made fresh daily, and mango is the top seller.
 
 We didn't find a dog policy, so treat this as a warm-weather treat stop with outdoor seating to check on. It's closed for the season right now and reopens in spring.
 
-## More Pet-Friendly Places
+### Wire Road Brewing
 
-A few more spots to put on the list:
+[Wire Road Brewing](https://wireroadbrewing.com/) is at [4453 S Timbercreek Ave](https://maps.google.com/?q=4453+S+Timbercreek+Ave+Battlefield+MO), Battlefield.
 
-- [Springfield Brewing Company](https://www.springfieldbrewingco.com/), 305 S Market Ave. The original Springfield brewery, with two patios. Dogs are welcome at patio tables. Fish and chips and house beers.
-- [Mother's Brewing Company](https://www.mothersbrewing.com/), 215 S Grant Ave. A large fenced grass yard. Closed Mondays.
-- [Tie & Timber Beer Co.](https://www.tieandtimberbeerco.com/), 1451 E Cherry St. A grassy, shady area, small-batch beer and pizza.
-- [Team Taco](https://www.teamtacosgf.com/), 1454 E Cherry St. Right across Cherry from Tie & Timber. Try the Globetrotter taco with pork belly, or an agave cocktail. Dog-friendly outdoor seating.
-- [Cherry Picker Package x Fare](https://www.cherrypickerpackage.com/), 601 S Pickwick Ave. Coffee, sandwiches, soups, salads, plus a bar and package store. Dog-friendly patio. Closed Sundays.
-- [Tea Bar & Bites](https://www.teabarandbites.com/), 621 S Pickwick Ave. A covered patio, curry chicken salad and quiche. Hours vary between sources, so check before you go.
-- [Wire Road Brewing](https://wireroadbrewing.com/), 4453 S Timbercreek Ave, Battlefield. A 1,300 sq ft covered patio. Kombucha, seltzers, cider and wine slushes plus beer, with food trucks.
-- [Galloway Station](https://maps.google.com/?q=1281+E+Republic+Rd+Springfield+MO), 1281 E Republic Rd. Burgers like the Rajun Cajun with bacon and Swiss, and homemade chips with spicy ranch. It's in the Galloway area, so our [Galloway Creek Greenway trail post](/galloway-creek-greenway-trail-in-springfield-mo/) may help you plan a walk.
-- [El Cafecito](https://maps.google.com/?q=2462+S+Campbell+Ave+Springfield+MO), 2462 S Campbell Ave. Latin coffee drinks like a churro latte and a Mexican mocha. The patio is listed as dog-friendly in one source, so call first.
+Kombucha, seltzers, cider and wine slushes plus beer, with food trucks.
 
-**Want an easy outing?** Tie & Timber, Team Taco, Cherry Picker and Tea Bar are all clustered near Cherry and Pickwick.
+There's a 1,300 sq ft covered patio, and BringFido lists it as a spot to bring your dog.
 
 ## Patio Manners
 
