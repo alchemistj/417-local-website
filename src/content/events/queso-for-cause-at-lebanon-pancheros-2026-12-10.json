@@ -3,11 +3,10 @@
   "slug": "queso-for-a-cause-at-lebanon-pancheros",
   "title": "Queso for a Cause at Lebanon Pancheros!",
   "seo_title": "Queso for a Cause at Pancheros in Lebanon, MO",
-  "description": "Queso for a Cause is a community food and drink event at Pancheros Mexican Grill, hosted by the Lebanon Area Foundation, with live music and family-friendly activities. It takes place on December 10, 2026, with the time to be determined, at 1539 S Jefferson Ave in Lebanon, Missouri.",
-  "start": "2026-12-10",
-  "end": null,
+  "description": "Queso for a Cause is a fundraiser dinner at Pancheros Mexican Grill where you eat a meal while supporting the Lebanon Area Foundation, which Pancheros will donate 10% of all sales during the event to. Family and friends are invited to come anytime during the event. It takes place Thursday, December 10, 2026, from 5:00 PM to 8:00 PM at 1539 S Jefferson Ave in Lebanon, MO.",
+  "start": "2026-12-10T23:00:00+00:00",
+  "end": "2026-12-11T02:00:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "Pancheros Mexican Grill",
   "address": "1539 S Jefferson Ave, Lebanon, MO 65536-3762, United States, Lebanon, MO",
   "city": "Lebanon",
@@ -17,10 +16,7 @@
     "website": "https://allevents.in/org/lebanon-area-foundation/23927779"
   },
   "categories": [
-    "community",
-    "family",
-    "live-music",
-    "food-and-drink"
+    "community"
   ],
   "price": null,
   "is_free": null,
@@ -29,7 +25,7 @@
   "source_urls": [
     "https://allevents.in/lebanon/queso-for-a-cause-at-lebanon-pancheros/200031069315153"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "queso-for-cause-at-lebanon-pancheros-2026-12-10",
   "city_slug": "lebanon",
   "path": "/events/lebanon/queso-for-cause-at-lebanon-pancheros-2026-12-10/",

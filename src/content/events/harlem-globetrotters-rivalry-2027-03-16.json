@@ -3,7 +3,7 @@
   "slug": "the-harlem-globetrotters",
   "title": "The Harlem Globetrotters",
   "seo_title": "Harlem Globetrotters Rivalry Tour in Springfield, MO",
-  "description": "The Harlem Globetrotters bring their Rivalry Tour to the court as they face the Washington Generals and a new lineup of rivals, with fans sometimes pulled onto the court to join the squad. It is for all ages, and a free pre-game tip-off party starts when doors open at 6:00 PM. It takes place Tuesday, March 16, 2027 at 7:00 PM at Great Southern Bank Arena, 901 S. National Ave., Springfield, MO; parking is $20, or $50 for premium parking.",
+  "description": "The Harlem Globetrotters bring their Rivalry Tour, part of their 2027 world tour, to the court against the Washington Generals and a new lineup of rivals, with fans helping decide the action and some getting pulled onto the court. It is for all ages, and a free pre-game tip-off party starts when doors open at 5:00 PM, with Magic Pass at 5:30 PM. It takes place Tuesday, March 16, 2027 at 7:00 PM at Great Southern Bank Arena, 901 S. National Ave., Springfield, MO; parking is $20 or $50 for Premium Parking and can be bought in advance or by credit card at the lot entrance.",
   "start": "2027-03-17T00:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -12,21 +12,21 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": null,
+    "name": "Missouri State University",
     "website": null
   },
   "categories": [
     "sports",
     "family"
   ],
-  "price": null,
+  "price": "Parking $20; Premium Parking $50",
   "is_free": true,
   "registration_url": "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4092",
   "image_url": null,
   "source_urls": [
     "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4092"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "harlem-globetrotters-rivalry-2027-03-16",
   "city_slug": "springfield",
   "path": "/events/springfield/harlem-globetrotters-rivalry-2027-03-16/",

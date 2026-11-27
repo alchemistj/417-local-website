@@ -3,11 +3,10 @@
   "slug": "booktok-event",
   "title": "Booktok Event",
   "seo_title": "BookTok Night at Amelia's Chapter House in Joplin, MO",
-  "description": "Amelia's Chapter House hosts a BookTok night where you can browse books and play Book Plinko, aimed at romance readers, fantasy fans and anyone with a full TBR. A $20 ticket is required and includes $10 in book credit, one Book Plinko play, 50% off used books and 10% off new books, with only 25 tickets available. It takes place December 11, 2026, Time TBD, at 5357 N Main St in Joplin, MO.",
-  "start": "2026-12-11",
+  "description": "Amelia's Chapter House hosts a BookTok night for romance readers, fantasy fans and anyone with a full TBR. A $20 ticket, required for entry, includes $10 in book credit, one chance to play Book Plinko, 50% off used books and 10% off new books, and only 25 tickets are available. It takes place Friday, December 11, 2026 at 6:00 PM at 5357 N Main St in Joplin, MO.",
+  "start": "2026-12-12T00:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "5357 N Main St, Joplin, MO, United States, Missouri 64801",
   "address": "5357 N Main St Rd, Joplin, MO 64801-8726, United States, Joplin, MO",
   "city": "Joplin",
@@ -31,7 +30,7 @@
   "source_urls": [
     "https://happeningnext.com/event/booktok-event-eid3a0eax3vmw"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "booktok-event-2026-12-11",
   "city_slug": "joplin",
   "path": "/events/joplin/booktok-event-2026-12-11/",

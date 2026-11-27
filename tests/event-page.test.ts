@@ -155,7 +155,7 @@ describe("event page template", () => {
     expect(src).toContain("titleBand={false}");
     expect(src).toContain("eventPlaceLine");
     expect(src).not.toContain("addressLine");
-    expect(src).toMatch(/\{event\.description && <p>\{event\.description\}<\/p>\}/);
+    expect(src).toMatch(/\{body && <p>\{body\}<\/p>\}/);
     const actions = src.slice(src.indexOf('class="event-actions"'));
     expect(actions.indexOf("{action.label}")).toBeGreaterThan(-1);
     expect(actions.indexOf("{action.label}")).toBeLessThan(actions.indexOf("{action.secondary.label}"));

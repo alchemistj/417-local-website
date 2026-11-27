@@ -3,7 +3,7 @@
   "slug": "ladies-cigar-event-ugly-christmas-sweater-edition",
   "title": "Ladies Cigar Event | Ugly Christmas Sweater Edition",
   "seo_title": "Ladies Cigar Event: Ugly Christmas Sweater in Ozark, MO",
-  "description": "This is a Ladies Cigar Event with a holiday twist, held in the lounge, where guests wear tacky Christmas sweaters, smoke Padron cigars, and sip Kevin's Cocktails. It is for ladies, and the ticket is $45. It takes place Wednesday, December 9, 2026 at 6:00 PM at Vineyard Market, 1759 W State Hwy J in Ozark, MO.",
+  "description": "This is a holiday-themed ladies cigar night in the lounge at Vineyard Market, with Padron cigars, Kevin's Cocktails, and an ugly Christmas sweater theme (sweaters encouraged). It is for ladies, and tickets are $45; reservations can be made by calling (417) 882-0399 or online. It takes place Wednesday, December 9, 2026 at 6:00 PM at 1759 W State Hwy J in Ozark, MO.",
   "start": "2026-12-10T00:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -16,7 +16,8 @@
     "website": "https://thevineyardmarket.com/"
   },
   "categories": [
-    "holiday"
+    "holiday",
+    "food-and-drink"
   ],
   "price": "$45",
   "is_free": false,
@@ -25,7 +26,7 @@
   "source_urls": [
     "https://thevineyardmarket.com/events/ladies-cigar-event-ugly-christmas-sweater-edition-december-2026"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "ladies-cigar-event-ugly-christmas-sweater-edition-2026-12-09",
   "city_slug": "ozark",
   "path": "/events/ozark/ladies-cigar-event-ugly-christmas-sweater-edition-2026-12-09/",

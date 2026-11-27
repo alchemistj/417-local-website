@@ -3,11 +3,10 @@
   "slug": "woodsy-cabin-holiday-photos-a-fundraiser-for-becca",
   "title": "Woodsy Cabin Holiday Photos | A Fundraiser for Becca",
   "seo_title": "Woodsy Cabin Holiday Photos Fundraiser for Becca",
-  "description": "Woodsy Cabin Holiday Photos is a community holiday fundraiser for Becca, bringing together local businesses and photographers. Becca is part of the team at Misty Oak Getaways and works with Buzzy Bees Cleaning Co., LLC. It takes place on November 28, 2026, in Lebanon, Missouri, with the time to be determined (Time TBD).",
-  "start": "2026-11-28",
-  "end": null,
+  "description": "Woodsy Cabin Holiday Photos is a community holiday fundraiser for Becca, a member of the Misty Oak Getaways team, where local businesses and photographers come together. It takes place Saturday, November 28, 2026, from 1:00 PM to 5:00 PM in Lebanon, Missouri.",
+  "start": "2026-11-28T19:00:00+00:00",
+  "end": "2026-11-28T23:00:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "Lebanon MO",
   "address": "Lebanon, Missouri, Lebanon, MO",
   "city": "Lebanon",
@@ -27,7 +26,7 @@
   "source_urls": [
     "https://allevents.in/lebanon/woodsy-cabin-holiday-photos-a-fundraiser-for-becca/200030971902231"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "woodsy-cabin-holiday-photos-fundraiser-for-becca-2026-11-28",
   "city_slug": "lebanon",
   "path": "/events/lebanon/woodsy-cabin-holiday-photos-fundraiser-for-becca-2026-11-28/",

@@ -39,11 +39,14 @@ export function isHolidayStorePromo(event: EventData): boolean {
 const RESORT_TEXT = /big cedar|top of the rock|wilderness club|\bridgedale\b/i;
 const GUEST_ONLY = /\b(?:resort|registered|lodge|hotel|overnight|in-house|staying)\s+guests\b|\bguests only\b|\bguest-only\b|\bexclusive to guests\b/i;
 
+/** Resort restaurants and holiday meals are open to the public, unlike welcome tables or fitness classes. */
+const RESORT_PUBLIC = /\b(?:buffet|brunch|breakfast|dinner|restaurant)\b/i;
+
 /** Big Cedar Lodge programming and other resort guest-only activities. */
 export function isResortGuestEvent(event: EventData): boolean {
   const venue = venueText(event);
   const all = `${event.title} ${venue} ${event.description ?? ""} ${event.city ?? ""}`;
-  if (RESORT_TEXT.test(all)) return true;
+  if (RESORT_TEXT.test(all)) return !RESORT_PUBLIC.test(`${event.title} ${venue}`);
   return GUEST_ONLY.test(`${venue} ${event.description ?? ""}`);
 }
 

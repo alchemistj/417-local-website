@@ -3,7 +3,7 @@
   "slug": "tournament-of-champions",
   "title": "Tournament of Champions",
   "seo_title": "Tournament of Champions at Great Southern Bank Arena",
-  "description": "The Bass Pro Tournament of Champions is a sports event held at Great Southern Bank Arena in Springfield, Missouri, from January 14 to 16, 2027. The first day is Thursday, January 14 at 4:00 PM. Ticketing information will be announced soon.",
+  "description": "The Bass Pro Tournament of Champions is a sports event held at Great Southern Bank Arena in Springfield, Missouri. It runs January 14-16, 2027, with the first day starting Thursday, January 14 at 4:00 PM CST. Ticketing information will be announced soon.",
   "start": "2027-01-14T22:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -13,7 +13,7 @@
   "state": "MO",
   "organizer": {
     "name": "Missouri State University",
-    "website": null
+    "website": "https://greatsouthernbankarena.com/"
   },
   "categories": [
     "sports"
@@ -25,7 +25,7 @@
   "source_urls": [
     "https://greatsouthernbankarena.com/ViewEvent.aspx?ID=4095"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "tournament-of-champions-2027-01-14",
   "city_slug": "springfield",
   "path": "/events/springfield/tournament-of-champions-2027-01-14/",

@@ -34,6 +34,11 @@ describe("junk filter on current data", () => {
     expect(reasonOf("Pour & Gourmet Tour")).toBe("resort-guests");
   });
 
+  it("keeps public resort meals like the Thanksgiving buffets", () => {
+    const buffets = all.filter((event) => event.title.startsWith("Thanksgiving Buffet at"));
+    for (const buffet of buffets) expect(reasons.get(buffet.id), buffet.title).toBeUndefined();
+  });
+
   it("hides online-only events and webinars", () => {
     expect(reasonOf("From Fog To Focus")).toBe("online-only");
     expect(all.filter((event) => event.title.startsWith("Aligning Passion with Profession")).every((event) => reasons.get(event.id) === "online-only")).toBe(true);

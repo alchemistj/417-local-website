@@ -3,11 +3,11 @@
   "slug": "story-time-at-graddys-playhouse",
   "title": "Story Time at Graddy's Playhouse",
   "seo_title": "Story Time at Graddy's Playhouse in Springfield, MO",
-  "description": "Story time at Graddy's Playhouse features books about home, read with Adam Graddy's real estate team, plus a chance to explore the new exhibit. The house has hands-on STEM activities and pretend play spaces, including a kitchen, living room, and backyard. It happens at 10:30 AM on Friday, December 4, 2026, at the Discovery Center of Springfield, 438 E St. Louis St., and repeats every first Friday of the month.",
+  "description": "Story time at Graddy's Playhouse features books about home read with Adam Graddy's real estate team, plus a chance to explore the new exhibit with hands-on STEM activities and pretend play spaces like a kitchen, living room, and backyard. It is a kids and family event from the Discovery Center of Springfield. It takes place Friday, December 4, 2026 at 10:30 AM at 438 E St. Louis St. in Springfield, MO, and repeats every first Friday of the month.",
   "start": "2026-12-04T16:30:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
-  "venue": "Discovery Center of Springfield",
+  "venue": "Graddy's Playhouse",
   "address": "438 E St. Louis St.",
   "city": "Springfield",
   "state": "MO",
@@ -18,7 +18,8 @@
   "categories": [
     "arts-and-theater",
     "festivals",
-    "kids"
+    "kids",
+    "family"
   ],
   "price": null,
   "is_free": null,
@@ -27,7 +28,7 @@
   "source_urls": [
     "https://www.discoverycenter.org/event/story-time-at-graddys-playhouse-7"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "story-time-at-graddy-s-playhouse-2026-12-04",
   "city_slug": "springfield",
   "path": "/events/springfield/story-time-at-graddy-s-playhouse-2026-12-04/",

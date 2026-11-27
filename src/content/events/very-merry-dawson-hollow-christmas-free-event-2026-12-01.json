@@ -3,11 +3,10 @@
   "slug": "a-very-merry-dawson-hollow-christmas-free-event",
   "title": "A Very Merry Dawson Hollow Christmas- FREE EVENT",
   "seo_title": "A Very Merry Dawson Hollow Christmas in Lebanon, MO",
-  "description": "A Very Merry Dawson Hollow Christmas is a free holiday show featuring Dawson Hollow with special guest The Nautical Brothers. It takes place December 1, 2026, at the Kenneth E Cowan Civic Center, 500 E Elm St in Lebanon, MO. The listing mentions 5PM and a 6PM doors and show start, but the exact start time is still to be determined (Time TBD).",
-  "start": "2026-12-01",
+  "description": "A Very Merry Dawson Hollow Christmas is a free holiday show featuring Dawson Hollow with special guest The Nautical Brothers. It takes place on Tuesday, December 1, 2026 at the Cowan Civic Center, 500 E Elm St, Lebanon, MO, with the show starting at 6:00 PM. Admission is free.",
+  "start": "2026-12-02T00:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "Cowan Civic Center",
   "address": "Kenneth E Cowan Civic Center, 500 E Elm St, Lebanon, MO 65536, United States, Lebanon, MO",
   "city": "Lebanon",
@@ -27,7 +26,7 @@
   "source_urls": [
     "https://allevents.in/lebanon/a-very-merry-dawson-hollow-christmas-free-event/200031105908934"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "very-merry-dawson-hollow-christmas-free-event-2026-12-01",
   "city_slug": "lebanon",
   "path": "/events/lebanon/very-merry-dawson-hollow-christmas-free-event-2026-12-01/",

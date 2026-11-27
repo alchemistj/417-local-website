@@ -3,7 +3,7 @@
   "slug": "disneys-the-lion-king-great-southern-bank-broadway-season",
   "title": "Disney's THE LION KING – Great Southern Bank Broadway Season",
   "seo_title": "Disney's THE LION KING at Hammons Hall, Springfield MO",
-  "description": "Disney's THE LION KING is a Tony Award-winning Broadway musical, directed by Julie Taymor, with music by Elton John and Tim Rice, and you attend by watching the stage show. It is recommended for ages 6+, and all patrons, regardless of age, must have a ticket. It runs from Wednesday, December 2, 2026 at 7:30 PM through Saturday, December 12, 2026 at 2:00 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO.",
+  "description": "Disney's THE LION KING is a Tony Award-winning Broadway musical, directed by Julie Taymor with music by Elton John and Tim Rice, that you watch live on stage as part of the Great Southern Bank Broadway Season. It is recommended for ages 6+, and all patrons, regardless of age, must have a ticket. It runs from Wednesday, December 2, 2026 at 7:30 PM through Saturday, December 12, 2026 at 2:00 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO.",
   "start": "2026-12-03T01:30:00+00:00",
   "end": "2026-12-12T20:00:00+00:00",
   "timezone": "America/Chicago",
@@ -12,12 +12,11 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Missouri State University Juanita K. Hammons Hall",
+    "name": "Juanita K. Hammons Hall for the Performing Arts",
     "website": "https://www.hammonshall.com/"
   },
   "categories": [
-    "arts-and-theater",
-    "family"
+    "arts-and-theater"
   ],
   "price": null,
   "is_free": null,
@@ -26,7 +25,7 @@
   "source_urls": [
     "https://www.hammonshall.com/viewshow.aspx?ID=4081"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "disney-s-lion-king-2026-12-02",
   "city_slug": "springfield",
   "path": "/events/springfield/disney-s-lion-king-2026-12-02/",

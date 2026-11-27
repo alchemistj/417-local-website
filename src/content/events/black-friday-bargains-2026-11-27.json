@@ -3,11 +3,10 @@
   "slug": "black-friday-bargains",
   "title": "Black Friday Bargains",
   "seo_title": "Black Friday Bargains at Sunshine Bin Store, Joplin",
-  "description": "This is a Black Friday sale at Sunshine Bin Store in Joplin, Missouri, where every bin item costs $9.99 and the bins hold merchandise valued up to $100, though values vary and not every item is worth that much. Doors open at 8 AM for the first round, the store closes from 12:30 to 1 PM to restock, and round two begins at 1 PM with shoppers entering in a single-file line. It takes place on November 27, 2026 (time TBD) at 2639 E 32nd St, Joplin, MO.",
-  "start": "2026-11-27",
-  "end": null,
+  "description": "This is a Black Friday sale at Sunshine Bin Store in Joplin, Missouri, where every bin item costs $9.99 and the bins hold merchandise valued up to $100, though values vary and not every item is worth that much. Doors open at 8 AM, the store closes from 12:30 to 1 PM to restock, and round two begins at 1 PM with shoppers entering in a single-file line. It takes place Friday, November 27, 2026, from 8 AM to 6 PM at 2639 E 32nd St, Joplin, MO.",
+  "start": "2026-11-27T14:00:00+00:00",
+  "end": "2026-11-28T00:00:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "2639 E 32nd St, Joplin, MO",
   "address": "2639 E 32nd St, Joplin, MO 64804-4320, United States, Joplin, MO",
   "city": "Joplin",
@@ -31,7 +30,7 @@
   "source_urls": [
     "https://happeningnext.com/event/black-friday-bargains-eid3a0eawsrup"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "black-friday-bargains-2026-11-27",
   "city_slug": "joplin",
   "path": "/events/joplin/black-friday-bargains-2026-11-27/",

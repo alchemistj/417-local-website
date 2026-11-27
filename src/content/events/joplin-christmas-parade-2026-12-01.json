@@ -3,11 +3,10 @@
   "slug": "joplin-christmas-parade",
   "title": "Joplin Christmas Parade",
   "seo_title": "Joplin Christmas Parade on Main Street, Dec 1, 2026",
-  "description": "The Annual Joplin Christmas Parade travels up Main Street from 15th Street to 2nd Street, with the Grandstand and Judges Table at 8th and Main Street. Organizations and businesses can take part by completing the entry form, as non-school and non-band entries are limited to the first 75 registrations. It takes place December 1, 2026, in Joplin, Missouri, with the time TBD.",
-  "start": "2026-12-01",
+  "description": "The Annual Joplin Christmas Parade travels up Main Street from 15th Street to 2nd Street, with a Grandstand and Judges Table at 8th and Main Street. Organizations and businesses can take part, but non-school and non-band entries are limited to the first 75 registrations, so the entry form should be completed as soon as possible. It takes place Tuesday, December 1, 2026 at 6:00 PM in Joplin, Missouri.",
+  "start": "2026-12-02T00:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "Joplin, Missouri",
   "address": "1210 S Kentucky Ave, Joplin, MO 64801-4681, United States, Joplin, MO",
   "city": "Joplin",
@@ -27,7 +26,7 @@
   "source_urls": [
     "https://happeningnext.com/event/joplin-christmas-parade-eid3a0e9dv9jc"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "joplin-christmas-parade-2026-12-01",
   "city_slug": "joplin",
   "path": "/events/joplin/joplin-christmas-parade-2026-12-01/",

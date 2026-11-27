@@ -3,7 +3,7 @@
   "slug": "read-between-the-wines-book-club",
   "title": "Read Between the Wines Book Club",
   "seo_title": "Read Between the Wines Book Club in Ozark, MO",
-  "description": "This is the December meeting of the Read Between the Wines Book Club, where the group discusses The Christmas Party by Mikayla Davids, works through discussion questions, and shares a suggested winter reading list. There are festive cocktails, holiday wine pairings, and a seasonal activity, and reservations are made by calling or signing up online. It takes place Tuesday, December 15, 2026 at 6:00 PM at Vineyard Market, 1759 W State Hwy J in Ozark, MO, with regulars arriving at 5 PM for holiday treats and seats.",
+  "description": "This December book club discusses The Christmas Party by Mikayla Davids, with festive cocktails, holiday wine pairings, a seasonal activity, discussion questions, and a suggested winter reading list. It takes place Tuesday, December 15, 2026 at 6:00 PM at Vineyard Market, 1759 W State Hwy J in Ozark, MO; regulars arrive around 5 PM for holiday treats and seats. Reserving a spot by phone or online is advised.",
   "start": "2026-12-16T00:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -17,8 +17,8 @@
   },
   "categories": [
     "holiday",
-    "food-and-drink",
-    "community"
+    "community",
+    "food-and-drink"
   ],
   "price": null,
   "is_free": null,
@@ -27,7 +27,7 @@
   "source_urls": [
     "https://thevineyardmarket.com/events/read-between-the-wines-book-club-33"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "read-between-wines-book-club-2026-12-15",
   "city_slug": "ozark",
   "path": "/events/ozark/read-between-wines-book-club-2026-12-15/",

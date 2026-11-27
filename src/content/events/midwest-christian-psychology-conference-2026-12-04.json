@@ -3,11 +3,10 @@
   "slug": "midwest-christian-psychology-conference",
   "title": "Midwest Christian Psychology Conference",
   "seo_title": "Midwest Christian Psychology Conference in Bolivar, MO",
-  "description": "The Midwest Christian Psychology Conference is a gathering where students are invited to refine a paper and share their work through a presentation. Students who want to present must submit by 5:00 p.m. on November 20, 2026. It takes place on December 4, 2026 (Time TBD) at Southwest Baptist University, 1600 University Ave in Bolivar, Missouri.",
-  "start": "2026-12-04",
-  "end": null,
+  "description": "The Midwest Christian Psychology Conference is a one-day event where students are invited to refine a paper and share their work. Students who want to present must submit by 5:00 p.m. on November 20, 2026. It takes place Friday, December 4, 2026, from 9:45 AM to 3:30 PM at Southwest Baptist University, 1600 University Ave in Bolivar, Missouri.",
+  "start": "2026-12-04T15:45:00+00:00",
+  "end": "2026-12-04T21:30:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "Southwest Baptist University",
   "address": "1600 University Ave,Bolivar, Missouri, Bolivar, MO",
   "city": "Bolivar",
@@ -28,7 +27,7 @@
   "source_urls": [
     "https://happeningnext.com/event/midwest-christian-psychology-conference-eid3a0ea0e4j6"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "midwest-christian-psychology-conference-2026-12-04",
   "city_slug": "bolivar",
   "path": "/events/bolivar/midwest-christian-psychology-conference-2026-12-04/",

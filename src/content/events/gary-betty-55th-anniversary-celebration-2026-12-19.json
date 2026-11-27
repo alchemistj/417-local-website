@@ -3,11 +3,10 @@
   "slug": "gary-betty-55th-anniversary-celebration",
   "title": "Gary & Betty 55th Anniversary Celebration",
   "seo_title": "Gary & Betty 55th Anniversary Celebration in Bolivar, MO",
-  "description": "This is a celebration of Gary and Betty's 55th anniversary, where guests are invited to come together and mark the milestone. It takes place on December 19, 2026 (Time TBD) at Bolivar Elks Lodge 2828, 1999 W Broadway St in Bolivar, MO.",
-  "start": "2026-12-19",
-  "end": null,
+  "description": "This is a celebration of Gary and Betty's 55th anniversary, where guests come together to mark the milestone. It takes place on Saturday, December 19, 2026, from 5:30 PM to 8:30 PM at Bolivar Elks Lodge 2828, 1999 W Broadway St in Bolivar, MO.",
+  "start": "2026-12-19T23:30:00+00:00",
+  "end": "2026-12-20T02:30:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "Bolivar Elks Lodge 2828",
   "address": "1999 W Broadway St,Bolivar,MO,United States, Bolivar, MO",
   "city": "Bolivar",
@@ -28,7 +27,7 @@
   "source_urls": [
     "https://happeningnext.com/event/gary-andamp-betty-55th-anniversary-celebration-eid3a0e96xijr"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "gary-betty-55th-anniversary-celebration-2026-12-19",
   "city_slug": "bolivar",
   "path": "/events/bolivar/gary-betty-55th-anniversary-celebration-2026-12-19/",

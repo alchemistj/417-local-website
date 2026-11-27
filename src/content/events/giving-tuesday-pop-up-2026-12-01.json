@@ -1,0 +1,33 @@
+{
+  "id": "fa40f1e7-270d-48ec-8dee-e9a3a135b995",
+  "slug": "giving-tuesday-pop-up",
+  "title": "Giving Tuesday Pop Up",
+  "seo_title": "Giving Tuesday Pop Up in Joplin, MO | Dec 1, 2026",
+  "description": "Giving Tuesday Pop Up is a pop-up shop hosted by Rapha International where you can stop by, say hi, and do some Christmas shopping. Drinks and snacks are available while supplies last. It runs Tuesday, December 1, 2026, from 3:00 PM to 7:00 PM at 2501 E 20th St in Joplin, MO.",
+  "start": "2026-12-01T21:00:00+00:00",
+  "end": "2026-12-02T01:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "2501 E 20th St, Joplin, MO, United States, Missouri 64804",
+  "address": "2501 E 20th St, Joplin, MO 64804-1037, United States, Joplin, MO",
+  "city": "Joplin",
+  "state": "MO",
+  "organizer": {
+    "name": "Rapha International",
+    "website": null
+  },
+  "categories": [
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/giving-tuesday-pop-up-eid3a0eco8od9",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czYvYmFubmVycy85ZWFlMmExOTIyM2EwNmU1MGEyN2U1ZTc1MzQ1ZWY0MGE2NzY3OWI1NTkzYzQwMDBkNGE3NjA1Y2YxNWRiMWNhLXJpbWctdzk2MC1oMzU1LWRjYThiOGM4LWdtaXI_dj0xNzk1NTg1MTk1.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/giving-tuesday-pop-up-eid3a0eco8od9"
+  ],
+  "updated_at": "2026-11-27T10:31:44.965Z",
+  "public_slug": "giving-tuesday-pop-up-2026-12-01",
+  "city_slug": "joplin",
+  "path": "/events/joplin/giving-tuesday-pop-up-2026-12-01/",
+  "action_type": "details"
+}

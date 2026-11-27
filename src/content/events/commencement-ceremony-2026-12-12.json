@@ -3,11 +3,10 @@
   "slug": "commencement-ceremony",
   "title": "Commencement Ceremony",
   "seo_title": "Commencement Ceremony at Missouri Southern, Joplin MO",
-  "description": "This is the 87th commencement ceremony at Missouri Southern State University, honoring the accomplishments of fall 2026 graduates. It takes place at the Leggett & Platt Athletic Center, 3950 Newman Rd in Joplin, Missouri, on December 12, 2026, with the time to be determined (Time TBD).",
-  "start": "2026-12-12",
+  "description": "This is the 87th commencement ceremony at Missouri Southern State University, held to honor the accomplishments of fall 2026 graduates. It takes place on Saturday, December 12, 2026 at 10:00 AM at the Leggett & Platt Athletic Center, 3950 Newman Rd in Joplin, Missouri.",
+  "start": "2026-12-12T16:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "3950 Newman Rd, Joplin, MO, United States, Missouri 64801",
   "address": "3950 Newman Rd, Joplin, MO 64801-1512, United States, Joplin, MO",
   "city": "Joplin",
@@ -31,7 +30,7 @@
   "source_urls": [
     "https://happeningnext.com/event/commencement-ceremony-eid3a0eapbtiw"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "commencement-ceremony-2026-12-12",
   "city_slug": "joplin",
   "path": "/events/joplin/commencement-ceremony-2026-12-12/",

@@ -3,11 +3,10 @@
   "slug": "erimish-black-friday-pop-up-event",
   "title": "Erimish BLACK FRIDAY Pop Up Event",
   "seo_title": "Erimish Black Friday Pop Up Event in Joplin, MO",
-  "description": "This is a Black Friday morning pop-up shop where you can shop in person for savings, exclusive goodies and surprises, plus a Doorbuster Goodies Table with extra deals. The first 50 people through the door get a free cabana bag with a $50+ purchase, and Doorbuster Goodies are excluded from additional discounts. It takes place November 27, 2026 (Time TBD) at the Erimish Pop Up Shop in Joplin, MO.",
-  "start": "2026-11-27",
-  "end": null,
+  "description": "This is a Black Friday morning pop up shop from Erimish where shoppers can come in person for savings, exclusive goodies and surprises, plus a Doorbuster Goodies Table with extra deals. The first 50 people through the door get a free cabana bag with a $50+ purchase, and Doorbuster Goodies are excluded from additional discounts. It runs Friday, November 27, 2026, from 9:00 AM to 12:00 PM at 5399 Hwy 43 in Joplin, MO.",
+  "start": "2026-11-27T15:00:00+00:00",
+  "end": "2026-11-27T18:00:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "5399 Hwy 43, Joplin, MO, United States, Missouri 64801",
   "address": "5361 N Main St Rd, Joplin, MO 64801-8726, United States, Joplin, MO",
   "city": "Joplin",
@@ -31,7 +30,7 @@
   "source_urls": [
     "https://happeningnext.com/event/erimish-black-friday-pop-up-event-eid3a0e9vnux9"
   ],
-  "updated_at": "2026-11-26T00:17:02.533Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "erimish-black-friday-pop-up-event-2026-11-27",
   "city_slug": "joplin",
   "path": "/events/joplin/erimish-black-friday-pop-up-event-2026-11-27/",
