@@ -396,7 +396,7 @@ export function eventJsonLd(event: EventData): Record<string, unknown> {
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     url: pageUrl,
-    description: event.description?.trim() || eventMetaDescription(event),
+    description: eventDescriptionBody(event) || eventMetaDescription(event),
     location: {
       "@type": "Place",
       ...(venue ? { name: venue } : {}),
