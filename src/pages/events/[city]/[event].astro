@@ -47,6 +47,8 @@ import {
   eventMetaDescription,
   eventPageTitle,
   eventPlaceLine,
+  eventDescriptionBody,
+  venueIsJustAddress,
   eventPriceText,
   moreInCategory,
   relatedUpcoming,
@@ -154,7 +156,9 @@ const venuePost = venue ? venueGuidePath(venue, posts) : null;
 const venueHref = venuePost || maps;
 const venueExternal = !venuePost;
 const state = event && typeof event.state === "string" && event.state.trim() ? event.state.trim() : "MO";
-const placeLine = event && (venue || address) ? eventPlaceLine(venue, address, cityName, state) : "";
+const placeVenue = venueIsJustAddress(venue, address) ? "" : venue;
+const placeLine = event && (placeVenue || address) ? eventPlaceLine(placeVenue, address, cityName, state) : "";
+const body = event ? eventDescriptionBody(event) : "";
 const nearby = event && !passed ? collapseRuns(uniqueUpcomingEvents(allEvents, recurring, city, now), allEvents, now, event).filter((item) => item.id !== event.id).slice(0, 8) : [];
 const taxonomy = event ? classifyEvent(event) : null;
 const businessCityPage = event && taxonomy?.audience === "B2B"
@@ -255,7 +259,7 @@ const outbound = (href: string) => href.startsWith("http");
         <EventList events={related} idPrefix="related" />
       </section>
     )}
-    {event.description && <p>{event.description}</p>}
+    {body && <p>{body}</p>}
     {placeLine && (
       <p>
         {placeLine}
