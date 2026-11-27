@@ -1,0 +1,33 @@
+{
+  "id": "c9971f7d-47b7-477d-a0af-79566c88b107",
+  "slug": "david-koechner-live-springfield-comedy-club",
+  "title": "David Koechner LIVE - Springfield Comedy Club",
+  "seo_title": "David Koechner Live at Springfield Comedy Club",
+  "description": "This is a live comedy show featuring David Koechner, where you can watch a stand-up performance in person. It takes place on Thursday, December 31, 2026 at 7:30 PM at Springfield Comedy Club, 420 W College St in Springfield, Missouri.",
+  "start": "2027-01-01T01:30:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Springfield Comedy Club",
+  "address": "420 W College St,Springfield, Missouri, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "David Koechner",
+    "website": "https://allevents.in/org/david-koechner/1221481"
+  },
+  "categories": [
+    "comedy"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/david-koechner-live-springfield-comedy-club/200031038074905",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czkvYmFubmVycy80ZDUwMzM4ODU3YjRiNGFhNzBjY2EzNjA4OGVhMTU1MzAzOGJlM2MxZDdmODQ0MDM2NTZhNDRjYmViNjQwYWE5LXJpbWctdzEyMDAtaDYzMC1kYzA4NDg1OC1nbWlyP3Y9MTc5NDU0NzAyNA.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/david-koechner-live-springfield-comedy-club/200031038074905"
+  ],
+  "updated_at": "2026-11-27T15:22:41.395Z",
+  "public_slug": "david-koechner-live-springfield-comedy-club-2026-12-31",
+  "city_slug": "springfield",
+  "path": "/events/springfield/david-koechner-live-springfield-comedy-club-2026-12-31/",
+  "action_type": "details"
+}

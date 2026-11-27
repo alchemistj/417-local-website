@@ -3,11 +3,10 @@
   "slug": "young-entrepreneurs-christmas-market",
   "title": "Young Entrepreneurs Christmas Market",
   "seo_title": "Young Entrepreneurs Christmas Market in Springfield, MO",
-  "description": "The Young Entrepreneurs Christmas Market is a holiday festival in Springfield, Missouri. It takes place on December 3, 2026, with the time to be determined. The event is held at Graceway Baptist Church, 5010 S Farm Road 135.",
-  "start": "2026-12-03",
-  "end": null,
+  "description": "Wisdom Academy's annual Christmas Market is where students sell their handmade work as young entrepreneurs, including Christmas decorations, baked goods, crafts, sewn and crocheted items, 3D-printed items, candles, and soaps. Visitors can shop for gifts and are invited to bring family and friends. It runs Thursday, December 3, 2026, from 2:00 to 3:00 PM at Graceway Baptist Church, 5010 S Farm Road 135, Springfield, MO.",
+  "start": "2026-12-03T20:00:00+00:00",
+  "end": "2026-12-03T21:00:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "Graceway baptist church springfield mo 65810",
   "address": "5010 S Farm Road 135, Springfield, MO 65810-1982, United States, Springfield, MO",
   "city": "Springfield",
@@ -17,6 +16,7 @@
     "website": "https://allevents.in/org/wisdom-academy/25925692"
   },
   "categories": [
+    "classes-and-workshops",
     "festivals",
     "holiday"
   ],
@@ -28,7 +28,7 @@
     "https://happeningnext.com/event/young-entrepreneurs-christmas-market-eid3a0ecq2gfc",
     "https://allevents.in/springfield/young-entrepreneurs-christmas-market/200031124677626"
   ],
-  "updated_at": "2026-11-27T15:04:30.021Z",
+  "updated_at": "2026-11-27T15:22:41.395Z",
   "public_slug": "young-entrepreneurs-christmas-market-2026-12-03",
   "city_slug": "springfield",
   "path": "/events/springfield/young-entrepreneurs-christmas-market-2026-12-03/",

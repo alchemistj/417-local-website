@@ -3,11 +3,10 @@
   "slug": "2027-home-outdoor-living-show-of-greater-springfield",
   "title": "2027 Home & Outdoor Living Show of Greater Springfield",
   "seo_title": "2027 Home & Outdoor Living Show in Springfield, MO",
-  "description": "This annual home and outdoor living show lets visitors meet local home professionals face-to-face, including builders, remodelers, designers, landscapers and other home industry experts. Explore products, services and the latest home trends, get expert advice during Shop Talks, and find ideas for remodeling, building a new home or refreshing an outdoor space; families are welcome, children under 12 and veterans are admitted free, and parking is free. It takes place January 8, 2027 (time TBD) at Wilson Logistics Arena, 3001 N Grant Ave in Springfield, MO.",
-  "start": "2027-01-08",
-  "end": null,
+  "description": "This annual home and outdoor living show lets visitors meet local builders, remodelers, designers, landscapers and other home industry experts face-to-face, explore products and services, and get advice during Shop Talks. It suits anyone planning a remodel, a new home or an outdoor refresh, and families are welcome; children under 12 and veterans are admitted free, and parking is free. It runs Friday, January 8, 2027 at 10:00 AM through Sunday, January 10 at 4:00 PM at Wilson Logistics Arena, 3001 N Grant Ave in Springfield, MO.",
+  "start": "2027-01-08T16:00:00+00:00",
+  "end": "2027-01-10T22:00:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "Wilson Logistics Arena",
   "address": "3001 N Grant Ave, Springfield, MO 65803-1021, United States, Springfield, MO",
   "city": "Springfield",
@@ -26,7 +25,7 @@
   "source_urls": [
     "https://happeningnext.com/event/2027-home-andamp-outdoor-living-show-of-greater-springfield-eid3a0e7ueuvw"
   ],
-  "updated_at": "2026-11-27T15:04:30.021Z",
+  "updated_at": "2026-11-27T15:22:41.395Z",
   "public_slug": "home-outdoor-living-show-of-greater-springfield-2027-01-08",
   "city_slug": "springfield",
   "path": "/events/springfield/home-outdoor-living-show-of-greater-springfield-2027-01-08/",

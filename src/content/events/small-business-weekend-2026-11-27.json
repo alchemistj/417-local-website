@@ -3,11 +3,10 @@
   "slug": "small-business-weekend",
   "title": "Small Business Weekend",
   "seo_title": "Small Business Weekend in Springfield, MO – Nov 27-28",
-  "description": "Small Business Weekend is Finding You Treasures' annual holiday shopping event, where you browse booths with discounts of 10%, 25% or 50% off, and a few at 75% off. Festive music will be playing. It runs Friday, November 27 and Saturday, November 28, 2026, from 9:30 am to 5:30 pm at 1027 S Glenstone Ave in Springfield, MO.",
-  "start": "2026-11-27",
-  "end": null,
+  "description": "Small Business Weekend is a two-day holiday shopping event hosted by Finding You Treasures, where booths offer 10%, 25% or 50% off, with a few at 75% off. Festive music will be playing as you shop. It runs Friday, November 27 and Saturday, November 28, 2026, from 9:30 AM to 5:30 PM at 1027 S Glenstone Ave in Springfield, MO.",
+  "start": "2026-11-27T15:30:00+00:00",
+  "end": "2026-11-28T23:30:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "1027 S Glenstone Ave, Springfield, MO 65804-0311, United States",
   "address": "1027 S Glenstone Ave, Springfield, MO 65804-0311, United States, Springfield, MO",
   "city": "Springfield",
@@ -17,8 +16,7 @@
     "website": "https://allevents.in/org/jessica-murray/20678656"
   },
   "categories": [
-    "entrepreneurship",
-    "holiday"
+    "entrepreneurship"
   ],
   "price": null,
   "is_free": null,
@@ -28,7 +26,7 @@
     "https://happeningnext.com/event/small-business-weekend-eid3a0ebgqn0p",
     "https://allevents.in/springfield/small-business-weekend/200031066829733"
   ],
-  "updated_at": "2026-11-27T15:04:30.021Z",
+  "updated_at": "2026-11-27T15:22:41.395Z",
   "public_slug": "small-business-weekend-2026-11-27",
   "city_slug": "springfield",
   "path": "/events/springfield/small-business-weekend-2026-11-27/",

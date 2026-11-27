@@ -3,11 +3,10 @@
   "slug": "small-business-saturday-get-together",
   "title": "Small Business Saturday Get Together",
   "seo_title": "Small Business Saturday Get Together in Springfield, MO",
-  "description": "This is a Small Business Saturday gathering where Plot Twist Comics and Games hosts other local small businesses, so visitors can shop from several vendors in one place. It takes place on November 28, 2026, Time TBD, at 1901 S Glenstone Ave in Springfield, Missouri.",
-  "start": "2026-11-28",
-  "end": null,
+  "description": "This is a Small Business Saturday gathering hosted by Plot Twist Comics and Games, where other local small businesses join to offer one-stop shopping and visitors can browse what each has to offer. It takes place on Saturday, November 28, 2026, from 12:00 PM to 5:00 PM at 1901 S Glenstone Ave in Springfield, Missouri.",
+  "start": "2026-11-28T18:00:00+00:00",
+  "end": "2026-11-28T23:00:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "1901E South Glenstone, Springfield, MO, United States, Missouri 65804",
   "address": "1901 S Glenstone Ave, Springfield, MO 65804, United States, Springfield, MO",
   "city": "Springfield",
@@ -26,7 +25,7 @@
   "source_urls": [
     "https://allevents.in/springfield/small-business-saturday-get-together/200031001200623"
   ],
-  "updated_at": "2026-11-27T15:04:30.021Z",
+  "updated_at": "2026-11-27T15:22:41.395Z",
   "public_slug": "small-business-saturday-get-together-2026-11-28",
   "city_slug": "springfield",
   "path": "/events/springfield/small-business-saturday-get-together-2026-11-28/",

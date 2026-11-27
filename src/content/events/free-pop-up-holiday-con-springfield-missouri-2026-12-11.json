@@ -2,33 +2,32 @@
   "id": "16cd8d0c-63d6-49ca-b038-c52d3bd2a680",
   "slug": "free-pop-up-holiday-con-springfield-missouri",
   "title": "Free Pop-Up Holiday Con: Springfield, Missouri",
-  "seo_title": "Free Pop-Up Holiday Con in Springfield, MO – Dec 11",
-  "description": "Free Pop-Up Holiday Con is a holiday-themed convention event in Springfield, Missouri. It takes place on December 11, 2026, with the time to be determined, at the University Plaza Hotel & Convention Center, 333 S John Q Hammons Pkwy.",
-  "start": "2026-12-11",
-  "end": null,
+  "seo_title": "Free Pop-Up Holiday Con in Springfield, MO",
+  "description": "This is a free-admission holiday pop-up convention where visitors can get free photo ops with Santa Claus and the Grinch, and earn free 9\"x12\" prints by tagging someone on Instagram or sharing the event on Facebook. Another free print is offered for liking and following; photo op times and details are listed in the event FAQ. It runs Friday, December 11, 2026 at 5:00 PM through Sunday, December 13, 2026 at 6:00 PM at University Plaza Hotel & Convention Center, 333 S John Q Hammons Pkwy in Springfield, Missouri.",
+  "start": "2026-12-11T23:00:00+00:00",
+  "end": "2026-12-14T00:00:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "University Plaza Hotel & Convention Center",
   "address": "333 S John Q Hammons Pkwy, Springfield, MO 65806-2543, United States, Springfield, MO",
   "city": "Springfield",
   "state": "MO",
   "organizer": {
     "name": "Amazing Art Expo",
-    "website": "https://allevents.in/org/amazing-art-expo/11483169"
+    "website": null
   },
   "categories": [
     "holiday"
   ],
   "price": null,
-  "is_free": null,
+  "is_free": true,
   "registration_url": "https://allevents.in/springfield/free-pop-up-holiday-con-springfield-missouri/200031046950216",
   "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czQvYmFubmVycy82ZDZkYzkyYTIxZDRlNmQwNDk1ZTcxNDg4N2I0NzRjMTcxN2NkNjJmN2FmNjc2OTRlODY5NzI3ODBkYzRjOWZhLXJpbWctdzEwODAtaDEwODAtZGMxODE4MTgtZ21pcj92PTE3OTQ2NjY3MzY.avif",
   "source_urls": [
     "https://allevents.in/springfield/free-pop-up-holiday-con-springfield-missouri/200031046950216"
   ],
-  "updated_at": "2026-11-27T15:04:30.021Z",
+  "updated_at": "2026-11-27T15:22:41.395Z",
   "public_slug": "free-pop-up-holiday-con-springfield-missouri-2026-12-11",
   "city_slug": "springfield",
   "path": "/events/springfield/free-pop-up-holiday-con-springfield-missouri-2026-12-11/",
-  "action_type": "details"
+  "action_type": "show_up"
 }

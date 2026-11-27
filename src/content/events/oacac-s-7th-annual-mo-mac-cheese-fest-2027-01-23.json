@@ -1,0 +1,35 @@
+{
+  "id": "5368f1e0-5f1e-457b-85a2-1bba31954a1c",
+  "slug": "oacacs-7th-annual-mo-mac-cheese-fest",
+  "title": "OACAC's 7th Annual MO Mac & Cheese Fest",
+  "seo_title": "7th Annual MO Mac & Cheese Fest in Springfield, MO",
+  "description": "OACAC's MO Mac & Cheese Fest is a tasting event where you sample mac & cheese from local and regional favorites, enjoy activities for kids of all ages, and take photos with the Mac & Cheese King & Queen and their buddies, Owen & Sophia. Entry is free for children 4 and under, and proceeds benefit the Ozarks Area Community Action Corporation's work to address poverty in Southwest Missouri. It takes place January 23, 2027, Time TBD, at the University Plaza Hotel & Convention Center in Springfield, MO.",
+  "start": "2027-01-23",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "annual": true,
+  "venue": "University Plaza Hotel & Convention Center",
+  "address": "333 S John Q Hammons Pkwy, Springfield, MO 65806-2543, United States, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "OACAC Ozarks Area Community Action Corporation",
+    "website": "https://allevents.in/org/oacac-ozarks-area-community-action-corporation/7156582"
+  },
+  "categories": [
+    "kids"
+  ],
+  "price": null,
+  "is_free": true,
+  "registration_url": "https://allevents.in/springfield/oacacs-7th-annual-mo-mac-and-cheese-fest/200030587356935",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czUvYmFubmVycy9hZDNiNWY3MjVjODNlMjA0ZTc5NDA4MDYzOTkyNmFjNTFmNTA4OTJjNTg0ODg2YmVhY2I3OWQ0ZjA4ZDM1NWJhLXJpbWctdzEyMDAtaDY3NS1kY2Y4YjgzOC1nbWlyP3Y9MTc4ODQ0NTc4NA.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/oacacs-7th-annual-mo-mac-and-cheese-fest/200030587356935"
+  ],
+  "updated_at": "2026-11-27T15:22:41.395Z",
+  "public_slug": "oacac-s-7th-annual-mo-mac-cheese-fest-2027-01-23",
+  "city_slug": "springfield",
+  "path": "/events/springfield/oacac-s-7th-annual-mo-mac-cheese-fest-2027-01-23/",
+  "action_type": "show_up"
+}

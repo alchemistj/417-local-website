@@ -2,8 +2,8 @@
   "id": "c495cefa-bc64-49e0-b7d4-9cc66bf18678",
   "slug": "christmas-at-the-farmstead",
   "title": "Christmas At the Farmstead",
-  "seo_title": "Christmas At the Farmstead in Springfield, MO – Dec 5",
-  "description": "Christmas At the Farmstead is a holiday event hosted by The Gray Campbell Farmstead. It takes place on Saturday, December 5, 2026 at 1:00 PM at 2400 S Scenic Ave in Springfield, Missouri.",
+  "seo_title": "Christmas at the Farmstead in Springfield, MO",
+  "description": "Christmas at the Farmstead is an old-fashioned holiday event with hot cocoa, cookies, tree trimming, music, and a visit with Santa. You can also shop at Santa's Workshop for craft kits that work as stocking stuffers. It takes place Saturday, December 5, 2026, from 1 to 3 PM and again from 5 to 8 PM at 2400 S Scenic Ave in Springfield, Missouri.",
   "start": "2026-12-05T19:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -16,6 +16,7 @@
     "website": "https://allevents.in/org/the-gray-campbell-farmstead/11778884"
   },
   "categories": [
+    "professional-development",
     "holiday"
   ],
   "price": null,
@@ -25,7 +26,7 @@
   "source_urls": [
     "https://allevents.in/springfield/christmas-at-the-farmstead/200031080741403"
   ],
-  "updated_at": "2026-11-27T15:04:30.021Z",
+  "updated_at": "2026-11-27T15:22:41.395Z",
   "public_slug": "christmas-at-farmstead-2026-12-05",
   "city_slug": "springfield",
   "path": "/events/springfield/christmas-at-farmstead-2026-12-05/",

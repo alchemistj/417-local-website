@@ -3,11 +3,10 @@
   "slug": "a-day-at-the-apothecary-small-business-saturday-at-agape-apothecary",
   "title": "A Day at the Apothecary: Small Business Saturday at Agape Apothecary",
   "seo_title": "Small Business Saturday at Agape Apothecary, Springfield",
-  "description": "A Day at the Apothecary is a Small Business Saturday event at Agape Apothecary, a business in Springfield, Missouri. The facts given do not say what activities are planned or who it is aimed at. It takes place on November 28, 2026, Time TBD, at 1740 S. Glenstone, Suite A, Springfield, MO 65804.",
-  "start": "2026-11-28",
-  "end": null,
+  "description": "This is a Small Business Saturday gathering at Agape Apothecary where you can sip herbal tea, make your own single-serving tea blend, and browse handmade herbal products. It suits holiday gift shoppers and anyone curious about the Apothecary, and it is free to attend. It runs Saturday, November 28, 2026, from 11:00 AM to 3:00 PM at 1740 S. Glenstone, Suite A, in Springfield, MO, and you can come and go during those hours.",
+  "start": "2026-11-28T17:00:00+00:00",
+  "end": "2026-11-28T21:00:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "1740 S. Glenstone, Suite A, Springfield, MO 65804",
   "address": "1740 S Glenstone Ave, Springfield, MO 65804-1511, United States, Springfield, MO",
   "city": "Springfield",
@@ -17,18 +16,19 @@
     "website": "https://allevents.in/org/kit-creemer/20357384"
   },
   "categories": [
-    "entrepreneurship"
+    "entrepreneurship",
+    "holiday"
   ],
-  "price": null,
-  "is_free": null,
+  "price": "Free",
+  "is_free": true,
   "registration_url": "https://allevents.in/springfield/a-day-at-the-apothecary-small-business-saturday-at-agape-apothecary/200031136879643",
   "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czQvYmFubmVycy8yYWZiMGM5OTYzY2M2NTk1M2VhYzIwMTRjNTZkMDg2ZTgyOWJjNjdjMGZlNWRjNTgxZjdiYTE2MmRkN2UxMjY3LXJpbWctdzc0Mi1oOTYwLWRjZjhmOGY4LWdtaXI_dj0xNzk1NjQ2OTgz.avif",
   "source_urls": [
     "https://allevents.in/springfield/a-day-at-the-apothecary-small-business-saturday-at-agape-apothecary/200031136879643"
   ],
-  "updated_at": "2026-11-27T15:04:30.021Z",
+  "updated_at": "2026-11-27T15:22:41.395Z",
   "public_slug": "day-at-apothecary-small-business-saturday-at-agape-2026-11-28",
   "city_slug": "springfield",
   "path": "/events/springfield/day-at-apothecary-small-business-saturday-at-agape-2026-11-28/",
-  "action_type": "details"
+  "action_type": "show_up"
 }

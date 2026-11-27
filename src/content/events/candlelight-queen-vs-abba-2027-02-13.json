@@ -3,7 +3,7 @@
   "slug": "candlelight-queen-vs-abba",
   "title": "Candlelight: Queen vs. ABBA",
   "seo_title": "Candlelight: Queen vs. ABBA in Springfield, MO",
-  "description": "Candlelight: Queen vs. ABBA is a live concert where you listen to the music of Queen and ABBA in a candlelit setting. It takes place at Stone Chapel at Drury University, 900 N Benton Ave, in Springfield, MO, on February 13, 2027, Time TBD.",
+  "description": "Candlelight: Queen vs. ABBA is a 60-minute tribute concert of Queen and ABBA music, performed under candlelight at Stone Chapel at Drury University. It is for ages 8 and up, and anyone under 16 must be accompanied by an adult. It takes place February 13, 2027 (time TBD) at 900 N Benton Ave in Springfield, MO, with tickets starting at USD 41; doors open 45 minutes before the show, there is no entry once it starts, and seating is first come, first served in each zone.",
   "start": "2027-02-13",
   "end": null,
   "timezone": "America/Chicago",
@@ -13,21 +13,21 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": null,
-    "website": null
+    "name": "Feverup Events",
+    "website": "https://allevents.in/org/feverup-events/21941761"
   },
   "categories": [
     "live-music",
     "arts-and-theater"
   ],
-  "price": null,
-  "is_free": null,
+  "price": "Starting at USD 41",
+  "is_free": false,
   "registration_url": "https://allevents.in/springfield/candlelight-queen-vs-abba/2700030443558201",
-  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEvYmFubmVycy8xNDZkNzMwMC1lN2RhLTExZjEtOWY5OS03ZDNmMjQ5ZDFlNWYtcmltZy13NTUwLWg1NTAtZGMxODA4MDgtZ21pci5qcGc_dj0xNzk1NTA1OTk2.avif",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEvYmFubmVycy9lNjZmZWQ5MC1lYTM0LTExZjEtYTljMS05MzZkNzg1MjA5ZDMtcmltZy13NTUwLWg1NTAtZGMxODA4MDgtZ21pci5qcGc_dj0xNzk1NzY1MTUz.avif",
   "source_urls": [
     "https://allevents.in/springfield/candlelight-queen-vs-abba/2700030443558201"
   ],
-  "updated_at": "2026-11-27T15:04:30.021Z",
+  "updated_at": "2026-11-27T15:22:41.395Z",
   "public_slug": "candlelight-queen-vs-abba-2027-02-13",
   "city_slug": "springfield",
   "path": "/events/springfield/candlelight-queen-vs-abba-2027-02-13/",

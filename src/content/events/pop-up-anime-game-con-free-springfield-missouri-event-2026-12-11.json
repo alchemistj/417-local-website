@@ -2,8 +2,8 @@
   "id": "b4b45f0c-e422-4a00-8cea-9aae6c42e82c",
   "slug": "anime-game-pop-up-con-with-a-holiday-twist-free-springfield-event",
   "title": "Anime & Game Pop Up Con with a Holiday Twist: Free Springfield Event",
-  "seo_title": "Anime & Game Pop Up Con with a Holiday Twist, Springfield",
-  "description": "This is an anime and game pop-up convention with a holiday twist, and the summary notes free admission plus a free 9\"x12\" print. Admission is free, and an optional VIP ticket costs $15. It runs Friday, December 11, 2026 at 5:00 PM through Sunday, December 13 at 6:00 PM at University Plaza Hotel & Convention Center, 333 South John Q Hammons Parkway in Springfield, MO.",
+  "seo_title": "Anime & Game Pop Up Con Holiday Event in Springfield, MO",
+  "description": "This is an anime and game pop-up convention with a holiday twist, with free admission and a free 9\"x12\" print. It runs from Friday, December 11, 2026 at 5:00 PM to Sunday, December 13, 2026 at 6:00 PM at University Plaza Hotel & Convention Center, 333 South John Q Hammons Parkway in Springfield, MO.",
   "start": "2026-12-11T23:00:00+00:00",
   "end": "2026-12-14T00:00:00+00:00",
   "timezone": "America/Chicago",
@@ -12,24 +12,24 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Amazing Art Expo",
-    "website": "https://allevents.in/org/amazing-art-expo/11483169"
+    "name": null,
+    "website": null
   },
   "categories": [
     "holiday"
   ],
-  "price": "Free admission; optional VIP ticket $15",
+  "price": null,
   "is_free": true,
   "registration_url": "https://www.eventbrite.com/e/anime-game-pop-up-con-with-a-holiday-twist-free-springfield-event-tickets-2005238042966",
-  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1198505063%2F900052591133%2F1%2Foriginal.20261123-011628?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=e79189a582c8d3cfa2a073157fac2663",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1198505063%2F900052591133%2F1%2Foriginal.20261123-011628?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=dcd15e3ee537ba391801ad8b0e607284",
   "source_urls": [
     "https://allevents.in/springfield/pop-up-anime-and-game-con-free-springfield-missouri-event/200031059273819",
     "https://www.eventbrite.com/e/anime-game-pop-up-con-with-a-holiday-twist-free-springfield-event-tickets-2005238042966",
     "https://www.eventbrite.com/e/horror-pop-up-con-with-a-holiday-twist-free-springfield-event-tickets-2005238854393"
   ],
-  "updated_at": "2026-11-27T15:04:30.021Z",
+  "updated_at": "2026-11-27T15:22:41.395Z",
   "public_slug": "pop-up-anime-game-con-free-springfield-missouri-event-2026-12-11",
   "city_slug": "springfield",
   "path": "/events/springfield/pop-up-anime-game-con-free-springfield-missouri-event-2026-12-11/",
-  "action_type": "tickets"
+  "action_type": "details"
 }

@@ -2,8 +2,8 @@
   "id": "7f243252-d87d-469b-82ac-d2dbf9e1e71c",
   "slug": "christmas-lights-tour-the-11th-edition",
   "title": "Christmas Lights Tour - The 11th Edition",
-  "seo_title": "Christmas Lights Bike Tour, 11th Edition in Springfield, MO",
-  "description": "This is a free group bike ride around Springfield to look at Christmas decorations, covering a 10-12 mile route with Christmas music playing from a big speaker. Riders can decorate themselves and their bikes; the ride is in the dark and likely cold, so dress warmly, and headlights and taillights are required. It starts Saturday, December 19, 2026 at 6:00 PM and runs until about 7:30 PM at Jarrett Middle School, 906 W Portland St, Springfield, MO.",
+  "seo_title": "Christmas Lights Bike Tour, 11th Edition – Springfield, MO",
+  "description": "This is a free group bike ride around Springfield on a 10-12 mile route to look at Christmas decorations, with Christmas music playing from a speaker. Riders can decorate themselves and their bikes, and headlights and taillights are required; the ride is in the dark and likely cold, so dress accordingly. It takes place Saturday, December 19, 2026, from 6:00 PM to 7:30 PM, starting at Jarrett Middle School, 906 W Portland St, Springfield, MO.",
   "start": "2026-12-20T00:00:00+00:00",
   "end": "2026-12-20T01:30:00+00:00",
   "timezone": "America/Chicago",
@@ -19,15 +19,15 @@
     "holiday"
   ],
   "price": null,
-  "is_free": true,
+  "is_free": null,
   "registration_url": "https://allevents.in/springfield/christmas-lights-tour-the-11th-edition/200031087110847",
   "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEwL2Jhbm5lcnMvYWM5NDA4ZGI4ZjFjN2Y2NDk4N2ZhOWNiYjEzZDhjNzY4MDMxNDQxNjVkMGU1Mzc3M2M0NWJkNzFlNjJiNzAzMi1yaW1nLXc5NjAtaDcyMC1kYzI4NDhiOC1nbWlyP3Y9MTc5NTE3NzMwNw.avif",
   "source_urls": [
     "https://allevents.in/springfield/christmas-lights-tour-the-11th-edition/200031087110847"
   ],
-  "updated_at": "2026-11-27T15:04:30.021Z",
+  "updated_at": "2026-11-27T15:22:41.395Z",
   "public_slug": "christmas-lights-tour-11th-edition-2026-12-19",
   "city_slug": "springfield",
   "path": "/events/springfield/christmas-lights-tour-11th-edition-2026-12-19/",
-  "action_type": "show_up"
+  "action_type": "details"
 }

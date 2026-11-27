@@ -3,11 +3,10 @@
   "slug": "small-business-academy",
   "title": "Small Business Academy",
   "seo_title": "Small Business Academy in Springfield, MO – Dec 15",
-  "description": "Small Business Academy is a free monthly session where business owners and professionals hear practical advice from industry professionals on a different topic each time, such as marketing strategies, financial management, and industry trends and technology. Attendees can connect with one another in a relaxed setting, and appetizers, entrees, and happy hour specials are available at the restaurant; bring a notepad, pen, and business cards. It takes place Tuesday, December 15, 2026 (Time TBD) at Big Whiskey's American Restaurant & Bar, 1550 E Battlefield St, Springfield, MO.",
-  "start": "2026-12-15",
-  "end": null,
+  "description": "Small Business Academy is a free monthly session for business owners and professionals, with each meeting covering a different topic such as marketing, financial management, or industry trends and technology, along with practical advice from industry professionals. Attendees can meet other business owners in a relaxed setting, order food and happy hour specials at Big Whiskey's, and should bring a notepad, pen, and business cards. It takes place Tuesday, December 15, 2026, from 5:30 to 7:30 PM at Big Whiskey's American Restaurant & Bar, 1550 E Battlefield St, Springfield, MO.",
+  "start": "2026-12-15T23:30:00+00:00",
+  "end": "2026-12-16T01:30:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "Big Whiskey's American Restaurant & Bar (Battlefield Rd.)",
   "address": "1550 E Battlefield St, Springfield, MO 65804-3700, United States, Springfield, MO",
   "city": "Springfield",
@@ -19,17 +18,17 @@
   "categories": [
     "entrepreneurship"
   ],
-  "price": "Free",
-  "is_free": true,
+  "price": null,
+  "is_free": null,
   "registration_url": "https://happeningnext.com/event/small-business-academy-eid3a0ebr6qfa",
   "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEwL2Jhbm5lcnMvMjljNDVjMWRiMzBkNTYwOTllY2VmNDY1Yjk5NDU2ZDUwZTBlYzI1MWY3NmQyYTE2NWY1NTRjODE4MjY4ZmNmMC1yaW1nLXcxMjAwLWg0NTItZGNmOGY4ZjgtZ21pcj92PTE3OTUxMDAzNTI.avif",
   "source_urls": [
     "https://happeningnext.com/event/small-business-academy-eid3a0ebr6qfa",
     "https://allevents.in/springfield/small-business-academy/200031080747312"
   ],
-  "updated_at": "2026-11-27T15:04:30.021Z",
+  "updated_at": "2026-11-27T15:22:41.395Z",
   "public_slug": "small-business-academy-2026-12-15",
   "city_slug": "springfield",
   "path": "/events/springfield/small-business-academy-2026-12-15/",
-  "action_type": "show_up"
+  "action_type": "details"
 }

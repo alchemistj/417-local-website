@@ -2,8 +2,8 @@
   "id": "01525a87-3e0d-4be3-8d44-c53406511a5d",
   "slug": "candlelight-christmas-carols-on-strings",
   "title": "Candlelight: Christmas Carols on Strings",
-  "seo_title": "Candlelight: Christmas Carols on Strings in Springfield, MO",
-  "description": "Candlelight: Christmas Carols on Strings is a holiday event where you can listen to Christmas carols performed on strings. It takes place on December 19, 2026, with the time to be determined, at the Stone Chapel at Drury University, 900 N Benton Ave in Springfield, MO.",
+  "seo_title": "Candlelight: Christmas Carols on Strings, Springfield",
+  "description": "Candlelight: Christmas Carols on Strings is a 60-minute live string concert of Christmas carols performed by candlelight, presented as a tribute concert that is not affiliated with or endorsed by the artist. It is for ages 8 and older, and anyone under 16 must be accompanied by an adult. It takes place December 19, 2026 (time TBD) at Stone Chapel at Drury University, 900 N Benton Ave, Springfield, MO, with tickets from USD 49; doors open 30 minutes before the show and there is no entry once it starts.",
   "start": "2026-12-19",
   "end": null,
   "timezone": "America/Chicago",
@@ -17,16 +17,18 @@
     "website": "https://allevents.in/org/feverup-events/21941761"
   },
   "categories": [
+    "live-music",
+    "arts-and-theater",
     "holiday"
   ],
-  "price": null,
-  "is_free": null,
+  "price": "From USD 49",
+  "is_free": false,
   "registration_url": "https://allevents.in/springfield/candlelight-christmas-carols-on-strings/2700030036628341",
-  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEvYmFubmVycy8zNzQxMDFkMC1lN2RhLTExZjEtOWY5OS03ZDNmMjQ5ZDFlNWYtcmltZy13NTUwLWg1NTAtZGMwODA4MDgtZ21pci5qcGc_dj0xNzk1NTA1OTg0.avif",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy9kMGIyNmZmMC1lYTM0LTExZjEtYTljMS05MzZkNzg1MjA5ZDMtcmltZy13NTUwLWg1NTAtZGMwODA4MDgtZ21pci5qcGc_dj0xNzk1NzY1MTQy.avif",
   "source_urls": [
     "https://allevents.in/springfield/candlelight-christmas-carols-on-strings/2700030036628341"
   ],
-  "updated_at": "2026-11-27T15:04:30.021Z",
+  "updated_at": "2026-11-27T15:22:41.395Z",
   "public_slug": "candlelight-christmas-carols-on-strings-2026-12-19",
   "city_slug": "springfield",
   "path": "/events/springfield/candlelight-christmas-carols-on-strings-2026-12-19/",

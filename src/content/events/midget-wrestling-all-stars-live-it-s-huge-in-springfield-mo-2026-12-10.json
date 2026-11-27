@@ -2,8 +2,8 @@
   "id": "b1953f88-dcb5-470e-af71-720aa9e8b645",
   "slug": "midget-wrestling-all-stars-live-its-huge-in-springfield-mo",
   "title": "MIDGET-WRESTLING ALL*STARS LIVE! IT'S HUGE IN SPRINGFIELD, MO",
-  "seo_title": "Wrestling All*Stars Live in Springfield, MO on Dec 10",
-  "description": "This is a live wrestling show billed as Midget-Wrestling All*Stars, where you watch the matches in person. It takes place Thursday, December 10, 2026, from 6:30 PM to 8:30 PM at the Abo Ben Adhem Shrine Mosque, 601 E Saint Louis Street, in Springfield, MO.",
+  "seo_title": "Midget-Wrestling All*Stars Live in Springfield, MO",
+  "description": "This is a live pro wrestling show featuring Midget-Wrestling All*Stars, where you watch the matches in person. It is for ages 21 and over, and general admission early bird tickets are $30. It takes place Thursday, December 10, 2026, from 6:30 PM to 8:30 PM at Abo Ben Adhem Shrine Mosque, 601 E Saint Louis Street in Springfield, MO, with doors opening at 6:00 PM.",
   "start": "2026-12-11T00:30:00+00:00",
   "end": "2026-12-11T02:30:00+00:00",
   "timezone": "America/Chicago",
@@ -18,14 +18,14 @@
   "categories": [
     "sports"
   ],
-  "price": null,
-  "is_free": null,
+  "price": "USD 30",
+  "is_free": false,
   "registration_url": "https://allevents.in/springfield/midget-wrestling-allstars-live-its-huge-in-springfield-mo/100002004387287333",
   "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEvYmFubmVycy8yNGUwNTU3YTA2OTc4Yjc3ZTlkNGIzZjljNzBhYTkwMTJjY2ZiNWVkNTM0Zjg2NGQxNGIzNjc3YjA2OTZkMTQ4LXJpbWctdzEyMDAtaDQ0NS1kYzA4MDgwOC1nbWlyLnBuZz92PTE3OTM4MjUxNzE.avif",
   "source_urls": [
     "https://allevents.in/springfield/midget-wrestling-allstars-live-its-huge-in-springfield-mo/100002004387287333"
   ],
-  "updated_at": "2026-11-27T15:04:30.021Z",
+  "updated_at": "2026-11-27T15:22:41.395Z",
   "public_slug": "midget-wrestling-all-stars-live-it-s-huge-in-springfield-mo-2026-12-10",
   "city_slug": "springfield",
   "path": "/events/springfield/midget-wrestling-all-stars-live-it-s-huge-in-springfield-mo-2026-12-10/",

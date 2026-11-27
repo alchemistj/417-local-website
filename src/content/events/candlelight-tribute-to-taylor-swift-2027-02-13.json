@@ -1,0 +1,35 @@
+{
+  "id": "819bafb2-7fa9-478d-aa17-1cc91619c50c",
+  "slug": "candlelight-tribute-to-taylor-swift",
+  "title": "Candlelight: Tribute to Taylor Swift",
+  "seo_title": "Candlelight: Tribute to Taylor Swift in Springfield, MO",
+  "description": "Candlelight: Tribute to Taylor Swift is a 60-minute live concert of Taylor Swift's music, performed by candlelight at Stone Chapel at Drury University. It is a tribute show, not affiliated with or endorsed by the artist, and it is for ages 8 and up; anyone under 16 must be with an adult. It takes place February 13, 2027 (time TBD) at 900 N Benton Ave, Springfield, MO, with tickets starting at USD 37. Doors open 45 minutes before the show, there is no entry once it starts, and seating is first come, first served by zone.",
+  "start": "2027-02-13",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Stone Chapel at Drury University",
+  "address": "Drury University, 900 N Benton Ave, Springfield, MO 65802, Springfield// 65802, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Feverup Events",
+    "website": "https://allevents.in/org/feverup-events/21941761"
+  },
+  "categories": [
+    "live-music",
+    "arts-and-theater"
+  ],
+  "price": "Starting at USD 37",
+  "is_free": false,
+  "registration_url": "https://allevents.in/springfield/candlelight-tribute-to-taylor-swift/2700031102871605",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czgvYmFubmVycy80MTk3YTZlMC1lYTM1LTExZjEtYTljMS05MzZkNzg1MjA5ZDMtcmltZy13NTUwLWg1NTAtZGNlOGI4YzgtZ21pci5qcGc_dj0xNzk1NzY1MTUw.avif",
+  "source_urls": [
+    "https://allevents.in/springfield/candlelight-tribute-to-taylor-swift/2700031102871605"
+  ],
+  "updated_at": "2026-11-27T15:22:41.395Z",
+  "public_slug": "candlelight-tribute-to-taylor-swift-2027-02-13",
+  "city_slug": "springfield",
+  "path": "/events/springfield/candlelight-tribute-to-taylor-swift-2027-02-13/",
+  "action_type": "details"
+}

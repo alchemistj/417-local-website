@@ -3,7 +3,7 @@
   "slug": "springfield-investor-club-christmas-party",
   "title": "Springfield Investor Club Christmas Party!",
   "seo_title": "Springfield Investor Club Christmas Party, Dec 3",
-  "description": "The Springfield Investor Club Christmas Party is a holiday gathering hosted by David Pere. It takes place Thursday, December 3, 2026, from 5:00 PM to 7:00 PM at 400 W Walnut St in Springfield, Missouri.",
+  "description": "The Springfield Investor Club hosts its annual Christmas party at its downtown Springfield office, with drinks and a chance to celebrate a year of real estate investing in the Ozarks. Seasoned investors and those just getting started are welcome, and guests are encouraged to bring a friend and RSVP through the Facebook event. It takes place Thursday, December 3, 2026, from 5:00 to 7:00 PM at 400 W Walnut St, Springfield, MO, near the eagle mural.",
   "start": "2026-12-03T23:00:00+00:00",
   "end": "2026-12-04T01:00:00+00:00",
   "timezone": "America/Chicago",
@@ -25,9 +25,9 @@
   "source_urls": [
     "https://allevents.in/springfield/springfield-investor-club-christmas-party/200031142408902"
   ],
-  "updated_at": "2026-11-27T15:04:30.021Z",
+  "updated_at": "2026-11-27T15:22:41.395Z",
   "public_slug": "springfield-investor-club-christmas-party-2026-12-03",
   "city_slug": "springfield",
   "path": "/events/springfield/springfield-investor-club-christmas-party-2026-12-03/",
-  "action_type": "details"
+  "action_type": "rsvp"
 }
