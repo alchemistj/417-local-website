@@ -454,6 +454,19 @@ export function eventPriceText(event: EventData): string {
 const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const TIME_UNKNOWN = /\b(?:tbd|tba|to be (?:determined|announced)|time (?:is )?(?:not|isn't) (?:listed|specified|given))\b/i;
 
+/** Abbreviations that end in a period but do not end a sentence ("1499 N. Jefferson Ave.", "St. Louis"). */
+const NOT_SENTENCE_END = /(?:\b[A-Z]|\b(?:St|Ave|Blvd|Dr|Rd|Ln|Hwy|Pkwy|Mt|Ft|Jr|Sr|Mr|Mrs|Ms|Dr|No|Inc|Co|vs|etc|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec|a\.m|p\.m))\.$/;
+
+function splitSentences(text: string): string[] {
+  const parts = text.split(/(?<=[.!?])\s+(?=[A-Z0-9"“])/);
+  const out: string[] = [];
+  for (const part of parts) {
+    if (out.length && NOT_SENTENCE_END.test(out[out.length - 1]!)) out[out.length - 1] += ` ${part}`;
+    else out.push(part);
+  }
+  return out;
+}
+
 /** "2725 N Glenstone" from "2725 N Glenstone Ave, Springfield, MO": the house number and the first street words. */
 function streetKey(address: string): string {
   const match = /^\s*(\d+)\s+((?:[NSEW]\.?\s+)?[A-Za-z0-9]+)/.exec(address);
@@ -477,7 +490,7 @@ export function eventDescriptionBody(event: EventData): string {
   const month = m ? MONTH_NAMES[m - 1] : "";
   const datePattern = month && d ? new RegExp(`\\b(?:${month}|${month.slice(0, 3)}\\.?)\\s+${d}\\b`, "i") : null;
   const street = streetKey(String(event.address ?? "")) || streetKey(String(event.venue ?? ""));
-  const sentences = text.split(/(?<=[.!?])\s+(?=[A-Z0-9"“])/);
+  const sentences = splitSentences(text);
   const kept = sentences.filter((sentence, index) => {
     if (index === 0) return true;
     if (TIME_UNKNOWN.test(sentence)) return false;

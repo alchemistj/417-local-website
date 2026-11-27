@@ -11,7 +11,7 @@ describe("event write-up without logistics", () => {
     const bls = find("BLS for Healthcare Providers");
     const body = eventDescriptionBody(bls);
     expect(body).toContain("CPR");
-    expect(body).not.toMatch(/TBD|1499 N\.? Jefferson|December 3/);
+    expect(body).not.toMatch(/TBD|Jefferson|December 3/);
   });
 
   it("drops the address sentence for Courageous Business Connect", () => {
@@ -25,6 +25,13 @@ describe("event write-up without logistics", () => {
     const event = { ...find("BLS for Healthcare Providers"), description: "It takes place on December 3, 2026 (time TBD)." };
     expect(eventDescriptionBody(event)).toBe("It takes place on December 3, 2026.");
     for (const e of all) if (e.description) expect(eventDescriptionBody(e).length, e.title).toBeGreaterThan(0);
+  });
+});
+
+describe("sentence splitting", () => {
+  it("does not treat street abbreviations as sentence ends", () => {
+    const event = { ...find("BLS for Healthcare Providers"), description: "A CPR class for nurses. It is on December 3, 2026 at 1499 N. Jefferson Ave. in Springfield." };
+    expect(eventDescriptionBody(event)).toBe("A CPR class for nurses.");
   });
 });
 
