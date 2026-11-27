@@ -1,0 +1,35 @@
+{
+  "id": "f64a3e6b-bd89-4bf7-b5d2-08ce4de6d989",
+  "slug": "black-friday-christmas-market",
+  "title": "Black Friday Christmas Market",
+  "seo_title": "Black Friday Christmas Market in Springfield, MO",
+  "description": "The Black Friday Christmas Market is a holiday shopping event where you can browse small-business and handmade goods at the Springfield Expo Center. It runs Saturday, November 28, 2026 from 11 AM to 7 PM and Sunday, November 29, 2026 from 11 AM to 6 PM, at 635 E Saint Louis St in Springfield, Missouri.",
+  "start": "2026-11-28T17:00:00+00:00",
+  "end": "2026-11-30T00:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Springfield Expo Center",
+  "address": "635 E Saint Louis St,Springfield, Missouri, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Heartland Vendor Co.",
+    "website": null
+  },
+  "categories": [
+    "festivals",
+    "holiday"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/springfield/black-friday-christmas-market/200029388628058",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czkvYmFubmVycy9kYjY1NGZhMDQ2MWY1MzA4ZGM2ZWRjY2Y1MzE5NGVhNTAyODVlYjdmNWM1ZDg2MzNjNGRmNjIyMWQ5ZmRiNmM4LXJpbWctdzEwMjQtaDE1MzYtZGNhNzE3MTYtZ21pcj92PTE3NjgxNjA0OTc.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/black-friday-christmas-market-eid3a0d8iwnfw",
+    "https://allevents.in/springfield/black-friday-christmas-market/200029388628058"
+  ],
+  "updated_at": "2026-11-27T15:04:30.021Z",
+  "public_slug": "black-friday-christmas-market-2026-11-28",
+  "city_slug": "springfield",
+  "path": "/events/springfield/black-friday-christmas-market-2026-11-28/",
+  "action_type": "details"
+}

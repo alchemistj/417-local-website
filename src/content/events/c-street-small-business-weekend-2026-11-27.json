@@ -3,11 +3,10 @@
   "slug": "c-street-small-business-weekend-2026",
   "title": "C-STREET SMALL BUSINESS WEEKEND 2026",
   "seo_title": "C-Street Small Business Weekend 2026 in Springfield, MO",
-  "description": "C-Street Small Business Weekend 2026 is a business-focused event centered on entrepreneurship in Historic C-Street. It takes place on November 27, 2026, with the time to be determined, at 299 E Commercial St in Springfield, Missouri.",
-  "start": "2026-11-27",
+  "description": "C-Street Small Business Weekend is a three-day shopping event in Historic C-Street where you can buy gifts from local brick-and-mortar shops, including items made locally, and take them home the same day. The district also has local restaurants and bars for dinner and drinks, and Airbnbs are nearby for an overnight stay. It starts Friday, November 27, 2026 at 10:00 AM at 299 E Commercial St in Springfield, MO; hours vary by business, so check each shop's social media.",
+  "start": "2026-11-27T16:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "Historic C-Street",
   "address": "299 E Commercial St, Springfield, MO 65803-2939, United States, Springfield, MO",
   "city": "Springfield",
@@ -17,7 +16,8 @@
     "website": "https://allevents.in/org/historic-c-street/2281935"
   },
   "categories": [
-    "entrepreneurship"
+    "entrepreneurship",
+    "holiday"
   ],
   "price": null,
   "is_free": null,
@@ -26,7 +26,7 @@
   "source_urls": [
     "https://allevents.in/springfield/c-street-small-business-weekend-2026/200031074493046"
   ],
-  "updated_at": "2026-11-27T10:31:44.965Z",
+  "updated_at": "2026-11-27T15:04:30.021Z",
   "public_slug": "c-street-small-business-weekend-2026-11-27",
   "city_slug": "springfield",
   "path": "/events/springfield/c-street-small-business-weekend-2026-11-27/",

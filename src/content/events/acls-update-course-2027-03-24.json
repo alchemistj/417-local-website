@@ -1,0 +1,33 @@
+{
+  "id": "145be496-6527-45e5-9788-8d3289413e3e",
+  "slug": "acls-update-course",
+  "title": "ACLS Update Course",
+  "seo_title": "ACLS Update Course at Cox North Hospital, Springfield",
+  "description": "This is an ACLS Update Course where you refresh your advanced life support skills and renew your AHA ACLS Provider certification. It takes place on Wednesday, March 24, 2027, from 8:00 AM to 4:30 PM at Cox North Hospital, 1423 North Jefferson Avenue in Springfield, MO.",
+  "start": "2027-03-24T13:00:00+00:00",
+  "end": "2027-03-24T21:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Cox North Hospital",
+  "address": "1423 North Jefferson Avenue, Springfield, MO, 65802",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "professional-development"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/acls-update-course-tickets-2002301602995",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1190924194%2F42710748964%2F1%2Foriginal.20260812-201227?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.059&fp-y=0.507&s=80a49aae4f93b18a0c7ce17ab6de9604",
+  "source_urls": [
+    "https://www.eventbrite.com/e/acls-update-course-tickets-2002301602995"
+  ],
+  "updated_at": "2026-11-27T15:04:30.021Z",
+  "public_slug": "acls-update-course-2027-03-24",
+  "city_slug": "springfield",
+  "path": "/events/springfield/acls-update-course-2027-03-24/",
+  "action_type": "details"
+}

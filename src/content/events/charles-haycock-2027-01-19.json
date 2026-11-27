@@ -1,0 +1,34 @@
+{
+  "id": "368c88a4-3639-4194-96b7-e9c0f49a41b6",
+  "slug": "charles-haycock",
+  "title": "Charles Haycock",
+  "seo_title": "Charles Haycock",
+  "description": "Charles Haycock is scheduled for January 19, 2027, Time TBD at Springfield Comedy Club, 420 W College Street, Springfield, MO, Springfield. Ticket Network Events is the organizer.",
+  "start": "2027-01-19",
+  "end": null,
+  "timezone": "America/Chicago",
+  "time_tbd": true,
+  "venue": "Springfield Comedy Club",
+  "address": "420 W College Street, Springfield, MO",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": "Ticket Network Events",
+    "website": null
+  },
+  "categories": [
+    "comedy"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/charles-haycock-eid13twlfmav60",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEwL2Jhbm5lcnMvNGNlNzljMTAtZWE0Yi0xMWYxLWE5YzEtOTM2ZDc4NTIwOWQzLXJpbWctdzEyMDAtaDY3NS1kYzA4MDgwOC1nbWlyLmpwZz92PTE3OTU3NzQ0NTc.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/charles-haycock-eid13twlfmav60"
+  ],
+  "updated_at": "2026-11-27T15:04:30.021Z",
+  "public_slug": "charles-haycock-2027-01-19",
+  "city_slug": "springfield",
+  "path": "/events/springfield/charles-haycock-2027-01-19/",
+  "action_type": "details"
+}

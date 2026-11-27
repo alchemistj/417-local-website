@@ -3,11 +3,10 @@
   "slug": "pancakes-with-santa-at-big-whiskeys-downtown",
   "title": "Pancakes with Santa at Big Whiskey's - Downtown",
   "seo_title": "Pancakes with Santa at Big Whiskey's, Springfield MO",
-  "description": "Pancakes with Santa is a holiday breakfast event at Big Whiskey's in downtown Springfield, with a free pancake breakfast and a free picture with Santa. It takes place on Saturday, December 5, 2026, at 311 Park Central East in Springfield, MO. The event summary lists the morning as 8:30 to 10:30 a.m., and admission is free.",
-  "start": "2026-12-05",
-  "end": null,
+  "description": "Pancakes with Santa is a holiday morning at Big Whiskey's in downtown Springfield, with a free pancake breakfast and a free picture with Santa. Admission is free. It takes place Saturday, December 5, 2026, from 8:30 to 10:30 a.m. at 311 Park Central East, Springfield, MO.",
+  "start": "2026-12-05T14:30:00+00:00",
+  "end": "2026-12-05T16:30:00+00:00",
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "Big Whiskey's - Downtown",
   "address": "311 Park Central East, Springfield, MO",
   "city": "Springfield",
@@ -28,7 +27,7 @@
   "source_urls": [
     "https://allevents.in/springfield/pancakes-with-santa-at-big-whiskeys-downtown/100002004719175018"
   ],
-  "updated_at": "2026-11-27T10:31:44.965Z",
+  "updated_at": "2026-11-27T15:04:30.021Z",
   "public_slug": "pancakes-with-santa-at-big-whiskey-s-downtown-2026-12-05",
   "city_slug": "springfield",
   "path": "/events/springfield/pancakes-with-santa-at-big-whiskey-s-downtown-2026-12-05/",

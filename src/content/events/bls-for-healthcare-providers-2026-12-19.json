@@ -1,0 +1,33 @@
+{
+  "id": "d7c1a342-7dfb-4cf3-a167-28ec3ca08b55",
+  "slug": "bls-for-healthcare-providers",
+  "title": "BLS for Healthcare Providers",
+  "seo_title": "BLS for Healthcare Providers CPR Course in Springfield, MO",
+  "description": "This is an American Heart Association BLS Provider Course where you learn lifesaving CPR and AED skills through in-person, hands-on training. It is designed for healthcare professionals. It runs Saturday, December 19, 2026, from 8:00 AM to 12:30 PM at the Cox North Hospital Robberson Avenue Training Center, 1499 N. Jefferson Ave, Springfield, MO.",
+  "start": "2026-12-19T14:00:00+00:00",
+  "end": "2026-12-19T18:30:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "Cox North Hospital - Robberson Avenue Training Center",
+  "address": "1499 N. Jefferson Ave, Springfield, MO, 65802",
+  "city": "Springfield",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "professional-development"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://www.eventbrite.com/e/bls-for-healthcare-providers-tickets-1986091757912",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1147900913%2F42710748964%2F1%2Foriginal.20251008-143316?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.214&fp-y=0.481&s=beec5ec3977e443559ded71e18d1bdbe",
+  "source_urls": [
+    "https://www.eventbrite.com/e/bls-for-healthcare-providers-tickets-1986091757912"
+  ],
+  "updated_at": "2026-11-27T15:04:30.021Z",
+  "public_slug": "bls-for-healthcare-providers-2026-12-19",
+  "city_slug": "springfield",
+  "path": "/events/springfield/bls-for-healthcare-providers-2026-12-19/",
+  "action_type": "details"
+}

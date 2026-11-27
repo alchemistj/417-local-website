@@ -3,11 +3,10 @@
   "slug": "the-nutcracker-single-tickets",
   "title": "The Nutcracker Single Tickets!",
   "seo_title": "The Nutcracker Single Tickets in Springfield, MO",
-  "description": "This is a Springfield Ballet production of The Nutcracker, a holiday ballet that follows Clara through a dreamscape with toy soldiers, mice, waltzing flowers, and the Sugar Plum Fairy, set at the Historic Landers Theatre. Performances run December 17–21, 2026, and this listing is for December 21, 2026, with the time to be determined. It takes place in Springfield, Missouri, and tickets can be ordered by phone at 417.869.1334 or in person at the theatre box office.",
-  "start": "2026-12-21",
+  "description": "The Nutcracker is a holiday ballet from Springfield Ballet that follows Clara through a dreamscape of toy soldiers, mischievous mice, waltzing flowers, and the Sugar Plum Fairy, with scenes in the Forest of Snow and the Land of Sweets. Performances run December 17–21, 2026 at the Historic Landers Theatre in Springfield, MO, and the listed date here is Monday, December 21 at 3:00 PM. Tickets can be ordered by phone at 417.869.1334 or in person at the Historic Landers Theatre Box Office.",
+  "start": "2026-12-21T21:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
-  "time_tbd": true,
   "venue": "411 N Sherman Pkwy, Springfield, MO, United States, Missouri 65802",
   "address": "411 N Sherman Pkwy, Springfield, MO 65802-3652, United States, Springfield, MO",
   "city": "Springfield",
@@ -26,7 +25,7 @@
   "source_urls": [
     "https://allevents.in/springfield/the-nutcracker-single-tickets/200031011421721"
   ],
-  "updated_at": "2026-11-27T10:31:44.965Z",
+  "updated_at": "2026-11-27T15:04:30.021Z",
   "public_slug": "nutcracker-single-tickets-2026-12-21",
   "city_slug": "springfield",
   "path": "/events/springfield/nutcracker-single-tickets-2026-12-21/",
