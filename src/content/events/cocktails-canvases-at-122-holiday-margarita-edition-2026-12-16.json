@@ -3,7 +3,7 @@
   "slug": "cocktails-canvases-at-122-holiday-margarita-edition",
   "title": "Cocktails & Canvases at 122 | Holiday Margarita Edition",
   "seo_title": "Cocktails & Canvases Holiday Margarita Edition in Joplin",
-  "description": "Cocktails & Canvases at 122 | Holiday Margarita Edition is a holiday-themed event at The 122 Lounge in Joplin, Missouri. It takes place on Wednesday, December 16, 2026, from 6:00 PM to 8:30 PM at 122 S Main St.",
+  "description": "Cocktails & Canvases at 122 is a guided painting class with a holiday margarita theme, and no experience is needed. Your ticket includes all painting supplies, instruction, and a charcuterie cup, while cocktails from The 122 Lounge are sold separately. It runs Wednesday, December 16, 2026, from 6:00 to 8:30 PM at The 122 Lounge, 122 S Main St in Joplin, MO; arrive at 6 PM, painting begins at 6:15, and only 15 seats are available, so register through the ticket form.",
   "start": "2026-12-17T00:00:00+00:00",
   "end": "2026-12-17T02:30:00+00:00",
   "timezone": "America/Chicago",
@@ -16,18 +16,19 @@
     "website": null
   },
   "categories": [
+    "classes-and-workshops",
     "holiday"
   ],
   "price": null,
   "is_free": null,
-  "registration_url": "https://happeningnext.com/event/cocktails-andamp-canvases-at-122-holiday-margarita-edition-eid3a0ecucpgg",
+  "registration_url": "https://pci.jotform.com/form/263275584280059",
   "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy83OWIwMmQzZjliNjQ5MGNlZDkzMzI2ODZjZTk0YjQ2NmQzZTI3NjQ1MGY3ZjA4OTc5MjVkYmEwODIwNzllNzJmLXJpbWctdzEwODYtaDE0NDgtZGMwODA4MDgtZ21pcj92PTE3OTU2MTM1MTI.avif",
   "source_urls": [
     "https://happeningnext.com/event/cocktails-andamp-canvases-at-122-holiday-margarita-edition-eid3a0ecucpgg"
   ],
-  "updated_at": "2026-11-26T10:32:41.025Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "cocktails-canvases-at-122-holiday-margarita-edition-2026-12-16",
   "city_slug": "joplin",
   "path": "/events/joplin/cocktails-canvases-at-122-holiday-margarita-edition-2026-12-16/",
-  "action_type": "details"
+  "action_type": "signup"
 }

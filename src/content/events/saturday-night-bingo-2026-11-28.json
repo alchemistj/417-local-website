@@ -1,0 +1,33 @@
+{
+  "id": "1d7937d9-5489-4906-a156-ee2b1dda1350",
+  "slug": "saturday-night-bingo",
+  "title": "SATURDAY NIGHT BINGO",
+  "seo_title": "Saturday Night Bingo at American Legion Post 138, Bolivar",
+  "description": "Saturday Night Bingo is a community bingo night where you play games with others at the American Legion Howard S. Keeling Post 138. It takes place Saturday, November 28, 2026 at 4:00 PM at 1424 W Broadway St in Bolivar, MO.",
+  "start": "2026-11-28T22:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "American Legion Howard S. Keeling Post 138",
+  "address": "1424 W Broadway St,Bolivar,MO,United States, Bolivar, MO",
+  "city": "Bolivar",
+  "state": "MO",
+  "organizer": {
+    "name": "Rebecca Clemmons",
+    "website": null
+  },
+  "categories": [
+    "community"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/saturday-night-bingo-eid3a0ed7oclk",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy9iZDQ4Mjc2NzQ0OGMxZjZjYmRkMWFlN2Y1ZDNjNzA4NDkxMjBhZGJhNjk5NzhkMTY2ZDUzZTAyZDIwNmY2ODBkLXJpbWctdzEwODAtaDEzNTAtZGMwODA4MDgtZ21pcj92PTE3OTU3NDEzMDI.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/saturday-night-bingo-eid3a0ed7oclk"
+  ],
+  "updated_at": "2026-11-27T10:31:44.965Z",
+  "public_slug": "saturday-night-bingo-2026-11-28",
+  "city_slug": "bolivar",
+  "path": "/events/bolivar/saturday-night-bingo-2026-11-28/",
+  "action_type": "details"
+}

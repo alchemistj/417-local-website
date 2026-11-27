@@ -3,7 +3,7 @@
   "slug": "toys-4-tots-fundraiser",
   "title": "Toys 4 Tots Fundraiser",
   "seo_title": "Toys 4 Tots Fundraiser at The Vineyard Market, Ozark",
-  "description": "This holiday fundraiser at The Vineyard Market invites guests to bring a new, unwrapped toy valued at $20 or more to donate to Toys 4 Tots, and each toy donation comes with a complimentary wine flight. Admission is the toy donation, and reservations are available by calling (417) 882-0399 or online. It takes place Friday, December 4, 2026 at 11:00 AM at 1759 W State Hwy J in Ozark, MO.",
+  "description": "This holiday fundraiser at The Vineyard Market lets you donate a new, unwrapped toy valued at $20 or more to Toys 4 Tots and receive a complimentary wine flight as a thank-you. The toys help bring holiday joy to children in the community. It takes place Friday, December 4, 2026 at 11:00 AM at 1759 W State Hwy J in Ozark, MO; reservations are advised by calling (417) 882-0399 or reserving online.",
   "start": "2026-12-04T17:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -17,8 +17,7 @@
   },
   "categories": [
     "community",
-    "holiday",
-    "food-and-drink"
+    "holiday"
   ],
   "price": "$20 toy donation",
   "is_free": false,
@@ -27,7 +26,7 @@
   "source_urls": [
     "https://thevineyardmarket.com/events/toys-4-tots-fundraiser-december-2026"
   ],
-  "updated_at": "2026-11-26T10:32:41.025Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "toys-4-tots-fundraiser-2026-12-04",
   "city_slug": "ozark",
   "path": "/events/ozark/toys-4-tots-fundraiser-2026-12-04/",

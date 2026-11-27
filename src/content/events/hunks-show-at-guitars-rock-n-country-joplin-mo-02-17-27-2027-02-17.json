@@ -2,13 +2,13 @@
   "id": "ba29e4ba-76a5-42e8-aca7-f393a320d62b",
   "slug": "hunks-the-show-at-guitars-rock-n-country-joplin-mo-02-17-27",
   "title": "HUNKS The Show at Guitars Rock N Country (Joplin, MO) 02/17/27",
-  "seo_title": "HUNKS The Show at Guitars Rock N' Country, Joplin",
-  "description": "HUNKS The Show is a high-energy male revue with upbeat music, comedy-filled performances and a lively crowd, pitched as a girls' night out or a break with friends. It is for ages 21 and over. It takes place Wednesday, February 17, 2027, from 8:00 PM to 10:00 PM (doors open at 7:00 PM) at Guitars Rock N' Country Bar, 1800 West 7th Street, Joplin, MO; tickets are non-refundable but stay valid for a new date if the event is postponed or rescheduled.",
+  "seo_title": "HUNKS The Show at Guitars Rock N' Country, Joplin MO",
+  "description": "HUNKS The Show is a girls' night out entertainment event at Guitars Rock N' Country Bar, 1800 West 7th Street in Joplin, Missouri. It is for guests 21 and older, and tickets are non-refundable. It takes place Wednesday, February 17, 2027, from 8:00 PM to 10:00 PM, with doors opening at 7:00 PM.",
   "start": "2027-02-18T02:00:00+00:00",
   "end": "2027-02-18T04:00:00+00:00",
   "timezone": "America/Chicago",
   "venue": "Guitars Rock N' Country Bar",
-  "address": "1800 West 7th Street, Joplin, MO",
+  "address": "1800 West 7th Street, Joplin, MO, 64801",
   "city": "Joplin",
   "state": "MO",
   "organizer": {
@@ -16,22 +16,22 @@
     "website": null
   },
   "categories": [
-    "live-music",
-    "arts-and-theater",
     "community",
     "festivals",
+    "live-music",
     "food-and-drink",
-    "family"
+    "family",
+    "arts-and-theater"
   ],
   "price": null,
   "is_free": null,
-  "registration_url": "https://happeningnext.com/event/hunks-the-show-at-guitars-rock-n-country-joplin-mo-02-17-27-eid1ef0l9iv0sna",
-  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy81ZDVhNzY0MTdmZGVhNDM1YTJjY2FiMWQ1NmE1M2MyNjM4NzgzN2VlNTkwMjI3NTZiYWE2MjcxNGYwYTFkMmNkLXJpbWctdzEyMDAtaDYyOS1kYzA4MDgwOC1nbWlyLmpwZz92PTE3OTQ2NjU2MDg.avif",
+  "registration_url": "https://www.eventbrite.com/e/hunks-the-show-at-guitars-rock-n-country-joplin-mo-021727-tickets-2004839256184",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1190610833%2F74400268609%2F1%2Foriginal.20260808-161854?crop=focalpoint&fit=crop&w=500&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=bdb8830dc6889fd2d926cc4bcd323a0b",
   "source_urls": [
     "https://happeningnext.com/event/hunks-the-show-at-guitars-rock-n-country-joplin-mo-02-17-27-eid1ef0l9iv0sna",
     "https://www.eventbrite.com/e/hunks-the-show-at-guitars-rock-n-country-joplin-mo-021727-tickets-2004839256184"
   ],
-  "updated_at": "2026-11-26T10:32:41.025Z",
+  "updated_at": "2026-11-27T10:31:44.965Z",
   "public_slug": "hunks-show-at-guitars-rock-n-country-joplin-mo-02-17-27-2027-02-17",
   "city_slug": "joplin",
   "path": "/events/joplin/hunks-show-at-guitars-rock-n-country-joplin-mo-02-17-27-2027-02-17/",
