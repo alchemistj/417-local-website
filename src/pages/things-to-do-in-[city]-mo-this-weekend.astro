@@ -37,3 +37,15 @@ const picks = weekendPicks(await getSiteEvents(), city, new Date());
     </Fragment>
   )}
 </WeekendPage>
+
+<style is:global>
+/* Weekend "Our picks" cards. Kept here, not in global.css, so event pages stay under the 30 KB CSS budget. */
+.weekend-picks { margin: 0 0 1.5rem; padding: 1rem 1.1rem 1.1rem; border: 2px solid var(--line); border-radius: 14px; background: var(--tint); }
+.weekend-picks h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; }
+.weekend-picks ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+.weekend-picks li { background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 0.8rem 0.9rem; }
+.weekend-picks h3 { font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
+.weekend-picks h3 a { color: var(--ink); text-decoration: none; }
+.weekend-picks h3 a:hover, .weekend-picks h3 a:focus-visible { text-decoration: underline; }
+.weekend-picks p { margin: 0.3rem 0 0; color: var(--muted); font-size: 0.95rem; }
+</style>

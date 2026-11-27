@@ -322,9 +322,6 @@ h3 { font-size: 1.25rem; }
 .more-link { display: inline-flex; align-items: center; min-height: 48px; font-weight: 700; }
 
 /* Events */
-.event-list { list-style: none; margin: 0; padding: 0; }
-.event-list > li { padding-block: 1.1rem; border-top: 1px solid var(--line); }
-.event-list > li:last-child { border-bottom: 1px solid var(--line); }
 .event-actions { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; align-items: center; justify-content: center; margin-top: 1.25rem; }
 .event-actions .text-link { display: inline-flex; align-items: center; min-height: 48px; font-weight: 700; }
 .passed-note { margin: 1rem 0 0; font-weight: 700; }
@@ -468,13 +465,3 @@ a.month-num { display: inline-flex; align-items: center; justify-content: center
 @media (min-width: 640px) {
   .card-grid:not(.cols-3) .card:last-child:nth-child(odd) { grid-column: 1 / -1; aspect-ratio: 7 / 2; }
 }
-
-/* Weekend "Our picks" block: three cards, one per pick, above the day list. */
-.weekend-picks { margin: 0 0 1.5rem; padding: 1rem 1.1rem 1.1rem; border: 2px solid var(--line); border-radius: 14px; background: var(--tint); }
-.weekend-picks h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; }
-.weekend-picks ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
-.weekend-picks li { background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 0.8rem 0.9rem; }
-.weekend-picks h3 { font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
-.weekend-picks h3 a { color: var(--ink); text-decoration: none; }
-.weekend-picks h3 a:hover, .weekend-picks h3 a:focus-visible { text-decoration: underline; }
-.weekend-picks p { margin: 0.3rem 0 0; color: var(--muted); font-size: 0.95rem; }
