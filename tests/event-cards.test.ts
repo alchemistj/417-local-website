@@ -204,3 +204,20 @@ describe("event card layout", () => {
     expect(list).not.toContain("description");
   });
 });
+
+describe("card venue line", () => {
+  it("drops a venue that is only the street address", () => {
+    const event = {
+      id: "t",
+      title: "Courageous Business Connect",
+      venue: "2725 N Glenstone Springfield MO",
+      address: "2725 N Glenstone Ave",
+      city: "Springfield",
+      state: "MO",
+      start: "2026-11-30T12:00:00-06:00",
+      categories: ["networking"],
+    } as unknown as Parameters<typeof eventCardModel>[0];
+    const model = eventCardModel(event);
+    expect(model.venueName).toBe("");
+  });
+});
