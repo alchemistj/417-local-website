@@ -137,7 +137,7 @@ export function eventPageTitle(event: EventData): string {
 
 /** Meta description from the write-up, 155 characters or fewer, ending on a sentence or a word. */
 export function eventMetaDescription(event: EventData): string {
-  const writeup = event.description?.trim();
+  const writeup = eventDescriptionBody(event);
   if (writeup) return clampMeta(writeup);
   return clampMeta(
     `${event.title} in ${eventCityName(event)}, MO on ${formatShortDate(event)}. Confirm details with the organizer.`,
@@ -449,4 +449,48 @@ export function eventBreadcrumbLd(crumbs: { name: string; path: string }[]): Rec
 /** Price text for the page. Blank when the export does not state one. */
 export function eventPriceText(event: EventData): string {
   return formatPrice(event);
+}
+
+const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const TIME_UNKNOWN = /\b(?:tbd|tba|to be (?:determined|announced)|time (?:is )?(?:not|isn't) (?:listed|specified|given))\b/i;
+
+/** "2725 N Glenstone" from "2725 N Glenstone Ave, Springfield, MO": the house number and the first street words. */
+function streetKey(address: string): string {
+  const match = /^\s*(\d+)\s+((?:[NSEW]\.?\s+)?[A-Za-z0-9]+)/.exec(address);
+  return match ? `${match[1]} ${match[2]!.replace(".", "")}`.toLowerCase() : "";
+}
+
+/**
+ * The write-up without its logistics sentences. The robot ends most write-ups with "It takes place on
+ * <date>, time TBD, at <address>", which the page already shows in the card and the place line, and which
+ * goes stale once a time is found. A sentence is dropped when it names the event's date, says the time is
+ * unknown, or repeats the street address. The first sentence always stays.
+ */
+export function eventDescriptionBody(event: EventData): string {
+  const text = (event.description?.trim() ?? "")
+    .replace(/\s*\((?:time\s+)?(?:tbd|tba|to be (?:determined|announced))\)/gi, "")
+    .replace(/,?\s*(?:with|and)\s+(?:the\s+)?(?:start\s+)?time\s+(?:is\s+)?(?:still\s+)?(?:tbd|tba|to be (?:determined|announced))\s*,?/gi, ",")
+    .replace(/,\s*([.!?])/g, "$1")
+    .replace(/\s{2,}/g, " ");
+  if (!text) return "";
+  const [, m, d] = String(event.start ?? "").slice(0, 10).split("-").map(Number);
+  const month = m ? MONTH_NAMES[m - 1] : "";
+  const datePattern = month && d ? new RegExp(`\\b(?:${month}|${month.slice(0, 3)}\\.?)\\s+${d}\\b`, "i") : null;
+  const street = streetKey(String(event.address ?? "")) || streetKey(String(event.venue ?? ""));
+  const sentences = text.split(/(?<=[.!?])\s+(?=[A-Z0-9"“])/);
+  const kept = sentences.filter((sentence, index) => {
+    if (index === 0) return true;
+    if (TIME_UNKNOWN.test(sentence)) return false;
+    if (datePattern?.test(sentence)) return false;
+    const flat = sentence.toLowerCase().replace(/\./g, "");
+    if (street && flat.includes(street)) return false;
+    return true;
+  });
+  return kept.join(" ");
+}
+
+/** A venue that is only a street address (for example "2725 N Glenstone Springfield MO") adds nothing next to the address. */
+export function venueIsJustAddress(venue: string, address: string): boolean {
+  const key = streetKey(venue);
+  return Boolean(key) && key === streetKey(address);
 }
