@@ -1,9 +1,9 @@
 {
   "id": "67327f76-365b-44fa-b881-6825b8bc6f2c",
-  "slug": "shucked",
-  "title": "SHUCKED",
-  "seo_title": "SHUCKED at Hammons Hall in Springfield, MO",
-  "description": "SHUCKED is a Broadway musical comedy about Maizy and Beau's wedding, a dying cornfield that protects their small community, and a con artist in Cob County. It is recommended for ages 10+ and contains adult themes, some adult language and corny innuendo. It runs Tuesday, January 19 through Thursday, January 21, 2027, starting at 7:30 PM, at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO.",
+  "slug": "shucked-great-southern-bank-broadway-season",
+  "title": "SHUCKED – Great Southern Bank Broadway Season",
+  "seo_title": "SHUCKED Broadway Musical – Great Southern Bank Season",
+  "description": "SHUCKED is a Broadway musical comedy where you watch Maizy and Beau's wedding plans collide with a crisis, as the corn protecting their small community starts to die and someone must venture beyond Cob County for answers. The show features songs including \"Woman of the World,\" \"Somebody Will\" and \"Independently Owned.\" It is recommended for ages 10+ and contains adult themes, some adult language and corny innuendo; the on-sale date for tickets is still to be announced.",
   "start": "2027-01-20T01:30:00+00:00",
   "end": "2027-01-22T01:30:00+00:00",
   "timezone": "America/Chicago",
@@ -12,7 +12,7 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Missouri State University",
+    "name": "Juanita K. Hammons Hall for the Performing Arts, Missouri State University",
     "website": "https://www.hammonshall.com/"
   },
   "categories": [
@@ -25,7 +25,7 @@
   "source_urls": [
     "https://www.hammonshall.com/viewshow.aspx?ID=4083"
   ],
-  "updated_at": "2026-11-27T15:22:41.395Z",
+  "updated_at": "2026-11-28T10:26:49.601Z",
   "public_slug": "shucked-2027-01-19",
   "city_slug": "springfield",
   "path": "/events/springfield/shucked-2027-01-19/",

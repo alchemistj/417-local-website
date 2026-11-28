@@ -2,8 +2,8 @@
   "id": "a4ceb6a6-84e6-4dad-8c96-da8150fd60b0",
   "slug": "jazz-jamm-joplin-ave-coffee",
   "title": "Jazz Jamm @ Joplin Ave Coffee",
-  "seo_title": "Jazz Jamm at Joplin Avenue Coffee in Joplin, MO",
-  "description": "Jazz Jamm is a live jazz music event hosted by 4 State Jazz Jamms at Joplin Avenue Coffee Company. It takes place Monday, December 7, 2026, from 6:00 PM to 8:00 PM at 506 S Joplin Ave in Joplin, Missouri.",
+  "seo_title": "Jazz Jamm at Joplin Avenue Coffee Company",
+  "description": "A jazz jam where musicians sit in and play songs from a posted set list. A bass amp, drums, and digital piano are provided, and a sign-up sheet is available when you arrive. Each song has room for 4 melody instruments, and everyone can first sign up for 3 songs, with more spots opening if there is extra room.",
   "start": "2026-12-08T00:00:00+00:00",
   "end": "2026-12-08T02:00:00+00:00",
   "timezone": "America/Chicago",
@@ -25,9 +25,9 @@
   "source_urls": [
     "https://happeningnext.com/event/jazz-jamm-joplin-ave-coffee-eid3a0eco8ouv"
   ],
-  "updated_at": "2026-11-27T15:22:41.395Z",
+  "updated_at": "2026-11-28T10:26:49.601Z",
   "public_slug": "jazz-jamm-joplin-ave-coffee-2026-12-07",
   "city_slug": "joplin",
   "path": "/events/joplin/jazz-jamm-joplin-ave-coffee-2026-12-07/",
-  "action_type": "details"
+  "action_type": "register"
 }

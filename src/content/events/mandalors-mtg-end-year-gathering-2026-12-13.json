@@ -2,8 +2,8 @@
   "id": "b79512ef-3aa7-4c3a-8d09-dbef40b55c98",
   "slug": "mandalors-mtg-end-year-gathering",
   "title": "Mandalors MTG End Year Gathering",
-  "seo_title": "Mandalors MTG End Year Gathering in Joplin, MO",
-  "description": "Mandalors MTG End Year Gathering is a community event in Joplin, Missouri, listed under festivals, arts and theater, live music, family, and food and drink. It takes place on Sunday, December 13, 2026, at 10:00 AM at 2002 S Tyler Ave. in Joplin, MO. It is hosted by Mandalors Dreams.",
+  "seo_title": "Mandalors MTG End Year Gathering – Commander Day",
+  "description": "This is a full day of casual Magic: The Gathering Commander, played in 4-player pods at Bracket 2/3 power levels, with food provided and prizes for top players, including The One Ring and 2026 From the Hobbit Collector Booster Packs. Bring your deck and your friends to wrap up the year at the table. Entry is $30, space is capped at 32 players, and an RSVP is advised to secure your spot.",
   "start": "2026-12-13T16:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -23,16 +23,16 @@
     "family",
     "food-and-drink"
   ],
-  "price": null,
-  "is_free": null,
+  "price": "$30",
+  "is_free": false,
   "registration_url": "https://happeningnext.com/event/mandalors-mtg-end-year-gathering-eid3a0ebh3ums",
   "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEwL2Jhbm5lcnMvODhhMGRjZmMzYWJiNDFmMWY2MGQ3OTQ1OTQyNGE0MjE2YjdjNjY0ODgzZjkxNzg5M2MxYzhjZWJiZTYzYTZkZC1yaW1nLXc4OTYtaDEyMDAtZGNmOGY4ZjgtZ21pcj92PTE3OTQ5NDk3NjA.avif",
   "source_urls": [
     "https://happeningnext.com/event/mandalors-mtg-end-year-gathering-eid3a0ebh3ums"
   ],
-  "updated_at": "2026-11-27T15:22:41.395Z",
+  "updated_at": "2026-11-28T10:26:49.601Z",
   "public_slug": "mandalors-mtg-end-year-gathering-2026-12-13",
   "city_slug": "joplin",
   "path": "/events/joplin/mandalors-mtg-end-year-gathering-2026-12-13/",
-  "action_type": "details"
+  "action_type": "register"
 }

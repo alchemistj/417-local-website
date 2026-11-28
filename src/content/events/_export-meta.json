@@ -1,23 +1,23 @@
 {
-  "exportedAt": "2026-11-27T15:22:41.395Z",
+  "exportedAt": "2026-11-28T10:26:49.601Z",
   "market": "all",
   "counts": {
-    "events": 572,
+    "events": 581,
     "networking": 50,
     "entrepreneurship": 25,
-    "professional-development": 61,
-    "live-music": 107,
-    "arts-and-theater": 101,
-    "festivals": 75,
-    "family": 76,
-    "food-and-drink": 71,
+    "professional-development": 63,
+    "live-music": 109,
+    "arts-and-theater": 103,
+    "festivals": 78,
+    "family": 79,
+    "food-and-drink": 72,
     "sports": 32,
     "outdoors": 59,
-    "community": 133,
-    "holiday": 214,
+    "community": 139,
+    "holiday": 216,
     "comedy": 25,
     "film": 9,
     "kids": 28,
-    "classes-and-workshops": 24
+    "classes-and-workshops": 23
   }
 }

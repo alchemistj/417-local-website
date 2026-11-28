@@ -1,0 +1,35 @@
+{
+  "id": "8ec17d0d-62d5-4e90-bfea-72d389020db9",
+  "slug": "moms-night-out-paint-party",
+  "title": "Moms Night Out Paint Party",
+  "seo_title": "Moms Night Out Paint Party",
+  "description": "Moms Night Out Paint Party is a community evening where you join a paint party with other moms. It is hosted by WAVR Sweet Co. and is geared toward moms looking for a social night out.",
+  "start": "2026-11-29T00:00:00+00:00",
+  "end": null,
+  "timezone": "America/Chicago",
+  "venue": "Boone's BBQ Barn",
+  "address": "5260 S Scenic Ave,Bolivar, Missouri, Bolivar, MO",
+  "city": "Bolivar",
+  "state": "MO",
+  "organizer": {
+    "name": "WAVR Sweet Co.",
+    "website": null
+  },
+  "categories": [
+    "community",
+    "family",
+    "festivals"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://happeningnext.com/event/moms-night-out-paint-party-eid3a0edavae7",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czQvYmFubmVycy8yMDI1YmYyMTc4M2NkYzBmMTU5NjMwYzFjMDNjZmU5NWEzYzgxMTUyZTY3ZjMzYjU4OGFlN2VjODdjYzU2OWRkLXJpbWctdzEyMDAtaDgwMC1kY2Y4ZThjOC1nbWlyP3Y9MTc5NTc3MzM3NQ.avif",
+  "source_urls": [
+    "https://happeningnext.com/event/moms-night-out-paint-party-eid3a0edavae7"
+  ],
+  "updated_at": "2026-11-28T10:26:49.601Z",
+  "public_slug": "moms-night-out-paint-party-2026-11-28",
+  "city_slug": "bolivar",
+  "path": "/events/bolivar/moms-night-out-paint-party-2026-11-28/",
+  "action_type": "details"
+}

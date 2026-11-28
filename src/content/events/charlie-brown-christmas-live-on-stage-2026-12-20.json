@@ -1,9 +1,9 @@
 {
   "id": "d3db38b1-5d0f-4870-8d4f-ed0ddb4bc0dc",
   "slug": "a-charlie-brown-christmas-live-on-stage",
-  "title": "A Charlie Brown Christmas Live on Stage",
-  "seo_title": "A Charlie Brown Christmas Live on Stage in Springfield",
-  "description": "A touring stage production of A Charlie Brown Christmas, in which Charlie Brown, Snoopy, Lucy, Linus and the Peanuts gang put on their own Christmas play and discover the true meaning of the season. It is adapted from the animated TV special by Charles M. Schulz and features music by Vince Guaraldi, and it is meant for the whole family. It takes place Sunday, December 20, 2026 at 7:00 PM at Juanita K. Hammons Hall for the Performing Arts, 901 S. National Ave., Springfield, MO; all patrons need a ticket regardless of age.",
+  "title": "A Charlie Brown Christmas Live On Stage",
+  "seo_title": "A Charlie Brown Christmas Live On Stage",
+  "description": "This touring stage production of A Charlie Brown Christmas brings Charlie Brown, Snoopy, Lucy, Linus and the Peanuts gang to life as they put on their own Christmas play and discover the true meaning of the season. Adapted from Charles M. Schulz's Emmy and Peabody Award-winning animated special, it features the music of Vince Guaraldi. It's meant for the whole family, and all patrons need a ticket regardless of age.",
   "start": "2026-12-21T01:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -12,7 +12,7 @@
   "city": "Springfield",
   "state": "MO",
   "organizer": {
-    "name": "Missouri State University",
+    "name": "Juanita K. Hammons Hall for the Performing Arts",
     "website": "https://www.hammonshall.com/"
   },
   "categories": [
@@ -27,7 +27,7 @@
   "source_urls": [
     "https://www.hammonshall.com/viewshow.aspx?ID=3691"
   ],
-  "updated_at": "2026-11-27T15:22:41.395Z",
+  "updated_at": "2026-11-28T10:26:49.601Z",
   "public_slug": "charlie-brown-christmas-live-on-stage-2026-12-20",
   "city_slug": "springfield",
   "path": "/events/springfield/charlie-brown-christmas-live-on-stage-2026-12-20/",

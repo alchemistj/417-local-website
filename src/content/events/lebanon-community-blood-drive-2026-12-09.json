@@ -1,0 +1,33 @@
+{
+  "id": "b000604a-0619-4ac2-9f02-a5a50e95c154",
+  "slug": "lebanon-community-blood-drive",
+  "title": "Lebanon Community Blood Drive",
+  "seo_title": "Lebanon Community Blood Drive",
+  "description": "This is a community blood drive hosted by Community Blood Center of the Ozarks, where you can donate blood. All successful donors in November and December receive a new Kansas City Chiefs T-shirt, and all donors are entered for a chance at a prize drawing.",
+  "start": "2026-12-09T18:30:00+00:00",
+  "end": "2026-12-10T00:00:00+00:00",
+  "timezone": "America/Chicago",
+  "venue": "915 S Jefferson Ave, Lebanon, MO 65536-3667, United States",
+  "address": "915 S Jefferson Ave, Lebanon, MO 65536-3667, United States, Lebanon, MO",
+  "city": "Lebanon",
+  "state": "MO",
+  "organizer": {
+    "name": null,
+    "website": null
+  },
+  "categories": [
+    "community"
+  ],
+  "price": null,
+  "is_free": null,
+  "registration_url": "https://allevents.in/lebanon/lebanon-community-blood-drive/200030982837818",
+  "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEwL2Jhbm5lcnMvM2RmYWIwMDA5NzBkYTRmY2ZlNTE2ZmZkYTQzNzE4ZTYxZTAxODc5N2U5NjU0YWFjMWYwYTQ4Y2Q0MGI0MmM2ZS1yaW1nLXcxMjAwLWg2MjgtZGNmOGM4MDgtZ21pcj92PTE3OTM5NTI5Nzg.avif",
+  "source_urls": [
+    "https://allevents.in/lebanon/lebanon-community-blood-drive/200030982837818"
+  ],
+  "updated_at": "2026-11-28T10:26:49.601Z",
+  "public_slug": "lebanon-community-blood-drive-2026-12-09",
+  "city_slug": "lebanon",
+  "path": "/events/lebanon/lebanon-community-blood-drive-2026-12-09/",
+  "action_type": "details"
+}

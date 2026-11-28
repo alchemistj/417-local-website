@@ -2,8 +2,8 @@
   "id": "f1a26046-8618-40fb-8484-f676c22dcf32",
   "slug": "christmas-at-the-plaza",
   "title": "Christmas at the Plaza",
-  "seo_title": "Christmas at the Plaza in Joplin, MO | Dec 11-13, 2026",
-  "description": "Christmas at the Plaza is a holiday event hosted by Park Plaza Christian Church, with outdoor elements. It runs from Friday, December 11 at 3:00 PM to Sunday, December 13, 2026 at 3:30 PM at 818 E 32nd St in Joplin, MO.",
+  "seo_title": "Christmas at the Plaza: Sacred Christmas Music, Free",
+  "description": "Christmas at the Plaza is a celebration of sacred Christmas music titled \"My Heart...Your Bethlehem,\" with three performances over the weekend. The program features a choir, a piano duo, a vocal solo by Stephen Miller, and a cello solo by Connie DeFazio. Tickets are free for the community, but seating is reserved, so call 417-317-9823 to reserve a seat while spots are available.",
   "start": "2026-12-11T21:00:00+00:00",
   "end": "2026-12-13T21:30:00+00:00",
   "timezone": "America/Chicago",
@@ -19,16 +19,16 @@
     "outdoors",
     "holiday"
   ],
-  "price": null,
-  "is_free": null,
+  "price": "Free",
+  "is_free": true,
   "registration_url": "https://happeningnext.com/event/christmas-at-the-plaza-eid3a0eco8op1",
   "image_url": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czUvYmFubmVycy8wNThiZTU3NjlmZTRlY2MxZWY4ZmNhMzQ3MTFhNGFkNmIzM2YxYjY3MjM3Nzc3OGQ2ZWFhOWMzM2M5ODliNTc1LXJpbWctdzk2MC1oNTQwLWRjNzhhOGI4LWdtaXI_dj0xNzk1NTg1MTk1.avif",
   "source_urls": [
     "https://happeningnext.com/event/christmas-at-the-plaza-eid3a0eco8op1"
   ],
-  "updated_at": "2026-11-27T15:22:41.395Z",
+  "updated_at": "2026-11-28T10:26:49.601Z",
   "public_slug": "christmas-at-plaza-2026-12-11",
   "city_slug": "joplin",
   "path": "/events/joplin/christmas-at-plaza-2026-12-11/",
-  "action_type": "details"
+  "action_type": "show_up"
 }

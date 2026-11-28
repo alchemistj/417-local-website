@@ -2,8 +2,8 @@
   "id": "1d7937d9-5489-4906-a156-ee2b1dda1350",
   "slug": "saturday-night-bingo",
   "title": "SATURDAY NIGHT BINGO",
-  "seo_title": "Saturday Night Bingo at American Legion Post 138, Bolivar",
-  "description": "Saturday Night Bingo is a community bingo night where you play games with others at the American Legion Howard S. Keeling Post 138. It takes place Saturday, November 28, 2026 at 4:00 PM at 1424 W Broadway St in Bolivar, MO.",
+  "seo_title": "Black Saturday BINGO with Food Drive",
+  "description": "Black Saturday BINGO is a night of BINGO games and pull-tabs with cash prizes, held after Thanksgiving and shopping. Wear black to get $5 off a 9-pack (limit 1 per person); the kitchen offers bean and beef burritos and nachos on special, and the bar serves adult beverages. If 70 or more players attend, two extra games with an additional $100 will be raised, and you can bring non-perishable food for the Annual Food Drive through December 31 to benefit local food pantries.",
   "start": "2026-11-28T22:00:00+00:00",
   "end": null,
   "timezone": "America/Chicago",
@@ -16,7 +16,8 @@
     "website": null
   },
   "categories": [
-    "community"
+    "community",
+    "holiday"
   ],
   "price": null,
   "is_free": null,
@@ -25,7 +26,7 @@
   "source_urls": [
     "https://happeningnext.com/event/saturday-night-bingo-eid3a0ed7oclk"
   ],
-  "updated_at": "2026-11-27T15:22:41.395Z",
+  "updated_at": "2026-11-28T10:26:49.601Z",
   "public_slug": "saturday-night-bingo-2026-11-28",
   "city_slug": "bolivar",
   "path": "/events/bolivar/saturday-night-bingo-2026-11-28/",
